@@ -1,0 +1,216 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F7F5F1;
+  --foreground: #171717;
+  --primary:#1D1EE3;
+  --muted:  rgba(3, 3, 15, 0.7);
+
+  /* Typography */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-muted: var(--muted);
+
+  --font-playfair: var(--font-playfair);
+  --font-inter: var(--font-inter);
+}
+
+/* ------------------------------
+   Components
+-------------------------------- */
+
+@layer components {
+  .page-container {
+    @apply mx-auto max-w-[1900px]  px-4 md:px-6 md:px-[10%]  py-12 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-28 ;
+  
+  }
+  .hero-container {
+     @apply mx-auto max-w-[1900px]  pt-16 lg:pt-16 xl:pt-20 2xl:pt-24 md:px-[10%] py-12 sm:py-12 md:pb-16 lg:pb-20 xl:pb-24 2xl:pb-28  ;
+  }
+  .hero-title {
+    font-size: var(--hero-title-size);
+    line-height: 1.1;
+  }
+}
+
+/* ------------------------------
+   Base Typography
+-------------------------------- */
+
+@layer base {
+  h1 {
+     font-size: clamp(2rem, 4vw, 4.5rem); /* 32px → 72px */
+    line-height: 1;
+  }
+
+  h2 {
+   font-size: clamp(1.75rem, 3vw, 3rem); /* 28px → 56px */
+    line-height: 1;
+  }
+
+  h3 {
+   font-size: clamp(1.5rem, 3vw, 2.5rem); /* 24px → 40px */
+    line-height: 1;
+  }
+
+  h4 {
+    font-size: clamp(1.125rem, 2vw, 1.5rem); /* 18px → 24px */
+    line-height: 1;
+  }
+
+  h5 {
+    font-size: clamp(1rem, 1.5vw, 1.25rem); /* 16px → 20px */
+    line-height: 1;
+  }
+
+  h6 {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    line-height: 1;
+  }
+
+ p {
+    font-size: clamp(1rem, 1vw, 1.125rem); /* 16px → 18px */
+    line-height: 1.2;
+  }
+
+  .breadcrumb {
+    font-size: clamp(0.75rem, 0.9vw, 1rem);/* 12px → 16px */
+    line-height: 1;
+  }
+
+
+  .body-sm {
+    font-size: clamp(0.75rem, 0.9vw, 1rem);  /* 12px → 16px */
+    line-height: 1.2;
+  }
+
+  .caption {
+    font-size: clamp(0.625rem, 0.8vw, 0.875rem);/* 10px → 14px */
+    line-height: 1;
+  }
+
+
+  em {
+    font-family: var(--font-playfair);
+    font-style: italic;
+  }
+}
+
+/* ------------------------------
+   Global
+-------------------------------- */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+}
+
+/* ------------------------------
+   Utilities
+-------------------------------- */
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ------------------------------
+   Hero
+-------------------------------- */
+
+.hero-wrapper {
+  padding: 0;
+  background-color: #f5f5f4;
+}
+
+@media (min-width: 768px) {
+  .hero-wrapper {
+    padding: 10px;
+  }
+
+  .hero-inner {
+    height: calc(100vh - 20px);
+    border-radius: 0.75rem;
+  }
+}
+
+/* ------------------------------
+   Marquee Animation
+-------------------------------- */
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 45s linear infinite;
+}
+
+/* ------------------------------
+   Fade Animation
+-------------------------------- */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tab-content-anim {
+  animation: fadeIn 0.4s ease both;
+}
+
+/* ------------------------------
+   Page Load Animation
+-------------------------------- */
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  animation: page-enter 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter {
+    animation: none;
+  }
+}
+
+/* ------------------------------
+   Loader
+-------------------------------- */
+
+.loader-ring {
+  transition: stroke-dashoffset 0.03s linear;
+}
