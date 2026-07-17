@@ -1,76 +1,74 @@
 import Image from "next/image";
 
-const advantages = [
-  "Research + Strategy Integration",
-  "Deep Sector Expertise",
-  "Global Intelligence",
-  "Decision-Focused Insights",
-  "Advanced Analytics Capabilities",
-  "Strong Government & Development Sector Experience",
-  "Practical Recommendations, Not Just Reports",
-  "Technology & Research Ecosystem",
-  "Leveraging Advanced Research & Intelligence Platforms",
-];
+interface WhyUsResearchProps {
+  eyebrow: string;
+  heading: React.ReactNode;
+  intro: React.ReactNode;
+  advantages: string[];
+  outro: string;
+  imageSrc: string;
+  imageAlt: string;
+}
 
-export default function WhyUsResearch() {
+export default function WhyUsResearch({
+  eyebrow,
+  heading,
+  intro,
+  advantages,
+  outro,
+  imageSrc,
+  imageAlt,
+}: WhyUsResearchProps) {
   return (
-    <section className="w-full bg-background">
-          <div className="page-container pt-0">
+    <section className="w-full bg-white">
+          <div className="page-container">
             {/* Header */}
             <div className="relative text-center">
-              <p className="body-sm text-primary mb-2">Why Us? The SkyQuest Advantage</p>
+              <p className="body-sm text-primary mb-2">{eyebrow}</p>
               <h2 className="font-bold">
-              Beyond Research Delivering
-              Strategic<br></br> <em className="font-semibold">Intelligence</em>
+              {heading}
             </h2>
-              
+
             </div>
-    
+
             {/* Content: image + capability list */}
             <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 md:items-stretch">
               {/* Left: image */}
               <div className="">
-                <p className="mt-3 text-sm text-muted">
-              Many research firms provide data. Few help organizations
-              understand what the data means and what actions to take next.
-              <br/>
-              SkyQuest bridges the gap between research and execution by
-              combining market intelligence, strategic advisory, sector
-              expertise, and implementation experience.
+                <p className="mt-3 text-sm 2xl:text-base text-muted">
+              {intro}
             </p>
 
             <ul className="mt-4 space-y-1">
               {advantages.map((point) => (
                 <li
                   key={point}
-                  className="flex items-start gap-2.5 body-sm 2xl:text-base text-neutral-800"
+                  className="flex items-center gap-2.5 text-xs 2xl:text-sm text-neutral-800"
                 >
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-black" />
+                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-black item-middle" />
                   <span>{point}</span>
                 </li>
               ))}
             </ul>
 
-            <p className="mt-4 text-sm 2xl:text-base text-muted">
-              We combine proprietary methodologies with leading research
-              tools, data platforms, and intelligence frameworks to deliver
-              high-quality market insights and strategic recommendations.
+            <p className="mt-4 text-sm 2xl:text-base  text-muted">
+              {outro}
             </p>
               </div>
-              
+
               {/* Right: capability list */}
               <div className="relative min-h-[342px] w-full overflow-hidden rounded-2xl">
                 <Image
-                  src="/service/BusinessIntel/whyus.jpg"
-                  alt="Why Us? The SkyQuest Advantage"
+                  src={imageSrc}
+                  alt={imageAlt}
                   fill
                   className="object-cover"
                   sizes="(min-width: 768px) 50vw, 100vw"
                   priority
                 />
               </div>
-    
-              
+
+
             </div>
           </div>
         </section>

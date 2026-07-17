@@ -3,47 +3,47 @@ import Image from "next/image";
 const sectors = [
   {
     label: "Information Technology",
-    image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80",
+    image: "/service/BusinessIntel/scard1.jpg",
   },
   {
     label: "Health Care",
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=600&q=80",
+    image: "/service/BusinessIntel/scard2.jpg",
   },
   {
     label: "Materials",
-    image: "https://images.unsplash.com/photo-1547149600-a6cdf8fce50c?w=600&q=80",
+    image: "/service/BusinessIntel/scard3.jpg",
   },
   {
     label: "Consumer Discretionary",
-    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80",
+    image: "/service/BusinessIntel/scard4.jpg",
   },
   {
     label: "Consumer Staples",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+    image: "/service/BusinessIntel/scard5.jpg",
   },
   {
     label: "Energy",
-    image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=80",
+    image: "/service/BusinessIntel/scard6.jpg",
   },
   {
     label: "Utilities",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80",
+    image: "/service/BusinessIntel/scard7.jpg",
   },
   {
     label: "Industrials",
-    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80",
+    image: "/service/BusinessIntel/scard8.jpg",
   },
   {
     label: "Real Estate",
-    image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80",
+    image: "/service/BusinessIntel/scard9.jpg",
   },
   {
     label: "Financials",
-    image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&q=80",
+    image: "/service/BusinessIntel/scard10.jpg",
   },
   {
     label: "Communication Services",
-    image: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=600&q=80",
+    image: "/service/BusinessIntel/scard11.jpg",
   },
 ];
 

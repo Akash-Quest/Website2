@@ -2,7 +2,9 @@
 
 import { ArrowUpRight } from "lucide-react";
 
-const services = [
+export type OtherService = { label: string; href: string };
+
+const defaultServices: OtherService[] = [
   { label: "Social / CSR / ESG Consulting", href: "#" },
   { label: "Market Research", href: "#" },
   { label: "Strategy & Transformation", href: "#" },
@@ -16,8 +18,10 @@ const services = [
 
 const OtherServicesSection = ({
   bgClassName = "bg-background",
+  services = defaultServices,
 }: {
   bgClassName?: string;
+  services?: OtherService[];
 }) => {
   return (
     <section className={bgClassName}>

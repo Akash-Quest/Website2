@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState, useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
-import HoverRevealCard from "@/components/ui/HoverRevealCard";
+import HoverRevealCard from "@/components/ui/HoverRevealCard2";
 
 const cards = {
   digital: {

@@ -1,59 +1,32 @@
-import {
-  HeartPulse,
-  Sprout,
-  Leaf,
-  Mountain,
-  Milk,
-  ArrowUpRight,
-} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
-const focusAreas = [
-  {
-    icon: HeartPulse,
-    title: "Public Health",
-    description:
-      "We work with governments, donors, and foundations to strengthen health systems, scale primary care, and drive behavioral change. From maternal health to digital health innovation, our solutions improve lives and resilience.",
-  },
-  {
-    icon: Sprout,
-    title: "Agriculture & Rural Livelihoods",
-    description:
-      "SkyQuest supports smallholder farmers, FPOs, and rural ecosystems through sustainable agriculture practices, financial inclusion, and access to markets and agri-tech.",
-  },
-  {
-    icon: Leaf,
-    title: "Sustainability, Environment & ESG",
-    description:
-      "We help organizations integrate sustainability and ESG practices into their strategy and operations through clean energy, resource management, and responsible growth initiatives aligned with global climate goals.",
-  },
-  {
-    icon: Mountain,
-    title: "Climate Resilience",
-    description:
-      "Our work in climate adaptation includes climate-risk assessments, disaster preparedness, and resilient infrastructure especially for vulnerable geographies and low-income populations.",
-  },
-  {
-    icon: Milk,
-    title: "Animal Husbandry & Dairying",
-    description:
-      "Transformation in animal husbandry and dairying by combining scalable innovations with sustainable practices. Our approach focuses on improving productivity, animal health, and empowering farmers with modern solutions.",
-  },
-];
+type FocusArea = {
+  icon: React.ElementType;
+  title: string;
+  description: string;
+};
 
-export default function SocialFocus() {
+interface SocialFocusProps {
+  heading: React.ReactNode;
+  description: string;
+  focusAreas: FocusArea[];
+}
+
+export default function SocialFocus({
+  heading,
+  description,
+  focusAreas,
+}: SocialFocusProps) {
   return (
     <section className="w-full bg-white">
       <div className="page-container">
         <div className="text-center">
           <h2 className="font-bold">
-            Our Focus <em className="font-semibold">Areas</em>
+            {heading}
           </h2>
 
           <p className="mx-auto mt-2 max-w-2xl text-sm 2xl:text-base text-muted">
-            SkyQuest&apos;s Social Sector Consulting practice operates at the
-            intersection of people, policy, and planet. We focus on domains
-            that drive inclusive development and long-term sustainability
-            across India and Africa.
+            {description}
           </p>
         </div>
 
@@ -72,7 +45,7 @@ export default function SocialFocus() {
               `}
             >
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <Icon className="h-4 w-4" strokeWidth={1.75} />
+                <Icon className="h-4 w-4" strokeWidth={1.75} color="currentColor" variant="Linear" />
               </span>
 
               <h3 className="mt-2 text-sm 2xl:text-lg font-semibold text-neutral-900">

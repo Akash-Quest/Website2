@@ -10,33 +10,32 @@ import StatsGrid from '@/components/ui/Stats4';
 
 import OurCapabilities from '@/components/features/CoreCapa';
 import WhyUsResearch from '@/components/features/BusinessIntel/WhyUsReasearch';
+import {
+  BusinessIntelHeroData,
+  BusinessIntelOurCapabilitiesData,
+  BusinessIntelWhyUsData,
+  BusinessIntelOtherServicesData,
+  BusinessIntelFaqData,
+} from '@/Constants/Service/BusinessIntel';
+import IndustriesWeServe2 from '@/components/features/IndustriesWeSurve2';
+import FeaturedReport from '@/components/features/BusinessIntel/FeaturedReport';
 function HeroPage(){
   return(
-    <ServiceHeroPage
-       breadcrumbLabel="Business Intelligence & Market Research"
-       eyebrow="Business Intelligence & Market Research"
-       heading={
-         <>
-        Turning Intelligence Into Strategic
-           <em className="font-semibold"> Advantage</em>
-         </>
-       }
-       description="We provide market intelligence, industry research, and strategic insights that help organizations evaluate opportunities, reduce uncertainty, and accelerate growth."
-       imageSrc="/service/BusinessIntel/hero.jpg"
-       imageAlt="Building Smarter Governments & Stronger Public Institutions"
-     />
+    <ServiceHeroPage {...BusinessIntelHeroData} />
   )
 }
 export default function SocialImpactService(){
     return (<>
      <HeroPage />
-     <StatsGrid />
-     <OurCapabilities />
-     <WhyUsResearch />
+     <StatsGrid sectionPadding="py-0" />
+     <OurCapabilities {...BusinessIntelOurCapabilitiesData} />
+     <WhyUsResearch {...BusinessIntelWhyUsData} />
+     <IndustriesWeServe2 />
+     <FeaturedReport />
      <CaseStudies {...caseStudiesData} />
-     <OtherServicesSection bgClassName='bg-white' />
+     <OtherServicesSection bgClassName='bg-white' services={BusinessIntelOtherServicesData} />
      <CaseStudies {...insightData}/>
-     <FAQSection />
+     <FAQSection faqs={BusinessIntelFaqData} />
      <Suscribe />
      </>)
 

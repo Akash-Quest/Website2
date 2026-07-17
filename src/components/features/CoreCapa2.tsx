@@ -14,76 +14,15 @@ interface Capability {
   height?: string; // responsive CSS clamp() height, e.g. "clamp(11rem, 18vw, 21rem)"
 }
 
-const capabilities: Capability[] = [
-  {
-    id: "strategy",
-    title: "Program Strategy & Design",
-    description:
-      "Applying machine learning and digital tools to optimize yields, resource use, and farm-level decision-making.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1600&auto=format&fit=crop",
-    imageAlt: "Farmer reviewing crop data on a tablet in a green field",
-    area: "ai",
-    height: "clamp(8.5rem,14vw,10.5rem)",
-  },
-  {
-    id: "pmo",
-    title: "Program Management Offices (PMO)",
-    description:
-      "Modernizing livestock and dairy operations with data-driven herd management, health monitoring, and productivity tools.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1600&auto=format&fit=crop",
-    imageAlt: "Dairy cows grazing in a pasture in front of a red barn",
-    area: "livestock",
-    height: "clamp(8.5rem,14vw,10.5rem)",
-  },
-  {
-    id: "stakeholder",
-    title: "Multi-Stakeholder Coordination",
-    description:
-      "Strengthening supply chains and nutrition programs to improve food access and resilience for vulnerable communities.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1610348725531-843dff563e2c?q=80&w=1200&auto=format&fit=crop",
-    imageAlt: "Hands holding a crate of fresh vegetables and peppers",
-    area: "food",
-    height :"clamp(14.7rem,18.9vw,18.9rem)" // desktop stretches via h-full; no height needed
-  },
-  {
-    id: "monitoring",
-    title: "Monitoring, Evaluation & Learning",
-    description:
-      "Building climate-resilient farming systems that adapt to changing conditions while reducing environmental impact.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1655719430654-15a44e0cd8f1?q=80&w=1200&auto=format&fit=crop",
-    imageAlt: "Seedlings growing in a greenhouse with digital overlay icons",
-    area: "climate",
-    height: "clamp(14.7rem,18.9vw,18.9rem)",
-  },
-  {
-    id: "risk",
-    title: "Risk & Performance Management",
-    description:
-      "Expanding access to credit, insurance, and digital payments that help farmers manage risk and grow sustainably.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?q=80&w=1200&auto=format&fit=crop",
-    imageAlt: "Farmer smiling while holding a phone and cash in a green field",
-    area: "agrifinance",
-    height: "clamp(8.5rem,14vw,10.5rem)",
-  },
-  {
-    id: "scaleup",
-    title: "Scale-Up & Sustainability Planning",
-    description:
-      "Investing in irrigation, storage, and logistics infrastructure that strengthens productivity across the value chain.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=1600&auto=format&fit=crop",
-    imageAlt: "Irrigation pivot system watering rows of crops at sunrise",
-    area: "infra",
-    height: "clamp(8.5rem,14vw,10.5rem)",
-  },
-];
+interface IntegratedCapabilitiesProps {
+  eyebrow: string;
+  capabilities: Capability[];
+}
 
-export default function IntegratedCapabilities() {
+export default function IntegratedCapabilities({
+  eyebrow,
+  capabilities,
+}: IntegratedCapabilitiesProps) {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
   const [strategy, pmo, stakeholder, monitoring, risk, scaleup] =
     capabilities;
@@ -92,7 +31,7 @@ export default function IntegratedCapabilities() {
     <section className="w-full bg-background">
       <div className="page-container">
         <p className="mb-4 text-sm 2xl:text-base font-medium text-primary sm:mb-6">
-          Our Capabilities
+          {eyebrow}
         </p>
 
         {/* ---------- Mobile / tablet: stacked list, every card the same height, text always visible ---------- */}

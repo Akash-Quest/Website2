@@ -3,7 +3,7 @@ import ServiceHeroPage from '@/components/features/ServiceHeroPage';
 import DigitalMosaic from '@/components/features/ServiceDigitalOurCapability';
 import ServiceCoreCapabilities from '@/components/features/ServiceCoreCapabilities';
 import EndtoEnd from '@/components/features/ServiceDigitalEndtoend';
-import { ServicedigitalCoreCapabilitiesData } from '@/Constants/Service/digitalCoreCapabilities';
+import { DigitalHeroData, ServicedigitalCoreCapabilitiesData, DigitalEndToEndData, DigitalOtherServicesData, DigitalFaqData } from '@/Constants/Service/Digital';
 import CaseStudies from '@/components/features/HomeCaseStudie';
 import { caseStudiesData } from '@/Constants/caseStudies';
 import OtherServicesSection from '@/components/features/OtherServices';
@@ -11,8 +11,7 @@ import { insightData } from '@/Constants/Insight ';
 import FAQSection from '@/components/features/Faq';
 import Suscribe from '@/components/features/Suscribe';
 import type { Metadata } from "next";
-import OurCapabilitiesAgri from '@/components/features/CoreCapa';
-import EnterpriseChallenges from '@/components/features/EnterpriseChallenges';
+
 
 export const metadata: Metadata = {
   title:
@@ -44,19 +43,7 @@ export const metadata: Metadata = {
 };
 function HeroPage(){
   return(
-    <ServiceHeroPage
-       breadcrumbLabel="Digital Transformation"
-       eyebrow="Digital Transformation"
-       heading={
-         <>
-           Digital Transformation & Emerging{" "}
-           <em className="font-semibold">Technologies</em>
-         </>
-       }
-       description="From data strategy and ML models to responsible AI governance enabling organisations to make better, faster decisions at machine speed. We turn raw data into your most powerful competitive asset."
-       imageSrc="/service/Digital/hero.jpg"
-       imageAlt="Digital Transformation & Emerging Technologies at SkyQuest"
-     />
+    <ServiceHeroPage {...DigitalHeroData} />
   )
 }
 export default function DigitalPage(){
@@ -65,11 +52,11 @@ export default function DigitalPage(){
      <StatsGridThree />
      <DigitalMosaic />
      <ServiceCoreCapabilities {...ServicedigitalCoreCapabilitiesData} />
-     <EndtoEnd />
+     <EndtoEnd {...DigitalEndToEndData} />
      <CaseStudies {...caseStudiesData} bgClassName='bg-background'/>
-     <OtherServicesSection bgClassName="bg-white" />
+     <OtherServicesSection bgClassName="bg-white" services={DigitalOtherServicesData} />
      <CaseStudies {...insightData} bgClassName='bg-background'/>
-     <FAQSection />
+     <FAQSection faqs={DigitalFaqData} />
      <Suscribe />
      </>)
 

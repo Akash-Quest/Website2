@@ -55,7 +55,7 @@ export default function ServiceCoreCapabilities({
               {capabilities.map(({ icon: Icon, title, description }) => (
                 <li key={title} className="flex items-stretch gap-4 ">
                   <span className="flex h-12 w-12 shrink-0 self-center items-center justify-center rounded-xl bg-white text-primary md:h-14 md:w-14">
-                    <Icon className="md:h-8 md:w-8" strokeWidth={1.2} />
+                    <Icon size={32} color="currentColor" variant="Linear" />
                   </span>
                   <div>
                     <h3 className="font-semibold text-base 2xl:text-lg text-neutral-900">

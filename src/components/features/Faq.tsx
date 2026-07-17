@@ -31,6 +31,7 @@ export default function FAQSection({
   ctaButtonText = "Schedule a Call",
   bgClassName = "bg-white",
 }: FAQSectionProps) {
+  const cardBgClassName = bgClassName === "bg-white" ? "bg-background" : "bg-white";
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const [heights, setHeights] = useState<number[]>([]);
   const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -68,7 +69,7 @@ export default function FAQSection({
               {heading} <em className="font-semibold">{headingItalic}</em>
             </h2>
           </div>
-          <div className="bg-[#F7F5F1] border border-gray-200 rounded-2xl p-6 ">
+          <div className={`${cardBgClassName} border border-gray-200 rounded-2xl p-6 `}>
             <h3 className=" text-lg font-bold text-gray-900 mb-1">{ctaHeading}</h3>
             <p className="text-sm 2xl-text-base text-gray-500 mb-5">{ctaDescription}</p>
             <Button variant="primary" iconSize={16}>
@@ -119,7 +120,7 @@ export default function FAQSection({
         </div>
 
         {/* ── MOBILE: "Still have a question" card (bottom) ── */}
-        <div className="lg:hidden bg-[#F7F5F1] border border-gray-200 rounded-2xl p-6">
+        <div className={`lg:hidden ${cardBgClassName} border border-gray-200 rounded-2xl p-6`}>
           <h3 className="text-lg font-bold text-gray-900 mb-2">{ctaHeading}</h3>
           <p className="text-sm text-gray-500 mb-5">{ctaDescription}</p>
           <button type="button" className="flex items-center justify-center gap-2 rounded-lg bg-[#1D1EE3] pl-3 py-2 pr-1 text-sm text-white transition-colors hover:bg-[#231598] leading-none">

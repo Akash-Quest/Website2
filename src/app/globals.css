@@ -25,11 +25,11 @@
 
 @layer components {
   .page-container {
-    @apply mx-auto max-w-[1900px]  px-4 md:px-6 md:px-[10%]  py-12 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-28 ;
+    @apply mx-auto max-w-[1900px]  px-4  md:px-[10%] 2xl:px-[13%]  py-12 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-28 ;
   
   }
   .hero-container {
-     @apply mx-auto max-w-[1900px]  pt-16 lg:pt-16 xl:pt-20 2xl:pt-24 md:px-[10%] py-12 sm:py-12 md:pb-16 lg:pb-20 xl:pb-24 2xl:pb-28  ;
+     @apply mx-auto max-w-[1900px]  pt-16 lg:pt-16 xl:pt-20 2xl:pt-24 md:px-[10%] 2xl:px-[13%] py-12 sm:py-12 md:pb-16 lg:pb-20 xl:pb-24 2xl:pb-28  ;
   }
   .hero-title {
     font-size: var(--hero-title-size);

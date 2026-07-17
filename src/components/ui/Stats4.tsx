@@ -5,7 +5,13 @@
 
 import { useEffect, useRef } from "react";
 
-const StatsGrid = () => {
+interface StatsGridProps {
+  sectionPadding?: string;
+}
+
+const StatsGrid = ({
+  sectionPadding = "md:pb-16 md:pt-8",
+}: StatsGridProps) => {
   const countupObserver = useRef<IntersectionObserver | null>(null);
 
   const stats = [
@@ -65,14 +71,14 @@ const StatsGrid = () => {
   }, []);
 
   return (
-    <section className="w-full bg-[#F7F5F1] md:pb-16 md:pt-8">
+    <section className={`w-full bg-background ${sectionPadding}`}>
 
   {/* Mobile */}
   <div className="grid grid-cols-2 md:hidden px-4 py-8">
     {stats.map((stat, index) => (
       <div
         key={stat.label}
-        className="relative p-6 text-center"
+        className={`relative text-center p-6`}
       >
         {index % 2 === 0 && (
           <svg className="absolute right-0 top-0 h-full" width="2" preserveAspectRatio="none">
@@ -108,7 +114,7 @@ const StatsGrid = () => {
       {stats.map((stat, i) => (
         <div
           key={stat.label}
-          className="relative flex flex-col items-center justify-center px-5 py-4 text-center"
+          className={`relative flex flex-col items-center justify-center text-center px-5 py-4`}
         >
           {i !== stats.length - 1 && (
             <svg className="absolute right-0 top-0 h-full" width="1.5" preserveAspectRatio="none">

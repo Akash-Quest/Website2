@@ -56,7 +56,7 @@ const Button: React.FC<ButtonProps> = ({
       <span className={`relative z-10 transition-colors duration-[650ms] delay-[250ms] ${textHoverStyles}`}>
         {children}
       </span>
-      <span className="pointer-events-none absolute -top-[200px] -left-[200px] w-[400px] h-[400px] -z-10 rounded-full bg-black scale-0 transition-transform duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-100" />
+      
       <span
         className={`
           relative z-10 overflow-hidden

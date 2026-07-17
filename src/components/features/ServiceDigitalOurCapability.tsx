@@ -106,7 +106,7 @@ export default function DigitalMosaic() {
 
   return (
     <section className="w-full bg-background">
-      <div className="page-container py-0">
+      <div className="page-container pb-0">
          <p className="text-sm 2xl:text-base text-primary mb-2">
           Our Capabilities
         </p>

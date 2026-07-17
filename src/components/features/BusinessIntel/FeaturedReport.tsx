@@ -11,56 +11,28 @@ const REPORTS = [
     title: "QR Codes Market",
     description:
       "India's livestock sector accounts for more than 25% of agricultural GDP.",
-    image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80",
+    image: "/service/BusinessIntel/qrcode.jpg",
   },
   {
     date: "09 June",
     title: "Data Broker Market",
     description:
       "India's livestock sector accounts for more than 25% of agricultural GDP.",
-    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=600&q=80",
+    image: "/service/BusinessIntel/databroker.jpg",
   },
   {
     date: "09 June",
     title: "Water Quality Analyzer Market",
     description:
       "India's livestock sector accounts for more than 25% of agricultural GDP.",
-    image: "https://images.unsplash.com/photo-1547149600-a6cdf8fce50c?w=600&q=80",
+    image: "/service/BusinessIntel/water.jpg",
   },
   {
     date: "09 June",
     title: "Data Diode Solution Market",
     description:
       "India's livestock sector accounts for more than 25% of agricultural GDP.",
-    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80",
-  },
-  {
-    date: "09 June",
-    title: "Smart Agriculture Sensors Market",
-    description:
-      "India's livestock sector accounts for more than 25% of agricultural GDP.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
-  },
-  {
-    date: "09 June",
-    title: "Precision Irrigation Systems Market",
-    description:
-      "India's livestock sector accounts for more than 25% of agricultural GDP.",
-    image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=80",
-  },
-  {
-    date: "09 June",
-    title: "AgriTech Drone Market",
-    description:
-      "India's livestock sector accounts for more than 25% of agricultural GDP.",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80",
-  },
-  {
-    date: "09 June",
-    title: "Livestock Monitoring Systems Market",
-    description:
-      "India's livestock sector accounts for more than 25% of agricultural GDP.",
-    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80",
+    image: "/service/BusinessIntel/datadiode.jpg",
   },
 ];
 
@@ -101,24 +73,7 @@ export default function FeaturedReport() {
               Reports Store
             </Button>
 
-            <div className="flex gap-2">
-              <button
-                type="button"
-                onClick={goPrev}
-                aria-label="Previous reports"
-                className="flex h-9 w-9 items-center justify-center rounded-md bg-white text-primary ring-1 ring-black/5 transition-colors hover:bg-[#EDEBFF]"
-              >
-                <ArrowLeft className="h-4 w-4" strokeWidth={2} />
-              </button>
-              <button
-                type="button"
-                onClick={goNext}
-                aria-label="Next reports"
-                className="flex h-9 w-9 items-center justify-center rounded-md bg-white text-primary ring-1 ring-black/5 transition-colors hover:bg-[#EDEBFF]"
-              >
-                <ArrowRight className="h-4 w-4" strokeWidth={2} />
-              </button>
-            </div>
+            
           </div>
         </div>
 
@@ -146,10 +101,17 @@ export default function FeaturedReport() {
 
               <button
                 type="button"
-                className="mt-3 inline-flex items-center text-sm font-semibold text-primary"
+                className="group/learn mt-3 flex w-full items-center justify-end text-sm font-semibold text-primary transition-colors duration-300 cursor-pointer"
               >
                 Explore More
-                <ArrowUpRight className="ml-1 h-3.5 w-3.5" strokeWidth={2} />
+                <span className="relative ml-1 h-3.5 w-3.5 overflow-hidden">
+                  <span className="absolute inset-0 flex items-center justify-center transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/learn:translate-x-3 group-hover/learn:-translate-y-3 group-hover/learn:opacity-0">
+                    <ArrowUpRight size={14} />
+                  </span>
+                  <span className="absolute inset-0 flex items-center justify-center -translate-x-3 translate-y-3 opacity-0 transition-all duration-300 delay-100 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/learn:translate-x-0 group-hover/learn:translate-y-0 group-hover/learn:opacity-100">
+                    <ArrowUpRight size={14} />
+                  </span>
+                </span>
               </button>
             </div>
           ))}
