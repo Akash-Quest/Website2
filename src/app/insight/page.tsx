@@ -11,15 +11,15 @@ function InsightHero() {
       <div className="hero-container ">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className=" pb-2 sm:pb-2 lg:pb-5 px-4 lg:px-0 ">
-          <ol className="breadcrumb flex flex-wrap items-center gap-2 text-gray-400 font-light tracking-wide">
+          <ol className="breadcrumb flex flex-wrap items-center gap-2 text-gray-500 font-light tracking-wide">
             <li>
               <Link href="/" className="hover:text-muted transition-colors">
                 Home
               </Link>
             </li>
-            <li className="text-gray-300">/</li>
-            
-            <li className="text-gray-500">Insight Listing</li>
+            <li className="text-gray-500">/</li>
+
+            <li className="text-gray-700">Insight Listing</li>
           </ol>
         </nav>
         <div className="px-[2] text-center lg:text-left">

@@ -5,24 +5,35 @@
 
 import { useEffect, useRef } from "react";
 
+interface Stat {
+  target?: number;
+  text?: string;
+  prefix?: string;
+  suffix?: string;
+  decimals?: number;
+  label: string;
+}
+
 interface StatsGridProps {
   sectionPadding?: string;
+  stats?: Stat[];
 }
+
+const defaultStats: Stat[] = [
+  { target: 12, suffix: "+", label: "Consulting Practices" },
+  { target: 6, suffix: "", label: "Global Regions" },
+  { target: 200, suffix: "+", label: "Engagements Delivered" },
+  { target: 15, suffix: "+", label: "Industries Served" },
+];
 
 const StatsGrid = ({
   sectionPadding = "md:pb-16 md:pt-8",
+  stats = defaultStats,
 }: StatsGridProps) => {
   const countupObserver = useRef<IntersectionObserver | null>(null);
 
-  const stats = [
-    { target: 12, suffix: "+", label: "Consulting Practices" },
-    { target: 6, suffix: "", label: "Global Regions" },
-    { target: 200, suffix: "+", label: "Engagements Delivered" },
-    { target: 15, suffix: "+", label: "Industries Served" },
-  ];
-
   useEffect(() => {
-    const animCount = (element: HTMLElement, target: number) => {
+    const animCount = (element: HTMLElement, target: number, decimals: number) => {
       const startTime = performance.now();
       const duration = 1600;
 
@@ -30,12 +41,12 @@ const StatsGrid = ({
         const progress = Math.min((now - startTime) / duration, 1);
         const easeProgress = 1 - Math.pow(1 - progress, 3);
 
-        element.textContent = Math.floor(easeProgress * target).toString();
+        element.textContent = (easeProgress * target).toFixed(decimals);
 
         if (progress < 1) {
           requestAnimationFrame(update);
         } else {
-          element.textContent = target.toString();
+          element.textContent = target.toFixed(decimals);
         }
       };
 
@@ -46,11 +57,11 @@ const StatsGrid = ({
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const target = parseInt(
-              (entry.target as HTMLElement).dataset.target || "0"
-            );
+            const el = entry.target as HTMLElement;
+            const target = parseFloat(el.dataset.target || "0");
+            const decimals = parseInt(el.dataset.decimals || "0");
 
-            animCount(entry.target as HTMLElement, target);
+            animCount(el, target, decimals);
 
             observer.unobserve(entry.target);
           }
@@ -91,8 +102,15 @@ const StatsGrid = ({
           </svg>
         )}
         <p className="font-bold text-primary leading-none text-[clamp(1.75rem,3vw,3rem)]">
-          <span data-target={stat.target}>0</span>
-          {stat.suffix}
+          {stat.text ? (
+            stat.text
+          ) : (
+            <>
+              {stat.prefix}
+              <span data-target={stat.target} data-decimals={stat.decimals || 0}>0</span>
+              {stat.suffix}
+            </>
+          )}
         </p>
 
         <p className="mt-2 text-xs text-muted">
@@ -125,8 +143,15 @@ const StatsGrid = ({
             <line x1="0" y1="0.75" x2="100%" y2="0.75" stroke="#4E4E57" strokeOpacity={0.5} strokeWidth="1.5" strokeDasharray="8 6" />
           </svg>
           <p className="font-bold text-primary leading-none text-[clamp(1.75rem,3vw,3rem)]">
-            <span data-target={stat.target}>0</span>
-            {stat.suffix}
+            {stat.text ? (
+              stat.text
+            ) : (
+              <>
+                {stat.prefix}
+                <span data-target={stat.target} data-decimals={stat.decimals || 0}>0</span>
+                {stat.suffix}
+              </>
+            )}
           </p>
 
           <p className="mt-2 text-muted">

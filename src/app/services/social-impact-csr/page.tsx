@@ -17,6 +17,42 @@ import {
   SocialImpactOtherServicesData,
   SocialImpactFaqData,
 } from '@/Constants/Service/SocialImpact';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Social Impact & CSR Consulting Services | SkyQuest",
+
+  description:
+    "Design and implement impactful CSR, livelihood, and social development programs that create measurable outcomes and sustainable community impact.",
+
+  keywords: [
+    "CSR consulting services",
+    "social impact consulting",
+    "CSR strategy",
+    "livelihood programs",
+    "impact consulting",
+  ],
+
+  alternates: {
+    canonical: "https://www.skyquestt.com/services/social-impact",
+  },
+
+  openGraph: {
+    title: "Creating Sustainable Social Impact",
+    description:
+      "Design and implement impactful CSR, livelihood, and social development programs that create measurable outcomes and sustainable community impact.",
+    url: "https://www.skyquestt.com/services/social-impact",
+    type: "website",
+    siteName: "SkyQuest",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Creating Sustainable Social Impact",
+    description:
+      "Design and implement impactful CSR, livelihood, and social development programs that create measurable outcomes and sustainable community impact.",
+  },
+};
 function HeroPage(){
   return(
     <ServiceHeroPage {...SocialImpactHeroData} />

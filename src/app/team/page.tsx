@@ -18,14 +18,14 @@ function TeamHero() {
     <div className="hero-container relative z-10">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className=" pb-2 px-4 lg:px-0">
-          <ol className="breadcrumb flex flex-wrap items-center gap-2 text-gray-400 font-light tracking-wide">
+          <ol className="breadcrumb flex flex-wrap items-center gap-2 text-gray-500 font-light tracking-wide">
             <li>
               <Link href="/" className="hover:text-muted transition-colors">
                 Home
               </Link>
             </li>
-            
-            <li className="text-gray-300">/</li>
+
+            <li className="text-gray-500">/</li>
             <li className="text-gray-700">Meet Our People</li>
           </ol>
         </nav>

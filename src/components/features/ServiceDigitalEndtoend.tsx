@@ -36,7 +36,7 @@ export default function EndtoEnd({
           </p>
           </div>
           {/* gride service */}
-          <div className="mt-10 grid grid-cols-2 sm:gap-2 gap-2 2xl:gap-4 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid grid-cols-2 sm:gap-2 gap-2 2xl:gap-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
           {tools.map(({ icons, title, description }, idx) => (
             <div
               key={title}
@@ -59,10 +59,10 @@ export default function EndtoEnd({
     </span>
   ))}
 </div>
-              <h3 className="mt-2 text-sm font-semibold text-neutral-900">
+              <h3 className="mt-2 sm:text-sm 2xl:text-lg font-semibold text-neutral-900">
                 {title}
               </h3>
-              <p className="mt-1.5 text-xs leading-relaxed text-neutral-500">
+              <p className="mt-1.5 sm:text-sm 2xl:text-base text-muted">
                 {description}
               </p>
             </div>

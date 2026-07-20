@@ -16,13 +16,13 @@ const Header = () => {
         <div className="flex items-center gap-2 pointer-events-auto">
             <MegaMenu triggerBgClassName="bg-white" />
             <div className="inline-flex items-center bg-transparent">
-                <img src="/Header/logo.svg" alt="Logo" className="h-5 sm:h-6 2xl:h-9 w-auto"/>
+                <img src="/Header/logo.svg" alt="Logo" className="h-5 sm:h-6 2xl:h-7 w-auto"/>
             </div>
         </div>
         <div className="flex items-center gap-3 pointer-events-auto">
             <ExpandableSearch bgClassName="bg-white" />
             <div className="inline-flex items-center justify-center px-3 p-3 py-2 bg-[white] text-primary hover:black hover:text-black transition rounded-full">
-            <button className=" flex items-center gap-.5 text-sm 2xl:text-xl font-medium">
+            <button className=" flex items-center gap-.5 text-sm 2xl:text-base font-medium">
                 Sign in<ArrowUp size={18} className="rotate-45 " />
             </button>
             </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
 import HoverRevealCard from "@/components/ui/HoverRevealCard2";
@@ -11,48 +12,56 @@ const cards = {
     chipLabel: "Digital Transformation",
     description: "From data strategy and ML models to responsible AI governance enabling organisations to make better, faster decisions at machine speed. We turn raw data into your most powerful competitive asset.",
     image: "/CoreCapability/1.jpg",
+    href: "/services/digital-transformation-emerging-technologies",
   },
   public: {
     title: "Public Sector Advisory",
     chipLabel: "Public Sector Advisory",
     description: "Supporting governments and institutions through policy advisory, governance modernization, and transformational program implementation.",
     image: "/CoreCapability/2.jpg",
+    href: "/services/public-sector-advisory",
   },
   ai: {
     title: "Data and Artificial Intelligence",
     chipLabel:" Data and Artificial Intelligence",
     description: "We help governments, enterprises, and institutions leverage AI, automation, data intelligence, geospatial technologies, and digital platforms to modernize operations, improve decision-making, and accelerate innovation.",
     image: "/CoreCapability/3.jpg",
+    href: "/services/data-artificial-intelligence",
   },
   program: {
     title: "Integrated Program Management",
     chipLabel: "Program Management",
     description: "End-to-end program delivery from design to implementation, ensuring on-time, on-budget results with measurable outcomes.",
     image: "/CoreCapability/4.jpg",
+    href: "/services/integrated-program-management",
   },
   market: {
     title: "Business Intelligence & Market Research",
     chipLabel: "Business Intelligence",
     description: "We provide market intelligence, industry insights, competitive benchmarking, customer research, and strategic analysis that enable organizations to identify opportunities, mitigate risks, and make informed business decisions.",
     image: "/CoreCapability/5.jpg",
+    href: "/services/business-intelligence-market-research",
   },
   esg: {
     title: "Climate, Sustainability & ESG Advisory",
     chipLabel: "Climate, Sustainability & ESG",
     description: "We provide market intelligence, industry insights, competitive benchmarking, customer research, and strategic analysis that enable organizations to identify opportunities, mitigate risks, and make informed business decisions.",
     image: "/CoreCapability/6.jpg",
+    href: "/services/climate-sustainability-esg-advisory",
   },
   agriculture: {
     title: "Agriculture & Livestock",
     chipLabel: "Agriculture & Livestock",
     description: "Transforming agriculture and livestock through technology, innovation, and market-led development.",
     image: "/CoreCapability/7.jpg",
+    href: "/services/agriculture-livestock",
   },
   csr: {
     title: "Social Impact & CSR",
     chipLabel: "Social Impact & CSR",
     description: " Designing and scaling high-impact social programs that strengthen communities, improve livelihoods, and deliver measurable development outcomes.",
     image: "/CoreCapability/8.jpg",
+    href: "/services/social-impact-csr",
   },
 };
 
@@ -121,12 +130,15 @@ export default function CoreCapabilities() {
                 {mobileCardList[currentIndex][1].description}
               </p>
             </div>
-            <button className="inline-flex items-center justify-between w-full bg-[#1D1EE3] text-white rounded-md pl-4 pr-2 py-2 text-sm font-medium">
+            <Link
+              href={mobileCardList[currentIndex][1].href}
+              className="inline-flex items-center justify-between w-full bg-[#1D1EE3] text-white rounded-md pl-4 pr-2 py-2 text-sm font-medium"
+            >
               Visit Page
               <span className="bg-white text-[#1D1EE3] rounded-sm p-1 flex items-center justify-center">
                 <ArrowUpRight size={16} />
               </span>
-            </button>
+            </Link>
           </div>
         </div>
 

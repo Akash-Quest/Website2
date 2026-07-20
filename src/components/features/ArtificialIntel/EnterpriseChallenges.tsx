@@ -1,21 +1,21 @@
 "use client";
 
-import { Layers, MessageSquareText, BookOpenText } from "lucide-react";
+import { FavoriteChart, Layer, RowHorizontal } from "iconsax-react";
 
 const challenges = [
   {
-    icon: Layers,
+    icon: Layer,
     title: "Fragmented Technology Stack",
     description: "Legacy systems and siloed data prevent AI adoption at scale",
   },
   {
-    icon: MessageSquareText,
+    icon: FavoriteChart,
     title: "No Clear ROI on Digital Investments",
     description:
       "Initiatives fail to translate into measurable business outcomes",
   },
   {
-    icon: BookOpenText,
+    icon: RowHorizontal,
     title: "Talent & Implementation Gap",
     description:
       "Strategy exists but execution and change management fall short",
@@ -28,7 +28,7 @@ export default function EnterpriseChallenges() {
       <div className="page-container">
         <div className="relative text-center">
           <p className="mb-2 text-sm 2xl:text-base font-medium text-primary">
-            The Challenge
+            The 
           </p>
           <h2 className="font-bold">
             Why Enterprises are Struggling
@@ -40,30 +40,39 @@ export default function EnterpriseChallenges() {
           </p>
         </div>
 
-        <div className="relative mt-10">
-          {/* decorative dashed arc */}
+        <div className="relative mt-20">
+          {/* decorative dashed half-circle above the card 1 / card 2 gap */}
           <svg
-            className="pointer-events-none absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 sm:block"
-            width="900"
-            height="280"
-            viewBox="0 0 900 280"
+            className="pointer-events-none absolute left-1/3 top-0 hidden h-16 w-40 -translate-x-1/2 -translate-y-full sm:block"
+            viewBox="0 0 155 64"
             fill="none"
           >
-            <ellipse
-              cx="30"
-              cy="16"
-              rx="50"
-              ry="50"
+            <path
+              d="M0,64 A80,64 0 0 1 155,64"
               stroke="#C7CBFA"
-              strokeWidth="1.5"
+              strokeWidth="1"
               strokeDasharray="6 6"
             />
           </svg>
 
-          <div className="relative grid grid-cols-1 gap-4 sm:grid-cols-3">
+          {/* decorative dashed half-circle below the card 2 / card 3 gap */}
+          <svg
+            className="pointer-events-none absolute left-2/3 bottom-0 hidden h-16 w-40 -translate-x-1/2 translate-y-full sm:block"
+            viewBox="0 0 155 64"
+            fill="none"
+          >
+            <path
+              d="M0,0 A80,64 0 0 0 155,0"
+              stroke="#C7CBFA"
+              strokeWidth="1"
+              strokeDasharray="6 6"
+            />
+          </svg>
+
+          <div className="relative grid grid-cols-1 gap-6 sm:grid-cols-3">
             {challenges.map(({ icon: Icon, title, description }, idx) => (
               <div key={title} className="rounded-2xl bg-background p-5">
-                <Icon className="h-5 w-5 text-primary" strokeWidth={1.75} />
+                <Icon className="h-5 w-5 " strokeWidth={1.75} variant="TwoTone" color="currentColor"  />
                 <h3 className="mt-4 text-sm font-semibold text-neutral-900 sm:text-base">
                   {idx + 1}. {title}
                 </h3>

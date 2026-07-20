@@ -161,7 +161,7 @@ export default function CaseStudies({
             if (columns === 1) {
               return (
                 <div key={card.id} className="relative isolate">
-                  <div className="relative h-[450px] overflow-hidden rounded-2xl">
+                  <div className="relative h-[405px] overflow-hidden rounded-2xl">
                     <Image
                       src={card.image}
                       alt={card.title}
@@ -217,7 +217,7 @@ export default function CaseStudies({
                   setHoveredId(null)
                 }
               >
-                <div className="relative h-[clamp(20rem,31.25vw,37.5rem)] overflow-hidden rounded-2xl ">
+                <div className="relative h-[clamp(18rem,28.125vw,33.75rem)] overflow-hidden rounded-2xl ">
                   <Image
                     src={card.image}
                     alt={card.title}

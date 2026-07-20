@@ -1,7 +1,9 @@
 export type ContentBlock =
   | { type: "paragraph"; text: string }
   | { type: "heading"; text: string; emphasis?: string }
-  | { type: "callout"; title: string; items: string[] }
+  | { type: "subheading"; text: string }
+  | { type: "list"; items: string[] }
+  | { type: "callout"; title?: string; text?: string; items?: string[]; footer?: string }
   | { type: "image"; src: string; alt: string; caption?: string };
 
 export type Author = {
@@ -15,6 +17,8 @@ export type Report = {
   date: string;
   readTime: string;
   title: string;
+  /** Trailing portion of `title` (must be a suffix of it) rendered in italic serif emphasis on the detail page. */
+  titleEmphasis?: string;
   description: string;
   thumbnailUrl: string;
   imageUrl: string;
@@ -142,11 +146,12 @@ const REPORT_VARIANTS: (Omit<
   },
   {
     // Fully hand-authored example — matches the reference layout exactly.
-    type: "Article",
+    type: "Insights",
     date: "Jun 28, 2026",
     readTime: "8 Min read",
     title: "Medical Device Innovation in 2025: Redefining the Frontiers of Clinical Technology",
-    description: "How intelligence, personalisation, and real-time data moved medical devices from experimental to essential in 2025.",
+    titleEmphasis: "Frontiers of Clinical Technology",
+    description: "Exploring the breakthroughs in intelligent diagnostics, wearable therapies, and next-generation clinical technologies.",
     photoId: "1584982751601-97dcc096659c",
     body: (imageUrl) => [
       {
@@ -186,6 +191,94 @@ const REPORT_VARIANTS: (Omit<
         src: imageUrl,
         alt: "Key Consolidation Patterns: AI & data-driven startups, digital health partnerships, feedtech & orthopedic ventures, private equity fusion",
         caption: "Key Consolidation Patterns",
+      },
+      {
+        type: "list",
+        items: [
+          "Established device companies acquiring startups specializing in AI-enabled sensing, software-driven therapy optimization, and real-time data analytics.",
+          "Increased partnerships between medical device manufacturers and digital health or imaging companies to accelerate connected and interoperable device ecosystems.",
+          "Strategic investments in femtech, neuromodulation, and orthopedic innovation, where unmet clinical need and regulatory momentum aligned.",
+          "Private equity activity concentrating on differentiated, IP-rich device platforms with clear regulatory pathways and scalable manufacturing models.",
+        ],
+      },
+      { type: "heading", text: "What 2025 M&A Trends Signal for ", emphasis: "Device Manufacturers" },
+      {
+        type: "list",
+        items: [
+          "For mid-sized medical device companies, 2025 consolidation trends signal rising pressure to clearly define a differentiated technology niche, as acquirers increasingly favor capability-led expansion over pure revenue or geographic scale.",
+          "IP-rich platforms are being prioritized over scale-driven assets because proprietary algorithms, data, and defensible patents enable faster innovation cycles, stronger pricing power, and smoother integration into connected, software-centric device ecosystems.",
+        ],
+      },
+      { type: "heading", text: "Notable Product Launches and Platform ", emphasis: "Innovations" },
+      { type: "subheading", text: "Medtronic" },
+      {
+        type: "paragraph",
+        text: "In February 2025, Medtronic plc received U.S. Food and Drug Administration (FDA) approval for its BrainSense™ Adaptive deep brain stimulation (aDBS) and BrainSense™ Electrode Identifier (EI). This next-generation technology personalized therapy in real time by responding dynamically to a patient's brain signals, reducing the need for manual intervention and improving symptom control.",
+      },
+      {
+        type: "paragraph",
+        text: "The clinical and technological significance of this advancement was underscored by its inclusion in TIME magazine's list of Best Innovations of 2025, reinforcing the growing role of intelligent neuromodulation in treating complex neurological conditions.",
+      },
+      { type: "subheading", text: "Osteoboost Health Inc." },
+      {
+        type: "paragraph",
+        text: "In May 2025, Osteoboost Health Inc. announced nationwide availability of Osteoboost, the first and only FDA-approved wearable prescription medical device designed to address low bone density. Intended for at-home use, the device delivers targeted vibration therapy to the spine and hips—regions most susceptible to osteoporotic fractures.",
+      },
+      {
+        type: "paragraph",
+        text: "Clinical validation played a critical role in its adoption. A double-blinded, placebo-controlled study conducted at the University of Nebraska Medical Center demonstrated substantial reductions in bone density and strength loss among postmenopausal women with osteopenia. These outcomes highlighted a shift toward preventive, wearable-based interventions that extend care beyond traditional clinical settings.",
+      },
+      { type: "subheading", text: "Sebela Women's Health Inc." },
+      {
+        type: "paragraph",
+        text: "In February 2025, Sebela Women's Health Inc. announced FDA approval of MIUDELLA®, a novel copper intrauterine system for pregnancy prevention lasting up to three years.",
+      },
+      {
+        type: "paragraph",
+        text: "MIUDELLA® introduced a differentiated design by using less than half the copper of existing copper-based IUDs in the United States, supported by a flexible nitinol frame. Its fully preloaded inserter with a reduced diameter simplified placement, and improved patient comfort, addressing long-standing barriers to IUD adoption.",
+      },
+      { type: "subheading", text: "Proprio" },
+      {
+        type: "paragraph",
+        text: "In April 2025, Proprio received its second major FDA 510(k) clearance for its AI-powered surgical guidance platform. Proprio's Paradigm platform enabled real-time, 3D, dynamic visualization of patient anatomy during surgery—allowing surgeons to assess alignment, positioning, and procedural success intraoperatively. Prior to this innovation, surgeons often relied on intermittent imaging that required procedural pauses, increasing anesthesia time and surgical risk.",
+      },
+      {
+        type: "paragraph",
+        text: "The integration of real-time AI-driven feedback marked a turning point in surgical precision, reducing the likelihood of revision procedures and setting new standards for intraoperative decision-making.",
+      },
+      { type: "heading", text: "Government Initiatives and Large-Scale ", emphasis: "Projects Worldwide" },
+      {
+        type: "paragraph",
+        text: "Government support is expected to be highly crucial for shaping and fast-tracking medical device innovation in the future. With support funding and incentives for local manufacturing, governments are attracting more investments in the medical device sector.",
+      },
+      {
+        type: "list",
+        items: [
+          "In November 2025, the Government of South Korea announced the launch of a new USD 622.1 million initiative to boost the innovation of next-gen medical technologies. The initiative targets AI diagnostics, medical robotics, and next-gen implants. The Ministry of Trade, Industry and Energy said the program is being developed as a pan-government collaboration that will prioritize technologies with strong clinical and commercial potential.",
+        ],
+      },
+      { type: "heading", text: "Strategic Takeaways ", emphasis: "from 2025" },
+      {
+        type: "callout",
+        text: "Medical device innovation in 2025 revealed several defining themes shaping the industry's future:",
+        items: [
+          "Intelligence is becoming embedded, not adjunct: Devices are evolving into adaptive systems that respond dynamically to patient data.",
+          "Wearable and at-home therapies are gaining clinical credibility: Preventive and decentralized care models are accelerating adoption.",
+          "Patient-centric design is now a competitive necessity: Ease of use and comfort are critical to long-term success.",
+          "AI is redefining clinical precision: Real-time analytics and guidance are reshaping diagnostics, surgery, and therapy delivery.",
+          "Regulatory alignment is enabling faster innovation cycles: Adaptive frameworks are supporting responsible technology adoption.",
+        ],
+        footer:
+          "As the medical device industry moves beyond 2025, innovation is no longer measured solely by technological novelty but by its ability to seamlessly integrate into clinical workflows, improve outcomes, and scale responsibly. The convergence of engineering excellence, digital intelligence, and regulatory maturity is setting the stage for a new era of patient-centered healthcare innovation.",
+      },
+      {
+        type: "callout",
+        title: "What This Means for 2026",
+        items: [
+          "Capital in 2026 is expected to concentrate on AI-native medical devices, connected surgical platforms, neuromodulation, and clinically validated wearable therapies with clear outcome and reimbursement pathways.",
+          "The most attractive device categories will be those enabling preventive care, decentralized treatment models, and software-driven optimization integrated into clinical workflows.",
+          "Funding momentum is likely to slow for standalone hardware innovations, incremental feature upgrades, and technologies lacking strong clinical validation, interoperability, or a scalable commercialization strategy.",
+        ],
       },
     ],
   },

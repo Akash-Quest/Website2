@@ -1,6 +1,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import HowItWorks from "@/components/features/AgriMap/HowItWorks";
 function AgriMapProduct() {
   return (
     <section className="reltive">
@@ -13,20 +14,20 @@ function AgriMapProduct() {
     <div className="hero-container relative z-10 pb-5">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className=" pb-2 px-4 lg:px-0 ">
-          <ol className="breadcrumb flex flex-wrap items-center gap-2 text-gray-400 font-light tracking-wide">
+          <ol className="breadcrumb flex flex-wrap items-center gap-2 text-gray-500 font-light tracking-wide">
             <li>
               <Link href="/" className="hover:text-muted transition-colors">
                 Home
               </Link>
             </li>
-            <li className="text-gray-300">/</li>
+            <li className="text-gray-500">/</li>
             <li>
               <Link href="/what-we-do" className="hover:text-muted transition-colors">
                 Products
               </Link>
             </li>
-            <li className="text-gray-300">/</li>
-            <li className="text-gray-500">Agrimap</li>
+            <li className="text-gray-500">/</li>
+            <li className="text-gray-700">Agrimap</li>
           </ol>
         </nav>
         <div className="px-[2] sm:px-2 md:px-[10%]">
@@ -68,6 +69,7 @@ function AgriMapProduct() {
 export default function Teams() {
   return (<>
   <AgriMapProduct />
+  <HowItWorks />
 
   </>)
 

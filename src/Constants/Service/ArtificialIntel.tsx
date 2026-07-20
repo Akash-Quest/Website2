@@ -30,43 +30,46 @@ export const ArtificialIntelOtherServicesData: OtherService[] = [
 
 export const ArtificalIntelFaqData = [
   {
-    question: "What industries does SkyQuest serve?",
+    question: "What AI consulting services does SkyQuest provide?",
     answer:
-      "We partner with organisations across 12+ high-growth sectors including BFSI, Healthcare & Pharma, Manufacturing, IT & SaaS, Consumer Goods, Infrastructure, Energy, Chemicals, Automotive, Agriculture, Government & PSU, and Education. Our strategies are designed to be sector-specific not one-size-fits-all so leaders in any industry can achieve measurable, lasting results.",
+      "SkyQuest offers end-to-end AI and digital transformation services, including AI strategy, Generative AI implementation, predictive analytics, computer vision, MLOps, cloud transformation, data engineering, and managed AI services.",
   },
   {
-    question: "How do I know which service is right for my business?",
+    question: "How do you identify the right AI opportunities for our business?",
     answer:
-      "We start with a complimentary discovery call to understand your challenges, goals, and current state. From there, our team recommends the most relevant service or combination of services tailored to your specific needs.",
+      "We begin with an AI Readiness Assessment to evaluate your business goals, data maturity, technology landscape, and operational challenges before prioritizing high-impact use cases.",
   },
   {
-    question: "Do you offer customised solutions or standard frameworks?",
+    question:
+      "Can AI integrate with our existing ERP, CRM, and legacy systems?",
     answer:
-      "Both. We have proven frameworks built from thousands of engagements, but every engagement is customised to your organisation's context, maturity, and objectives. We never apply cookie-cutter approaches.",
+      "Yes. Our team specializes in integrating AI solutions with enterprise systems such as SAP, Oracle, Salesforce, Microsoft Dynamics, and custom legacy applications.",
   },
   {
-    question: "How do you measure success with clients?",
+    question: "How long does an enterprise AI implementation take?",
     answer:
-      "We define success metrics upfront with each client—whether that's revenue growth, market share, operational efficiency, or strategic milestones. We track these throughout the engagement and provide transparent reporting.",
+      "Timelines vary based on scope and complexity. A pilot can typically be delivered within a few months, while enterprise-wide transformation programs may be phased over a longer period.",
   },
   {
-    question: "What is SkyQuest's geographic reach?",
+    question: "Can SkyQuest help us implement Generative AI solutions?",
     answer:
-      "SkyQuest operates globally with deep expertise across North America, Europe, Asia-Pacific, and the Middle East. Our research and advisory capabilities cover 25+ countries.",
+      "Yes. We design and deploy enterprise-grade Generative AI solutions including AI assistants, copilots, intelligent search, document automation, and customer support bots.",
   },
   {
-    question: "How long does a typical engagement take?",
+    question: "How do you ensure data security and compliance?",
     answer:
-      "Engagements vary from a few weeks for targeted research projects to 12+ months for comprehensive transformation programs. We'll scope the timeline based on your goals during our initial discovery.",
+      "SkyQuest follows enterprise-grade security practices and supports compliance requirements through robust governance, access controls, encryption, and responsible AI frameworks.",
   },
   {
-    question: "Who will actually work on my project?",
+    question:
+      "Do you provide managed AI and support services after deployment?",
     answer:
-      "Your engagement is led by a senior consultant with relevant domain expertise, supported by a dedicated team of analysts and specialists. You'll have direct access to your lead consultant throughout the project.",
+      "Yes. We offer managed AI services including model monitoring, retraining, infrastructure management, optimization, and ongoing support to ensure long-term value creation.",
   },
   {
-    question: "How do we get started with SkyQuest?",
+    question:
+      "How do we get started with SkyQuest's AI consulting services?",
     answer:
-      "Simply schedule a call using the button below or reach out via our contact page. We'll set up a complimentary 30-minute discovery session to explore how we can best support your goals.",
+      "The engagement typically starts with a discovery workshop or strategy call to understand your objectives, assess readiness, and define a tailored transformation roadmap.",
   },
 ];

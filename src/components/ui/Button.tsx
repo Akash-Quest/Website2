@@ -8,6 +8,8 @@ interface ButtonProps {
   iconSize?: number;
   children: React.ReactNode;
   minWidth?: string;
+  fullWidth?: boolean;
+  onClick?: () => void;
 }
 const VARIANT_STYLES: Record<
   NonNullable<ButtonProps["variant"]>,
@@ -34,18 +36,21 @@ const Button: React.FC<ButtonProps> = ({
   variant = "primary",
   iconSize = 16,
   minWidth = "130px",
+  fullWidth = false,
   children,
+  onClick,
 }) => {
   const { button: buttonStyles, icon: iconStyles, text: textHoverStyles } =
     VARIANT_STYLES[variant];
   return (
     <Link
       href={href}
+      onClick={onClick}
       style={{ minWidth }}
       className={`
         group relative isolate overflow-hidden
         inline-flex items-center justify-between gap-2 sm:gap-2.5
-        w-fit
+        ${fullWidth ? "w-full" : "w-fit"}
         rounded-lg py-1 pl-3 pr-1 sm:py-1.5 sm:pl-4 sm:pr-1.5
         body-sm font-medium
         ${buttonStyles}

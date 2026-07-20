@@ -32,7 +32,7 @@ export default function CareerApplicationForm() {
   };
 
   return (
-    <div className=" bg-[#F7F5F1] font-sans">
+    <div id="apply" className="scroll-mt-16 sm:scroll-mt-20 lg:scroll-mt-24 bg-[#F7F5F1] font-sans">
       
       <div className="page-container">
         {/* Eyebrow */}

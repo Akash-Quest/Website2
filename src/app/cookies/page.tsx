@@ -5,6 +5,7 @@ interface CookieSection {
   headingItalic: string;
   body: string[];
   bullets?: string[];
+  extra?: React.ReactNode;
 }
 
 const sections: CookieSection[] = [
@@ -62,6 +63,65 @@ const sections: CookieSection[] = [
       "If you access our website as a non-customer, then the browsing data collected is anonymised before any reporting is done; we cannot track back to the pages you visit.",
       "If you access our website as a customer, then we track what information individuals access in order to report about the amount and type of information that your users access.",
     ],
+    extra: (
+      <div className="space-y-3">
+        <p className="font-semibold text-black">
+          Tools and technologies that Skyquest Technology Group uses for analytics:
+        </p>
+
+        <p>
+          <span className="font-semibold text-black">Mixpanel</span> – used for clients and non-clients
+          <br />
+          <a href="#" className="text-primary hover:underline">
+            Click here
+          </a>{" "}
+          to opt out or read Mixpanel&apos;s{" "}
+          <a href="#" className="text-primary hover:underline">
+            Privacy Policy
+          </a>
+          .
+        </p>
+
+        <p>
+          Google Analytics used for clients and non-clients.
+          <br />
+          <a href="#" className="text-primary hover:underline">
+            Click here
+          </a>{" "}
+          to opt out or read Google&apos;s{" "}
+          <a href="#" className="text-primary hover:underline">
+            Privacy Policy
+          </a>
+        </p>
+
+        <p>
+          <span className="font-semibold text-black">Salesforce</span> – used to track contact us requests
+          and marketing campaign effectiveness.{" "}
+          <a href="#" className="text-primary hover:underline">
+            Click here
+          </a>{" "}
+          to read the Salesforce Privacy Policy.
+        </p>
+
+        <p>
+          <span className="font-semibold text-black">SaleCycle</span> – SaleCycle uses cookies to collect
+          information from your device such as products which were recently added to your basket without
+          completion of your order. For more information please visit{" "}
+          <a
+            href="http://www.salecycle.com/service-privacy-notice"
+            className="text-primary hover:underline break-all"
+          >
+            http://www.salecycle.com/service-privacy-notice
+          </a>
+        </p>
+
+        <p>
+          <span className="font-semibold text-black">LinkedIn</span> – LinkedIn uses cookies and tags to
+          collect information to better serve you relevant ads based on previous behavior and improve our
+          products.
+        </p>
+      </div>
+    ),
   },
 ];
 
@@ -69,27 +129,30 @@ export default function CookiesPage() {
   return (
     <section className="bg-white">
       <div className="hero-container">
-        {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="pb-2 px-4 lg:px-0 border-b border-l border-r">
-          <ol className="breadcrumb flex flex-wrap items-center gap-2 text-gray-400 font-light tracking-wide">
-            <li>
-              <Link href="/" className="hover:text-muted transition-colors">
-                Home
-              </Link>
-            </li>
-            <li className="text-gray-300">/</li>
-            <li className="text-gray-500">Cookies</li>
-          </ol>
-        </nav>
-
         <div className="px-4 lg:px-0">
-          <p className="text-primary mb-2">Skyquest</p>
-          <h2 className="font-semibold text-black mb-8">Cookies</h2>
-
           <div className="max-w-4xl border border-gray-200 divide-y divide-gray-200">
+            {/* Breadcrumb */}
+            <nav aria-label="Breadcrumb" className="px-5 py-3 sm:px-6">
+              <ol className="breadcrumb flex flex-wrap items-center gap-2 text-gray-500 font-light tracking-wide">
+                <li>
+                  <Link href="/" className="hover:text-muted transition-colors">
+                    Home
+                  </Link>
+                </li>
+                <li className="text-gray-500">/</li>
+                <li className="text-gray-700">Cookies</li>
+              </ol>
+            </nav>
+
+            {/* Header */}
+            <div className="p-5 sm:p-6">
+              <p className="text-primary mb-2">Skyquest</p>
+              <h2 className="font-semibold text-black">Cookies</h2>
+            </div>
+
             {sections.map((section, i) => (
               <div key={i} className="p-5 sm:p-6">
-                <h2 className="font-semibold text-black mb-3">
+                <h2 className="font-semibold text-black mb-3 border-b border-gray-200 pb-3">
                   {section.heading}
                   <em className="font-normal">{section.headingItalic}</em>
                 </h2>
@@ -105,6 +168,10 @@ export default function CookiesPage() {
                         <li key={j}>{bullet}</li>
                       ))}
                     </ul>
+                  )}
+
+                  {section.extra && (
+                    <div className="text-sm">{section.extra}</div>
                   )}
                 </div>
               </div>

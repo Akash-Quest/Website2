@@ -80,7 +80,7 @@ export default function FeaturedReport() {
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 ">
           {visibleReports.map((report) => (
             <div key={report.title} className="p-2 bg-background rounded-lg">
-              <div className="relative h-40 w-full overflow-hidden rounded-xl bg-neutral-100">
+              <div className="relative h-40 2xl:h-48 w-full overflow-hidden rounded-xl bg-neutral-100">
                 <Image
                   src={report.image}
                   alt={report.title}
@@ -91,13 +91,13 @@ export default function FeaturedReport() {
                 />
               </div>
 
-              <p className="mt-3 text-xs font-medium text-primary">
+              <p className="mt-3 text-xs 2xl:text-sm font-medium text-primary">
                 {report.date}
               </p>
               <h3 className="mt-1 text-sm font-semibold text-neutral-900 2xl:text-base">
                 {report.title}
               </h3>
-              <p className="mt-1.5 text-sm text-muted">{report.description}</p>
+              <p className="mt-1.5 text-sm  text-muted">{report.description}</p>
 
               <button
                 type="button"

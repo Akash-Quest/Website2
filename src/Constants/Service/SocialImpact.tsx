@@ -187,43 +187,48 @@ export const SocialImpactOtherServicesData: OtherService[] = [
 
 export const SocialImpactFaqData = [
   {
-    question: "What industries does SkyQuest serve?",
+    question:
+      "How can organizations create measurable social impact through CSR?",
     answer:
-      "We partner with organisations across 12+ high-growth sectors including BFSI, Healthcare & Pharma, Manufacturing, IT & SaaS, Consumer Goods, Infrastructure, Energy, Chemicals, Automotive, Agriculture, Government & PSU, and Education. Our strategies are designed to be sector-specific not one-size-fits-all so leaders in any industry can achieve measurable, lasting results.",
+      "Effective CSR programs align business objectives with community needs, focus on measurable outcomes, and create sustainable ecosystems rather than one-time interventions.",
   },
   {
-    question: "How do I know which service is right for my business?",
+    question:
+      "Does SkyQuest support CSR implementation as well as strategy?",
     answer:
-      "We start with a complimentary discovery call to understand your challenges, goals, and current state. From there, our team recommends the most relevant service or combination of services tailored to your specific needs.",
+      "Yes. We support the entire lifecycle—from strategy and program design to implementation, monitoring, evaluation, and impact assessment.",
   },
   {
-    question: "Do you offer customised solutions or standard frameworks?",
+    question:
+      "Can SkyQuest work with foundations and philanthropic organizations?",
     answer:
-      "Both. We have proven frameworks built from thousands of engagements, but every engagement is customised to your organisation's context, maturity, and objectives. We never apply cookie-cutter approaches.",
+      "Yes. We partner with corporate foundations, philanthropic institutions, family offices, and impact investors to design, implement, and scale social impact initiatives.",
   },
   {
-    question: "How do you measure success with clients?",
+    question: "How do you measure the success of social impact programs?",
     answer:
-      "We define success metrics upfront with each client—whether that's revenue growth, market share, operational efficiency, or strategic milestones. We track these throughout the engagement and provide transparent reporting.",
+      "We use robust monitoring, evaluation, and learning frameworks to measure outputs, outcomes, long-term impact, and social return on investment.",
   },
   {
-    question: "What is SkyQuest's geographic reach?",
+    question:
+      "Does SkyQuest support government and donor-funded development programs?",
     answer:
-      "SkyQuest operates globally with deep expertise across North America, Europe, Asia-Pacific, and the Middle East. Our research and advisory capabilities cover 25+ countries.",
+      "Yes. We work with governments, development agencies, multilateral institutions, and donors on social protection, livelihoods, inclusion, education, healthcare, and community development initiatives.",
   },
   {
-    question: "How long does a typical engagement take?",
+    question:
+      "What sectors does SkyQuest support through its Social Impact practice?",
     answer:
-      "Engagements vary from a few weeks for targeted research projects to 12+ months for comprehensive transformation programs. We'll scope the timeline based on your goals during our initial discovery.",
+      "Our experience spans livelihoods, education, healthcare, agriculture, financial inclusion, women's empowerment, social protection, climate resilience, and community development.",
   },
   {
-    question: "Who will actually work on my project?",
+    question: "How does SkyQuest approach inclusive development?",
     answer:
-      "Your engagement is led by a senior consultant with relevant domain expertise, supported by a dedicated team of analysts and specialists. You'll have direct access to your lead consultant throughout the project.",
+      "We focus on strengthening systems, building institutional capacity, leveraging technology, and creating pathways for sustainable economic and social inclusion.",
   },
   {
-    question: "How do we get started with SkyQuest?",
+    question: "What regions does SkyQuest serve?",
     answer:
-      "Simply schedule a call using the button below or reach out via our contact page. We'll set up a complimentary 30-minute discovery session to explore how we can best support your goals.",
+      "SkyQuest supports clients across India, Africa, the Middle East, Asia-Pacific, Europe, and North America, combining global best practices with deep local understanding.",
   },
 ];

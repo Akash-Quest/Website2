@@ -22,6 +22,43 @@ function HeroPage(){
     <ServiceHeroPage {...AgricultureHeroData} />
   )
 }
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Agriculture & Livestock Consulting Services | SkyQuest",
+
+  description:
+    "Supporting sustainable agriculture, livestock systems, food security, and rural development through advisory and implementation services.",
+
+  keywords: [
+    "agriculture consulting",
+    "agribusiness consulting",
+    "livestock consulting",
+    "food systems",
+    "agricultural advisory",
+  ],
+
+  alternates: {
+    canonical:
+      "https://www.skyquestt.com/services/agriculture-livestock",
+  },
+
+  openGraph: {
+    title: "Building Resilient Agriculture Systems",
+    description:
+      "Supporting sustainable agriculture, livestock systems, food security, and rural development through advisory and implementation services.",
+    url: "https://www.skyquestt.com/services/agriculture-livestock",
+    type: "website",
+    siteName: "SkyQuest",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Building Resilient Agriculture Systems",
+    description:
+      "Supporting sustainable agriculture, livestock systems, food security, and rural development through advisory and implementation services.",
+  },
+};
 export default function Agriculturepage(){
     return (<>
      <HeroPage />

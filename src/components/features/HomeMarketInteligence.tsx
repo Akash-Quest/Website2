@@ -135,7 +135,7 @@ export default function MarketIntelligence() {
         </h2>
 
         {/* Subcopy */}
-        <p className=" text-center text-muted max-w-xl mx-auto text-sm 2xl:text-base">
+        <p className=" text-center text-muted max-w-[60%] mx-auto text-sm 2xl:text-base">
           Explore industry reports, market insights, and research publications
           that help organizations identify opportunities, anticipate change,
           and make informed decisions.

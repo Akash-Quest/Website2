@@ -61,7 +61,7 @@ export default function ServiceCoreCapabilities({
                     <h3 className="font-semibold text-base 2xl:text-lg text-neutral-900">
                       {title}
                     </h3>
-                    <p className=" text-muted text-xs  ">{description}</p>
+                    <p className=" text-muted text-xs 2xl:text-sm  ">{description}</p>
                   </div>
                 </li>
               ))}

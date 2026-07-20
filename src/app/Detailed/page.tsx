@@ -1,13 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import { Bookmark, Download, Link2, Mail, Printer, Share2 } from "lucide-react";
-import { getReportById, reports, type ContentBlock } from "@/lib/reports";
+import { getReportById, type ContentBlock } from "@/lib/reports";
 import { FacebookIcon, LinkedInIcon, XIcon } from "@/components/icons/SocialIcons";
 
-export function generateStaticParams() {
-  return reports.map((report) => ({ id: String(report.id) }));
-}
+const report = getReportById(11)!;
 
 function EmphasizedText({ text, emphasis }: { text: string; emphasis?: string }) {
   return (
@@ -81,17 +78,23 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
   }
 }
 
-export default async function InsightDetailsPage({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
-  const { id } = await params;
-  const report = getReportById(Number(id));
+const PAGE_ACTIONS = [
+  { label: "Save", icon: Bookmark },
+  { label: "Download", icon: Download },
+  { label: "Print", icon: Printer },
+  { label: "Share", icon: Share2 },
+];
 
-  if (!report) {
-    notFound();
-  }
+const SOCIAL_LINKS = [
+  { label: "LinkedIn", icon: <LinkedInIcon />, bg: "bg-[#0A66C2]" },
+  { label: "X", icon: <XIcon />, bg: "bg-black" },
+  { label: "Facebook", icon: <FacebookIcon />, bg: "bg-[#1877F2]" },
+];
+
+export default function DetailedPage() {
+  const titleBase = report.titleEmphasis
+    ? report.title.slice(0, report.title.length - report.titleEmphasis.length)
+    : report.title;
 
   return (
     <section className="bg-background">
@@ -107,30 +110,68 @@ export default async function InsightDetailsPage({
             <li className="text-gray-500">/</li>
             <li>
               <Link href="/insight" className="hover:text-muted transition-colors">
-                Insight Listing
+                Insights
               </Link>
             </li>
             <li className="text-gray-500">/</li>
             <li className="text-gray-700 truncate max-w-[200px] sm:max-w-none">
-              {report.title}
+              Medical Device Innovation
             </li>
           </ol>
         </nav>
 
         <div className="px-[2]">
-          {/* Eyebrow */}
-          <div className="flex items-center gap-1.5 text-sm text-muted mb-2 mt-8 sm:mt-8 md:mt-2">
-            <span>{report.title}</span>
+          {/* Heading + share card */}
+          <div className="flex flex-col gap-6 mt-8 sm:mt-8 md:mt-2 lg:flex-row lg:items-start lg:justify-between ">
+            <h1 className=" font-bold">
+              <EmphasizedText text={titleBase} emphasis={report.titleEmphasis} />
+            </h1>
+
+            <div className="  relative hidden shrink-0 lg:block ">
+              <div className="flex flex-col gap-2 rounded-sm border border-gray-200 bg-white p-2 ">
+                {SOCIAL_LINKS.map((social) => (
+                  <a
+                    key={social.label}
+                    href="#"
+                    aria-label={`Share on ${social.label}`}
+                    className="flex items-center gap-3 text-sm text-gray-700 transition-colors hover:text-primary"
+                  >
+                    <span
+                      className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-white ${social.bg}`}
+                    >
+                      {social.icon}
+                    </span>
+                    {social.label}
+                  </a>
+                ))}
+              </div>
+              <span className="absolute -bottom-2 right-1/5 h-4 w-4 -translate-x-1/2 rotate-45 border-b border-r border-gray-200 bg-white" />
+            </div>
           </div>
 
-          {/* Heading */}
-          <h1 className="font-bold">{report.title}</h1>
-
-          {/* Description */}
+          {/* Meta row */}
+          <div className="mt-4 flex flex-wrap items-center justify-between gap-4 border-gray-200 py-3">
+            <p className="text-sm text-gray-500">
+              {report.type} <span className="mx-1.5 text-gray-300">|</span> {report.date}{" "}
+              <span className="mx-1.5 text-gray-300">|</span> {report.readTime}
+            </p>
+            <div className="flex items-center divide-x divide-gray-200">
+              {PAGE_ACTIONS.map(({ label, icon: Icon }) => (
+                <button
+                  key={label}
+                  type="button"
+                  className="flex flex-col items-center gap-1 px-3 text-gray-500 transition-colors hover:text-primary"
+                >
+                  <Icon className="h-4 w-4" />
+                  <span className="text-[11px]">{label}</span>
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Hero Image */}
-        <div className="mt-5 sm:px-[4]">
+        <div className="mt-2 sm:px-[4]">
           <div className="relative w-full aspect-[3/3.5] md:aspect-[3/0.9] 2xl:aspect-[3/1] sm:rounded-2xl overflow-hidden">
             <Image
               src={report.imageUrl}
@@ -146,18 +187,52 @@ export default async function InsightDetailsPage({
         {/* Body */}
         <div className="mt-10 grid grid-cols-1 gap-10 px-4 lg:grid-cols-3 lg:gap-14 lg:px-0">
           <article className="min-w-0 lg:col-span-2">
-            {report.body.map((block, i) => (
+            <p className="mb-6 text-base sm:text-lg leading-relaxed text-gray-600">
+              {report.description}
+            </p>
+
+            <p className="mb-4 text-sm sm:text-base leading-relaxed text-gray-700">
+              <span className="font-playfair float-left mr-3 mt-1 text-6xl font-bold leading-[0.75] text-gray-900">
+                2
+              </span>
+              025 marked a turning point for the{" "}
+              <a href="#" className="text-primary underline underline-offset-2 hover:opacity-80">
+                global medical device industry
+              </a>
+              , a year when intelligence, personalization, and real-time data moved from
+              experimental to essential. What had long been driven by incremental engineering
+              improvements evolved into a convergence of advanced materials,{" "}
+              <strong className="font-semibold text-gray-900">intelligent systems</strong>, and
+              digitally enabled design philosophies. Medical devices were no longer viewed as
+              isolated tools but as adaptive, data-driven extensions of clinical decision-making
+              and patient care.
+            </p>
+
+            <p className="mb-4 text-sm sm:text-base leading-relaxed text-gray-700">
+              Healthcare systems worldwide faced growing burdens from chronic disease prevalence,
+              aging populations, clinician shortages, and rising care costs. In response, medical
+              device manufacturers accelerated innovation by integrating real-time sensing,
+              connectivity, and{" "}
+              <a href="#" className="text-primary underline underline-offset-2 hover:opacity-80">
+                artificial intelligence (AI)
+              </a>{" "}
+              into therapeutic and diagnostic platforms. Regulatory pathways also adapted,
+              enabling faster translation of breakthrough technologies into clinical practice
+              without compromising safety or efficacy.
+            </p>
+
+            {report.body.slice(2).map((block, i) => (
               <ContentBlockView block={block} key={i} />
             ))}
           </article>
 
           <aside className="lg:col-span-1">
-            <div className="rounded-2xl border border-gray-200 p-5 sm:p-6 lg:sticky lg:top-24">
+            <div className=" p-5 sm:p-6 lg:sticky lg:top-24">
               <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-2">
-                <span className="text-xs font-semibold tracking-wide text-gray-400">
+                <span className="text-sm font-bold  text-gray-700">
                   AUTHORS
                 </span>
-                <span className="text-xs text-gray-500">
+                <span className="text-xs text-gray-700">
                   Published on {report.date} <span className="mx-1">|</span> {report.readTime}
                 </span>
               </div>

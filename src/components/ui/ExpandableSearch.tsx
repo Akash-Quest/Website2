@@ -16,8 +16,8 @@ export default function ExpandableSearch({
 
   return (
     <div
-      className={`hidden md:flex h-8 2xl:h-12 items-center overflow-hidden rounded-full ${bgClassName} text-black transition-[width] duration-300 ease-out ${
-        expanded ? "w-56 2xl:w-64 px-3 2xl:px-4 " : "w-8 2xl:w-12 justify-center"
+      className={`hidden md:flex h-8 2xl:h-10 items-center overflow-hidden rounded-full ${bgClassName} text-black transition-[width] duration-300 ease-out ${
+        expanded ? "w-60 2xl:w-80 2xl:w-64 px-3 2xl:px-4 " : "w-8 2xl:w-10 justify-center"
       }`}
       onMouseEnter={() => {
         setOpen(true);
@@ -27,7 +27,7 @@ export default function ExpandableSearch({
         if (!value) setOpen(false);
       }}
     >
-      <Search className="h-[18px] w-[18px] 2xl:h-7 2xl:w-7 shrink-0" />
+      <Search className="h-[18px] w-[18px] 2xl:h-6 2xl:w-6 shrink-0" />
       <input
         ref={inputRef}
         type="text"

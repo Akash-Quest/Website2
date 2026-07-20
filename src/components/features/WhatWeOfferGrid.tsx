@@ -64,7 +64,7 @@ export default function WhatWeOfferGrid({
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-2 gap-y-5 sm:grid-cols-3 lg:grid-cols-4 gap-2">
+        <div className="mt-10 grid grid-cols-2 gap-y-5 sm:grid-cols-3 lg:grid-cols-4 gap-2 gap-2 2xl:gap-8">
           {items.map(({ icon: Icon, title, description }, index) => (
             <div
               key={title}

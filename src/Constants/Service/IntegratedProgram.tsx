@@ -179,43 +179,28 @@ export const IntegratedProgramOtherServicesData: OtherService[] = [
 
 export const IntegratedProgramFaqData = [
   {
-    question: "What industries does SkyQuest serve?",
+    question: "What is Integrated Program Management?",
     answer:
-      "We partner with organisations across 12+ high-growth sectors including BFSI, Healthcare & Pharma, Manufacturing, IT & SaaS, Consumer Goods, Infrastructure, Energy, Chemicals, Automotive, Agriculture, Government & PSU, and Education. Our strategies are designed to be sector-specific not one-size-fits-all so leaders in any industry can achieve measurable, lasting results.",
+      "Integrated Program Management combines planning, governance, implementation oversight, stakeholder coordination, monitoring, and impact measurement into a unified delivery approach.",
   },
   {
-    question: "How do I know which service is right for my business?",
+    question: "Do you support donor-funded and development programs?",
     answer:
-      "We start with a complimentary discovery call to understand your challenges, goals, and current state. From there, our team recommends the most relevant service or combination of services tailored to your specific needs.",
+      "Yes. We work with governments, DFIs, foundations, CSR teams, multilaterals, and development institutions managing large-scale initiatives.",
   },
   {
-    question: "Do you offer customised solutions or standard frameworks?",
+    question: "Can SkyQuest act as a Program Management Office (PMO)?",
     answer:
-      "Both. We have proven frameworks built from thousands of engagements, but every engagement is customised to your organisation's context, maturity, and objectives. We never apply cookie-cutter approaches.",
+      "Yes. We provide full PMO support, including governance, reporting, coordination, risk management, and performance tracking.",
   },
   {
-    question: "How do you measure success with clients?",
+    question: "How do you measure program success?",
     answer:
-      "We define success metrics upfront with each client—whether that's revenue growth, market share, operational efficiency, or strategic milestones. We track these throughout the engagement and provide transparent reporting.",
+      "Through defined KPIs, monitoring frameworks, evaluations, impact assessments, and outcome measurement systems.",
   },
   {
-    question: "What is SkyQuest's geographic reach?",
+    question: "Which sectors do you support?",
     answer:
-      "SkyQuest operates globally with deep expertise across North America, Europe, Asia-Pacific, and the Middle East. Our research and advisory capabilities cover 25+ countries.",
-  },
-  {
-    question: "How long does a typical engagement take?",
-    answer:
-      "Engagements vary from a few weeks for targeted research projects to 12+ months for comprehensive transformation programs. We'll scope the timeline based on your goals during our initial discovery.",
-  },
-  {
-    question: "Who will actually work on my project?",
-    answer:
-      "Your engagement is led by a senior consultant with relevant domain expertise, supported by a dedicated team of analysts and specialists. You'll have direct access to your lead consultant throughout the project.",
-  },
-  {
-    question: "How do we get started with SkyQuest?",
-    answer:
-      "Simply schedule a call using the button below or reach out via our contact page. We'll set up a complimentary 30-minute discovery session to explore how we can best support your goals.",
+      "We support programs across agriculture, climate, healthcare, education, public sector, livelihoods, infrastructure, digital transformation, and social impact.",
   },
 ];

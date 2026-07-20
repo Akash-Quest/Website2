@@ -17,6 +17,44 @@ import {
   EsgOtherServicesData,
   EsgFaqData,
 } from '@/Constants/Service/Esg';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Climate, Sustainability & ESG Advisory Services | SkyQuest",
+
+  description:
+    "Accelerate sustainability goals through climate strategy, ESG consulting, decarbonization, climate finance, and resilience advisory services.",
+
+  keywords: [
+    "ESG consulting services",
+    "sustainability consulting",
+    "climate advisory",
+    "ESG strategy",
+    "net zero consulting",
+  ],
+
+  alternates: {
+    canonical:
+      "https://www.skyquestt.com/services/climate-change-sustainability",
+  },
+
+  openGraph: {
+    title: "Building Sustainable & Resilient Organizations",
+    description:
+      "Accelerate sustainability goals through climate strategy, ESG consulting, decarbonization, climate finance, and resilience advisory services.",
+    url:
+      "https://www.skyquestt.com/services/climate-change-sustainability",
+    type: "website",
+    siteName: "SkyQuest",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Building Sustainable & Resilient Organizations",
+    description:
+      "Accelerate sustainability goals through climate strategy, ESG consulting, decarbonization, climate finance, and resilience advisory services.",
+  },
+};
 function HeroPage(){
   return(
     <ServiceHeroPage {...EsgHeroData} />

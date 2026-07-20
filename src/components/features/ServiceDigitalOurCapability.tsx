@@ -98,7 +98,7 @@ function Card({
 }
 
 const SMALL_CARD_HEIGHT = "clamp(14.18rem,16.96vw,20.35rem)";
-const ROW_GAP = "clamp(1rem,1.5625vw,1.875rem)";
+const ROW_GAP = "1rem";
 
 export default function DigitalMosaic() {
   const [aiStrategy, dataIntelligence, digitalTransformation, intelligentAutomation, digitalPublicInfra] =
@@ -106,7 +106,7 @@ export default function DigitalMosaic() {
 
   return (
     <section className="w-full bg-background">
-      <div className="page-container pb-0">
+      <div className="page-container ">
          <p className="text-sm 2xl:text-base text-primary mb-2">
           Our Capabilities
         </p>

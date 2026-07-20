@@ -83,9 +83,9 @@ function TagPill({ label }: { label: string }) {
 function JobCard({ job }: { job: Job }) {
   return (
     <div className="bg-[#F7F5F1] rounded-xl p-4 flex flex-col gap-2">
-      <h6 className=" font-semibold text-[#03030F] m-0 ">
+      <h3 className=" font-semibold text-[#03030F] m-0 text-lg">
         {job.title}
-      </h6>
+      </h3>
 
       <div className="flex flex-wrap gap-2">
         {job.tags.map((tag) => (
@@ -93,7 +93,7 @@ function JobCard({ job }: { job: Job }) {
         ))}
       </div>
 
-      <p className="text-xs font-inter text-[#000000] leading-tight m-0">
+      <p className="text-xs 2xl:text-sm font-inter text-[#000000] leading-tight m-0">
         {job.description}
       </p>
 
@@ -124,7 +124,7 @@ export default function OpenPositions() {
         {/* Two-column layout */}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 items-start">
           {/* ── Sidebar ── */}
-          <aside className="w-full lg:w-48 flex-shrink-0">
+          <aside className="w-full lg:w-52 flex-shrink-0">
             <div className="flex flex-row gap-1.5 overflow-x-auto scrollbar-hide pb-1 lg:flex-col lg:gap-2 lg:overflow-visible lg:pb-0">
               {categories.map((cat) => {
                 const isActive = activeCategory === cat.label;
@@ -132,7 +132,7 @@ export default function OpenPositions() {
                   <button
                     key={cat.label}
                     onClick={() => setActiveCategory(cat.label)}
-                    className={`flex-shrink-0 whitespace-nowrap text-left lg:w-full px-3 py-2 rounded-full lg:rounded-r-lg lg:rounded-l-none text-xs font-medium cursor-pointer transition-colors ${
+                    className={`flex-shrink-0 whitespace-nowrap text-left lg:w-full px-3 py-2 rounded-full lg:rounded-r-lg lg:rounded-l-none text-xs 2xl:text-sm font-medium cursor-pointer transition-colors ${
                       isActive
                         ? "bg-primary text-white lg:bg-[#EAEAF8] lg:text-black lg:border-l-[3px] lg:border-primary"
                         : "bg-gray-100 text-muted hover:bg-gray-200 lg:bg-transparent lg:hover:bg-gray-100"
@@ -149,12 +149,12 @@ export default function OpenPositions() {
 
             {/* Sidebar note */}
             <div className="mt-4 lg:mt-6 lg:pl-1">
-              <p className="text-xs text-gray-400  m-0">
+              <p className="text-xs 2xl:text-sm text-gray-500  m-0">
                 We are always seeking talented people. In case you cannot find your desired position
                 here, please send us your LinkedIn profile and give us your contact information. We
                 will be in touch.
               </p>
-              <button className="mt-3 lg:mt-5 flex items-center border border-gray-200 gap-3 rounded-md bg-[#EAEAF8] pl-3 pr-1 py-1 text-[10px] text-gray-700">
+              <button className="mt-3 lg:mt-5 flex items-center border border-gray-200 gap-3 rounded-md bg-[#EAEAF8] pl-3 pr-1 py-1 text-[12px] text-gray-700">
             Share Your LinkedIn Profile
 
             <span className="flex h-6 w-6  items-center justify-center rounded-md bg-primary text-white">

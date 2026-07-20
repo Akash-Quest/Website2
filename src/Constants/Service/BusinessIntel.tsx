@@ -128,44 +128,45 @@ export const BusinessIntelOtherServicesData: OtherService[] = [
 ];
 
 export const BusinessIntelFaqData = [
-  {
-    question: "What industries does SkyQuest serve?",
+   {
+    question: "How does market intelligence support strategic decision-making?",
     answer:
-      "We partner with organisations across 12+ high-growth sectors including BFSI, Healthcare & Pharma, Manufacturing, IT & SaaS, Consumer Goods, Infrastructure, Energy, Chemicals, Automotive, Agriculture, Government & PSU, and Education. Our strategies are designed to be sector-specific not one-size-fits-all so leaders in any industry can achieve measurable, lasting results.",
+      "Market intelligence provides organizations with evidence-based insights on customers, competitors, industry trends, risks, and growth opportunities, enabling better strategic decisions.",
   },
   {
-    question: "How do I know which service is right for my business?",
+    question: "Can SkyQuest support market entry and expansion initiatives?",
     answer:
-      "We start with a complimentary discovery call to understand your challenges, goals, and current state. From there, our team recommends the most relevant service or combination of services tailored to your specific needs.",
+      "Yes. We conduct market attractiveness assessments, competitive analyses, regulatory evaluations, and go-to-market strategy development to support expansion decisions.",
   },
   {
-    question: "Do you offer customised solutions or standard frameworks?",
+    question: "Do you provide custom research or syndicated reports?",
     answer:
-      "Both. We have proven frameworks built from thousands of engagements, but every engagement is customised to your organisation's context, maturity, and objectives. We never apply cookie-cutter approaches.",
+      "We primarily focus on customized research, strategic intelligence, and advisory engagements tailored to specific client objectives and industries.",
   },
   {
-    question: "How do you measure success with clients?",
+    question: "What industries does SkyQuest specialize in?",
     answer:
-      "We define success metrics upfront with each client—whether that's revenue growth, market share, operational efficiency, or strategic milestones. We track these throughout the engagement and provide transparent reporting.",
+      "Our expertise spans materials, utilities, real estate, consumer discretionary, consumer staples, health care, financials, industrials, information technology, communication services, and energy industries.",
   },
   {
-    question: "What is SkyQuest's geographic reach?",
+    question: "Can SkyQuest support investment and due diligence activities?",
     answer:
-      "SkyQuest operates globally with deep expertise across North America, Europe, Asia-Pacific, and the Middle East. Our research and advisory capabilities cover 25+ countries.",
+      "Yes. We conduct commercial due diligence, market assessments, opportunity evaluations, and strategic analyses for investors, corporations, DFIs, and development institutions.",
   },
   {
-    question: "How long does a typical engagement take?",
+    question: "How do you ensure research quality and reliability?",
     answer:
-      "Engagements vary from a few weeks for targeted research projects to 12+ months for comprehensive transformation programs. We'll scope the timeline based on your goals during our initial discovery.",
+      "We use rigorous methodologies, triangulation approaches, multiple data sources, expert validation, and quality assurance processes to ensure accuracy and reliability.",
   },
   {
-    question: "Who will actually work on my project?",
+    question: "Do you support governments and development institutions?",
     answer:
-      "Your engagement is led by a senior consultant with relevant domain expertise, supported by a dedicated team of analysts and specialists. You'll have direct access to your lead consultant throughout the project.",
+      "Yes. We regularly support governments, ministries, development agencies, foundations, and multilateral organizations with sector research, policy studies, impact assessments, and strategic advisory.",
   },
   {
-    question: "How do we get started with SkyQuest?",
+    question:
+      "What makes SkyQuest different from traditional market research firms?",
     answer:
-      "Simply schedule a call using the button below or reach out via our contact page. We'll set up a complimentary 30-minute discovery session to explore how we can best support your goals.",
+      "Unlike traditional research firms that primarily provide data and reports, SkyQuest combines market intelligence, strategic advisory, sector expertise, and implementation understanding to help clients translate insights into action.",
   },
 ];

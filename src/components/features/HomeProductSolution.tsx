@@ -35,7 +35,7 @@ const tabContent: Record<
     description:
       "AgriMap gives agriculture departments, banks, and governments a real-time view of seed replacement rates, crop health, and variety adoption across every district down to the block level.",
     buttonLabel: "AgriMap",
-    image: "/Productsoln/Pr6.jpg",
+    image: "/Productsoln/Pr1.jpg",
   },
   "Inspect Global": {
     badge: "SATELLITE · GPS · AI · IOT · FUSION INTELLIGENCE",
@@ -63,7 +63,7 @@ const tabContent: Record<
     description:
       "MineralIQ delivers predictive geology and exploration intelligence to mining companies — identifying high-potential zones faster than traditional surveys.",
     buttonLabel: "MineralIQ",
-    image: "/Productsoln/pr1.png",
+    image: "/Productsoln/Pr3.jpg",
   },
   "Skyquest Labs": {
     badge: "Tele-Pathology · AI-Assisted · 15-Minute Reports",
@@ -78,7 +78,7 @@ const tabContent: Record<
     description:
       "Skyquest Labs connects physical diagnostic labs to qualified pathologists remotely delivering verified reports in under 15 minutes. Only data travels. Never the sample.",
     buttonLabel: "Skyquest Labs",
-    image: "/Productsoln/Pr5.jpg",
+    image: "/Productsoln/Pr4.jpg",
   },
   DeCarbonX: {
     badge: "Article 6 · NDC 3.0 · COP32 · Ethiopia Live",
@@ -93,7 +93,7 @@ for sovereign
     description:
       "DeCarbonX turns climate project ideas into finance-ready instruments carbon credits, green bonds, Article 6 forwards with full national data sovereignty and AI-driven MRV.",
     buttonLabel: "DeCarbonX",
-    image: "/Productsoln/Pr4.jpg",
+    image: "/Productsoln/Pr5.jpg",
   },
   AlwaysOn: {
     badge: "WhatsApp-Native · No App Download · Live",
@@ -106,7 +106,7 @@ for sovereign
     description:
       "AlwaysON delivers AI-powered diagnostic services directly through WhatsApp the world's most-used messaging platform. No app. No barrier. No delay.",
     buttonLabel: "AlwaysOn",
-    image: "/Productsoln/Pr5.jpg",
+    image: "/Productsoln/Pr6.jpg",
   },
 };
 

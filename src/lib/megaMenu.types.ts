@@ -1,15 +1,3 @@
-export type MegaMenuLink = {
-  label: string;
-  href: string;
-  /** Shows an arrow and slightly heavier styling — a "view all" style link */
-  featured?: boolean;
-};
-
-export type MegaMenuColumn = {
-  heading?: string;
-  links: MegaMenuLink[];
-};
-
 export type MegaMenuPromo = {
   image: string;
   title: string;
@@ -18,26 +6,52 @@ export type MegaMenuPromo = {
   ctaLabel: string;
 };
 
-/** Simple 1–2 column layout (Capabilities, Industries) */
+export type MegaMenuLink = {
+  label: string;
+  href: string;
+  /** Shows an arrow and slightly heavier styling — a "view all" style link */
+  featured?: boolean;
+  /** Overrides the panel's promo card while this link is hovered/active */
+  promo?: MegaMenuPromo;
+};
+
+export type MegaMenuColumn = {
+  heading?: string;
+  links: MegaMenuLink[];
+};
+
+/** One industry group within a sector, e.g. "Metals & Mining" under "Materials" */
+export type MegaMenuDrilldownGroup = {
+  label: string;
+  links: MegaMenuLink[];
+};
+
+export type MegaMenuDrilldownCategory = {
+  label: string;
+  href: string;
+  groups: MegaMenuDrilldownGroup[];
+};
+
+/** Simple 1–2 column layout */
 export type MegaMenuColumnsContent = {
   kind: "columns";
+  heading?: string;
   description?: string;
   columns: MegaMenuColumn[];
   promo?: MegaMenuPromo;
 };
 
-/** Category → sub-category drill-down layout (Reports) */
+/** Category → sub-category drill-down layout */
 export type MegaMenuDrilldownContent = {
   kind: "drilldown";
+  heading?: string;
   description?: string;
-  categories: {
-    label: string;
-    href: string;
-    children: MegaMenuLink[];
-  }[];
+  categories: MegaMenuDrilldownCategory[];
 };
 
-export type MegaMenuContent = MegaMenuColumnsContent | MegaMenuDrilldownContent;
+export type MegaMenuContent =
+  | MegaMenuColumnsContent
+  | MegaMenuDrilldownContent;
 
 export type MegaMenuItem = {
   id: string;

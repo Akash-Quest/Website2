@@ -34,11 +34,11 @@ export default function CareersHero() {
 
         {/* CTAs */}
         <div className="mt-5 flex flex-wrap items-center gap-4">
-           <Button variant="primary" iconSize={16}>
+           <Button href="/careers" variant="primary" iconSize={16}>
             Explore Careers
                   </Button>
 
-         <Button variant="white" iconSize={16}>
+         <Button href="/careers#apply" variant="white" iconSize={16}>
             Apply Today
                   </Button>
         </div>

@@ -184,44 +184,36 @@ export const EsgOtherServicesData: OtherService[] = [
 ];
 
 export const EsgFaqData = [
-  {
-    question: "What industries does SkyQuest serve?",
+   {
+    question:
+      "Why should organizations integrate climate, sustainability, and ESG initiatives?",
     answer:
-      "We partner with organisations across 12+ high-growth sectors including BFSI, Healthcare & Pharma, Manufacturing, IT & SaaS, Consumer Goods, Infrastructure, Energy, Chemicals, Automotive, Agriculture, Government & PSU, and Education. Our strategies are designed to be sector-specific not one-size-fits-all so leaders in any industry can achieve measurable, lasting results.",
+      "Organizations that embed sustainability into strategy improve resilience, manage risk, strengthen stakeholder trust, and create long-term value.",
   },
   {
-    question: "How do I know which service is right for my business?",
+    question: "Do you support both strategy and implementation?",
     answer:
-      "We start with a complimentary discovery call to understand your challenges, goals, and current state. From there, our team recommends the most relevant service or combination of services tailored to your specific needs.",
+      "Yes. We support clients from assessments and roadmap development through implementation, reporting, governance, and impact measurement.",
   },
   {
-    question: "Do you offer customised solutions or standard frameworks?",
+    question:
+      "Can SkyQuest support climate finance and sustainable investment initiatives?",
     answer:
-      "Both. We have proven frameworks built from thousands of engagements, but every engagement is customised to your organisation's context, maturity, and objectives. We never apply cookie-cutter approaches.",
+      "Yes. We help organizations structure climate finance programs, develop investment-ready projects, and mobilize sustainable capital.",
   },
   {
-    question: "How do you measure success with clients?",
+    question: "How do you support net-zero and decarbonization goals?",
     answer:
-      "We define success metrics upfront with each client—whether that's revenue growth, market share, operational efficiency, or strategic milestones. We track these throughout the engagement and provide transparent reporting.",
+      "We establish emissions baselines, identify reduction opportunities, develop transition pathways, and implement decarbonization strategies.",
   },
   {
-    question: "What is SkyQuest's geographic reach?",
+    question: "Which reporting frameworks do you support?",
     answer:
-      "SkyQuest operates globally with deep expertise across North America, Europe, Asia-Pacific, and the Middle East. Our research and advisory capabilities cover 25+ countries.",
+      "We support alignment with BRSR, GRI, SASB, TCFD, ISSB, and other leading sustainability disclosure standards.",
   },
   {
-    question: "How long does a typical engagement take?",
+    question: "What sectors do you work with?",
     answer:
-      "Engagements vary from a few weeks for targeted research projects to 12+ months for comprehensive transformation programs. We'll scope the timeline based on your goals during our initial discovery.",
-  },
-  {
-    question: "Who will actually work on my project?",
-    answer:
-      "Your engagement is led by a senior consultant with relevant domain expertise, supported by a dedicated team of analysts and specialists. You'll have direct access to your lead consultant throughout the project.",
-  },
-  {
-    question: "How do we get started with SkyQuest?",
-    answer:
-      "Simply schedule a call using the button below or reach out via our contact page. We'll set up a complimentary 30-minute discovery session to explore how we can best support your goals.",
+      "We support governments, enterprises, investors, financial institutions, development organizations, and foundations across multiple sectors globally.",
   },
 ];

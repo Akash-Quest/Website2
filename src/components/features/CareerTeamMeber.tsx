@@ -83,9 +83,9 @@ function MemberCard({ member }: { member: Member }) {
       {/* Right: Description */}
       <div className="flex flex-col justify-between flex-1 min-w-0">
         <div>
-          <p className="text-sm font-semibold text-gray-900">{member.name}</p>
-          <p className="text-xs text-[#03030FB2] mt-0">{member.title}</p>
-          <p className="text-xs text-[#03030FB2] mt-0">{member.location}</p>
+          <p className="text-sm 2xl:text-base font-semibold text-gray-900">{member.name}</p>
+          <p className="text-xs 2xl:text-sm text-[#03030FB2] mt-0">{member.title}</p>
+          <p className="text-xs 2xl:text-sm text-[#03030FB2] mt-0">{member.location}</p>
         </div>
         <div className="flex justify-end gap-2 mt-0">
           <button

@@ -15,7 +15,42 @@ import {
   PublicSectorOtherServicesData,
   PublicSectorFaqData,
 } from '@/Constants/Service/PublicSector';
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Public Sector Advisory & Government Consulting | SkyQuest",
+
+  description:
+    "Supporting governments and institutions through policy advisory, governance reform, digital transformation, and implementation support.",
+
+  keywords: [
+    "public sector consulting",
+    "government consulting",
+    "governance advisory",
+    "policy consulting",
+    "institutional strengthening",
+  ],
+
+  alternates: {
+    canonical: "https://www.skyquestt.com/services/public-sector",
+  },
+
+  openGraph: {
+    title: "Enabling Modern Governments & Institutions",
+    description:
+      "Supporting governments and institutions through policy advisory, governance reform, digital transformation, and implementation support.",
+    url: "https://www.skyquestt.com/services/public-sector",
+    type: "website",
+    siteName: "SkyQuest",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Enabling Modern Governments & Institutions",
+    description:
+      "Supporting governments and institutions through policy advisory, governance reform, digital transformation, and implementation support.",
+  },
+};
 function HeroPage(){
   return(
     <ServiceHeroPage {...PublicSectorHeroData} />

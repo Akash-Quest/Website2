@@ -232,43 +232,46 @@ export const AgricultureOtherServicesData: OtherService[] = [
 
 export const AgricultureFaqData = [
   {
-    question: "Who is jash ?",
+    question:
+      "What types of agriculture and livestock projects does SkyQuest support?",
     answer:
-      " josh is a devloper tegies are designed to be sector-specific not one-size-fits-all so leaders in any industry can achieve measurable, lasting results.",
+      "We support agricultural transformation programs, livestock development initiatives, value chain projects, agri-tech deployments, climate resilience programs, food security initiatives, and rural development strategies.",
   },
   {
-    question: "How do I know which service is right for my business?",
+    question:
+      "Do you work with governments and development institutions?",
     answer:
-      "We start with a complimentary discovery call to understand your challenges, goals, and current state. From there, our team recommends the most relevant service or combination of services tailored to your specific needs.",
+      "Yes. We partner with ministries, public agencies, multilateral organizations, foundations, and development institutions on agriculture and rural development programs.",
   },
   {
-    question: "Do you offer customised solutions or standard frameworks?",
+    question: "How does SkyQuest support digital agriculture initiatives?",
     answer:
-      "Both. We have proven frameworks built from thousands of engagements, but every engagement is customised to your organisation's context, maturity, and objectives. We never apply cookie-cutter approaches.",
+      "We design and implement digital agriculture platforms, AI-enabled advisory systems, geospatial intelligence solutions, precision agriculture programs, and digital farmer ecosystems.",
   },
   {
-    question: "How do you measure success with clients?",
+    question: "Can SkyQuest support livestock transformation programs?",
     answer:
-      "We define success metrics upfront with each client—whether that's revenue growth, market share, operational efficiency, or strategic milestones. We track these throughout the engagement and provide transparent reporting.",
+      "Yes. Our livestock expertise includes animal health systems, disease surveillance, traceability, productivity enhancement, digital livestock management, and value chain development.",
   },
   {
-    question: "What is SkyQuest's geographic reach?",
+    question: "How do you approach climate-smart agriculture?",
     answer:
-      "SkyQuest operates globally with deep expertise across North America, Europe, Asia-Pacific, and the Middle East. Our research and advisory capabilities cover 25+ countries.",
+      "We integrate climate adaptation, resilience-building, regenerative practices, water efficiency, risk management, and sustainability principles into agricultural development strategies.",
   },
   {
-    question: "How long does a typical engagement take?",
+    question: "Can SkyQuest help strengthen agricultural value chains?",
     answer:
-      "Engagements vary from a few weeks for targeted research projects to 12+ months for comprehensive transformation programs. We'll scope the timeline based on your goals during our initial discovery.",
+      "Yes. We support value chain diagnostics, market development, aggregation models, processing infrastructure, logistics systems, and market access strategies.",
   },
   {
-    question: "Who will actually work on my project?",
+    question:
+      "Do you support agri-finance and rural investment initiatives?",
     answer:
-      "Your engagement is led by a senior consultant with relevant domain expertise, supported by a dedicated team of analysts and specialists. You'll have direct access to your lead consultant throughout the project.",
+      "Yes. We help design agricultural finance models, insurance programs, blended finance structures, rural investment strategies, and financial inclusion initiatives.",
   },
   {
-    question: "How do we get started with SkyQuest?",
+    question: "What regions does SkyQuest serve?",
     answer:
-      "Simply schedule a call using the button below or reach out via our contact page. We'll set up a complimentary 30-minute discovery session to explore how we can best support your goals.",
+      "We work across India, Africa, the Middle East, Asia-Pacific, and other emerging markets where agriculture, food systems, and rural development are strategic priorities.",
   },
 ];
