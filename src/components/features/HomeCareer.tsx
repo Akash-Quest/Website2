@@ -24,11 +24,11 @@ export default function CareersHero() {
         </h2>
 
         {/* Body */}
-        <p className="mt-2 body-sm max-w-md text-muted ">
+        <p className="mt-2 tracking-wide max-w-md text-muted ">
           From boardrooms to field programmes across 15+ countries SkyQuest offers
           careers that challenge, inspire, and create lasting change.
         </p>
-        <p className="mt-2 body-sm font-semibold text-muted ">
+        <p className="mt-2  font-semibold text-muted ">
           Join a team that turns bold ideas into practical solutions.
         </p>
 

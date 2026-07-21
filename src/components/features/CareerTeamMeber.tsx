@@ -83,9 +83,9 @@ function MemberCard({ member }: { member: Member }) {
       {/* Right: Description */}
       <div className="flex flex-col justify-between flex-1 min-w-0">
         <div>
-          <p className="text-sm 2xl:text-base font-semibold text-gray-900">{member.name}</p>
-          <p className="text-xs 2xl:text-sm text-[#03030FB2] mt-0">{member.title}</p>
-          <p className="text-xs 2xl:text-sm text-[#03030FB2] mt-0">{member.location}</p>
+          <p className=" font-semibold text-gray-900">{member.name}</p>
+          <p className=" text-[#03030FB2] mt-1">{member.title}</p>
+          <p className=" text-[#03030FB2] mt-0">{member.location}</p>
         </div>
         <div className="flex justify-end gap-2 mt-0">
           <button
@@ -122,7 +122,7 @@ export default function TeamGrid() {
         </em>
         </h2>
         <div className="mt-8">
-          <h3 className="mb-4 text-lg font-bold text-gray-900">Leadership</h3>
+          <h3 className="mb-4 font-bold text-gray-900">Leadership</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {leaders.map((member, idx) => (
               <MemberCard member={member} key={idx} />
@@ -131,7 +131,7 @@ export default function TeamGrid() {
         </div>
 
         <div className="mt-8">
-          <h3 className="mb-4 text-lg font-bold text-gray-900">Our Team</h3>
+          <h3 className="mb-4 font-bold text-gray-900">Our Team</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {team.map((member, idx) => (
               <MemberCard member={member} key={idx} />

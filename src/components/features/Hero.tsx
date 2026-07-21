@@ -195,7 +195,7 @@ Systems for Governments
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className=" text-white/80   mb-2 sm:mb-4 text-sm 2xl:text-base"
+                className=" text-white/80   mb-2 sm:mb-4 tracking-wide"
               >
                 {slide.label}
               </motion.p>
@@ -207,7 +207,7 @@ Systems for Governments
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="font-bold text-white max-w-md sm:max-w-2xl 2xl:max-w-5xl mb-3 sm:mb-5]"
+                className="font-bold text-white max-w-md sm:max-w-2xl 2xl:max-w-5xl mb-3 sm:mb-5 ]"
               >
                 {slide.title}
               </motion.h1>
@@ -219,7 +219,7 @@ Systems for Governments
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="text-white/80 max-w-sm sm:max-w-xl 2xl:max-w-3xl mb-4 text-sm  2xl:text-base"
+                className="text-white/80 max-w-sm sm:max-w-xl 2xl:max-w-3xl mb-4 2xl:mb-5 tracking-wide"
               >
                 {slide.description}
               </motion.p>

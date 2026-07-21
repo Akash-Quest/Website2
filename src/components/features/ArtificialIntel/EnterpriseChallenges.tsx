@@ -73,7 +73,7 @@ export default function EnterpriseChallenges() {
             {challenges.map(({ icon: Icon, title, description }, idx) => (
               <div key={title} className="rounded-2xl bg-background p-5">
                 <Icon className="h-5 w-5 " strokeWidth={1.75} variant="TwoTone" color="currentColor"  />
-                <h3 className="mt-4 text-sm font-semibold text-neutral-900 sm:text-base">
+                <h3 className="mt-4 font-semibold text-neutral-900">
                   {idx + 1}. {title}
                 </h3>
                 <p className="mt-1.5 text-sm text-muted">{description}</p>

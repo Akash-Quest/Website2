@@ -33,25 +33,25 @@ const tabs: TabContent[] = [
         title:
           "Lignosulfonate Based Concrete Admixtures Market Size, Share, and Growth Analysis",
         description:
-          "Global Lignosulfonate Based Concrete Admixtures Market size was valued at USD 4.20 Billion in 2023 poised to grow between USD 4.44 Billion in 2024 to USD 6.87 Billion by 2032, growing at a CAGR of 5.6% in the forecast period (2025-2032).",
+          "Global Lignosulfonate Based Concrete Admixtures Market size was valued at USD 4.20 Billion in 2023 poised to grow ...",
       },
       {
         image: "/Marketinteli/Pr2.jpg",
         title: "Sector Outlooks",
         description:
-          "Global Lignosulfonate Based Concrete Admixtures Market size was valued at USD 4.20 Billion in 2023 poised to grow between USD 4.44 Billion in 2024 to USD 6.87 Billion by 2032, growing at a CAGR of 5.6% in the forecast period (2025-2032).",
+          "Global Lignosulfonate Based Concrete Admixtures Market size was valued at USD 4.20 Billion in 2023 poised to grow ...",
       },
       {
         image: "/Marketinteli/Pr3.jpg",
         title: "Custom Research",
         description:
-          "Global Lignosulfonate Based Concrete Admixtures Market size was valued at USD 4.20 Billion in 2023 poised to grow between USD 4.44 Billion in 2024 to USD 6.87 Billion by 2032, growing at a CAGR of 5.6% in the forecast period (2025-2032).",
+          "Global Lignosulfonate Based Concrete Admixtures Market size was valued at USD 4.20 Billion in 2023 poised to ...",
       },
       {
         image: "/Marketinteli/Pr4.jpg",
         title: "Strategic Insights",
         description:
-          "Global Lignosulfonate Based Concrete Admixtures Market size was valued at USD 4.20 Billion in 2023 poised to grow between USD 4.44 Billion in 2024 to USD 6.87 Billion by 2032, growing at a CAGR of 5.6% in the forecast period (2025-2032).",
+          "Global Lignosulfonate Based Concrete Admixtures Market size was valued at USD 4.20 Billion in 2023 poised to grow...",
       },
     ],
   },
@@ -125,7 +125,7 @@ export default function MarketIntelligence() {
     <section className="w-full bg-[#F7F5F1] ">
       <div className="page-container">
         {/* Eyebrow */}
-        <p className="text-center text-primary mb-2 text-sm 2xl:text-base">
+        <p className="text-center text-primary mb-2 tracking-wide">
           Market Intelligence
         </p>
 
@@ -135,7 +135,7 @@ export default function MarketIntelligence() {
         </h2>
 
         {/* Subcopy */}
-        <p className=" text-center text-muted max-w-[60%] mx-auto text-sm 2xl:text-base">
+        <p className=" text-center text-muted max-w-[80%] mx-auto tracking-wide leading-snug">
           Explore industry reports, market insights, and research publications
           that help organizations identify opportunities, anticipate change,
           and make informed decisions.
@@ -187,13 +187,13 @@ export default function MarketIntelligence() {
                 </div>
 
                 <div className="px-1 pt-4 pb-2">
-                  <h3 className="text-sm font-semibold text-neutral-900 leading-snug">
+                  <h3 className=" font-semibold text-neutral-900 leading-snug">
                     {slide.title}
                   </h3>
-                  <p className="mt-2 text-xs text-neutral-500 leading-relaxed">
+                  <p className="mt-2 text-neutral-500 leading-tight ">
                     {slide.description}
                   </p>
-                  <button className="mt-3 flex items-center gap-1 text-sm font-medium text-indigo-700 lg:hidden">
+                  <button className="mt-3 flex items-center gap-1  font-medium text-indigo-700 lg:hidden">
                     {current.ctaLabel}
                     <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.5} />
                   </button>
@@ -233,13 +233,13 @@ export default function MarketIntelligence() {
                 </div>
 
                 <div className="px-1 pt-4 pb-2 lg:hidden">
-                  <h3 className="text-sm font-semibold text-neutral-900 leading-snug">
+                  <h3 className=" font-semibold text-neutral-900 leading-snug">
                     {current.tabLabel}
                   </h3>
-                  <p className="mt-2 text-xs text-neutral-500 leading-relaxed">
+                  <p className="mt-2  text-neutral-500 tracking-wide leading-snug">
                     {current.description}
                   </p>
-                  <button className="mt-3 flex items-center gap-1 text-sm font-medium text-indigo-700">
+                  <button className="mt-3 flex items-center gap-1 font-medium text-indigo-700">
                     {current.ctaLabel}
                     <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.5} />
                   </button>

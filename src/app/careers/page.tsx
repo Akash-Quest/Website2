@@ -32,7 +32,7 @@ function CareersHero() {
         </nav>
         <div className="px-[2] sm:px-2 md:px-[10%]">
         {/* Eyebrow */}
-        <p className="text-center text-primary mb-2 mt-8 sm:mt-8 md:mt-2 text-sm 2xl:text-base ">
+        <p className="text-center text-primary mb-2 mt-8 sm:mt-8 md:mt-2  ">
           Careers
         </p>
 
@@ -43,7 +43,7 @@ function CareersHero() {
         </h1>
 
         {/* Subheading */}
-        <p className="text-center mt-2 mb-5  text-muted text-sm 2xl:text-base ">
+        <p className="text-center mt-2 mb-5  text-muted tracking-wide leading-snug  ">
           If innovativeness is in your schema and you have just decided to source a technology/innovation or an IP, we at SkyQuest can help you make your decision tangible.
         </p>
         </div>

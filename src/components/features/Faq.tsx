@@ -50,7 +50,7 @@ export default function FAQSection({
 
         {/* ── MOBILE: heading (top) ───────────── */}
         <div className="lg:hidden">
-          <p className="text-indigo-600 mb-2">
+          <p className="text-primary mb-2">
             {eyebrow}
           </p>
           <h2 className="font-bold mb-2 sm:mb-8 lg:mb-4">
@@ -70,7 +70,7 @@ export default function FAQSection({
             </h2>
           </div>
           <div className={`${cardBgClassName} border border-gray-200 rounded-2xl p-6 `}>
-            <h3 className=" text-lg font-bold text-gray-900 mb-1">{ctaHeading}</h3>
+            <h3 className="font-bold text-gray-900 mb-1">{ctaHeading}</h3>
             <p className="text-sm 2xl-text-base text-gray-500 mb-5">{ctaDescription}</p>
             <Button variant="primary" iconSize={16}>
                     {ctaButtonText}
@@ -121,7 +121,7 @@ export default function FAQSection({
 
         {/* ── MOBILE: "Still have a question" card (bottom) ── */}
         <div className={`lg:hidden ${cardBgClassName} border border-gray-200 rounded-2xl p-6`}>
-          <h3 className="text-lg font-bold text-gray-900 mb-2">{ctaHeading}</h3>
+          <h3 className="font-bold text-gray-900 mb-2">{ctaHeading}</h3>
           <p className="text-sm text-gray-500 mb-5">{ctaDescription}</p>
           <button type="button" className="flex items-center justify-center gap-2 rounded-lg bg-[#1D1EE3] pl-3 py-2 pr-1 text-sm text-white transition-colors hover:bg-[#231598] leading-none">
             {ctaButtonText}

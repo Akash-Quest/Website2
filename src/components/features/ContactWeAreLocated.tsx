@@ -37,7 +37,7 @@ function LocationsSection() {
             We Are{" "}
             <em>Located At</em>
           </h2>
-          <p className="text-muted">
+          <p className="text-muted tracking-wide leading-snug">
             Connecting with you across our global and regional offices.
           </p>
         </div>
@@ -46,12 +46,12 @@ function LocationsSection() {
         <div className="divide-y divide-gray-300 ">
           {locations.map((loc) => (
             <div key={loc.city + loc.address} className="py-4 first:pt-0 ">
-              <h4 className="border-b border-gray-300 pb-2 font-semibold  ">
+              <h3 className="border-b border-gray-300 pb-2 font-semibold  ">
                 {loc.city}{" "}
                 {loc.branch && (
                   <span className="font-playfair">{loc.branch}</span>
                 )}
-              </h4>
+              </h3>
 
 
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mt-2 gap-2 ">

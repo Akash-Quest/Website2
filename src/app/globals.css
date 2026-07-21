@@ -25,7 +25,7 @@
 
 @layer components {
   .page-container {
-    @apply mx-auto max-w-[1900px]  px-4  md:px-[10%] 2xl:px-[13%]  py-12 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-28 ;
+    @apply mx-auto  max-w-[1900px] px-4  md:px-[10%] 2xl:px-[13%]  py-12 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-28 ;
   
   }
   .hero-container {
@@ -45,6 +45,7 @@
   h1 {
      font-size: clamp(2rem, 4vw, 4.5rem); /* 32px → 72px */
     line-height: 1;
+
   }
 
   h2 {
@@ -53,7 +54,7 @@
   }
 
   h3 {
-   font-size: clamp(1.5rem, 3vw, 2.5rem); /* 24px → 40px */
+   font-size: clamp(1.25rem, 1.5vw, 1.5rem); /* 16px → 20px */
     line-height: 1;
   }
 
@@ -108,6 +109,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter);
+  
 }
 
 /* ------------------------------

@@ -99,7 +99,7 @@ export default function CaseStudies({
         {/* Header */}
         <div className=" flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
           <div>
-            <p className="mb-2 text-primary text-sm 2xl:text-base">
+            <p className="mb-2 text-primary tracking-wide">
               {eyebrow}
             </p>
 
@@ -116,7 +116,7 @@ export default function CaseStudies({
 
         {/* Description + Arrows */}
         <div className="mb-5  flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-          <p className=" mt-2 text-sm  max-w-xl  text-sm 2xl:text-base">
+          <p className=" mt-2  max-w-xl  tracking-wide leading-snug">
             {description}
           </p>
 
@@ -175,7 +175,7 @@ export default function CaseStudies({
 
                     <div className="absolute inset-x-0 bottom-0 z-10 rounded-2xl bg-white/90 p-4 text-[#15121F]">
                       <div className="flex items-center justify-between">
-                        <p className="text-xs font-medium text-[#2A1ACC]">
+                        <p className=" font-medium text-[#2A1ACC]">
                           {card.category}
                         </p>
                         <p className="text-xs text-muted">{card.date}</p>
@@ -186,7 +186,7 @@ export default function CaseStudies({
                       <button
                         type="button"
                         aria-label={`${readMoreButton}: ${card.title}`}
-                        className="group/learn mt-3 inline-flex items-center text-sm font-semibold text-primary cursor-pointer"
+                        className="group/learn mt-3 inline-flex items-center text-sm 2xl:text-lg font-semibold text-primary cursor-pointer"
                       >
                         {readMoreButton}
                         <span className="relative ml-1 h-3.5 w-3.5 overflow-hidden">
@@ -233,11 +233,11 @@ export default function CaseStudies({
                     className={`absolute inset-x-0 bottom-0 z-10 flex flex-col overflow-hidden rounded-2xl bg-white/55 backdrop-blur-lg backdrop-brightness-125 border-none text-[#15121F] transition-all duration-[250ms] ease-out [clip-path:inset(-1px_round_1rem)] ${
                       isExpanded
                         ? "h-full p-5 "
-                        : "h-[85px] p-3 m-3"
+                        : "h-[70px] p-3 m-3 items-center"
                     }`}
                   >
                     <p
-                      className={`text-xs font-medium text-[#2A1ACC] overflow-hidden transition-all duration-150 ${
+                      className={` font-medium text-primary overflow-hidden transition-all duration-150 ${
                         isExpanded ? "max-h-6 opacity-100 mb-2" : "max-h-0 opacity-0"
                       }`}
                     >
@@ -248,14 +248,14 @@ export default function CaseStudies({
                       className={` transition-all  duration-150 ${
                         isExpanded
                           ? "font-bold text-lg"
-                          : "font-semibold sm:text-sm 2xl:text-lg"
+                          : "font-semibold sm:text-sm 2xl:text-lg leading-tight"
                       }`}
                     >
                       {card.title}
                     </h3>
 
                     <p
-                      className={`mt-3 text-sm overflow-hidden text-muted transition-all duration-150 ${
+                      className={`mt-3  overflow-hidden text-muted transition-all duration-150 ${
                         isExpanded
                           ? "max-h-60 opacity-100"
                           : "max-h-0 opacity-0"

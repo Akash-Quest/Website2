@@ -31,7 +31,7 @@ const Footer = () => {
               governments achieve sustainable growth.
             </p>
             <div className="border-b border-white/20 mt-10 pb-6 flex gap-2 items-center">
-                <h3 className="text-white text-sm font-semibold">Follow Us</h3>
+                <h3 className="text-white font-semibold">Follow Us</h3>
               {[<TwitterIcon />, <FacebookIcon />, <LinkedInIcon />, ].map((icon, i) => (
                 <a
                   key={i}
@@ -46,7 +46,7 @@ const Footer = () => {
 
           {/* Services column */}
           <div className="w-full sm:w-56 lg:w-52">
-            <h3 className="text-white text-sm font-bold mb-4">Our Services</h3>
+            <h3 className="text-white font-bold mb-4">Our Services</h3>
             <ul className="space-y-2.5 text-white/80 text-xs">
               {services.map((s) => (
                 <li key={s}>
@@ -63,7 +63,7 @@ const Footer = () => {
 
           {/* About column */}
           <div className="w-full sm:w-40 lg:w-40">
-            <h3 className="text-white font-bold text-sm mb-4">About Us</h3>
+            <h3 className="text-white font-bold mb-4">About Us</h3>
             <ul className="space-y-2.5 text-white/80 text-xs">
               {aboutLinks.map((l) => (
                 <li key={l}>
@@ -80,7 +80,7 @@ const Footer = () => {
 
           {/* Contact column */}
           <div>
-            <h3 className="text-white font-bold text-sm mb-4">Contact Us</h3>
+            <h3 className="text-white font-bold mb-4">Contact Us</h3>
             <ul className="space-y-2.5 text-white/80 text-xs">
               {[
                 { href: "tel:+13513334748", label: "(+1) 351-333-4748" },

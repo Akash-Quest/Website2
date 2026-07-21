@@ -33,7 +33,7 @@ function ReportCard({ report }: { report: Report }) {
               <span>{report.date}</span>
             </div>
 
-            <h3 className="mt-2 sm:truncate text-lg font-semibold text-gray-900">
+            <h3 className="mt-2 sm:truncate font-semibold text-gray-900">
               {report.title}
             </h3>
 

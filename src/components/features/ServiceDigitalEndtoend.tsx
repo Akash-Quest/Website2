@@ -59,7 +59,7 @@ export default function EndtoEnd({
     </span>
   ))}
 </div>
-              <h3 className="mt-2 sm:text-sm 2xl:text-lg font-semibold text-neutral-900">
+              <h3 className="mt-2 font-semibold text-neutral-900">
                 {title}
               </h3>
               <p className="mt-1.5 sm:text-sm 2xl:text-base text-muted">

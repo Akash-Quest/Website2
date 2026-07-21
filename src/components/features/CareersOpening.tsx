@@ -83,7 +83,7 @@ function TagPill({ label }: { label: string }) {
 function JobCard({ job }: { job: Job }) {
   return (
     <div className="bg-[#F7F5F1] rounded-xl p-4 flex flex-col gap-2">
-      <h3 className=" font-semibold text-[#03030F] m-0 text-lg">
+      <h3 className=" font-semibold text-[#03030F] m-0">
         {job.title}
       </h3>
 
@@ -93,7 +93,7 @@ function JobCard({ job }: { job: Job }) {
         ))}
       </div>
 
-      <p className="text-xs 2xl:text-sm font-inter text-[#000000] leading-tight m-0">
+      <p className=" font-inter text-[#000000]-400 text-sm leading-tight m-0">
         {job.description}
       </p>
 
@@ -149,12 +149,12 @@ export default function OpenPositions() {
 
             {/* Sidebar note */}
             <div className="mt-4 lg:mt-6 lg:pl-1">
-              <p className="text-xs 2xl:text-sm text-gray-500  m-0">
+              <p className=" text-gray-500  m-0">
                 We are always seeking talented people. In case you cannot find your desired position
                 here, please send us your LinkedIn profile and give us your contact information. We
                 will be in touch.
               </p>
-              <button className="mt-3 lg:mt-5 flex items-center border border-gray-200 gap-3 rounded-md bg-[#EAEAF8] pl-3 pr-1 py-1 text-[12px] text-gray-700">
+              <button className="mt-3 lg:mt-5 flex items-center border border-gray-700 gap-3 rounded-md bg-[#EAEAF8] pl-3 pr-1 py-1 text-[12px] text-gray-700">
             Share Your LinkedIn Profile
 
             <span className="flex h-6 w-6  items-center justify-center rounded-md bg-primary text-white">
@@ -169,7 +169,7 @@ export default function OpenPositions() {
             {filteredJobs.length > 0 ? (
               filteredJobs.map((job) => <JobCard key={job.id} job={job} />)
             ) : (
-              <p className="text-sm text-muted">
+              <p className=" text-muted">
                 No open positions in this category right now.
               </p>
             )}

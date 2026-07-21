@@ -56,7 +56,7 @@ export default function DigitalPage(){
      <CaseStudies {...caseStudiesData} bgClassName='bg-background'/>
      <OtherServicesSection bgClassName="bg-white" services={DigitalOtherServicesData} />
      <CaseStudies {...insightData} bgClassName='bg-background'/>
-     <FAQSection faqs={DigitalFaqData} />
+     <FAQSection heading="Questions About" headingItalic="Digital Transformation" faqs={DigitalFaqData} />
      <Suscribe />
      </>)
 

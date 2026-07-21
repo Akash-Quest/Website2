@@ -70,7 +70,7 @@ export default function EsgService(){
      <CaseStudies {...caseStudiesData}  bgClassName='bg-white'/>
      <OtherServicesSection bgClassName='bg-background' services={EsgOtherServicesData} />
      <CaseStudies {...insightData} bgClassName='bg-white'/>
-     <FAQSection bgClassName='bg-background' faqs={EsgFaqData} />
+     <FAQSection bgClassName='bg-background' heading="Questions About" headingItalic="Climate & ESG Advisory" faqs={EsgFaqData} />
      <Suscribe className="pt-0"/>
 
      </>)

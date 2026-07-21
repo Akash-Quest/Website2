@@ -81,7 +81,7 @@ function ContactHero() {
         <div className="flex flex-col items-center gap-8 px-4 lg:px-0">
           {/* Top: text */}
           <div className="flex flex-col items-center text-center">
-            <p  className="text-primary pb-0 text-sm 2xl:text-base  ">
+            <p  className="text-primary pb-0 2xl:text-base  ">
             Contact us
           </p>
 
@@ -89,7 +89,7 @@ function ContactHero() {
             How can <em className="font-semibold">we help?</em>
           </h1>
 
-          <p className="text-muted max-w-[75%] mt-2 text-sm 2xl:text-base mb-0">
+          <p className="text-muted max-w-[75%] mt-2 tracking-wide leading-snug mb-0">
             Have a question or opportunity in mind? SkyQuest makes it faster and easier to connect with our team and explore how we can help your business grow.
           </p>
 

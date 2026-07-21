@@ -27,7 +27,7 @@ const tabContent: Record<
     badge: "Seed Intelligence Platform",
     heading: (
       <>
-        Know every seed.
+        Know every seed.{" "}
         
         Reach <em>Every Farm.</em>
       </>
@@ -41,7 +41,7 @@ const tabContent: Record<
     badge: "SATELLITE · GPS · AI · IOT · FUSION INTELLIGENCE",
     heading: (
       <>
-        Ground truth for every 
+        Ground truth for every{" "}
          <em>asset</em>
       </>
     ),
@@ -54,7 +54,7 @@ const tabContent: Record<
     badge: "Live · 12 Countries · Global Deployment",
     heading: (
       <>
-        Every mine. Every concession.
+        Every mine. Every concession.{" "}
 
         <br className="hidden md:block" />
         <em>No blind spots.</em>
@@ -69,7 +69,7 @@ const tabContent: Record<
     badge: "Tele-Pathology · AI-Assisted · 15-Minute Reports",
     heading: (
       <>
-        The lab that exists
+        The lab that exists{" "}
 
         <br className="hidden md:block" />
         <em>only as data.</em>
@@ -85,7 +85,7 @@ const tabContent: Record<
     heading: (
       <>
         The automated factory
-for sovereign 
+for sovereign {" "}
        <em></em>
        <em>Climate Finance.</em>
       </>
@@ -100,7 +100,7 @@ for sovereign
     heading: (
       <>
         Monitor Always.
-        Healthcare delivered through <em>A message.</em>
+        Healthcare delivered through{" "} <em>A message.</em>
       </>
     ),
     description:
@@ -141,7 +141,7 @@ function TabButton({
       onClick={onClick}
     >
       <button
-        className={`px-5 py-1.5 rounded-full text-sm font-medium transition-colors duration-200 ${
+        className={`px-5 py-1.5 rounded-full text-sm xl:text-base font-medium transition-colors duration-200 ${
           isActive
             ? "bg-[#1D1EE3] text-white"
             : "bg-white text-gray-700 hover:text-gray-900"
@@ -198,7 +198,7 @@ export default function OurProductSolution() {
       <div className="page-container ">
 
         {/* Eyebrow */}
-        <p className="text-center text-primary mb-2 text-sm 2xl:text-base">
+        <p className="text-center text-primary mb-2 Tracking-wide">
           Our Product &amp; Solution
         </p>
 
@@ -208,7 +208,7 @@ export default function OurProductSolution() {
         </h2>
 
         {/* Subheading */}
-        <p className="text-center text-muted max-w-3xl mx-auto mb-5 text-sm 2xl:text-base">
+        <p className="text-center text-muted max-w-3xl mx-auto mb-5 tracking-wide leading-snug">
           Each SkyQuest platform is built around a specific development challenge. Select a product to explore how it works and who it has helped.
         </p>
 
@@ -241,13 +241,13 @@ export default function OurProductSolution() {
           {/* Left Panel */}
           <div className="bg-[#F7F5F1] md:w-1/2 p-5 sm:p-8 md:p-10 2xl:p-14 flex flex-col justify-center gap-4">
             <div className="2xl:max-w-md">
-              <p className="text-primary text-sm 2xl:text-base mb-2">
+              <p className="text-primary tracking-wide mb-4">
                 {content.badge}
               </p>
-              <h3 className="font-semibold mb-3">
+              <h2 className="font-semibold mb-4">
                 {content.heading}
-              </h3>
-              <p className="text-muted text-sm 2xl:text-base mb-3">
+              </h2>
+              <p className="text-muted tracking-wide mb-3 tracking-wide leading-snug">
                 {content.description}
               </p>
             </div>

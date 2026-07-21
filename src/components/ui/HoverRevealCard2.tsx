@@ -54,18 +54,18 @@ export default function HoverRevealCard({
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
 
-      {/* Panel — one element doubles as background and content, sized with
-          plain fixed classes (no JS-measured chip width), so the collapsed
-          and expanded sizes are both known from the very first render and
-          the transition never has to wait for anything to settle. */}
-        <div
-          className={`absolute inset-x-0 bottom-0 z-20 flex flex-col overflow-hidden rounded-tr-2xl bg-[#FFFFFFB2] backdrop-blur-[15.6px] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-            isHovered ? "h-full w-full p-4 sm:p-5" : "h-9 w-64 max-w-[70%] px-5 py-2"
-          }`}
-        >
+      {/* Panel — small pill in the bottom-left corner when not hovered,
+          grows to fill the whole card (diagonally toward the top-right)
+          when hovered. Two plain fixed sizes, no JS measurement, so it
+          behaves identically on every hover, including the first. */}
+      <div
+        className={`absolute left-0 bottom-0 z-20 flex flex-col overflow-hidden rounded-tr-2xl bg-[#FFFFFFB2] backdrop-blur-[15.6px] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          isHovered ? "h-full w-full p-4 sm:p-5" : "h-9 w-60 max-w-[80%] px-5 py-2"
+        }`}
+      >
         <span
           className={`block shrink-0 truncate font-semibold leading-snug text-black transition-all duration-300 ${
-            isHovered ? "text-base sm:text-lg" : "text-xs sm:text-sm"
+            isHovered ? "text-base sm:text-lg" : "text-xs sm:text-lg"
           }`}
         >
           {isHovered ? title : chipLabel ?? title}
@@ -78,7 +78,7 @@ export default function HoverRevealCard({
               : "pointer-events-none opacity-0 duration-150"
           }`}
         >
-          <p className="text-xs sm:text-sm leading-relaxed text-gray-600">
+          <p className=" tracking-wide leading-snug text-gray-600">
             {description}
           </p>
           <Link

@@ -49,13 +49,13 @@ export default function OurGlobalPresence() {
       <div className="page-container">
         {/* Eyebrow + heading */}
         <div className="text-left lg:text-center">
-          <p className=" tracking-wide text-primary text-sm 2xl:text-base">
+          <p className=" tracking-wide text-primary ">
             Global Presence
           </p>
           <h2 className="mt-2 font-bold text-gray-900">
             Local Expertise, Global <em className="font-semibold">Standards</em>
           </h2>
-          <p className="mt-2 lg:mx-auto max-w-2xl text-muted text-sm 2xl:text-base">
+          <p className="mt-2 lg:mx-auto max-w-2xl text-muted tracking-wide leading-snug">
             We operate across six regions, combining on-the-ground knowledge with international best practice to deliver contextually relevant, globally benchmarked solutions.
           </p>
         </div>
@@ -89,7 +89,7 @@ export default function OurGlobalPresence() {
                   >
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
                   </svg>
-                  <h3 className="text-sm font-bold text-gray-900">{region.name}</h3>
+                  <h3 className=" font-bold text-gray-900">{region.name}</h3>
                 </div>
                 <p className="pl-6  text-gray-600">
                   {region.description}
@@ -114,9 +114,9 @@ export default function OurGlobalPresence() {
                   >
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
                   </svg>
-                  <h3 className="text-sm font-bold text-gray-900">{region.name}</h3>
+                  <h3 className=" font-bold text-gray-900 mb-1">{region.name}</h3>
                 </div>
-                <p className="pl-6 text-sm max-w-xl leading-[1.2] text-gray-500">
+                <p className="pl-6 max-w-xl leading-[1.2] text-gray-500 tracking-wide leading-snug">
                   {region.description}
                 </p>
               </li>

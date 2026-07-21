@@ -93,13 +93,13 @@ export default function CoreCapabilities() {
       <div className="lg:hidden">
         <div className="mb-6">
           <p className=" font-medium text-primary mb-2 ">Our Core Capabilities</p>
-          <h2 className="font-bold leading-tight">
+          <h2 className="font-bold ">
             End-to-End Solutions for Strategy,
             Technology &{" "}
             <em className="font-semibold">Sustainable Growth</em>
           </h2>
-          <p className=" text-muted">
-            We combine sector expertise, emerging technologies, and execution excellence to help organizations accelerate transformation, strengthen resilience, and create lasting impact. </p>
+          <p className="text-muted tracking-wide leading-snug">
+            We combine expertise, technology, and execution to accelerate transformation and deliver lasting impact. </p>
         </div>
 
         {/* Card */}
@@ -123,10 +123,10 @@ export default function CoreCapabilities() {
           {/* Content */}
           <div className="h-[45%] p-5 flex flex-col justify-between   rounded-3xl">
             <div>
-              <h3 className="text-base font-bold text-gray-900 leading-snug">
+              <h3 className="font-bold text-gray-900 ">
                 {mobileCardList[currentIndex][1].title}
               </h3>
-              <p className="mt-2 text-sm text-gray-500 leading-relaxed line-clamp-3">
+              <p className="mt-2 text-muted leading-snug line-clamp-3 tracking-wide">
                 {mobileCardList[currentIndex][1].description}
               </p>
             </div>
@@ -164,7 +164,7 @@ export default function CoreCapabilities() {
         {/* LEFT SIDE */}
         <div>
           <div className="mb-4">
-            <p className="mb-2 text-sm 2xl:text-base font-medium text-primary">
+            <p className="mb-2 font-medium text-primary">
               Our Core Capabilities
             </p>
 
@@ -177,8 +177,8 @@ export default function CoreCapabilities() {
               </em>
             </h2>
 
-            <p className="mt-3 max-w-3xl text-muted text-sm 2xl:text-base ">
-              We combine sector expertise, emerging technologies, and execution excellence to help organizations accelerate transformation, strengthen resilience, and create lasting impact. </p>
+            <p className="mt-3 max-w-3xl text-muted tracking-wide leading-snug">
+              We combine expertise, technology, and execution to accelerate transformation and deliver lasting impact. </p>
           </div>
 
           {/* Row 1 */}

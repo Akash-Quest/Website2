@@ -65,7 +65,7 @@ export default function PublicSectorService(){
      <CaseStudies {...caseStudiesData} />
      <OtherServicesSection bgClassName='bg-white' services={PublicSectorOtherServicesData} />
      <CaseStudies {...insightData}/>
-     <FAQSection faqs={PublicSectorFaqData} />
+     <FAQSection heading="Questions About" headingItalic="Public Sector Advisory" faqs={PublicSectorFaqData} />
      <Suscribe />
 
 

@@ -69,7 +69,7 @@ export default function Agriculturepage(){
      <CaseStudies {...caseStudiesData} />
      <OtherServicesSection bgClassName='bg-white' services={AgricultureOtherServicesData} />
      <CaseStudies {...insightData}/>
-     <FAQSection faqs={AgricultureFaqData} />
+     <FAQSection heading="Questions About" headingItalic="Agriculture & Livestock" faqs={AgricultureFaqData} />
      <Suscribe />
      </>)
 

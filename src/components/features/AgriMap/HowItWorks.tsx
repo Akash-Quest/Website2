@@ -93,7 +93,7 @@ export default function HowItWorks() {
                   <Icon className="h-5 w-5 text-primary" strokeWidth={1.8} />
                 </div>
 
-                <h3 className="mt-5 text-base font-semibold">
+                <h3 className="mt-5 font-semibold">
                   {index + 1}. {title}
                 </h3>
 

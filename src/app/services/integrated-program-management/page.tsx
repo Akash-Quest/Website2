@@ -67,7 +67,7 @@ export default function SocialImpactService(){
      <CaseStudies {...caseStudiesData} />
      <OtherServicesSection bgClassName='bg-white' services={IntegratedProgramOtherServicesData} />
      <CaseStudies {...insightData}/>
-     <FAQSection faqs={IntegratedProgramFaqData} />
+     <FAQSection heading="Questions About" headingItalic="Program Management" faqs={IntegratedProgramFaqData} />
      <Suscribe />
      </>)
 

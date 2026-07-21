@@ -46,7 +46,7 @@ export default function InsightImpact   () {
           How We Help Organizations
           <em className="font-semibold">Transform</em>
         </h2>
-        <p className="text-muted mb-4">
+        <p className="tracking-wide leading-snug text-mute font-medium mb-4">
           We help organizations navigate complexity, embrace innovation,
           and deliver measurable outcomes through an integrated approach
           spanning strategy, technology, execution, and impact.
@@ -74,7 +74,7 @@ export default function InsightImpact   () {
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/70" />
                 <div className="absolute left-4 top-4 right-4 text-white">
-                  <h4 className="text-white/80">{card.title}</h4>
+                  <h3 className="text-white/80">{card.title}</h3>
                   <p className="body-sm mt-1 text-white">{card.desc}</p>
                 </div>
               </div>
@@ -88,7 +88,7 @@ export default function InsightImpact   () {
         <div className="relative">
           {/* Content overlay */}
           <div className="relative lg:absolute lg:inset-0 leading-[0] mb-10 lg:mb-0 z-10 lg:pointer-events-none">
-            <p className="mb-2 text-primary text-sm 2xl:text-base">
+            <p className="mb-2 text-primary tracking-wide">
               From Insight to Impact
             </p>
             <h2 className=" font-bold ">
@@ -96,7 +96,7 @@ export default function InsightImpact   () {
               <br />
               <em className="font-semibold">Transform</em>
             </h2>
-            <p className="mt-3 mb-3  max-w-md xl:max-w-lg text-muted text-sm 2xl:text-base">
+            <p className="mt-3 mb-3  max-w-md xl:max-w-lg 2xl:max-w-xl tracking-wide text-muted leading-snug ">
               We help organizations navigate complexity, embrace innovation,
               and deliver measurable outcomes through an integrated approach
               spanning strategy, technology, execution, and impact.
@@ -124,12 +124,12 @@ export default function InsightImpact   () {
                   className="object-cover scale-110 transition-transform duration-500 group-hover:scale-100"
                 />
                 
-                <div className="absolute left-4 top-4 right-4 text-white ">
+                <div className="absolute left-4 top-4 right-4 text-white z-100">
                   <div className="flex items-center gap-1.5">
-                    <p className="text-white font-normal">{card.title}</p>
+                    <h3 className="text-white font-normal mb-2">{card.title}</h3>
                     
                   </div>
-                  <p className="text-sm mt-1 text-white/80 transition-colors duration-500 group-hover:text-white">{card.desc}</p>
+                  <p className=" mt-1 text-white/80 transition-colors duration-500 group-hover:text-white">{card.desc}</p>
                 </div>
               </div>
             ))}

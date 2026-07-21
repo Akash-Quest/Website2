@@ -94,7 +94,7 @@ export default function FeaturedReport() {
               <p className="mt-3 text-xs 2xl:text-sm font-medium text-primary">
                 {report.date}
               </p>
-              <h3 className="mt-1 text-sm font-semibold text-neutral-900 2xl:text-base">
+              <h3 className="mt-1 font-semibold text-neutral-900">
                 {report.title}
               </h3>
               <p className="mt-1.5 text-sm  text-muted">{report.description}</p>

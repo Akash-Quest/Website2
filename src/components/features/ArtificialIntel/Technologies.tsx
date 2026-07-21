@@ -98,7 +98,7 @@ export default function Technologies() {
                   </span>
                 ))}
               </div>
-              <h3 className="mt-2 text-sm font-semibold text-neutral-900">
+              <h3 className="mt-2 font-semibold text-neutral-900">
                 {title}
               </h3>
               <p className="mt-1.5 text-xs leading-relaxed text-neutral-500">

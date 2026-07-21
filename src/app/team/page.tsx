@@ -43,7 +43,7 @@ function TeamHero() {
               <em className="font-semibold">Impact</em>
             </h1>
 
-            <p className=" text-muted lg:max-w-md px-4 lg:px-0 text-sm 2xl:text-base">
+            <p className=" text-muted lg:max-w-lg px-4 lg:px-0 tracking-wide leading-snug">
               SkyQuest brings together strategists, technologists, researchers,
               and industry experts to help governments, businesses, and
               development institutions solve complex challenges and deliver

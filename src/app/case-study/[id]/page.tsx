@@ -1,10 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 import type { ContentBlock } from "@/lib/reports";
-import { reportDetail as report } from "@/lib/reportdetails";
+import { caseStudiesData, getCaseStudyById } from "@/Constants/caseStudies";
 import { FacebookIcon, LinkedInIcon, XIcon } from "@/components/icons/SocialIcons";
-import { Link2, Sms } from "iconsax-react";
+
+export function generateStaticParams() {
+  return caseStudiesData.caseStudies.map((study) => ({ id: String(study.id) }));
+}
 
 function EmphasizedText({ text, emphasis }: { text: string; emphasis?: string }) {
   return (
@@ -106,14 +110,25 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
   }
 }
 
-export default function DetailedPage() {
-  const titleBase = report.titleEmphasis
-    ? report.title.slice(0, report.title.length - report.titleEmphasis.length)
-    : report.title;
+export default async function CaseStudyDetailsPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const study = getCaseStudyById(Number(id));
 
-  const subtitleBase = report.subtitleEmphasis
-    ? report.subtitle.slice(0, report.subtitle.length - report.subtitleEmphasis.length)
-    : report.subtitle;
+  if (!study) {
+    notFound();
+  }
+
+  const titleBase = study.titleEmphasis
+    ? study.title.slice(0, study.title.length - study.titleEmphasis.length)
+    : study.title;
+
+  const subtitleBase = study.subtitleEmphasis
+    ? study.subtitle.slice(0, study.subtitle.length - study.subtitleEmphasis.length)
+    : study.subtitle;
 
   return (
     <section className="bg-background">
@@ -128,13 +143,13 @@ export default function DetailedPage() {
             </li>
             <li className="text-gray-500">/</li>
             <li>
-              <Link href="/insight" className="hover:text-muted transition-colors">
-                {report.type}
+              <Link href="/case-studies" className="hover:text-muted transition-colors">
+                {study.type}
               </Link>
             </li>
             <li className="text-gray-500">/</li>
             <li className="text-gray-700 lowercase truncate max-w-[200px] sm:max-w-none">
-              {report.category}
+              {study.topic}
             </li>
           </ol>
         </nav>
@@ -144,9 +159,9 @@ export default function DetailedPage() {
         <div className="px-[2]">
           {/* Category + Heading */}
           <div className="flex flex-col gap-2 mt-8 sm:mt-8 md:mt-2 pb-6">
-            <span className="text-sm font-semibold text-primary">{report.category}</span>
+            <span className="text-sm font-semibold text-primary">{study.topic}</span>
             <h1 className="font-playfair font-bold">
-              <EmphasizedText text={titleBase} emphasis={report.titleEmphasis} />
+              <EmphasizedText text={titleBase} emphasis={study.titleEmphasis} />
             </h1>
           </div>
         </div>
@@ -157,8 +172,8 @@ export default function DetailedPage() {
         <div className="mt-6 sm:px-[4]">
           <div className="relative w-full aspect-[3/3.5] md:aspect-[3/0.9] 2xl:aspect-[3/1] sm:rounded-2xl overflow-hidden">
             <Image
-              src={report.imageUrl}
-              alt={report.imageAlt}
+              src={study.image}
+              alt={study.title}
               fill
               priority
               unoptimized
@@ -171,10 +186,10 @@ export default function DetailedPage() {
         <div className="mt-10 grid grid-cols-1 gap-10 px-4 lg:grid-cols-10 lg:gap-14 lg:px-0">
           <article className="min-w-0 lg:col-span-8">
             <h2 className="mb-6 font-playfair text-2xl sm:text-3xl font-bold text-gray-900">
-              <EmphasizedText text={subtitleBase} emphasis={report.subtitleEmphasis} />
+              <EmphasizedText text={subtitleBase} emphasis={study.subtitleEmphasis} />
             </h2>
 
-            {report.body.map((block, i) => (
+            {study.body.map((block, i) => (
               <ContentBlockView block={block} key={i} />
             ))}
           </article>

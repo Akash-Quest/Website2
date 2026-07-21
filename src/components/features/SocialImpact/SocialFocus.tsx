@@ -48,7 +48,7 @@ export default function SocialFocus({
                 <Icon className="h-4 w-4" strokeWidth={1.75} color="currentColor" variant="Linear" />
               </span>
 
-              <h3 className="mt-2 text-sm 2xl:text-lg font-semibold text-neutral-900">
+              <h3 className="mt-2 font-semibold text-neutral-900">
                 {title}
               </h3>
 

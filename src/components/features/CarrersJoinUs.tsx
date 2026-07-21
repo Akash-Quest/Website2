@@ -32,11 +32,11 @@ export default function CareerApplicationForm() {
   };
 
   return (
-    <div id="apply" className="scroll-mt-16 sm:scroll-mt-20 lg:scroll-mt-24 bg-[#F7F5F1] font-sans">
+    <div id="apply" className="scroll-mt-16 sm:scroll-mt-20 lg:scroll-mt-24 bg-[#F7F5F1] ">
       
       <div className="page-container">
         {/* Eyebrow */}
-        <p className="text-center text-primary mb-2">
+        <p className="text-center text-primary mb-2 ">
           Join us 
         </p>
 
@@ -50,11 +50,11 @@ export default function CareerApplicationForm() {
 
         <div className="mx-auto border border-gray-200 rounded-2xl p-4 sm:p-6 lg:p-8 bg-white">
 
-        <h6 className=" font-semibold text-muted">
+        <h3 className=" font-semibold text-muted">
           Take the Next Step in Your Career Join a Culture of Growth and
           Innovation
-        </h6>
-        <p className=" mt-2 text-muted">
+        </h3>
+        <p className=" mt-2 text-muted ">
           Fill out the form, our team will reach out to you soon.
         </p>
 

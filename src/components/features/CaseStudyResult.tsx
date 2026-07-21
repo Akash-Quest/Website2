@@ -8,13 +8,14 @@ import {
   ArrowDown,
   ArrowRight,
 } from "lucide-react";
-import { reports, type Report } from "@/lib/reports";
+import { caseStudiesData, type CaseStudy } from "@/Constants/caseStudies";
 
-function ReportCard({ report }: { report: Report }) {
+function StudyCard({ study }: { study: CaseStudy }) {
   const [isHovered, setIsHovered] = useState(false);
-  
+
   return (
-    <div
+    <Link
+      href={`/case-study/${study.id}`}
       className="flex flex-col sm:flex-row gap-4 bg-[#F7F5F1] rounded-xl p-2 sm:p-3 transition-colors cursor-pointer"
       style={{
         backgroundColor: isHovered ? '#EAEAF8' : '#F7F5F1'
@@ -25,8 +26,8 @@ function ReportCard({ report }: { report: Report }) {
       {/* Left: Image */}
       <div className="w-full sm:w-56 flex-shrink-0">
       <Image
-        src={report.thumbnailUrl}
-        alt={report.imageAlt}
+        src={study.image}
+        alt={study.title}
         width={400}
         height={300}
         unoptimized
@@ -35,36 +36,33 @@ function ReportCard({ report }: { report: Report }) {
       </div>
         <div className="w-full sm:flex-1 flex flex-col justify-between min-w-0">
           <div className="min-w-0">
-            <div className="flex items-center gap-1.5 text-xs text-gray-500">
-              <span>{report.type}</span>
-              <span className="inline-block h-1 w-1 rounded-full bg-gray-400" />
-              <span>{report.date}</span>
+            <div className="flex items-center gap-1.5 text-xs text-muted">
+              <span>{study.category}</span>
+              <span className="inline-block h-1 w-1 rounded-full bg-muted" />
+              <span>{study.date}</span>
             </div>
 
-            <h3 className="mt-2 sm:truncate text-lg font-semibold text-gray-900">
-              {report.title}
+            <h3 className="mt-2 sm:truncate font-semibold text-gray-900">
+              {study.title}
             </h3>
 
-            <p className="mt-2 text-sm leading-relaxed text-gray-500 sm:max-w-md">
-              {report.description}
+            <p className="mt-2 text-sm leading-relaxed text-muted">
+              {study.description}
             </p>
           </div>
 
-          <Link
-            href={`/case-study/${report.id}`}
-            className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-700"
-          >
+          <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary">
             Visit Page
             <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2} />
-          </Link>
+          </span>
         </div>
-    </div>
+    </Link>
   );
 }
 
 const PAGE_SIZE = 5;
 
-const CATEGORY_OPTIONS = ["All Insights", "Report", "Whitepaper", "Case Study"];
+const CATEGORY_OPTIONS = ["All Insights", "Insights", "Case Study"];
 const INDUSTRY_OPTIONS = [
   "AI & Technology",
   "Agriculture",
@@ -210,8 +208,8 @@ export default function CaseStudyResult() {
   const filteredReports = useMemo(() => {
     const list =
       category === "All Insights"
-        ? [...reports]
-        : reports.filter((r) => r.type === category);
+        ? [...caseStudiesData.caseStudies]
+        : caseStudiesData.caseStudies.filter((r) => r.category === category);
 
     if (sortBy === "Title A-Z") {
       list.sort((a, b) => a.title.localeCompare(b.title));
@@ -219,8 +217,8 @@ export default function CaseStudyResult() {
       list.sort((a, b) => b.title.localeCompare(a.title));
     } else {
       list.sort((a, b) => {
-        const da = new Date(a.date.replace(/^Report\s+/, "")).getTime();
-        const db = new Date(b.date.replace(/^Report\s+/, "")).getTime();
+        const da = new Date(a.date).getTime();
+        const db = new Date(b.date).getTime();
         return sortBy === "Oldest First" ? da - db : db - da;
       });
     }
@@ -271,7 +269,7 @@ export default function CaseStudyResult() {
             <button
               type="button"
               onClick={handleClearAll}
-              className="text-xs font-medium text-blue-600 hover:text-blue-700"
+              className="text-xs font-medium text-primary hover:text-blue-700"
             >
               Clear All
             </button>
@@ -302,8 +300,8 @@ export default function CaseStudyResult() {
 
         <div className="mt-3 border-t border-gray-200" />
         <div className="mt-8 grid grid-cols-1 gap-4">
-          {visibleCards.map((report, idx) => (
-            <ReportCard report={report} key={idx} />
+          {visibleCards.map((study, idx) => (
+            <StudyCard study={study} key={idx} />
           ))}
         </div>
 

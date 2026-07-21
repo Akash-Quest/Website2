@@ -51,7 +51,7 @@ const OtherServicesSection = ({
               href={service.href}
               className="flex items-center justify-between px-6 py-4 rounded-lg border border-gray-200 hover:border-gray-300 hover:shadow-sm transition-all bg-white"
             >
-              <h3 className=" text-sm">{service.label}</h3>
+              <h3>{service.label}</h3>
               <ArrowUpRight className="w-4 h-4 text-primary flex-shrink-0 ml-4" />
             </a>
           ))}

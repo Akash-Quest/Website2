@@ -1,5 +1,7 @@
+export type ParagraphSegment = string | { text: string; href?: string; bold?: boolean };
+
 export type ContentBlock =
-  | { type: "paragraph"; text: string }
+  | { type: "paragraph"; text: string; dropCap?: boolean; segments?: ParagraphSegment[] }
   | { type: "heading"; text: string; emphasis?: string }
   | { type: "subheading"; text: string }
   | { type: "list"; items: string[] }
@@ -156,11 +158,24 @@ const REPORT_VARIANTS: (Omit<
     body: (imageUrl) => [
       {
         type: "paragraph",
+        dropCap: true,
         text: "2025 marked a turning point for the global medical device industry, a year when intelligence, personalization, and real-time data moved from experimental to essential. What had long been driven by incremental engineering improvements evolved into a convergence of advanced materials, intelligent systems, and digitally enabled design philosophies. Medical devices were no longer viewed as isolated tools but as adaptive, data-driven extensions of clinical decision-making and patient care.",
+        segments: [
+          "025 marked a turning point for the ",
+          { text: "global medical device industry", href: "#" },
+          ", a year when intelligence, personalization, and real-time data moved from experimental to essential. What had long been driven by incremental engineering improvements evolved into a convergence of advanced materials, ",
+          { text: "intelligent systems", bold: true },
+          ", and digitally enabled design philosophies. Medical devices were no longer viewed as isolated tools but as adaptive, data-driven extensions of clinical decision-making and patient care.",
+        ],
       },
       {
         type: "paragraph",
         text: "Healthcare systems worldwide faced growing burdens from chronic disease prevalence, aging populations, clinician shortages, and rising care costs. In response, medical device manufacturers accelerated innovation by integrating real-time sensing, connectivity, and artificial intelligence (AI) into therapeutic and diagnostic platforms. Regulatory pathways also adapted, enabling faster translation of breakthrough technologies into clinical practice without compromising safety or efficacy.",
+        segments: [
+          "Healthcare systems worldwide faced growing burdens from chronic disease prevalence, aging populations, clinician shortages, and rising care costs. In response, medical device manufacturers accelerated innovation by integrating real-time sensing, connectivity, and ",
+          { text: "artificial intelligence (AI)", href: "#" },
+          " into therapeutic and diagnostic platforms. Regulatory pathways also adapted, enabling faster translation of breakthrough technologies into clinical practice without compromising safety or efficacy.",
+        ],
       },
       {
         type: "paragraph",
@@ -174,6 +189,7 @@ const REPORT_VARIANTS: (Omit<
       {
         type: "callout",
         title: "Key Takeaways",
+        
         items: [
           "Medical device industry consolidation in 2025 was driven less by scale expansion and more by technological adjacency and capability depth.",
           "Medical device industry consolidation in 2025 was driven less by scale expansion and more by technological adjacency and capability depth.",
@@ -209,8 +225,8 @@ const REPORT_VARIANTS: (Omit<
           "IP-rich platforms are being prioritized over scale-driven assets because proprietary algorithms, data, and defensible patents enable faster innovation cycles, stronger pricing power, and smoother integration into connected, software-centric device ecosystems.",
         ],
       },
-      { type: "heading", text: "Notable Product Launches and Platform ", emphasis: "Innovations" },
-      { type: "subheading", text: "Medtronic" },
+      { type: "heading", text: "Notable Product Launches and Platform ", emphasis: "Innovations Medtronic" },
+      
       {
         type: "paragraph",
         text: "In February 2025, Medtronic plc received U.S. Food and Drug Administration (FDA) approval for its BrainSense™ Adaptive deep brain stimulation (aDBS) and BrainSense™ Electrode Identifier (EI). This next-generation technology personalized therapy in real time by responding dynamically to a patient's brain signals, reducing the need for manual intervention and improving symptom control.",
@@ -258,19 +274,6 @@ const REPORT_VARIANTS: (Omit<
         ],
       },
       { type: "heading", text: "Strategic Takeaways ", emphasis: "from 2025" },
-      {
-        type: "callout",
-        text: "Medical device innovation in 2025 revealed several defining themes shaping the industry's future:",
-        items: [
-          "Intelligence is becoming embedded, not adjunct: Devices are evolving into adaptive systems that respond dynamically to patient data.",
-          "Wearable and at-home therapies are gaining clinical credibility: Preventive and decentralized care models are accelerating adoption.",
-          "Patient-centric design is now a competitive necessity: Ease of use and comfort are critical to long-term success.",
-          "AI is redefining clinical precision: Real-time analytics and guidance are reshaping diagnostics, surgery, and therapy delivery.",
-          "Regulatory alignment is enabling faster innovation cycles: Adaptive frameworks are supporting responsible technology adoption.",
-        ],
-        footer:
-          "As the medical device industry moves beyond 2025, innovation is no longer measured solely by technological novelty but by its ability to seamlessly integrate into clinical workflows, improve outcomes, and scale responsibly. The convergence of engineering excellence, digital intelligence, and regulatory maturity is setting the stage for a new era of patient-centered healthcare innovation.",
-      },
       {
         type: "callout",
         title: "What This Means for 2026",

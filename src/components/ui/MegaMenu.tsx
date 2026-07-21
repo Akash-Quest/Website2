@@ -41,7 +41,7 @@ function PanelHeading({
   if (!heading && !description) return null;
   return (
     <div className={className}>
-      {heading && <p className="text-sm font-semibold text-gray-900">{heading}</p>}
+      {heading && <p className="text-base font-semibold text-gray-900">{heading}</p>}
       {description && <p className="mt-1 text-sm text-gray-500">{description}</p>}
     </div>
   );
@@ -73,9 +73,9 @@ function ColumnsList({
                   <button
                     type="button"
                     onClick={() => onSelect(link.href)}
-                    className={`flex w-full items-center justify-between gap-1.5 rounded-lg px-3 py-2 text-left text-sm transition-colors ${
+                    className={`flex w-full items-center justify-between gap-2 rounded-lg px-3 py-3 text-left text-base transition-colors 2xl:text-lg ${
                       isActive
-                        ? "bg-background font-semibold text-[#03030F]"
+                        ? "bg-background font-normal text-[#03030F]"
                         : "text-gray-600 hover:bg-gray-50"
                     }`}
                   >
@@ -110,8 +110,8 @@ function PromoCard({ promo, onNavigate }: { promo: MegaMenuPromo; onNavigate: ()
         />
       </Link>
       <div className="p-4">
-        <p className="mb-1 text-sm font-semibold text-gray-900">{promo.title}</p>
-        <p className="mb-3 line-clamp-3 text-xs 2xl:text-sm  text-gray-500">
+        <p className="mb-1 text-base 2xl:text-lg font-semibold text-gray-900">{promo.title}</p>
+        <p className="mb-3 line-clamp-3 text-sm 2xl:text-base  text-gray-500">
           {promo.description}
         </p>
         <Button href={promo.href} variant="primary" iconSize={14} minWidth="0px" fullWidth onClick={onNavigate}>
@@ -143,7 +143,7 @@ function DrilldownNavList({
             onClick={() => onHover(item.label)}
             className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm transition-colors ${
               active === item.label
-                ? "bg-background font-semibold text-[#03030F]"
+                ? "bg-background font-normal text-[#03030F]"
                 : "text-gray-700 hover:bg-gray-50"
             }`}
           >
@@ -296,7 +296,7 @@ export default function MegaMenu({
               />
             </div>
 
-            <div className="flex items-center gap-3 sm:gap-4">
+            <div className="flex items-center ml-5 gap-3 sm:gap-4">
               login
               <button
                 type="button"
@@ -328,9 +328,9 @@ export default function MegaMenu({
                   className={`mb-2 2xl:mb-4 ${i > 0 ? "border-t border-[#03030F]/20 pt-1 2xl:pt-3" : ""}`}
                 >
                   {group.label && (
-                    <p className="mb-1  text-sm font-semibold uppercase text-[#03030F] 2xl:mb-3 2xl:text-lg">
+                    <h3 className="mb-1 text-xl font-medium uppercase text-[#03030F] 2xl:mb-3 2xl:text-2xl">
                       {group.label}
-                    </p>
+                    </h3>
                   )}
                   <ul className="space-y-0.5 pr-4 2xl:space-y-2 2xl:pr-8">
                     {group.items.map((item) => (
@@ -339,9 +339,9 @@ export default function MegaMenu({
                           <button
                             type="button"
                             onClick={() => setActiveItemId(item.id)}
-                            className={`flex w-full items-center justify-between rounded-lg py-1.5 pl-3 pr-4 text-left text-base 2xl:text-lg transition-colors 2xl:py-3 2xl:pl-5 2xl:pr-8 2xl:text-base ${
+                            className={`  flex w-full items-center justify-between rounded-lg py-1.5 pl-3 pr-4 text-left text-lg transition-colors 2xl:py-3 2xl:pl-5 2xl:pr-8 2xl:text-xl   ${
                               activeItemId === item.id
-                                ? " bg-background font-normal text-[#03030F]"
+                                ? " bg-background font-normal text-[#03030F] "
                                 : "text-gray-700 hover:bg-gray-50"
                             }`}
                           >
@@ -354,7 +354,7 @@ export default function MegaMenu({
                           <Link
                             href={item.href}
                             onClick={() => setOpen(false)}
-                            className="flex w-full rounded-lg px-3 py-1 text-sm text-gray-700 transition-colors hover:bg-gray-50 2xl:px-5 2xl:py-3 2xl:text-base"
+                            className="flex w-full rounded-lg px-3 py-1 text-lg text-gray-700 transition-colors hover:bg-gray-50 2xl:px-5 2xl:py-3 2xl:text-xl"
                           >
                             {item.label}
                           </Link>
