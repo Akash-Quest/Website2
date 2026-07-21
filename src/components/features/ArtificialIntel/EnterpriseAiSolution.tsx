@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 
 const categories = [
   {
@@ -69,6 +69,7 @@ const categories = [
 
 export default function EnterpriseAiSolution() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [mobileOpenIndex, setMobileOpenIndex] = useState<number | null>(null);
   const active = categories[activeIndex];
   const total = categories.length;
 
@@ -88,7 +89,58 @@ export default function EnterpriseAiSolution() {
           </p>
         </div>
 
-        <div className="mt-24 grid grid-cols-1 gap-2 lg:grid-cols-[1fr_1fr_1fr] lg:items-stretch ">
+        {/* Mobile: accordion */}
+        <div className="mt-10 flex flex-col lg:hidden">
+          {categories.map((cat, i) => {
+            const isOpen = mobileOpenIndex === i;
+            return (
+              <div
+                key={cat.id}
+                className="border-t border-t-[#03030F33] last:border-b last:border-b-[#03030F33]"
+              >
+                <button
+                  type="button"
+                  onClick={() => setMobileOpenIndex(isOpen ? null : i)}
+                  className="flex w-full items-center justify-between px-4 py-3 text-left text-base font-medium text-[#03030F]"
+                >
+                  {cat.label}
+                  <ChevronDown
+                    className={`h-4 w-4 shrink-0 text-primary transition-transform ${isOpen ? "rotate-180" : ""}`}
+                    strokeWidth={2}
+                  />
+                </button>
+                {isOpen && (
+                  <div className="px-4 pb-5">
+                    <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg bg-black">
+                      <Image
+                        src={cat.image}
+                        alt={cat.label}
+                        fill
+                        unoptimized
+                        sizes="100vw"
+                        className="object-cover"
+                      />
+                    </div>
+                    <ul className="mt-4 space-y-2.5">
+                      {cat.points.map((point) => (
+                        <li
+                          key={point}
+                          className="flex items-start gap-2 text-sm text-neutral-700"
+                        >
+                          <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-neutral-900" />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Desktop: category nav / image stack / points */}
+        <div className="mt-24 hidden gap-2 lg:grid lg:grid-cols-[1fr_1fr_1fr] lg:items-stretch">
           {/* Left: category nav */}
           <div className="flex flex-col ">
             {categories.map((cat, i) => {

@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, Icon, Search, X } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Icon, Search, X } from "lucide-react";
 import { ArrowRight } from "iconsax-react";
 import Button from "./Button";
 import megaMenuJson from "@/lib/megaMenu.json";
@@ -194,6 +194,25 @@ export default function MegaMenu({
   const [activeGroupLabel, setActiveGroupLabel] = useState<string | null>(null);
   const [activeLinkHref, setActiveLinkHref] = useState<string | null>(null);
 
+  const [mobileOpenItemId, setMobileOpenItemId] = useState<string | null>(null);
+  const [mobileOpenCategoryLabel, setMobileOpenCategoryLabel] = useState<string | null>(null);
+  const [mobileOpenGroupLabel, setMobileOpenGroupLabel] = useState<string | null>(null);
+
+  const toggleMobileItem = (id: string) => {
+    setMobileOpenItemId((current) => (current === id ? null : id));
+    setMobileOpenCategoryLabel(null);
+    setMobileOpenGroupLabel(null);
+  };
+
+  const toggleMobileCategory = (label: string) => {
+    setMobileOpenCategoryLabel((current) => (current === label ? null : label));
+    setMobileOpenGroupLabel(null);
+  };
+
+  const toggleMobileGroup = (label: string) => {
+    setMobileOpenGroupLabel((current) => (current === label ? null : label));
+  };
+
   const activeItem = useMemo(
     () => allItems.find((i) => i.id === activeItemId),
     [activeItemId]
@@ -241,7 +260,12 @@ export default function MegaMenu({
   };
 
   useEffect(() => {
-    if (!open) return;
+    if (!open) {
+      setMobileOpenItemId(null);
+      setMobileOpenCategoryLabel(null);
+      setMobileOpenGroupLabel(null);
+      return;
+    }
 
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setOpen(false);
@@ -309,12 +333,171 @@ export default function MegaMenu({
             </div>
           </div>
 
+          {/* Mobile: nested accordion */}
+          <div className="flex-1 overflow-y-auto sm:hidden">
+            {megaMenu.groups.map((group, gi) => (
+              <div key={group.id} className={gi > 0 ? "border-t border-[#03030F]/20" : ""}>
+                {group.label && (
+                  <h3 className="px-4 pt-4 pb-1 text-xs font-semibold uppercase tracking-wide text-gray-400">
+                    {group.label}
+                  </h3>
+                )}
+                {group.items.map((item) => {
+                  if (!item.content) {
+                    return (
+                      <Link
+                        key={item.id}
+                        href={item.href}
+                        onClick={() => setOpen(false)}
+                        className="flex w-full items-center px-4 py-3 text-base text-gray-700"
+                      >
+                        {item.label}
+                      </Link>
+                    );
+                  }
+
+                  const isItemOpen = mobileOpenItemId === item.id;
+                  return (
+                    <div key={item.id}>
+                      <button
+                        type="button"
+                        onClick={() => toggleMobileItem(item.id)}
+                        className="flex w-full items-center justify-between px-4 py-3 text-left text-base font-medium text-[#03030F]"
+                      >
+                        {item.label}
+                        <ChevronDown
+                          className={`h-4 w-4 shrink-0 text-gray-400 transition-transform ${
+                            isItemOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+
+                      {isItemOpen && (
+                        <div className="bg-gray-50 px-4 pb-4">
+                          <PanelHeading
+                            heading={item.content.heading}
+                            description={item.content.description}
+                            className="pb-3"
+                          />
+
+                          {item.content.kind === "columns" ? (
+                            <>
+                              {item.content.columns.map((column, ci) => (
+                                <div key={ci} className={ci > 0 ? "mt-3" : ""}>
+                                  {column.heading && (
+                                    <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-gray-400">
+                                      {column.heading}
+                                    </p>
+                                  )}
+                                  <ul>
+                                    {column.links.map((link) => (
+                                      <li key={link.href}>
+                                        <Link
+                                          href={link.href}
+                                          onClick={() => setOpen(false)}
+                                          className="flex items-center gap-1.5 py-2 text-sm text-gray-700"
+                                        >
+                                          {link.label}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              ))}
+                              {item.content.promo && (
+                                <div className="mt-3">
+                                  <PromoCard promo={item.content.promo} onNavigate={() => setOpen(false)} />
+                                </div>
+                              )}
+                            </>
+                          ) : (
+                            item.content.categories.map((category) => {
+                              const isCategoryOpen = mobileOpenCategoryLabel === category.label;
+                              return (
+                                <div
+                                  key={category.label}
+                                  className="-mx-4 border-t border-[#03030F]/10 first:border-t-0"
+                                >
+                                  <button
+                                    type="button"
+                                    onClick={() => toggleMobileCategory(category.label)}
+                                    className="flex w-full items-center justify-between px-4 py-2.5 text-left text-sm font-semibold text-gray-900"
+                                  >
+                                    {category.label}
+                                    <ChevronDown
+                                      className={`h-3.5 w-3.5 shrink-0 text-gray-400 transition-transform ${
+                                        isCategoryOpen ? "rotate-180" : ""
+                                      }`}
+                                    />
+                                  </button>
+
+                                  {isCategoryOpen && (
+                                    <div className="pb-2">
+                                      {category.groups.length > 0 ? (
+                                        category.groups.map((groupItem) => {
+                                          const isGroupOpen = mobileOpenGroupLabel === groupItem.label;
+                                          return (
+                                            <div key={groupItem.label}>
+                                              <button
+                                                type="button"
+                                                onClick={() => toggleMobileGroup(groupItem.label)}
+                                                className="flex w-full items-center justify-between py-2 pl-8 pr-4 text-left text-sm text-gray-700"
+                                              >
+                                                {groupItem.label}
+                                                <ChevronDown
+                                                  className={`h-3.5 w-3.5 shrink-0 text-gray-400 transition-transform ${
+                                                    isGroupOpen ? "rotate-180" : ""
+                                                  }`}
+                                                />
+                                              </button>
+                                              {isGroupOpen && (
+                                                <ul className="pb-2 pl-12 pr-4">
+                                                  {groupItem.links.map((link) => (
+                                                    <li key={link.href}>
+                                                      <Link
+                                                        href={link.href}
+                                                        onClick={() => setOpen(false)}
+                                                        className={`flex items-center gap-1.5 py-1.5 text-sm ${
+                                                          link.featured
+                                                            ? "font-semibold text-gray-900"
+                                                            : "text-gray-600"
+                                                        }`}
+                                                      >
+                                                        {link.label}
+                                                      </Link>
+                                                    </li>
+                                                  ))}
+                                                </ul>
+                                              )}
+                                            </div>
+                                          );
+                                        })
+                                      ) : (
+                                        <p className="py-2 pl-8 pr-4 text-sm text-gray-500">
+                                          More industries coming soon.
+                                        </p>
+                                      )}
+                                    </div>
+                                  )}
+                                </div>
+                              );
+                            })
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            ))}
+          </div>
+
           {/* Body: sidebar — content — promo */}
           <div
-            className={`grid min-h-0 flex-1 grid-cols-1 ${
+            className={`hidden min-h-0 flex-1 ${
               activeContent?.kind === "drilldown"
-                ? "sm:grid-rows-[auto_1fr] sm:grid-cols-[1fr_1fr_1fr_1fr]"
-                : "sm:grid-cols-[1fr_2fr_1fr]"
+                ? "sm:grid sm:grid-rows-[auto_1fr] sm:grid-cols-[1fr_1fr_1fr_1fr]"
+                : "sm:grid sm:grid-cols-[1fr_2fr_1fr]"
             }`}
           >
             <nav
