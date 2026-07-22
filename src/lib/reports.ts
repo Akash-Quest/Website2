@@ -84,6 +84,7 @@ const REPORT_VARIANTS: (Omit<
 })[] = [
   {
     type: "Report",
+    category: "Report",
     date: "May 18, 2026",
     title: "Emerging Trends and Markets in the Fertilizers & Agri-Chemicals Industry",
     description: "A data-driven look at seed replacement rates, crop health, and variety adoption shaping the next decade of agri-chemical demand.",
@@ -91,6 +92,7 @@ const REPORT_VARIANTS: (Omit<
   },
   {
     type: "Whitepaper",
+    category: "Whitepaper",
     date: "Apr 02, 2026",
     title: "The State of AI Adoption in Public Sector Governance",
     description: "How governments are deploying machine learning to modernise service delivery, and the governance frameworks needed to keep it accountable.",
@@ -98,6 +100,7 @@ const REPORT_VARIANTS: (Omit<
   },
   {
     type: "Case Study",
+    category: "Case Study",
     date: "Mar 21, 2026",
     title: "MineralIQ: Predictive Geology in Action",
     description: "How a national mining operator cut exploration costs by 30% using predictive geology and satellite-verified survey data.",
@@ -105,6 +108,7 @@ const REPORT_VARIANTS: (Omit<
   },
   {
     type: "Report",
+    category: "Report",
     date: "Feb 14, 2026",
     title: "Climate Risk and ESG: A 2026 Investor Briefing",
     description: "An investor-focused breakdown of climate risk exposure, ESG compliance shifts, and the sustainability metrics now driving capital allocation.",
@@ -112,6 +116,7 @@ const REPORT_VARIANTS: (Omit<
   },
   {
     type: "Report",
+    category: "Report",
     date: "Jan 30, 2026",
     title: "Digital Transformation Benchmarks Across Emerging Economies",
     description: "Benchmarking data strategy, ML adoption, and responsible AI governance across 20 emerging-market enterprises.",
@@ -119,6 +124,7 @@ const REPORT_VARIANTS: (Omit<
   },
   {
     type: "Case Study",
+    category: "Case Study",
     date: "Jan 05, 2026",
     title: "Inspect Global: Remote Infrastructure Monitoring at Scale",
     description: "How AI-powered anomaly detection reduced field visits by 40% for a multinational infrastructure operator.",
@@ -126,6 +132,7 @@ const REPORT_VARIANTS: (Omit<
   },
   {
     type: "Whitepaper",
+    category: "Whitepaper",
     date: "Dec 12, 2025",
     title: "Business Intelligence in Volatile Markets",
     description: "A framework for building competitive intelligence pipelines that hold up under market volatility and rapid policy change.",
@@ -133,6 +140,7 @@ const REPORT_VARIANTS: (Omit<
   },
   {
     type: "Report",
+    category: "Report",
     date: "Nov 22, 2025",
     title: "Integrated Program Management for Cross-Border Infrastructure",
     description: "Lessons from delivering on-time, on-budget infrastructure programmes across multiple regulatory jurisdictions.",
@@ -140,6 +148,7 @@ const REPORT_VARIANTS: (Omit<
   },
   {
     type: "Case Study",
+    category: "Case Study",
     date: "Oct 08, 2025",
     title: "Social Impact & CSR: Measuring What Matters",
     description: "How a Fortune 500 CSR programme moved from output tracking to measurable, community-verified social value.",
@@ -147,6 +156,7 @@ const REPORT_VARIANTS: (Omit<
   },
   {
     type: "Whitepaper",
+    category: "Whitepaper",
     date: "Sep 15, 2025",
     title: "DeCarbonX: Satellite-Verified Carbon Accounting",
     description: "A technical overview of how satellite data is closing the verification gap in enterprise carbon accounting.",
@@ -155,6 +165,7 @@ const REPORT_VARIANTS: (Omit<
   {
     // Fully hand-authored example — matches the reference layout exactly.
     type: "Insights",
+    category: "Insights",
     date: "Jun 28, 2026",
     readTime: "8 Min read",
     title: "Medical Device Innovation in 2025: Redefining the Frontiers of Clinical Technology",
