@@ -16,12 +16,18 @@ export type Author = {
 export type Report = {
   id: number;
   type: string;
+  /** Topic tag shown as the badge above the title and as the last breadcrumb crumb (lowercased) on the detail page. */
+  category: string;
   date: string;
   readTime: string;
   title: string;
   /** Trailing portion of `title` (must be a suffix of it) rendered in italic serif emphasis on the detail page. */
   titleEmphasis?: string;
   description: string;
+  /** Kicker line rendered below the hero image on the detail page. Falls back to `description` when omitted. */
+  subtitle?: string;
+  /** Trailing portion of `subtitle` (must be a suffix of it) rendered in italic serif emphasis. */
+  subtitleEmphasis?: string;
   thumbnailUrl: string;
   imageUrl: string;
   imageAlt: string;

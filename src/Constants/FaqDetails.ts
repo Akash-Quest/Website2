@@ -29,14 +29,5 @@ export const defaultFaqs = [
     answer:
       "Engagements vary from a few weeks for targeted research projects to 12+ months for comprehensive transformation programs. We'll scope the timeline based on your goals during our initial discovery.",
   },
-  {
-    question: "Who will actually work on my project?",
-    answer:
-      "Your engagement is led by a senior consultant with relevant domain expertise, supported by a dedicated team of analysts and specialists. You'll have direct access to your lead consultant throughout the project.",
-  },
-  {
-    question: "How do we get started with SkyQuest?",
-    answer:
-      "Simply schedule a call using the button below or reach out via our contact page. We'll set up a complimentary 30-minute discovery session to explore how we can best support your goals.",
-  },
+  
 ];

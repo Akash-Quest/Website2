@@ -78,10 +78,11 @@ export default function SocialImpactService(){
      <WhyUsResearch {...BusinessIntelWhyUsData} />
      <IndustriesWeServe2 />
      <FeaturedReport />
+     
      <CaseStudies {...caseStudiesData} />
      <OtherServicesSection bgClassName='bg-white' services={BusinessIntelOtherServicesData} />
      <CaseStudies {...insightData}/>
-     <FAQSection heading="Questions About" headingItalic="Business Intelligence" faqs={BusinessIntelFaqData} />
+     <FAQSection  faqs={BusinessIntelFaqData} />
      <Suscribe />
      </>)
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import Image from "next/image";
 
 import {
@@ -21,10 +21,10 @@ interface CaseStudy {
 
 interface CaseStudiesProps {
   eyebrow: string;
-  heading: string;
-  headingItalic: string;
+  heading: ReactNode;
   description: string;
   viewAllButton: string;
+  viewAllHref: string;
   readMoreButton: string;
   caseStudies: CaseStudy[];
   className?: string;
@@ -34,9 +34,9 @@ interface CaseStudiesProps {
 export default function CaseStudies({
   eyebrow,
   heading,
-  headingItalic,
   description,
   viewAllButton,
+  viewAllHref,
   readMoreButton,
   caseStudies,
   className = "",
@@ -104,12 +104,11 @@ export default function CaseStudies({
             </p>
 
             <h2 className="font-bold ">
-              
-              {heading}<br /> <em className="font-semibold">{headingItalic}</em>
+              {heading}
             </h2>
           </div>
 
-          <Button variant="primary" iconSize={16}>
+          <Button href={viewAllHref} variant="primary" iconSize={16}>
                     {viewAllButton}
                   </Button>
         </div>

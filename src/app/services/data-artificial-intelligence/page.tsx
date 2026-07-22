@@ -77,7 +77,7 @@ export default function SocialImpactService(){
     <Technologies />
     <CaseStudies {...insightData} bgClassName='bg-white'/>
      <OtherServicesSection bgClassName='bg-background' services={ArtificialIntelOtherServicesData} />
-     <FAQSection heading="Questions About" headingItalic="AI & Data Solutions" faqs={ArtificalIntelFaqData} />
+     <FAQSection  faqs={ArtificalIntelFaqData} />
      <Suscribe />
      </>)
 

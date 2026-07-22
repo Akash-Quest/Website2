@@ -23,7 +23,7 @@ interface FAQSectionProps {
 
 export default function FAQSection({
   eyebrow = "FAQ",
-  heading = "Friendly Asked",
+  heading = "Frequently Asked",
   headingItalic = "Questions.",
   faqs = defaultFaqs,
   ctaHeading = "Still have a question?",
@@ -60,7 +60,7 @@ export default function FAQSection({
 
         <div className="lg:flex lg:gap-12">
         {/* ── DESKTOP: left column (heading + card) ── */}
-        <div className="hidden lg:flex lg:w-[350px] flex-shrink-0 flex-col justify-between ">
+        <div className="hidden lg:flex lg:w-[350px] 2xl:w-[500px]  flex-shrink-0 flex-col justify-between ">
           <div>
             <p className="text-primary mb-2">
               {eyebrow}
@@ -87,9 +87,9 @@ export default function FAQSection({
                 className="w-full flex items-center justify-between gap-4 text-left group"
                 aria-expanded={openIndex === index}
               >
-                <span className={`text-md font-semibold  transition-colors duration-200 ${openIndex === index ? "text-gray-900" : "text-gray-700 group-hover:text-gray-900"}`}>
+                <h3 className={`--text-xl font-medium  transition-colors duration-200 ${openIndex === index ? "text-gray-900" : "text-gray-700 group-hover:text-gray-900"}`}>
                   {faq.question}
-                </span>
+                </h3>
                 <span className={`flex-shrink-0 w-7 h-7 rounded-md flex items-center justify-center transition-colors duration-200 ${openIndex === index ? "bg-indigo-100 text-indigo-600" : "bg-indigo-600 text-white"}`}>
                   {openIndex === index ? (
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -112,7 +112,7 @@ export default function FAQSection({
                 }}
                 className="overflow-hidden transition-all duration-300 ease-in-out"
               >
-                <p className="body-sm text-gray-500 leading-relaxed pr-10 pt-2">{faq.answer}</p>
+                <p className=" text-muted leading-relaxed pr-10 pt-2">{faq.answer}</p>
               </div>
             </div>
           ))}
@@ -122,7 +122,7 @@ export default function FAQSection({
         {/* ── MOBILE: "Still have a question" card (bottom) ── */}
         <div className={`lg:hidden ${cardBgClassName} border border-gray-200 rounded-2xl p-6`}>
           <h3 className="font-bold text-gray-900 mb-2">{ctaHeading}</h3>
-          <p className="text-sm text-gray-500 mb-5">{ctaDescription}</p>
+          <p className="text-sm text-muted mb-5">{ctaDescription}</p>
           <button type="button" className="flex items-center justify-center gap-2 rounded-lg bg-[#1D1EE3] pl-3 py-2 pr-1 text-sm text-white transition-colors hover:bg-[#231598] leading-none">
             {ctaButtonText}
             <span className="flex h-6 w-6 items-center justify-center rounded-md border border-white/40 bg-white text-black">

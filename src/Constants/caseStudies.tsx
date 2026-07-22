@@ -24,11 +24,17 @@ export type CaseStudy = {
 
 export const caseStudiesData = {
   eyebrow: "Featured Case Studies",
-  heading: "Impact Stories That Speak for",
-  headingItalic: "Themselves",
+  heading: (
+    <>
+      Impact Stories That Speak for
+      <br />
+      <em className="font-semibold">Themselves</em>
+    </>
+  ),
   description:
     "Real engagements. Real numbers. Real transformation across industries, geographies and business challenges.",
   viewAllButton: "View All Case Studies",
+  viewAllHref: "/case-studies",
   readMoreButton: "Read More",
   caseStudies: [
     {

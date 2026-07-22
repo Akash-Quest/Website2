@@ -27,9 +27,9 @@ function ReportCard({ report }: { report: Report }) {
     >
         <div className="w-full sm:flex-1 flex flex-col justify-between min-w-0">
           <div className="min-w-0">
-            <div className="flex items-center gap-1.5 text-xs text-gray-500">
+            <div className="flex items-center gap-1.5 text-xs text-muted">
               <span>{report.type}</span>
-              <span className="inline-block h-1 w-1 rounded-full bg-gray-400" />
+              <span className="inline-block h-1 w-1 rounded-full bg-muted" />
               <span>{report.date}</span>
             </div>
 
@@ -37,7 +37,7 @@ function ReportCard({ report }: { report: Report }) {
               {report.title}
             </h3>
 
-            <p className="mt-2 text-sm leading-relaxed text-gray-500 sm:max-w-md">
+            <p className="mt-3 text-sm leading-relaxed text-muted">
               {report.description}
             </p>
           </div>
@@ -45,10 +45,17 @@ function ReportCard({ report }: { report: Report }) {
           <Link
             href={`/insight/${report.id}`}
             onClick={(e) => e.stopPropagation()}
-            className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-700"
+            className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary "
           >
             Visit Page
-            <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2} />
+            <span className="relative ml-1 h-3.5 w-3.5 overflow-hidden">
+              <span className="absolute inset-0 flex items-center justify-center transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-3 group-hover:-translate-y-3 group-hover:opacity-0">
+                <ArrowUpRight size={14} />
+              </span>
+              <span className="absolute inset-0 flex items-center justify-center -translate-x-3 translate-y-3 opacity-0 transition-all duration-300 delay-100 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">
+                <ArrowUpRight size={14} />
+              </span>
+            </span>
           </Link>
         </div>
       {/* Right: Image */}

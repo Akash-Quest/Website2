@@ -1,22 +1,25 @@
 import Image from "next/image";
+import Link from "next/link";
 import { TwitterIcon, FacebookIcon, LinkedInIcon } from "@/components/icons/SocialIcons";
 
 const services = [
-  "Management & Business Consulting",
-  "Data, AI & Analytics",
-  "Strategy & Transformation",
-  "Market Research",
-  "Digital & IT Consulting",
-  "Social / CSR / ESG",
-  "Innovation R&D & Technology",
-  "Operations & Performance",
-  "Public Sector & Development",
-  "Government & PSU",
-  "Customer Experience & Design",
-  "AI & Digital Transformation",
+  { label: "Digital Transformation & Emerging Technologies", href: "/services/digital-transformation-emerging-technologies" },
+  { label: "Public Sector Advisory", href: "/services/public-sector-advisory" },
+  { label: "Data and Artificial Intelligence", href: "/services/data-artificial-intelligence" },
+  { label: "Integrated Program Management", href: "/services/integrated-program-management" },
+  { label: "Social Impact & CSR", href: "/services/social-impact-csr" },
+  { label: "Business Intelligence & Market Research", href: "/services/business-intelligence-market-research" },
+  { label: "Climate, Sustainability & ESG Advisory", href: "/services/climate-sustainability-esg-advisory" },
+  { label: "Agriculture & Livestock", href: "/services/agriculture-livestock" },
 ];
 
-const aboutLinks = ["Our Story", "Our Team", "Careers", "Partners", "Media & News"];
+const aboutLinks = [
+  { label: "Our Story", href: "#" },
+  { label: "Our Team", href: "/team" },
+  { label: "Careers", href: "/careers" },
+  { label: "Partners", href: "#" },
+  { label: "Media & News", href: "#" },
+];
 
 const Footer = () => {
   return (
@@ -49,13 +52,13 @@ const Footer = () => {
             <h3 className="text-white font-bold mb-4">Our Services</h3>
             <ul className="space-y-2.5 text-white/80 text-xs">
               {services.map((s) => (
-                <li key={s}>
-                  <a
-                    href="#"
+                <li key={s.label}>
+                  <Link
+                    href={s.href}
                     className="hover:text-white hover:underline underline-offset-2 decoration-white/40 transition-colors"
                   >
-                    {s}
-                  </a>
+                    {s.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -66,13 +69,13 @@ const Footer = () => {
             <h3 className="text-white font-bold mb-4">About Us</h3>
             <ul className="space-y-2.5 text-white/80 text-xs">
               {aboutLinks.map((l) => (
-                <li key={l}>
-                  <a
-                    href="#"
+                <li key={l.label}>
+                  <Link
+                    href={l.href}
                    className="hover:text-white hover:underline underline-offset-2 decoration-white/40 transition-colors"
                   >
-                    {l}
-                  </a>
+                    {l.label}
+                  </Link>
                 </li>
               ))}
             </ul>

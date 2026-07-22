@@ -18,7 +18,7 @@
       label: 'An Integrated Strategy, Technology & Impact Consulting Firm',
       title: (
         <>
-          Shaping Strategy,<br />Technology & Impact for{' '}
+          Shaping Strategy,<br />Technology & Impact for<br />{' '}
           <em >Tomorrow's Leaders.</em>
         </>
       ),
@@ -207,7 +207,7 @@ Systems for Governments
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="font-bold text-white max-w-md sm:max-w-2xl 2xl:max-w-5xl mb-3 sm:mb-5 ]"
+                className="font-bold text-white max-w-md sm:max-w-2xl 2xl:max-w-5xl  ]"
               >
                 {slide.title}
               </motion.h1>
@@ -219,7 +219,7 @@ Systems for Governments
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="text-white/80 max-w-sm sm:max-w-xl 2xl:max-w-3xl mb-4 2xl:mb-5 tracking-wide"
+                className="text-white/80 max-w-sm sm:max-w-xl 2xl:max-w-3xl mb-4 2xl:mb-5 text-body-lg"
               >
                 {slide.description}
               </motion.p>

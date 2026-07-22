@@ -15,8 +15,8 @@ function StudyCard({ study }: { study: CaseStudy }) {
 
   return (
     <Link
-      href={`/case-study/${study.id}`}
-      className="flex flex-col sm:flex-row gap-4 bg-[#F7F5F1] rounded-xl p-2 sm:p-3 transition-colors cursor-pointer"
+      href={`/case-studies/${study.id}`}
+      className="group flex flex-col sm:flex-row gap-4 bg-[#F7F5F1] rounded-xl p-2 sm:p-3 transition-colors cursor-pointer"
       style={{
         backgroundColor: isHovered ? '#EAEAF8' : '#F7F5F1'
       }}
@@ -42,18 +42,25 @@ function StudyCard({ study }: { study: CaseStudy }) {
               <span>{study.date}</span>
             </div>
 
-            <h3 className="mt-2 sm:truncate font-semibold text-gray-900">
+            <h3 className="mt-2 mb-3 sm:truncate font-semibold text-gray-900">
               {study.title}
             </h3>
 
-            <p className="mt-2 text-sm leading-relaxed text-muted">
+            <p className="mt-0 text-sm leading-relaxed text-muted">
               {study.description}
             </p>
           </div>
 
           <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary">
             Visit Page
-            <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2} />
+            <span className="relative ml-1 h-3.5 w-3.5 overflow-hidden">
+              <span className="absolute inset-0 flex items-center justify-center transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-3 group-hover:-translate-y-3 group-hover:opacity-0">
+                <ArrowUpRight size={14} />
+              </span>
+              <span className="absolute inset-0 flex items-center justify-center -translate-x-3 translate-y-3 opacity-0 transition-all duration-300 delay-100 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">
+                <ArrowUpRight size={14} />
+              </span>
+            </span>
           </span>
         </div>
     </Link>

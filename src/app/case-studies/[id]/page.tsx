@@ -5,6 +5,9 @@ import { notFound } from "next/navigation";
 import type { ContentBlock } from "@/lib/reports";
 import { caseStudiesData, getCaseStudyById } from "@/Constants/caseStudies";
 import { FacebookIcon, LinkedInIcon, XIcon } from "@/components/icons/SocialIcons";
+import CaseStudyForm from "@/components/features/CaseStudyForm";
+import Suscribe from "@/components/features/Suscribe";
+import CaseStudies from "@/components/features/HomeCaseStudie";
 
 export function generateStaticParams() {
   return caseStudiesData.caseStudies.map((study) => ({ id: String(study.id) }));
@@ -109,7 +112,6 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
       );
   }
 }
-
 export default async function CaseStudyDetailsPage({
   params,
 }: {
@@ -131,6 +133,7 @@ export default async function CaseStudyDetailsPage({
     : study.subtitle;
 
   return (
+    <>
     <section className="bg-background">
       <div className="hero-container">
         {/* Breadcrumb */}
@@ -222,5 +225,10 @@ export default async function CaseStudyDetailsPage({
         </div>
       </div>
     </section>
+   <CaseStudies {...caseStudiesData} className="bg-white"/>
+   <CaseStudyForm />
+  <Suscribe className="pt-0"/>
+
+    </>
   );
 }

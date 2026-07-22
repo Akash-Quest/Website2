@@ -4,6 +4,9 @@ import { notFound } from "next/navigation";
 import { getReportById, reports, type ContentBlock } from "@/lib/reports";
 import { FacebookIcon, LinkedInIcon, XIcon } from "@/components/icons/SocialIcons";
 import { ArchiveTick, ExportSquare, Import, Link2, Sms, Printer } from "iconsax-react";
+import CaseStudies from "@/components/features/HomeCaseStudie";
+import { insightData } from "@/Constants/Insight ";
+import Suscribe from "@/components/features/Suscribe";
 
 export function generateStaticParams() {
   return reports.map((report) => ({ id: String(report.id) }));
@@ -139,6 +142,7 @@ export default async function InsightDetailsPage({
     : report.title;
 
   return (
+    <>
     <section className="bg-background">
       <div className="hero-container">
         {/* Breadcrumb */}
@@ -318,5 +322,9 @@ export default async function InsightDetailsPage({
         </div>
       </div>
     </section>
+    <CaseStudies {...insightData} bgClassName="bg-white"/>
+    <Suscribe />
+
+    </>
   );
 }

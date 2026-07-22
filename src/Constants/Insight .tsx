@@ -1,9 +1,13 @@
 export const insightData = {
     "eyebrow": "Insight",
-    "heading": "Data & AI Thought Leadership",
-    "headingItalic": "Leadership",
+    "heading": (
+      <>
+        From Insight To <em className="font-semibold">Action</em>
+      </>
+    ),
     "description": "Discover thought leadership designed to help organisations make smarter decisions, scale innovation, and create measurable impact.",
     "viewAllButton": "View All Insight",
+    "viewAllHref": "/insight",
     "readMoreButton": "Read More",
   "caseStudies": [
     {

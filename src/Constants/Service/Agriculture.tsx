@@ -9,7 +9,7 @@ export const AgricultureOurCapabilitiesData = {
       id: "ai",
       title: "AI & Digital Transformation",
       description:
-        "Applying machine learning and digital tools to optimize yields, resource use, and farm-level decision-making.",
+        "Leveraging AI, geospatial intelligence, digital platforms, remote sensing, and analytics to modernize agriculture and improve decision-making.",
       imageUrl:
         "/service/Agriculture/card1.jpg",
       imageAlt: "Farmer reviewing crop data on a tablet in a green field",
@@ -20,7 +20,7 @@ export const AgricultureOurCapabilitiesData = {
       id: "livestock",
       title: "Livestock & Dairy Transformation",
       description:
-        "Modernizing livestock and dairy operations with data-driven herd management, health monitoring, and productivity tools.",
+        "Strengthening livestock value chains through animal health systems, breed improvement, digital monitoring, traceability, veterinary services, and market access solutions.",
       imageUrl:
         "/service/Agriculture/card2.jpg",
       imageAlt: "Dairy cows grazing in a pasture in front of a red barn",
@@ -31,7 +31,7 @@ export const AgricultureOurCapabilitiesData = {
       id: "food",
       title: "Food Security & Nutrition",
       description:
-        "Strengthening supply chains and nutrition programs to improve food access and resilience for vulnerable communities.",
+        "Supporting governments and institutions in designing strategies and programs that improve productivity, food security, resilience, and rural prosperity.",
       imageUrl:
         "/service/Agriculture/card3.jpg",
       imageAlt: "Hands holding a crate of fresh vegetables and peppers",
@@ -41,7 +41,7 @@ export const AgricultureOurCapabilitiesData = {
       id: "climate",
       title: "Climate-Smart Agriculture",
       description:
-        "Building climate-resilient farming systems that adapt to changing conditions while reducing environmental impact.",
+        "Supporting adaptation, sustainable farming practices, climate risk management, resource optimization, and resilient food production systems.",
       imageUrl:
         "/service/Agriculture/card4.jpg",
       imageAlt: "Seedlings growing in a greenhouse with digital overlay icons",
@@ -52,7 +52,7 @@ export const AgricultureOurCapabilitiesData = {
       id: "agrifinance",
       title: "Agri-Finance & Insurance",
       description:
-        "Expanding access to credit, insurance, and digital payments that help farmers manage risk and grow sustainably.",
+        "Strengthening farmer access to finance, insurance, working capital, investment opportunities, and sustainable rural entrepreneurship ecosystems.",
       imageUrl:
         "/service/Agriculture/card5.jpg",
       imageAlt: "Farmer smiling while holding a phone and cash in a green field",
@@ -63,7 +63,7 @@ export const AgricultureOurCapabilitiesData = {
       id: "infra",
       title: "Agricultural Infrastructure",
       description:
-        "Investing in irrigation, storage, and logistics infrastructure that strengthens productivity across the value chain.",
+        "Our multidisciplinary teams combine sector expertise, digital innovation, policy knowledge, implementation experience, and market intelligence to address agriculture and livestock challenges at scale.",
       imageUrl:
         "/service/Agriculture/card6.jpg",
       imageAlt: "Irrigation pivot system watering rows of crops at sunrise",

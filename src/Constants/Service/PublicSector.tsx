@@ -19,7 +19,7 @@ export const PublicSectorOurCapabilitiesData = {
       id: "digital-government",
       title: "Digital Government & Smart Governance",
       description:
-        "Designing citizen-centric digital platforms and public infrastructure that improve service delivery.",
+        "Strengthening public institutions through organizational transformation, operational improvement, governance frameworks, and capacity enhancement initiatives.",
       imageUrl: "/service/PublicService/card2.jpg",
       imageAlt: "Citizen using a digital government service kiosk",
       area: "livestock",
