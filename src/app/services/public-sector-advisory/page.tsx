@@ -12,7 +12,6 @@ import {
   PublicSectorHeroData,
   PublicSectorOurCapabilitiesData,
   PublicSectorWeOfferData,
-  PublicSectorOtherServicesData,
   PublicSectorFaqData,
 } from '@/Constants/Service/PublicSector';
 import type { Metadata } from "next";
@@ -63,7 +62,7 @@ export default function PublicSectorService(){
      <OurCapabilities {...PublicSectorOurCapabilitiesData} />
      <WhatWeOfferGrid {...PublicSectorWeOfferData} />
      <CaseStudies {...caseStudiesData} />
-     <OtherServicesSection bgClassName='bg-white' services={PublicSectorOtherServicesData} />
+     <OtherServicesSection bgClassName='bg-white' currentHref="/services/public-sector-advisory" />
      <CaseStudies {...insightData}/>
      <FAQSection  faqs={PublicSectorFaqData} />
      <Suscribe />

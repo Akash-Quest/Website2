@@ -6,7 +6,7 @@ import Suscribe from '@/components/features/Suscribe';
 import { insightData } from '@/Constants/Insight ';
 import { caseStudiesData } from '@/Constants/caseStudies';
 import StatsGrid from '@/components/ui/Stats4';
-import { ArtificalIntelFaqData, ArtificialHeroData, ArtificialIntelOtherServicesData } from '@/Constants/Service/ArtificialIntel';
+import { ArtificalIntelFaqData, ArtificialHeroData } from '@/Constants/Service/ArtificialIntel';
 import Technologies from '@/components/features/ArtificialIntel/Technologies';
 import WeServe from '@/components/features/ArtificialIntel/WeServe';
 import EnterpriseAiSolution from '@/components/features/ArtificialIntel/EnterpriseAiSolution';
@@ -76,7 +76,7 @@ export default function SocialImpactService(){
            
     <Technologies />
     <CaseStudies {...insightData} bgClassName='bg-white'/>
-     <OtherServicesSection bgClassName='bg-background' services={ArtificialIntelOtherServicesData} />
+     <OtherServicesSection bgClassName='bg-background' currentHref="/services/data-artificial-intelligence" />
      <FAQSection  faqs={ArtificalIntelFaqData} />
      <Suscribe />
      </>)

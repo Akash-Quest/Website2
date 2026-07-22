@@ -12,7 +12,7 @@ export const insightData = {
   "caseStudies": [
     {
       "id": 1,
-      "image": "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?q=80&w=1200&auto=format&fit=crop",
+      "image": "/Insights/pr1.jpg",
       "category": "Insights",
       "date": "April 27, 2026",
       "title": "Unlocking Livestock Innovation to Transform Smallholder Farming in India",
@@ -20,7 +20,7 @@ export const insightData = {
     },
     {
       "id": 2,
-      "image": "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1200&auto=format&fit=crop",
+      "image": "/Insights/pr2.jpg",
       "category": "Insights",
       "date": "March 12, 2026",
       "title": "Reimagining Urban Mobility Through Real-Time Crowd Intelligence",
@@ -28,7 +28,7 @@ export const insightData = {
     },
     {
       "id": 3,
-      "image": "https://images.unsplash.com/photo-1605792657660-596af9009e82?q=80&w=1200&auto=format&fit=crop",
+      "image": "/Insights/pr3.jpg",
       "category": "Case Study",
       "date": "February 3, 2026",
       "title": "Powering Inclusive Finance with Embedded Digital Wallets",
@@ -36,7 +36,7 @@ export const insightData = {
     },
     {
       "id": 4,
-      "image": "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?q=80&w=1200&auto=format&fit=crop",
+      "image": "/Insights/pr1.jpg",
       "category": "Insights",
       "date": "January 21, 2026",
       "title": "Scaling Precision Agriculture Across Three States",
@@ -44,7 +44,7 @@ export const insightData = {
     },
     {
       "id": 5,
-      "image": "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1200&auto=format&fit=crop",
+      "image": "/Insights/pr2.jpg",
       "category": "Case Study",
       "date": "December 9, 2025",
       "title": "Designing Safer Streets with Predictive Foot-Traffic Modeling",
@@ -52,7 +52,7 @@ export const insightData = {
     },
     {
       "id": 6,
-      "image": "https://images.unsplash.com/photo-1605792657660-596af9009e82?q=80&w=1200&auto=format&fit=crop",
+      "image": "/Insights/pr3.jpg",
       "category": "Insights",
       "date": "November 17, 2025",
       "title": "Modernizing Treasury Operations for a Multinational Retailer",

@@ -134,7 +134,7 @@ export default async function CaseStudyDetailsPage({
 
   return (
     <>
-    <section className="bg-background">
+    <section className="bg-background overflow-x-hidden">
       <div className="hero-container">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="pb-2 sm:pb-2 lg:pb-5 px-4 lg:px-0">
@@ -157,7 +157,7 @@ export default async function CaseStudyDetailsPage({
           </ol>
         </nav>
 
-        <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen border-b border-[#03030F33]" />
+<div className="relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen border-b border-[#03030F33]" />
 
         <div className="px-[2]">
           {/* Category + Heading */}
@@ -169,7 +169,7 @@ export default async function CaseStudyDetailsPage({
           </div>
         </div>
 
-        <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen border-b border-[#03030F33]" />
+<div className="relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen border-b border-[#03030F33]" />
 
         {/* Hero Image */}
         <div className="mt-6 sm:px-[4]">

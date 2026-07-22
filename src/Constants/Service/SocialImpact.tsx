@@ -1,5 +1,4 @@
 
-import type { OtherService } from "@/components/features/OtherServices";
 import { ClipboardText, CloudConnection, Courthouse, CpuSetting, FavoriteChart, HeartCircle, HeartTick, Message, PresentionChart } from "iconsax-react";
 
 export const SocialImpactOurCapabilitiesData = {
@@ -173,17 +172,6 @@ export const SocialImpactFocusAreasData = {
   ],
 };
 
-export const SocialImpactOtherServicesData: OtherService[] = [
-  { label: "Climate, Sustainability & ESG Advisory", href: "#" },
-  { label: "Market Research", href: "#" },
-  { label: "Strategy & Transformation", href: "#" },
-  {
-    label: "Innovation, R&D & Technology Commercialization Consulting",
-    href: "#",
-  },
-  { label: "Public Sector & Development Consulting", href: "#" },
-  { label: "AI Consulting & Digital Transformation", href: "#" },
-];
 
 export const SocialImpactFaqData = [
   {

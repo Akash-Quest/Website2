@@ -7,7 +7,6 @@ import {
   AgricultureOurCapabilitiesData,
   AgricultureCoreCapabilitiesData,
   AgricultureWhatWeOfferData,
-  AgricultureOtherServicesData,
   AgricultureFaqData,
 } from '@/Constants/Service/Agriculture';
 import CaseStudies from '@/components/features/HomeCaseStudie';
@@ -67,7 +66,7 @@ export default function Agriculturepage(){
      <ServiceCoreCapabilities {...AgricultureCoreCapabilitiesData} />
      <WhatWeOfferGrid {...AgricultureWhatWeOfferData} />
      <CaseStudies {...caseStudiesData} />
-     <OtherServicesSection bgClassName='bg-white' services={AgricultureOtherServicesData} />
+     <OtherServicesSection bgClassName='bg-white' currentHref="/services/agriculture-livestock" />
      <CaseStudies {...insightData}/>
      <FAQSection  faqs={AgricultureFaqData} />
      <Suscribe />

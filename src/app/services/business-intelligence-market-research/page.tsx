@@ -14,7 +14,6 @@ import {
   BusinessIntelHeroData,
   BusinessIntelOurCapabilitiesData,
   BusinessIntelWhyUsData,
-  BusinessIntelOtherServicesData,
   BusinessIntelFaqData,
 } from '@/Constants/Service/BusinessIntel';
 import IndustriesWeServe2 from '@/components/features/IndustriesWeSurve2';
@@ -80,7 +79,7 @@ export default function SocialImpactService(){
      <FeaturedReport />
      
      <CaseStudies {...caseStudiesData} />
-     <OtherServicesSection bgClassName='bg-white' services={BusinessIntelOtherServicesData} />
+     <OtherServicesSection bgClassName='bg-white' currentHref="/services/business-intelligence-market-research" />
      <CaseStudies {...insightData}/>
      <FAQSection  faqs={BusinessIntelFaqData} />
      <Suscribe />

@@ -12,7 +12,6 @@ import {
   IntegratedProgramHeroData,
   IntegratedProgramCapabilitiesData,
   IntegratedProgramWeOfferData,
-  IntegratedProgramOtherServicesData,
   IntegratedProgramFaqData,
 } from '@/Constants/Service/IntegratedProgram';
 function HeroPage(){
@@ -65,7 +64,7 @@ export default function SocialImpactService(){
      <IntegratedCapabilities {...IntegratedProgramCapabilitiesData} />
      <WhatWeOfferGrid {...IntegratedProgramWeOfferData} />
      <CaseStudies {...caseStudiesData} />
-     <OtherServicesSection bgClassName='bg-white' services={IntegratedProgramOtherServicesData} />
+     <OtherServicesSection bgClassName='bg-white' currentHref="/services/integrated-program-management" />
      <CaseStudies {...insightData}/>
      <FAQSection  faqs={IntegratedProgramFaqData} />
      <Suscribe />

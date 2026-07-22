@@ -14,7 +14,6 @@ import {
   EsgOurCapabilitiesData,
   EsgWhatWeOfferData,
   EsgIndustriesWeServeData,
-  EsgOtherServicesData,
   EsgFaqData,
 } from '@/Constants/Service/Esg';
 import type { Metadata } from "next";
@@ -68,7 +67,7 @@ export default function EsgService(){
      <WhatWeOfferGrid {...EsgWhatWeOfferData} />
      <IndustriesWeServe {...EsgIndustriesWeServeData} />
      <CaseStudies {...caseStudiesData}  bgClassName='bg-white'/>
-     <OtherServicesSection bgClassName='bg-background' services={EsgOtherServicesData} />
+     <OtherServicesSection bgClassName='bg-background' currentHref="/services/climate-sustainability-esg-advisory" />
      <CaseStudies {...insightData} bgClassName='bg-white'/>
      <FAQSection bgClassName='bg-background'  faqs={EsgFaqData} />
      <Suscribe className="pt-0"/>

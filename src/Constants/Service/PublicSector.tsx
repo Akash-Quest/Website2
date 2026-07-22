@@ -1,5 +1,4 @@
 
-import type { OtherService } from "@/components/features/OtherServices";
 import { Bank, Buildings2, CardCoin, CloudConnection, CpuSetting, DollarCircle, HeartTick, KeyboardOpen, LampCharge } from "iconsax-react";
 
 export const PublicSectorOurCapabilitiesData = {
@@ -151,17 +150,6 @@ export const PublicSectorWeOfferData = {
   ],
 };
 
-export const PublicSectorOtherServicesData: OtherService[] = [
-  { label: "Social / CSR / ESG Consulting", href: "#" },
-  { label: "Market Research", href: "#" },
-  { label: "Strategy & Transformation", href: "#" },
-  {
-    label: "Innovation, R&D & Technology Commercialization Consulting",
-    href: "#",
-  },
-  { label: "Integrated Program Management", href: "#" },
-  { label: "AI Consulting & Digital Transformation", href: "#" },
-];
 
 export const PublicSectorFaqData = [
  {

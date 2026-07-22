@@ -3,28 +3,28 @@ import Image from "next/image";
 const stack = [
   {
     icons: [
-      "/All logos/image 22176.svg",
-      "/All logos/image 22177.svg",
-      "/All logos/image 22178.svg",
+      "/All logos/Aws.svg",
+      "/All logos/Azzure.svg",
+      "/All logos/Gcp.svg",
     ],
     title: "AWS / Azure / GCP /Docker",
     description:
       "Multi-cloud data platform implementations, managed ML services, and cloud-native AI infrastructure at scale.",
   },
   {
-    icons: ["/All logos/image 22174.svg"],
+    icons: ["/All logos/PowerBi.svg"],
     title: "Power BI ",
     description:
       "Enterprise BI dashboards, self-service analytics, and data visualisation platforms for executive and operational reporting.",
   },
    {
-    icons: ["/All logos/image 22181.svg", "/All logos/image 22182.svg"],
+    icons: ["/All logos/opeAi.svg", "/All logos/LangChain.svg"],
     title: "OpenAI,LangChain,Claude",
     description:
       "LLM integration, RAG system builds, agent frameworks, and enterprise GenAI application development.",
   },
   {
-    icons: ["/All logos/image 22181.svg", "/All logos/image 22182.svg"],
+    icons: ["/All logos/opeAi.svg", "/All logos/LangChain.svg"],
     title: "SQL/MongoDB",
     description:
       "Deep learning model development, training, and deployment across classification, regression, and generative tasks.",
@@ -36,20 +36,20 @@ const stack = [
       "Deep learning model development, training, and deployment across classification, regression, and generative tasks.",
   },
   {
-    icons: ["/All logos/image 22179.svg"],
+    icons: ["/All logos/Apache.svg"],
     title: "Apache Spark",
     description:
       "Cloud data platform architecture, data lakehouse builds, and large-scale analytics engineering.",
   },
  
   {
-    icons: ["/All logos/image 22183.svg", "/All logos/image 22184.svg"],
+    icons: ["/All logos/Mlflow.svg", "/All logos/Kuberflow.svg"],
     title: "MLflow & Kubeflow",
     description:
       "MLOps platform implementation, model registry, experiment tracking, and production ML pipeline orchestration.",
   },
   {
-    icons: ["/All logos/image 22185.svg",],
+    icons: ["/All logos/dbt.svg"],
     title: "dbt",
     description:
       "Data transformation, pipeline scheduling, data quality testing, and analytics engineering best practices.",

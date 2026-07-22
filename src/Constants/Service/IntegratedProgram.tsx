@@ -1,5 +1,4 @@
 
-import type { OtherService } from "@/components/features/OtherServices";
 import { Bill, DocumentCode2, Element2, LampCharge, Maximize4, NotificationStatus, People, RecoveryConvert, Warning2,Book, Activity } from "iconsax-react";
 
 
@@ -165,17 +164,6 @@ export const IntegratedProgramWeOfferData = {
   ],
 };
 
-export const IntegratedProgramOtherServicesData: OtherService[] = [
-  { label: "Social / CSR / ESG Consulting", href: "#" },
-  { label: "Market Research", href: "#" },
-  { label: "Strategy & Transformation", href: "#" },
-  {
-    label: "Innovation, R&D & Technology Commercialization Consulting",
-    href: "#",
-  },
-  { label: "Public Sector & Development Consulting", href: "#" },
-  { label: "AI Consulting & Digital Transformation", href: "#" },
-];
 
 export const IntegratedProgramFaqData = [
   {

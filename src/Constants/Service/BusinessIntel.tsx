@@ -1,4 +1,3 @@
-import type { OtherService } from "@/components/features/OtherServices";
 
 export const BusinessIntelOurCapabilitiesData = {
   eyebrow: "Our Capabilities",
@@ -115,17 +114,6 @@ export const BusinessIntelWhyUsData = {
   imageAlt: "Why Us? The SkyQuest Advantage",
 };
 
-export const BusinessIntelOtherServicesData: OtherService[] = [
-  { label: "Social / CSR / ESG Consulting", href: "#" },
-  { label: "Agriculture & Livestock", href: "#" },
-  { label: "Strategy & Transformation", href: "#" },
-  {
-    label: "Innovation, R&D & Technology Commercialization Consulting",
-    href: "#",
-  },
-  { label: "Public Sector & Development Consulting", href: "#" },
-  { label: "AI Consulting & Digital Transformation", href: "#" },
-];
 
 export const BusinessIntelFaqData = [
    {

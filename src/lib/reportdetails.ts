@@ -21,7 +21,7 @@ export type ReportDetail = {
   body: ContentBlock[];
 };
 
-const imageUrl = "https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=1600&q=80";
+const imageUrl = "/Insights/pr1.jpg";
 
 export const reportDetail: ReportDetail = {
   type: "Case Snapshot",

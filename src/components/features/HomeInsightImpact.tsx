@@ -88,7 +88,7 @@ export default function InsightImpact   () {
         <div className="relative">
           {/* Content overlay */}
           <div className="relative lg:absolute lg:inset-0 leading-[0] mb-10 lg:mb-0 z-10 lg:pointer-events-none">
-            <p className="mb-2 text-primary tracking-wide text-body-sm lg:pointer-events-auto">
+            <p className="mb-2 text-primary font-medium text-body-sm lg:pointer-events-auto">
               From Insight to Impact
             </p>
             <h2 className=" font-bold lg:pointer-events-auto">
@@ -126,10 +126,10 @@ export default function InsightImpact   () {
                 
                 <div className="absolute left-4 top-4 right-4 text-white z-100">
                   <div className="flex items-center gap-1.5">
-                    <h3 className="text-white font-normal mb-2 text-body-lg">{card.title}</h3>
+                    <h3 className="text-white font-normal  text-body-lg">{card.title}</h3>
                     
                   </div>
-                  <p className=" mt-1 font-regular text-white/80 transition-colors duration-500 group-hover:text-white">{card.desc}</p>
+                  <p className="  font-regular text-white/80 transition-colors duration-500 group-hover:text-white">{card.desc}</p>
                 </div>
               </div>
             ))}

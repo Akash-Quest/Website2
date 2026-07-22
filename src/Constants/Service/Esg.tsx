@@ -1,5 +1,4 @@
 
-import type { OtherService } from "@/components/features/OtherServices";
 import { Bank, Building, Buildings2, CardTick, Convert3DCube, DollarCircle, FlashCircle, Hashtag, HeartAdd, LampCharge, Link, Link2, People, Setting4, Share, Shop, Teacher, TruckFast, Warning2, Wind } from "iconsax-react";
 
 export const EsgOurCapabilitiesData = {
@@ -170,18 +169,6 @@ export const EsgIndustriesWeServeData = {
     { icon: Hashtag, label: "AgroTech" },
   ],
 };
-
-export const EsgOtherServicesData: OtherService[] = [
-  { label: "Social / CSR / ESG Consulting", href: "#" },
-  { label: "Market Research", href: "#" },
-  { label: "Strategy & Transformation", href: "#" },
-  {
-    label: "Innovation, R&D & Technology Commercialization Consulting",
-    href: "#",
-  },
-  { label: "Public Sector & Development Consulting", href: "#" },
-  { label: "AI Consulting & Digital Transformation", href: "#" },
-];
 
 export const EsgFaqData = [
    {

@@ -1,5 +1,4 @@
 
-import type { OtherService } from "@/components/features/OtherServices";
 import { Chart, CloudDrizzle, Convert3DCube, DollarSquare, Link, Note, Pet, Reserve, Wind2,Wind,Sun } from "iconsax-react";
 
 export const AgricultureOurCapabilitiesData = {
@@ -218,17 +217,6 @@ export const AgricultureWhatWeOfferData = {
   ],
 };
 
-export const AgricultureOtherServicesData: OtherService[] = [
-  { label: "Social / CSR / ESG Consulting", href: "#" },
-  { label: "Market Research", href: "#" },
-  { label: "Strategy & Transformation", href: "#" },
-  {
-    label: "Innovation, R&D & Technology Commercialization Consulting",
-    href: "#",
-  },
-  { label: "Public Sector & Development Consulting", href: "#" },
-  { label: "AI Consulting & Digital Transformation", href: "#" },
-];
 
 export const AgricultureFaqData = [
   {

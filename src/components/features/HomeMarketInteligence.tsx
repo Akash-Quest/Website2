@@ -187,7 +187,7 @@ export default function MarketIntelligence() {
                 </div>
 
                 <div className="px-1 pt-4 pb-2">
-                  <h3 className=" font-semibold text-neutral-900 leading-snug">
+                  <h3 className=" font-semibold text-neutral-900 text-body-xl">
                     {slide.title}
                   </h3>
                   <p className="mt-2 text-neutral-500 leading-tight ">

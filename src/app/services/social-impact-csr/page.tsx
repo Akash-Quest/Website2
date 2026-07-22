@@ -14,7 +14,6 @@ import {
   SocialImpactOurCapabilitiesData,
   SocialImpactCoreCapabilitiesData,
   SocialImpactFocusAreasData,
-  SocialImpactOtherServicesData,
   SocialImpactFaqData,
 } from '@/Constants/Service/SocialImpact';
 import type { Metadata } from "next";
@@ -66,7 +65,7 @@ export default function SocialImpactService(){
      <ServiceCoreCapabilities {...SocialImpactCoreCapabilitiesData} />
      <SocialFocus {...SocialImpactFocusAreasData} />
      <CaseStudies {...caseStudiesData} />
-     <OtherServicesSection bgClassName='bg-white' services={SocialImpactOtherServicesData} />
+     <OtherServicesSection bgClassName='bg-white' currentHref="/services/social-impact-csr" />
      <CaseStudies {...insightData}/>
      <FAQSection  faqs={SocialImpactFaqData} />
      <Suscribe />

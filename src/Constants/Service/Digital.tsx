@@ -1,6 +1,5 @@
 
 import { Chart, Courthouse, Driver, Cpu,Sun } from "iconsax-react"
-import type { OtherService } from "@/components/features/OtherServices";
 
 export const DigitalHeroData = {
   breadcrumbLabel: "Digital Transformation",
@@ -89,37 +88,37 @@ export const DigitalEndToEndData = {
         "Cloud data platform architecture, data lakehouse builds, and large-scale analytics engineering.",
     },
     {
-      icons: ["/All logos/image 22174.svg", "/All logos/image 22175.svg"],
+      icons: ["/All logos/PowerBi.svg", "/All logos/Tabluae.svg"],
       title: "Power BI & Tableau",
       description:
         "Enterprise BI dashboards, self-service analytics, and data visualisation platforms for executive and operational reporting.",
     },
     {
-      icons: ["/All logos/image 22176.svg", "/All logos/image 22177.svg", "/All logos/image 22178.svg"],
+      icons: ["/All logos/Aws.svg", "/All logos/Azzure.svg", "/All logos/Gcp.svg"],
       title: "AWS / Azure / GCP",
       description:
         "Multi-cloud data platform implementations, managed ML services, and cloud-native AI infrastructure at scale.",
     },
     {
-      icons: ["/All logos/image 22179.svg", "/All logos/image 22180.svg"],
+      icons: ["/All logos/Apache.svg", "/All logos/Kafka.svg"],
       title: "Apache Spark & Kafka",
       description:
         "Big data processing, real-time streaming pipelines, and high-throughput event-driven architectures.",
     },
     {
-      icons: ["/All logos/image 22181.svg", "/All logos/image 22182.svg"],
+      icons: ["/All logos/opeAi.svg", "/All logos/LangChain.svg"],
       title: "OpenAI & LangChain",
       description:
         "LLM integration, RAG system builds, agent frameworks, and enterprise GenAI application development.",
     },
     {
-      icons: ["/All logos/image 22183.svg", "/All logos/image 22184.svg"],
+      icons: ["/All logos/Mlflow.svg", "/All logos/Kuberflow.svg"],
       title: "MLflow & Kubeflow",
       description:
         "MLOps platform implementation, model registry, experiment tracking, and production ML pipeline orchestration.",
     },
     {
-      icons: ["/All logos/image 22185.svg", "/All logos/image 22186.svg"],
+      icons: ["/All logos/dbt.svg", "/All logos/Airflow.svg"],
       title: "dbt & Airflow",
       description:
         "Data transformation, pipeline scheduling, data quality testing, and analytics engineering best practices.",
@@ -127,17 +126,6 @@ export const DigitalEndToEndData = {
   ],
 };
 
-export const DigitalOtherServicesData: OtherService[] = [
-  { label: "Social / CSR / ESG Consulting", href: "#" },
-  { label: "Market Research", href: "#" },
-  { label: "Strategy & Transformation", href: "#" },
-  {
-    label: "Innovation, R&D & Technology Commercialization Consulting",
-    href: "#",
-  },
-  { label: "Public Sector & Development Consulting", href: "#" },
-  { label: "Integrated Program Management", href: "#" },
-];
 
 export const DigitalFaqData = [
   {

@@ -39,8 +39,7 @@ export const caseStudiesData = {
   caseStudies: [
     {
       id: 1,
-      image:
-        "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?q=80&w=1200&auto=format&fit=crop",
+      image: "/CaseStudy/pr1.jpg",
       category: "Insights",
       type: "Case Snapshot",
       topic: "Agriculture & Livestock",
@@ -96,8 +95,7 @@ export const caseStudiesData = {
     },
     {
       id: 2,
-      image:
-        "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1200&auto=format&fit=crop",
+      image: "/CaseStudy/pr2.jpg",
       category: "Insights",
       type: "Case Snapshot",
       topic: "Urban Mobility",
@@ -153,8 +151,7 @@ export const caseStudiesData = {
     },
     {
       id: 3,
-      image:
-        "https://images.unsplash.com/photo-1605792657660-596af9009e82?q=80&w=1200&auto=format&fit=crop",
+      image: "/CaseStudy/pr3.jpg",
       category: "Case Study",
       type: "Case Snapshot",
       topic: "Financial Inclusion",
@@ -210,8 +207,7 @@ export const caseStudiesData = {
     },
     {
       id: 4,
-      image:
-        "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?q=80&w=1200&auto=format&fit=crop",
+      image: "/CaseStudy/pr1.jpg",
       category: "Insights",
       type: "Case Snapshot",
       topic: "Agriculture & Livestock",
@@ -267,8 +263,7 @@ export const caseStudiesData = {
     },
     {
       id: 5,
-      image:
-        "https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1200&auto=format&fit=crop",
+      image: "/CaseStudy/pr2.jpg",
       category: "Case Study",
       type: "Case Snapshot",
       topic: "Public Safety",
@@ -324,8 +319,7 @@ export const caseStudiesData = {
     },
     {
       id: 6,
-      image:
-        "https://images.unsplash.com/photo-1605792657660-596af9009e82?q=80&w=1200&auto=format&fit=crop",
+      image: "/CaseStudy/pr3.jpg",
       category: "Insights",
       type: "Case Snapshot",
       topic: "Treasury & Finance",

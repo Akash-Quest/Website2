@@ -164,7 +164,7 @@ export default function CoreCapabilities() {
         {/* LEFT SIDE */}
         <div>
           <div className="mb-4">
-            <p className=" font-medium text-primary text-body-sm">
+            <p className=" font-medium text-primary text-body-sm ">
               Our Core Capabilities
             </p>
 

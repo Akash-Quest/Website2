@@ -83,7 +83,7 @@ function TagPill({ label }: { label: string }) {
 function JobCard({ job }: { job: Job }) {
   return (
     <div className="bg-[#F7F5F1] rounded-xl p-4 flex flex-col gap-2">
-      <h3 className=" font-semibold text-[#03030F] m-0">
+      <h3 className=" font-semibold text-[#03030F] text-body-xl">
         {job.title}
       </h3>
 
@@ -93,7 +93,7 @@ function JobCard({ job }: { job: Job }) {
         ))}
       </div>
 
-      <p className="  textbody--sm">
+      <p className="  text-body-sm">
         {job.description}
       </p>
 

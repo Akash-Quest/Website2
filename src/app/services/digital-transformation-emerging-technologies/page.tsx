@@ -3,7 +3,7 @@ import ServiceHeroPage from '@/components/features/ServiceHeroPage';
 import DigitalMosaic from '@/components/features/ServiceDigitalOurCapability';
 import ServiceCoreCapabilities from '@/components/features/ServiceCoreCapabilities';
 import EndtoEnd from '@/components/features/ServiceDigitalEndtoend';
-import { DigitalHeroData, ServicedigitalCoreCapabilitiesData, DigitalEndToEndData, DigitalOtherServicesData, DigitalFaqData } from '@/Constants/Service/Digital';
+import { DigitalHeroData, ServicedigitalCoreCapabilitiesData, DigitalEndToEndData, DigitalFaqData } from '@/Constants/Service/Digital';
 import CaseStudies from '@/components/features/HomeCaseStudie';
 import { caseStudiesData } from '@/Constants/caseStudies';
 import OtherServicesSection from '@/components/features/OtherServices';
@@ -54,7 +54,7 @@ export default function DigitalPage(){
      <ServiceCoreCapabilities {...ServicedigitalCoreCapabilitiesData} />
      <EndtoEnd {...DigitalEndToEndData} />
      <CaseStudies {...caseStudiesData} bgClassName='bg-background'/>
-     <OtherServicesSection bgClassName="bg-white" services={DigitalOtherServicesData} />
+     <OtherServicesSection bgClassName="bg-white" currentHref="/services/digital-transformation-emerging-technologies" />
      <CaseStudies {...insightData} bgClassName='bg-background'/>
      <FAQSection  faqs={DigitalFaqData} />
      <Suscribe />
