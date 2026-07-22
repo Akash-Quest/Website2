@@ -7,9 +7,9 @@ import Footer from "@/components/ui/Footer";
 const inter = Inter_Tight({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
-  
+
 });
 
 const playfair = Playfair_Display({

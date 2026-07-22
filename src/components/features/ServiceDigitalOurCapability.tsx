@@ -74,10 +74,10 @@ function Card({
       style={{ backgroundColor: card.bgColor, ...style }}
     >
       <div className="pt-5 sm:pt-6 2xl:pt-8 px-5 sm:px-6 2xl:px-8">
-        <h3 className="font-semibold   line-clamp-2 mb-1">
+        <h3 className="font-semibold   line-clamp-2 ">
           {card.title}
         </h3>
-        <p className="text-muted  line-clamp-3 tracking-wide">
+        <p className="text-muted  line-clamp-3">
           {card.description}
         </p>
       </div>

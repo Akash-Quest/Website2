@@ -24,7 +24,7 @@ export default function WhyUsResearch({
           <div className="page-container">
             {/* Header */}
             <div className="relative text-center">
-              <p className="body-sm text-primary mb-2">{eyebrow}</p>
+              <p className="body-sm text-primary mb-2 body-text-sm font-medium">{eyebrow}</p>
               <h2 className="font-bold">
               {heading}
             </h2>
@@ -35,15 +35,15 @@ export default function WhyUsResearch({
             <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 md:items-stretch">
               {/* Left: image */}
               <div className="">
-                <p className="mt-3 text-sm 2xl:text-base text-muted">
+                <p className="mt-3 text-muted">
               {intro}
             </p>
 
-            <ul className="mt-4 space-y-1">
+            <ul className="mt-2 space-y-1">
               {advantages.map((point) => (
                 <li
                   key={point}
-                  className="flex items-center gap-2.5 text-xs 2xl:text-sm text-neutral-800"
+                  className=" p flex items-center gap-2.5 "
                 >
                   <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-black item-middle" />
                   <span>{point}</span>
@@ -51,7 +51,7 @@ export default function WhyUsResearch({
               ))}
             </ul>
 
-            <p className="mt-4 text-sm 2xl:text-base  text-muted">
+            <p className="mt-2  text-muted">
               {outro}
             </p>
               </div>

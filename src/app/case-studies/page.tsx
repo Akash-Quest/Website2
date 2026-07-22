@@ -12,7 +12,7 @@ function CaseStudy() {
       <div className="hero-container ">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className=" pb-2 sm:pb-2 lg:pb-5 px-4 lg:px-0 ">
-          <ol className="breadcrumb flex flex-wrap items-center gap-2 text-gray-500 font-light tracking-wide">
+          <ol className="text-body-sm flex flex-wrap items-center gap-2 text-gray-500 font-light tracking-wide">
             <li>
               <Link href="/" className="hover:text-muted transition-colors">
                 Home
@@ -25,7 +25,7 @@ function CaseStudy() {
         </nav>
         <div className="px-[2] text-center lg:text-left">
         {/* Eyebrow */}
-        <p className=" text-primary mb-2 mt-8 sm:mt-8 md:mt-2 text-sm 2xl:text-base">
+        <p className=" text-primary  mt-8 sm:mt-8 md:mt-2 text-body-sm font-medium">
           Case Snapshot 
         </p>
 
@@ -36,7 +36,7 @@ function CaseStudy() {
         </h1>
 
         {/* Subheading */}
-        <p className=" mt-2 mb-5  text-muted text-sm 2xl:text-base ">
+        <p className=" mt-2 mb-5  text-muted text-body-lg ">
          Meaningful transformation requires more than strategy alone. By integrating strategic thinking, technology enablement, and disciplined execution, we help organizations accelerate impact, unlock new opportunities, and build capabilities that drive sustained performance.</p>
         </div>
       

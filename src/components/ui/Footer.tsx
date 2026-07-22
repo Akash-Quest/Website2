@@ -29,12 +29,12 @@ const Footer = () => {
           {/* Brand column */}
           <div className="sm:w-full lg:w-auto lg:max-w-xs lg:flex-shrink-0">
             <Image src="/Header/logo.svg" alt="SkyQuest Technology Consulting" width={128} height={40} className="w-28 sm:w-32 lg:w-36 2xl:w-40 h-auto mb-4" />
-            <p className="text-white/80 text-sm 2xl:text-base">
+            <p className="text-white/80 ">
               An integrated strategy, technology and impact consulting firm helping businesses and
               governments achieve sustainable growth.
             </p>
             <div className="border-b border-white/20 mt-10 pb-6 flex gap-2 items-center">
-                <h3 className="text-white font-semibold">Follow Us</h3>
+                <h3 className=" text-body-lg text-white font-semibold">Follow Us</h3>
               {[<TwitterIcon />, <FacebookIcon />, <LinkedInIcon />, ].map((icon, i) => (
                 <a
                   key={i}
@@ -49,13 +49,13 @@ const Footer = () => {
 
           {/* Services column */}
           <div className="w-full sm:w-56 lg:w-52">
-            <h3 className="text-white font-bold mb-4">Our Services</h3>
-            <ul className="space-y-2.5 text-white/80 text-xs">
+            <h3 className="text-white font-bold mb-4 text-body-lg">Our Services</h3>
+            <ul className="space-y-2.5 text-white/80 ">
               {services.map((s) => (
                 <li key={s.label}>
                   <Link
                     href={s.href}
-                    className="hover:text-white hover:underline underline-offset-2 decoration-white/40 transition-colors"
+                    className=" text-body-sm hover:text-white hover:underline underline-offset-2 decoration-white/40 transition-colors"
                   >
                     {s.label}
                   </Link>
@@ -66,13 +66,13 @@ const Footer = () => {
 
           {/* About column */}
           <div className="w-full sm:w-40 lg:w-40">
-            <h3 className="text-white font-bold mb-4">About Us</h3>
-            <ul className="space-y-2.5 text-white/80 text-xs">
+            <h3 className="text-white font-bold mb-4 text-body-lg">About Us</h3>
+            <ul className="space-y-2.5 text-white/80 ">
               {aboutLinks.map((l) => (
                 <li key={l.label}>
                   <Link
                     href={l.href}
-                   className="hover:text-white hover:underline underline-offset-2 decoration-white/40 transition-colors"
+                   className=" text-body-sm hover:text-white hover:underline underline-offset-2 decoration-white/40 transition-colors"
                   >
                     {l.label}
                   </Link>
@@ -83,8 +83,8 @@ const Footer = () => {
 
           {/* Contact column */}
           <div>
-            <h3 className="text-white font-bold mb-4">Contact Us</h3>
-            <ul className="space-y-2.5 text-white/80 text-xs">
+            <h3 className="text-white font-bold mb-4 text-body-lg">Contact Us</h3>
+            <ul className="space-y-2.5 text-white/80 ">
               {[
                 { href: "tel:+13513334748", label: "(+1) 351-333-4748" },
                 { href: "tel:+919265657635", label: "+91 9265 657 635" },
@@ -94,7 +94,7 @@ const Footer = () => {
                 <li key={c.label}>
                   <a
                     href={c.href}
-                    className=" hover:text-white hover:underline underline-offset-2 decoration-white/40 transition-colors"
+                    className="text-body-sm hover:text-white hover:underline underline-offset-2 decoration-white/40 transition-colors"
                   >
                     {c.label}
                   </a>
@@ -106,13 +106,13 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <div className="border-t border-white/20 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/80 text-xs">
+          <p className="text-white/80 text-body-sm">
             © 2026 SkyQuest Technology Consulting. All rights reserved.
           </p>
-          <div className="flex gap-4 text-white/80 text-xs">
+          <div className="flex gap-4 text-white/80 ">
             {["Privacy Policy", "Terms of Use", "Cookie Policy"].map(
             (link, i, arr) => (
-                <div key={link} className="flex items-center gap-4">
+                <div key={link} className="flex items-center gap-4 text-body-sm ">
                     <a href="#" className="hover:text-white transition-colors hover:underline underline-offset-2">
                      {link}
                     </a> {i < arr.length - 1 && <span>·</span>}

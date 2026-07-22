@@ -94,10 +94,10 @@ export default function CareerAtSkyquest({
       <div className="page-container">
         {/* Eyebrow + heading */}
         <div className="text-left lg:text-center">
-          <h2 className="mt-2 font-bold text-gray-900">
+          <h2 className=" font-bold text-gray-900">
             Life <em className="font-semibold">@SkyQuest</em>
           </h2>
-          <p className="mt-3 lg:mx-auto max-w-2xl text-muted tracking-wide">
+          <p className="text-body-sm lg:mx-auto max-w-2xl text-muted ">
             At SkyQuest, celebrations and camaraderie happen throughout the week, creating a culture where work and fun go hand in hand.
           </p>
         </div>

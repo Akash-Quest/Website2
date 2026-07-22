@@ -126,7 +126,7 @@ const StatsGridThree = () => {
                 <span data-target={stat.target}>0</span>
                 {stat.suffix}
               </p>
-              <p className="text-muted mt-2">{stat.label}</p>
+              <p className="text-muted mt-2 text-body-lg">{stat.label}</p>
             </div>
           ))}
         </div>

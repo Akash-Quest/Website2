@@ -26,7 +26,7 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
     case "paragraph":
       if (block.segments) {
         return (
-          <p className="mb-5 tracking-wide leading-snug text-gray-700">
+          <p className="mb-5  text-gray-700">
             {block.dropCap && (
               <span className="float-left mr-3 font-playfair text-5xl font-bold leading-[0.8] text-gray-900">
                 {block.text.charAt(0)}
@@ -53,7 +53,7 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
         );
       }
       return (
-        <p className="mb-5 tracking-wide leading-snug text-gray-700">
+        <p className="mb-5  text-gray-700">
           {block.text}
         </p>
       );
@@ -71,7 +71,7 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
       return (
         <ul className="mb-4 space-y-2">
           {block.items.map((item, i) => (
-            <li key={i} className="flex gap-2 text-sm sm:text-base tracking-wide leading-snug text-gray-700">
+            <li key={i} className="flex gap-2 text-body-sm text-gray-700">
               <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-gray-400" />
               <span>{item}</span>
             </li>
@@ -82,18 +82,18 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
       return (
         <div className="my-6 rounded-xl border border-gray-200 bg-[#F7F5F1] p-5 sm:p-6 bg-white">
           {block.title && <p className="mb-3 font-bold text-gray-900 mb-3">{block.title}</p>}
-          {block.text && <p className="mb-3 tracking-wide leading-snug text-gray-700">{block.text}</p>}
+          {block.text && <p className="mb-3  text-gray-700">{block.text}</p>}
           {block.items && (
             <ul className="space-y-2">
               {block.items.map((item, i) => (
-                <li key={i} className="flex gap-2 text-sm tracking-wide leading-snug text-gray-700">
+                <li key={i} className="flex gap-2 text-body-sm text-gray-700">
                   <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-gray-400" />
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
           )}
-          {block.footer && <p className="mt-3 tracking-wide leading-snug text-gray-700">{block.footer}</p>}
+          {block.footer && <p className="mt-3  text-gray-700">{block.footer}</p>}
         </div>
       );
     case "image":
@@ -147,7 +147,7 @@ export default async function InsightDetailsPage({
       <div className="hero-container">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="pb-2 sm:pb-2 lg:pb-5 px-4 lg:px-0">
-          <ol className="breadcrumb flex flex-wrap items-center gap-2 text-gray-500 font-light tracking-tight">
+          <ol className="text-body-sm flex flex-wrap items-center gap-2 text-gray-500 font-light tracking-tight">
             <li>
               <Link href="/" className="hover:text-muted transition-colors">
                 Home

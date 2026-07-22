@@ -67,7 +67,7 @@ function ContactHero() {
     <div className="hero-container relative z-10 pb-0">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className=" pb-2 px-4 lg:px-0">
-          <ol className="breadcrumb flex flex-wrap items-center gap-2 text-gray-500 font-light tracking-wide">
+          <ol className="text-body-sm flex flex-wrap items-center gap-2 text-gray-500 font-light tracking-wide">
             <li>
               <Link href="/" className="hover:text-muted transition-colors">
                 Home

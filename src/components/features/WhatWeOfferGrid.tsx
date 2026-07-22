@@ -55,11 +55,11 @@ export default function WhatWeOfferGrid({
     <section className="w-full bg-white">
       <div className="page-container">
         <div className="text-center">
-          <p className="mb-2  font-medium text-primary">
+          <p className="text-body-sm font-medium text-primary">
             {eyebrow}
           </p>
           <h2 className="font-bold">{heading}</h2>
-          <p className="mx-auto mt-2 max-w-2xl tracking-wide leading-snug text-muted">
+          <p className="mx-auto  max-w-2xl text-muted">
             {description}
           </p>
         </div>
@@ -91,10 +91,10 @@ export default function WhatWeOfferGrid({
                 <Icon className="h-4 w-4" strokeWidth={1.75} color="currentColor" variant="Linear" />
               </span>
 
-              <h3 className="mt-2 font-semibold text-neutral-900">
+              <h3 className="mt-2 font-medium text-neutral-900 text-body-lg">
                 {title}
               </h3>
-              <p className="mt-1.5  leading-snug text-muted">
+              <p className="mt-1.5  text-muted text-body-sm">
                 {description}
               </p>
             </div>

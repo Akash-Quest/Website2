@@ -11,7 +11,7 @@ function InsightHero() {
       <div className="hero-container ">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className=" pb-2 sm:pb-2 lg:pb-5 px-4 lg:px-0 ">
-          <ol className="breadcrumb flex flex-wrap items-center gap-2 text-gray-500 font-light tracking-wide">
+          <ol className="text-body-sm flex flex-wrap items-center gap-2 text-gray-500 font-light tracking-wide">
             <li>
               <Link href="/" className="hover:text-muted transition-colors">
                 Home
@@ -24,7 +24,7 @@ function InsightHero() {
         </nav>
         <div className="px-[2] text-center lg:text-left">
         {/* Eyebrow */}
-        <p className=" text-primary mb-2 mt-8 sm:mt-8 md:mt-1 text-sm 2xl:text-base">
+        <p className=" text-primary  mt-8 sm:mt-8 md:mt-1 text-body-sm font-medium">
           Insight 
         </p>
 
@@ -35,7 +35,7 @@ function InsightHero() {
         </h1>
 
         {/* Subheading */}
-        <p className=" mt-2 mb-5  text-muted text-sm 2xl:text-base">
+        <p className="  mb-5  text-muted text-body-lg">
           Explore expert perspectives, industry analysis, research, and practical frameworks on digital transformation, AI, sustainability, agriculture, public sector innovation, and economic development. </p>
         </div>
       

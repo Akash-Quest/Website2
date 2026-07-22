@@ -72,7 +72,7 @@ export const EsgHeroData = {
   eyebrow: "Climate, Sustainability & ESG Advisory",
   heading: (
     <>
-      Building Resilient, Sustainable & <br />Future-Ready
+      Building Resilient, Sustainable & <br />Future-Ready{" "}
       <em className="font-semibold">Organizations</em>
     </>
   ),

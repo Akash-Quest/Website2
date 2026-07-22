@@ -24,7 +24,7 @@ export default function ServiceHeroPage({
       <div className="hero-container  ">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className=" pb-2 px-4 lg:px-0 ">
-          <ol className="breadcrumb flex flex-wrap items-center gap-2 text-gray-500 font-light tracking-wide">
+          <ol className="text-body-sm flex flex-wrap items-center gap-2 text-gray-500 font-light tracking-wide">
             <li>
               <Link href="/" className="hover:text-muted transition-colors">
                 Home
@@ -40,9 +40,9 @@ export default function ServiceHeroPage({
             <li className="text-gray-700">{breadcrumbLabel}</li>
           </ol>
         </nav>
-        <div className="px-[2] sm:px-2">
+        <div className="px-[2] sm:px-2 pt-5 ">
           {/* Eyebrow */}
-          <p className="text-center text-primary mb-2 mt-8 sm:mt-8 md:mt-2 text-sm 2xl:text-base ">
+          <p className="text-center text-primary mt-8 sm:mt-8 md:mt-2 text-body-sm font-medium ">
             {eyebrow}
           </p>
 
@@ -50,7 +50,7 @@ export default function ServiceHeroPage({
           <h1 className="text-center font-bold">{heading}</h1>
 
           {/* Subheading */}
-          <p className=" mx-auto text-center mt-2 mb-5 max-w-[85%] text-muted text-sm  2xl:text-xl ">
+          <p className=" mx-auto text-center mb-5 max-w-[85%] text-muted text-body-lg ">
             {description}
           </p>
         </div>

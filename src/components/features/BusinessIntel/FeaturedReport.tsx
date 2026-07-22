@@ -53,15 +53,15 @@ export default function FeaturedReport() {
       <div className="page-container">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
           <div>
-            <p className="mb-2 text-sm 2xl:text-base font-medium text-primary">
+            <p className="mb-2 text-body-sm font-medium text-primary">
               Featured Reports
             </p>
-            <h2 className="font-bold">
+            <h2 className="font-semibold">
               Deep Sector Expertise Across
               <br />
               High-<em className="font-semibold">Growth Markets</em>
             </h2>
-            <p className="mt-2 max-w-2xl text-sm 2xl:text-base text-muted">
+            <p className="mt-2 max-w-2xl text-muted">
               We help organizations navigate evolving sustainability
               expectations while creating long-term business, social, and
               environmental value.
@@ -77,7 +77,7 @@ export default function FeaturedReport() {
           </div>
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 ">
+        <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 ">
           {visibleReports.map((report) => (
             <div key={report.title} className="p-2 bg-background rounded-lg">
               <div className="relative h-40 2xl:h-48 w-full overflow-hidden rounded-xl bg-neutral-100">
@@ -91,13 +91,13 @@ export default function FeaturedReport() {
                 />
               </div>
 
-              <p className="mt-3 text-xs 2xl:text-sm font-medium text-primary">
-                {report.date}
+              <p className="mt-3 mb-1 text-xs 2xl:text-sm font-medium text-primary">
+                {report.date} 
               </p>
-              <h3 className="mt-1 font-semibold text-neutral-900">
+              <h3 className="text-body-lg font-semibold text-neutral-900">
                 {report.title}
               </h3>
-              <p className="mt-1.5 text-sm  text-muted">{report.description}</p>
+              <p className="mt-1.5 text-body-sm  text-muted">{report.description}</p>
 
               <button
                 type="button"

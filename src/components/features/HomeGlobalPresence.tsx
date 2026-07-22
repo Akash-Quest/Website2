@@ -49,13 +49,13 @@ export default function OurGlobalPresence() {
       <div className="page-container">
         {/* Eyebrow + heading */}
         <div className="text-left lg:text-center">
-          <p className=" tracking-wide text-primary ">
+          <p className=" font-medium  text-primary text-body-sm ">
             Global Presence
           </p>
-          <h2 className="mt-2 font-bold text-gray-900">
+          <h2 className=" font-bold text-gray-900">
             Local Expertise, Global <em className="font-semibold">Standards</em>
           </h2>
-          <p className="mt-2 lg:mx-auto max-w-2xl text-muted tracking-wide leading-snug">
+          <p className=" lg:mx-auto max-w-2xl text-muted ">
             We operate across six regions, combining on-the-ground knowledge with international best practice to deliver contextually relevant, globally benchmarked solutions.
           </p>
         </div>
@@ -91,7 +91,7 @@ export default function OurGlobalPresence() {
                   </svg>
                   <h3 className=" font-bold text-gray-900">{region.name}</h3>
                 </div>
-                <p className="pl-6  text-gray-600">
+                <p className="pl-6  text-muted">
                   {region.description}
                 </p>
               </li>
@@ -100,9 +100,9 @@ export default function OurGlobalPresence() {
         </div>
 
         {/* ── DESKTOP: side-by-side grid ───────────────────────── */}
-        <div className="hidden lg:grid mt-5 grid-cols-2 gap-[clamp(1.5rem,2vw,2.5rem)]">
+        <div className="hidden lg:grid mt-2 grid-cols-2 gap-[clamp(1.5rem,2vw,2.5rem)]">
           {/* Region list */}
-          <ul className="flex flex-col justify-center space-y-[clamp(0.5rem,1vw,1.5rem)]">
+          <ul className="flex flex-col justify-center ">
             {regions.map((region) => (
               <li key={region.name}>
                 <div className="flex items-start gap-2">
@@ -114,9 +114,9 @@ export default function OurGlobalPresence() {
                   >
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
                   </svg>
-                  <h3 className=" font-bold text-gray-900 mb-1">{region.name}</h3>
+                  <h3 className="font-medium   text-body-lg">{region.name}</h3>
                 </div>
-                <p className="pl-6 max-w-xl leading-[1.2] text-gray-500 tracking-wide leading-snug">
+                <p className="pl-6 max-w-xl text-muted text-body-sm">
                   {region.description}
                 </p>
               </li>

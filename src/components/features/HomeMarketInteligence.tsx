@@ -125,7 +125,7 @@ export default function MarketIntelligence() {
     <section className="w-full bg-[#F7F5F1] ">
       <div className="page-container">
         {/* Eyebrow */}
-        <p className="text-center text-primary mb-2 tracking-wide">
+        <p className="text-center text-primary font-medium text-body-sm">
           Market Intelligence
         </p>
 
@@ -135,7 +135,7 @@ export default function MarketIntelligence() {
         </h2>
 
         {/* Subcopy */}
-        <p className=" text-center text-muted max-w-[80%] mx-auto tracking-wide leading-snug">
+        <p className=" text-center text-muted max-w-[80%] mx-auto ">
           Explore industry reports, market insights, and research publications
           that help organizations identify opportunities, anticipate change,
           and make informed decisions.
@@ -250,10 +250,10 @@ export default function MarketIntelligence() {
 
           {/* Right: tab description + CTA */}
           <div className="hidden lg:block lg:pl-6">
-            <h3 className=" font-bold ">
+            <h2 className=" font-semibold ">
               {current.titleRegular} <em className="font-semibold">{current.titleItalic}</em>
-            </h3>
-            <p className="mt-4 mb-4 text-muted leading-relaxed max-w-md">
+            </h2>
+            <p className=" mb-4 text-muted  max-w-md">
               {current.description}
             </p>
              <Button variant="primary" iconSize={16}>

@@ -28,9 +28,9 @@ export default function ServiceCoreCapabilities({
       <div className="page-container pt-0">
         {/* Header */}
         <div className="relative text-center">
-          <p className="body-sm text-primary mb-2">{eyebrow}</p>
+          <p className="text-body-sm text-primary font-medium ">{eyebrow}</p>
           <h2 className="font-bold">{heading}</h2>
-          <p className="mx-auto mt-2 lg:max-w-[75%] leading-tight text-muted text-sm">
+          <p className="mx-auto  lg:max-w-[60%]  text-muted">
             {description}
           </p>
         </div>
@@ -54,14 +54,14 @@ export default function ServiceCoreCapabilities({
             <ul className="flex h-full flex-col justify-between gap-3">
               {capabilities.map(({ icon: Icon, title, description }) => (
                 <li key={title} className="flex items-stretch gap-4 ">
-                  <span className="flex h-12 w-12 shrink-0 self-center items-center justify-center rounded-xl bg-white text-primary md:h-14 md:w-14">
-                    <Icon size={32} color="currentColor" variant="Linear" />
+                  <span className="flex h-18 w-18 shrink-0 self-center items-center justify-center rounded-xl bg-white text-primary md:h-18 md:w-18">
+                    <Icon size={36} color="currentColor" variant="Linear" />
                   </span>
                   <div>
-                    <h3 className="font-semibold text-neutral-900">
+                    <h3 className="font-medium text-neutral-900 text-body-lg">
                       {title}
                     </h3>
-                    <p className=" text-muted text-xs 2xl:text-sm  ">{description}</p>
+                    <p className=" text-muted text-body-sm ">{description}</p>
                   </div>
                 </li>
               ))}

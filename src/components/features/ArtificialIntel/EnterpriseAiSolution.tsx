@@ -77,13 +77,13 @@ export default function EnterpriseAiSolution() {
     <section className="w-full bg-white">
       <div className="page-container">
         <div className="text-center">
-          <p className="mb-2 text-sm 2xl:text-base font-medium text-primary">
+          <p className="mb-2 text-body-sm font-medium text-primary">
             Services
           </p>
-          <h2 className="font-bold">
+          <h2 className="font-semibold">
             Enterprise AI <em className="font-semibold">Solutions</em>
           </h2>
-          <p className="mx-auto mt-2 max-w-2xl text-sm 2xl:text-base text-muted">
+          <p className="mx-auto mt-2 max-w-2xl text-muted">
             Structured around your enterprise journey from readiness to
             transformation
           </p>
@@ -151,7 +151,7 @@ export default function EnterpriseAiSolution() {
                   <button
                     type="button"
                     onClick={() => setActiveIndex(i)}
-                    className={`flex items-center justify-between px-4 py-1 text-left text-lg font-medium transition-colors ${
+                    className={` text-body-lg flex items-center justify-between px-4 py-1 text-left text-lg font-medium transition-colors ${
                       isActive
                         ? "rounded-lg bg-[#EAEAF8] text-[#03030F]"
                         : "text-[#03030F] hover:bg-neutral-50"
@@ -209,7 +209,7 @@ export default function EnterpriseAiSolution() {
             {active.points.map((point) => (
               <li
                 key={point}
-                className="flex items-start gap-2 text-base text-neutral-700"
+                className=" p flex items-start gap-2 text-base text-neutral-700"
               >
                 <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-neutral-900" />
                 <span>{point}</span>

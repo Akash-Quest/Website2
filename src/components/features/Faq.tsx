@@ -50,7 +50,7 @@ export default function FAQSection({
 
         {/* ── MOBILE: heading (top) ───────────── */}
         <div className="lg:hidden">
-          <p className="text-primary mb-2">
+          <p className="text-primary font-medium text-body-sm">
             {eyebrow}
           </p>
           <h2 className="font-bold mb-2 sm:mb-8 lg:mb-4">
@@ -62,7 +62,7 @@ export default function FAQSection({
         {/* ── DESKTOP: left column (heading + card) ── */}
         <div className="hidden lg:flex lg:w-[350px] 2xl:w-[500px]  flex-shrink-0 flex-col justify-between ">
           <div>
-            <p className="text-primary mb-2">
+            <p className="text-primary font-medium text-body-sm">
               {eyebrow}
             </p>
             <h2 className="font-bold mb-8">
@@ -71,7 +71,7 @@ export default function FAQSection({
           </div>
           <div className={`${cardBgClassName} border border-gray-200 rounded-2xl p-6 `}>
             <h3 className="font-bold text-gray-900 mb-1">{ctaHeading}</h3>
-            <p className="text-sm 2xl-text-base text-gray-500 mb-5">{ctaDescription}</p>
+            <p className="text-body-sm text-gray-500 mb-5">{ctaDescription}</p>
             <Button variant="primary" iconSize={16}>
                     {ctaButtonText}
                   </Button>
@@ -87,7 +87,7 @@ export default function FAQSection({
                 className="w-full flex items-center justify-between gap-4 text-left group"
                 aria-expanded={openIndex === index}
               >
-                <h3 className={`--text-xl font-medium  transition-colors duration-200 ${openIndex === index ? "text-gray-900" : "text-gray-700 group-hover:text-gray-900"}`}>
+                <h3 className={`text-body-lg font-medium  transition-colors duration-200 ${openIndex === index ? "text-gray-900" : "text-gray-700 group-hover:text-gray-900"}`}>
                   {faq.question}
                 </h3>
                 <span className={`flex-shrink-0 w-7 h-7 rounded-md flex items-center justify-center transition-colors duration-200 ${openIndex === index ? "bg-indigo-100 text-indigo-600" : "bg-indigo-600 text-white"}`}>

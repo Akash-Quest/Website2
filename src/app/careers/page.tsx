@@ -14,7 +14,7 @@ function CareersHero() {
       <div className="hero-container ">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className=" pb-2 px-4 lg:px-0 ">
-          <ol className="breadcrumb flex flex-wrap items-center gap-2 text-gray-500 font-light tracking-wide">
+          <ol className="text-body-sm flex flex-wrap items-center gap-2 text-gray-500 font-light tracking-wide">
             <li>
               <Link href="/" className="hover:text-muted transition-colors">
                 Home
@@ -32,7 +32,7 @@ function CareersHero() {
         </nav>
         <div className="px-[2] sm:px-2 md:px-[10%]">
         {/* Eyebrow */}
-        <p className="text-center text-primary mb-2 mt-8 sm:mt-8 md:mt-2  ">
+        <p className="text-center text-primary  mt-8 sm:mt-8 md:mt-2 text-body-sm font-medium ">
           Careers
         </p>
 
@@ -43,8 +43,8 @@ function CareersHero() {
         </h1>
 
         {/* Subheading */}
-        <p className="text-center mt-2 mb-5  text-muted tracking-wide leading-snug  ">
-          If innovativeness is in your schema and you have just decided to source a technology/innovation or an IP, we at SkyQuest can help you make your decision tangible.
+        <p className="text-center mb-5  text-muted  text-body-lg">
+          If innovativeness is in your schema and you have just decided to source a technology / innovation or an IP, we at SkyQuest can help you make your decision tangible.
         </p>
         </div>
       

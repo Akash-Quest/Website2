@@ -93,7 +93,7 @@ function JobCard({ job }: { job: Job }) {
         ))}
       </div>
 
-      <p className=" font-inter text-[#000000]-400 text-sm leading-tight m-0">
+      <p className="  textbody--sm">
         {job.description}
       </p>
 
@@ -132,10 +132,10 @@ export default function OpenPositions() {
                   <button
                     key={cat.label}
                     onClick={() => setActiveCategory(cat.label)}
-                    className={`flex-shrink-0 whitespace-nowrap text-left lg:w-full px-3 py-2 rounded-full lg:rounded-r-lg lg:rounded-l-none text-xs 2xl:text-sm font-medium cursor-pointer transition-colors ${
+                    className={`flex-shrink-0 whitespace-nowrap text-left lg:w-full px-3 py-2 rounded-full lg:rounded-r-lg lg:rounded-l-none  font-medium cursor-pointer transition-colors ${
                       isActive
-                        ? "bg-primary text-white lg:bg-[#EAEAF8] lg:text-black lg:border-l-[3px] lg:border-primary"
-                        : "bg-gray-100 text-muted hover:bg-gray-200 lg:bg-transparent lg:hover:bg-gray-100"
+                        ? "bg-primary text-white lg:bg-[#EAEAF8] lg:text-black lg:border-l-[3px] lg:border-primary text-body-lg"
+                        : "bg-gray-100 text-muted hover:bg-gray-200 lg:bg-transparent lg:hover:bg-gray-100 text-body-sm"
                     }`}
                   >
                     {cat.label}{" "}
@@ -149,7 +149,7 @@ export default function OpenPositions() {
 
             {/* Sidebar note */}
             <div className="mt-4 lg:mt-6 lg:pl-1">
-              <p className=" text-gray-500  m-0">
+              <p className=" text-gray-500  m-0 text-body-sm">
                 We are always seeking talented people. In case you cannot find your desired position
                 here, please send us your LinkedIn profile and give us your contact information. We
                 will be in touch.

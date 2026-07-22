@@ -113,7 +113,7 @@ const StatsGrid = ({
           )}
         </p>
 
-        <p className="mt-2 text-xs text-muted">
+        <p className="mt-2 text-xs text-muted text-body-lg">
           {stat.label}
         </p>
       </div>
@@ -154,7 +154,7 @@ const StatsGrid = ({
             )}
           </p>
 
-          <p className="mt-2 text-muted">
+          <p className="mt-2 text-muted text-body-lg">
             {stat.label}
           </p>
         </div>

@@ -21,11 +21,11 @@ export default function SocialFocus({
     <section className="w-full bg-white">
       <div className="page-container">
         <div className="text-center">
-          <h2 className="font-bold">
+          <h2 className="font-semibold">
             {heading}
           </h2>
 
-          <p className="mx-auto mt-2 max-w-2xl text-sm 2xl:text-base text-muted">
+          <p className="mx-auto max-w-2xl text-body-sm text-muted">
             {description}
           </p>
         </div>
@@ -48,11 +48,11 @@ export default function SocialFocus({
                 <Icon className="h-4 w-4" strokeWidth={1.75} color="currentColor" variant="Linear" />
               </span>
 
-              <h3 className="mt-2 font-semibold text-neutral-900">
+              <h3 className="text-body-lg font-semibold text-neutral-900">
                 {title}
               </h3>
 
-              <p className="mt-1.5 flex-1 text-sm 2xl:text-base text-muted">
+              <p className="mt-1.5 flex-1 text-body-sm text-muted">
                 {description}
               </p>
 

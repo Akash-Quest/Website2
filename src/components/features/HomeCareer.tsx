@@ -13,22 +13,22 @@ export default function CareersHero() {
       <div className="flex w-full lg:w-1/2 flex-col justify-center bg-[#E0DBFF] px-6 py-8 sm:px-0 lg:px-14 lg:py-10  rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none  ">
         
         {/* Label */}
-        <p className="mb-2 text-primary">
+        <p className="text-primary text-body-sm">
           SkyQuest Careers
         </p>
 
         {/* Heading */}
         <h2 className="font-semibold ">
           Build What the World{" "}
-          <em className="font-semibold">Needs Next</em>
+          <em className="font-">Needs Next</em>
         </h2>
 
         {/* Body */}
-        <p className="mt-2 tracking-wide leading-snug max-w-md text-muted  text-sm">
+        <p className="max-w-md text-muted ">
           From boardrooms to field programmes across 15+ countries SkyQuest offers
           careers that challenge, inspire, and create lasting change.
         </p>
-        <p className="mt-2  font-semibold text-muted leading-snug ">
+        <p className="  font-semibold text-muted ">
           Join a team that turns bold ideas into practical solutions.
         </p>
 

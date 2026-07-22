@@ -92,13 +92,13 @@ export default function CoreCapabilities() {
       {/* Mobile Carousel */}
       <div className="lg:hidden">
         <div className="mb-6">
-          <p className=" font-medium text-primary mb-2 ">Our Core Capabilities</p>
+          <p className="font-medium text-primary mb-2 text-body-sm">Our Core Capabilities</p>
           <h2 className="font-bold ">
             End-to-End Solutions for Strategy,
             Technology &{" "}
             <em className="font-semibold">Sustainable Growth</em>
           </h2>
-          <p className="text-muted tracking-wide leading-snug">
+          <p className="text-muted">
             We combine expertise, technology, and execution to accelerate transformation and deliver lasting impact. </p>
         </div>
 
@@ -164,7 +164,7 @@ export default function CoreCapabilities() {
         {/* LEFT SIDE */}
         <div>
           <div className="mb-4">
-            <p className="mb-2 font-medium text-primary">
+            <p className=" font-medium text-primary text-body-sm">
               Our Core Capabilities
             </p>
 
@@ -177,7 +177,7 @@ export default function CoreCapabilities() {
               </em>
             </h2>
 
-            <p className="mt-3 max-w-3xl text-muted tracking-wide leading-snug">
+            <p className=" max-w-3xl text-muted ">
               We combine expertise, technology, and execution to accelerate transformation and deliver lasting impact. </p>
           </div>
 

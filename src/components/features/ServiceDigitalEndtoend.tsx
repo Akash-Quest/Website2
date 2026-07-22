@@ -25,13 +25,13 @@ export default function EndtoEnd({
       <div className="page-container">
         {/* Header */}
         <div className="relative text-center">
-          <p className="text-sm 2xl:text-base text-primary mb-2">
+          <p className="text-body-sm text-primary font-medium">
           {eyebrow}
         </p>
           <h2 className="font-bold">
             {heading}
           </h2>
-          <p className="mx-auto mt-2 lg:max-w-[50%] leading-tight text-muted text-sm">
+          <p className="mx-auto lg:max-w-[50%]  text-muted">
             {description}
           </p>
           </div>
@@ -59,10 +59,10 @@ export default function EndtoEnd({
     </span>
   ))}
 </div>
-              <h3 className="mt-2 font-semibold text-neutral-900">
+              <h3 className="mt-2 font-medium text-neutral-900 text-body-lg">
                 {title}
               </h3>
-              <p className="mt-1.5 sm:text-sm 2xl:text-base text-muted">
+              <p className=" text-muted text-body-sm">
                 {description}
               </p>
             </div>

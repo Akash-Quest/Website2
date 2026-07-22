@@ -27,7 +27,7 @@ const OtherServicesSection = ({
     <section className={bgClassName}>
       <div className="page-container text-center ">
         {/* Badge */}
-        <p className="text-sm 2xl:text-base  text-primary mb-2">
+        <p className="text-sm 2xl:text-base  text-primary text-body-sm font-medium">
           Other Service
         </p>
 
@@ -37,7 +37,7 @@ const OtherServicesSection = ({
         </h2>
 
         {/* Subtitle */}
-        <p className="text-muted mt-3 max-w-xl mx-auto text-sm 2xl:text-base   ">
+        <p className="text-muted max-w-xl mx-auto ">
           SkyQuest&apos;s consulting practice spans strategy, transformation,
           sustainability, and innovation find the right expertise for your
           next challenge.
@@ -49,9 +49,9 @@ const OtherServicesSection = ({
             <a
               key={service.label}
               href={service.href}
-              className="flex items-center justify-between px-6 py-4 rounded-lg border border-gray-200 hover:border-gray-300 hover:shadow-sm transition-all bg-white"
+              className="flex items-center justify-between px-6 py-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all bg-white"
             >
-              <h3>{service.label}</h3>
+              <h3 className="text-body-lg font-regular">{service.label}</h3>
               <ArrowUpRight className="w-4 h-4 text-primary flex-shrink-0 ml-4" />
             </a>
           ))}

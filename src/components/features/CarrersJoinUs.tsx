@@ -36,7 +36,7 @@ export default function CareerApplicationForm() {
       
       <div className="page-container">
         {/* Eyebrow */}
-        <p className="text-center text-primary mb-2 ">
+        <p className="text-center text-primary font-medium text-body-sm ">
           Join us 
         </p>
 
@@ -50,11 +50,11 @@ export default function CareerApplicationForm() {
 
         <div className="mx-auto border border-gray-200 rounded-2xl p-4 sm:p-6 lg:p-8 bg-white">
 
-        <h3 className=" font-semibold text-muted">
+        <h3 className=" font-semibold text-muted text-body-lg ">
           Take the Next Step in Your Career Join a Culture of Growth and
           Innovation
         </h3>
-        <p className=" mt-2 text-muted ">
+        <p className=" mt-2 text-muted text-body-lg">
           Fill out the form, our team will reach out to you soon.
         </p>
 

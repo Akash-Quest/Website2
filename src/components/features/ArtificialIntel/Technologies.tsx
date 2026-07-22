@@ -61,15 +61,15 @@ export default function Technologies() {
     <section className="w-full bg-background">
       <div className="page-container">
         <div className="text-center">
-          <p className="mb-2 text-sm 2xl:text-base font-medium text-primary">
+          <p className="mb-2 text-body-sm font-medium text-primary">
             Partners &amp; Ecosystem
           </p>
-          <h2 className="font-bold">
+          <h2 className="font-semibold">
             Built on the World&apos;s Leading
             <br />
             <em className="font-semibold">Technologies</em>
           </h2>
-          <p className="mx-auto mt-2 max-w-xl text-sm 2xl:text-base text-muted">
+          <p className="mx-auto mt-2 max-w-xl text-body-sm text-muted">
             From AI and cloud to data and analytics, we leverage trusted
             platforms that accelerate transformation and enterprise growth.
           </p>
@@ -98,10 +98,10 @@ export default function Technologies() {
                   </span>
                 ))}
               </div>
-              <h3 className="mt-2 font-semibold text-neutral-900">
+              <h3 className="text-body-lg mt-2 font-medium text-neutral-900">
                 {title}
               </h3>
-              <p className="mt-1.5 text-xs leading-relaxed text-neutral-500">
+              <p className="mt-1.5 text-body-sm leading-relaxed text-neutral-500">
                 {description}
               </p>
             </div>

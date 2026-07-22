@@ -70,7 +70,7 @@ export default function SocialImpactService(){
      />
      <EnterpriseChallenges />
      <InsightImpact />
-      <EnterpriseAiSolution />
+    <EnterpriseAiSolution />
       <WeServe /> 
      <CaseStudies {...caseStudiesData} bgClassName='bg-white'/>
            

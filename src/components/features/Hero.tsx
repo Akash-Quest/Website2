@@ -47,7 +47,7 @@
       title: (
         <>
           Building Intelligent< br />
-Systems for Governments
+Systems for Governments<br />
  <em className="italic font-playfair">& Institutions at Scale.</em>
         </>
       ),
@@ -195,7 +195,7 @@ Systems for Governments
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className=" text-white/80   mb-2 sm:mb-4 tracking-wide"
+                className="text-white/80  text-body-sm"
               >
                 {slide.label}
               </motion.p>

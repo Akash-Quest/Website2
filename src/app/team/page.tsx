@@ -18,7 +18,7 @@ function TeamHero() {
     <div className="hero-container relative z-10">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className=" pb-2 px-4 lg:px-0">
-          <ol className="breadcrumb flex flex-wrap items-center gap-2 text-gray-500 font-light tracking-wide">
+          <ol className="text-body-sm flex flex-wrap items-center gap-2 text-gray-500 font-light tracking-wide">
             <li>
               <Link href="/" className="hover:text-muted transition-colors">
                 Home
@@ -43,7 +43,7 @@ function TeamHero() {
               <em className="font-semibold">Impact</em>
             </h1>
 
-            <p className=" text-muted lg:max-w-lg px-4 lg:px-0 tracking-wide leading-snug">
+            <p className=" text-muted lg:max-w-lg px-4 lg:px-0 text-body-lg">
               SkyQuest brings together strategists, technologists, researchers,
               and industry experts to help governments, businesses, and
               development institutions solve complex challenges and deliver

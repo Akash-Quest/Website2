@@ -138,7 +138,7 @@ export default async function CaseStudyDetailsPage({
       <div className="hero-container">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="pb-2 sm:pb-2 lg:pb-5 px-4 lg:px-0">
-          <ol className="breadcrumb flex flex-wrap items-center gap-2 text-gray-500 font-light tracking-tight">
+          <ol className="text-body-sm flex flex-wrap items-center gap-2 text-gray-500 font-light tracking-tight">
             <li>
               <Link href="/" className="hover:text-muted transition-colors">
                 Home

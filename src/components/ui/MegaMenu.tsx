@@ -141,7 +141,7 @@ function DrilldownNavList({
             type="button"
             onMouseEnter={() => onHover(item.label)}
             onClick={() => onHover(item.label)}
-            className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm transition-colors ${
+            className={`p flex w-full items-center justify-between rounded-lg px-3 py-2 text-left  transition-colors ${
               active === item.label
                 ? "bg-background font-normal text-[#03030F]"
                 : "text-gray-700 hover:bg-gray-50"
@@ -522,7 +522,7 @@ export default function MegaMenu({
                           <button
                             type="button"
                             onClick={() => setActiveItemId(item.id)}
-                            className={`  flex w-full items-center justify-between rounded-lg py-1.5 pl-3 pr-4 text-left text-lg transition-colors 2xl:py-3 2xl:pl-5 2xl:pr-8 2xl:text-xl   ${
+                            className={`  flex w-full items-center justify-between rounded-lg py-1.5 pl-3 pr-4 text-left text-body-lg transition-colors 2xl:py-3 2xl:pl-5 2xl:pr-8 2xl:text-xl   ${
                               activeItemId === item.id
                                 ? " bg-background font-normal text-[#03030F] "
                                 : "text-gray-700 hover:bg-gray-50"

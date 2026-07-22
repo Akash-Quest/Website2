@@ -99,7 +99,7 @@ export default function CaseStudies({
         {/* Header */}
         <div className=" flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
           <div>
-            <p className="mb-2 text-primary tracking-wide">
+            <p className=" text-primary font-medium text-body-sm">
               {eyebrow}
             </p>
 
@@ -115,7 +115,7 @@ export default function CaseStudies({
 
         {/* Description + Arrows */}
         <div className="mb-5  flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-          <p className=" mt-2  max-w-xl  tracking-wide leading-snug">
+          <p className="text-muted  max-w-xl ">
             {description}
           </p>
 
@@ -174,13 +174,13 @@ export default function CaseStudies({
 
                     <div className="absolute inset-x-0 bottom-0 z-10 rounded-2xl bg-white/90 p-4 text-[#15121F]">
                       <div className="flex items-center justify-between">
-                        <p className=" font-medium text-[#2A1ACC]">
+                        <p className="text-body-sm font-medium text-[#2A1ACC]">
                           {card.category}
                         </p>
                         <p className="text-xs text-muted">{card.date}</p>
                       </div>
 
-                      <h3 className="mt-2 font-semibold">{card.title}</h3>
+                      <h3 className="mt-2 font-semibold text-body-xl">{card.title}</h3>
 
                       <button
                         type="button"
@@ -216,7 +216,7 @@ export default function CaseStudies({
                   setHoveredId(null)
                 }
               >
-                <div className="relative h-[clamp(18rem,28.125vw,33.75rem)] overflow-hidden rounded-2xl ">
+                <div className="relative h-[clamp(18.9rem,29.53125vw,35.4375rem)] overflow-hidden rounded-2xl ">
                   <Image
                     src={card.image}
                     alt={card.title}
@@ -232,22 +232,22 @@ export default function CaseStudies({
                     className={`absolute inset-x-0 bottom-0 z-10 flex flex-col overflow-hidden rounded-2xl bg-white/55 backdrop-blur-lg backdrop-brightness-125 border-none text-[#15121F] transition-all duration-[250ms] ease-out [clip-path:inset(-1px_round_1rem)] ${
                       isExpanded
                         ? "h-full p-5 "
-                        : "h-[70px] p-3 m-3 items-center"
+                        : "h-[100px] p-3 m-3 items-center"
                     }`}
                   >
                     <p
-                      className={` font-medium text-primary overflow-hidden transition-all duration-150 ${
+                      className={`text-body-sm font-medium text-primary overflow-hidden transition-all duration-150 ${
                         isExpanded ? "max-h-6 opacity-100 mb-2" : "max-h-0 opacity-0"
                       }`}
                     >
-                      {card.category} 
+                      {card.category}
                     </p>
 
                     <h3
-                      className={` transition-all  duration-150 ${
+                      className={`text-body-lg transition-all  duration-150 ${
                         isExpanded
-                          ? "font-bold text-lg"
-                          : "font-semibold sm:text-sm 2xl:text-lg leading-tight"
+                          ? "font-bold"
+                          : "font-bold leading-tight"
                       }`}
                     >
                       {card.title}

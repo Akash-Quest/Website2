@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import HoverRevealCard from "@/components/ui/HoverRevealCard";
+
+import HoverRevealCard1 from "@/components/ui/HoverRevealCard";
 
 interface Capability {
   id: string;
@@ -73,7 +74,7 @@ export default function OurCapabilities({
           }}
         >
           {capabilities.map((cap) => (
-            <HoverRevealCard
+            <HoverRevealCard1
               key={cap.id}
               title={cap.title}
               description={cap.description}

@@ -52,15 +52,15 @@ export default function IndustriesWeServe2() {
     <section className="w-full bg-background">
       <div className="page-container">
         <div className="text-center">
-          <p className="mb-2 text-sm 2xl:text-base font-medium text-primary">
+          <p className="mb-1 text-body-sm font-medium text-primary">
             Industries We Serve
           </p>
-          <h2 className="font-bold">
+          <h2 className="font-semibold">
             Deep Sector Expertise Across
             <br />
             High-<em className="font-semibold">Growth Markets</em>
           </h2>
-          <p className="mx-auto mt-2 max-w-2xl text-sm 2xl:text-base text-muted">
+          <p className="mx-auto mt-1 max-w-2xl text-muted">
             We help organizations navigate evolving sustainability
             expectations while creating long-term business, social, and
             environmental value.
@@ -88,7 +88,7 @@ export default function IndustriesWeServe2() {
               {/* Blue tint, fades away on hover to reveal the true image */}
               <div className="absolute inset-0 bg-[#4E4FFF] mix-blend-multiply transition-opacity duration-300 ease-out group-hover:opacity-0" />
 
-              <span className="flex inset-x-0 justify-center absolute bottom-3 z-10 text-sm font-semibold text-white ">
+              <span className="text-body-lg flex inset-x-0 justify-center absolute bottom-3 z-10  font-semibold text-white ">
                 {sector.label}
               </span>
 

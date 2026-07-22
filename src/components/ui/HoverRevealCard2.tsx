@@ -23,7 +23,7 @@ export interface HoverRevealCardProps {
   onHover: (hovered: boolean) => void;
 }
 
-export default function HoverRevealCard({
+export default function HoverRevealCard2({
   title,
   chipLabel,
   description,

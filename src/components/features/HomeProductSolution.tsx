@@ -198,7 +198,7 @@ export default function OurProductSolution() {
       <div className="page-container ">
 
         {/* Eyebrow */}
-        <p className="text-center text-primary mb-2 Tracking-wide">
+        <p className="text-center font-medium text-primary text-body-sm">
           Our Product &amp; Solution
         </p>
 
@@ -208,7 +208,7 @@ export default function OurProductSolution() {
         </h2>
 
         {/* Subheading */}
-        <p className="text-center text-muted max-w-3xl mx-auto mb-5 tracking-wide leading-snug">
+        <p className="text-center text-muted max-w-3xl mx-auto ">
           Each SkyQuest platform is built around a specific development challenge. Select a product to explore how it works and who it has helped.
         </p>
 
@@ -241,13 +241,13 @@ export default function OurProductSolution() {
           {/* Left Panel */}
           <div className="bg-[#F7F5F1] md:w-1/2 p-5 sm:p-8 md:p-10 2xl:p-14 flex flex-col justify-center gap-4">
             <div className="2xl:max-w-md">
-              <p className="text-primary tracking-wide mb-4">
+              <p className="text-primary tracking-wide  text-body-sm">
                 {content.badge}
               </p>
-              <h2 className="font-semibold mb-4">
+              <h2 className="font-semibold ">
                 {content.heading}
               </h2>
-              <p className="text-muted tracking-wide mb-3 tracking-wide leading-snug">
+              <p className="text-muted tracking-wide ">
                 {content.description}
               </p>
             </div>

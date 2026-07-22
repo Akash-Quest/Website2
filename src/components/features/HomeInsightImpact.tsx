@@ -39,14 +39,14 @@ export default function InsightImpact   () {
       {/* ── MOBILE ─────────────────────────────────────────────── */}
       <div className="lg:hidden ">
         {/* Header */}
-        <p className="text-primary mb-2 ">
+        <p className="text-primary text-body-sm font-medium">
           From Insight to Impact
         </p>
-        <h2 className="font-bold mb-2">
+        <h2 className="font-bold ">
           How We Help Organizations
           <em className="font-semibold">Transform</em>
         </h2>
-        <p className="tracking-wide leading-snug text-mute font-medium mb-4">
+        <p className=" text-mute font-medium mb-4">
           We help organizations navigate complexity, embrace innovation,
           and deliver measurable outcomes through an integrated approach
           spanning strategy, technology, execution, and impact.
@@ -88,15 +88,15 @@ export default function InsightImpact   () {
         <div className="relative">
           {/* Content overlay */}
           <div className="relative lg:absolute lg:inset-0 leading-[0] mb-10 lg:mb-0 z-10 lg:pointer-events-none">
-            <p className="mb-2 text-primary tracking-wide">
+            <p className="mb-2 text-primary tracking-wide text-body-sm lg:pointer-events-auto">
               From Insight to Impact
             </p>
-            <h2 className=" font-bold ">
+            <h2 className=" font-bold lg:pointer-events-auto">
               How We Help Organizations
               <br />
               <em className="font-semibold">Transform</em>
             </h2>
-            <p className="mt-3 mb-3  max-w-md xl:max-w-lg 2xl:max-w-xl tracking-wide text-muted leading-snug ">
+            <p className=" mb-4  max-w-md xl:max-w-lg 2xl:max-w-xl text-muted lg:pointer-events-auto ">
               We help organizations navigate complexity, embrace innovation,
               and deliver measurable outcomes through an integrated approach
               spanning strategy, technology, execution, and impact.
@@ -126,10 +126,10 @@ export default function InsightImpact   () {
                 
                 <div className="absolute left-4 top-4 right-4 text-white z-100">
                   <div className="flex items-center gap-1.5">
-                    <h3 className="text-white font-normal mb-2">{card.title}</h3>
+                    <h3 className="text-white font-normal mb-2 text-body-lg">{card.title}</h3>
                     
                   </div>
-                  <p className=" mt-1 text-white/80 transition-colors duration-500 group-hover:text-white">{card.desc}</p>
+                  <p className=" mt-1 font-regular text-white/80 transition-colors duration-500 group-hover:text-white">{card.desc}</p>
                 </div>
               </div>
             ))}
