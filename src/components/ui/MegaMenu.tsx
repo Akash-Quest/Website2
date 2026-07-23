@@ -73,7 +73,7 @@ function ColumnsList({
                   <button
                     type="button"
                     onClick={() => onSelect(link.href)}
-                    className={`flex w-full items-center justify-between gap-2 rounded-lg px-3 py-3 text-left text-base transition-colors 2xl:text-lg ${
+                    className={`flex w-full items-center justify-between gap-2 rounded-lg py-1.5 pl-5 pr-3 text-left text-base leading-tight transition-colors 2xl:text-lg ${
                       isActive
                         ? "bg-background font-normal text-[#03030F]"
                         : "text-gray-600 hover:bg-gray-50"
@@ -141,7 +141,7 @@ function DrilldownNavList({
             type="button"
             onMouseEnter={() => onHover(item.label)}
             onClick={() => onHover(item.label)}
-            className={`p flex w-full items-center justify-between rounded-lg px-3 py-2 text-left  transition-colors ${
+            className={`flex w-full items-center justify-between rounded-lg py-2 pl-4 pr-3 text-left leading-tight transition-colors ${
               active === item.label
                 ? "bg-background font-normal text-[#03030F]"
                 : "text-gray-700 hover:bg-gray-50"
@@ -170,7 +170,7 @@ function DrilldownLinkList({
           <Link
             href={link.href}
             onClick={onNavigate}
-            className={`flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm transition-colors hover:bg-gray-50 ${
+            className={`flex items-center gap-1.5 rounded-lg py-2 pl-4 pr-3 text-sm leading-tight transition-colors hover:bg-gray-50 ${
               link.featured ? "font-semibold text-gray-900" : "text-gray-600"
             }`}
           >
