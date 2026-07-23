@@ -247,7 +247,7 @@ export default function CaseStudies({
                       className={`transition-all duration-150 ${
                         isExpanded
                           ? "font-bold leading-tight text-body-xl"
-                          : "font-bold leading-none text-body-lg"
+                          : "font-semibold leading-none text-body-lg"
                       }`}
                     >
                       {card.title}
