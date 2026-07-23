@@ -30,7 +30,6 @@ function StudyCard({ study }: { study: CaseStudy }) {
         alt={study.title}
         width={400}
         height={300}
-        unoptimized
         className="w-full h-40 sm:h-full rounded-lg object-cover flex-shrink-0"
       />
       </div>

@@ -232,7 +232,7 @@ export default function CaseStudies({
                     className={`absolute inset-x-0 bottom-0 z-10 flex flex-col overflow-hidden rounded-2xl bg-white/55 backdrop-blur-lg backdrop-brightness-125 border-none text-[#15121F] transition-all duration-[250ms] ease-out [clip-path:inset(-1px_round_1rem)] ${
                       isExpanded
                         ? "h-full p-5 "
-                        : "h-[100px] p-3 m-3 items-center"
+                        : "h-[clamp(4.5rem,11vw,5rem)] p-3 m-3 items-center"
                     }`}
                   >
                     <p
@@ -244,10 +244,10 @@ export default function CaseStudies({
                     </p>
 
                     <h3
-                      className={`text-body-lg transition-all  duration-150 ${
+                      className={`transition-all duration-150 ${
                         isExpanded
-                          ? "font-bold"
-                          : "font-bold leading-tight"
+                          ? "font-bold leading-tight text-body-xl"
+                          : "font-bold leading-none text-body-lg"
                       }`}
                     >
                       {card.title}
@@ -267,10 +267,10 @@ export default function CaseStudies({
                       type="button"
                       aria-label={`${readMoreButton}: ${card.title}`}
                       tabIndex={isExpanded ? 0 : -1}
-                      className={`group/learn mt-auto self-end inline-flex items-center text-sm sm:text-sm font-semibold text-primary transition-all duration-150 cursor-pointer ${
+                      className={`group/learn self-end inline-flex items-center overflow-hidden text-sm sm:text-sm font-semibold text-primary transition-all duration-150 cursor-pointer ${
                         isExpanded
-                          ? "opacity-100"
-                          : "pointer-events-none opacity-0"
+                          ? "mt-auto max-h-10 opacity-100"
+                          : "max-h-0 opacity-0 pointer-events-none"
                       }`}
                     >
                       {readMoreButton}

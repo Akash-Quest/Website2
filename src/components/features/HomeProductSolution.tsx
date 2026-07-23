@@ -61,7 +61,7 @@ const tabContent: Record<
       </>
     ),
     description:
-      "MineralIQ delivers predictive geology and exploration intelligence to mining companies — identifying high-potential zones faster than traditional surveys.",
+      "MineralIQ delivers predictive geology and exploration intelligence to mining companies identifying high-potential zones faster than traditional surveys.",
     buttonLabel: "MineralIQ",
     image: "/Productsoln/Pr3.jpg",
   },
@@ -244,10 +244,10 @@ export default function OurProductSolution() {
               <p className="text-primary tracking-wide  text-body-sm">
                 {content.badge}
               </p>
-              <h2 className="font-semibold ">
+              <h2 className="font-semibold leading-none pb-1 ">
                 {content.heading}
               </h2>
-              <p className="text-muted tracking-wide ">
+              <p className="text-muted  ">
                 {content.description}
               </p>
             </div>

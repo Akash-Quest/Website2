@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import Image from "next/image";
 
 import HoverRevealCard1 from "@/components/ui/HoverRevealCard";
@@ -16,7 +16,7 @@ interface Capability {
 }
 
 interface OurCapabilitiesProps {
-  eyebrow: string;
+  eyebrow: ReactNode;
   capabilities: Capability[];
 }
 
@@ -29,9 +29,9 @@ export default function OurCapabilities({
   return (
     <section className="w-full bg-background">
       <div className="page-container">
-        <p className="mb-2 text-sm 2xl:text-base font-medium text-primary ">
+        <h2 className="mb-5 font-bold ">
           {eyebrow}
-        </p>
+        </h2>
 
         {/* ---------- Mobile / tablet: stacked list, every card the same height, text always visible ---------- */}
         <div className="flex flex-col gap-3 sm:gap-4 lg:hidden">

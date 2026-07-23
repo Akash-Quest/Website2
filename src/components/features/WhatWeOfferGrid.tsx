@@ -94,7 +94,7 @@ export default function WhatWeOfferGrid({
               <h3 className="mt-2 font-medium text-neutral-900 text-body-lg">
                 {title}
               </h3>
-              <p className="mt-1.5  text-muted text-body-sm">
+              <p className="mt-1.5  text-muted ">
                 {description}
               </p>
             </div>

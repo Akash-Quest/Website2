@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import Image from "next/image";
 import HoverRevealCard from "@/components/ui/HoverRevealCard";
 
@@ -15,7 +15,7 @@ interface Capability {
 }
 
 interface IntegratedCapabilitiesProps {
-  eyebrow: string;
+  eyebrow: ReactNode;
   capabilities: Capability[];
 }
 
@@ -30,9 +30,9 @@ export default function IntegratedCapabilities({
   return (
     <section className="w-full bg-background">
       <div className="page-container">
-        <p className="mb-4 text-sm 2xl:text-base font-medium text-primary sm:mb-6">
+        <h2 className="mb-4 font-bold ">
           {eyebrow}
-        </p>
+        </h2>
 
         {/* ---------- Mobile / tablet: stacked list, every card the same height, text always visible ---------- */}
         <div className="flex flex-col gap-3 sm:gap-4 lg:hidden">
@@ -69,7 +69,7 @@ export default function IntegratedCapabilities({
               description={strategy.description}
               image={strategy.imageUrl}
               imageAlt={strategy.imageAlt}
-              className="flex-1 h-[clamp(8.5rem,14vw,10.5rem)] shadow-sm"
+              className="flex-1 h-[clamp(10.45rem,16.5vw,12.65rem)] shadow-sm"
               isHovered={hoveredCard === strategy.id}
               onHover={(hovered) =>
                 setHoveredCard(hovered ? strategy.id : null)
@@ -80,7 +80,7 @@ export default function IntegratedCapabilities({
               description={pmo.description}
               image={pmo.imageUrl}
               imageAlt={pmo.imageAlt}
-              className="flex-1 h-[clamp(8.5rem,14vw,10.5rem)] shadow-sm"
+              className="flex-1 h-[clamp(10.45rem,16.5vw,12.65rem)] shadow-sm"
               isHovered={hoveredCard === pmo.id}
               onHover={(hovered) => setHoveredCard(hovered ? pmo.id : null)}
             />
@@ -117,7 +117,7 @@ export default function IntegratedCapabilities({
               description={risk.description}
               image={risk.imageUrl}
               imageAlt={risk.imageAlt}
-              className="flex-1 h-[clamp(8.5rem,14vw,10.5rem)] shadow-sm"
+              className="flex-1 h-[clamp(10.45rem,16.5vw,12.65rem)] shadow-sm"
               isHovered={hoveredCard === risk.id}
               onHover={(hovered) => setHoveredCard(hovered ? risk.id : null)}
             />
@@ -126,7 +126,7 @@ export default function IntegratedCapabilities({
               description={scaleup.description}
               image={scaleup.imageUrl}
               imageAlt={scaleup.imageAlt}
-              className="flex-1 h-[clamp(8.5rem,14vw,10.5rem)] shadow-sm"
+              className="flex-1 h-[clamp(10.45rem,16.5vw,12.65rem)] shadow-sm"
               isHovered={hoveredCard === scaleup.id}
               onHover={(hovered) =>
                 setHoveredCard(hovered ? scaleup.id : null)

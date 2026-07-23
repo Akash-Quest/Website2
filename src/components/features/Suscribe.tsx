@@ -24,7 +24,7 @@ export default function Suscribe({ className = "" }: { className?: string }) {
   return (
     <div className="bg-background">
       <div className={` page-container ${className} px-0 md:px-6 md:px-[10%] ` }>
-      <div className="relative w-full rounded-none md:rounded-2xl overflow-hidden bg-[url('/Hero/suscribelit.jpg')] md:bg-[url('/Hero/patangbg.svg')] bg-cover bg-center">
+      <div className="relative w-full rounded-none md:rounded-2xl overflow-hidden bg-[url('/Hero/suscribelit.jpg')] md:bg-[url('/Hero/patang.jpg')] bg-cover bg-center">
 
         {/* Content */}
         <div className="relative z-[2] px-5 py-6 sm:px-8 sm:py-8 lg:px-10 lg:py-12 xl:px-10 xl:py-12 2xl:px-14 2xl:py-24">

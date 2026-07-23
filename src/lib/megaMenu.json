@@ -11,7 +11,7 @@
           "content": {
             "kind": "columns",
             "heading": "What We Do",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "description": "We bring together strategy, technology, innovation, and industry expertise to help organizations navigate complex challenges and create measurable impact.",
             "columns": [
               {
                 "links": [
@@ -126,23 +126,84 @@
           "content": {
             "kind": "columns",
             "heading":"Products &Solutions",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "description": "Explore our products and solutions designed to help organizations leverage technology, data, and innovation to solve complex challenges and drive measurable impact.",
             "columns": [
               {
                 "links": [
-                  { "label": "AgriMap", "href": "/product-solutions/agrimap", "featured": true },
-                  { "label": "Inspect Global", "href": "/product-solutions/inspect-global" },
-                  { "label": "MineralIQ", "href": "/product-solutions/mineraliq" },
-                  { "label": "Skyquest Labs", "href": "/product-solutions/skyquest-labs" },
-                  { "label": "DeCarbonX", "href": "/product-solutions/decarbonx" },
-                  { "label": "AlwaysOn", "href": "/product-solutions/alwayson" }
+                  {
+                    "label": "AgriMap",
+                    "href": "/product-solutions/agrimap",
+                    "featured": true,
+                    "promo": {
+                      "image": "/Productsoln/Pr1.jpg",
+                      "title": "AgriMap",
+                      "description": "AgriMap gives agriculture departments, banks, and governments a real-time view of seed replacement rates, crop health, and variety adoption across every district down to the block level.",
+                      "href": "/product-solutions/agrimap",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Inspect Global",
+                    "href": "/product-solutions/inspect-global",
+                    "promo": {
+                      "image": "/Productsoln/Pr2.jpg",
+                      "title": "Inspect Global",
+                      "description": "InspectGlobal fuses satellite, GPS, drones, IoT, and AI into one verified record of progress, risk, and compliance so decisions don't rely on someone's word.",
+                      "href": "/product-solutions/inspect-global",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "MineralIQ",
+                    "href": "/product-solutions/mineraliq",
+                    "promo": {
+                      "image": "/Productsoln/Pr3.jpg",
+                      "title": "MineralIQ",
+                      "description": "MineralIQ delivers predictive geology and exploration intelligence to mining companies, identifying high-potential zones faster than traditional surveys.",
+                      "href": "/product-solutions/mineraliq",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Skyquest Labs",
+                    "href": "/product-solutions/skyquest-labs",
+                    "promo": {
+                      "image": "/Productsoln/Pr4.jpg",
+                      "title": "Skyquest Labs",
+                      "description": "Skyquest Labs connects physical diagnostic labs to qualified pathologists remotely, delivering verified reports in under 15 minutes. Only data travels. Never the sample.",
+                      "href": "/product-solutions/skyquest-labs",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "DeCarbonX",
+                    "href": "/product-solutions/decarbonx",
+                    "promo": {
+                      "image": "/Productsoln/Pr5.jpg",
+                      "title": "DeCarbonX",
+                      "description": "DeCarbonX turns climate project ideas into finance-ready instruments, carbon credits, green bonds, and Article 6 forwards with full national data sovereignty and AI-driven MRV.",
+                      "href": "/product-solutions/decarbonx",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "AlwaysOn",
+                    "href": "/product-solutions/alwayson",
+                    "promo": {
+                      "image": "/Productsoln/Pr6.jpg",
+                      "title": "AlwaysOn",
+                      "description": "AlwaysOn delivers AI-powered diagnostic services directly through WhatsApp, the world's most-used messaging platform. No app. No barrier. No delay.",
+                      "href": "/product-solutions/alwayson",
+                      "ctaLabel": "Visit Page"
+                    }
+                  }
                 ]
               }
             ],
             "promo": {
-              "image": "/Productsoln/Pr6.jpg",
+              "image": "/Productsoln/Pr1.jpg",
               "title": "AgriMap",
-              "description": "A real-time view of seed replacement rates, crop health, and variety adoption across every district down to the block level.",
+              "description": "AgriMap gives agriculture departments, banks, and governments a real-time view of seed replacement rates, crop health, and variety adoption across every district down to the block level.",
               "href": "/product-solutions/agrimap",
               "ctaLabel": "Visit Page"
             }
@@ -683,9 +744,33 @@
       "id": "global",
       "label": "",
       "items": [
-        { "id": "our-initiatives", "label": "Our Initiatives", "href": "#" }
+        {
+          "id": "our-initiatives",
+          "label": "Our Initiatives",
+          "href": "#",
+          "content": {
+            "kind": "columns",
+            "heading": "Our Initiatives",
+            "description": "SUSTECH is a global mega-cluster initiative by Skyquest Technology Consulting Pvt. Ltd. focused on building sustainable, scalable economic corridors through science, technology, innovation, and entrepreneurship.",
+            "columns": [
+              {
+                "links": [
+                  { "label": "Sustech Bank ", "href": "https://www.sustech.earth/" }
+                ]
+              }
+            ],
+            "promo": {
+              "image": "/Hero/SUSTECH Bank.jpg",
+              "title": "SushTech Bank",
+              "description": "SUSTECH is a global mega-cluster initiative by Skyquest Technology Consulting Pvt. Ltd. focused on building sustainable, scalable economic corridors through science, technology, innovation, and entrepreneurship.",
+              "href": "https://www.sustech.earth/",
+              "ctaLabel": "Learn More"
+            }
+          }
+        }
       ]
     },
+    
     {
       "id": "company",
       "label": "Our Company",

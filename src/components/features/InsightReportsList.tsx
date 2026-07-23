@@ -33,7 +33,7 @@ function ReportCard({ report }: { report: Report }) {
               <span>{report.date}</span>
             </div>
 
-            <h3 className="mt-2 sm:truncate font-semibold text-gray-900">
+            <h3 className="mt-2 sm:truncate font-semibold text-gray-900 text-body-xl">
               {report.title}
             </h3>
 
@@ -276,9 +276,9 @@ export default function InsightsResult() {
       <div className="page-container py-8 sm:py-8 md:py-10 lg:py-8 xl:py-10 2xl:py-12 "  ref={resultsRef}>
         <div className="">
           <div className="flex items-center justify-between">
-            <h5 className=" font-semibold text-gray-900">
+            <h2 className=" font-semibold text-gray-900 text-body-xl" >
               {filteredReports.length} Results
-            </h5>
+            </h2>
             <button
               type="button"
               onClick={handleClearAll}

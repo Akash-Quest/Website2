@@ -2,7 +2,7 @@
 import { ClipboardText, CloudConnection, Courthouse, CpuSetting, FavoriteChart, HeartCircle, HeartTick, Message, PresentionChart } from "iconsax-react";
 
 export const SocialImpactOurCapabilitiesData = {
-  eyebrow: "Our Capabilities",
+  eyebrow: <>Our <em>Capabilities</em></>,
   capabilities: [
     {
       id: "strategy",

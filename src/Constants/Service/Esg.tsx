@@ -2,7 +2,7 @@
 import { Bank, Building, Buildings2, CardTick, Convert3DCube, DollarCircle, FlashCircle, Hashtag, HeartAdd, LampCharge, Link, Link2, People, Setting4, Share, Shop, Teacher, TruckFast, Warning2, Wind } from "iconsax-react";
 
 export const EsgOurCapabilitiesData = {
-  eyebrow: "Our Capabilities",
+  eyebrow: <>Our <em>Capabilities</em></>,
   capabilities: [
     {
       id: "climate-risk",

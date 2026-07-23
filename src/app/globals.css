@@ -25,11 +25,11 @@
 
 @layer components {
   .page-container {
-    @apply mx-auto  max-w-[1920px] px-4  md:px-[10%] 2xl:px-[13%]  py-12 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-28 ;
+    @apply mx-auto  max-w-[1920px] px-4  md:px-[10%] 2xl:px-[13%]  py-12 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-30 ;
   
   }
   .hero-container {
-     @apply mx-auto max-w-[1920px]  pt-16 lg:pt-16 xl:pt-20 2xl:pt-24 md:px-[10%] 2xl:px-[13%] py-12 sm:py-12 md:pb-16 lg:pb-20 xl:pb-24 2xl:pb-28  ;
+     @apply mx-auto max-w-[1920px]  pt-16 lg:pt-16 xl:pt-20 2xl:pt-24 md:px-[10%] 2xl:px-[13%] py-12 sm:py-12 md:pb-16 lg:pb-20 xl:pb-24 2xl:pb-30  ;
   }
   .hero-title {
     font-size: var(--hero-title-size);
@@ -87,6 +87,12 @@ h5 {
 .text-body-xl {
   font-size: clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem); /* 20px -> 24px */
   line-height: clamp(1.75rem, 1.65rem + 0.3vw, 2rem);
+  letter-spacing: 0;
+}
+
+.text-body-2xl {
+  font-size: clamp(1.5rem, 1.45rem + 0.35vw, 1.75rem); /* 24px -> 28px */
+  line-height: clamp(2rem, 1.9rem + 0.3vw, 2.25rem);
   letter-spacing: 0;
 }
 

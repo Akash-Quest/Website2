@@ -2,7 +2,7 @@
 import { Chart, CloudDrizzle, Convert3DCube, DollarSquare, Link, Note, Pet, Reserve, Wind2,Wind,Sun } from "iconsax-react";
 
 export const AgricultureOurCapabilitiesData = {
-  eyebrow: "Our Capabilities",
+  eyebrow: <>Our <em>Capabilities</em></>,
   capabilities: [
     {
       id: "ai",

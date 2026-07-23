@@ -64,8 +64,8 @@ export default function HoverRevealCard2({
         }`}
       >
         <span
-          className={`block shrink-0 truncate font-semibold leading-snug text-black transition-all duration-300 ${
-            isHovered ? "text-base sm:text-lg" : "text-xs sm:text-lg"
+          className={`block shrink-0 font-semibold leading-snug text-black transition-all duration-300 ${
+            isHovered ? "text-body-xl" : "truncate text-[clamp(0.875rem,1vw,1.125rem)]"
           }`}
         >
           {isHovered ? title : chipLabel ?? title}

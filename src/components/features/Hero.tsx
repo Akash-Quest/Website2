@@ -183,9 +183,9 @@ Systems for Governments<br />
               key={`content-${currentSlide}`}
               className="
                 absolute inset-0 z-20 flex flex-col justify-center items-start pb-28
-                px-5 pt-16
+                px-4 pt-16
                 sm:justify-center sm:pb-0
-                sm:left-24 sm:px-16 sm:pt-12
+                md:px-[10%] 2xl:px-[13%] sm:pt-12
               "
             >
               {/* Label */}
@@ -219,7 +219,7 @@ Systems for Governments<br />
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="text-white/80 max-w-sm sm:max-w-xl 2xl:max-w-3xl mb-4 2xl:mb-5 text-body-lg"
+                className="text-white/80 max-w-sm sm:max-w-xl 2xl:max-w-3xl mb-4 2xl:mb-5 text-body-lg padding-tight"
               >
                 {slide.description}
               </motion.p>

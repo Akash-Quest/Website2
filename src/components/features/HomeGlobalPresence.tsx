@@ -80,15 +80,15 @@ export default function OurGlobalPresence() {
           <ul className="relative z-10 space-y-3 p-5">
             {regions.map((region) => (
               <li key={region.name}>
-                <div className="flex items-start gap-2">
-                  <svg
-                    className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-700"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
+                <div className="flex items-center gap-2">
+                  <Image
+                    src="/Hero/point.svg"
+                    alt=""
+                    width={18}
+                    height={18}
+                    className="h-5 w-5 flex-shrink-0"
                     aria-hidden="true"
-                  >
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
-                  </svg>
+                  />
                   <h3 className=" font-bold text-gray-900">{region.name}</h3>
                 </div>
                 <p className="pl-6  text-muted">
@@ -102,21 +102,21 @@ export default function OurGlobalPresence() {
         {/* ── DESKTOP: side-by-side grid ───────────────────────── */}
         <div className="hidden lg:grid mt-2 grid-cols-2 gap-[clamp(1.5rem,2vw,2.5rem)]">
           {/* Region list */}
-          <ul className="flex flex-col justify-center ">
+          <ul className="flex flex-col justify-center gap-2">
             {regions.map((region) => (
               <li key={region.name}>
-                <div className="flex items-start gap-2">
-                  <svg
-                    className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-700"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
+                <div className="flex items-center gap-2">
+                  <Image
+                    src="/Hero/point.svg"
+                    alt=""
+                    width={16}
+                    height={16}
+                    className="h-4 w-4 flex-shrink-0"
                     aria-hidden="true"
-                  >
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
-                  </svg>
+                  />
                   <h3 className="font-medium   text-body-lg">{region.name}</h3>
                 </div>
-                <p className="pl-6 max-w-xl text-muted text-body-sm">
+                <p className="pl-6 max-w-xl text-muted ">
                   {region.description}
                 </p>
               </li>

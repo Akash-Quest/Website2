@@ -18,7 +18,7 @@ export const IntegratedProgramHeroData = {
 };
 
 export const IntegratedProgramCapabilitiesData = {
-  eyebrow: "Our Capabilities",
+  eyebrow: <>Our <em>Capabilities</em></>,
   capabilities: [
     {
       id: "strategy",

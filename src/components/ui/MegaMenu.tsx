@@ -164,7 +164,7 @@ function DrilldownLinkList({
   onNavigate: () => void;
 }) {
   return (
-    <ul className="max-h-[55vh] space-y-1 overflow-y-auto pr-2">
+    <ul className="scrollbar-hide max-h-[55vh] space-y-1 overflow-y-auto pr-2">
       {links.map((link) => (
         <li key={link.href}>
           <Link
@@ -286,12 +286,12 @@ export default function MegaMenu({
         onClick={() => setOpen(true)}
         aria-label="Open menu"
         aria-expanded={open}
-        className={`inline-flex h-8 w-8 2xl:h-10 2xl:w-10 cursor-pointer items-center justify-center rounded-full ${triggerBgClassName}`}
+        className={`group inline-flex h-8 w-8 2xl:h-10 2xl:w-10 cursor-pointer items-center justify-center rounded-full transition-colors hover:bg-primary ${triggerBgClassName}`}
       >
         <div className="flex h-3 flex-col justify-between">
-          <span className="block h-0.5 w-4 2xl:w-6 rounded bg-black" />
-          <span className="block h-0.5 w-4 2xl:w-6 rounded bg-black" />
-          <span className="block h-0.5 w-4 2xl:w-6 rounded bg-black" />
+          <span className="block h-0.5 w-4 2xl:w-6 rounded bg-black transition-colors group-hover:bg-white" />
+          <span className="block h-0.5 w-4 2xl:w-6 rounded bg-black transition-colors group-hover:bg-white" />
+          <span className="block h-0.5 w-4 2xl:w-6 rounded bg-black transition-colors group-hover:bg-white" />
         </div>
       </button>
 
@@ -303,7 +303,7 @@ export default function MegaMenu({
                 type="button"
                 onClick={() => setOpen(false)}
                 aria-label="Close menu"
-                className="flex h-10 w-10 items-center justify-center rounded-lg text-gray-500 transition-colors hover:bg-gray-100 hover:text-black bg-background"
+                className="flex h-10 w-10 items-center justify-center rounded-lg text-gray-500 transition-colors hover:bg-primary hover:text-white bg-background"
               >
                 <X size={20} />
               </button>
@@ -321,7 +321,7 @@ export default function MegaMenu({
             </div>
 
             <div className="flex items-center ml-5 gap-3 sm:gap-4">
-              login
+              Login
               <button
                 type="button"
                 onClick={() => setOpen(false)}
@@ -334,7 +334,7 @@ export default function MegaMenu({
           </div>
 
           {/* Mobile: nested accordion */}
-          <div className="flex-1 overflow-y-auto sm:hidden">
+          <div className="scrollbar-hide flex-1 overflow-y-auto sm:hidden">
             {megaMenu.groups.map((group, gi) => (
               <div key={group.id} className={gi > 0 ? "border-t border-[#03030F]/20" : ""}>
                 {group.label && (
@@ -501,31 +501,33 @@ export default function MegaMenu({
             }`}
           >
             <nav
-              className={`overflow-y-auto border-r border-[#03030F]/20 py-2 pl-4 2xl:py-4 2xl:pl-8 ${
+              className={`scrollbar-hide overflow-y-auto border-r border-[#03030F]/20 py-[clamp(0.5rem,2vh,1.25rem)] pl-4 2xl:pl-8 ${
                 activeContent?.kind === "drilldown" ? "sm:row-span-2" : ""
               }`}
             >
               {megaMenu.groups.map((group, i) => (
                 <div
                   key={group.id}
-                  className={`mb-2 2xl:mb-4 ${i > 0 ? "border-t border-[#03030F]/20 pt-1 2xl:pt-3" : ""}`}
+                  className={`mb-[clamp(0.5rem,1.6vh,1.25rem)] ${
+                    i > 0 ? "border-t border-[#03030F]/20 pt-[clamp(0.5rem,1.6vh,1.25rem)]" : ""
+                  }`}
                 >
                   {group.label && (
-                    <h3 className="mb-1 text-xl font-medium uppercase text-[#03030F] 2xl:mb-3 2xl:text-2xl">
+                    <h3 className="mb-[clamp(0.25rem,0.8vh,0.75rem)] text-xl font-medium text-[#03030F] 2xl:text-2xl">
                       {group.label}
                     </h3>
                   )}
-                  <ul className="space-y-0.5 pr-4 2xl:space-y-2 2xl:pr-8">
+                  <ul className="space-y-[clamp(0.125rem,0.6vh,0.5rem)] pr-4 2xl:pr-8">
                     {group.items.map((item) => (
                       <li key={item.id}>
                         {item.content ? (
                           <button
                             type="button"
                             onClick={() => setActiveItemId(item.id)}
-                            className={`  flex w-full items-center justify-between rounded-lg py-1.5 pl-3 pr-4 text-left text-body-lg transition-colors 2xl:py-3 2xl:pl-5 2xl:pr-8 2xl:text-xl   ${
+                            className={`flex w-full items-center justify-between rounded-lg py-[clamp(0.375rem,1.2vh,0.75rem)] pl-3 pr-4 text-left text-body-lg transition-colors 2xl:pl-5 2xl:pr-8 2xl:text-xl ${
                               activeItemId === item.id
-                                ? " bg-background font-normal text-[#03030F] "
-                                : "text-gray-700 hover:bg-gray-50"
+                                ? "bg-background font-normal text-[#03030F]"
+                                : "text-gray-700 hover:bg-[#EAEAF8]"
                             }`}
                           >
                             {item.label}
@@ -537,7 +539,7 @@ export default function MegaMenu({
                           <Link
                             href={item.href}
                             onClick={() => setOpen(false)}
-                            className="flex w-full rounded-lg px-3 py-1 text-lg text-gray-700 transition-colors hover:bg-gray-50 2xl:px-5 2xl:py-3 2xl:text-xl"
+                            className="flex w-full items-center justify-between rounded-lg py-[clamp(0.375rem,1.2vh,0.75rem)] pl-3 pr-4 text-left text-body-lg text-gray-700 transition-colors hover:bg-[#EAEAF8] 2xl:pl-5 2xl:pr-8 2xl:text-xl"
                           >
                             {item.label}
                           </Link>
@@ -551,7 +553,7 @@ export default function MegaMenu({
 
             {activeContent?.kind === "columns" && (
               <>
-                <div className="overflow-y-auto border-r border-[#03030F]/20 px-6 py-6 sm:px-8 ">
+                <div className="scrollbar-hide overflow-y-auto border-r border-[#03030F]/20 px-6 py-6 sm:px-8 ">
                   <PanelHeading
                     heading={activeContent.heading}
                     description={activeContent.description}
@@ -565,7 +567,7 @@ export default function MegaMenu({
                   />
                 </div>
 
-                <div className="overflow-y-auto px-2 py-6 sm:px-4 bg-background">
+                <div className="scrollbar-hide overflow-y-auto px-2 py-6 sm:px-4 bg-background">
                   {activePromo && <PromoCard promo={activePromo} onNavigate={() => setOpen(false)} />}
                 </div>
               </>

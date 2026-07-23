@@ -26,7 +26,7 @@ const cards: CapabilityCard[] = [
     id: "data-intelligence",
     title: "Data Intelligence & Advanced Analytics",
     description:
-      "Transforming data into actionable insights through modern analytics, predictive modeling, business intelligence, and decision-support systems that improve organizational performance.",
+      "Transforming data into actionable insights through modern analytics, predictive modeling, business intelligence, and decision-support systems that improve......",
     bgColor: "#E5E5E5",
     imageUrl:"/Service/Digital/Datainteligence2.jpg",
      imageAlt: "Dark iridescent abstract 3D blob graphic",

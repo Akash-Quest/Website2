@@ -39,7 +39,7 @@ export const caseStudiesData = {
   caseStudies: [
     {
       id: 1,
-      image: "/CaseStudy/pr1.jpg",
+      image: "/CaseStudy/re1.jpg",
       category: "Insights",
       type: "Case Snapshot",
       topic: "Agriculture & Livestock",
@@ -95,7 +95,7 @@ export const caseStudiesData = {
     },
     {
       id: 2,
-      image: "/CaseStudy/pr2.jpg",
+      image: "/CaseStudy/re2.jpg",
       category: "Insights",
       type: "Case Snapshot",
       topic: "Urban Mobility",
@@ -151,7 +151,7 @@ export const caseStudiesData = {
     },
     {
       id: 3,
-      image: "/CaseStudy/pr3.jpg",
+      image: "/CaseStudy/re3.jpg",
       category: "Case Study",
       type: "Case Snapshot",
       topic: "Financial Inclusion",
@@ -207,7 +207,7 @@ export const caseStudiesData = {
     },
     {
       id: 4,
-      image: "/CaseStudy/pr1.jpg",
+      image: "/CaseStudy/re1.jpg",
       category: "Insights",
       type: "Case Snapshot",
       topic: "Agriculture & Livestock",
@@ -263,7 +263,7 @@ export const caseStudiesData = {
     },
     {
       id: 5,
-      image: "/CaseStudy/pr2.jpg",
+      image: "/CaseStudy/re2.jpg",
       category: "Case Study",
       type: "Case Snapshot",
       topic: "Public Safety",
@@ -319,7 +319,7 @@ export const caseStudiesData = {
     },
     {
       id: 6,
-      image: "/CaseStudy/pr3.jpg",
+      image: "/CaseStudy/re3.jpg",
       category: "Insights",
       type: "Case Snapshot",
       topic: "Treasury & Finance",

@@ -2,7 +2,7 @@
 import { Bank, Buildings2, CardCoin, CloudConnection, CpuSetting, DollarCircle, HeartTick, KeyboardOpen, LampCharge } from "iconsax-react";
 
 export const PublicSectorOurCapabilitiesData = {
-  eyebrow: "Our Capabilities",
+  eyebrow: <>Our <em>Capabilities</em></>,
   capabilities: [
     {
       id: "policy-reform",

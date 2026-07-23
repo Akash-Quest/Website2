@@ -44,8 +44,8 @@ const cards = {
   },
   esg: {
     title: "Climate, Sustainability & ESG Advisory",
-    chipLabel: "Climate, Sustainability & ESG",
-    description: "We provide market intelligence, industry insights, competitive benchmarking, customer research, and strategic analysis that enable organizations to identify opportunities, mitigate risks, and make informed business decisions.",
+    chipLabel: "Climate & Sustainability",
+    description: "We help organizations build climate resilience, advance sustainability, strengthen ESG performance, and turn environmental commitments into measurable action.",
     image: "/CoreCapability/6.jpg",
     href: "/services/climate-sustainability-esg-advisory",
   },

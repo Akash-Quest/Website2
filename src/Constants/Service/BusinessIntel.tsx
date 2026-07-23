@@ -1,6 +1,6 @@
 
 export const BusinessIntelOurCapabilitiesData = {
-  eyebrow: "Our Capabilities",
+  eyebrow: <>Our <em>Capabilities</em></>,
   capabilities: [
     {
       id: "market-sizing",

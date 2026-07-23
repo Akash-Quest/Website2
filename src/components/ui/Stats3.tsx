@@ -6,7 +6,7 @@ const StatsGridThree = () => {
   const countupObserver = useRef<IntersectionObserver | null>(null);
 
   const stats = [
-    { target: 85, suffix: "+", label: "Ai Engagements" },
+    { target: 85, suffix: "+", label: "AI Engagements" },
     { target: 3.2, suffix: "x", label: "Avg. ROI Delivered" },
     { target: 40, suffix: "%", label: "Avg. Cost Reduction" },
   ];
