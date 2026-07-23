@@ -101,7 +101,7 @@ export default function Technologies() {
               <h3 className="text-body-lg mt-2 font-medium text-neutral-900">
                 {title}
               </h3>
-              <p className="mt-1.5  leading-relaxed text-neutral-500">
+              <p className="mt-1.5  text-neutral-500">
                 {description}
               </p>
             </div>

@@ -62,7 +62,7 @@ export default function EndtoEnd({
               <h3 className="mt-2 font-medium text-neutral-900 text-body-lg">
                 {title}
               </h3>
-              <p className=" text-muted text-body-sm">
+              <p className=" text-muted ">
                 {description}
               </p>
             </div>

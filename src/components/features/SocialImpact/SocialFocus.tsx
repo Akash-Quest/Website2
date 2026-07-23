@@ -52,7 +52,7 @@ export default function SocialFocus({
                 {title}
               </h3>
 
-              <p className="mt-1.5 flex-1 text-body-sm text-muted">
+              <p className="mt-1.5 flex-1  text-muted">
                 {description}
               </p>
 
