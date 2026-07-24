@@ -1,5 +1,6 @@
 import {  ArrowUp } from "lucide-react"
 import { motion } from "framer-motion"
+import Link from "next/link"
 import ExpandableSearch from "./ExpandableSearch"
 import MegaMenu from "./MegaMenu"
 
@@ -15,9 +16,9 @@ const Header = () => {
     >
         <div className="flex items-center gap-2 pointer-events-auto">
             <MegaMenu triggerBgClassName="bg-white" />
-            <div className="inline-flex items-center bg-transparent">
+            <Link href="/" className="inline-flex items-center bg-transparent">
                 <img src="/Header/logo.svg" alt="Logo" className="h-5 sm:h-6 2xl:h-7 w-auto"/>
-            </div>
+            </Link>
         </div>
         <div className="flex items-center gap-3 pointer-events-auto">
             <ExpandableSearch bgClassName="bg-white" />

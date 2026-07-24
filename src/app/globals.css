@@ -80,7 +80,7 @@ h5 {
 
 .text-body-lg {
    font-size: clamp(1rem, 0.95rem + 0.15vw, 1.25rem); /* 16px ->20px */
-  line-height: clamp(1.5rem, 1.6rem + 0.3vw, 1.75rem);
+  line-height: clamp(1.5rem, 1.4rem + 0.3vw, 1.75rem);
   letter-spacing: 0;
 }
 

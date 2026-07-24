@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUp } from "iconsax-react";
 
 type FocusArea = {
   icon: React.ElementType;
@@ -61,11 +61,11 @@ export default function SocialFocus({
 
                 <span className="relative ml-1 h-3.5 w-3.5 overflow-hidden">
                   <span className="absolute inset-0 flex items-center justify-center transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/learn:translate-x-3 group-hover/learn:-translate-y-3 group-hover/learn:opacity-0">
-                    <ArrowUpRight size={14} />
+                    <ArrowUp size={14} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
                   </span>
 
                   <span className="absolute inset-0 flex items-center justify-center -translate-x-3 translate-y-3 opacity-0 transition-all duration-300 delay-100 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/learn:translate-x-0 group-hover/learn:translate-y-0 group-hover/learn:opacity-100">
-                    <ArrowUpRight size={14} />
+                    <ArrowUp size={14} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
                   </span>
                 </span>
               </button>

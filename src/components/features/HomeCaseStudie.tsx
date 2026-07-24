@@ -4,10 +4,10 @@ import { useEffect, useState, type ReactNode } from "react";
 import Image from "next/image";
 
 import {
-  ArrowUpRight,
   ArrowLeft,
   ArrowRight,
 } from "lucide-react";
+import { ArrowUp } from "iconsax-react";
 import Button from "../ui/Button";
 
 interface CaseStudy {
@@ -190,10 +190,10 @@ export default function CaseStudies({
                         {readMoreButton}
                         <span className="relative ml-1 h-3.5 w-3.5 overflow-hidden">
                           <span className="absolute inset-0 flex items-center justify-center transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/learn:translate-x-3 group-hover/learn:-translate-y-3 group-hover/learn:opacity-0">
-                            <ArrowUpRight size={14} />
+                            <ArrowUp size={14} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
                           </span>
                           <span className="absolute inset-0 flex items-center justify-center -translate-x-3 translate-y-3 opacity-0 transition-all duration-300 delay-100 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/learn:translate-x-0 group-hover/learn:translate-y-0 group-hover/learn:opacity-100">
-                            <ArrowUpRight size={14} />
+                            <ArrowUp size={14} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
                           </span>
                         </span>
                       </button>
@@ -232,7 +232,7 @@ export default function CaseStudies({
                     className={`absolute inset-x-0 bottom-0 z-10 flex flex-col overflow-hidden rounded-2xl bg-white/55 backdrop-blur-lg backdrop-brightness-125 border-none text-[#15121F] transition-all duration-[250ms] ease-out [clip-path:inset(-1px_round_1rem)] ${
                       isExpanded
                         ? "h-full p-5 "
-                        : "h-[clamp(4.5rem,11vw,5rem)] p-3 m-3 items-center"
+                        : "h-[6rem] 2xl:h-[4.5rem] p-3 m-3 items-center"
                     }`}
                   >
                     <p
@@ -246,8 +246,8 @@ export default function CaseStudies({
                     <h3
                       className={`transition-all duration-150 ${
                         isExpanded
-                          ? "font-bold leading-tight text-body-xl"
-                          : "font-semibold leading-none text-body-lg"
+                          ? "font-medium leading-tight text-body-xl"
+                          : "font-semibold leading-tight text-body-lg"
                       }`}
                     >
                       {card.title}
@@ -276,10 +276,10 @@ export default function CaseStudies({
                       {readMoreButton}
                       <span className="relative ml-1 h-3.5 w-3.5 overflow-hidden">
                         <span className="absolute inset-0 flex items-center justify-center transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/learn:translate-x-3 group-hover/learn:-translate-y-3 group-hover/learn:opacity-0">
-                          <ArrowUpRight size={14} />
+                          <ArrowUp size={14} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
                         </span>
                         <span className="absolute inset-0 flex items-center justify-center -translate-x-3 translate-y-3 opacity-0 transition-all duration-300 delay-100 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/learn:translate-x-0 group-hover/learn:translate-y-0 group-hover/learn:opacity-100">
-                          <ArrowUpRight size={14} />
+                          <ArrowUp size={14} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
                         </span>
                       </span>
                     </button>

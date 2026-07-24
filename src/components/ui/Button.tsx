@@ -23,12 +23,12 @@ const VARIANT_STYLES: Record<
   secondary: {
     button: "bg-[#EEFCD1] text-black border border-gray-300",
     icon: "bg-white text-primary",
-    text: "group-hover:text-white",
+    text: "group-hover/btn:text-white",
   },
   white: {
     button: "bg-white text-primary border border-gray-200",
     icon: "bg-primary text-white",
-    text: "group-hover:text-white",
+    text: "group-hover/btn:text-white",
   },
 };
 const Button: React.FC<ButtonProps> = ({
@@ -48,7 +48,7 @@ const Button: React.FC<ButtonProps> = ({
       onClick={onClick}
       style={{ minWidth }}
       className={`
-        group relative isolate overflow-hidden
+        group/btn relative isolate overflow-hidden
         inline-flex items-center justify-between gap-2 sm:gap-2.5
         ${fullWidth ? "w-full" : "w-fit"}
         rounded-lg py-1 pl-3 pr-1 sm:py-1.5 sm:pl-4 sm:pr-1.5
@@ -57,7 +57,7 @@ const Button: React.FC<ButtonProps> = ({
       `}
     >
       {/* Round black bubble that sweeps in from the top-left corner on hover */}
-      <span className="pointer-events-none absolute -top-[300px] -left-[300px] w-[600px] h-[600px] -z-10 rounded-full bg-black scale-0 transition-transform duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-100" />
+      <span className="pointer-events-none absolute -top-[300px] -left-[300px] w-[600px] h-[600px] -z-10 rounded-full bg-black scale-0 transition-transform duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:scale-100" />
       <span className={`relative z-10 transition-colors duration-[650ms] delay-[250ms] ${textHoverStyles}`}>
         {children}
       </span>
@@ -72,14 +72,14 @@ const Button: React.FC<ButtonProps> = ({
         `}
       >
         {/* Outgoing arrow: slides out along the diagonal while the incoming one arrives */}
-        <span className="absolute inset-0 flex items-center justify-center transition-all duration-[550ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-[18px] group-hover:-translate-y-[18px] group-hover:opacity-0">
+        <span className="absolute inset-0 flex items-center justify-center transition-all duration-[550ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:translate-x-[18px] group-hover/btn:-translate-y-[18px] group-hover/btn:opacity-0">
           <ArrowUp
             size={iconSize}
             className="rotate-45 w-3 h-3 sm:w-auto sm:h-auto"
           />
         </span>
         {/* Incoming arrow: slides in from the opposite corner at the same time */}
-        <span className="absolute inset-0 flex items-center justify-center -translate-x-[18px] translate-y-[18px] opacity-0 transition-all duration-[550ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">
+        <span className="absolute inset-0 flex items-center justify-center -translate-x-[18px] translate-y-[18px] opacity-0 transition-all duration-[550ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:translate-x-0 group-hover/btn:translate-y-0 group-hover/btn:opacity-100">
           <ArrowUp
             size={iconSize}
             className="rotate-45 w-3 h-3 sm:w-auto sm:h-auto"

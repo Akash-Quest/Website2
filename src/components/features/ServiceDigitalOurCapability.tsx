@@ -19,14 +19,14 @@ const cards: CapabilityCard[] = [
     description:
       "We help organizations identify high-value AI opportunities, develop adoption roadmaps, establish governance frameworks, and build the capabilities required to scale AI responsibly and effectively.",
     bgColor: "#FFFFFF",
-    imageUrl:"/Service/Digital/AiMosic.jpg",
+    imageUrl:"/Service/Digital/mosaic.jpg",
     imageAlt: "Colorful abstract fluid ribbon graphic",
   },
   {
     id: "data-intelligence",
     title: "Data Intelligence & Advanced Analytics",
     description:
-      "Transforming data into actionable insights through modern analytics, predictive modeling, business intelligence, and decision-support systems that improve......",
+      "Transforming data into actionable insights through modern analytics, predictive modeling, business intelligence, and decision-support systems",
     bgColor: "#E5E5E5",
     imageUrl:"/Service/Digital/Datainteligence2.jpg",
      imageAlt: "Dark iridescent abstract 3D blob graphic",
@@ -35,7 +35,7 @@ const cards: CapabilityCard[] = [
     id: "digital-transformation",
     title: "Digital Transformation & Enterprise Modernization",
     description:
-      "Enabling organizations to modernize operations, digitize processes, improve customer experiences, and accelerate transformation through technology-driven change.",
+      "Enabling organizations to modernize operations, digitize processes, enhance customer experiences, and accelerate technology-driven transformation.",
     bgColor: "#F5E7D6",
     imageUrl:"/Service/Digital/DigitalTransformation.jpg",
      imageAlt: "Iridescent abstract chrome swirl graphic",
@@ -45,7 +45,7 @@ const cards: CapabilityCard[] = [
     title: "Intelligent Automation & Emerging Technologies",
     description:"Leveraging automation, AI-powered workflows, and next-generation technologies to increase efficiency, reduce operational complexity, and drive innovation.",
     bgColor: "#E5E2F8",
-     imageUrl:"/Service/Digital/Inteligent.jpg",
+     imageUrl:"/Service/Digital/Inteligents.jpg",
      imageAlt: "Iridescent abstract chrome swirl graphic",
   },
   {
@@ -73,11 +73,11 @@ function Card({
       className={`flex flex-col overflow-hidden rounded-2xl ${className}`}
       style={{ backgroundColor: card.bgColor, ...style }}
     >
-      <div className="pt-5 sm:pt-6 2xl:pt-8 px-5 sm:px-6 2xl:px-8">
-        <h3 className="font-semibold text-body-xl leading-tight ">
+      <div className="shrink-0 pt-5 sm:pt-6 2xl:pt-8 px-5 sm:px-6 2xl:px-8 ">
+        <h3 className=" mb-1 font-semibold text-body-lg  leading-tight ">
           {card.title}
         </h3>
-        <p className="text-muted  line-clamp-3 leading-tight ">
+        <p className="text-muted leading-tight ">
           {card.description}
         </p>
       </div>

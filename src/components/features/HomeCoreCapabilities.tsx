@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useRef } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUp } from "iconsax-react";
 import HoverRevealCard from "@/components/ui/HoverRevealCard2";
 
 const cards = {
@@ -136,7 +136,7 @@ export default function CoreCapabilities() {
             >
               Visit Page
               <span className="bg-white text-[#1D1EE3] rounded-sm p-1 flex items-center justify-center">
-                <ArrowUpRight size={16} />
+                <ArrowUp size={16} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
               </span>
             </Link>
           </div>

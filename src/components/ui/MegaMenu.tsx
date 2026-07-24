@@ -4,8 +4,8 @@ import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, ChevronDown, Icon, Search, X } from "lucide-react";
-import { ArrowRight } from "iconsax-react";
+import { ChevronDown, Search, X } from "lucide-react";
+import { ArrowRight, ArrowUp } from "iconsax-react";
 import Button from "./Button";
 import megaMenuJson from "@/lib/megaMenu.json";
 import type {
@@ -41,8 +41,8 @@ function PanelHeading({
   if (!heading && !description) return null;
   return (
     <div className={className}>
-      {heading && <p className="text-base font-semibold text-gray-900">{heading}</p>}
-      {description && <p className="mt-1 text-sm text-gray-500">{description}</p>}
+      {heading && <p className=" font-semibold text-gray-900">{heading}</p>}
+      {description && <p className="mt-1 text-body-sm text-gray-500">{description}</p>}
     </div>
   );
 }
@@ -57,7 +57,7 @@ function ColumnsList({
   onSelect: (href: string) => void;
 }) {
   return (
-    <div className="grid min-w-0 grid-cols-1 gap-x-10 gap-y-1 sm:grid-cols-2">
+    <div className="grid min-w-0 grid-cols-1 gap-y-1 sm:grid-cols-2">
       {content.columns.map((column, i) => (
         <div key={i}>
           {column.heading && (
@@ -65,7 +65,7 @@ function ColumnsList({
               {column.heading}
             </p>
           )}
-          <ul className="space-y-1">
+          <ul className="space-y-1 2xl:space-y-2">
             {column.links.map((link) => {
               const isActive = link.href === activeHref;
               return (
@@ -73,14 +73,19 @@ function ColumnsList({
                   <button
                     type="button"
                     onClick={() => onSelect(link.href)}
-                    className={`flex w-full items-center justify-between gap-2 rounded-lg py-1.5 pl-5 pr-3 text-left text-base leading-tight transition-colors 2xl:text-lg ${
+                    className={`group flex w-full items-center justify-between gap-2 rounded-lg py-3 px-5  text-left text-base leading-tight transition-colors 2xl:text-lg ${
                       isActive
                         ? "bg-background font-normal text-[#03030F]"
-                        : "text-gray-600 hover:bg-gray-50"
+                        : "text-gray-600 hover:bg-[#EAEAF8]"
                     }`}
                   >
                     {link.label}
-                    {isActive && <ActiveArrow size={24} className="text-[#03030F]" />}
+                    <ActiveArrow
+                      size={24}
+                      className={`text-[#03030F] transition-opacity ${
+                        isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                      }`}
+                    />
                   </button>
                 </li>
               );
@@ -94,7 +99,7 @@ function ColumnsList({
 
 function PromoCard({ promo, onNavigate }: { promo: MegaMenuPromo; onNavigate: () => void }) {
   return (
-    <div className="w-full overflow-hidden rounded-2xl">
+    <div className="w-full overflow-hidden ">
       <Link
         href={promo.href}
         onClick={onNavigate}
@@ -104,14 +109,13 @@ function PromoCard({ promo, onNavigate }: { promo: MegaMenuPromo; onNavigate: ()
           src={promo.image}
           alt={promo.title}
           fill
-          unoptimized
           sizes="288px"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-fit transition-transform duration-500 group-hover:scale-105"
         />
       </Link>
-      <div className="p-4">
-        <p className="mb-1 text-base 2xl:text-lg font-semibold text-gray-900">{promo.title}</p>
-        <p className="mb-3 line-clamp-3 text-sm 2xl:text-base  text-gray-500">
+      <div className="pt-3">
+        <p className="mb-1 text-body-lg font-semibold text-gray-900">{promo.title}</p>
+        <p className="mb-3 pb-3   text-gray-500">
           {promo.description}
         </p>
         <Button href={promo.href} variant="primary" iconSize={14} minWidth="0px" fullWidth onClick={onNavigate}>
@@ -131,7 +135,7 @@ function DrilldownNavList({
   activeLabel: string | null;
   onHover: (label: string) => void;
 }) {
-  const active = activeLabel ?? items[0]?.label;
+  const active = activeLabel;
 
   return (
     <ul className="space-y-1">
@@ -139,16 +143,20 @@ function DrilldownNavList({
         <li key={item.label}>
           <button
             type="button"
-            onMouseEnter={() => onHover(item.label)}
             onClick={() => onHover(item.label)}
-            className={`flex w-full items-center justify-between rounded-lg py-2 pl-4 pr-3 text-left leading-tight transition-colors ${
+            className={`group flex w-full items-center justify-between rounded-lg py-3 px-4 text-left transition-colors ${
               active === item.label
                 ? "bg-background font-normal text-[#03030F]"
-                : "text-gray-700 hover:bg-gray-50"
+                : "text-gray-700 hover:bg-[#EAEAF8]"
             }`}
           >
-            {item.label}
-            {active === item.label && <ActiveArrow size={24} className="text-[#03030F]" />}
+            <p>{item.label}</p>
+            <ActiveArrow
+              size={24}
+              className={`text-[#03030F] transition-opacity ${
+                active === item.label ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+              }`}
+            />
           </button>
         </li>
       ))}
@@ -170,12 +178,17 @@ function DrilldownLinkList({
           <Link
             href={link.href}
             onClick={onNavigate}
-            className={`flex items-center gap-1.5 rounded-lg py-2 pl-4 pr-3 text-sm leading-tight transition-colors hover:bg-gray-50 ${
+            className={`group flex w-full items-center justify-between gap-1.5 rounded-lg py-2 pl-4 pr-3 text-sm leading-tight transition-colors hover:bg-[#EAEAF8] ${
               link.featured ? "font-semibold text-gray-900" : "text-gray-600"
             }`}
           >
             {link.label}
-            {link.featured && <ActiveArrow size={14} className="text-gray-400" />}
+            <ActiveArrow
+              size={14}
+              className={`text-gray-400 transition-opacity ${
+                link.featured ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+              }`}
+            />
           </Link>
         </li>
       ))}
@@ -220,18 +233,16 @@ export default function MegaMenu({
 
   useEffect(() => {
     if (activeItem?.content?.kind === "drilldown") {
-      const firstCategory = activeItem.content.categories[0];
-      setActiveCategoryLabel(firstCategory?.label ?? null);
-      setActiveGroupLabel(firstCategory?.groups[0]?.label ?? null);
+      setActiveCategoryLabel(null);
+      setActiveGroupLabel(null);
     }
     if (activeItem?.content?.kind === "columns") {
-      const flatLinks = activeItem.content.columns.flatMap((c) => c.links);
-      setActiveLinkHref((flatLinks.find((l) => l.featured) ?? flatLinks[0])?.href ?? null);
+      setActiveLinkHref(null);
     }
   }, [activeItemId, activeItem]);
 
   const activePromo = useMemo(() => {
-    if (activeItem?.content?.kind !== "columns") return undefined;
+    if (activeItem?.content?.kind !== "columns" || !activeLinkHref) return undefined;
     const flatLinks = activeItem.content.columns.flatMap((c) => c.links);
     return flatLinks.find((l) => l.href === activeLinkHref)?.promo ?? activeItem.content.promo;
   }, [activeItem, activeLinkHref]);
@@ -240,23 +251,16 @@ export default function MegaMenu({
 
   const activeDrilldownCategory = useMemo(() => {
     if (activeContent?.kind !== "drilldown") return undefined;
-    return (
-      activeContent.categories.find((c) => c.label === activeCategoryLabel) ??
-      activeContent.categories[0]
-    );
+    return activeContent.categories.find((c) => c.label === activeCategoryLabel);
   }, [activeContent, activeCategoryLabel]);
 
   const activeDrilldownGroup = useMemo(() => {
-    const groups = activeDrilldownCategory?.groups ?? [];
-    return groups.find((g) => g.label === activeGroupLabel) ?? groups[0];
+    return activeDrilldownCategory?.groups.find((g) => g.label === activeGroupLabel);
   }, [activeDrilldownCategory, activeGroupLabel]);
 
   const handleHoverSector = (label: string) => {
     setActiveCategoryLabel(label);
-    if (activeContent?.kind === "drilldown") {
-      const category = activeContent.categories.find((c) => c.label === label);
-      setActiveGroupLabel(category?.groups[0]?.label ?? null);
-    }
+    setActiveGroupLabel(null);
   };
 
   useEffect(() => {
@@ -328,7 +332,7 @@ export default function MegaMenu({
                 aria-label="Close menu"
                 className="flex h-9 w-9 items-center justify-center rounded-lg text-gray-500 transition-colors hover:bg-gray-100 hover:text-black bg-background"
               >
-                <ArrowUpRight size={24} className="text-primary" />
+                <ArrowUp size={24} color="currentColor" variant="Linear" className="rotate-45 text-primary [&>path]:stroke-2" />
               </button>
             </div>
           </div>
@@ -501,15 +505,15 @@ export default function MegaMenu({
             }`}
           >
             <nav
-              className={`scrollbar-hide overflow-y-auto border-r border-[#03030F]/20 py-[clamp(0.5rem,2vh,1.25rem)] pl-4 2xl:pl-8 ${
+              className={`scrollbar-hide overflow-y-auto border-r border-[#03030F]/20 py-[clamp(0.5rem,2vh,1.25rem)] pl-3 2xl:pl-8 ${
                 activeContent?.kind === "drilldown" ? "sm:row-span-2" : ""
               }`}
             >
               {megaMenu.groups.map((group, i) => (
                 <div
                   key={group.id}
-                  className={`mb-[clamp(0.5rem,1.6vh,1.25rem)] ${
-                    i > 0 ? "border-t border-[#03030F]/20 pt-[clamp(0.5rem,1.6vh,1.25rem)]" : ""
+                  className={`mb-3 ${
+                    i > 0 ? "-ml-4 border-t border-[#03030F]/20 pl-4 pt-[clamp(0.5rem,1.6vh,1.25rem)] 2xl:-ml-8 2xl:pl-8" : ""
                   }`}
                 >
                   {group.label && (
@@ -517,31 +521,38 @@ export default function MegaMenu({
                       {group.label}
                     </h3>
                   )}
-                  <ul className="space-y-[clamp(0.125rem,0.6vh,0.5rem)] pr-4 2xl:pr-8">
+                  <ul className="space-y-0.5 px-3 2xl:px-5">
                     {group.items.map((item) => (
                       <li key={item.id}>
                         {item.content ? (
                           <button
                             type="button"
                             onClick={() => setActiveItemId(item.id)}
-                            className={`flex w-full items-center justify-between rounded-lg py-[clamp(0.375rem,1.2vh,0.75rem)] pl-3 pr-4 text-left text-body-lg transition-colors 2xl:pl-5 2xl:pr-8 2xl:text-xl ${
+                            className={`group flex w-full items-center justify-between rounded-lg py-[clamp(0.375rem,1.2vh,0.75rem)] pl-3 pr-4 text-left text-body-lg transition-colors 2xl:pl-5 2xl:pr-8 2xl:text-xl ${
                               activeItemId === item.id
                                 ? "bg-background font-normal text-[#03030F]"
                                 : "text-gray-700 hover:bg-[#EAEAF8]"
                             }`}
                           >
                             {item.label}
-                            {activeItemId === item.id && (
-                              <ActiveArrow size={24} className="text-[#03030F]" />
-                            )}
+                            <ActiveArrow
+                              size={24}
+                              className={`text-[#03030F] transition-opacity ${
+                                activeItemId === item.id ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                              }`}
+                            />
                           </button>
                         ) : (
                           <Link
                             href={item.href}
                             onClick={() => setOpen(false)}
-                            className="flex w-full items-center justify-between rounded-lg py-[clamp(0.375rem,1.2vh,0.75rem)] pl-3 pr-4 text-left text-body-lg text-gray-700 transition-colors hover:bg-[#EAEAF8] 2xl:pl-5 2xl:pr-8 2xl:text-xl"
+                            className="group flex w-full items-center justify-between rounded-lg py-[clamp(0.375rem,1.2vh,0.75rem)] pl-3 pr-4 text-left text-body-lg text-gray-700 transition-colors hover:bg-[#EAEAF8] 2xl:pl-5 2xl:pr-8 2xl:text-xl"
                           >
                             {item.label}
+                            <ActiveArrow
+                              size={24}
+                              className="text-[#03030F] opacity-0 transition-opacity group-hover:opacity-100"
+                            />
                           </Link>
                         )}
                       </li>
@@ -553,11 +564,11 @@ export default function MegaMenu({
 
             {activeContent?.kind === "columns" && (
               <>
-                <div className="scrollbar-hide overflow-y-auto border-r border-[#03030F]/20 px-6 py-6 sm:px-8 ">
+                <div className="scrollbar-hide overflow-y-auto border-r border-[#03030F]/20 px-6 py-2 sm:px-4 ">
                   <PanelHeading
                     heading={activeContent.heading}
                     description={activeContent.description}
-                    className="-mx-6 mb-6 border-b border-[#03030F]/20 px-6 pb-6 sm:-mx-8 sm:px-8"
+                    className="-mx-6 mb-6 border-b border-[#03030F]/20 px-6 pb-2  sm:px-8"
                   />
 
                   <ColumnsList
@@ -567,7 +578,7 @@ export default function MegaMenu({
                   />
                 </div>
 
-                <div className="scrollbar-hide overflow-y-auto px-2 py-6 sm:px-4 bg-background">
+                <div className={`scrollbar-hide overflow-y-auto px-2 py-6 sm:px-4 ${activePromo ? "bg-background" : ""}`}>
                   {activePromo && <PromoCard promo={activePromo} onNavigate={() => setOpen(false)} />}
                 </div>
               </>
@@ -578,10 +589,10 @@ export default function MegaMenu({
                 <PanelHeading
                   heading={activeContent.heading}
                   description={activeContent.description}
-                  className="sm:col-span-3 border-b border-[#03030F]/20 px-6 pb-6 pt-6 sm:px-8"
+                  className="sm:col-span-3 border-b border-[#03030F]/20 px-4 pb-6 pt-6 sm:px-4"
                 />
 
-                <div className="overflow-y-auto border-r border-[#03030F]/20 px-6 py-6 sm:px-8">
+                <div className="overflow-y-auto border-r border-[#03030F]/20 px-2 py-6 sm:px-4">
                   <DrilldownNavList
                     items={activeContent.categories}
                     activeLabel={activeCategoryLabel}
@@ -589,18 +600,24 @@ export default function MegaMenu({
                   />
                 </div>
 
-                <div className="overflow-y-auto border-r border-[#03030F]/20 px-6 py-6 sm:px-8">
-                  {activeDrilldownCategory && activeDrilldownCategory.groups.length > 0 ? (
-                    <>
-                      <SectionLabel>{activeDrilldownCategory.label}</SectionLabel>
-                      <DrilldownNavList
-                        items={activeDrilldownCategory.groups}
-                        activeLabel={activeGroupLabel}
-                        onHover={setActiveGroupLabel}
-                      />
-                    </>
-                  ) : (
-                    <p className="text-sm text-gray-500">More industries coming soon.</p>
+                <div
+                  className={`overflow-y-auto px-6 py-6 sm:px-8 ${
+                    activeDrilldownCategory ? "border-r border-[#03030F]/20" : ""
+                  }`}
+                >
+                  {activeDrilldownCategory && (
+                    activeDrilldownCategory.groups.length > 0 ? (
+                      <>
+                        <SectionLabel>{activeDrilldownCategory.label}</SectionLabel>
+                        <DrilldownNavList
+                          items={activeDrilldownCategory.groups}
+                          activeLabel={activeGroupLabel}
+                          onHover={setActiveGroupLabel}
+                        />
+                      </>
+                    ) : (
+                      <p className="text-sm text-gray-500">More industries coming soon.</p>
+                    )
                   )}
                 </div>
 

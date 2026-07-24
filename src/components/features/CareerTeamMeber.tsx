@@ -67,7 +67,7 @@ function MemberCard({ member }: { member: Member }) {
       <img
         src={member.image}
         alt={member.name}
-        className="sm:w-22 2xl:w-25 self-stretch rounded-lg object-cover flex-shrink-0"
+        className="w-22 2xl:w-25 self-stretch rounded-lg object-cover flex-shrink-0"
       />
       {/* Right: Description */}
       <div className="flex flex-col justify-between flex-1 min-w-0">

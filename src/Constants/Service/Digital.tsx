@@ -34,7 +34,7 @@ export const ServicedigitalCoreCapabilitiesData = {
       icon: Driver,
       title: "AI Strategy, Governance & Adoption",
       description:
-        "We help organizations identify high-value AI opportunities, develop adoption roadmaps, establish governance frameworks, and build the capabilities required to scale AI responsibly and effectively.",
+        "Helping organizations identify, prioritize, and scale AI initiatives that drive measurable business and operational outcomes.",
     },
     {
       icon: Sun,

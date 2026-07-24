@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUp } from "iconsax-react";
 
 export type OtherService = { label: string; href: string };
 
@@ -84,12 +84,12 @@ const OtherServicesSection = ({
               className="group flex items-center justify-between px-6 py-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all bg-white"
             >
               <h3 className="text-body-lg font-regular">{service.label}</h3>
-              <span className="relative ml-4 h-3.5 w-3.5 flex-shrink-0 overflow-hidden">
+              <span className="relative ml-4 h-8 w-8 flex-shrink-0 overflow-hidden">
                 <span className="absolute inset-0 flex items-center justify-center text-primary transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-3 group-hover:-translate-y-3 group-hover:opacity-0">
-                  <ArrowUpRight size={14} />
+                  <ArrowUp size={20} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
                 </span>
                 <span className="absolute inset-0 flex items-center justify-center text-primary -translate-x-3 translate-y-3 opacity-0 transition-all duration-300 delay-100 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">
-                  <ArrowUpRight size={14} />
+                  <ArrowUp size={20} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
                 </span>
               </span>
             </a>

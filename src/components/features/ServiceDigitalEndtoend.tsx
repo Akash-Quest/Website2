@@ -36,11 +36,11 @@ export default function EndtoEnd({
           </p>
           </div>
           {/* gride service */}
-          <div className="mt-10 grid grid-cols-2 sm:gap-2 gap-2 2xl:gap-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid grid-cols-2  gap-5  sm:gap-y-5 md:gap-y-8 2xl:gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
           {tools.map(({ icons, title, description }, idx) => (
             <div
               key={title}
-              className={`text-left pl-4 ${idx % 2 !== 0 ? "sm:border-l sm:border-black/30" : ""} ${idx % 4 !== 0 ? "lg:border-l lg:border-black/30" : "lg:border-l-0"}`}
+              className={`text-left sm:pl-3 ${idx % 2 !== 0 ? "sm:border-l sm:border-black/30" : ""} ${idx % 4 !== 0 ? "lg:border-l lg:border-black/30" : "lg:border-l-0"}`}
             >
               <div className="flex items-center gap-2">
   {icons.map((icon) => (
@@ -53,7 +53,6 @@ export default function EndtoEnd({
         alt=""
         width={20}
         height={20}
-        unoptimized
         className="h-5 w-5 object-contain"
       />
     </span>

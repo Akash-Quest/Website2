@@ -89,7 +89,7 @@ const tabs: TabContent[] = [
 
 import { useState, useRef } from "react";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUp } from "iconsax-react";
 import Button from "../ui/Button";
 
 export default function MarketIntelligence() {
@@ -195,7 +195,7 @@ export default function MarketIntelligence() {
                   </p>
                   <button className="mt-3 flex items-center gap-1  font-medium text-indigo-700 lg:hidden">
                     {current.ctaLabel}
-                    <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.5} />
+                    <ArrowUp color="currentColor" variant="Linear" className="h-3.5 w-3.5 rotate-45 [&>path]:stroke-2" />
                   </button>
                 </div>
 
@@ -241,7 +241,7 @@ export default function MarketIntelligence() {
                   </p>
                   <button className="mt-3 flex items-center gap-1 font-medium text-indigo-700">
                     {current.ctaLabel}
-                    <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.5} />
+                    <ArrowUp color="currentColor" variant="Linear" className="h-3.5 w-3.5 rotate-45 [&>path]:stroke-2" />
                   </button>
                 </div>
               </div>

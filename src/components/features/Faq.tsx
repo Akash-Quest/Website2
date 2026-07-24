@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useLayoutEffect, useState } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUp } from "iconsax-react";
 import Button from "../ui/Button";
 import { defaultFaqs } from "@/Constants/FaqDetails";
 
@@ -84,7 +84,7 @@ export default function FAQSection({
             <div key={index} className="py-3">
               <button
                 onClick={() => toggle(index)}
-                className="w-full flex items-center justify-between gap-4 text-left group"
+                className="w-full flex items-center justify-between gap-8 text-left group"
                 aria-expanded={openIndex === index}
               >
                 <h3 className={`text-body-lg font-medium  transition-colors duration-200 ${openIndex === index ? "text-gray-900" : "text-gray-700 group-hover:text-gray-900"}`}>
@@ -126,7 +126,7 @@ export default function FAQSection({
           <button type="button" className="flex items-center justify-center gap-2 rounded-lg bg-[#1D1EE3] pl-3 py-2 pr-1 text-sm text-white transition-colors hover:bg-[#231598] leading-none">
             {ctaButtonText}
             <span className="flex h-6 w-6 items-center justify-center rounded-md border border-white/40 bg-white text-black">
-              <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.5} />
+              <ArrowUp color="currentColor" variant="Linear" className="h-3.5 w-3.5 rotate-45 [&>path]:stroke-2" />
             </span>
           </button>
         </div>

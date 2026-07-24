@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDown, ArrowUp, ArrowUpRight } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { useState } from "react";
 import Button from "../ui/Button";
 

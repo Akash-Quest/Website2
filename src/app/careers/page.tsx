@@ -51,7 +51,7 @@ function CareersHero() {
 
       {/* Hero Image */}
       <div className="sm:px-[4]">
-        <div className="relative w-full aspect-[71/25] sm:rounded-2xl overflow-hidden">
+        <div className="relative w-full aspect-[3/3.5]  md:aspect-[3/0.9] 2xl:aspect-[3/1] sm:rounded-2xl overflow-hidden">
           <Image
             src="/Careers/Swaticloverground.png"
             alt="Careers at SkyQuest"

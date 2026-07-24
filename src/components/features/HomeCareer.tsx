@@ -1,4 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../ui/Button";
@@ -18,7 +17,7 @@ export default function CareersHero() {
         </p>
 
         {/* Heading */}
-        <h2 className="font-semibold ">
+        <h2 className="font-semibold leading-none">
           Build What the World{" "}
           <em className="font-">Needs Next</em>
         </h2>

@@ -28,7 +28,9 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap sm:justify-between gap-8 lg:gap-10">
           {/* Brand column */}
           <div className="sm:w-full lg:w-auto lg:max-w-xs lg:flex-shrink-0">
-            <Image src="/Header/logo.svg" alt="SkyQuest Technology Consulting" width={128} height={40} className="w-28 sm:w-32 lg:w-36 2xl:w-40 h-auto mb-4" />
+            <Link href="/" className="inline-block">
+              <Image src="/Header/logo.svg" alt="SkyQuest Technology Consulting" width={128} height={40} className="w-28 sm:w-32 lg:w-36 2xl:w-40 h-auto mb-4" />
+            </Link>
             <p className="text-white/80 ">
               An integrated strategy, technology and impact consulting firm helping businesses and
               governments achieve sustainable growth.
@@ -39,7 +41,7 @@ const Footer = () => {
                 <a
                   key={i}
                   href="#"
-                  className="w-8 h-8  rounded bg-white flex items-center justify-center text-[#03030F] hover:bg-gray-200 transition-colors"
+                  className="w-7 h-7  rounded bg-white flex items-center justify-center text-[#03030F] hover:bg-gray-200 transition-colors [&>svg]:w-6 [&>svg]:h-6"
                 >
                   {icon}
                 </a>
@@ -55,9 +57,9 @@ const Footer = () => {
                 <li key={s.label}>
                   <Link
                     href={s.href}
-                    className=" text-body-sm hover:text-white hover:underline underline-offset-2 decoration-white/40 transition-colors"
+                    className="hover:text-white hover:underline underline-offset-2 decoration-white/40 transition-colors"
                   >
-                    {s.label}
+                    <p>{s.label}</p>
                   </Link>
                 </li>
               ))}
@@ -72,9 +74,9 @@ const Footer = () => {
                 <li key={l.label}>
                   <Link
                     href={l.href}
-                   className=" text-body-sm hover:text-white hover:underline underline-offset-2 decoration-white/40 transition-colors"
+                    className="hover:text-white hover:underline underline-offset-2 decoration-white/40 transition-colors"
                   >
-                    {l.label}
+                    <p>{l.label}</p>
                   </Link>
                 </li>
               ))}
@@ -94,9 +96,9 @@ const Footer = () => {
                 <li key={c.label}>
                   <a
                     href={c.href}
-                    className="text-body-sm hover:text-white hover:underline underline-offset-2 decoration-white/40 transition-colors"
+                    className="hover:text-white hover:underline underline-offset-2 decoration-white/40 transition-colors"
                   >
-                    {c.label}
+                    <p>{c.label}</p>
                   </a>
                 </li>
               ))}
@@ -106,13 +108,13 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <div className="border-t border-white/20 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/80 text-body-sm">
+          <p className="text-white/50 text-xs">
             © 2026 SkyQuest Technology Consulting. All rights reserved.
           </p>
-          <div className="flex gap-4 text-white/80 ">
+          <div className="flex gap-4 text-white/50 ">
             {["Privacy Policy", "Terms of Use", "Cookie Policy"].map(
             (link, i, arr) => (
-                <div key={link} className="flex items-center gap-4 text-body-sm ">
+                <div key={link} className="flex items-center gap-4 text-xs ">
                     <a href="#" className="hover:text-white transition-colors hover:underline underline-offset-2">
                      {link}
                     </a> {i < arr.length - 1 && <span>·</span>}

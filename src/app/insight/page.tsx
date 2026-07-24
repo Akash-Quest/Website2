@@ -44,7 +44,7 @@ function InsightHero() {
       <div className="sm:px-[4]">
         <div className="relative w-full aspect-[3/3.5]  md:aspect-[3/0.9] 2xl:aspect-[3/1] sm:rounded-2xl overflow-hidden">
           <Image
-            src="/Insights/hero.jpg"
+            src="/Insights/hero.webp"
             alt="Insights at SkyQuest"
             fill
             priority
