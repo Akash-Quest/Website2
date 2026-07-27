@@ -41,9 +41,9 @@ export default function AgriMapSteps() {
         
         {/* ── HEADER STRINGS MODULE ── */}
         <div className="text-center mb-24 max-w-3xl">
-          <eyebrow className="font-medium text-primary tracking-wide mb-3 block">
+          <p className="font-medium text-primary tracking-wide mb-3 block">
             How It Works
-          </eyebrow>
+          </p>
           <h2 className="font-semibold">
             From Raw Data To Field <em className="font-semibold ">Action</em>
           </h2>

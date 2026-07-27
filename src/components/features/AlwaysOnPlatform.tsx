@@ -59,9 +59,9 @@ export default function AlwaysOnPlatform() {
         {/* ── HEADER LAYOUT BLOCK ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start justify-between w-full">
           <div className="lg:col-span-7 flex flex-col gap-2">
-            <eyebrow className="font-medium text-primary ">
+            <p className="font-medium text-primary ">
               Platform Features
-            </eyebrow>
+            </p>
             <h2 className="font-semibold ">
               Every Tool To Deliver <br/> Healthcare <em className="font-semibold">At Population<br/> Scale.</em>
             </h2>

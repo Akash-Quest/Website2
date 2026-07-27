@@ -62,9 +62,9 @@ export default function DecarbonSteps() {
         
         {/* ── HEADER SECTION ── */}
         <div className="flex flex-col items-center text-center gap-2 mb-16 md:mb-20">
-          <eyebrow className="text-base font-semibold text-primary">
+          <p className="text-base font-semibold text-primary">
             How It Works
-          </eyebrow>
+          </p>
           <h2 className="font-semibold  max-w-[800px] ">
             From Idea To Issued Credit,<br/> In Seven <em className="font-semibold">Automated Steps.</em>
           </h2>

@@ -53,9 +53,9 @@ export default function InspectGlobalFeatures() {
         
         {/* ── HEADER ── */}
         <div className="text-center mb-16 md:mb-20">
-          <eyebrow className="text-[#CBCBFF] mb-3 block">
+          <p className="text-[#CBCBFF] mb-3 block">
             Features
-          </eyebrow>
+          </p>
           <h2 className="font-semibold text-white">
             Built For The Verification, Not Just <br />
             <em className="font-semibold text-white">Visualization</em>

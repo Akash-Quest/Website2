@@ -44,7 +44,7 @@ export default function AlwaysOnFeatures() {
         
         {/* ── CENTRAL HEADER SECTION (MIRRORED TO IMAGE) ── */}
         <div className="text-center mb-16 max-w-3xl flex flex-col gap-4 Z-20">
-            <eyebrow className="font-semibold text-primary mb-3 block"> The WhatsApp Advantage</eyebrow>
+            <p className="font-semibold text-primary mb-3 block"> The WhatsApp Advantage</p>
             
           <h2 className="font-semibold ">
             2 billion users. <br />Zero New 

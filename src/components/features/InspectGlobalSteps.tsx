@@ -42,9 +42,9 @@ export default function InspectGlobalSteps() {
         
         {/* ── HEADER STRINGS MODULE ── */}
         <div className="text-center mb-24 max-w-3xl">
-          <eyebrow className=" text-primary tracking-wide  mb-3 block">
+          <p className=" text-primary tracking-wide  mb-3 block">
             How It Works
-          </eyebrow>
+          </p>
           <h2 className="font-semibold">
             From Raw Signal To Verified <br/><em className="font-semibold ">Record</em>
           </h2>

@@ -60,9 +60,9 @@ export default function AlwaysOnDeps() {
         
         {/* ── CENTRAL HEADER SECTION (MIRRORED TO IMAGE) ── */}
         <div className="text-center mb-16 max-w-4xl flex flex-col gap-4 Z-20">
-          <eyebrow className="font-semibold text-primary  block">
+          <p className="font-semibold text-primary  block">
             Deployments
-          </eyebrow>
+          </p>
           <h2 className="font-semibold ">
             Live in Uttarakhand. <br />Expanding <em className="font-Semibold "> Across India And Beyond.</em>
             </h2>

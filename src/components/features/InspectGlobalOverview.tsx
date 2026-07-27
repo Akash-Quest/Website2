@@ -38,9 +38,9 @@ export default function InspectGlobalOverview() {
         {/* ── TOP HEADLINE BLOCK ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start  justify-between pb-8">
           <div className="lg:col-span-7 flex flex-col gap-3">
-            <eyebrow className="text-primary tracking-wide">
+            <p className="text-primary tracking-wide">
               Product Overview
-            </eyebrow>
+            </p>
             <h2 className="font-semibold ">
               One Verified Record,Instead Of <br/> 
               Nine <em className="font-semibold ">Disconnected Reports</em>

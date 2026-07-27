@@ -58,9 +58,9 @@ export default function AgriMapUseCases() {
         {/* ── HEADER LAYOUT BLOCK ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start w-full">
           <div className="lg:col-span-7 flex flex-col gap-2">
-            <eyebrow className=" text-primary">
+            <p className=" text-primary">
               Use Cases
-            </eyebrow>
+            </p>
             <h2 className="font-semibold">
               Real Decisions, Real <br />
               <em className="font-semibold">Outcomes</em>
@@ -98,9 +98,9 @@ export default function AgriMapUseCases() {
                 {/* Upper Text Frame 1707483049 (gap 4px) */}
                 <div className="flex flex-col gap-1">
                   {/* Tagline: color #1D1EE3, size 12px, leading 24px */}
-                  <eyebrow className="font-medium tracking-wide  text-primary">
+                  <p className="font-medium tracking-wide  text-primary">
                     {item.tag}
-                  </eyebrow>
+                  </p>
                   {/* Title: weight 600, size 20px, leading 25px, color #03030F */}
                   <h4 className="font-semibold">
                     {item.title}

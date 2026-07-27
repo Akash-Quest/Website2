@@ -12,9 +12,9 @@ export default function MineralIQOverview() {
         {/* ── ROW 1: HEADER LAYOUT BLOCK (1420 x 167) ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start pb-8">
           <div className="lg:col-span-7 flex flex-col gap-2">
-            <eyebrow className=" text-primary font-semibold">
+            <p className=" text-primary font-semibold">
               Platform Features
-            </eyebrow>
+            </p>
             <h2 className="font-semibold text-4xl sm:text-5xl md:text-[52px] tracking-tight text-[#03030F] leading-tight md:leading-[60px]">
               One platform. Any jurisdiction. <br />
               <em className="font-semibold">Every mineral.</em>
