@@ -132,68 +132,68 @@
                 "links": [
                   {
                     "label": "AgriMap",
-                    "href": "/product-solutions/agrimap",
+                    "href": "/products/agrimap",
                     "featured": true,
                     "promo": {
                       "image": "/Productsoln/Pr1.jpg",
                       "title": "AgriMap",
                       "description": "AgriMap gives agriculture departments, banks, and governments a real-time view of seed replacement rates, crop health, and variety adoption across every district down to the block level.",
-                      "href": "/product-solutions/agrimap",
+                      "href": "/products/agrimap",
                       "ctaLabel": "Visit Page"
                     }
                   },
                   {
                     "label": "Inspect Global",
-                    "href": "/product-solutions/inspect-global",
+                    "href": "/products/inspectglobal",
                     "promo": {
                       "image": "/Productsoln/Pr2.jpg",
                       "title": "Inspect Global",
                       "description": "InspectGlobal fuses satellite, GPS, drones, IoT, and AI into one verified record of progress, risk, and compliance so decisions don't rely on someone's word.",
-                      "href": "/product-solutions/inspect-global",
+                      "href": "/products/inspectglobal",
                       "ctaLabel": "Visit Page"
                     }
                   },
                   {
                     "label": "MineralIQ",
-                    "href": "/product-solutions/mineraliq",
+                    "href": "/products/mineraliq",
                     "promo": {
                       "image": "/Productsoln/Pr3.jpg",
                       "title": "MineralIQ",
                       "description": "MineralIQ delivers predictive geology and exploration intelligence to mining companies, identifying high-potential zones faster than traditional surveys.",
-                      "href": "/product-solutions/mineraliq",
+                      "href": "/products/mineraliq",
                       "ctaLabel": "Visit Page"
                     }
                   },
                   {
                     "label": "Skyquest Labs",
-                    "href": "/product-solutions/skyquest-labs",
+                    "href": "/products/sqlabs",
                     "promo": {
                       "image": "/Productsoln/Pr4.jpg",
                       "title": "Skyquest Labs",
                       "description": "Skyquest Labs connects physical diagnostic labs to qualified pathologists remotely, delivering verified reports in under 15 minutes. Only data travels. Never the sample.",
-                      "href": "/product-solutions/skyquest-labs",
+                      "href": "/products/sqlabs",
                       "ctaLabel": "Visit Page"
                     }
                   },
                   {
                     "label": "DeCarbonX",
-                    "href": "/product-solutions/decarbonx",
+                    "href": "/products/decarbon",
                     "promo": {
                       "image": "/Productsoln/Pr5.jpg",
                       "title": "DeCarbonX",
                       "description": "DeCarbonX turns climate project ideas into finance-ready instruments, carbon credits, green bonds, and Article 6 forwards with full national data sovereignty and AI-driven MRV.",
-                      "href": "/product-solutions/decarbonx",
+                      "href": "/products/decarbon",
                       "ctaLabel": "Visit Page"
                     }
                   },
                   {
                     "label": "AlwaysOn",
-                    "href": "/product-solutions/alwayson",
+                    "href": "/products/alwayson",
                     "promo": {
                       "image": "/Productsoln/Pr6.jpg",
                       "title": "AlwaysOn",
                       "description": "AlwaysOn delivers AI-powered diagnostic services directly through WhatsApp, the world's most-used messaging platform. No app. No barrier. No delay.",
-                      "href": "/product-solutions/alwayson",
+                      "href": "/products/alwayson",
                       "ctaLabel": "Visit Page"
                     }
                   }
@@ -204,7 +204,7 @@
               "image": "/Productsoln/Pr1.jpg",
               "title": "AgriMap",
               "description": "AgriMap gives agriculture departments, banks, and governments a real-time view of seed replacement rates, crop health, and variety adoption across every district down to the block level.",
-              "href": "/product-solutions/agrimap",
+              "href": "/products/agrimap",
               "ctaLabel": "Visit Page"
             }
           }
@@ -779,7 +779,8 @@
         { "id": "partners", "label": "Partners", "href": "/partners" },
         { "id": "insights", "label": "Insights", "href": "/insight" },
         { "id": "media-news", "label": "Media & News", "href": "/media-news" },
-        { "id": "about-skyquest", "label": "About SkyQuest", "href": "/about" }
+        { "id": "about-skyquest", "label": "About SkyQuest", "href": "/about" },
+        { "id": "privacy-policy", "label": "Privacy Policy", "href": "/privacypolicy" }
       ]
     },
     {

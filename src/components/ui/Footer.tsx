@@ -112,12 +112,16 @@ const Footer = () => {
             © 2026 SkyQuest Technology Consulting. All rights reserved.
           </p>
           <div className="flex gap-4 text-white/50 ">
-            {["Privacy Policy", "Terms of Use", "Cookie Policy"].map(
-            (link, i, arr) => (
-                <div key={link} className="flex items-center gap-4 text-xs ">
-                    <a href="#" className="hover:text-white transition-colors hover:underline underline-offset-2">
-                     {link}
-                    </a> {i < arr.length - 1 && <span>·</span>}
+            {[
+              { label: "Privacy Policy", href: "/privacypolicy" },
+              { label: "Terms of Use", href: "#" },
+              { label: "Cookie Policy", href: "/cookies" },
+            ].map(
+            ({ label, href }, i, arr) => (
+                <div key={label} className="flex items-center gap-4 text-xs ">
+                    <Link href={href} className="hover:text-white transition-colors hover:underline underline-offset-2">
+                     {label}
+                    </Link> {i < arr.length - 1 && <span>·</span>}
                 </div>)
             )}
           </div>
