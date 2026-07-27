@@ -56,13 +56,13 @@ const CARDS: CardDef[] = [
     key: "team",
     alt: "Team group portrait",
     defaultSrc: "/Team/team8.jpg",
-    positionClass: "left-[85.81%] top-0 w-[13.31%] h-[42.83%]",
+    positionClass: "left-[85.81%] top-0 w-[16.31%] h-[49.83%]",
   },
   {
     key: "celebration",
     alt: "Team celebration moment",
     defaultSrc: "/Team/team5.jpg",
-    positionClass: "left-[78.63%] top-[45.63%] w-[21.37%] h-[37.62%]",
+    positionClass: "left-[79.63%] top-[52.63%] w-[25.37%] h-[37.62%]",
   },
   {
     key: "tree",
@@ -80,7 +80,7 @@ const CARDS: CardDef[] = [
     key: "women",
     alt: "Holi inisde",
     defaultSrc: "/Team/team4.jpg",
-    positionClass: "left-[44.48%] top-[64.06%] w-[34.15%] h-[34.08%]",
+    positionClass: "left-[44.48%] top-[64.06%] w-[34.01%] h-[34.08%]",
   },
 ];
 

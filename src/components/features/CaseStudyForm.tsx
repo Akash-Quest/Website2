@@ -77,7 +77,7 @@ export default function CaseStudyForm({
                   />
                 </div>
                 {countryOpen && (
-                  <div className="absolute z-10 mt-1 w-44 rounded-lg border border-gray-200 bg-white shadow-md">
+                  <div className="absolute z-10 mt-1 w-44 rounded-lg border border-gray-200 bg-white ">
                     {countryCodes.map((c) => (
                       <button
                         key={c.code}

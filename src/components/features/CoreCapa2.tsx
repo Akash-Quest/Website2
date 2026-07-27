@@ -69,7 +69,7 @@ export default function IntegratedCapabilities({
               description={strategy.description}
               image={strategy.imageUrl}
               imageAlt={strategy.imageAlt}
-              className="flex-1 h-[clamp(10.45rem,16.5vw,12.65rem)] shadow-sm"
+              className="flex-1 h-[clamp(10.45rem,16.5vw,12.65rem)]"
               isHovered={hoveredCard === strategy.id}
               onHover={(hovered) =>
                 setHoveredCard(hovered ? strategy.id : null)
@@ -80,7 +80,7 @@ export default function IntegratedCapabilities({
               description={pmo.description}
               image={pmo.imageUrl}
               imageAlt={pmo.imageAlt}
-              className="flex-1 h-[clamp(10.45rem,16.5vw,12.65rem)] shadow-sm"
+              className="flex-1 h-[clamp(10.45rem,16.5vw,12.65rem)]"
               isHovered={hoveredCard === pmo.id}
               onHover={(hovered) => setHoveredCard(hovered ? pmo.id : null)}
             />
@@ -92,7 +92,7 @@ export default function IntegratedCapabilities({
               description={stakeholder.description}
               image={stakeholder.imageUrl}
               imageAlt={stakeholder.imageAlt}
-              className="flex-[1.7] h-[clamp(14.7rem,18.9vw,18.9rem)] shadow-sm"
+              className="flex-[1.7] h-[clamp(14.7rem,18.9vw,18.9rem)] "
               isHovered={hoveredCard === stakeholder.id}
               onHover={(hovered) =>
                 setHoveredCard(hovered ? stakeholder.id : null)
@@ -103,7 +103,7 @@ export default function IntegratedCapabilities({
               description={monitoring.description}
               image={monitoring.imageUrl}
               imageAlt={monitoring.imageAlt}
-              className="flex-1 h-[clamp(14.7rem,18.9vw,18.9rem)] shadow-sm"
+              className="flex-1 h-[clamp(14.7rem,18.9vw,18.9rem)] "
               isHovered={hoveredCard === monitoring.id}
               onHover={(hovered) =>
                 setHoveredCard(hovered ? monitoring.id : null)
@@ -117,7 +117,7 @@ export default function IntegratedCapabilities({
               description={risk.description}
               image={risk.imageUrl}
               imageAlt={risk.imageAlt}
-              className="flex-1 h-[clamp(10.45rem,16.5vw,12.65rem)] shadow-sm"
+              className="flex-1 h-[clamp(10.45rem,16.5vw,12.65rem)] "
               isHovered={hoveredCard === risk.id}
               onHover={(hovered) => setHoveredCard(hovered ? risk.id : null)}
             />
@@ -126,7 +126,7 @@ export default function IntegratedCapabilities({
               description={scaleup.description}
               image={scaleup.imageUrl}
               imageAlt={scaleup.imageAlt}
-              className="flex-1 h-[clamp(10.45rem,16.5vw,12.65rem)] shadow-sm"
+              className="flex-1 h-[clamp(10.45rem,16.5vw,12.65rem)] "
               isHovered={hoveredCard === scaleup.id}
               onHover={(hovered) =>
                 setHoveredCard(hovered ? scaleup.id : null)

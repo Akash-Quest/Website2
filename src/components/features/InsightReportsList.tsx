@@ -115,7 +115,7 @@ function FilterDropdown({
         />
       </button>
       {isOpen && (
-        <div className="absolute left-0 right-0 top-full z-20 mt-1 max-h-60 overflow-auto rounded-lg border border-gray-200 bg-white shadow-md">
+        <div className="absolute left-0 right-0 top-full z-20 mt-1 max-h-60 overflow-auto rounded-lg border border-gray-200 bg-white ">
           {options.map((option) => (
             <button
               key={option}

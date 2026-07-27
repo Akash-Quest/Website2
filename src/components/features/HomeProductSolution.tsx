@@ -236,7 +236,7 @@ export default function OurProductSolution() {
         <div className="rounded-2xl bg-[#F7F5F1]">
         <div
           key={activeTab}
-          className="tab-content-anim flex flex-col md:flex-row gap-0 rounded-2xl overflow-hidden shadow-sm"
+          className="tab-content-anim flex flex-col md:flex-row gap-0 rounded-2xl overflow-hidden "
         >
           {/* Left Panel */}
           <div className="bg-[#F7F5F1] md:w-1/2 p-5 sm:p-8 md:p-10 2xl:p-14 flex flex-col justify-center gap-4">

@@ -100,7 +100,7 @@ export default function CareerApplicationForm() {
                 />
               </div>
               {countryOpen && (
-                <div className="absolute z-10 mt-1 w-44 bg-white border border-gray-200 rounded-lg shadow-md">
+                <div className="absolute z-10 mt-1 w-44 bg-white border border-gray-200 rounded-lg ">
                   {countryCodes.map((c) => (
                     <button
                       key={c.code}
