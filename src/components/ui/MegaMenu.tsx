@@ -324,17 +324,16 @@ export default function MegaMenu({
               />
             </div>
 
-            <div className="flex items-center ml-5 gap-3 sm:gap-4">
+            <Link
+              href="/signin"
+              onClick={() => setOpen(false)}
+              className="group flex items-center ml-5 gap-1 sm:gap-2 text-gray-500 transition-colors hover:text-primary"
+            >
               Login
-              <button
-                type="button"
-                onClick={() => setOpen(false)}
-                aria-label="Close menu"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-gray-500 transition-colors hover:bg-gray-100 hover:text-black bg-background"
-              >
-                <ArrowUp size={24} color="currentColor" variant="Linear" className="rotate-45 text-primary [&>path]:stroke-2" />
-              </button>
-            </div>
+              <span className="flex h-9 w-9 items-center justify-center rounded-lg transition-colors group-hover:bg-primary/10">
+                <ArrowUp size={24} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
+              </span>
+            </Link>
           </div>
 
           {/* Mobile: nested accordion */}

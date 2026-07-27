@@ -27,7 +27,7 @@ function EmphasizedText({ text, emphasis }: { text: string; emphasis?: string })
 function FigureCaption({ figure }: { figure: DetailedFigure }) {
   return (
     <figcaption className="mt-3">
-      <p className="text-body-xl font-bold text-gray-900">{figure.caption}</p>
+      <p className=" font-bold text-gray-900">{figure.caption}</p>
       {figure.description && (
         <p className="mt-1 text-body-sm italic text-gray-500">{figure.description}</p>
       )}
@@ -44,11 +44,11 @@ function FigureView({ figure, className = "" }: { figure: DetailedFigure; classN
         }`}
       >
         {figure.text && (
-          <p className="min-w-0 text-body-lg text-gray-700 md:flex-1">{figure.text}</p>
+          <p className="min-w-0  text-gray-700 md:flex-1">{figure.text}</p>
         )}
         <div
           className={`relative aspect-[4/3] w-full shrink-0 overflow-hidden rounded-xl bg-white ${
-            figure.text ? "md:w-[38%]" : ""
+            figure.text ? "md:w-[40%]" : ""
           }`}
         >
           <Image src={figure.src} alt={figure.alt} fill className="object-cover" />
@@ -63,7 +63,7 @@ function BlockView({ block }: { block: DetailedBlock }) {
   switch (block.type) {
     case "paragraph": {
       const paragraph = (
-        <p className="mb-5 text-body-lg text-gray-700 last:mb-0">
+        <p className="mb-3  text-gray-700 last:mb-0">
           {block.leadIn && (
             <strong className="font-semibold text-gray-900">{block.leadIn} </strong>
           )}
@@ -98,8 +98,8 @@ function BlockView({ block }: { block: DetailedBlock }) {
           )}
           <ol className="space-y-2">
             {block.items.map((item, i) => (
-              <li key={i} className="flex gap-3 text-body-lg text-gray-700">
-                <span className="shrink-0 font-semibold text-gray-900">{i + 1}.</span>
+              <li key={i} className=" -p flex gap-3 text-gray-700">
+                <span className="shrink-0  text-gray-900">{i + 1}.</span>
                 <span>{item}</span>
               </li>
             ))}
@@ -108,6 +108,41 @@ function BlockView({ block }: { block: DetailedBlock }) {
       );
     case "figure":
       return <FigureView figure={block.figure} className="mb-6" />;
+    case "table":
+      return (
+        <div className="mb-6">
+          {block.title && (
+            <p className="mb-3 font-semibold text-gray-900">{block.title}</p>
+          )}
+          <div className="overflow-x-auto rounded-xl border-[1px] border-[#CBD5E1]">
+            <table className="w-full border-collapse text-left text-body-sm">
+              <thead>
+                <tr className="bg-primary">
+                  {block.columns.map((column, i) => (
+                    <th
+                      key={i}
+                      className=" text-body-lg  px-4 py-3 font-bold text-white border-r border-r-[#CBD5E1]"
+                    >
+                      {column}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {block.rows.map((row, i) => (
+                  <tr key={i} className=" last:border-0">
+                    {row.map((cell, j) => (
+                      <td key={j} className="px-4 py-3 align-top text-gray-700 border-r border-r-[#CBD5E1]">
+                        {cell}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      );
   }
 }
 
@@ -316,7 +351,7 @@ export default function DetailedPage() {
                               <span className="text-[11px]">{label}</span>
                             </button>
                             <div className="absolute bottom-full right-0 z-20 hidden pb-3 group-hover:block">
-                              <div className="relative flex flex-col gap-2 rounded-sm border border-gray-800 bg-white p-2 shadow-lg">
+                              <div className="relative flex flex-col gap-2 rounded-sm border border-gray-800 bg-white p-2 ">
                                 {SOCIAL_LINKS.map((social) => (
                                   <a
                                     key={social.label}
@@ -355,18 +390,18 @@ export default function DetailedPage() {
                 <div className="mt-2 sm:px-[4]">
                   <div className="relative w-full aspect-[3/3.5] md:aspect-[3/0.9] 2xl:aspect-[3/1] sm:rounded-2xl overflow-hidden">
                     <Image
-                      src={detailedReportMeta.imageUrl}
+                      src="/CaseStudy/InsightThought.jpg"
                       alt={detailedReportMeta.imageAlt}
                       fill
                       priority
-                      unoptimized
+
                       className="object-cover object-center"
                     />
                   </div>
                 </div>
 
         {/* Body */}
-        <div className="mt-10 grid grid-cols-1 gap-5 px-4 lg:grid-cols-12 lg:gap-5 lg:px-0">
+        <div className="mt-10 grid grid-cols-1 gap-10 px-4 lg:grid-cols-12 lg:gap-10 lg:px-0">
           <aside className="lg:col-span-3">
             <div className="flex flex-col gap-6 lg:sticky lg:top-24">
               <TableOfContents
@@ -404,7 +439,7 @@ export default function DetailedPage() {
               <div key={section.id} className="mb-14">
                 <h2
                   id={section.subsections.length === 0 ? section.id : undefined}
-                  className="scroll-mt-28 mb-6 font-bold text-gray-900 "
+                  className="text-[clamp(1.5rem,2.5vw,3rem)] leading-[1.25] scroll-mt-28 mb-6 font-bold text-gray-900 "
                 >
                   {section.number}.{" "}
                   <EmphasizedText text={section.title} emphasis={section.titleEmphasis} />
@@ -415,9 +450,9 @@ export default function DetailedPage() {
 
                 {section.subsections.map((sub) => (
                   <div key={sub.id} className="mb-10">
-                    <h4 id={sub.id} className="text-body-xl scroll-mt-28 mb-4 font-medium text-gray-900">
+                    <h3 id={sub.id} className="text-body-xl leading-snug scroll-mt-28 mb-4 font-medium ">
                       {sub.number}. {sub.title}
-                    </h4>
+                    </h3>
                     {sub.blocks.map((block, i) => (
                       <BlockView block={block} key={i} />
                     ))}

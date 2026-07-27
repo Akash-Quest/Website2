@@ -23,9 +23,9 @@ const Header3 = () => {
         <div className="flex items-center gap-3 pointer-events-auto">
             <ExpandableSearch bgClassName="bg-white" />
             <div className="inline-flex items-center justify-center px-3 p-3 py-2 bg-[white] text-blue-700 hover:bg-blue-700 hover:text-black transition rounded-full">
-           <button className=" flex items-center gap-.5 text-sm 2xl:text-base font-medium">
+           <Link href="/signin" className=" flex items-center gap-.5 text-sm 2xl:text-base font-medium">
                 Sign in<ArrowUp size={18} className="rotate-45 " />
-            </button>
+            </Link>
             </div>
         </div>
     </motion.header>

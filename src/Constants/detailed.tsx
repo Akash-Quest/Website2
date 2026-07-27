@@ -10,7 +10,8 @@ export type DetailedFigure = {
 export type DetailedBlock =
   | { type: "paragraph"; text: string; leadIn?: string; figure?: DetailedFigure }
   | { type: "list"; items: string[]; intro?: string }
-  | { type: "figure"; figure: DetailedFigure };
+  | { type: "figure"; figure: DetailedFigure }
+  | { type: "table"; title?: string; columns: string[]; rows: string[][] };
 
 export type DetailedSubsection = {
   id: string;
@@ -107,10 +108,65 @@ export const detailedSections: DetailedSection[] = [
               "Policy-led incentives and geopolitical realignment—including the CHIPS Act in the U.S. and India's Semiconductor Mission—are enabling regional self-sufficiency and boosting local manufacturing capacity.",
             ],
           },
+          {
+            type: "figure",
+            figure: {
+              text:"Artificial intelligence (AI) has evolved over the last ten years from algorithmic experimentation to a fundamental source of value in a variety of industries, including manufacturing, healthcare, autonomous systems, and digital infrastructure. Increasingly potent silicon architectures designed for AI workloads have supported this evolution. Demand has significantly shifted towards specialised chips—GPUs, TPUs, FPGAs, and application-specific integrated circuits (ASICs)—made for parallel processing, high throughput, and low latency as AI's computational intensity exceeds the capabilities of general-purpose CPUs.",
+              src: PLACEHOLDER_FIGURE_SRC,
+              alt: "AI Chipset Market Size by Region (USD Billion)",
+              caption: "Fig: AI Chipset Market Size by Region (USD Billion)",
+              description:
+                "Regional distribution of the AI chipset market, highlighting comparative market size in USD billion. The figure illustrates the dominance of North America and Asia-Pacific, driven by strong innovation ecosystems, advanced fabrication capabilities, and large-scale AI adoption, followed by growth trajectories in Europe and emerging markets.",
+              imagePosition: "left",
+            },
+          },
+          {
+            type: "paragraph",
+            text: "The global AI chipset market is undergoing a fundamental transformation due to geopolitical tensions, especially those between the United States and China, which are creating new fault lines throughout the semiconductor value chain. The once-globalized supply chain has become fragmented due to export restrictions on sophisticated chips and lithography equipment as well as growing techno-nationalism. A wave of strategic decoupling has resulted from this, with nations vying to localise crucial phases of chip design, manufacturing, and packaging. The outcome is a fragmented ecosystem in which geopolitical alignment, rather than market forces, increasingly determines access to state-of-the-art AI computing. This results in unequal access to high-performance GPUs and ASICs for AI developers, which in turn causes regional differences in innovation velocity and governance influence.",
+          },
         ],
       },
-      
-      
+      {
+        id: "section-1-4",
+        number: "1.2",
+        title:
+          "Geopolitics, Sovereignty, and Supply Chain Realignment: The Global AI Chip Race and Its Reshaping the Semiconductor Landscape",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "The global AI chipset market is undergoing a fundamental transformation due to geopolitical tensions, especially those between the United States and China, which are creating new fault lines throughout the semiconductor value chain. The once-globalized supply chain has become fragmented due to export restrictions on sophisticated chips and lithography equipment as well as growing techno-nationalism. A wave of strategic decoupling has resulted from this, with nations vying to localise crucial phases of chip design, manufacturing, and packaging. The outcome is a fragmented ecosystem in which geopolitical alignment, rather than market forces, increasingly determines access to state-of-the-art AI computing. This results in unequal access to high-performance GPUs and ASICs for AI developers, which in turn causes regional differences in innovation velocity and governance influence.",
+          },
+          {
+            type: "figure",
+            figure: {
+              src: PLACEHOLDER_FIGURE_SRC,
+              alt: "Global AI Chip Powerhouses: Mapping Regional Semiconductor Value Chain Across the Semiconductor Value Chain",
+              caption:
+                "Fig. Global Semiconductor Production by Country (2024) — A geographically concentrated supply chain with East Asia at the core and rising strategic efforts from the U.S., EU, and India to rebalance global influence.",
+            },
+          },
+          {
+            type: "paragraph",
+            text: "The value chain has bifurcated in two ways. Firstly, it has moved eastward, with Taiwan dominating advanced foundry work and Northeast Asia — Japan, South Korea, and China — supplying essential materials, memory, and packaging capacity. Secondly, protectionist legislation, such as the U.S. CHIPS Act and India's Semiconductor Mission, is creating new manufacturing hubs to reduce reliance on a single region, though this transition remains slow and capital-intensive. Governments are increasingly treating semiconductor capacity as a matter of national security, and this is reshaping where the industry chooses to build next.",
+          },
+          {
+            type: "table",
+            title:
+              "Timeline of Key Geopolitical Actions Shaping the Global Semiconductor Industry (2018-2025)",
+            columns: ["Year", "Event", "Description"],
+            rows: [
+              ["2018", "U.S. Section 301 tariffs", "Initial signal of tech statecraft using tariffs on Chinese tech"],
+              ["2018", "Huawei added to Entity List", "Significant disruption to Huawei's global business"],
+              ["2019", "TSMC halts new orders from Huawei", "Impact of U.S. export controls on foreign chipmakers"],
+              ["2020", "U.S. CHIPS Act passed", "$52B investment to support semiconductor R&D and manufacturing"],
+              ["2022", "Netherlands restricts ASML exports", "Alignment with U.S. policy on limiting China's chip access"],
+              ["2023", "China bans Micron chips in key sectors", "Retaliatory measure targeting U.S. companies"],
+              ["2024", "EU Chips Act deploys €3.3 billion in funding", "Boosts the EU's chip design and manufacturing capacity"],
+              ["2025", "Expected surge in regulated tech exports", "Driven by geopolitical diversification efforts"],
+            ],
+          },
+        ],
+      },
     ],
   },
   {

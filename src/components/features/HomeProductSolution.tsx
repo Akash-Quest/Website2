@@ -21,6 +21,7 @@ const tabContent: Record<
     description: string;
     buttonLabel: string;
     image: string;
+    href: string;
   }
 > = {
   AgriMap: {
@@ -28,7 +29,7 @@ const tabContent: Record<
     heading: (
       <>
         Know every seed.{" "}
-        
+
         Reach <em>Every Farm.</em>
       </>
     ),
@@ -36,6 +37,7 @@ const tabContent: Record<
       "AgriMap gives agriculture departments, banks, and governments a real-time view of seed replacement rates, crop health, and variety adoption across every district down to the block level.",
     buttonLabel: "AgriMap",
     image: "/Productsoln/Pr1.jpg",
+    href: "/products/agrimap",
   },
   "Inspect Global": {
     badge: "SATELLITE · GPS · AI · IOT · FUSION INTELLIGENCE",
@@ -49,6 +51,7 @@ const tabContent: Record<
       "InspectGlobal fuses satellite, GPS, drones, IoT, and AI into one verified record of progress, risk, and compliance so decisions don't rely on someone's word.",
     buttonLabel: "Inspect Global",
     image: "/Productsoln/Pr2.jpg",
+    href: "/products/inspectglobal",
   },
   MineralIQ: {
     badge: "Live · 12 Countries · Global Deployment",
@@ -64,6 +67,7 @@ const tabContent: Record<
       "MineralIQ delivers predictive geology and exploration intelligence to mining companies identifying high-potential zones faster than traditional surveys.",
     buttonLabel: "MineralIQ",
     image: "/Productsoln/Pr3.jpg",
+    href: "/products/mineraliq",
   },
   "Skyquest Labs": {
     badge: "Tele-Pathology · AI-Assisted · 15-Minute Reports",
@@ -79,6 +83,7 @@ const tabContent: Record<
       "Skyquest Labs connects physical diagnostic labs to qualified pathologists remotely delivering verified reports in under 15 minutes. Only data travels. Never the sample.",
     buttonLabel: "Skyquest Labs",
     image: "/Productsoln/Pr4.jpg",
+    href: "/products/sqlabs",
   },
   DeCarbonX: {
     badge: "Article 6 · NDC 3.0 · COP32 · Ethiopia Live",
@@ -94,6 +99,7 @@ for sovereign {" "}
       "DeCarbonX turns climate project ideas into finance-ready instruments carbon credits, green bonds, Article 6 forwards with full national data sovereignty and AI-driven MRV.",
     buttonLabel: "DeCarbonX",
     image: "/Productsoln/Pr5.jpg",
+    href: "/products/decarbon",
   },
   AlwaysOn: {
     badge: "WhatsApp-Native · No App Download · Live",
@@ -107,6 +113,7 @@ for sovereign {" "}
       "AlwaysON delivers AI-powered diagnostic services directly through WhatsApp the world's most-used messaging platform. No app. No barrier. No delay.",
     buttonLabel: "AlwaysOn",
     image: "/Productsoln/Pr6.jpg",
+    href: "/products/alwayson",
   },
 };
 
@@ -252,7 +259,7 @@ export default function OurProductSolution() {
               </p>
             </div>
             <div>
-              <Button variant="primary" iconSize={16}>
+              <Button href={content.href} variant="primary" iconSize={16}>
                   {content.buttonLabel}
                 </Button>
             </div>

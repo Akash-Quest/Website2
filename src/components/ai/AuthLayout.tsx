@@ -24,7 +24,7 @@ export default function AuthLayout({ children, showBack = false }: AuthLayoutPro
       </div>
 
       {/* Right Column: Form Container */}
-      <div className="w-full md:w-1/2 flex flex-col justify-between p-8 sm:p-12 md:p-16 lg:p-24 relative min-h-screen">
+      <div className="w-full md:w-1/2 flex flex-col justify-between p-6 sm:p-8 md:p-10 lg:p-10 2xl:p-20 relative min-h-screen">
         {/* Top Decorative Sparkle */}
         <div className="absolute top-10 right-10 text-[#1D1EE3] text-xs">
           ✦

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import {  Playfair_Display, Inter_Tight  } from "next/font/google";
 import "./globals.css";
-import SiteHeader from "@/components/ui/SiteHeader";
-import Footer from "@/components/ui/Footer";
 
 const inter = Inter_Tight({
   variable: "--font-inter",
@@ -41,9 +39,7 @@ export default function RootLayout({
             __html: `if ('scrollRestoration' in window.history) { window.history.scrollRestoration = 'manual'; } window.scrollTo(0, 0);`,
           }}
         />
-        <SiteHeader />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );
