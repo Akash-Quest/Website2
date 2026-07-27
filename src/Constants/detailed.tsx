@@ -84,10 +84,6 @@ export const detailedSections: DetailedSection[] = [
           "AI-Driven Semiconductor Innovation is Catalyzing a Structural Transformation in the Global Chip Market, Propelling Specialized Architectures and Regional Leadership Amidst Rising Demand for Cloud and Edge AI Workloads",
         blocks: [
           {
-            type: "paragraph",
-            text: "Artificial intelligence (AI) has evolved over the last ten years from algorithmic experimentation to a fundamental source of value in a variety of industries, including manufacturing, healthcare, autonomous systems, and digital infrastructure. Increasingly potent silicon architectures designed for AI workloads have supported this evolution. Demand has significantly shifted towards specialised chips—GPUs, TPUs, FPGAs, and application-specific integrated circuits (ASICs)—made for parallel processing, high throughput, and low latency as AI's computational intensity exceeds the capabilities of general-purpose CPUs.",
-          },
-          {
             type: "figure",
             figure: {
               text:"Artificial intelligence (AI) has evolved over the last ten years from algorithmic experimentation to a fundamental source of value in a variety of industries, including manufacturing, healthcare, autonomous systems, and digital infrastructure. Increasingly potent silicon architectures designed for AI workloads have supported this evolution. Demand has significantly shifted towards specialised chips—GPUs, TPUs, FPGAs, and application-specific integrated circuits (ASICs)—made for parallel processing, high throughput, and low latency as AI's computational intensity exceeds the capabilities of general-purpose CPUs.",

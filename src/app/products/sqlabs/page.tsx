@@ -8,7 +8,7 @@ import SQLabWIF from '@/components/features/SQLabWIF';
 import SQLabsFeatures from '@/components/features/SQLabsFeatures'; 
 import SQLabPlatform from '@/components/features/SQLabPlatform';
 import CaseStudies from "@/components/features/HomeCaseStudie";
-import { caseStudiesData } from "@/Constants/AgriCS";
+import { caseStudiesData } from '@/Constants/caseStudies';
 import FAQSection from "@/components/features/Faq";
 import {SQLabFaqs} from "@/Constants/FaqSQLab";
 import Suscribe from "@/components/features/Suscribe";
