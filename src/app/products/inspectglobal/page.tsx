@@ -8,7 +8,7 @@ import InspectGlobalSteps from '@/components/features/InspectGlobalSteps';
 import InspectGlobalUseCases from '@/components/features/InspectGlobalUseCases'; 
 import InspectGlobalAudience from '@/components/features/InspectGlobalAudience'; 
 import CaseStudies from "@/components/features/HomeCaseStudie";
-import { caseStudiesData } from "@/Constants/AgriCS";
+import { caseStudiesData } from '@/Constants/caseStudies';
 import FAQSection from "@/components/features/Faq";
 import {inspectFaqs} from "@/Constants/FaqInspect";
 import Suscribe from "@/components/features/Suscribe";

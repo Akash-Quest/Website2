@@ -8,7 +8,7 @@ import DecarbonFeatures from '@/components/features/DecarbonFeatures';
 import DecarbonWIF from '@/components/features/DecarbonWIF'; 
 import DecarbonDeps from '@/components/features/DecarbonDeps'
 import CaseStudies from "@/components/features/HomeCaseStudie";
-import { caseStudiesData } from "@/Constants/AgriCS";
+import { caseStudiesData } from '@/Constants/caseStudies';
 import FAQSection from "@/components/features/Faq";
 import {decarbonFaqs} from "@/Constants/FaqDecarbon";
 import Stats3 from '@/components/ui/Stats3';

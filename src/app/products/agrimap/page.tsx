@@ -8,7 +8,7 @@ import AgriMapSteps from '@/components/features/AgriMapSteps';
 import AgriMapUseCases from '@/components/features/AgriMapUseCases'; 
 import AgriMapAudience from '@/components/features/AgriMapAudience'; 
 import CaseStudies from "@/components/features/HomeCaseStudie";
-import { caseStudiesData } from "@/Constants/AgriCS";
+import { caseStudiesData } from '@/Constants/caseStudies';
 import FAQSection from "@/components/features/Faq";
 import {agriFaqs} from "@/Constants/FaqAgri";
 import Suscribe from "@/components/features/Suscribe";
