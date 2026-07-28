@@ -10,7 +10,7 @@ export default function SignInPage() {
   const router = useRouter();
 
   const handleSignIn = () => {
-    router.push('/ai/chat');
+    router.push('/signin');
   };
 
   return (

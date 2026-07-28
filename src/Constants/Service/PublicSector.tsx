@@ -71,7 +71,7 @@ export const PublicSectorHeroData = {
   eyebrow: "Public Sector Advisory",
   heading: (
     <>
-      Building Smarter Governments & <br></br>Stronger
+      Building Smarter Governments & Stronger
       <em className="font-semibold"> Public Institutions</em>
     </>
   ),

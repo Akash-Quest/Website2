@@ -47,7 +47,7 @@ export default function ServiceHeroPage({
           </p>
 
           {/* Heading */}
-          <h1 className="text-center font-bold md:max-w-[75%] mx-auto">{heading}</h1>
+          <h1 className="text-center font-bold md:max-w-[85%] mx-auto">{heading}</h1>
 
           {/* Subheading */}
           <p className=" mx-auto mt-1 text-center mb-5 max-w-[85%] text-muted text-body-lg leading-tight">

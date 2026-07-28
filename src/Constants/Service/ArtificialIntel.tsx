@@ -4,7 +4,7 @@ export const ArtificialHeroData = {
   eyebrow: "Enterprise Artificial Intelligence",
   heading: (
     <>
-      Transforming Enterprises Through Data & <br></br>Artificial{" "}
+      Transforming Enterprises Through Data & Artificial{" "}
       <em className="font-semibold">Intelligence</em>
     </>
   ),
