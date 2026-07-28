@@ -64,16 +64,16 @@ export const ServicedigitalCoreCapabilitiesData = {
 };
 
 export const DigitalEndToEndData = {
-  eyebrow: "What We Offer",
+  eyebrow: "Partners & Ecosystem ",
   heading: (
     <>
-      End-to-End Data & AI Consulting
+      Technology Partners Driving
       <br />
-      <em className="font-semibold"> Services</em>
+      <em className="font-semibold"> Transformation</em>
     </>
   ),
   description:
-    "From strategy to deployment we cover every stage of your data and AI journey, with specialist teams embedded at each phase.",
+    "We leverage leading AI, cloud, data, and analytics technologies to build innovative solutions that create lasting business value.",
   tools: [
     {
       icons: ["/All logos/tensorflow.svg", "/All logos/pytorch.svg"],
