@@ -19,13 +19,13 @@ function InsightHero() {
             </li>
             <li className="text-gray-500">/</li>
 
-            <li className="text-gray-700">Insight Listing</li>
+            <li className="text-gray-700">Insights</li>
           </ol>
         </nav>
         <div className="px-[2] text-center lg:text-left">
         {/* Eyebrow */}
         <p className=" text-primary  mt-8 sm:mt-8 md:mt-1 text-body-sm font-medium">
-          Insight 
+          Insights 
         </p>
 
         {/* Heading */}

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -68,15 +68,16 @@ function StudyCard({ study }: { study: CaseStudy }) {
 
 const PAGE_SIZE = 5;
 
-const CATEGORY_OPTIONS = ["All Insights", "Insights", "Case Study"];
+const CATEGORY_OPTIONS = ["Insights","Case-Studies"];
 const INDUSTRY_OPTIONS = [
-  "AI & Technology",
+  "Public sector",
   "Agriculture",
   "Healthcare",
   "Finance",
   "Manufacturing",
+  "Government"
 ];
-const SORT_OPTIONS = ["Latest First", "Oldest First", "Title A-Z", "Title Z-A"];
+const SORT_OPTIONS = ["Latest First", "Oldest First"];
 
 
 
@@ -85,20 +86,35 @@ function FilterDropdown({
   value,
   options,
   onChange,
+  isOpen,
+  onToggle,
 }: {
   label: string;
   value: string;
   options: string[];
   onChange: (value: string) => void;
+  isOpen: boolean;
+  onToggle: () => void;
 }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleClickOutside = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        onToggle();
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isOpen, onToggle]);
 
   return (
-    <div className="relative flex flex-1 flex-col gap-1.5 ">
+    <div ref={ref} className="relative flex flex-1 flex-col gap-1.5 ">
       <span className="text-xs font-medium text-black/70 ">{label}</span>
       <button
         type="button"
-        onClick={() => setIsOpen((o) => !o)}
+        onClick={onToggle}
         className="flex w-full items-center justify-between rounded-lg border border-black/70 bg-white px-3 py-2.5 text-sm text-gray-700 transition-colors hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
       >
         <span >{value}</span>
@@ -115,7 +131,7 @@ function FilterDropdown({
               type="button"
               onClick={() => {
                 onChange(option);
-                setIsOpen(false);
+                onToggle();
               }}
               className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-50 ${
                 option === value ? "bg-gray-50 font-medium text-gray-900" : "text-gray-600"
@@ -209,6 +225,7 @@ export default function CaseStudyResult() {
   const [category, setCategory] = useState(CATEGORY_OPTIONS[0]);
   const [industry, setIndustry] = useState(INDUSTRY_OPTIONS[0]);
   const [sortBy, setSortBy] = useState(SORT_OPTIONS[0]);
+  const [openFilter, setOpenFilter] = useState<string | null>(null);
   const resultsRef = React.useRef<HTMLDivElement>(null);
 
   const filteredReports = useMemo(() => {
@@ -289,18 +306,24 @@ export default function CaseStudyResult() {
             value={category}
             options={CATEGORY_OPTIONS}
             onChange={handleFilterChange(setCategory)}
+            isOpen={openFilter === "Category"}
+            onToggle={() => setOpenFilter((cur) => (cur === "Category" ? null : "Category"))}
           />
           <FilterDropdown
             label="Industry Filter"
             value={industry}
             options={INDUSTRY_OPTIONS}
             onChange={handleFilterChange(setIndustry)}
+            isOpen={openFilter === "Industry Filter"}
+            onToggle={() => setOpenFilter((cur) => (cur === "Industry Filter" ? null : "Industry Filter"))}
           />
           <FilterDropdown
             label="Sort By"
             value={sortBy}
             options={SORT_OPTIONS}
             onChange={handleFilterChange(setSortBy)}
+            isOpen={openFilter === "Sort By"}
+            onToggle={() => setOpenFilter((cur) => (cur === "Sort By" ? null : "Sort By"))}
           />
         </div>
 

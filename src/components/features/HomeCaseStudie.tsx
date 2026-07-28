@@ -2,6 +2,7 @@
 
 import { useEffect, useState, type ReactNode } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import {
   ArrowLeft,
@@ -182,8 +183,8 @@ export default function CaseStudies({
 
                       <h3 className="mt-2 font-semibold text-body-xl">{card.title}</h3>
 
-                      <button
-                        type="button"
+                      <Link
+                        href={`${viewAllHref}/${card.id}`}
                         aria-label={`${readMoreButton}: ${card.title}`}
                         className="group/learn mt-3 inline-flex items-center text-sm 2xl:text-lg font-semibold text-primary cursor-pointer"
                       >
@@ -196,7 +197,7 @@ export default function CaseStudies({
                             <ArrowUp size={14} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
                           </span>
                         </span>
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -263,8 +264,8 @@ export default function CaseStudies({
                       {card.description}
                     </p>
 
-                    <button
-                      type="button"
+                    <Link
+                      href={`${viewAllHref}/${card.id}`}
                       aria-label={`${readMoreButton}: ${card.title}`}
                       tabIndex={isExpanded ? 0 : -1}
                       className={`group/learn self-end inline-flex items-center overflow-hidden text-sm sm:text-sm font-semibold text-primary transition-all duration-150 cursor-pointer ${
@@ -282,7 +283,7 @@ export default function CaseStudies({
                           <ArrowUp size={14} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
                         </span>
                       </span>
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

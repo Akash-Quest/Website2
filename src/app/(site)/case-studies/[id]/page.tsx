@@ -110,6 +110,36 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
           />
         </div>
       );
+    case "table":
+      return (
+        <div className="my-6 overflow-x-auto rounded-xl border border-gray-200">
+          <table className="w-full min-w-[560px] border-collapse text-sm">
+            <thead>
+              <tr className="bg-[#F7F5F1]">
+                {block.headers.map((header, i) => (
+                  <th
+                    key={i}
+                    className="border-b border-gray-200 px-4 py-3 text-left font-semibold text-gray-900"
+                  >
+                    {header}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {block.rows.map((row, i) => (
+                <tr key={i} className="odd:bg-white even:bg-[#FAFAF8]">
+                  {row.map((cell, j) => (
+                    <td key={j} className="border-b border-gray-100 px-4 py-3 text-gray-700">
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
   }
 }
 export default async function CaseStudyDetailsPage({

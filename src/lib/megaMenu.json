@@ -218,6 +218,13 @@
             "kind": "drilldown",
             "heading": "Reports & Insights",
             "description": "Explore our latest research, whitepapers, case studies, and insights across industries.",
+            "promo": {
+              "image": "https://res.cloudinary.com/dftrsspaz/image/upload/v1780299799/skyquest/insight/dsga3ncwopnn7ut0eygt.webp",
+              "title": "Medical Device Innovation in 2025: Redefining the Frontiers of Clinical Technology",
+              "description": "Exploring the breakthroughs in intelligent diagnostics, wearable therapies, and next-generation clinical technologies.",
+              "href": "/insight/7",
+              "ctaLabel": "Read Article"
+            },
             "categories": [
               {
                 "label": "Materials",
@@ -778,7 +785,7 @@
         { "id": "our-team", "label": "Our Team", "href": "/team" },
         { "id": "partners", "label": "Partners", "href": "/partners" },
         { "id": "insights", "label": "Insights", "href": "/insight" },
-        { "id": "media-news", "label": "Media & News", "href": "/media-news" },
+        { "id": "case-studies", "label": "Case-studies", "href": "/case-studies" },
         { "id": "about-skyquest", "label": "About SkyQuest", "href": "/about" },
         { "id": "privacy-policy", "label": "Privacy Policy", "href": "/privacypolicy" }
       ]

@@ -38,9 +38,192 @@ export const caseStudiesData = {
   readMoreButton: "Read More",
   caseStudies: [
     {
+      id: 7,
+      image:
+        "https://res.cloudinary.com/dftrsspaz/image/upload/v1756392777/skyquest/case-study/ssdmlhlii8brqgp8lyjf.webp",
+      category: "Case Study",
+      type: "Case Snapshot",
+      topic: "Agriculture",
+      date: "TBD",
+      readTime: "5 Min read",
+      title: "Advancing Regional Food Systems in South Asia through SAPLING",
+      titleEmphasis: "through SAPLING",
+      description:
+        "Supported SAPLING in strengthening food systems and addressing malnutrition across South Asia through strategic planning and governance development, delivering a 3-5 year strategic framework and a policy-ready model for nutrition-sensitive value chains.",
+      subtitle: "Strengthening Food Systems and Governance Across South Asia",
+      subtitleEmphasis: "Governance Across South Asia",
+      body: [
+        {
+          type: "paragraph",
+          dropCap: true,
+          text: "SkyQuest was engaged by one of the largest non-profit philanthropies to conduct an institutional landscaping, policy assessment, and strategic planning exercise for SAPLING (South Asian Policy Leadership for Improved Nutrition and Growth). SAPLING is a regional policy platform for transforming food systems to provide access to healthy, affordable, and sustainable diets across South Asia. The project encompassed Bangladesh, Bhutan, India, Nepal, and Sri Lanka, five countries with shared challenges and opportunities in addressing malnutrition.",
+          segments: [
+            "kyQuest was engaged by one of the largest non-profit philanthropies to conduct an institutional landscaping, policy assessment, and strategic planning exercise for ",
+            { text: "SAPLING (South Asian Policy Leadership for Improved Nutrition and Growth)", href: "#" },
+            ". SAPLING is a regional policy platform for transforming food systems to provide access to healthy, affordable, and sustainable diets across South Asia. The project encompassed Bangladesh, Bhutan, India, Nepal, and Sri Lanka, five countries with shared challenges and opportunities in addressing ",
+            { text: "malnutrition", bold: true },
+            ".",
+          ],
+        },
+        { type: "heading", text: "The ", emphasis: "Challenge" },
+        {
+          type: "paragraph",
+          text: "Although SAPLING had received early support for regional policy discussions and nutrition-sensitive value chains, its long-term vision, governance, and operational model needed to be reviewed. Among the top priorities were:",
+        },
+        {
+          type: "list",
+          items: [
+            "Assessing the present extent and influence of SAPLING.",
+            "Finding opportunities and gaps in the future.",
+            "Putting forward an anchor and governance model.",
+            "Outlining a strategic roadmap for the next three to five years.",
+          ],
+        },
+        { type: "heading", text: "Our ", emphasis: "Approach" },
+        {
+          type: "list",
+          items: [
+            "Assessment of Scope & Gaps: Reviewing of SAPLING's mission, structure, activities, and stakeholder engagement.",
+            "Strategic Roadmap: Working with experts to create a shared future vision and timeline.",
+            "Institutional Landscaping: Assessing possible anchor institutions and partnership models to maintain progress.",
+          ],
+        },
+        {
+          type: "callout",
+          title: "Key Outcomes",
+          items: [
+            "Clear 3-5 year Strategic Framework for SAPLING.",
+            "Detailed Institutional Assessment Report with hosting and governance options.",
+            "Results-based Logical Framework & Theory of Change.",
+            "Policy-ready model for Nutrition-Sensitive Value Chains and Public-Private Engagement.",
+            "Two high-impact regional dissemination events with expert participation.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "SkyQuest's role in driving convergence and innovation showcases how technical expertise can unlock inclusive, climate-resilient growth, thereby setting a benchmark for transforming agriculture at scale through a blended approach of policy alignment, agri-tech, and grassroots implementation.",
+        },
+      ] as ContentBlock[],
+    },
+    {
+      id: 8,
+      image:
+        "https://res.cloudinary.com/dftrsspaz/image/upload/v1756393764/skyquest/case-study/eutaiwuc9nuabhnlozdx.webp",
+      category: "Case Study",
+      type: "Case Snapshot",
+      topic: "Agriculture",
+      date: "TBD",
+      readTime: "5 Min read",
+      title: "Using the Private Sector to Develop Climate-Resilient Agri-Supply Chains in India",
+      titleEmphasis: "Agri-Supply Chains in India",
+      description:
+        "Worked with corporates to co-design climate-smart agriculture solutions in India, creating investable models that boost smallholder resilience and strengthen sustainable agri-supply chains.",
+      subtitle: "Mobilizing Private Capital for Climate-Resilient Agriculture",
+      subtitleEmphasis: "Climate-Resilient Agriculture",
+      body: [
+        {
+          type: "paragraph",
+          dropCap: true,
+          text: "SkyQuest, on behalf of a globally renowned philanthropic organization, embarked on a project to promote private sector investment in climate-smart agriculture. Our objective was co-creating investable solutions that enhance smallholder farmer resilience, strengthen supply chains, and stimulate industry-wide climate adaptation.",
+          segments: [
+            "kyQuest, on behalf of a globally renowned philanthropic organization, embarked on a project to promote private sector investment in ",
+            { text: "climate-smart agriculture", href: "#" },
+            ". Our objective was co-creating investable solutions that enhance smallholder farmer resilience, strengthen supply chains, and stimulate industry-wide ",
+            { text: "climate adaptation", bold: true },
+            ".",
+          ],
+        },
+        { type: "heading", text: "The ", emphasis: "Challenge" },
+        {
+          type: "paragraph",
+          text: "Climate change is impacting India's agriculture, causing a reduction in yields, rising cost of inputs, and danger to supply chains. In spite of increased ESG commitments, private adaptation investment remains low, held back by fragmented, pilot-level interventions, a lack of scalable, proven models, weak business cases for climate-smart solutions, and limited awareness of value chain risks.",
+        },
+        { type: "heading", text: "Our ", emphasis: "Approach" },
+        {
+          type: "list",
+          items: [
+            "Listening & Diagnosing: Engaged with 20+ corporates and ecosystem stakeholders, diagnosing ESG initiatives, sourcing risk, and investment obstacles for the players, and sourcing promising Tier 1 and Tier 2 partners.",
+            "Co-Designing Investible Solutions: Developed 2-4 business-ready opportunity resumes, mapping out business cases with ROI models and co-investment streams, with attention directed toward regenerative agriculture, risk-sharing hubs, and climate-smart sourcing coalitions.",
+          ],
+        },
+        {
+          type: "callout",
+          title: "Key Outcomes",
+          items: [
+            "4-5 corporates agreed to co-invest.",
+            "2-4 climate-smart opportunities ready for scale.",
+            "A clear argument for private sector involvement in adaptation finance.",
+            "A blueprint to promote resilient, long-term sourcing models.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "With support offered to businesses in converting supply chain threat into strategic investment, SkyQuest's consulting strategy is catalyzing climate action in agriculture. Collaboration in co-developing such climate-resilient solutions with the business community enables resilient sourcing models to be implemented that protect smallholder farmers while also serving the corporate ESG goals and long-term profitability of corporate firms.",
+        },
+      ] as ContentBlock[],
+    },
+    {
+      id: 9,
+      image:
+        "https://res.cloudinary.com/dftrsspaz/image/upload/v1756391365/skyquest/case-study/enfvgjvult42gqxch9ue.webp",
+      category: "Case Study",
+      type: "Case Snapshot",
+      topic: "Agriculture",
+      date: "TBD",
+      readTime: "5 Min read",
+      title: "Landscaping of Livestock Technologies from Public and Private Sector Institutions in India",
+      titleEmphasis: "Public and Private Sector Institutions in India",
+      description:
+        "Conducted a first-of-its-kind study mapping 500+ livestock technologies across India, identifying the top 25 scalable solutions from both public and private sectors to transform smallholder farming and boost productivity.",
+      subtitle: "Mapping 500+ Innovations to Scale Livestock Productivity in India",
+      subtitleEmphasis: "Scale Livestock Productivity in India",
+      body: [
+        {
+          type: "paragraph",
+          dropCap: true,
+          text: "India's livestock sector accounts for more than 25% of agricultural GDP. Still, productivity remains low, especially among smallholder farmers. To unlock its full potential, SkyQuest, with support from one of the largest private foundations in the world, conducted a first-of-its-kind study mapping 500+ livestock technologies developed by public and private institutions across India.",
+          segments: [
+            "ndia's livestock sector accounts for more than 25% of agricultural GDP. Still, productivity remains low, especially among smallholder farmers. To unlock its full potential, SkyQuest, with support from one of the largest private foundations in the world, conducted a ",
+            { text: "first-of-its-kind study mapping 500+ livestock technologies", href: "#" },
+            " developed by public and private institutions across ",
+            { text: "India", bold: true },
+            ".",
+          ],
+        },
+        { type: "heading", text: "The ", emphasis: "Challenge" },
+        {
+          type: "paragraph",
+          text: "Despite vast livestock numbers, farmers in India still struggle with fragmented, low-adoption technology access, creating a need for scalable, high-impact solutions ready for on-ground deployment.",
+        },
+        { type: "heading", text: "Our ", emphasis: "Approach" },
+        {
+          type: "list",
+          items: [
+            "518 technologies mapped across 112 private and 78 public players.",
+            "Assessed with panels of experts chosen by the GoI's Animal Husbandry Commissioner.",
+            "Shortlisted the top 25 scalable solutions using a customized Technology Evaluation Matrix.",
+            "Examined application, region, readiness, and impact potential to direct policy and investment.",
+          ],
+        },
+        {
+          type: "callout",
+          title: "Key Outcomes",
+          items: [
+            "62% of technologies were found to be ready for the market, and 34% had already been commercialized.",
+            "A strategic inventory covering five domains, health, nutrition, genetics, reproduction, and productivity, was constructed.",
+            "52% of innovations were uncovered to have come from private sector players.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "This project shows how SkyQuest can offer high-impact, industry-specific technology landscaping for the livestock sector. Through extensive primary research, informed consultation, and rigorous evaluation, we built a solid foundation to accelerate the adoption of innovations across India's livestock value chain.",
+        },
+      ] as ContentBlock[],
+    },
+    {
       id: 1,
       image: "/CaseStudy/re1.jpg",
-      category: "Insights",
+      category: "Case-studies",
       type: "Case Snapshot",
       topic: "Agriculture & Livestock",
       date: "April 27, 2026",

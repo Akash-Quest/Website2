@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -9,9 +9,11 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { ArrowUp } from "iconsax-react";
-import { reports, type Report } from "@/lib/reports";
+import { insightData, type Insight } from "@/Constants/Insight ";
 
-function ReportCard({ report }: { report: Report }) {
+const insights = insightData.caseStudies;
+
+function InsightCard({ insight }: { insight: Insight }) {
   const [isHovered, setIsHovered] = useState(false);
   const router = useRouter();
 
@@ -23,27 +25,27 @@ function ReportCard({ report }: { report: Report }) {
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={() => router.push(`/insight/${report.id}`)}
+      onClick={() => router.push(`/insight/${insight.id}`)}
     >
         <div className="w-full sm:flex-1 flex flex-col justify-between min-w-0">
           <div className="min-w-0">
             <div className="flex items-center gap-1.5 text-xs text-muted">
-              <span>{report.type}</span>
+              <span>{insight.type}</span>
               <span className="inline-block h-1 w-1 rounded-full bg-muted" />
-              <span>{report.date}</span>
+              <span>{insight.date}</span>
             </div>
 
             <h3 className="mt-2 sm:truncate font-semibold text-gray-900 text-body-xl">
-              {report.title}
+              {insight.title}
             </h3>
 
             <p className="mt-3  leading-tight text-muted">
-              {report.description}
+              {insight.description}
             </p>
           </div>
 
           <Link
-            href={`/insight/${report.id}`}
+            href={`/insight/${insight.id}`}
             onClick={(e) => e.stopPropagation()}
             className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary "
           >
@@ -61,8 +63,8 @@ function ReportCard({ report }: { report: Report }) {
       {/* Right: Image */}
       <div className="w-full sm:w-56 flex-shrink-0 overflow-hidden rounded-lg">
       <Image
-        src={report.thumbnailUrl}
-        alt={report.imageAlt}
+        src={insight.image}
+        alt={insight.title}
         width={400}
         height={300}
         unoptimized
@@ -75,15 +77,16 @@ function ReportCard({ report }: { report: Report }) {
 
 const PAGE_SIZE = 5;
 
-const CATEGORY_OPTIONS = ["All Insights", "Report", "Whitepaper", "Case Study"];
+const CATEGORY_OPTIONS = ["Insights","Case-Studies"];
 const INDUSTRY_OPTIONS = [
-  "AI & Technology",
+  "Public sector",
   "Agriculture",
   "Healthcare",
   "Finance",
   "Manufacturing",
+  "Government"
 ];
-const SORT_OPTIONS = ["Latest First", "Oldest First", "Title A-Z", "Title Z-A"];
+const SORT_OPTIONS = ["Latest First", "Oldest First"];
 
 
 
@@ -92,20 +95,35 @@ function FilterDropdown({
   value,
   options,
   onChange,
+  isOpen,
+  onToggle,
 }: {
   label: string;
   value: string;
   options: string[];
   onChange: (value: string) => void;
+  isOpen: boolean;
+  onToggle: () => void;
 }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleClickOutside = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        onToggle();
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isOpen, onToggle]);
 
   return (
-    <div className="relative flex flex-1 flex-col gap-1.5 ">
+    <div ref={ref} className="relative flex flex-1 flex-col gap-1.5 ">
       <span className="text-xs font-medium text-black/70 ">{label}</span>
       <button
         type="button"
-        onClick={() => setIsOpen((o) => !o)}
+        onClick={onToggle}
         className="flex w-full items-center justify-between rounded-lg border border-black/70 bg-white px-3 py-2.5 text-sm text-gray-700 transition-colors hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
       >
         <span >{value}</span>
@@ -122,7 +140,7 @@ function FilterDropdown({
               type="button"
               onClick={() => {
                 onChange(option);
-                setIsOpen(false);
+                onToggle();
               }}
               className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-50 ${
                 option === value ? "bg-gray-50 font-medium text-gray-900" : "text-gray-600"
@@ -216,13 +234,14 @@ export default function InsightsResult() {
   const [category, setCategory] = useState(CATEGORY_OPTIONS[0]);
   const [industry, setIndustry] = useState(INDUSTRY_OPTIONS[0]);
   const [sortBy, setSortBy] = useState(SORT_OPTIONS[0]);
+  const [openFilter, setOpenFilter] = useState<string | null>(null);
   const resultsRef = React.useRef<HTMLDivElement>(null);
 
-  const filteredReports = useMemo(() => {
+  const filteredInsights = useMemo(() => {
     const list =
       category === "All Insights"
-        ? [...reports]
-        : reports.filter((r) => r.type === category);
+        ? [...insights]
+        : insights.filter((r) => r.category === category);
 
     if (sortBy === "Title A-Z") {
       list.sort((a, b) => a.title.localeCompare(b.title));
@@ -230,8 +249,8 @@ export default function InsightsResult() {
       list.sort((a, b) => b.title.localeCompare(a.title));
     } else {
       list.sort((a, b) => {
-        const da = new Date(a.date.replace(/^Report\s+/, "")).getTime();
-        const db = new Date(b.date.replace(/^Report\s+/, "")).getTime();
+        const da = new Date(a.date.replace(/^Insights?\s+/, "")).getTime();
+        const db = new Date(b.date.replace(/^Insights?\s+/, "")).getTime();
         return sortBy === "Oldest First" ? da - db : db - da;
       });
     }
@@ -239,12 +258,12 @@ export default function InsightsResult() {
     return list;
   }, [category, sortBy]);
 
-  const totalPages = Math.ceil(filteredReports.length / PAGE_SIZE);
+  const totalPages = Math.ceil(filteredInsights.length / PAGE_SIZE);
 
   const visibleCards = useMemo(() => {
     const start = (currentPage - 1) * PAGE_SIZE;
-    return filteredReports.slice(start, start + PAGE_SIZE);
-  }, [filteredReports, currentPage]);
+    return filteredInsights.slice(start, start + PAGE_SIZE);
+  }, [filteredInsights, currentPage]);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
@@ -277,7 +296,7 @@ export default function InsightsResult() {
         <div className="">
           <div className="flex items-center justify-between">
             <h2 className=" font-semibold text-gray-900 text-body-xl" >
-              {filteredReports.length} Results
+              {filteredInsights.length} Results
             </h2>
             <button
               type="button"
@@ -296,25 +315,31 @@ export default function InsightsResult() {
             value={category}
             options={CATEGORY_OPTIONS}
             onChange={handleFilterChange(setCategory)}
+            isOpen={openFilter === "Category"}
+            onToggle={() => setOpenFilter((cur) => (cur === "Category" ? null : "Category"))}
           />
           <FilterDropdown
             label="Industry Filter"
             value={industry}
             options={INDUSTRY_OPTIONS}
             onChange={handleFilterChange(setIndustry)}
+            isOpen={openFilter === "Industry Filter"}
+            onToggle={() => setOpenFilter((cur) => (cur === "Industry Filter" ? null : "Industry Filter"))}
           />
           <FilterDropdown
             label="Sort By"
             value={sortBy}
             options={SORT_OPTIONS}
             onChange={handleFilterChange(setSortBy)}
+            isOpen={openFilter === "Sort By"}
+            onToggle={() => setOpenFilter((cur) => (cur === "Sort By" ? null : "Sort By"))}
           />
         </div>
 
         <div className="mt-3 border-t border-gray-200" />
         <div className="mt-8 grid grid-cols-1 gap-4">
-          {visibleCards.map((report, idx) => (
-            <ReportCard report={report} key={idx} />
+          {visibleCards.map((insight, idx) => (
+            <InsightCard insight={insight} key={idx} />
           ))}
         </div>
 

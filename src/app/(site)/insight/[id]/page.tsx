@@ -1,15 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getReportById, reports, type ContentBlock } from "@/lib/reports";
+import type { ContentBlock } from "@/lib/reports";
+import { getInsightById, insightData } from "@/Constants/Insight ";
 import { FacebookIcon, LinkedInIcon, XIcon } from "@/components/icons/SocialIcons";
 import { ArchiveTick, ExportSquare, Import, Link2, Sms, Printer } from "iconsax-react";
 import CaseStudies from "@/components/features/HomeCaseStudie";
-import { insightData } from "@/Constants/Insight ";
 import Suscribe from "@/components/features/Suscribe";
 
+const DEFAULT_AUTHORS = [
+  { name: "SkyQuest Technology Consulting", org: "SkyQuest Technology Consulting" },
+];
+
 export function generateStaticParams() {
-  return reports.map((report) => ({ id: String(report.id) }));
+  return insightData.caseStudies.map((insight) => ({ id: String(insight.id) }));
 }
 
 function EmphasizedText({ text, emphasis }: { text: string; emphasis?: string }) {
@@ -26,7 +30,7 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
     case "paragraph":
       if (block.segments) {
         return (
-          <p className="mb-5  text-gray-700">
+          <p className="mb-3 tracking-wide leading-snug text-gray-700">
             {block.dropCap && (
               <span className="float-left mr-3 font-playfair text-5xl font-bold leading-[0.8] text-gray-900">
                 {block.text.charAt(0)}
@@ -53,7 +57,7 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
         );
       }
       return (
-        <p className="mb-5  text-gray-700">
+        <p className="mb-5 tracking-wide leading-snug text-gray-700">
           {block.text}
         </p>
       );
@@ -109,6 +113,36 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
           />
         </div>
       );
+    case "table":
+      return (
+        <div className="my-6 overflow-x-auto rounded-xl border border-gray-200">
+          <table className="w-full min-w-[560px] border-collapse text-sm">
+            <thead>
+              <tr className="bg-[#F7F5F1]">
+                {block.headers.map((header, i) => (
+                  <th
+                    key={i}
+                    className="border-b border-gray-200 px-4 py-3 text-left font-semibold text-gray-900"
+                  >
+                    {header}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {block.rows.map((row, i) => (
+                <tr key={i} className="odd:bg-white even:bg-[#FAFAF8]">
+                  {row.map((cell, j) => (
+                    <td key={j} className="border-b border-gray-100 px-4 py-3 text-gray-700">
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
   }
 }
 
@@ -131,15 +165,15 @@ export default async function InsightDetailsPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const report = getReportById(Number(id));
+  const insight = getInsightById(Number(id));
 
-  if (!report) {
+  if (!insight) {
     notFound();
   }
 
-  const titleBase = report.titleEmphasis
-    ? report.title.slice(0, report.title.length - report.titleEmphasis.length)
-    : report.title;
+  const titleBase = insight.titleEmphasis
+    ? insight.title.slice(0, insight.title.length - insight.titleEmphasis.length)
+    : insight.title;
 
   return (
     <>
@@ -161,7 +195,7 @@ export default async function InsightDetailsPage({
             </li>
             <li className="text-gray-500">/</li>
             <li className="text-gray-700 truncate max-w-[200px] sm:max-w-none">
-              {report.title}
+              {insight.title}
             </li>
           </ol>
         </nav>
@@ -170,15 +204,15 @@ export default async function InsightDetailsPage({
           {/* Heading */}
           <div className="flex flex-col gap-6 mt-8 sm:mt-8 md:mt-2">
             <h1 className=" font-bold">
-              <EmphasizedText text={titleBase} emphasis={report.titleEmphasis} />
+              <EmphasizedText text={titleBase} emphasis={insight.titleEmphasis} />
             </h1>
           </div>
 
           {/* Meta row */}
           <div className="mt-4 flex flex-wrap items-center justify-between gap-4 border-gray-800 py-3">
             <p className="text-gray-800">
-              {report.type} <span className="mx-1.5 text-gray-800">|</span> {report.date}{" "}
-              <span className="mx-1.5 text-gray-800">|</span> {report.readTime}
+              {insight.type} <span className="mx-1.5 text-gray-800">|</span> {insight.date}{" "}
+              <span className="mx-1.5 text-gray-800">|</span> {insight.readTime}
             </p>
             <div className="flex items-center ">
               {PAGE_ACTIONS.map(({ label, icon: Icon }) =>
@@ -231,8 +265,8 @@ export default async function InsightDetailsPage({
         <div className="mt-2 sm:px-[4]">
           <div className="relative w-full aspect-[3/3.5] md:aspect-[3/0.9] 2xl:aspect-[3/1] sm:rounded-2xl overflow-hidden">
             <Image
-              src={report.imageUrl}
-              alt={report.imageAlt}
+              src={insight.image}
+              alt={insight.title}
               fill
               priority
               unoptimized
@@ -245,10 +279,10 @@ export default async function InsightDetailsPage({
         <div className="mt-10 grid grid-cols-1 gap-10 px-4 lg:grid-cols-10 lg:gap-14 lg:px-0">
           <article className="min-w-0 lg:col-span-7">
             <h3 className="mb-6 tracking-wide text-gray-700">
-              {report.description}
+              {insight.description}
             </h3>
 
-            {report.body.map((block, i) => (
+            {insight.body.map((block, i) => (
               <ContentBlockView block={block} key={i} />
             ))}
           </article>
@@ -260,12 +294,12 @@ export default async function InsightDetailsPage({
                   AUTHORS
                 </span>
                 <span className="text-xs text-gray-500">
-                  Published on {report.date} <span className="mx-1">|</span> {report.readTime}
+                  Published on {insight.date} <span className="mx-1">|</span> {insight.readTime}
                 </span>
               </div>
 
               <div className="flex flex-col gap-3 rounded-lg bg-white p-2 sm:p-2 2xl:p-4">
-                {report.authors.map((author) => (
+                {DEFAULT_AUTHORS.map((author) => (
                   <div key={author.name} className="flex items-center gap-3">
                     <span className="w-9 shrink-0 select-none bg-gradient-to-r from-primary to-[#7C3AED] bg-clip-text text-xl font-extrabold italic leading-none text-transparent">
                       SQ
