@@ -48,7 +48,7 @@ const CARDS: CardDef[] = [
   {
     key: "office",
     alt: "Team working in the office",
-    defaultSrc: "/Team/Officedesk.jpg",
+    defaultSrc: "/Team/officedesk.jpg",
     positionClass: "left-[40.28%] top-[4.10%] w-[44.22%] h-[59.22%]",
     priority: true,
   },

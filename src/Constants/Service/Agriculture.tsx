@@ -99,7 +99,7 @@ export const AgricultureCoreCapabilitiesData = {
   description:
     "We support governments, development organizations, agribusinesses, and rural enterprises with integrated advisory services that strengthen agricultural productivity, resilience, value chains, and food systems.",
 
-  imageSrc: "/Service/AgriCULTURE/CoreCapabilities.jpg",
+  imageSrc: "/service/Agriculture/CoreCapabilities.jpg",
   imageAlt: "Agriculture and food systems",
 
   capabilities: [

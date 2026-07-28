@@ -19,7 +19,7 @@ const cards: CapabilityCard[] = [
     description:
       "We help organizations identify high-value AI opportunities, develop adoption roadmaps, establish governance frameworks, and build the capabilities required to scale AI responsibly and effectively.",
     bgColor: "#FFFFFF",
-    imageUrl:"/Service/Digital/mosaic.jpg",
+    imageUrl:"/service/Digital/mosaic.jpg",
     imageAlt: "Colorful abstract fluid ribbon graphic",
   },
   {
@@ -28,7 +28,7 @@ const cards: CapabilityCard[] = [
     description:
       "Transforming data into actionable insights through modern analytics, predictive modeling, business intelligence, and decision-support systems",
     bgColor: "#E5E5E5",
-    imageUrl:"/Service/Digital/Datainteligence2.jpg",
+    imageUrl:"/service/Digital/Datainteligence2.jpg",
      imageAlt: "Dark iridescent abstract 3D blob graphic",
   },
   {
@@ -37,7 +37,7 @@ const cards: CapabilityCard[] = [
     description:
       "Enabling organizations to modernize operations, digitize processes, enhance customer experiences, and accelerate technology-driven transformation.",
     bgColor: "#F5E7D6",
-    imageUrl:"/Service/Digital/DigitalTransformation.jpg",
+    imageUrl:"/service/Digital/DigitalTransformation.jpg",
      imageAlt: "Iridescent abstract chrome swirl graphic",
   },
   {
@@ -45,7 +45,7 @@ const cards: CapabilityCard[] = [
     title: "Intelligent Automation & Emerging Technologies",
     description:"Leveraging automation, AI-powered workflows, and next-generation technologies to increase efficiency, reduce operational complexity, and drive innovation.",
     bgColor: "#E5E2F8",
-     imageUrl:"/Service/Digital/Inteligents.jpg",
+     imageUrl:"/service/Digital/Inteligents.jpg",
      imageAlt: "Iridescent abstract chrome swirl graphic",
   },
   {
@@ -54,7 +54,7 @@ const cards: CapabilityCard[] = [
     description:
       "Supporting governments and institutions in building scalable digital ecosystems that improve service delivery, strengthen governance, and enable data-driven decision-making.",
     bgColor: "#EED8EB",
-    imageUrl:"/Service/Digital/DigitalPublic.jpg",
+    imageUrl:"/service/Digital/DigitalPublic.jpg",
      imageAlt: "Gold and purple iridescent abstract swirl graphic",
   },
 ];

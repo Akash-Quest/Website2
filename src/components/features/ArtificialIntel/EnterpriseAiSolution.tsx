@@ -8,7 +8,7 @@ const categories = [
   {
     id: "ai-ml",
     label: "AI & Machine Learning",
-    image: "/Service/ArtificialIntel/Ai.jpg",
+    image: "/service/ArtificialIntel/Ai.jpg",
     points: [
       "AI Strategy & Roadmap",
       "Generative AI Implementation (LLMs, Copilots, Chatbots)",
@@ -21,7 +21,7 @@ const categories = [
   {
     id: "digital-transformation",
     label: "Digital Transformation",
-    image: "/Service/ArtificialIntel/Digital.jpg",
+    image: "/service/ArtificialIntel/digital.jpg",
     points: [
       "Business Process Reengineering",
       "Legacy System Modernization",
@@ -32,7 +32,7 @@ const categories = [
   {
     id: "data-intelligence",
     label: "Data & Intelligence",
-    image: "/Service/ArtificialIntel/Data.jpg",
+    image: "/service/ArtificialIntel/Data.jpg",
     points: [
       "Data Strategy & Governance",
       "Data Engineering & Pipelines",
@@ -44,7 +44,7 @@ const categories = [
   {
     id: "it-infrastructure",
     label: "IT Infrastructure & Cybersecurity",
-    image: "/Service/ArtificialIntel/ItCyber.jpg",
+    image: "/service/ArtificialIntel/ItCyber.jpg",
     points: [
       "Infrastructure Assessment & Design",
       "Network & Cloud Security",
@@ -58,7 +58,7 @@ const categories = [
   {
     id: "managed-services",
     label: "Managed Services",
-    image: "/Service/ArtificialIntel/ManagedService.jpg",
+    image: "/service/ArtificialIntel/ManagedService.jpg",
     points: [
       "24/7 Monitoring & Support",
       "Infrastructure Management",

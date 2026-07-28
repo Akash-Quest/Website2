@@ -93,7 +93,7 @@ export const SocialImpactCoreCapabilitiesData = {
   description:
     "Our methodology integrates strategy, research, implementation, and impact measurement to help organizations address complex challenges and achieve sustainable development outcomes at scale.",
 
-  imageSrc: "/Service/SocialImpact/CoreCapabilities.jpg",
+  imageSrc: "/service/SocialImpact/corecapabilities.jpg",
   imageAlt: "Our Approach & Methodology",
 
   capabilities: [

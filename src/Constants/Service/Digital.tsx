@@ -27,7 +27,7 @@ export const ServicedigitalCoreCapabilitiesData = {
   ),
   description:
     "We combine world-class data engineering with deep domain knowledge to deliver AI solutions that actually work in production, not just in proof-of-concept.",
-  imageSrc: "/Service/Digital/digitalocean.png",
+  imageSrc: "/service/Digital/digitalocean.png",
   imageAlt: "Submersible exploring the deep ocean",
   capabilities: [
     {

@@ -390,7 +390,7 @@ export default function DetailedPage() {
                 <div className="mt-2 sm:px-[4]">
                   <div className="relative w-full aspect-[3/3.5] md:aspect-[3/0.9] 2xl:aspect-[3/1] sm:rounded-2xl overflow-hidden">
                     <Image
-                      src="/CaseStudy/InsightThought.jpg"
+                      src="/CaseStudy/insightThought.jpg"
                       alt={detailedReportMeta.imageAlt}
                       fill
                       priority
