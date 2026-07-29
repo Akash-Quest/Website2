@@ -113,7 +113,7 @@ export default function FAQSection({
                 }}
                 className="overflow-hidden transition-all duration-300 ease-in-out"
               >
-                <p className=" text-muted leading-relaxed pr-10 pt-2">{faq.answer}</p>
+                <span className=" p text-muted leading-relaxed pr-10 pt-2">{faq.answer}</span>
               </div>
             </div>
           ))}
