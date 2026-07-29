@@ -69,7 +69,7 @@ function InsightCard({ insight }: { insight: Insight }) {
         height={300}
         unoptimized
         className="w-full h-40 sm:h-full rounded-lg object-cover flex-shrink-0 transition-transform duration-500 group-hover:scale-105"
-      />
+      />  
       </div>
     </div>
   );

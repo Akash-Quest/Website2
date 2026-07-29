@@ -77,7 +77,7 @@ const INDUSTRY_OPTIONS = [
   "Manufacturing",
   "Government"
 ];
-const SORT_OPTIONS = ["Latest First", "Oldest First"];
+const SORT_OPTIONS = ["Latest First", "Oldest First"];    
 
 
 
