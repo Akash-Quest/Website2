@@ -13,22 +13,25 @@ interface ButtonProps {
 }
 const VARIANT_STYLES: Record<
   NonNullable<ButtonProps["variant"]>,
-  { button: string; icon: string; text: string }
+  { button: string; icon: string; text: string; textTransition: string }
 > = {
   primary: {
     button: "bg-primary text-white",
     icon: "bg-white text-primary",
     text: "",
+    textTransition: "transition-colors duration-[650ms] delay-[250ms]",
   },
   secondary: {
     button: "bg-[#EEFCD1] text-black border border-gray-300",
     icon: "bg-white text-primary",
     text: "group-hover/btn:text-white",
+    textTransition: "transition-colors duration-[650ms] delay-[250ms]",
   },
   white: {
     button: "bg-white text-primary border border-gray-200",
     icon: "bg-primary text-white",
     text: "group-hover/btn:text-white",
+    textTransition: "transition-colors duration-[200ms]",
   },
 };
 const Button: React.FC<ButtonProps> = ({
@@ -40,8 +43,12 @@ const Button: React.FC<ButtonProps> = ({
   children,
   onClick,
 }) => {
-  const { button: buttonStyles, icon: iconStyles, text: textHoverStyles } =
-    VARIANT_STYLES[variant];
+  const {
+    button: buttonStyles,
+    icon: iconStyles,
+    text: textHoverStyles,
+    textTransition: textTransitionStyles,
+  } = VARIANT_STYLES[variant];
   return (
     <Link
       href={href}
@@ -58,7 +65,7 @@ const Button: React.FC<ButtonProps> = ({
     >
       {/* Round black bubble that sweeps in from the top-left corner on hover */}
       <span className="pointer-events-none absolute -top-[300px] -left-[300px] w-[600px] h-[600px] -z-10 rounded-full bg-black scale-0 transition-transform duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:scale-100" />
-      <span className={`relative z-10 transition-colors duration-[650ms] delay-[250ms] ${textHoverStyles}`}>
+      <span className={`relative z-10 ${textTransitionStyles} ${textHoverStyles}`}>
         {children}
       </span>
       

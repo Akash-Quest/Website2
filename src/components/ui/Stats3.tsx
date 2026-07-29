@@ -2,14 +2,24 @@
 
 import { useEffect, useRef } from "react";
 
-const StatsGridThree = () => {
-  const countupObserver = useRef<IntersectionObserver | null>(null);
+interface Stat {
+  target: number;
+  suffix: string;
+  label: string;
+}
 
-  const stats = [
-    { target: 85, suffix: "+", label: "AI Engagements" },
-    { target: 3.2, suffix: "x", label: "Avg. ROI Delivered" },
-    { target: 40, suffix: "%", label: "Avg. Cost Reduction" },
-  ];
+interface StatsGridThreeProps {
+  stats?: Stat[];
+}
+
+const defaultStats: Stat[] = [
+  { target: 85, suffix: "+", label: "AI Engagements" },
+  { target: 3.2, suffix: "x", label: "Avg. ROI Delivered" },
+  { target: 40, suffix: "%", label: "Avg. Cost Reduction" },
+];
+
+const StatsGridThree = ({ stats = defaultStats }: StatsGridThreeProps) => {
+  const countupObserver = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
     const animCount = (element: HTMLElement, target: number) => {
