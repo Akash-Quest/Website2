@@ -233,7 +233,7 @@ export default function CaseStudies({
                     className={`absolute inset-x-0 bottom-0 z-10 flex flex-col overflow-hidden rounded-2xl bg-white/55 backdrop-blur-lg backdrop-brightness-125 border-none text-[#15121F] transition-all duration-[250ms] ease-out [clip-path:inset(-1px_round_1rem)] ${
                       isExpanded
                         ? "h-full p-5 "
-                        : "h-[6rem] 2xl:h-[4.5rem] p-3 m-3 items-center"
+                        : "h-[6rem]  p-3 m-3 items-center"
                     }`}
                   >
                     <p
