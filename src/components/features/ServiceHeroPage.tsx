@@ -32,7 +32,7 @@ export default function ServiceHeroPage({
             </li>
             <li className="text-gray-500">/</li>
             <li>
-              <Link href="/what-we-do" className="hover:text-muted transition-colors">
+              <Link href="" className="hover:text-muted transition-colors">
                 What We Do
               </Link>
             </li>

@@ -17,7 +17,7 @@ function EmphasizedText({ text, emphasis }: { text: string; emphasis?: string })
   return (
     <>
       {text}
-      {emphasis && <em className="font-semibold">{emphasis}</em>}
+      {emphasis && <em className="font-bold">{emphasis}</em>}
     </>
   );
 }
@@ -27,9 +27,9 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
     case "paragraph":
       if (block.segments) {
         return (
-          <p className="mb-5 tracking-wide leading-snug text-gray-700">
+          <p className="mb-3 report-p tracking-tight leading-normal text-gray-700">
             {block.dropCap && (
-              <span className="float-left mr-3 font-playfair text-5xl font-bold leading-[0.8] text-gray-900">
+              <span className="float-left mr-2 font-playfair text-5xl font-bold leading-[0.9] text-gray-900">
                 {block.text.charAt(0)}
               </span>
             )}
@@ -54,13 +54,18 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
         );
       }
       return (
-        <p className="mb-5 tracking-wide leading-snug text-gray-700">
-          {block.text}
+        <p className="mb-3 report-p tracking-tight leading-normal text-gray-700">
+          {block.dropCap && (
+            <span className="float-left mr-3 font-playfair text-5xl font-bold leading-[0.8] text-gray-900">
+              {block.text.charAt(0)}
+            </span>
+          )}
+          {block.dropCap ? block.text.slice(1) : block.text}
         </p>
       );
     case "heading":
       return (
-        <h3 className="mt-12 mb-3 font-bold text-gray-900">
+        <h3 className="mt-1 mb-3 font-bold text-gray-900">
           <EmphasizedText text={block.text} emphasis={block.emphasis} />
         </h3>
       );
@@ -72,7 +77,7 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
       return (
         <ul className="mb-4 space-y-2">
           {block.items.map((item, i) => (
-            <li key={i} className="flex gap-2 text-sm sm:text-base tracking-wide leading-snug text-gray-700">
+            <li key={i} className="flex gap-2 report-p tracking-tight leading-normal text-gray-700">
               <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-gray-400" />
               <span>{item}</span>
             </li>
@@ -82,19 +87,19 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
     case "callout":
       return (
         <div className="my-6 rounded-xl border border-gray-200 bg-[#F7F5F1] p-5 sm:p-6 bg-white">
-          {block.title && <p className="mb-3 font-bold text-gray-900 mb-3">{block.title}</p>}
-          {block.text && <p className="mb-3 tracking-wide leading-snug text-gray-700">{block.text}</p>}
+          {block.title && <p className="mb-3 font-bold text-gray-900">{block.title}</p>}
+          {block.text && <p className="mb-3 report-p tracking-tight leading-normal text-gray-700">{block.text}</p>}
           {block.items && (
             <ul className="space-y-2">
               {block.items.map((item, i) => (
-                <li key={i} className="flex gap-2 text-sm tracking-wide leading-snug text-gray-700">
+                <li key={i} className="flex gap-2 report-p tracking-tight leading-normal text-gray-700">
                   <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-gray-400" />
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
           )}
-          {block.footer && <p className="mt-3 tracking-wide leading-snug text-gray-700">{block.footer}</p>}
+          {block.footer && <p className="mt-3 report-p tracking-tight leading-normal text-gray-700">{block.footer}</p>}
         </div>
       );
     case "image":
@@ -181,25 +186,25 @@ export default async function CaseStudyDetailsPage({
               </Link>
             </li>
             <li className="text-gray-500">/</li>
-            <li className="text-gray-700 lowercase truncate max-w-[200px] sm:max-w-none">
+            <li className="text-gray-700 truncate max-w-[200px] sm:max-w-none">
               {study.topic}
             </li>
           </ol>
         </nav>
 
-<div className="relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen border-b border-[#03030F33]" />
+<div className="relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen border-b border-[#03030F]/20" />
 
         <div className="px-[2]">
           {/* Category + Heading */}
           <div className="flex flex-col gap-2 mt-8 sm:mt-8 md:mt-2 pb-6">
-            <span className="text-sm font-semibold text-primary">{study.topic}</span>
-            <h1 className="font-playfair font-bold">
+            <span className="text-sm font-medium text-primary">{study.topic}</span>
+            <h1 className=" font-bold">
               <EmphasizedText text={titleBase} emphasis={study.titleEmphasis} />
             </h1>
           </div>
         </div>
 
-<div className="relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen border-b border-[#03030F33]" />
+<div className="relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen border-b border-[#03030F]/20" />
 
         {/* Hero Image */}
         <div className="mt-6 sm:px-[4]">

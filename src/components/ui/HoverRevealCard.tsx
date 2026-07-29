@@ -36,7 +36,7 @@ export default function HoverRevealCard1({
 }: HoverRevealCardProps) {
   return (
     <div
-      className={`group relative w-full overflow-hidden rounded-2xl cursor-pointer ${className}`}
+      className={`group relative w-full overflow-hidden rounded-2xl  ${className}`}
       style={style}
       onMouseEnter={() => onHover(true)}
       onMouseLeave={() => onHover(false)}

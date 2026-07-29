@@ -235,8 +235,7 @@ body {
   transition: stroke-dashoffset 0.03s linear;
 }
 .report-p{
-font-size:clamp(.875rem,.75rem + .3vw,1.125rem);
-line-height:1.6;
+@apply text-base 2xl:text-lg;
 }
 
 /* report page 

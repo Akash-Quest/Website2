@@ -20,7 +20,7 @@ function CaseStudy() {
             </li>
             <li className="text-gray-500">/</li>
 
-            <li className="text-gray-700">Case Snapshot listing</li>
+            <li className="text-gray-700">Case Snapshot Listing</li>
           </ol>
         </nav>
         <div className="px-[2] text-center lg:text-left">

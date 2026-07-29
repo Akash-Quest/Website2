@@ -44,11 +44,11 @@ export default function SocialFocus({
                 ${index % 3 === 2 ? "lg:border-r-0" : ""}
               `}
             >
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <Icon className="h-4 w-4" strokeWidth={1.75} color="currentColor" variant="Linear" />
+              <span className="flex h-10 w-10 2xl:h-12  2xl:w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <Icon className="h-4 w-4 2xl:h-6 2xl:w-6" strokeWidth={1.75} color="currentColor" variant="Linear" />
               </span>
 
-              <h3 className="text-body-lg font-semibold text-neutral-900">
+              <h3 className="text-body-lg font-semibold text-neutral-900 mt-2">
                 {title}
               </h3>
 

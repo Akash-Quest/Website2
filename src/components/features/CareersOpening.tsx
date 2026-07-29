@@ -32,7 +32,7 @@ const jobs: Job[] = [
   },
   {
     id: 2,
-    title: "Application developer (react native)",
+    title: "Application Developer (react native)",
     category: "Engineering",
     tags: ["Tartu", "Full-time"],
     description:
@@ -40,7 +40,7 @@ const jobs: Job[] = [
   },
   {
     id: 3,
-    title: "Senior Product designer",
+    title: "Senior Product Designer",
     category: "Design",
     tags: ["Hybrid", "Tartu", "Full-time"],
     description:

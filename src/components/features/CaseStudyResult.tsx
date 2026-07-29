@@ -68,7 +68,7 @@ function StudyCard({ study }: { study: CaseStudy }) {
 
 const PAGE_SIZE = 5;
 
-const CATEGORY_OPTIONS = ["Case-Studies","Insights"];
+const CATEGORY_OPTIONS = ["Case Study","Insights"];
 const INDUSTRY_OPTIONS = [
   "Public sector",
   "Agriculture",

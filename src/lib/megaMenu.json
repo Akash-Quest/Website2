@@ -785,7 +785,7 @@
         { "id": "our-team", "label": "Our Team", "href": "/team" },
         { "id": "partners", "label": "Partners", "href": "/partners" },
         { "id": "insights", "label": "Insights", "href": "/insight" },
-        { "id": "case-studies", "label": "Case-studies", "href": "/case-studies" },
+        { "id": "case-studies", "label": "Case Studies", "href": "/case-studies" },
         { "id": "about-skyquest", "label": "About SkyQuest", "href": "/about" },
         { "id": "privacy-policy", "label": "Privacy Policy", "href": "/privacypolicy" }
       ]

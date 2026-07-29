@@ -87,8 +87,8 @@ export default function WhatWeOfferGrid({
                 ${centeringClass(index, items.length, LG_COLUMNS, LG_COL_START, "lg:col-start-auto")}
               `}
             >
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <Icon className="h-4 w-4" strokeWidth={1.75} color="currentColor" variant="Linear" />
+              <span className="flex h-10 w-10 2xl:h-12 2xl:w-12  items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <Icon className="h-4 w-4 2xl:h-6 2xl:w-6" strokeWidth={1.75} color="currentColor" variant="Linear" />
               </span>
 
               <h3 className="mt-2 font-medium text-neutral-900 text-body-lg">

@@ -133,7 +133,7 @@ export default function CaseStudyForm({
 
                 <button
                   type="submit"
-                  className="w-full rounded-lg bg-primary px-8 py-2.5 text-sm font-medium text-white transition-colors hover:opacity-90 md:w-auto"
+                  className="w-full rounded-lg bg-primary px-8 py-2.5 text-sm font-medium text-white transition-colors hover:opacity-90 md:w-auto cursor-pointer"
                 >
                   Submit
                 </button>

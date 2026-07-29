@@ -2,6 +2,7 @@
 
 import { useRef, useLayoutEffect, useState } from "react";
 import { ArrowUp } from "iconsax-react";
+import Link from "next/link";
 import Button from "../ui/Button";
 import { defaultFaqs } from "@/Constants/FaqDetails";
 
@@ -72,7 +73,7 @@ export default function FAQSection({
           <div className={`${cardBgClassName} border border-gray-200 rounded-2xl p-6 `}>
             <h3 className="font-regular text-gray-900 text-body-2xl">{ctaHeading}</h3>
             <p className="text-body-sm text-gray-500 mb-5">{ctaDescription}</p>
-            <Button variant="primary" iconSize={16}>
+            <Button href="/contact" variant="primary" iconSize={16}>
                     {ctaButtonText}
                   </Button>
           </div>
@@ -123,12 +124,12 @@ export default function FAQSection({
         <div className={`lg:hidden ${cardBgClassName} border border-gray-200 rounded-2xl p-6`}>
           <h3 className="font-normal text-gray-900 mb-2 text-body-2xl">{ctaHeading}</h3>
           <p className="text-sm text-muted mb-5">{ctaDescription}</p>
-          <button type="button" className="flex items-center justify-center gap-2 rounded-lg bg-[#1D1EE3] pl-3 py-2 pr-1 text-sm text-white transition-colors hover:bg-[#231598] leading-none">
+          <Link href="/contact" className="flex items-center justify-center gap-2 rounded-lg bg-[#1D1EE3] pl-3 py-2 pr-1 text-sm text-white transition-colors hover:bg-[#231598] leading-none">
             {ctaButtonText}
             <span className="flex h-6 w-6 items-center justify-center rounded-md border border-white/40 bg-white text-black">
               <ArrowUp color="currentColor" variant="Linear" className="h-3.5 w-3.5 rotate-45 [&>path]:stroke-2" />
             </span>
-          </button>
+          </Link>
         </div>
 
       </div>

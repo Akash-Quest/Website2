@@ -53,6 +53,7 @@ export const insightData = {
       body: [
         {
           type: "paragraph",
+          dropCap: true,
           text: "2025 marked a turning point for the global medical device industry, a year when intelligence, personalization, and real-time data moved from experimental to essential. What had long been driven by incremental engineering improvements evolved into a convergence of advanced materials, intelligent systems, and digitally enabled design philosophies. Medical devices were no longer viewed as isolated tools but as adaptive, data-driven extensions of clinical decision-making and patient care.",
         },
         {
@@ -193,6 +194,7 @@ export const insightData = {
       body: [
         {
           type: "paragraph",
+          dropCap: true,
           text: "The push for higher crop yields while sustainability and environmental concerns remain under wraps is giving the agricultural sector a major shake-up in industry. The fertilizer & agricultural chemical industry is rapidly changing as food security becomes paramount. Innovations such as biopesticides, biofertilizers, and complicated crop protection methods are being developed to allow farmers over these hurdles.",
         },
         {
@@ -325,6 +327,7 @@ export const insightData = {
       body: [
         {
           type: "paragraph",
+          dropCap: true,
           text: "High investments in research and development of novel chemicals and robust increase in chemical manufacturing activity around the world are slated to primarily bolster sales of diversified chemicals. Surging use of diversified chemicals in multiple end-use industries and growing emphasis on sustainability are also creating new opportunities for diversified chemical providers going forward. Here are some of the most opportune markets to target in the diversified chemicals sector for companies to maximize their revenue generation potential.",
         },
         { type: "heading", text: "Top 5 Markets Size and Forecast in the Diversified Chemicals Sector" },

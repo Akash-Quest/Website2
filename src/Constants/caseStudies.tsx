@@ -41,13 +41,13 @@ export const caseStudiesData = {
       id: 7,
       image:
         "https://res.cloudinary.com/dftrsspaz/image/upload/v1756392777/skyquest/case-study/ssdmlhlii8brqgp8lyjf.webp",
-      category: "Case-Studies",
+      category: "Case Study",
       type: "Case Snapshot",
       topic: "Agriculture",
       date: "TBD",
       readTime: "5 Min read",
       title: "Advancing Regional Food Systems in South Asia through SAPLING",
-      titleEmphasis: "through SAPLING",
+      titleEmphasis: "Through Sapling",
       description:
         "Supported SAPLING in strengthening food systems and addressing malnutrition across South Asia through strategic planning and governance development, delivering a 3-5 year strategic framework and a policy-ready model for nutrition-sensitive value chains.",
       subtitle: "Strengthening Food Systems and Governance Across South Asia",
@@ -109,7 +109,7 @@ export const caseStudiesData = {
       id: 8,
       image:
         "https://res.cloudinary.com/dftrsspaz/image/upload/v1756393764/skyquest/case-study/eutaiwuc9nuabhnlozdx.webp",
-      category: "Case-Studies",
+      category: "Case Study",
       type: "Case Snapshot",
       topic: "Agriculture",
       date: "TBD",
@@ -166,7 +166,7 @@ export const caseStudiesData = {
       id: 9,
       image:
         "https://res.cloudinary.com/dftrsspaz/image/upload/v1756391365/skyquest/case-study/enfvgjvult42gqxch9ue.webp",
-      category: "Case-Studies",
+      category: "Case Study",
       type: "Case Snapshot",
       topic: "Agriculture",
       date: "TBD",
@@ -223,7 +223,7 @@ export const caseStudiesData = {
     {
       id: 1,
       image: "/CaseStudy/re1.jpg",
-      category: "Case-studies",
+      category: "Case Study",
       type: "Case Snapshot",
       topic: "Agriculture & Livestock",
       date: "April 27, 2026",
@@ -279,7 +279,7 @@ export const caseStudiesData = {
     {
       id: 2,
       image: "/CaseStudy/re2.jpg",
-      category: "Case-Studies",
+      category: "Case Study",
       type: "Case Snapshot",
       topic: "Urban Mobility",
       date: "March 12, 2026",
@@ -335,7 +335,7 @@ export const caseStudiesData = {
     {
       id: 3,
       image: "/CaseStudy/re3.jpg",
-      category: "Case-Studies",
+      category: "Case Study",
       type: "Case Snapshot",
       topic: "Financial Inclusion",
       date: "February 3, 2026",
@@ -391,7 +391,7 @@ export const caseStudiesData = {
     {
       id: 4,
       image: "/CaseStudy/re1.jpg",
-      category: "Case-Studies",
+      category: "Case Study",
       type: "Case Snapshot",
       topic: "Agriculture & Livestock",
       date: "January 21, 2026",
@@ -503,7 +503,7 @@ export const caseStudiesData = {
     {
       id: 6,
       image: "/CaseStudy/re3.jpg",
-      category: "Case-Studies",
+      category: "Case Study",
       type: "Case Snapshot",
       topic: "Treasury & Finance",
       date: "November 17, 2025",
