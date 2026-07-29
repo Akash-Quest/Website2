@@ -229,11 +229,14 @@ export default function CaseStudies({
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
 
-                  <div
+                  <Link
+                    href={`${viewAllHref}/${card.id}`}
+                    aria-label={`${readMoreButton}: ${card.title}`}
+                    tabIndex={isExpanded ? 0 : -1}
                     className={`absolute inset-x-0 bottom-0 z-10 flex flex-col overflow-hidden rounded-2xl bg-white/55 backdrop-blur-lg backdrop-brightness-125 border-none text-[#15121F] transition-all duration-[250ms] ease-out [clip-path:inset(-1px_round_1rem)] ${
                       isExpanded
                         ? "h-full p-5 "
-                        : "h-[6rem]  p-3 m-3 items-center"
+                        : "h-[6rem]  p-3 m-3 items-center pointer-events-none"
                     }`}
                   >
                     <p
@@ -264,14 +267,11 @@ export default function CaseStudies({
                       {card.description}
                     </p>
 
-                    <Link
-                      href={`${viewAllHref}/${card.id}`}
-                      aria-label={`${readMoreButton}: ${card.title}`}
-                      tabIndex={isExpanded ? 0 : -1}
-                      className={`group/learn self-end inline-flex items-center overflow-hidden text-sm sm:text-sm font-semibold text-primary transition-all duration-150 cursor-pointer ${
+                    <span
+                      className={`group/learn self-end inline-flex items-center overflow-hidden text-sm sm:text-sm font-semibold text-primary transition-all duration-150 ${
                         isExpanded
                           ? "mt-auto max-h-10 opacity-100"
-                          : "max-h-0 opacity-0 pointer-events-none"
+                          : "max-h-0 opacity-0"
                       }`}
                     >
                       {readMoreButton}
@@ -283,8 +283,8 @@ export default function CaseStudies({
                           <ArrowUp size={14} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
                         </span>
                       </span>
-                    </Link>
-                  </div>
+                    </span>
+                  </Link>
                 </div>
               </div>
             );
