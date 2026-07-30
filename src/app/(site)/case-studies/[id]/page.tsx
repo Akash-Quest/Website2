@@ -223,7 +223,7 @@ export default async function CaseStudyDetailsPage({
         {/* Body */}
         <div className="mt-10 grid grid-cols-1 gap-10 px-4 lg:grid-cols-10 lg:gap-14 lg:px-0">
           <article className="min-w-0 lg:col-span-8">
-            <h2 className="mb-6 font-playfair text-2xl sm:text-3xl font-bold text-gray-900">
+            <h2 className="mb-6 text-2xl sm:text-3xl font-bold text-gray-900">
               <EmphasizedText text={subtitleBase} emphasis={study.subtitleEmphasis} />
             </h2>
 
