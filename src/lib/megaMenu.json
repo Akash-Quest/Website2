@@ -1,0 +1,794 @@
+{
+  "groups": [
+    {
+      "id": "services",
+      "label": "Our Services",
+      "items": [
+        {
+          "id": "capabilities",
+          "label": "Capabilities",
+          "href": "/capabilities",
+          "content": {
+            "kind": "columns",
+            "heading": "What We Do",
+            "description": "We bring together strategy, technology, innovation, and industry expertise to help organizations navigate complex challenges and create measurable impact.",
+            "columns": [
+              {
+                "links": [
+                  {
+                    "label": "Digital Transformation and Emerging Technologies",
+                    "href": "/services/digital-transformation-emerging-technologies",
+                    "featured": true,
+                    "promo": {
+                      "image": "/CoreCapability/1.jpg",
+                      "title": "Digital Transformation & Emerging Technologies",
+                      "description": "From data strategy and ML models to responsible AI governance enabling organisations to make better, faster decisions at machine speed. We turn raw data into your most powerful competitive asset.",
+                      "href": "/services/digital-transformation-emerging-technologies",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Public Sector Advisory",
+                    "href": "/services/public-sector-advisory",
+                    "promo": {
+                      "image": "/CoreCapability/2.jpg",
+                      "title": "Public Sector Advisory",
+                      "description": "Supporting governments and institutions through policy advisory, governance modernization, and transformational program implementation.",
+                      "href": "/services/public-sector-advisory",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Data and Artificial Intelligence",
+                    "href": "/services/data-artificial-intelligence",
+                    "promo": {
+                      "image": "/CoreCapability/3.jpg",
+                      "title": "Data and Artificial Intelligence",
+                      "description": "We help governments, enterprises, and institutions leverage AI, automation, data intelligence, geospatial technologies, and digital platforms to modernize operations, improve decision-making, and accelerate innovation.",
+                      "href": "/services/data-artificial-intelligence",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Integrated Program Management",
+                    "href": "/services/integrated-program-management",
+                    "promo": {
+                      "image": "/CoreCapability/4.jpg",
+                      "title": "Integrated Program Management",
+                      "description": "End-to-end program delivery from design to implementation, ensuring on-time, on-budget results with measurable outcomes.",
+                      "href": "/services/integrated-program-management",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Social Impact & CSR",
+                    "href": "/services/social-impact-csr",
+                    "promo": {
+                      "image": "/CoreCapability/8.jpg",
+                      "title": "Social Impact & CSR",
+                      "description": "Designing and scaling high-impact social programs that strengthen communities, improve livelihoods, and deliver measurable development outcomes.",
+                      "href": "/services/social-impact-csr",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Business Intelligence & Market Research",
+                    "href": "/services/business-intelligence-market-research",
+                    "promo": {
+                      "image": "/CoreCapability/5.jpg",
+                      "title": "Business Intelligence & Market Research",
+                      "description": "We provide market intelligence, industry insights, competitive benchmarking, customer research, and strategic analysis that enable organizations to identify opportunities, mitigate risks, and make informed business decisions.",
+                      "href": "/services/business-intelligence-market-research",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Climate, Sustainability & ESG Advisory",
+                    "href": "/services/climate-sustainability-esg-advisory",
+                    "promo": {
+                      "image": "/CoreCapability/6.jpg",
+                      "title": "Climate, Sustainability & ESG Advisory",
+                      "description": "We provide market intelligence, industry insights, competitive benchmarking, customer research, and strategic analysis that enable organizations to identify opportunities, mitigate risks, and make informed business decisions.",
+                      "href": "/services/climate-sustainability-esg-advisory",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Agriculture & Livestock",
+                    "href": "/services/agriculture-livestock",
+                    "promo": {
+                      "image": "/CoreCapability/7.jpg",
+                      "title": "Agriculture & Livestock",
+                      "description": "Transforming agriculture and livestock through technology, innovation, and market-led development.",
+                      "href": "/services/agriculture-livestock",
+                      "ctaLabel": "Visit Page"
+                    }
+                  }
+                ]
+              }
+            ],
+            "promo": {
+              "image": "/CoreCapability/1.jpg",
+              "title": "Digital Transformation & Emerging Technologies",
+              "description": "From data strategy and ML models to responsible AI governance enabling organisations to make better, faster decisions at machine speed. We turn raw data into your most powerful competitive asset.",
+              "href": "/services/digital-transformation-emerging-technologies",
+              "ctaLabel": "Visit Page"
+            }
+          }
+        },
+
+
+        
+        {
+          "id": "product-solutions",
+          "label": "Product & Solutions",
+          "href": "/product-solutions",
+          "content": {
+            "kind": "columns",
+            "heading":"Products &Solutions",
+            "description": "Explore our products and solutions designed to help organizations leverage technology, data, and innovation to solve complex challenges and drive measurable impact.",
+            "columns": [
+              {
+                "links": [
+                  {
+                    "label": "AgriMap",
+                    "href": "/products/agrimap",
+                    "featured": true,
+                    "promo": {
+                      "image": "/Productsoln/Pr1.jpg",
+                      "title": "AgriMap",
+                      "description": "AgriMap gives agriculture departments, banks, and governments a real-time view of seed replacement rates, crop health, and variety adoption across every district down to the block level.",
+                      "href": "/products/agrimap",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Inspect Global",
+                    "href": "/products/inspectglobal",
+                    "promo": {
+                      "image": "/Productsoln/Pr2.jpg",
+                      "title": "Inspect Global",
+                      "description": "InspectGlobal fuses satellite, GPS, drones, IoT, and AI into one verified record of progress, risk, and compliance so decisions don't rely on someone's word.",
+                      "href": "/products/inspectglobal",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "MineralIQ",
+                    "href": "/products/mineraliq",
+                    "promo": {
+                      "image": "/Productsoln/Pr3.jpg",
+                      "title": "MineralIQ",
+                      "description": "MineralIQ delivers predictive geology and exploration intelligence to mining companies, identifying high-potential zones faster than traditional surveys.",
+                      "href": "/products/mineraliq",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Skyquest Labs",
+                    "href": "/products/sqlabs",
+                    "promo": {
+                      "image": "/Productsoln/Pr4.jpg",
+                      "title": "Skyquest Labs",
+                      "description": "Skyquest Labs connects physical diagnostic labs to qualified pathologists remotely, delivering verified reports in under 15 minutes. Only data travels. Never the sample.",
+                      "href": "/products/sqlabs",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "DeCarbonX",
+                    "href": "/products/decarbon",
+                    "promo": {
+                      "image": "/Productsoln/Pr5.jpg",
+                      "title": "DeCarbonX",
+                      "description": "DeCarbonX turns climate project ideas into finance-ready instruments, carbon credits, green bonds, and Article 6 forwards with full national data sovereignty and AI-driven MRV.",
+                      "href": "/products/decarbon",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "AlwaysOn",
+                    "href": "/products/alwayson",
+                    "promo": {
+                      "image": "/Productsoln/Pr6.jpg",
+                      "title": "AlwaysOn",
+                      "description": "AlwaysOn delivers AI-powered diagnostic services directly through WhatsApp, the world's most-used messaging platform. No app. No barrier. No delay.",
+                      "href": "/products/alwayson",
+                      "ctaLabel": "Visit Page"
+                    }
+                  }
+                ]
+              }
+            ],
+            "promo": {
+              "image": "/Productsoln/Pr1.jpg",
+              "title": "AgriMap",
+              "description": "AgriMap gives agriculture departments, banks, and governments a real-time view of seed replacement rates, crop health, and variety adoption across every district down to the block level.",
+              "href": "/products/agrimap",
+              "ctaLabel": "Visit Page"
+            }
+          }
+        },
+        
+        {
+          "id": "Reports",
+          "label": "Reports",
+          "href": "/insight",
+          "content": {
+            "kind": "drilldown",
+            "heading": "Reports & Insights",
+            "description": "Explore our latest research, whitepapers, case studies, and insights across industries.",
+            "categories": [
+              {
+                "label": "Materials",
+                "href": "https://www.skyquestt.com/industries/materials",
+                "groups": [
+                  {
+                    "label": "Metals & Mining",
+                    "links": [
+                      { "label": "Aluminum", "href": "/insight?industry=aluminum" },
+                      { "label": "Diversified Metals & Mining", "href": "/insight?industry=diversified-metals-mining" },
+                      { "label": "Copper", "href": "/insight?industry=copper" },
+                      { "label": "Gold", "href": "/insight?industry=gold" },
+                      { "label": "Precious Metals & Minerals", "href": "/insight?industry=precious-metals-minerals" },
+                      { "label": "Silver", "href": "/insight?industry=silver" },
+                      { "label": "Steel", "href": "/insight?industry=steel" }
+                    ]
+                  },
+                  {
+                    "label": "Chemicals",
+                    "links": [
+                      { "label": "Commodity Chemicals", "href": "/insight?industry=commodity-chemicals" },
+                      { "label": "Diversified Chemicals", "href": "/insight?industry=diversified-chemicals" },
+                      { "label": "Fertilizers & Agricultural Chemicals", "href": "/insight?industry=fertilizers-agricultural-chemicals" },
+                      { "label": "Industrial Gases", "href": "/insight?industry=industrial-gases" },
+                      { "label": "Specialty Chemicals", "href": "/insight?industry=specialty-chemicals" }
+                    ]
+                  },
+                  {
+                    "label": "Construction Materials",
+                    "links": [
+                      { "label": "Construction Materials", "href": "/insight?industry=construction-materials" }
+                    ]
+                  },
+                  {
+                    "label": "Containers & Packaging",
+                    "links": [
+                      { "label": "Metal, Glass & Plastic Containers", "href": "/insight?industry=metal-glass-plastic-containers" },
+                      { "label": "Paper & Plastic Packaging Products & Materials", "href": "/insight?industry=paper-plastic-packaging" }
+                    ]
+                  },
+                  {
+                    "label": "Paper & Forest Products",
+                    "links": [
+                      { "label": "Forest Products", "href": "/insight?industry=forest-products" },
+                      { "label": "Paper Products", "href": "/insight?industry=paper-products" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "Utilities",
+                "href": "https://www.skyquestt.com/industries/utilities",
+                "groups": [
+                  {
+                    "label": "Electric Utilities",
+                    "links": [
+                      { "label": "Electric Utilities", "href": "/insight?industry=electric-utilities" }
+                    ]
+                  },
+                  {
+                    "label": "Multi-Utilities",
+                    "links": [
+                      { "label": "Multi-Utilities", "href": "/insight?industry=multi-utilities" }
+                    ]
+                  },
+                  {
+                    "label": "Gas Utilities",
+                    "links": [
+                      { "label": "Gas Utilities", "href": "/insight?industry=gas-utilities" }
+                    ]
+                  },
+                  {
+                    "label": "Water Utilities",
+                    "links": [
+                      { "label": "Water Utilities", "href": "/insight?industry=water-utilities" }
+                    ]
+                  },
+                  {
+                    "label": "Independent Power and Renewable Electricity Producers",
+                    "links": [
+                      { "label": "Independent Power Producers & Energy Traders", "href": "/insight?industry=independent-power-producers-energy-traders" },
+                      { "label": "Renewable Electricity", "href": "/insight?industry=renewable-electricity" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "Real Estate",
+                "href": "https://www.skyquestt.com/industries/real-estate",
+                "groups": [
+                  {
+                    "label": "Equity Real Estate Investment Trusts (REITs)",
+                    "links": [
+                      { "label": "Diversified REITs", "href": "/insight?industry=diversified-reits" },
+                      { "label": "Industrial REITs", "href": "/insight?industry=industrial-reits" },
+                      { "label": "Office REITs", "href": "/insight?industry=office-reits" },
+                      { "label": "Health Care REITs", "href": "/insight?industry=health-care-reits" },
+                      { "label": "Retail REITs", "href": "/insight?industry=retail-reits" },
+                      { "label": "Specialized REITs", "href": "/insight?industry=specialized-reits" },
+                      { "label": "Hotel & Resort REITs", "href": "/insight?industry=hotel-resort-reits" },
+                      { "label": "Residential REITs", "href": "/insight?industry=residential-reits" }
+                    ]
+                  },
+                  {
+                    "label": "Real Estate Management & Development",
+                    "links": [
+                      { "label": "Real Estate Operating Companies", "href": "/insight?industry=real-estate-operating-companies" },
+                      { "label": "Real Estate Development", "href": "/insight?industry=real-estate-development" },
+                      { "label": "Real Estate Services", "href": "/insight?industry=real-estate-services" },
+                      { "label": "Diversified Real Estate Activities", "href": "/insight?industry=diversified-real-estate-activities" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "Consumer Discretionary",
+                "href": "https://www.skyquestt.com/industries/consumer-discretionary",
+                "groups": [
+                  {
+                    "label": "Household Durables",
+                    "links": [
+                      { "label": "Consumer Electronics", "href": "/insight?industry=consumer-electronics" },
+                      { "label": "Housewares & Specialties", "href": "/insight?industry=housewares-specialties" },
+                      { "label": "Homebuilding", "href": "/insight?industry=homebuilding" },
+                      { "label": "Home Furnishings", "href": "/insight?industry=home-furnishings" },
+                      { "label": "Household Appliances", "href": "/insight?industry=household-appliances" }
+                    ]
+                  },
+                  {
+                    "label": "Leisure Products",
+                    "links": [
+                      { "label": "Leisure Products", "href": "/insight?industry=leisure-products" }
+                    ]
+                  },
+                  {
+                    "label": "Textiles, Apparel & Luxury Goods",
+                    "links": [
+                      { "label": "Apparel, Accessories & Luxury Goods", "href": "/insight?industry=apparel-accessories-luxury-goods" },
+                      { "label": "Footwear", "href": "/insight?industry=footwear" },
+                      { "label": "Textiles", "href": "/insight?industry=textiles" }
+                    ]
+                  },
+                  {
+                    "label": "Hotels, Restaurants & Leisure",
+                    "links": [
+                      { "label": "Casinos & Gaming", "href": "/insight?industry=casinos-gaming" },
+                      { "label": "Hotels, Resorts & Cruise Lines", "href": "/insight?industry=hotels-resorts-cruise-lines" },
+                      { "label": "Leisure Facilities", "href": "/insight?industry=leisure-facilities" },
+                      { "label": "Restaurants", "href": "/insight?industry=restaurants" }
+                    ]
+                  },
+                  {
+                    "label": "Diversified Consumer Services",
+                    "links": [
+                      { "label": "Education Services", "href": "/insight?industry=education-services" },
+                      { "label": "Specialized Consumer Services", "href": "/insight?industry=specialized-consumer-services" }
+                    ]
+                  },
+                  {
+                    "label": "Auto Components",
+                    "links": [
+                      { "label": "Tires & Rubber", "href": "/insight?industry=tires-rubber" },
+                      { "label": "Auto Parts & Equipment", "href": "/insight?industry=auto-parts-equipment" }
+                    ]
+                  },
+                  {
+                    "label": "Automobiles",
+                    "links": [
+                      { "label": "Motorcycle Manufacturers", "href": "/insight?industry=motorcycle-manufacturers" },
+                      { "label": "Automobile Manufacturers", "href": "/insight?industry=automobile-manufacturers" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "Consumer Staples",
+                "href": "https://www.skyquestt.com/industries/consumer-staples",
+                "groups": [
+                  {
+                    "label": "Household Products",
+                    "links": [
+                      { "label": "Household Products", "href": "/insight?industry=household-products" }
+                    ]
+                  },
+                  {
+                    "label": "Personal Products",
+                    "links": [
+                      { "label": "Personal Products", "href": "/insight?industry=personal-products" }
+                    ]
+                  },
+                  {
+                    "label": "Tobacco",
+                    "links": [
+                      { "label": "Tobacco", "href": "/insight?industry=tobacco" }
+                    ]
+                  },
+                  {
+                    "label": "Food Products",
+                    "links": [
+                      { "label": "Agricultural Products", "href": "/insight?industry=agricultural-products" },
+                      { "label": "Packaged Foods & Meats", "href": "/insight?industry=packaged-foods-meats" }
+                    ]
+                  },
+                  {
+                    "label": "Beverages",
+                    "links": [
+                      { "label": "Brewers", "href": "/insight?industry=brewers" },
+                      { "label": "Soft Drinks", "href": "/insight?industry=soft-drinks" },
+                      { "label": "Distillers & Vintners", "href": "/insight?industry=distillers-vintners" }
+                    ]
+                  },
+                  {
+                    "label": "Food & Staples Retailing",
+                    "links": [
+                      { "label": "Drug Retail", "href": "/insight?industry=drug-retail" },
+                      { "label": "Food Retail", "href": "/insight?industry=food-retail" },
+                      { "label": "Hypermarkets & Super Centers", "href": "/insight?industry=hypermarkets-super-centers" },
+                      { "label": "Food Distributors", "href": "/insight?industry=food-distributors" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "Health Care",
+                "href": "https://www.skyquestt.com/industries/health-care",
+                "groups": [
+                  {
+                    "label": "Health Care Equipment & Supplies",
+                    "links": [
+                      { "label": "Health Care Equipment", "href": "/insight?industry=health-care-equipment" },
+                      { "label": "Health Care Supplies", "href": "/insight?industry=health-care-supplies" }
+                    ]
+                  },
+                  {
+                    "label": "Health Care Providers & Services",
+                    "links": [
+                      { "label": "Health Care Distributors", "href": "/insight?industry=health-care-distributors" },
+                      { "label": "Health Care Facilities", "href": "/insight?industry=health-care-facilities" },
+                      { "label": "Managed Health Care", "href": "/insight?industry=managed-health-care" },
+                      { "label": "Health Care Services", "href": "/insight?industry=health-care-services" }
+                    ]
+                  },
+                  {
+                    "label": "Health Care Technology",
+                    "links": [
+                      { "label": "Health Care Technology", "href": "/insight?industry=health-care-technology" }
+                    ]
+                  },
+                  {
+                    "label": "Biotechnology",
+                    "links": [
+                      { "label": "Biotechnology", "href": "/insight?industry=biotechnology" }
+                    ]
+                  },
+                  {
+                    "label": "Pharmaceuticals",
+                    "links": [
+                      { "label": "Pharmaceuticals", "href": "/insight?industry=pharmaceuticals" }
+                    ]
+                  },
+                  {
+                    "label": "Life Sciences Tools & Services",
+                    "links": [
+                      { "label": "Life Sciences Tools & Services", "href": "/insight?industry=life-sciences-tools-services" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "Financials",
+                "href": "https://www.skyquestt.com/industries/financials",
+                "groups": [
+                  {
+                    "label": "Insurance Services",
+                    "links": [
+                      { "label": "Reinsurance", "href": "/insight?industry=reinsurance" },
+                      { "label": "Insurance Brokers", "href": "/insight?industry=insurance-brokers" },
+                      { "label": "Multi-line Insurance", "href": "/insight?industry=multi-line-insurance" },
+                      { "label": "Life & Health Insurance", "href": "/insight?industry=life-health-insurance" },
+                      { "label": "Property & Casualty Insurance", "href": "/insight?industry=property-casualty-insurance" }
+                    ]
+                  },
+                  {
+                    "label": "Consumer Finance",
+                    "links": [
+                      { "label": "Consumer Finance", "href": "/insight?industry=consumer-finance" }
+                    ]
+                  },
+                  {
+                    "label": "Diversified Financial Services",
+                    "links": [
+                      { "label": "Multi-Sector Holdings", "href": "/insight?industry=multi-sector-holdings" },
+                      { "label": "Other Diversified Financial Services", "href": "/insight?industry=other-diversified-financial-services" },
+                      { "label": "Specialized Finance", "href": "/insight?industry=specialized-finance" }
+                    ]
+                  },
+                  {
+                    "label": "Capital Markets",
+                    "links": [
+                      { "label": "Financial Exchanges & Data", "href": "/insight?industry=financial-exchanges-data" },
+                      { "label": "Investment Banking & Brokerage", "href": "/insight?industry=investment-banking-brokerage" },
+                      { "label": "Diversified Capital Markets", "href": "/insight?industry=diversified-capital-markets" },
+                      { "label": "Asset Management & Custody Banks", "href": "/insight?industry=asset-management-custody-banks" }
+                    ]
+                  },
+                  {
+                    "label": "Mortgage Real Estate Investment Trusts (REITs)",
+                    "links": [
+                      { "label": "Mortgage REITs", "href": "/insight?industry=mortgage-reits" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "Industrials",
+                "href": "https://www.skyquestt.com/industries/industrials",
+                "groups": [
+                  {
+                    "label": "Building Products",
+                    "links": [
+                      { "label": "Building Products", "href": "/insight?industry=building-products" }
+                    ]
+                  },
+                  {
+                    "label": "Industrial Conglomerates",
+                    "links": [
+                      { "label": "Industrial Conglomerates", "href": "/insight?industry=industrial-conglomerates" }
+                    ]
+                  },
+                  {
+                    "label": "Machinery",
+                    "links": [
+                      { "label": "Industrial Machinery", "href": "/insight?industry=industrial-machinery" },
+                      { "label": "Construction Machinery & Heavy Trucks", "href": "/insight?industry=construction-machinery-heavy-trucks" },
+                      { "label": "Agricultural & Farm Machinery", "href": "/insight?industry=agricultural-farm-machinery" }
+                    ]
+                  },
+                  {
+                    "label": "Aerospace & Defense",
+                    "links": [
+                      { "label": "Aerospace & Defense", "href": "/insight?industry=aerospace-defense" }
+                    ]
+                  },
+                  {
+                    "label": "Construction & Engineering",
+                    "links": [
+                      { "label": "Construction & Engineering", "href": "/insight?industry=construction-engineering" }
+                    ]
+                  },
+                  {
+                    "label": "Electrical Equipment",
+                    "links": [
+                      { "label": "Electrical Components & Equipment", "href": "/insight?industry=electrical-components-equipment" },
+                      { "label": "Heavy Electrical Equipment", "href": "/insight?industry=heavy-electrical-equipment" }
+                    ]
+                  },
+                  {
+                    "label": "Trading Companies & Distributors",
+                    "links": [
+                      { "label": "Trading Companies & Distributors", "href": "/insight?industry=trading-companies-distributors" }
+                    ]
+                  },
+                  {
+                    "label": "Airlines",
+                    "links": [
+                      { "label": "Airlines", "href": "/insight?industry=airlines" }
+                    ]
+                  },
+                  {
+                    "label": "Air Freight & Logistics",
+                    "links": [
+                      { "label": "Air Freight & Logistics", "href": "/insight?industry=air-freight-logistics" }
+                    ]
+                  },
+                  {
+                    "label": "Marine",
+                    "links": [
+                      { "label": "Marine", "href": "/insight?industry=marine" }
+                    ]
+                  },
+                  {
+                    "label": "Road & Rail",
+                    "links": [
+                      { "label": "Railroads", "href": "/insight?industry=railroads" },
+                      { "label": "Trucking", "href": "/insight?industry=trucking" }
+                    ]
+                  },
+                  {
+                    "label": "Transportation Infrastructure",
+                    "links": [
+                      { "label": "Marine Ports & Services", "href": "/insight?industry=marine-ports-services" },
+                      { "label": "Highways & Railtracks", "href": "/insight?industry=highways-railtracks" },
+                      { "label": "Airport Services", "href": "/insight?industry=airport-services" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "Information Technology",
+                "href": "https://www.skyquestt.com/industries/information-technology",
+                "groups": [
+                  {
+                    "label": "Semiconductor Services & Semiconductor Equipment",
+                    "links": [
+                      { "label": "Semiconductor Equipment", "href": "/insight?industry=semiconductor-equipment" },
+                      { "label": "Semiconductors", "href": "/insight?industry=semiconductors" }
+                    ]
+                  },
+                  {
+                    "label": "Communications Equipment",
+                    "links": [
+                      { "label": "Communications Equipment", "href": "/insight?industry=communications-equipment" }
+                    ]
+                  },
+                  {
+                    "label": "Technology Hardware, Storage & Peripherals",
+                    "links": [
+                      { "label": "Technology Hardware, Storage & Peripherals", "href": "/insight?industry=technology-hardware-storage-peripherals" }
+                    ]
+                  },
+                  {
+                    "label": "Electronic Equipment, Instruments & Components",
+                    "links": [
+                      { "label": "Electronic Components", "href": "/insight?industry=electronic-components" },
+                      { "label": "Electronic Equipment & Instruments", "href": "/insight?industry=electronic-equipment-instruments" },
+                      { "label": "Technology Distributors", "href": "/insight?industry=technology-distributors" },
+                      { "label": "Electronic Manufacturing Services", "href": "/insight?industry=electronic-manufacturing-services" }
+                    ]
+                  },
+                  {
+                    "label": "IT Services",
+                    "links": [
+                      { "label": "Data Processing & Outsourced Services", "href": "/insight?industry=data-processing-outsourced-services" },
+                      { "label": "Internet Services & Infrastructure", "href": "/insight?industry=internet-services-infrastructure" },
+                      { "label": "IT Consulting & Other Services", "href": "/insight?industry=it-consulting-other-services" }
+                    ]
+                  },
+                  {
+                    "label": "Software",
+                    "links": [
+                      { "label": "Systems Software", "href": "/insight?industry=systems-software" },
+                      { "label": "Application Software", "href": "/insight?industry=application-software" },
+                      { "label": "Home Entertainment Software", "href": "/insight?industry=home-entertainment-software" }
+                    ]
+                  },
+                  {
+                    "label": "Internet Software & Services",
+                    "links": [
+                      { "label": "Internet Software & Services", "href": "/insight?industry=internet-software-services" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "Communication Services",
+                "href": "https://www.skyquestt.com/industries/communication-services",
+                "groups": [
+                  {
+                    "label": "Media",
+                    "links": [
+                      { "label": "Cable & Satellite", "href": "/insight?industry=cable-satellite" },
+                      { "label": "Broadcasting", "href": "/insight?industry=broadcasting" },
+                      { "label": "Publishing", "href": "/insight?industry=publishing" },
+                      { "label": "Advertising", "href": "/insight?industry=advertising" }
+                    ]
+                  },
+                  {
+                    "label": "Entertainment",
+                    "links": [
+                      { "label": "Movies & Entertainment", "href": "/insight?industry=movies-entertainment" },
+                      { "label": "Interactive Home Entertainment", "href": "/insight?industry=interactive-home-entertainment" }
+                    ]
+                  },
+                  {
+                    "label": "Interactive Media & Services",
+                    "links": [
+                      { "label": "Interactive Media & Services", "href": "/insight?industry=interactive-media-services" }
+                    ]
+                  },
+                  {
+                    "label": "Diversified Telecommunication Services",
+                    "links": [
+                      { "label": "Alternative Carriers", "href": "/insight?industry=alternative-carriers" },
+                      { "label": "Integrated Telecommunication Services", "href": "/insight?industry=integrated-telecommunication-services" }
+                    ]
+                  },
+                  {
+                    "label": "Wireless Telecommunication Services",
+                    "links": [
+                      { "label": "Wireless Telecommunication Services", "href": "/insight?industry=wireless-telecommunication-services" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "Energy",
+                "href": "https://www.skyquestt.com/industries/energy",
+                "groups": [
+                  {
+                    "label": "Oil, Gas & Consumable Fuels",
+                    "links": [
+                      { "label": "Oil & Gas Refining & Marketing", "href": "/insight?industry=oil-gas-refining-marketing" },
+                      { "label": "Integrated Oil & Gas", "href": "/insight?industry=integrated-oil-gas" },
+                      { "label": "Oil & Gas Storage & Transportation", "href": "/insight?industry=oil-gas-storage-transportation" },
+                      { "label": "Coal & Consumable Fuels", "href": "/insight?industry=coal-consumable-fuels" },
+                      { "label": "Oil & Gas Exploration & Production", "href": "/insight?industry=oil-gas-exploration-production" }
+                    ]
+                  },
+                  {
+                    "label": "Energy Equipment & Services",
+                    "links": [
+                      { "label": "Oil & Gas Equipment & Services", "href": "/insight?industry=oil-gas-equipment-services" },
+                      { "label": "Oil & Gas Drilling", "href": "/insight?industry=oil-gas-drilling" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "global",
+      "label": "",
+      "items": [
+        {
+          "id": "our-initiatives",
+          "label": "Our Initiatives",
+          "href": "#",
+          "content": {
+            "kind": "columns",
+            "heading": "Our Initiatives",
+            "description": "SUSTECH is a global mega-cluster initiative by Skyquest Technology Consulting Pvt. Ltd. focused on building sustainable, scalable economic corridors through science, technology, innovation, and entrepreneurship.",
+            "columns": [
+              {
+                "links": [
+                  { "label": "Sustech Bank ", "href": "https://www.sustech.earth/" }
+                ]
+              }
+            ],
+            "promo": {
+              "image": "/Hero/SUSTECH Bank.jpg",
+              "title": "SushTech Bank",
+              "description": "SUSTECH is a global mega-cluster initiative by Skyquest Technology Consulting Pvt. Ltd. focused on building sustainable, scalable economic corridors through science, technology, innovation, and entrepreneurship.",
+              "href": "https://www.sustech.earth/",
+              "ctaLabel": "Learn More"
+            }
+          }
+        }
+      ]
+    },
+    
+    {
+      "id": "company",
+      "label": "Our Company",
+      "items": [
+        { "id": "our-team", "label": "Our Team", "href": "/team" },
+        { "id": "partners", "label": "Partners", "href": "/partners" },
+        { "id": "insights", "label": "Insights", "href": "/insight" },
+        { "id": "media-news", "label": "Media & News", "href": "/media-news" },
+        { "id": "about-skyquest", "label": "About SkyQuest", "href": "/about" },
+        { "id": "privacy-policy", "label": "Privacy Policy", "href": "/privacypolicy" }
+      ]
+    },
+    {
+      "id": "join",
+      "label": "",
+      "items": [
+        { "id": "join-us", "label": "Join Us", "href": "/careers" }
+      ]
+    }
+  ]
+}
