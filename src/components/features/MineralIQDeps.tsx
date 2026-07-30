@@ -87,14 +87,14 @@ export default function MineralIQDeps() {
               <div className="w-full flex items-center justify-between text-xs sm:text-sm md:text-base font-semibold text-[#1D1EE3] tracking-wide">
   
                 {/* Left Side Group: Blue Dot + LIVE Status */}
-                <div className="flex items-center gap-1.5 sm:gap-2">
+                <div className="flex items-center text-xs gap-1.5 sm:gap-2">
                                     
                     {/* Head (e.g. "LIVE") */}
                     <span>{card.head}</span>
                 </div>
 
                 {/* Right Side Column: Head2 (e.g. "East Africa · Since 2024") */}
-                <div className="text-right">
+                <div className="text-right text-xs">
                     <span>{card.head2}</span>
                 </div>
 
@@ -103,12 +103,12 @@ export default function MineralIQDeps() {
               {/* Typography Block Layer */}
               <div className="flex flex-col gap-2">
                 {/* Core Component Headline */}
-                <h4 className="font-semibold text-xl text-[#03030F] tracking-tight">
+                <h3 className="font-semibold text-body-xl text-[#03030F] ">
                   {card.title}
-                </h4>
+                </h3>
                 
                 {/* Description Context string */}
-                <p className="text-sm md:text-base font-normal leading-relaxed text-[#03030F]/65">
+                <p className="tracking-wide leading-snug text-[#03030F]/65">
                   {card.desc}
                 </p>
               </div>

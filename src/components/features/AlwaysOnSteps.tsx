@@ -43,8 +43,8 @@ export default function AlwaysOnSteps() {
   ];
 
   return (
-    <section className="w-full bg-[#F7F5F1] py-24 md:py-32 px-6 sm:px-12 lg:px-[8%] font-['Inter_Tight'] overflow-hidden relative">
-      <div className="max-w-[1920px] mx-auto flex flex-col items-center relative z-10 w-full">
+    <section className="w-full bg-[#F7F5F1]  font-['Inter_Tight'] overflow-hidden relative">
+      <div className="page-container mx-auto flex flex-col items-center relative z-10 w-full">
         
         {/* ── HEADER STRINGS MODULE ── */}
         <div className="text-center mb-24 max-w-3xl">
@@ -71,7 +71,7 @@ export default function AlwaysOnSteps() {
               viewBox="0 0 1056 377" 
               fill="none" 
               xmlns="http://www.w3.org/2000/svg"
-              className="w-full h-full"
+              className="w-full h-full overflow-visible"
             >
               <path 
                 d="M175.272 119.513C190.414 71.2446 163.56 19.8405 115.292 4.69841C67.0236 -10.4437 15.6195 16.4103 0.477372 64.6785" 
@@ -79,6 +79,7 @@ export default function AlwaysOnSteps() {
                 strokeOpacity="0.5" 
                 strokeWidth="1.5"
                 strokeDasharray="10 10"
+                transform="translate(0, -25)"
               />
               <path 
                 d="M761.272 119.513C776.414 71.2446 749.56 19.8405 701.292 4.69841C653.024 -10.4437 601.619 16.4103 586.477 64.6785" 
@@ -86,6 +87,7 @@ export default function AlwaysOnSteps() {
                 strokeOpacity="0.5" 
                 strokeWidth="1.5"
                 strokeDasharray="10 10"
+                transform="translate(0, -25)"
               />
               <path 
                 d="M319.477 329.877C344.771 373.687 400.791 388.698 444.601 363.404C488.411 338.11 503.421 282.09 478.127 238.28" 
@@ -93,6 +95,8 @@ export default function AlwaysOnSteps() {
                 strokeOpacity="0.5" 
                 strokeWidth="1.5"
                 strokeDasharray="10 10"
+                transform="translate(0, 25)"
+
               />
               <path 
                 d="M884.477 329.877C909.771 373.687 965.791 388.698 1009.6 363.404C1053.41 338.11 1068.42 282.09 1043.13 238.28" 
@@ -100,6 +104,7 @@ export default function AlwaysOnSteps() {
                 strokeOpacity="0.5" 
                 strokeWidth="1.5"
                 strokeDasharray="10 10"
+                transform="translate(0, 25)"
               />
             </svg>
           </div>
@@ -118,7 +123,7 @@ export default function AlwaysOnSteps() {
 
                 {/* Typography Stack */}
                 <div className="flex flex-col gap-2 max-w-[280px]">
-                  <h3 className="font-semibold text-[#03030F] tracking-wide">
+                  <h3 className="font-semibold text-body-xl text-[#03030F] tracking-wide">
                     <span>{step.num}</span> {step.title}
                   </h3>
                   <p className="font-normal tracking-wide leading-snug text-muted">

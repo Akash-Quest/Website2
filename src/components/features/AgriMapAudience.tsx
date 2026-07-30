@@ -54,7 +54,7 @@ export default function AgriMapAudience() {
             The <em className="font-semibold">Ground</em>
           </h2>
           <p className="text-muted mx-auto mt-5 tracking-wide leading-snug">
-            AgriMap serves the stakeholders who shape India's agricultural outcomes from state secretariats to rural bank branches.
+            AgriMap serves the stakeholders who shape India's agricultural outcomes from state secretariats to rural bank branches
           </p>
         </div>
 
@@ -78,9 +78,9 @@ export default function AgriMapAudience() {
                 </span>
                 
                 {/* Core Component Headline */}
-                <h4 className="font-semibold tracking-wide mb-3">
+                <h3 className="font-semibold text-body-xl tracking-wide mb-3">
                   {card.title}
-                </h4>
+                </h3>
                 
                 {/* Description string */}
                 <p className="text-muted tracking-wide leading-snug font-normal mb-6">

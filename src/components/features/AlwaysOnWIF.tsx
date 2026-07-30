@@ -44,7 +44,7 @@ export default function AlwaysOnWIF() {
   ];
 
   return (
-    <section className="w-full relative py-20 md:py-28 px-6 sm:px-12 lg:px-[8%] overflow-hidden">
+    <section className="w-full relative  overflow-hidden">
       {/* Background Image Layer */}
       <div 
         className="absolute inset-0 z-0 pointer-events-none"
@@ -56,7 +56,7 @@ export default function AlwaysOnWIF() {
         }}     
       />    
 
-      <div className="max-w-[1920px] mx-auto relative z-10">
+      <div className="page-container mx-auto relative z-10">
         
         {/* ── HEADER ── */}
         <div className="text-center mb-16 md:mb-20">
@@ -94,7 +94,7 @@ export default function AlwaysOnWIF() {
 
               {/* Text Content */}
               <div className="flex flex-col gap-2 mt-2">
-                <h3 className="font-semibold text-white mb-2">
+                <h3 className="font-semibold  text-body-xl text-white mb-2">
                   {feature.title}
                 </h3>
                 

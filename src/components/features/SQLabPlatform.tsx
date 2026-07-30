@@ -56,7 +56,7 @@ export default function SQLabPlatform() {
   ];
 
   return (
-    <section className="w-full relative py-20 md:py-28 px-6 sm:px-12 lg:px-[8%] overflow-hidden bg-[#03030F]">
+    <section className="w-full relative  overflow-hidden bg-[#03030F]">
       {/* Background Image Overlay */}
       <div 
         className="absolute inset-0 z-0 pointer-events-none "
@@ -68,26 +68,27 @@ export default function SQLabPlatform() {
         }}     
       />    
 
-      <div className="max-w-[1920px] mx-auto relative z-10">
+      <div className="page-container mx-auto relative z-10">
         
         {/* ── HEADER ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start justify-between mb-16 md:mb-20 text-white">
+        <span className=" text-[#CBCBFF] ">
+              LIMS Platform
+            </span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start justify-between mb-16 mt-5 md:mb-20 text-white">
           
           {/* LEFT COLUMN: Badge + Main Title */}
           <div className="lg:col-span-7 flex flex-col gap-2">
-            <span className="text-xs sm:text-sm font-semibold text-[#CBCBFF] ">
-              LIMS Platform
-            </span>
             
-            <h2 className="font-semibold text-3xl sm:text-5xl md:text-[52px] tracking-tight text-white leading-tight md:leading-[60px]">
+            
+            <h2 className="font-semibold  text-white ">
               A Complete Lab Information <br />
-              <em className="font-serif italic font-normal text-white">Management System.</em>
+              <em className="font-semibold text-white">Management System.</em>
             </h2>
           </div>
 
           {/* RIGHT COLUMN: Description Paragraph */}
           <div className="lg:col-span-5 ">
-            <p className="text-[#CBCBFF] text-sm md:text-base leading-relaxed max-w-[460px]">
+            <p className="text-[#CBCBFF]  max-w-full tracking-wide leading-snug">
               The Skyquest Labs LIMS covers every workflow in your diagnostic operation from patient registration to data analysis and everything in between.
             </p>
           </div>
@@ -95,7 +96,7 @@ export default function SQLabPlatform() {
         </div>
 
         {/* ── FIGMA EXACT LIMS MODULES GRID (4 Columns x 3 Rows) ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
           {modules.map((item, idx) => (
             <div 
               key={idx} 
@@ -107,9 +108,9 @@ export default function SQLabPlatform() {
               </div>
 
               {/* Module Title */}
-              <span className="text-white font-normal text-base leading-[28px] truncate">
+              <p className="text-white text-xl tracking-wide leading-snug ">
                 {item.title}
-              </span>
+              </p>
             </div>
           ))}
         </div>

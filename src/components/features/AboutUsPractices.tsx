@@ -92,29 +92,29 @@ export default function AboutUsPractices() {
   ];
 
   return (
-    <section className="w-full bg-[#F7F5F1] py-16 md:py-24 px-6 sm:px-12 lg:px-[8%] font-['Inter_Tight'] select-none">
-      <div className="max-w-[1920px] mx-auto flex flex-col gap-12 md:gap-16">
+    <section className="w-full bg-[#F7F5F1]  font-['Inter_Tight'] ">
+      <div className="page-container mx-auto flex flex-col gap-12 md:gap-16">
         
         {/* ── HEADER TITLE BLOCK ── */}
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto gap-4">
-          <span className="text-sm font-semibold text-[#1D1EE3] tracking-wide uppercase">
-            What we do
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto gap-4">
+          <span className=" font-semibold text-primary tracking-wide ">
+            What We Do
           </span>
-          <h2 className="font-semibold">
+          <h2 className="font-semibold ">
             Six Practices. One Integrated <br />
-            <em className="font-semibold">Engagement Model.</em>
+            <em className="font-semibold">Engagement Model</em>
           </h2>
-          <p className="text-sm md:text-base leading-relaxed text-[#03030F]/70">
-            We organize our work around the decisions leaders actually face not the silos of a traditional firm. Engagements draw from any practice, with one partner accountable end-to-end.
+          <p className="leading-snug tracking-wide text-muted">
+            We organize our work around the decisions leaders actually face not the silos of a traditional firm. Engagements draw from any practice, with one partner accountable end-to-end
           </p>
         </div>
 
         {/* ── INTERACTIVE HOVER GRID SYSTEM ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-b border-[#03030F]/10 divide-y md:divide-y-0 lg:divide-x lg:divide-y-0 divide-[#03030F]/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  border-[#03030F]/10 divide-y md:divide-y-0 lg:divide-x lg:divide-y-0 divide-[#03030F]/10">
           {practices.map((item, idx) => (
             <div
               key={idx}
-              className={`relative p-8 lg:p-10 flex flex-col justify-between gap-12 group transition-all duration-300 cursor-pointer overflow-hidden
+              className={`relative p-8 lg:p-10 flex flex-col gap-5 group transition-all duration-300 cursor-pointer overflow-hidden
                 ${idx < 3 ? 'lg:border-b border-[#03030F]/10' : ''} 
                 ${idx % 2 === 0 ? 'md:border-r border-[#03030F]/10' : ''}
                 hover:bg-[#1D1EE3] hover:rounded-2xl hover:scale-[1.02] hover:shadow-2xl hover:z-20
@@ -135,12 +135,12 @@ export default function AboutUsPractices() {
               </div>
 
               {/* BOTTOM ROW: Content Description Blocks */}
-              <div className="flex flex-col gap-2 mt-4">
-                <h3 className="text-xl font-bold text-[#03030F] group-hover:text-white transition-colors duration-300 tracking-tight flex gap-1.5">
+              <div className="flex flex-col ">
+                <h3 className="font-semibold text-[#03030F] text-body-xl  group-hover:text-white transition-colors duration-300 flex gap-1.5">
                   <span>{item.num}</span>
                   <span>{item.title}</span>
                 </h3>
-                <p className="text-sm leading-relaxed text-[#03030F]/70 group-hover:text-white/80 transition-colors duration-300">
+                <p className="leading-snug text-muted group-hover:text-white/80 transition-colors duration-300 mt-5">
                   {item.desc}
                 </p>
               </div>

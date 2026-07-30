@@ -25,22 +25,23 @@ export default function ProblemStatement() {
   ];
 
   return (
-    <section className="w-full bg-[#F7F5F1] py-20 md:py-28 px-6 sm:px-12 lg:px-[8%] font-['Inter_Tight']">
-      <div className="max-w-[1920px] mx-auto flex flex-col gap-12 md:gap-16">
+    <section className="w-full bg-[#F7F5F1]  font-['Inter_Tight']">
+      <div className="page-container mx-auto flex flex-col ">
         
         {/* ── HEADER BLOCK ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start">
-          <div className="lg:col-span-8 flex flex-col gap-3">
-            <span className="text-xs font-semibold text-primary tracking-wider ">
+        <span className=" text-primary ">
               The Problem We Solve
             </span>
-            <h2 className="font-semibold text-3xl sm:text-4xl md:text-[48px] tracking-tight text-[#03030F] leading-tight md:leading-[56px]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start mt-5 mb-5">
+          <div className="lg:col-span-8 flex flex-col gap-3">
+            
+            <h2 className="font-semibold  text-[#03030F] ">
               Pathology in India is broken <br className="hidden sm:block" />
               for rural and <em className="font-semibold ">Semi-Urban <br/>Patients.</em>
             </h2>
           </div>
-          <div className="lg:col-span-4 lg:pt-8">
-            <p className="text-sm md:text-base leading-relaxed text-[#03030F]/70 max-w-[420px]">
+          <div className="lg:col-span-4 ">
+            <p className="tracking-wide leading-snug text-muted max-w-full">
               Samples travel for hours, qualified pathologists are scarce outside cities, and delays cost lives. Skyquest Labs changes that without changing the lab.
             </p>
           </div>
@@ -51,7 +52,7 @@ export default function ProblemStatement() {
           
           {/* LEFT CARD: Without Skyquest Labs */}
           <div className="bg-white rounded-[20px] p-6 sm:p-8 md:p-10 border border-gray-200/60 shadow-sm flex flex-col gap-6">
-            <h3 className="text-xl sm:text-2xl font-semibold text-[#03030F] tracking-tight pb-2 border-b border-gray-100">
+            <h3 className="font-semibold text-[#03030F] text-body-xl pb-2 border-b border-gray-100">
               Without Skyquest Labs
             </h3>
             
@@ -64,7 +65,7 @@ export default function ProblemStatement() {
                   <div className="shrink-0 text-red-500">
                     <CloseSquare size={20} color="red" className="stroke-[1.75]" />
                   </div>
-                  <p className="text-sm md:text-[15px] font-normal text-[#03030F]/80 leading-snug">
+                  <p className="tracking-wide  text-[#03030F]/80 leading-snug">
                     {item}
                   </p>
                 </div>
@@ -74,7 +75,7 @@ export default function ProblemStatement() {
 
           {/* RIGHT CARD: With Skyquest Labs */}
           <div className="bg-white rounded-[20px] p-6 sm:p-8 md:p-10 border border-gray-200/60 shadow-sm flex flex-col gap-6">
-            <h3 className="text-xl sm:text-2xl font-semibold text-[#03030F] tracking-tight pb-2 border-b border-gray-100">
+            <h3 className="font-semibold text-[#03030F]  text-body-xl pb-2 border-b border-gray-100">
               With Skyquest Labs
             </h3>
             
@@ -87,7 +88,7 @@ export default function ProblemStatement() {
                   <div className="shrink-0 text-emerald-600">
                     <TickSquare size={20} color="green" className="stroke-[1.75]" />
                   </div>
-                  <p className="text-sm md:text-[15px] font-normal text-[#03030F]/80 leading-snug">
+                  <p className="tracking-wide  text-[#03030F]/80 leading-snug">
                     {item}
                   </p>
                 </div>

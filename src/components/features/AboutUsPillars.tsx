@@ -65,25 +65,25 @@ export default function AboutUsPillars() {
   ];
 
   return (
-    <section className="w-full bg-[#FFFFFF] py-16 md:py-24 px-6 sm:px-12 lg:px-[8%] font-['Inter_Tight'] select-none">
-      <div className="max-w-[1920px] mx-auto flex flex-col gap-10">
+    <section className="w-full bg-[#FFFFFF]  font-['Inter_Tight'] ">
+      <div className="page-container mx-auto flex flex-col gap-10">
         
         {/* ── TOP HEADER BLOCK ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start pb-12 border-b border-[#03030F]/10">
           
           {/* Left Column Container */}
           <div className="lg:col-span-6 flex flex-col items-start justify-start">
-            <span className="text-sm font-semibold text-[#1D1EE3] tracking-wide mb-3">
+            <span className="font-semibold text-primary tracking-wide mb-3">
               Who we are
             </span>
             <h2 className=" font-semibold ">
               An Integrated Firm Built For The{' '}
-              <em className="font-semibold">Next Era Of Consulting.</em>
+              <em className="font-semibold">Next Era Of Consulting</em>
             </h2>
           </div>
 
           {/* Right Column Container - Padding aur gaps adjust kar diye hain taaki horizontal level flat ho jaye */}
-          <div className="lg:col-span-6 flex flex-col gap-6 text-base md:text-[17px] leading-relaxed text-[#03030F]/80">
+          <div className="lg:col-span-6 flex flex-col gap-6 tracking-wide leading-snug text-[#03030F]/80">
             <p>
               SkyQuest Technology Group is a global market intelligence, innovation management and commercialization organization. We connect insight to networks of collaborators corporates, governments, investors and NGOs to deliver outcomes that matter.
             </p>
@@ -105,10 +105,10 @@ export default function AboutUsPillars() {
               </div>
               
               <div className="flex flex-col gap-2 mt-2">
-                <h3 className="text-xl md:text-2xl font-bold text-[#03030F] tracking-tight">
+                <h3 className="font-semibold text-body-xl text-[#03030F] tracking-tight">
                   {pillar.title}
                 </h3>
-                <p className="text-sm md:text-base leading-relaxed text-[#03030F]/70">
+                <p className="leading-snug tracking-wide text-[#03030F]/70">
                   {pillar.desc}
                 </p>
               </div>

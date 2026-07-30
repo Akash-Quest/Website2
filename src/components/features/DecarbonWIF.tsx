@@ -54,7 +54,7 @@ export default function DecarbonWIF() {
   ];
 
   return (
-    <section className="w-full relative py-20 md:py-28 px-6 sm:px-12 lg:px-[8%] overflow-hidden">
+    <section className="w-full relative overflow-hidden">
       {/* Background Image Layer */}
       <div 
         className="absolute inset-0 z-0 pointer-events-none"
@@ -66,7 +66,7 @@ export default function DecarbonWIF() {
         }}     
       />    
 
-      <div className="max-w-[1920px] mx-auto relative z-10">
+      <div className="page-container mx-auto relative z-10">
         
         {/* ── HEADER ── */}
         <div className="text-center mb-16 md:mb-20">
@@ -77,7 +77,7 @@ export default function DecarbonWIF() {
             Everything A Modern Diagnostic <br />
             <em className="font-semibold text-white">Network Needs.</em>
           </h2>
-          <p className="text-white/80 mt-4 max-w-xl mx-auto ">
+          <p className="text-white/80 mt-4 max-w-2xl mx-auto ">
             Skyquest Labs is more than a reporting tool—it's a complete operating system for your pathology network.
           </p>
         </div>
@@ -96,11 +96,11 @@ export default function DecarbonWIF() {
 
               {/* Text Content */}
               <div className="flex flex-col gap-2 mt-2">
-                <h3 className="font-semibold text-white mb-2  ">
+                <h3 className="font-semibold text-body-xl text-white mb-2  ">
                   {feature.title}
                 </h3>
                 
-                <p className=" text-white tracking-wide">
+                <p className=" text-white leading-snug tracking-wide">
                   {feature.desc}
                 </p>
               </div>

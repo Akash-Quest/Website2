@@ -27,15 +27,16 @@ export default function ProblemStatement() {
   ];
 
   return (
-    <section className="w-full bg-[#F7F5F1] py-20 md:py-28 px-6 sm:px-12 lg:px-[8%] font-['Inter_Tight']">
-      <div className="max-w-[1920px] mx-auto flex flex-col gap-12 md:gap-16">
+    <section className="w-full bg-[#F7F5F1]  font-['Inter_Tight']">
+      <div className="page-container mx-auto flex flex-col ">
         
         {/* ── HEADER BLOCK ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start">
-          <div className="lg:col-span-8 flex flex-col gap-3">
-            <span className="font-medium text-primary tracking-wide ">
+        <span className="font-medium text-primary tracking-wide ">
               The Problem We Solve
             </span>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start mt-5 mb-15">
+          <div className="lg:col-span-8 flex flex-col gap-3">
+            
             <h2 className="font-semibold text-[#03030F]]">
               Healthcare is out of reach for <br/>Rural And <em className="font-semibold ">Semi-Urban India.</em>
             </h2>
@@ -52,7 +53,7 @@ export default function ProblemStatement() {
           
           {/* LEFT CARD: Without Skyquest Labs */}
           <div className="bg-white rounded-[20px] p-6 sm:p-8 md:p-10 border border-gray-200/60 shadow-sm flex flex-col gap-6">
-            <h3 className="font-semibold text-[#03030F] pb-2 border-b border-gray-200">
+            <h3 className="font-semibold text-body-2xl text-[#03030F] pb-2 border-b border-gray-200">
               Without Skyquest Labs
             </h3>
             
@@ -65,7 +66,7 @@ export default function ProblemStatement() {
                   <div className="shrink-0 text-red-500">
                     <CloseSquare size={20} color="red" className="stroke-[1.75]" />
                   </div>
-                  <p className=" text-muted">
+                  <p className=" tracking-wide leading-snug text-muted">
                     {item}
                   </p>
                 </div>
@@ -75,7 +76,7 @@ export default function ProblemStatement() {
 
           {/* RIGHT CARD: With Skyquest Labs */}
           <div className="bg-white rounded-[20px] p-6 sm:p-8 md:p-10 border border-gray-200/60 shadow-sm flex flex-col gap-6">
-            <h3 className="font-semibold text-[#03030F] pb-2 border-b border-gray-200">
+            <h3 className="font-semibold text-body-2xl text-[#03030F] pb-2 border-b border-gray-200">
               With Skyquest Labs
             </h3>
             
@@ -88,7 +89,7 @@ export default function ProblemStatement() {
                   <div className="shrink-0 text-emerald-600">
                     <TickSquare size={20} color="green" className="stroke-[1.75]" />
                   </div>
-                  <p className=" text-muted ">
+                  <p className=" tracking-wide leading-snug text-muted">
                     {item}
                   </p>
                 </div>

@@ -53,36 +53,37 @@ export default function AgriMapUseCases() {
 
   return (
     <section className="w-full bg-[#FFFFFF] font-['Inter_Tight'] select-none">
-      <div className="page-container mx-auto flex flex-col">
+      <div className="page-container mx-auto flex flex-col ">
         
         {/* ── HEADER LAYOUT BLOCK ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 pb-2 2xl:pb-4 ">
-          <div className=" flex flex-col gap-2">
-            <p className=" text-primary">
+        <span className=" text-primary">
               Use Cases
-            </p>
+            </span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start w-full mt-5 mb-5">
+          <div className="lg:col-span-7 flex flex-col gap-2">
+            
             <h2 className="font-semibold">
               Real Decisions, Real <br />
               <em className="font-semibold">Outcomes</em>
             </h2>
           </div>
-          <div className=" pb-2 ml-15">
-            <p className=" text-muted max-w-md">
+          <div className="lg:col-span-5 pb-2 ">
+            <p className=" tracking-wide leading-snug text-[#03030F]/70 max-w-full">
               From seasonal planning to emergency response, AgriMap fits into the workflows that matter most.
             </p>
           </div>
         </div>
 
         {/* ── 2x2 CARD MATRIX GRID ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 2xl:gap-6 w-full mt-1">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full mt-4">
           {useCases.map((item, idx) => (
             <div 
               key={idx} 
               // Frame 1707483359: padding 24px, gap 20px, bg #F7F5F1, rounded 10px
-              className="bg-[#F7F5F1] rounded-[10px] p-3 2xl:p-4 flex flex-col sm:flex-row items-center sm:items-stretch gap-5 border border-gray-200/20 max-w-[695px] min-h-[377px] w-full mx-auto"
+              className="bg-[#F7F5F1] rounded-[10px] p-6 flex flex-col sm:flex-row items-center sm:items-stretch gap-5 border border-gray-200/20 max-w-[695px] min-h-[377px] w-full mx-auto"
             >
               {/* Left Column: Mask group & Mask Image (292px width x 329px height, rounded 10px) */}
-              <div className="w-full sm:w-[45%] min-h-[280px] relative rounded-[10px] overflow-hidden bg-[#D9D9D9] shrink-0 self-stretch">
+              <div className="w-full sm:w-[42%] min-h-[280px] sm:min-h-[360px] relative rounded-[10px] overflow-hidden bg-[#D9D9D9] shrink-0 self-stretch">
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -92,21 +93,21 @@ export default function AgriMapUseCases() {
                 />
               </div>
 
-              
-              <div className="w-full sm:w-[55%] flex flex-col justify-between ">
+              {/* Right Column: Frame 1707483329 (width 335px, column stack, gap 20px, flex-grow 1) */}
+              <div className="w-full flex flex-col justify-between ">
                 
                 {/* Upper Text Frame 1707483049 (gap 4px) */}
                 <div className="flex flex-col gap-1">
                   {/* Tagline: color #1D1EE3, size 12px, leading 24px */}
-                  <p className="font-medium text-body-sm  text-primary">
+                  <p className="font-medium tracking-wide  text-primary">
                     {item.tag}
                   </p>
                   {/* Title: weight 600, size 20px, leading 25px, color #03030F */}
-                  <h3 className=" text-body-lg font-semibold">
+                  <h3 className="font-semibold text-body-xl">
                     {item.title}
                   </h3>
                   {/* Desc: weight 400, size 16px, leading 24px, color rgba(3,3,15,0.7) */}
-                  <p className="text-muted mt-1 ">
+                  <p className="tracking-wide text-muted leading-snug mt-1 ">
                     {item.desc}
                   </p>
                 </div>
@@ -114,17 +115,17 @@ export default function AgriMapUseCases() {
                 {/* Lower Bullet Frame 1707483360 (gap 6px) */}
                 {/* 🛠️ FIXED: Mapped all 4 vectors (top, middle dividers, and bottom border line) */}
                 <div className="flex flex-col border-t border-black/20 pt-1 ">
-                  <p>{item.bullets.map((bullet, bIdx) => (
+                  <span>{item.bullets.map((bullet, bIdx) => (
                     <div 
                       key={bIdx} 
-                      
+                      // Bullets: size 16px, leading 24px, height 48px, divider rgba(0,0,0,0.2)
                       className="h-auto w-auto flex items-center leading-snug text-muted border-b border-black/20 pb-1.5 pt-1.5 last:pb-1"
                     >
                       {bullet}
                     </div>
                     
                   ))}
-                  </p>
+                  </span>
                 </div>
 
               </div>

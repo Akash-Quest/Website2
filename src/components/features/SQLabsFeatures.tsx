@@ -53,18 +53,18 @@ export default function SQLabsFeatures() {
   ];
  
   return (
-    <section className="w-full bg-[#F7F5F1] py-24 md:py-32 px-6 sm:px-12 lg:px-[8%] font-['Inter_Tight'] ">
-      <div className="max-w-[1920px] mx-auto flex flex-col items-center">
+    <section className="w-full bg-[#F7F5F1]  font-['Inter_Tight'] ">
+      <div className="page-container mx-auto flex flex-col items-center">
         
         {/* ── CENTRAL HEADER SECTION (MIRRORED TO IMAGE) ── */}
         <div className="text-center mb-16 max-w-3xl flex flex-col gap-4 Z-20">
-            <p className="font-semibold text-primary mb-3 block"> Platform Features</p>
+            <p className=" text-primary mb-3 block"> Platform Features</p>
             
           <h2 className="font-semibold ">
             Everything A Modern Diagnostic <br />
             <em className="font-Semibold ">Network Needs.</em>
           </h2>
-          <p className="text-base md:text-lg max-w-2xl mx-auto ">
+          <p className="tracking-wide leading-snug mx-auto ">
             Skyquest Labs is more than a reporting tool it's a complete operating system for your pathology network.
           </p>
         </div>
@@ -84,12 +84,12 @@ export default function SQLabsFeatures() {
               {/* Typography Block Layer */}
               <div className="flex flex-col gap-2">
                 {/* Core Component Headline */}
-                <h4 className="font-semibold text-xl text-[#03030F] tracking-tight">
+                <h3 className="font-semibold text-body-xl text-[#03030F] ">
                   {card.title}
-                </h4>
+                </h3>
                 
                 {/* Description Context string */}
-                <p className="text-sm md:text-base font-normal leading-relaxed text-[#03030F]/65">
+                <p className="tracking-wide leading-relaxed text-muted">
                   {card.desc}
                 </p>
               </div>

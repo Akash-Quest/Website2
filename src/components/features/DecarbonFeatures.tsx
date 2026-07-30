@@ -53,21 +53,22 @@ export default function DecarbonFeatures() {
   ];
  
   return (
-    <section className="w-full bg-[#FFFFFF] py-24 md:py-32 px-6 sm:px-12 lg:px-[8%] font-['Inter_Tight']">
-      <div className="max-w-[1920px] mx-auto flex flex-col gap-16">
+    <section className="w-full bg-[#FFFFFF]  font-['Inter_Tight']">
+      <div className="page-container mx-auto flex flex-col ">
         
         {/* ── HEADER LAYOUT BLOCK ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start justify-between w-full">
-          <div className="lg:col-span-7 flex flex-col gap-2">
-            <span className="font-semibold text-primary text-sm">
+        <span className="font-semibold text-primary ">
               Platform Features
             </span>
+        <div className="grid grid-cols-1 lg:grid-cols-12 mt-5 mb-5 gap-6 items-start justify-between w-full">
+          <div className="lg:col-span-7 flex flex-col gap-2">
+            
             <h2 className="font-semibold ">
               Every Tool A Government <br/> Needs to <em className="font-semibold">Mobilise Climate <br/> Finance.</em>
             </h2>
           </div>
           <div className="lg:col-span-5 pb-2">
-            <p className="text-base md:text-[18px] leading-relaxed text-muted max-w-full">
+            <p className="tracking-wide leading-snug text-muted max-w-full">
               DeCarbonX ships with the full stack from project builder to bond issuance deployable as a sovereign national system in 3–5 months.
             </p>
           </div>
@@ -98,11 +99,11 @@ export default function DecarbonFeatures() {
                 <div className="flex flex-col gap-2">
                   
                   {/* Headline Title */}
-                  <h4 className="font-semibold ">
+                  <h3 className="font-semibold text-body-xl">
                     {item.title}
-                  </h4>
+                  </h3>
                   {/* Paragraph Context Body */}
-                  <p className=" text-muted">
+                  <p className=" leading-snug tracking-wide text-muted">
                     {item.desc}
                   </p>
                 </div>

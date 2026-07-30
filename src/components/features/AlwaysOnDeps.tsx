@@ -86,14 +86,14 @@ export default function AlwaysOnDeps() {
               <div className="w-full flex items-start justify-between text-xs sm:text-sm md:text-base font-semibold text-[#1D1EE3] tracking-wide">
   
                 {/* Left Side Group: Blue Dot + LIVE Status */}
-                <div className="flex items-center gap-1.5 sm:gap-2 shrink-0 whitespace-nowrap">
+                <div className="  flex items-center gap-1.5 sm:gap-2 shrink-0 whitespace-nowrap">
                                     
                     {/* Head (e.g. "LIVE") */}
-                    <p>{card.head}</p>
+                    <p className="text-xs">{card.head}</p>
                 </div>
 
                 {/* Right Side Column: Head2 (e.g. "East Africa · Since 2024") */}
-                <div className="text-right">
+                <div className=" text-xs text-right">
                     <span>{card.head2}</span>
                 </div>
                 </div>
@@ -101,12 +101,12 @@ export default function AlwaysOnDeps() {
               {/* Typography Block Layer */}
               <div className="flex flex-col gap-2">
                 {/* Core Component Headline */}
-                <h3 className="font-semibold text-[#03030F] ">
+                <h3 className="font-semibold text-body-xl text-[#03030F] ">
                   {card.title}
                  </h3>
                 
                 {/* Description Context string */}
-                <p className="text-muted tracking-wide">
+                <p className="text-muted leading-snug tracking-wide">
                   {card.desc}
                 </p>
               </div>

@@ -1,6 +1,7 @@
  
 import Image from "next/image";
 import Link from "next/link";
+import Button from "@/components/ui/Button"; 
 function AgriMapProduct() {
   return (
     <section className="reltive">
@@ -20,10 +21,8 @@ function AgriMapProduct() {
             </li>
             <li className="text-gray-300">/</li>
             <li>
-              <Link href="/what-we-do" className="hover:text-muted transition-colors">
-                Products
-              </Link>
-            </li>
+              Product
+             </li>
             <li className="text-gray-300">/</li>
             <li className="text-gray-500">Agrimap</li>
           </ol>
@@ -35,7 +34,7 @@ function AgriMapProduct() {
         </p>
  
         {/* Heading */}
-        <h1 className="text-center font-bold">
+        <h1 className="text-center font-semibold">
           Know every seed. Reach<br></br>{" "}
           <em className="font-semibold">every farm</em>
         </h1>
@@ -44,6 +43,14 @@ function AgriMapProduct() {
         <p className=" mx-auto text-center mt-5 mb-5 max-w-full text-muted leading-snug tracking-wide">
            AgriMap gives agriculture departments, banks, and governments a real-time view of seed replacement rates, crop health, and variety adoption across every district down to the block level.  </p>
         </div>
+        <div className="mt-8 mb-10 flex flex-wrap items-center justify-center gap-4 w-full">
+              <Button href="/request-deployment" variant="primary">
+                Request A Deployment
+              </Button>
+              <Button href="/how-it-works" variant="white">
+                See How It Works
+              </Button>
+            </div>
      
  
       {/* Hero Image */}

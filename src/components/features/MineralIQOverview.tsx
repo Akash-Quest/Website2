@@ -6,22 +6,22 @@ import { BackwardItem, Map, DocumentText, MoneySend, Chart, Bill } from 'iconsax
 
 export default function MineralIQOverview() {
   return (
-    <section className="w-full bg-[#F7F5F1] py-16 sm:py-24 md:py-32 px-4 sm:px-8 lg:px-[8%] font-['Inter_Tight']">
-      <div className="max-w-[1920px] mx-auto flex flex-col gap-8 md:gap-10">
+    <section className="w-full bg-[#F7F5F1] font-['Inter_Tight']">
+      <div className="page-container mx-auto flex flex-col gap-8 md:gap-10">
         
         {/* ── ROW 1: HEADER LAYOUT BLOCK (1420 x 167) ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start pb-8">
           <div className="lg:col-span-7 flex flex-col gap-2">
-            <p className=" text-primary font-semibold">
+            <p className=" text-primary ">
               Platform Features
             </p>
-            <h2 className="font-semibold text-4xl sm:text-5xl md:text-[52px] tracking-tight text-[#03030F] leading-tight md:leading-[60px]">
+            <h2 className="font-semibold  text-[#03030F] ">
               One platform. Any jurisdiction. <br />
               <em className="font-semibold">Every mineral.</em>
             </h2>
           </div>
           <div className="lg:col-span-5 lg:pt-8">
-            <p className="text-sm md:text-base leading-relaxed text-[#03030F]/70 max-w-[440px]">
+            <p className=" leading-relaxed text-[#03030F]/70 max-w-full">
               Six integrated modules deployable for any national mining authority from cadastre mapping to satellite enforcement, royalty tracking to investor portals.
             </p>
           </div>
@@ -33,10 +33,10 @@ export default function MineralIQOverview() {
             <div className="w-20 h-20 bg-[#F7F5F1] rounded-[20px] flex items-center justify-center text-[#1D1EE3] shrink-0">
               <BackwardItem size={40} color="#000000" variant="Linear" />
             </div>
-            <h3 className="font-semibold text-2xl text-[#03030F]">
+            <h3 className="font-semibold  text-body-xl text-[#03030F]">
               Satellite Change <em className="font-semibold">Detection</em>
             </h3>
-            <p className="text-sm leading-relaxed text-[#03030F]/70">
+            <p className="tracking-wide leading-snug text-[#03030F]/70">
               Sentinel-2 NDVI analysis on every active licence with a 5-day revisit cycle. Auto-flags boundary breaches, tailings expansion, new haul roads, and forest loss inside protected-area buffers before an inspector sets foot on site.
             </p>
           </div>
@@ -63,10 +63,10 @@ export default function MineralIQOverview() {
             <div className="w-20 h-20 bg-[#F7F5F1] rounded-[20px] flex items-center justify-center text-[#1D1EE3] shrink-0">
               <Map size={40} color="#000000" variant="Linear" />
             </div>
-            <h3 className="font-semibold text-2xl text-[#03030F]">
+            <h3 className="font-semibold text-body-xl text-[#03030F]">
               Map & <em className="font-semibold">Cadastre</em>
             </h3>
-            <p className="text-sm leading-relaxed text-[#03030F]/70">
+            <p className="tracking-wide leading-snug text-[#03030F]/70">
               Interactive GIS mapping layer integrating active concessions, lease status, mineral deposits, and overlapping land-use restrictions in real time.
             </p>
           </div>
@@ -76,10 +76,10 @@ export default function MineralIQOverview() {
             <div className="w-20 h-20 bg-[#F7F5F1] rounded-[20px] flex items-center justify-center text-[#1D1EE3] shrink-0">
               <DocumentText size={40} color="#000000" variant="Linear" />
             </div>
-            <h3 className="font-semibold text-2xl text-[#03030F]">
+            <h3 className="font-semibold text-body-xl text-[#03030F]">
               Compliance & <em className="font-semibold">Regulatory</em>
             </h3>
-            <p className="text-sm leading-relaxed text-[#03030F]/70">
+            <p className="tracking-wide leading-snug text-[#03030F]/70">
               District-level heatmap scoring every jurisdiction across EIA, Mercury, Forest, Royalty, Boundary, Reports, ASM, and Overall dimensions. Drill into any cell. Dispatch inspectors directly from an alert.
             </p>
           </div>
@@ -92,10 +92,10 @@ export default function MineralIQOverview() {
             <div className="w-20 h-20 bg-[#F7F5F1] rounded-[20px] flex items-center justify-center text-[#1D1EE3] shrink-0">
               <MoneySend size={40} color="#000000" variant="Linear" />
             </div>
-            <h3 className="font-semibold text-2xl text-[#03030F]">
+            <h3 className="font-semibold text-body-xl text-[#03030F]">
               Royalty & <em className="font-semibold">EITI</em>
             </h3>
-            <p className="text-sm leading-relaxed text-[#03030F]/70">
+            <p className="tracking-wide leading-snug text-[#03030F]/70">
               Revenue tracking and leakage detection against EITI reporting standards. Cross-reference production filings with export data to surface under-declaration.
             </p>
           </div>
@@ -105,10 +105,10 @@ export default function MineralIQOverview() {
             <div className="w-20 h-20 bg-[#F7F5F1] rounded-[20px] flex items-center justify-center text-[#1D1EE3] shrink-0">
               <Chart size={40} color="#000000" variant="Linear" />
             </div>
-            <h3 className="font-semibold text-2xl text-[#03030F]">
+            <h3 className="font-semibold text-body-xl text-[#03030F]">
               Investor Portal & <em className="font-semibold">Deal Flow</em>
             </h3>
-            <p className="text-sm leading-relaxed text-[#03030F]/70">
+            <p className="tracking-wide leading-snug text-[#03030F]/70">
               Public-facing block library, open tender rooms, and PSA bidding. Investors access due diligence data concession history, compliance scores, satellite evidence packs without needing regulator access.
             </p>
           </div>
@@ -120,10 +120,10 @@ export default function MineralIQOverview() {
             <div className="w-20 h-20 bg-[#F7F5F1] rounded-[20px] flex items-center justify-center text-[#1D1EE3] shrink-0">
               <Bill size={40} color="#000000" variant="Linear" />
             </div>
-            <h3 className="font-semibold" >
+            <h3 className="font-semibold text-body-xl" >
               ASM <em className="font-semibold">Formalisation</em>
             </h3>
-            <p className="text-sm text-muted">
+            <p className="tracking-wide leading-snug text-[#03030F]/70">
               Cooperative onboarding and Hg phase-out tracking for artisanal miners. Monitor ASM hotspot density, formalisation progress, and mercury risk by district.
             </p>
           </div>

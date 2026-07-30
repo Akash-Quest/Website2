@@ -55,12 +55,12 @@ export default function DecarbonDeps() {
   ];
  
   return (
-    <section className="w-full bg-[#F7F5F1] py-24 md:py-32 px-6 sm:px-12 lg:px-[8%] font-['Inter_Tight'] ">
-      <div className="max-w-[1920px] mx-auto flex flex-col items-center">
+    <section className="w-full bg-[#F7F5F1]  font-['Inter_Tight'] ">
+      <div className="page-container mx-auto flex flex-col items-center">
         
         {/* ── CENTRAL HEADER SECTION (MIRRORED TO IMAGE) ── */}
         <div className="text-center mb-16 max-w-3xl flex flex-col gap-4 Z-20">
-          <span className="text-sm font-semibold text-primary mb-3 block">
+          <span className="text-primary mb-3 block">
             Global Deployments
           </span>
           <h2 className="font-semibold ">
@@ -89,11 +89,11 @@ export default function DecarbonDeps() {
                 <div className="flex items-center gap-1.5 sm:gap-2">
                                     
                     {/* Head (e.g. "LIVE") */}
-                    <span>{card.head}</span>
+                    <span className="text-xs">{card.head}</span>
                 </div>
 
                 {/* Right Side Column: Head2 (e.g. "East Africa · Since 2024") */}
-                <div className="text-right">
+                <div className=" text-xs text-right">
                     <span>{card.head2}</span>
                 </div>
                 </div>
@@ -101,12 +101,12 @@ export default function DecarbonDeps() {
               {/* Typography Block Layer */}
               <div className="flex flex-col gap-2">
                 {/* Core Component Headline */}
-                <h3 className="font-semibold text-[#03030F] ">
+                <h3 className="text-body-xl font-semibold text-[#03030F] ">
                   {card.title}
                  </h3>
                 
                 {/* Description Context string */}
-                <p className="text-muted tracking-wide">
+                <p className="text-muted tracking-wide leading-snug">
                   {card.desc}
                 </p>
               </div>

@@ -78,7 +78,7 @@ export default function AgriMapFeatures() {
               
               {/* Text Content */}
               <div className="flex flex-col gap-2">
-                <h3 className="font-semibold text-white">
+                <h3 className="font-semibold  text-body-xl text-white">
                   {feature.title}
                 </h3>
                 <p className="tracking-wide leading-snug text-[#CBCBFF] leading-relaxed">

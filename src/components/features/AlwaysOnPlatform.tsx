@@ -53,17 +53,18 @@ export default function AlwaysOnPlatform() {
   ];
  
   return (
-    <section className="w-full bg-[#FFFFFF] py-24 md:py-32 px-6 sm:px-12 lg:px-[8%] font-['Inter_Tight']">
-      <div className="max-w-[1920px] mx-auto flex flex-col gap-16">
+    <section className="w-full bg-[#FFFFFF] font-['Inter_Tight']">
+      <div className="page-container mx-auto flex flex-col ">
         
         {/* ── HEADER LAYOUT BLOCK ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start justify-between w-full">
-          <div className="lg:col-span-7 flex flex-col gap-2">
-            <p className="font-medium text-primary ">
+        <p className="font-medium text-primary ">
               Platform Features
             </p>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-5 mb-15 items-start justify-between w-full">
+          <div className="lg:col-span-7 flex flex-col gap-2">
+            
             <h2 className="font-semibold ">
-              Every Tool To Deliver <br/> Healthcare <em className="font-semibold">At Population<br/> Scale.</em>
+              Every Tool To Deliver  Healthcare <em className="font-semibold">At Population Scale.</em>
             </h2>
           </div>
           <div className="lg:col-span-5 pb-2">
@@ -98,7 +99,7 @@ export default function AlwaysOnPlatform() {
                 <div className="flex flex-col gap-2">
                   
                   {/* Headline Title */}
-                  <h3 className="font-semibold ">
+                  <h3 className="font-semibold text-body-xl text-[#03030F] ">
                     {item.title}
                   </h3>
                   {/* Paragraph Context Body */}

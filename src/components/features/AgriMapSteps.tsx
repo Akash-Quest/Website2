@@ -53,7 +53,7 @@ export default function AgriMapSteps() {
         </div>
 
         {/* ── PROCESS STEPS TIMELINE CONNECTOR BLOCK ── */}
-        <div className="w-full relative min-h-[450px]">
+        <div className="w-full relative min-h-[450px] max-w-full mx-auto">
           
           {/* ── 🛠️ COMPLEX VECTOR ARCHS (Hidden on mobile, fluid on desktop) ── */}
           <div className="absolute top-0 left-0 w-full h-[404px] pointer-events-none hidden lg:block z-0 select-none">
@@ -63,7 +63,7 @@ export default function AgriMapSteps() {
               viewBox="0 0 972 404" 
               fill="none" 
               xmlns="http://www.w3.org/2000/svg"
-              className="w-full h-full"
+              className="w-full h-full overflow-visible"
             >
               <path 
                 d="M243.761 154.243C259.667 87.0643 218.102 19.7114 150.924 3.80571C83.7459 -12.1 16.393 29.4646 0.487259 96.6429" 
@@ -71,6 +71,7 @@ export default function AgriMapSteps() {
                 strokeOpacity="0.5" 
                 strokeWidth="1.5"
                 strokeDasharray="10 10"
+                transform="translate(0, -25)"
               />
               <path 
                 d="M967.761 154.243C983.667 87.0643 942.102 19.7114 874.924 3.80571C807.746 -12.1 740.393 29.4646 724.487 96.6429" 
@@ -78,6 +79,7 @@ export default function AgriMapSteps() {
                 strokeOpacity="0.5" 
                 strokeWidth="1.5"
                 strokeDasharray="10 10"
+                transform="translate(0, -25)"
               />
               <path 
                 d="M651.761 249.005C667.667 316.184 626.102 383.537 558.924 399.442C491.746 415.348 424.393 373.783 408.487 306.605" 
@@ -85,6 +87,7 @@ export default function AgriMapSteps() {
                 strokeOpacity="0.5" 
                 strokeWidth="1.5"
                 strokeDasharray="10 10"
+                transform="translate(0, 35)"
               />
             </svg>
           </div>
@@ -105,8 +108,8 @@ export default function AgriMapSteps() {
 
                 {/* Typography Stack */}
                 <div className="flex flex-col gap-2 max-w-[280px]">
-                  <h3 className="font-semibold text-[#03030F] tracking-wide transition-colors duration-200">
-                    <span className="font-semibold mr-1">{step.num}</span> {step.title}
+                  <h3 className="font-semibold text-body-xl text-[#03030F] transition-colors duration-200">
+                    <span className="font-semibold">{step.num}</span> {step.title}
                   </h3>
                   <p className="text-muted leading-snug tracking-wide">
                     {step.desc}

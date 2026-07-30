@@ -24,7 +24,7 @@ function SQLabsProduct() {
             <li className="text-gray-300">/</li>
             <li>
               <Link href="/what-we-do" className="hover:text-muted transition-colors">
-                Products
+                Product
               </Link>
             </li>
             <li className="text-gray-300">/</li>
@@ -33,18 +33,18 @@ function SQLabsProduct() {
         </nav>
         <div className="px-[2] sm:px-2 md:px-[10%]">
         {/* Eyebrow */}
-        <p className="text-center text-primary mb-2 mt-8 sm:mt-8 md:mt-2 text-sm 2xl:text-base ">
-          Tele-Pathology · AI-Assisted · 15-Minute Reports
+        <p className="text-center text-primary mb-2 mt-8 ">
+          Skyquest Labs
         </p>
  
         {/* Heading */}
-        <h1 className="text-center font-bold">
+        <h1 className="text-center font-semibold">
           The Lab That Exists <br></br>{" "}
           <em className="font-semibold">Only As Data.</em>
         </h1>
  
         {/* Subheading */}
-        <p className=" mx-auto text-center mt-2 mb-5 max-w-[75%] text-muted text-sm 2xl:text-base ">
+        <p className=" mx-auto text-center mt-2 mb-5 max-w-full text-muted  ">
            Skyquest Labs connects physical diagnostic labs to qualified pathologists remotely delivering verified reports in under 15 minutes. Only data travels. Never the sample.
         </p>
         

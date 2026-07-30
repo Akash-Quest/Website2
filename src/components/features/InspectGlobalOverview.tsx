@@ -33,16 +33,17 @@ export default function InspectGlobalOverview() {
   return (
     <section className="w-full bg-[#F7F5F1]  font-['Inter_Tight'] ">
       
-      <div className="page-container mx-auto flex flex-col gap-16">
+      <div className="page-container mx-auto flex flex-col ">
         
         {/* ── TOP HEADLINE BLOCK ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start  justify-between pb-8">
-          <div className="lg:col-span-7 flex flex-col gap-3">
-            <p className="text-primary tracking-wide">
+        <span className="text-primary ">
               Product Overview
-            </p>
+            </span>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start mt-5 mb-5 justify-between pb-8">
+          <div className="lg:col-span-7 flex flex-col gap-3">
+            
             <h2 className="font-semibold ">
-              One Verified Record,Instead Of <br/> 
+              One Verified Record,Instead Of  
               Nine <em className="font-semibold ">Disconnected Reports</em>
             </h2>
           </div>
@@ -87,7 +88,7 @@ export default function InspectGlobalOverview() {
  
                 {/* Typography Stack */}
                 <div className="flex flex-col gap-1.5 pt-1.5">
-                  <h3 className="font-semibold text-[#03030F]  transition-colors duration-200">
+                  <h3 className="font-semibold text-[#03030F] text-body-xl transition-colors duration-200">
                     {item.title}
                   </h3>
                   <p className="leading-snug tracking-wide text-[#03030F]/70 max-w-[480px]">

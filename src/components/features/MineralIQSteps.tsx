@@ -43,19 +43,19 @@ export default function MineralIQSteps() {
   ];
 
   return (
-    <section className="w-full bg-[#F7F5F1] py-24 md:py-32 px-6 sm:px-12 lg:px-[8%] font-['Inter_Tight'] overflow-hidden relative">
-      <div className="max-w-[1920px] mx-auto flex flex-col items-center relative z-10 w-full">
+    <section className="w-full bg-[#F7F5F1] font-['Inter_Tight'] overflow-hidden relative">
+      <div className="page-container mx-auto flex flex-col items-center relative z-10 w-full">
         
         {/* ── HEADER STRINGS MODULE ── */}
         <div className="text-center mb-24 max-w-3xl">
-          <span className="text-sm font-semibold text-[#1D1EE3] tracking-wider mb-3 block">
+          <span className=" text-[#1D1EE3]  mb-3 block">
             How It Works
           </span>
-          <h2 className="font-semibold text-3xl sm:text-5xl md:text-[52px] tracking-tight text-[#03030F] leading-tight">
+          <h2 className="font-semibold text-[#03030F] ">
             From Raw Signal to Verified <br />
             <em className="font-semibold">Record</em>
           </h2>
-          <p className="text-gray-600 mt-5 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="text-muted mt-5 mx-auto tracking-wide leading-snug">
             Four stages turn scattered sensor and imagery feeds into a single number that funders, regulators, and operators can act on.
           </p>
         </div>
@@ -71,7 +71,7 @@ export default function MineralIQSteps() {
               viewBox="0 0 1056 377" 
               fill="none" 
               xmlns="http://www.w3.org/2000/svg"
-              className="w-full h-full"
+              className="w-full h-full overflow-visible"
             >
               <path 
                 d="M175.272 119.513C190.414 71.2446 163.56 19.8405 115.292 4.69841C67.0236 -10.4437 15.6195 16.4103 0.477372 64.6785" 
@@ -79,6 +79,7 @@ export default function MineralIQSteps() {
                 strokeOpacity="0.5" 
                 strokeWidth="1.5"
                 strokeDasharray="10 10"
+                transform="translate(0, -25)"
               />
               <path 
                 d="M761.272 119.513C776.414 71.2446 749.56 19.8405 701.292 4.69841C653.024 -10.4437 601.619 16.4103 586.477 64.6785" 
@@ -86,6 +87,7 @@ export default function MineralIQSteps() {
                 strokeOpacity="0.5" 
                 strokeWidth="1.5"
                 strokeDasharray="10 10"
+                transform="translate(0, -15)"
               />
               <path 
                 d="M319.477 329.877C344.771 373.687 400.791 388.698 444.601 363.404C488.411 338.11 503.421 282.09 478.127 238.28" 
@@ -93,6 +95,7 @@ export default function MineralIQSteps() {
                 strokeOpacity="0.5" 
                 strokeWidth="1.5"
                 strokeDasharray="10 10"
+                transform="translate(0, 45)"
               />
               <path 
                 d="M884.477 329.877C909.771 373.687 965.791 388.698 1009.6 363.404C1053.41 338.11 1068.42 282.09 1043.13 238.28" 
@@ -100,6 +103,7 @@ export default function MineralIQSteps() {
                 strokeOpacity="0.5" 
                 strokeWidth="1.5"
                 strokeDasharray="10 10"
+                transform="translate(0, 45)"
               />
             </svg>
           </div>
@@ -117,11 +121,11 @@ export default function MineralIQSteps() {
                 </div>
 
                 {/* Typography Stack */}
-                <div className="flex flex-col gap-2 max-w-[280px]">
-                  <h3 className="text-xl font-bold text-[#03030F] tracking-tight">
-                    <span className="text-[#1D1EE3] font-semibold mr-1">{step.num}</span> {step.title}
+                <div className="flex flex-col gap-2 max-w-full">
+                  <h3 className="font-semibold text-body-xl text-[#03030F] ">
+                    <span className="font-semibold ">{step.num}</span> {step.title}
                   </h3>
-                  <p className="text-sm leading-relaxed font-normal text-[#03030F]/70">
+                  <p className="tracking-wide leading-snug text-muted">
                     {step.desc}
                   </p>
                 </div>

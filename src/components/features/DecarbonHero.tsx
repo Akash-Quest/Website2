@@ -25,9 +25,7 @@ function DecarbonXProduct() {
               </li>
               <li className="text-gray-300">/</li>
               <li>
-                <Link href="/what-we-do" className="hover:text-muted transition-colors">
-                  Products
-                </Link>
+                Product
               </li>
               <li className="text-gray-300">/</li>
               <li className="text-gray-500"> DeCarbonX</li>
@@ -42,12 +40,12 @@ function DecarbonXProduct() {
      
             {/* Heading */}
             <h1 className="text-center font-semibold">
-              The Automated Factory <br/>  For <em className="font-semibold">Sovereign Climate<br/> Finance.</em>
+              The Automated Factory <br/>  For <em className="font-semibold">Sovereign Climate Finance</em>
             </h1>
      
             {/* Subheading */}
             <p className=" mx-auto text-center mt-2 mb-5 max-w-[75%] text-muted 2xl:text-base ">
-              DeCarbonX turns climate project ideas into finance-ready instruments carbon credits, green bonds, Article 6 forwards with full national data sovereignty and AI-driven MRV. 
+              DeCarbonX turns climate project ideas into finance-ready instruments carbon credits, green bonds, Article 6 forwards with full national data sovereignty and AI-driven MRV
             </p>
 
             {/* ── 🛠️ STEP 2: BUTTONS SET EXACTLY AS PER YOUR IMAGE ── */}

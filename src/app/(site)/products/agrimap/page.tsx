@@ -16,6 +16,7 @@ import Stats3 from '@/components/ui/Stats3';
 import {insightData} from "@/Constants/Insight ";
 import Image from "next/image";
 import Link from "next/link";
+import StatsGridThree from '@/components/ui/Stats3';
 
 
 export default function AgriMapPage() {
@@ -23,7 +24,14 @@ export default function AgriMapPage() {
     <main className="w-full bg-[#F7F5F1] ">
       {/* Layer 1: Global Platform Banner Area */}
       <AgriMapHero />
-      <Stats3/>
+      <StatsGridThree
+       
+       stats={[
+        { target: 38, suffix: "", label: "Districts Covered" },
+  { target: 17, suffix: "", label: "New varieties tracked" },
+  { target: 4, suffix: "", label: "Crop categories" },
+       ]}
+     />
       <AgriMapOverview /> 
       <AgriMapFeatures /> 
       <AgriMapSteps /> 

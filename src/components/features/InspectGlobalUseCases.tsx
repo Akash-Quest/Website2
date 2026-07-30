@@ -76,14 +76,16 @@ export default function InspectGlobalUseCases() {
  
   return (
     <section className="w-full bg-[#FFFFFF] font-['Inter_Tight'] ">
-      <div className="page-container mx-auto flex flex-col gap-16">
-        
-        {/* ── HEADER LAYOUT BLOCK ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start w-full">
-          <div className="lg:col-span-7 flex flex-col gap-2">
-            <p className="font-semibold text-primary ">
+      
+      <div className="page-container mx-auto flex flex-col ">
+        <p className="font-semibold text-primary ">
               Use Cases
-            </p>
+        </p>
+      
+        {/* ── HEADER LAYOUT BLOCK ── */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start mt-5 mb-5 w-full">
+          <div className="lg:col-span-7 flex flex-col gap-2">
+            
             <h2 className="font-semibold ">
               One Platform, Six Very  <br/><em className="font-semibold">Different Jobs</em>
             </h2>
@@ -123,7 +125,7 @@ export default function InspectGlobalUseCases() {
                     {item.tag}
                   </span>
                   {/* Headline Title */}
-                  <h3 className="font-semibold  leading-snug in-h-[50px]">
+                  <h3 className="font-semibold text-body-xl leading-snug in-h-[50px]">
                     {item.title}
                   </h3>
                   {/* Paragraph Context Body */}

@@ -88,7 +88,7 @@ export default function InspectGlobalSteps() {
                 strokeOpacity="0.5" 
                 strokeWidth="1.5"
                 strokeDasharray="10 10"
-                transform="translate(0, 55)"
+                transform="translate(0, 105)"
               />
             </svg>
           </div>
@@ -109,10 +109,10 @@ export default function InspectGlobalSteps() {
 
                 {/* Typography Stack */}
                 <div className="flex flex-col gap-2 max-w-full">
-                  <h3 className="font-semibold text-[#03030F] transition-colors duration-200">
+                  <h3 className="font-semibold text-[#03030F] text-body-xl transition-colors duration-200">
                     {step.num}    {step.title}
                   </h3>
-                  <p className="tracking-wide leading-snug pt-2">
+                  <p className="tracking-wide text-muted leading-snug pt-2">
                     {step.desc}
                   </p>
                 </div>

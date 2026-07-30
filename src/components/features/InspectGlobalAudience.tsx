@@ -67,7 +67,7 @@ export default function InspectGlobalAudience() {
               {/* Typography Block Layer */}
               <div className="flex flex-col gap-2">
                 {/* Core Component Headline */}
-                <h3 className="font-semibold text-[#03030F] leading-snug tracking-wide">
+                <h3 className="font-semibold text-[#03030F] text-body-xl">
                   {card.title}
                 </h3>
                 

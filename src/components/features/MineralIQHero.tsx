@@ -26,7 +26,7 @@ function MineralIQProduct() {
               <li className="text-gray-300">/</li>
               <li>
                 <Link href="/what-we-do" className="hover:text-muted transition-colors">
-                  Products
+                  Product
                 </Link>
               </li>
               <li className="text-gray-300">/</li>
@@ -36,8 +36,8 @@ function MineralIQProduct() {
           
           <div className="px-[2] sm:px-2 md:px-[10%]">
             {/* Eyebrow */}
-            <p className="text-center font-semibold text-primary mb-2 mt-8 sm:mt-8 md:mt-2 text-sm 2xl:text-base ">
-              Live · 12 Countries · Global Deployment
+            <p className="text-center text-primary mb-2 mt-8 sm:mt-8 md:mt-2 ">
+              MineralIQ
             </p>
      
             {/* Heading */}
@@ -47,7 +47,7 @@ function MineralIQProduct() {
             </h1>
      
             {/* Subheading */}
-            <p className=" mx-auto text-center mt-2 mb-5 max-w-[75%] text-muted 2xl:text-base ">
+            <p className=" mx-auto text-center mt-2 mb-5 max-w-3xl text-muted  ">
               Satellite intelligence, compliance scoring, and automated breach detection deployable for any mining jurisdiction, anywhere on Earth. 
             </p>
 

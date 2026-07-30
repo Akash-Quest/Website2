@@ -3,8 +3,9 @@
 import AboutUsHero from "@/components/features/AboutUsHero";
 import AboutUsPillars from "@/components/features/AboutUsPillars"; 
 import AboutUsPractices from "@/components/features/AboutUsPractices";
-import AboutUsHowWeWork from "@/components/features/AboutUsHowWeWork"; // ➔ 1. Naya Import
+import AboutUsHowWeWork from "@/components/features/AboutUsHowWeWork"; 
 import CaseStudies from "@/components/features/HomeCaseStudie";
+import StatsAbout from '@/components/ui/StatsAbout';
 import OurGlobalPresence from "@/components/features/HomeGlobalPresence";
 import CareersHero from "@/components/features/HomeCareer";
 import FAQSection from "@/components/features/Faq";
@@ -43,6 +44,7 @@ export default function AboutUsPage() {
 
       {/* Hero Component Render Area */}
       <AboutUsHero /> 
+      <StatsAbout/>
       <AboutUsPillars /> 
       <AboutUsPractices /> 
       <AboutUsHowWeWork /> 

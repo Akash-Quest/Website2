@@ -39,8 +39,8 @@ export default function AlwaysOnFeatures() {
   ];
  
   return (
-    <section className="w-full bg-white py-24 md:py-32 px-6 sm:px-12 lg:px-[8%] font-['Inter_Tight'] ">
-      <div className="max-w-[1920px] mx-auto flex flex-col items-center">
+    <section className="w-full bg-white  font-['Inter_Tight'] ">
+      <div className="page-container mx-auto flex flex-col items-center">
         
         {/* ── CENTRAL HEADER SECTION (MIRRORED TO IMAGE) ── */}
         <div className="text-center mb-16 max-w-3xl flex flex-col gap-4 Z-20">
@@ -70,12 +70,12 @@ export default function AlwaysOnFeatures() {
               {/* Typography Block Layer */}
               <div className="flex flex-col gap-2">
                 {/* Core Component Headline */}
-                <h3 className="font-semibold text-[#03030F] tracking-wide">
+                <h3 className="font-semibold text-body-xl text-[#03030F] ">
                   {card.title}
                 </h3>
                 
                 {/* Description Context string */}
-                <p className="font-normal tracking-wide leading-snug text-muted mt-2">
+                <p className="tracking-wide leading-snug text-muted mt-2">
                   {card.desc}
                 </p>
               </div>

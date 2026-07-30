@@ -26,7 +26,7 @@ function AlwaysOnProduct() {
             <li className="text-gray-300">/</li>
             <li>
               <Link href="/what-we-do" className="hover:text-muted transition-colors">
-                Products
+                Product
               </Link>
             </li>
             <li className="text-gray-300">/</li>

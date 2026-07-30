@@ -53,7 +53,7 @@ export default function InspectGlobalFeatures() {
         
         {/* ── HEADER ── */}
         <div className="text-center mb-16 md:mb-20">
-          <p className="text-[#CBCBFF] mb-3 block">
+          <p className="text-white mb-3 block">
             Features
           </p>
           <h2 className="font-semibold text-white">
@@ -79,10 +79,10 @@ export default function InspectGlobalFeatures() {
               
               {/* Text Content */}
               <div className="flex flex-col gap-2">
-                <h3 className="font-semibold text-white">
+                <h3 className="font-semibold  text-body-xl text-white">
                   {feature.title}
                 </h3>
-                <p className="tracking-wide text-[#CBCBFF] leading-snug">
+                <p className="tracking-wide text-white leading-snug">
                   {feature.desc}
                 </p>
               </div>
@@ -94,4 +94,3 @@ export default function InspectGlobalFeatures() {
     </section>
   );
 }
-

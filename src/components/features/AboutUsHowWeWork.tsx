@@ -24,13 +24,13 @@ export default function AboutUsHowWeWork() {
   ];
 
   return (
-    <section className="w-full bg-[#FFFFFF] py-16 md:py-24 px-6 sm:px-12 lg:px-[8%] font-['Inter_Tight'] select-none">
+    <section className="w-full bg-[#FFFFFF]  font-['Inter_Tight'] ">
       {/* Updated to max-w-[1920px] as per your design requirement */}
-      <div className="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div className="page-container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         
         {/* ── LEFT PANEL: Custom Sized Image Container ── */}
         {/* Added explicit custom constraints [695px] x [729px] safely with Tailwind bracket schema */}
-        <div className=" w-full relative rounded-lg aspect-[4/3] sm:aspecct-[14/9] overflow-hidden ">
+        <div className=" w-full relative rounded-lg aspect-[695/729] overflow-hidden lg:sticky lg:top-8">
           <Image
             src="/AboutUs/AboutUsHww.png" 
             alt="Embedded Teams Working together"
@@ -44,12 +44,12 @@ export default function AboutUsHowWeWork() {
         <div className=" flex flex-col items-start w-full">
           
           {/* Eyebrow Tag */}
-          <span className="text-sm font-semibold text-[#1D1EE3] tracking-wide uppercase mb-3">
+          <span className="font-semibold text-primary mb-3">
             How we work
           </span>
 
           {/* Main Typography Header Block */}
-          <h2 className=" font-bold ">
+          <h2 className=" font-semibold ">
             Embedded Teams. Senior Partners.{' '}
             <em className="font-semibold">
               Outcomes On The Line.
@@ -63,10 +63,10 @@ export default function AboutUsHowWeWork() {
                 key={idx} 
                 className="py-6 flex flex-col gap-1.5 transition-all duration-200 hover:pl-2 group"
               >
-                <h3 className="text-lg md:text-xl font-bold text-[#03030F] tracking-tight transition-colors duration-200">
+                <h3 className="font-semibold text-body-xl text-[#03030F]  transition-colors duration-200">
                   {step.title}
                 </h3>
-                <p className="text-sm md:text-base leading-relaxed text-[#03030F]/70">
+                <p className="tracking-wide leading-snug text-muted">
                   {step.desc}
                 </p>
               </div>

@@ -48,21 +48,22 @@ export default function SQLabWIF() {
   ];
  
   return (
-    <section className="w-full bg-[#FFFFFF] py-24 md:py-32 px-6 sm:px-12 lg:px-[8%] font-['Inter_Tight'] select-none">
-      <div className="max-w-[1920px] mx-auto flex flex-col gap-16">
+    <section className="w-full bg-[#FFFFFF]  font-['Inter_Tight'] ">
+      <div className="page-container mx-auto flex flex-col ">
         
         {/* ── HEADER LAYOUT BLOCK ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start justify-between w-full">
-          <div className="lg:col-span-7 flex flex-col gap-2">
-            <span className="font-semibold text-primary text-sm">
+        <span className="font-semibold text-primary ">
               Who It's For
             </span>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start mt-5 mb-5 justify-between w-full">
+          <div className="lg:col-span-7 flex flex-col gap-2">
+            
             <h2 className="font-semibold ">
               Built For Every Stakeholder<br />In <em className="font-semibold">The Diagnostic Chain.</em>
             </h2>
           </div>
           <div className="lg:col-span-5 pb-2">
-            <p className="text-base md:text-[18px] leading-relaxed text-muted max-w-[460px]">
+            <p className="tracking-wide leading-snug text-muted max-w-full">
               Whether you're a hospital administrator, a technician running a local lab, or a doctor waiting on results Skyquest Labs was designed around your workflow.
             </p>
           </div>
@@ -92,15 +93,15 @@ export default function SQLabWIF() {
                 {/* Meta Typography Wrapper */}
                 <div className="flex flex-col gap-2">
                   {/* Tagline category selector */}
-                  <span className="font-semibold text-xs text-primary ">
+                  <span className="font-semibold  text-primary ">
                     {item.tag}
                   </span>
                   {/* Headline Title */}
-                  <h4 className="font-semibold min-h-[50px]">
+                  <h3 className="font-semibold  text-body-xl min-h-[50px]">
                     {item.title}
-                  </h4>
+                  </h3>
                   {/* Paragraph Context Body */}
-                  <p className="text-sm font-normal text-muted">
+                  <p className="tracking-wide leading-snug text-muted">
                     {item.desc}
                   </p>
                 </div>
@@ -110,7 +111,7 @@ export default function SQLabWIF() {
                   {item.bullets.map((bullet, bIdx) => (
                     <div 
                       key={bIdx} 
-                      className="w-full flex items-center text-[13px] md:text-sm font-normal text-muted border-b border-black/10 py-3 last:border-none last:pb-0"
+                      className="w-full flex items-center tracking-wide leading-snug text-muted border-b border-black/10 py-3 last:border-none last:pb-0"
                     >
                       {bullet}
                     </div>

@@ -22,10 +22,8 @@ function InspectGlobalProduct() {
             </li>
             <li className="text-gray-300">/</li>
             <li>
-              <Link href="/what-we-do" className="hover:text-muted transition-colors">
-                Products
-              </Link>
-            </li>
+              Product
+              </li>
             <li className="text-gray-300">/</li>
             <li className="text-gray-500"> Inspect Global</li>
           </ol>

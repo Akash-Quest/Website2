@@ -80,7 +80,7 @@ export default function MineralIQFeatures() {
   ];
 
   return (
-    <section className="w-full relative py-20 md:py-28 px-6 sm:px-12 lg:px-[8%] overflow-hidden bg-[#03030F]">
+    <section className="w-full relative  overflow-hidden bg-[#03030F]">
         <div 
             className="absolute inset-0 z-0 pointer-events-none"
             style={{ 
@@ -90,7 +90,7 @@ export default function MineralIQFeatures() {
             backgroundRepeat: "no-repeat"
         }}      
         />    
-      <div className="max-w-[1920px] mx-auto relative">
+      <div className="page-container mx-auto relative">
         
         {/* ── HEADER ── */}
         <div className="text-center mb-16 md:mb-20">
@@ -126,10 +126,10 @@ export default function MineralIQFeatures() {
 
               {/* Text Content */}
               <div className="flex flex-col gap-2">
-                <h4 className="font-semibold text-white">
+                <h3 className="font-semibold  text-body-xl text-white">
                   {feature.title}
-                </h4>
-                <p className="md:text-base text-[#CBCBFF] leading-relaxed">
+                </h3>
+                <p className="tracking-wide text-[#CBCBFF] leading-snug">
                   {feature.desc}
                 </p>
               </div>
@@ -141,4 +141,3 @@ export default function MineralIQFeatures() {
     </section>
   );
 }
-
