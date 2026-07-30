@@ -250,7 +250,7 @@ export default function CaseStudies({
                     <h3
                       className={`transition-all duration-150 ${
                         isExpanded
-                          ? "font-medium leading-tight text-body-xl"
+                          ? "font-medium leading-tight text-body-xl line-clamp-3"
                           : "font-semibold leading-tight text-body-lg"
                       }`}
                     >

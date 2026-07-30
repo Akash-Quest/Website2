@@ -30,7 +30,7 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
     case "paragraph":
       if (block.segments) {
         return (
-          <p className="mb-3 report-p tracking-tight leading-normal text-gray-700">
+          <p className="mb-3 report-p tracking-wide leading-normal text-gray-700">
             {block.dropCap && (
               <span className="float-left mr-2 font-playfair text-5xl font-bold leading-[0.9] text-gray-900">
                 {block.text.charAt(0)}
@@ -57,7 +57,7 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
         );
       }
       return (
-        <p className="mb-3 report-p tracking-tight leading-normal text-gray-700">
+        <p className="mb-3 report-p tracking-wide leading-normal text-gray-700">
           {block.dropCap && (
             <span className="float-left mr-3 font-playfair text-5xl font-bold leading-[0.8] text-gray-900">
               {block.text.charAt(0)}
@@ -80,7 +80,7 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
       return (
         <ul className="mb-4 space-y-2">
           {block.items.map((item, i) => (
-            <li key={i} className="flex gap-2 report-p tracking-tight leading-normal text-gray-700">
+            <li key={i} className="flex gap-2 report-p tracking-wide leading-normal text-gray-700">
               <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-gray-400" />
               <span>{item}</span>
             </li>
@@ -91,18 +91,18 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
       return (
         <div className="my-6 rounded-xl border border-gray-200 bg-[#F7F5F1] p-5 sm:p-6 bg-white">
           {block.title && <p className="mb-3 font-bold text-gray-900 mb-3">{block.title}</p>}
-          {block.text && <p className="mb-3 report-p tracking-tight leading-normal text-gray-700">{block.text}</p>}
+          {block.text && <p className="mb-3 report-p tracking-wide leading-normal text-gray-700">{block.text}</p>}
           {block.items && (
             <ul className="space-y-2">
               {block.items.map((item, i) => (
-                <li key={i} className="flex gap-2 report-p tracking-tight leading-normal text-gray-700">
+                <li key={i} className="flex gap-2 report-p tracking-wide leading-normal text-gray-700">
                   <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-gray-400" />
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
           )}
-          {block.footer && <p className="mt-3 report-p tracking-tight leading-normal text-gray-700">{block.footer}</p>}
+          {block.footer && <p className="mt-3 report-p tracking-wide leading-normal text-gray-700">{block.footer}</p>}
         </div>
       );
     case "image":
