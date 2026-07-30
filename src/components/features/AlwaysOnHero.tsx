@@ -7,7 +7,7 @@ import Button from "@/components/ui/Button";
 
 function AlwaysOnProduct() {
   return (
-    <section className="relative bg-background overflow-hidden">
+    <section className="relative bg-background mb-15 overflow-hidden">
       {/* Background Overlay */}
       <div
         className="pointer-events-none absolute inset-0 bg-cover opacity-30 aspect-[1920/812]"
