@@ -11,14 +11,14 @@ type Member = {
 
 const members: Member[] = [
   {
-    name: "Judith Rodriguez",
-    title: "Founder & Chief Executive Officer",
+    name: "Shriya Damani",
+    title: "Co-Founder & CEO, Skyquest",
     location: "Ahmedabad, India",
     image: "/Careers/pe1.jpg",
   },
   {
-    name: "Chris Glasser",
-    title: "Founder & Chief Executive Officer",
+    name: "Akash Bhavsar",
+    title: "Co-founder,Skyquest",
     location: "Ahmedabad, India",
     image: "/Careers/pe2.jpg",
   },
@@ -52,12 +52,7 @@ const members: Member[] = [
     location: "Ahmedabad, India",
     image: "/Careers/pe1.jpg",
   },
-  {
-    name: "Chris Glasser",
-    title: "Founder & Chief Executive Officer",
-    location: "Ahmedabad, India",
-    image: "/Careers/pe2.jpg",
-  },
+  
 ];
 
 function MemberCard({ member }: { member: Member }) {
