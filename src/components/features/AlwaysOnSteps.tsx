@@ -43,7 +43,7 @@ export default function AlwaysOnSteps() {
   ];
 
   return (
-    <section className="w-full bg-[#F7F5F1]  font-['Inter_Tight'] overflow-hidden relative">
+    <section id="how-it-works" className="w-full bg-[#F7F5F1]  font-['Inter_Tight'] overflow-hidden relative">
       <div className="page-container mx-auto flex flex-col items-center relative z-10 w-full">
         
         {/* ── HEADER STRINGS MODULE ── */}

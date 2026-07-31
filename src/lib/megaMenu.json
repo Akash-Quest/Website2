@@ -783,10 +783,10 @@
       "label": "Our Company",
       "items": [
         { "id": "our-team", "label": "Our Team", "href": "/team" },
-        { "id": "contact-us", "label": "Contact Us", "href": "/contact" },
         { "id": "insights", "label": "Insights", "href": "/insight" },
         { "id": "case-studies", "label": "Case Studies", "href": "/case-studies" },
         { "id": "about-skyquest", "label": "About SkyQuest", "href": "/about" },
+        { "id": "contact-us", "label": "Contact Us", "href": "/contact" },        
         { "id": "privacy-policy", "label": "Privacy Policy", "href": "/privacypolicy" }
       ]
     },

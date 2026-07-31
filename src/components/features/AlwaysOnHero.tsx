@@ -54,7 +54,7 @@ function AlwaysOnProduct() {
               <Button href="/request-deployment" variant="primary">
                 Request A Deployment
               </Button>
-              <Button href="/how-it-works" variant="white">
+              <Button href="#how-it-works" variant="white">
                 See How It Works
               </Button>
             </div>

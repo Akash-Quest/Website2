@@ -4,7 +4,7 @@ import Link from "next/link";
 import Button from "@/components/ui/Button"; 
 function AgriMapProduct() {
   return (
-    <section className="reltive">
+    <section id="#how-it-works"className="reltive">
     <div className="relative bg-background overflow-hidden">
          <div
         className=" pointer-events-none absolute inset-0 bg- bg-cover opacity-30 aspect-[1920/812]"
@@ -47,7 +47,7 @@ function AgriMapProduct() {
               <Button href="/request-deployment" variant="primary">
                 Request A Deployment
               </Button>
-              <Button href="/how-it-works" variant="white">
+              <Button href="#how-it-works" variant="white">
                 See How It Works
               </Button>
             </div>
