@@ -1,12 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 type Member = {
   name: string;
   title: string;
   location: string;
   image: string;
+  linkedin?: string;
 };
 
 const members: Member[] = [
@@ -15,12 +17,14 @@ const members: Member[] = [
     title: "Co-Founder & CEO, Skyquest",
     location: "Ahmedabad, India",
     image: "/Careers/Shriya.jpg",
+    linkedin: "https://in.linkedin.com/in/shriya-damani-b460936",
   },
   {
     name: "Akash Bhavsar",
     title: "Co-founder,Skyquest",
     location: "Ahmedabad, India",
     image: "/Careers/Akash.jpg",
+    linkedin: "https://www.linkedin.com/in/akashbhavsar",
   },
   {
     name: "Radhika Dhand",
@@ -72,20 +76,32 @@ function MemberCard({ member }: { member: Member }) {
           <p className=" text-[#03030FB2] ">{member.location}</p>
         </div>
         <div className="flex justify-end gap-2 mt-0">
-          <button
-            type="button"
+          <Link
+            href="/contact"
             aria-label={`Email ${member.name}`}
             className="w-7 h-7 flex items-center justify-center rounded-sm border-none text-gray-500 bg-white"
           >
             <Image src="/Careers/mail.svg" alt="" width={16} height={16} className="w-6 h-6" />
-          </button>
-          <button
-            type="button"
-            aria-label={`${member.name} on LinkedIn`}
-            className="w-7 h-7 flex items-center justify-center rounded-sm border-none text-gray-500 bg-white"
-          >
-            <Image src="/Careers/linkedin.svg" alt="" width={20} height={20} className="w-6 h-6" />
-          </button>
+          </Link>
+          {member.linkedin ? (
+            <a
+              href={member.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${member.name} on LinkedIn`}
+              className="w-7 h-7 flex items-center justify-center rounded-sm border-none text-gray-500 bg-white"
+            >
+              <Image src="/Careers/linkedin.svg" alt="" width={20} height={20} className="w-6 h-6" />
+            </a>
+          ) : (
+            <button
+              type="button"
+              aria-label={`${member.name} on LinkedIn`}
+              className="w-7 h-7 flex items-center justify-center rounded-sm border-none text-gray-500 bg-white"
+            >
+              <Image src="/Careers/linkedin.svg" alt="" width={20} height={20} className="w-6 h-6" />
+            </button>
+          )}
         </div>
       </div>
     </div>
