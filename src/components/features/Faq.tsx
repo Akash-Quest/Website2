@@ -1,10 +1,12 @@
 "use client";
 
 import { useRef, useLayoutEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { ArrowUp } from "iconsax-react";
 import Link from "next/link";
 import Button from "../ui/Button";
 import { defaultFaqs } from "@/Constants/FaqDetails";
+import { fadeUp, fadeLeft, fadeRight } from "@/lib/animations";
 
 interface FAQItem {
   question: string;
@@ -47,7 +49,13 @@ export default function FAQSection({
 
   return (
     <section className={`w-full ${bgClassName}`}>
-      <div className="page-container ">
+      <motion.div
+        className="page-container "
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
 
         {/* ── MOBILE: heading (top) ───────────── */}
         <div className="lg:hidden">
@@ -61,7 +69,10 @@ export default function FAQSection({
 
         <div className="lg:flex lg:gap-12">
         {/* ── DESKTOP: left column (heading + card) ── */}
-        <div className="hidden lg:flex lg:w-[350px] 2xl:w-[500px]  flex-shrink-0 flex-col justify-between ">
+        <motion.div
+          variants={fadeLeft}
+          className="hidden lg:flex lg:w-[350px] 2xl:w-[500px]  flex-shrink-0 flex-col justify-between "
+        >
           <div>
             <p className="text-primary font-medium text-body-sm">
               {eyebrow}
@@ -77,15 +88,18 @@ export default function FAQSection({
                     {ctaButtonText}
                   </Button>
           </div>
-        </div>
+        </motion.div>
 
         {/* ── Accordion (middle on mobile, right on desktop) ── */}
-        <div className="flex-1 divide-y divide-gray-200 border-t border-gray-200">
+        <motion.div
+          variants={fadeRight}
+          className="flex-1 divide-y divide-gray-200 border-t border-gray-200"
+        >
           {faqs.map((faq, index) => (
             <div key={index} className="py-3">
               <button
                 onClick={() => toggle(index)}
-                className="w-full flex items-center justify-between gap-8 text-left group"
+                className="w-full flex items-center justify-between gap-8 text-left group cursor-pointer"
                 aria-expanded={openIndex === index}
               >
                 <h3 className={`text-body-lg font-medium  transition-colors duration-200 ${openIndex === index ? "text-gray-900" : "text-gray-700 group-hover:text-gray-900"}`}>
@@ -117,7 +131,7 @@ export default function FAQSection({
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
         </div>
 
         {/* ── MOBILE: "Still have a question" card (bottom) ── */}
@@ -132,7 +146,7 @@ export default function FAQSection({
           </Link>
         </div>
 
-      </div>
+      </motion.div>
     </section>
   );
 }

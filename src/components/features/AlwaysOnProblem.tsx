@@ -6,24 +6,20 @@ import { TickSquare, CloseSquare } from 'iconsax-react';
 export default function ProblemStatement() {
   const withoutSkyquest = [
     
-    "Patients travel hours to learn they need a different specialist",
-    "Language barriers block clinical communication in local languages",
-    "No triage system all cases treated with same urgency regardless of severity",
-    "Diagnostic reports are physical, slow, and inaccessible from remote areas",
-    "Government health schemes are unknown to most rural citizens",
-    "Doctors have no visibility into incoming patient load or case severity",
-    "Emergency cases identified too late no real-time escalation system",
+    "Limited access to timely healthcare guidance",
+    "Difficulty identifying the right level of care",
+    "Language barriers in healthcare communication",
+    "Delays in clinical triage and referrals",
+    "Limited visibility into patient assessments and escalated cases"
+ 
   ];
 
   const withSkyquest = [
     
-    "AI triage on WhatsApp patients get guidance before leaving home",
-    "8 local languages full clinical conversations in the patient's mother tongue",
-    "Severity-based routing urgent cases escalated instantly to specialists",
-    "Digital diagnostic reports delivered by WhatsApp, SMS, or email instantly",
-    "Health schemes, facility locator, and doctor search built into the conversation",
-    "Live dashboard doctors and government monitor case load in real time",
-    "Automated escalation alerts urgent cases flagged immediately to physicians",
+    "Evaluates patient-reported symptoms and provides AI-assisted clinical guidance.",
+    "Enables patients to communicate in supported local languages for a more accessible healthcare experience.",
+    "Helps assess urgency and prioritize cases based on reported symptoms and available information.",
+    "Supports escalation of relevant cases to healthcare professionals for further assessment."
   ];
 
   return (
@@ -38,12 +34,12 @@ export default function ProblemStatement() {
           <div className="lg:col-span-8 flex flex-col gap-3">
             
             <h2 className="font-semibold text-[#03030F]]">
-              Healthcare is out of reach for <br/>Rural And <em className="font-semibold ">Semi-Urban India.</em>
+              Making Healthcare Access <br /> Faster and <em className="font-semibold ">More Accessible</em>
             </h2>
           </div>
           <div className="lg:col-span-4 ">
             <p className="tracking-wide leading-snug text-muted max-w-full">
-              Qualified doctors are concentrated in cities. Patients in remote areas face hours of travel, language barriers, and no way to get a triage before arriving. AlwaysON fixes this through the one platform everyone already has.
+              AlwaysON helps bridge these gaps through an accessible digital healthcare experience that combines AI-assisted assessment, multilingual conversations, rapid triage, and expert referrals.
             </p>
           </div>
         </div>
@@ -54,7 +50,7 @@ export default function ProblemStatement() {
           {/* LEFT CARD: Without Skyquest Labs */}
           <div className="bg-white rounded-[20px] p-6 sm:p-8 md:p-10 border border-gray-200/60 shadow-sm flex flex-col gap-6">
             <h3 className="font-semibold text-body-2xl text-[#03030F] pb-2 border-b border-gray-200">
-              Without Skyquest Labs
+              Key Challenges
             </h3>
             
             <div className="flex flex-col border-b border-gray-200">
@@ -77,7 +73,7 @@ export default function ProblemStatement() {
           {/* RIGHT CARD: With Skyquest Labs */}
           <div className="bg-white rounded-[20px] p-6 sm:p-8 md:p-10 border border-gray-200/60 shadow-sm flex flex-col gap-6">
             <h3 className="font-semibold text-body-2xl text-[#03030F] pb-2 border-b border-gray-200">
-              With Skyquest Labs
+              Solutions
             </h3>
             
             <div className="flex flex-col border-b border-gray-200">

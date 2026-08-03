@@ -39,10 +39,10 @@ export const insightData = {
       id: 7,
       image:
         "https://res.cloudinary.com/dftrsspaz/image/upload/v1780299799/skyquest/insight/dsga3ncwopnn7ut0eygt.webp",
-      category: "Insights",
-      type: "Case Snapshot",
+      category: "Articles",
+      type: "Article",
       topic: "Healthcare",
-      date: "TBD",
+      date: "August 03, 2026",
       readTime: "8 Min read",
       title: "Medical Device Innovation in 2025: Redefining the Frontiers of Clinical Technology",
       titleEmphasis: "Frontiers of Clinical Technology",
@@ -180,8 +180,8 @@ export const insightData = {
       id: 8,
       image:
         "https://res.cloudinary.com/dftrsspaz/image/upload/v1758190105/skyquest/insight/w2uqryq6ki2rhmvj9vqj.webp",
-      category: "Insights",
-      type: "Case Snapshot",
+      category: "Articles",
+      type: "Article",
       topic: "Agriculture",
       date: "TBD",
       readTime: "5 Min read",
@@ -313,8 +313,8 @@ export const insightData = {
       id: 9,
       image:
         "https://res.cloudinary.com/dftrsspaz/image/upload/v1758117832/skyquest/insight/o0ec5idsd0h0oevccpez.webp",
-      category: "Insights",
-      type: "Case Snapshot",
+      category: "Articles",
+      type: "Article",
       topic: "Chemicals",
       date: "TBD",
       readTime: "5 Min read",
@@ -397,8 +397,8 @@ export const insightData = {
     {
       id: 1,
       image: "/CaseStudy/re1.jpg",
-      category: "Case-Studies",
-      type: "Case Snapshot",
+      category: "Articles",
+      type: "Article",
       topic: "Agriculture & Livestock",
       date: "April 27, 2026",
       readTime: "5 Min read",
@@ -453,8 +453,8 @@ export const insightData = {
     {
       id: 2,
       image: "/CaseStudy/re2.jpg",
-      category: "Insights",
-      type: "Case Snapshot",
+      category: "Articles",
+      type: "Article",
       topic: "Urban Mobility",
       date: "March 12, 2026",
       readTime: "5 Min read",
@@ -509,8 +509,8 @@ export const insightData = {
     {
       id: 3,
       image: "/CaseStudy/re3.jpg",
-      category: "Case-Studies",
-      type: "Case Snapshot",
+      category: "Articles",
+      type: "Article",
       topic: "Financial Inclusion",
       date: "February 3, 2026",
       readTime: "6 Min read",
@@ -565,8 +565,8 @@ export const insightData = {
     {
       id: 4,
       image: "/CaseStudy/re1.jpg",
-      category: "Insights",
-      type: "Case Snapshot",
+      category: "Articles",
+      type: "Article",
       topic: "Agriculture & Livestock",
       date: "January 21, 2026",
       readTime: "5 Min read",
@@ -618,118 +618,7 @@ export const insightData = {
         },
       ] as ContentBlock[],
     },
-    {
-      id: 5,
-      image: "/CaseStudy/re2.jpg",
-      category: "Case-Studies",
-      type: "Case Snapshot",
-      topic: "Public Safety",
-      date: "December 9, 2025",
-      readTime: "5 Min read",
-      title: "Designing Safer Streets with Predictive Foot-Traffic Modeling",
-      titleEmphasis: "Predictive Foot-Traffic Modeling",
-      description:
-        "Worked with city safety boards to flag high-risk crossings before incidents occurred, using historical and live pedestrian data to retime signals at 40 intersections.",
-      subtitle: "Preventing Incidents Before They Happen With Predictive Analytics",
-      subtitleEmphasis: "Predictive Analytics",
-      body: [
-        {
-          type: "paragraph",
-          dropCap: true,
-          text: "City safety boards had long relied on incident reports to identify dangerous intersections, meaning action only followed after someone had already been hurt. In 2025, a predictive foot-traffic modeling initiative flipped that sequence, combining historical incident data with live pedestrian counts to flag high-risk crossings before they produced another statistic.",
-          segments: [
-            "ity safety boards had long relied on incident reports to identify dangerous intersections, meaning action only followed after someone had already been hurt. In 2025, a ",
-            { text: "predictive foot-traffic modeling initiative", href: "#" },
-            " flipped that sequence, combining historical incident data with live pedestrian counts to flag high-risk crossings before they produced ",
-            { text: "another statistic", bold: true },
-            ".",
-          ],
-        },
-        { type: "heading", text: "The ", emphasis: "Challenge" },
-        {
-          type: "paragraph",
-          text: "Signal timing across the city had been set once and rarely revisited, even as pedestrian volumes and traffic patterns shifted over time. Safety boards could point to intersections with a history of incidents, but had no forward-looking way to identify the next one before it happened.",
-        },
-        { type: "heading", text: "Our ", emphasis: "Approach" },
-        {
-          type: "list",
-          items: [
-            "Combined historical incident records with live pedestrian and vehicle counts across 40 intersections.",
-            "Built a risk-scoring model to flag crossings trending toward dangerous conditions before an incident occurred.",
-            "Retimed signals at flagged intersections in coordination with the city's traffic engineering team.",
-          ],
-        },
-        {
-          type: "callout",
-          title: "Key Results",
-          items: [
-            "40 intersections retimed based on predictive risk scoring.",
-            "High-risk crossings flagged proactively, ahead of incident data alone.",
-            "A repeatable model now used to prioritize the city's ongoing signal-retiming programme.",
-          ],
-        },
-        {
-          type: "paragraph",
-          text: "The shift from reactive to predictive safety planning has changed how the city allocates its retiming budget, prioritizing intersections trending toward risk rather than waiting for incident reports to justify the spend.",
-        },
-      ] as ContentBlock[],
-    },
-    {
-      id: 6,
-      image: "/CaseStudy/re3.jpg",
-      category: "Insights",
-      type: "Case Snapshot",
-      topic: "Treasury & Finance",
-      date: "November 17, 2025",
-      readTime: "6 Min read",
-      title: "Modernizing Treasury Operations for a Multinational Retailer",
-      titleEmphasis: "Multinational Retailer",
-      description:
-        "Replaced a decade-old reconciliation process with an automated treasury pipeline, cutting monthly close time from nine days to under thirty hours across 14 markets.",
-      subtitle: "Cutting Monthly Close Time From Nine Days to Under Thirty Hours",
-      subtitleEmphasis: "Under Thirty Hours",
-      body: [
-        {
-          type: "paragraph",
-          dropCap: true,
-          text: "A decade-old, largely manual reconciliation process had become the single biggest bottleneck in a multinational retailer's monthly close, consuming nine days across 14 markets and leaving treasury teams little time for anything but catching up. In 2025, an automated treasury pipeline replaced that process end to end, compressing close time to under thirty hours.",
-          segments: [
-            " decade-old, largely manual reconciliation process had become the single biggest bottleneck in a multinational retailer's monthly close, consuming nine days across 14 markets and leaving treasury teams little time for anything but catching up. In 2025, an ",
-            { text: "automated treasury pipeline", href: "#" },
-            " replaced that process end to end, compressing close time to ",
-            { text: "under thirty hours", bold: true },
-            ".",
-          ],
-        },
-        { type: "heading", text: "The ", emphasis: "Challenge" },
-        {
-          type: "paragraph",
-          text: "Reconciliation across 14 markets ran through spreadsheets and market-specific manual processes, each with its own quirks and failure points. Every month-end close consumed nine days of treasury staff time, delaying downstream reporting and leaving little room to investigate discrepancies properly.",
-        },
-        { type: "heading", text: "Our ", emphasis: "Approach" },
-        {
-          type: "list",
-          items: [
-            "Replaced spreadsheet-based reconciliation with an automated pipeline standardized across all 14 markets.",
-            "Built exception-based review so treasury staff only investigated genuine discrepancies, not routine matches.",
-            "Integrated the pipeline directly with each market's banking and ERP feeds to eliminate manual data entry.",
-          ],
-        },
-        {
-          type: "callout",
-          title: "Key Results",
-          items: [
-            "Monthly close time cut from nine days to under thirty hours.",
-            "Reconciliation standardized and automated across all 14 markets.",
-            "Treasury staff time redirected from manual matching to genuine exception handling.",
-          ],
-        },
-        {
-          type: "paragraph",
-          text: "With close time no longer the constraint, treasury leadership has shifted its focus to forward-looking cash forecasting, work the team never previously had the bandwidth to prioritize.",
-        },
-      ] as ContentBlock[],
-    },
+    
   ] as Insight[],
 };
 

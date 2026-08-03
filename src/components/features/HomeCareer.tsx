@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import Button from "../ui/Button";
+import { fadeLeft, fadeRight } from "@/lib/animations";
 
 export default function CareersHero() {
   return (
@@ -9,7 +13,13 @@ export default function CareersHero() {
       
       {/* ── LEFT PANEL ── */}
       <div className="flex w-full flex-col lg:flex-row  lg:gap-0  ">
-      <div className="flex w-full lg:w-1/2 flex-col justify-center bg-[#E0DBFF] px-6 py-8 sm:px-0 lg:px-14 lg:py-10  rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none  ">
+      <motion.div
+        variants={fadeLeft}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="flex w-full lg:w-1/2 flex-col justify-center bg-[#E0DBFF] px-6 py-8 sm:px-0 lg:px-14 lg:py-10  rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none  "
+      >
         
         {/* Label */}
         <p className="text-primary text-body-sm">
@@ -41,10 +51,16 @@ export default function CareersHero() {
             Apply Today
                   </Button>
         </div>
-      </div>
+      </motion.div>
 
       {/* ── RIGHT PANEL — full-bleed photo ── */}
-      <div className="group relative w-full lg:w-1/2 h-64 sm:h-80 lg:h-[clamp(22rem,28vw,33.6rem)]  rounded-b-xl lg:rounded-r-xl lg:rounded-bl-none overflow-hidden">
+      <motion.div
+        variants={fadeRight}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="group relative w-full lg:w-1/2 h-64 sm:h-80 lg:h-[clamp(22rem,28vw,33.6rem)]  rounded-b-xl lg:rounded-r-xl lg:rounded-bl-none overflow-hidden"
+      >
         <Image
           src="/HomeCareer/1.jpg"
           alt="Team celebrating together"
@@ -52,7 +68,7 @@ export default function CareersHero() {
           className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
           unoptimized
         />
-      </div>
+      </motion.div>
       </div>
       </div>
     </section>

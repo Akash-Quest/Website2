@@ -2,7 +2,9 @@
 import {  ArrowUp } from "lucide-react";
 import { useState, useEffect, useRef, useCallback, type JSX,  } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import Button from "../ui/Button";
+import { fadeUp, fadeUpSm, staggerContainer, fadeLeft, fadeRight } from "@/lib/animations";
 
 const tabs = [
   "AgriMap",
@@ -135,41 +137,47 @@ function TabButton({
 }) {
   const deg = progress * 360;
 
-  const borderBg = isActive
+  const fillColor = isActive ? "#1D1EE3" : "#FFFFFF";
+  const borderLayer = isActive
     ? "#1D1EE3"
     : isNext
     ? `conic-gradient(#1D1EE3 ${deg}deg, #D1D5DB ${deg}deg)`
     : "#D1D5DB";
+  const borderImage = borderLayer.startsWith("conic-gradient")
+    ? borderLayer
+    : `linear-gradient(${borderLayer}, ${borderLayer})`;
 
   return (
-    <div
-      className="rounded-full p-[1px] xl:p-[2px] cursor-pointer"
-      style={{ background: borderBg }}
+    // Single-element gradient border (background-clip padding-box/border-box)
+    // instead of a nested div+button pair — two independently rounded shapes
+    // never align perfectly on the curve, which made the ring look thicker
+    // on the sides than on the top/bottom.
+    <button
       onClick={onClick}
+      className={`cursor-pointer rounded-full border-[1px] xl:border-[2px] border-transparent px-5 py-1.5 text-sm xl:text-base font-medium transition-colors duration-200 ${
+        isActive ? "text-white" : "text-gray-700 hover:text-gray-900"
+      }`}
+      style={{
+        backgroundImage: `linear-gradient(${fillColor}, ${fillColor}), ${borderImage}`,
+        backgroundOrigin: "border-box",
+        backgroundClip: "padding-box, border-box",
+      }}
     >
-      <button
-        className={`px-5 py-1.5 rounded-full text-sm xl:text-base font-medium transition-colors duration-200 ${
-          isActive
-            ? "bg-[#1D1EE3] text-white"
-            : "bg-white text-gray-700 hover:text-gray-900"
-        }`}
-      >
-        {tab}
-      </button>
-    </div>
+      {tab}
+    </button>
   );
 }
 
 export default function OurProductSolution() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [progress, setProgress] = useState(0);
-  const startTimeRef = useRef<number>(Date.now());
+  const startTimeRef = useRef<number>(0);
   const rafRef = useRef<number | null>(null);
 
   const activeTab = tabs[activeIndex];
   const nextIndex = (activeIndex + 1) % tabs.length;
   const content = tabContent[activeTab];
-
+  
   const goToTab = useCallback((index: number) => {
     setActiveIndex(index);
     setProgress(0);
@@ -177,6 +185,8 @@ export default function OurProductSolution() {
   }, []);
 
   useEffect(() => {
+    startTimeRef.current = Date.now();
+
     const tick = () => {
       const elapsed = Date.now() - startTimeRef.current;
       const pct = Math.min(elapsed / INTERVAL, 1);
@@ -204,29 +214,42 @@ export default function OurProductSolution() {
     <div className="bg-white font-inter">
       <div className="page-container ">
 
-        {/* Eyebrow */}
-        <p className="text-center font-medium text-primary text-body-sm">
-          Our Product &amp; Solution
-        </p>
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          {/* Eyebrow */}
+          <p className="text-center font-medium text-primary text-body-sm">
+            Our Product &amp; Solution
+          </p>
 
-        {/* Heading */}
-        <h2 className="text-center font-bold mb-2">
-          Find the Right Platform for Your <em className="font-semibold">Challenge</em>
-        </h2>
+          {/* Heading */}
+          <h2 className="text-center font-bold mb-2">
+            Find the Right Platform for Your <em className="font-semibold">Challenge</em>
+          </h2>
 
-        {/* Subheading */}
-        <p className="text-center text-muted max-w-3xl mx-auto ">
-          Each SkyQuest platform is built around a specific development challenge. Select a product to explore how it works and who it has helped.
-        </p>
+          {/* Subheading */}
+          <p className="text-center text-muted max-w-3xl mx-auto ">
+            Each SkyQuest platform is built around a specific development challenge. Select a product to explore how it works and who it has helped.
+          </p>
+        </motion.div>
 
         {/* Tab Navigation */}
-        <div className="hidden md:flex gap-2 overflow-x-auto pb-2 mb-5 scrollbar-hide justify-start md:justify-between md:flex-wrap">
+        <motion.div
+          className="hidden md:flex gap-2 overflow-x-auto pb-2 mb-5 scrollbar-hide justify-start md:justify-between md:flex-wrap"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           {tabs.map((tab, i) => {
             const isActive = i === activeIndex;
             const isNext = i === nextIndex;
 
             return (
-              <div key={tab} className="flex-shrink-0">
+              <motion.div key={tab} variants={fadeUpSm} className="flex-shrink-0">
                 <TabButton
                   tab={tab}
                   isActive={isActive}
@@ -234,19 +257,24 @@ export default function OurProductSolution() {
                   progress={progress}
                   onClick={() => goToTab(i)}
                 />
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
 
         {/* Content Card */}
         <div className="rounded-2xl bg-[#F7F5F1]">
         <div
-          key={activeTab}
-          className="tab-content-anim flex flex-col md:flex-row gap-0 rounded-2xl overflow-hidden "
+          className="flex flex-col md:flex-row gap-0 rounded-2xl overflow-hidden "
         >
           {/* Left Panel */}
-          <div className="bg-[#F7F5F1] md:w-1/2 p-5 sm:p-8 md:p-10 2xl:p-14 flex flex-col justify-center gap-4">
+          <motion.div
+            key={`text-${activeTab}`}
+            variants={fadeLeft}
+            initial="hidden"
+            animate="visible"
+            className="bg-[#F7F5F1] md:w-1/2 p-5 sm:p-8 md:p-10 2xl:p-14 flex flex-col justify-center gap-4"
+          >
             <div className="2xl:max-w-md">
               <p className="text-primary tracking-wide  text-body-sm">
                 {content.badge}
@@ -263,10 +291,16 @@ export default function OurProductSolution() {
                   {content.buttonLabel}
                 </Button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Panel */}
-          <div className="md:w-1/2 bg-[#F7F5F1] p-4 pt-0 md:p-0 md:flex md:items-center">
+          <motion.div
+            key={`image-${activeTab}`}
+            variants={fadeRight}
+            initial="hidden"
+            animate="visible"
+            className="md:w-1/2 bg-[#F7F5F1] p-4 pt-0 md:p-0 md:flex md:items-center"
+          >
             <div className="group relative w-full aspect-[4/3] overflow-hidden rounded-xl bg-[#F7F5F1]">
               <Image
                 src={content.image}
@@ -277,7 +311,7 @@ export default function OurProductSolution() {
                 className="object-contain transition-transform duration-500 group-hover:scale-105"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
         </div>
       </div>

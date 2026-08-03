@@ -29,6 +29,18 @@ function SectionLabel({ children }: { children: ReactNode }) {
   );
 }
 
+function renderBoldSegments(text: string) {
+  return text.split(/\*\*(.+?)\*\*/g).map((part, i) =>
+    i % 2 === 1 ? (
+      <strong key={i} className="font-semibold text-gray-700">
+        {part}
+      </strong>
+    ) : (
+      part
+    )
+  );
+}
+
 function PanelHeading({
   heading,
   description,
@@ -42,7 +54,9 @@ function PanelHeading({
   return (
     <div className={className}>
       {heading && <p className=" font-semibold text-gray-900">{heading}</p>}
-      {description && <p className="mt-1 text-body-sm text-gray-500">{description}</p>}
+      {description && (
+        <p className="mt-1 text-body-sm text-gray-500">{renderBoldSegments(description)}</p>
+      )}
     </div>
   );
 }
@@ -58,7 +72,7 @@ function ColumnsList({
 }) {
   return (
     <div className="grid min-w-0 grid-cols-1 gap-y-1 sm:grid-cols-2">
-      {content.columns.map((column, i) => (
+      {(content.columns ?? []).map((column, i) => (
         <div key={i}>
           {column.heading && (
             <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-400">
@@ -103,7 +117,7 @@ function PromoCard({ promo, onNavigate }: { promo: MegaMenuPromo; onNavigate: ()
       <Link
         href={promo.href}
         onClick={onNavigate}
-        className="group relative block aspect-[4/3] w-full overflow-hidden rounded-2xl"
+        className="group relative block aspect-[3/2] w-full overflow-hidden rounded-2xl"
       >
         <Image
           src={promo.image}
@@ -242,12 +256,20 @@ export default function MegaMenu({
   }, [activeItemId, activeItem]);
 
   const activePromo = useMemo(() => {
-    if (activeItem?.content?.kind !== "columns" || !activeLinkHref) return undefined;
-    const flatLinks = activeItem.content.columns.flatMap((c) => c.links);
+    if (activeItem?.content?.kind !== "columns") return undefined;
+    const hasLinks = activeItem.content.columns?.some((c) => c.links.length > 0) ?? false;
+    // Panels with no link list (e.g. Sustech Bank) have nothing to click, so show their promo right away.
+    if (!hasLinks) return activeItem.content.promo;
+    if (!activeLinkHref) return undefined;
+    const flatLinks = (activeItem.content.columns ?? []).flatMap((c) => c.links);
     return flatLinks.find((l) => l.href === activeLinkHref)?.promo ?? activeItem.content.promo;
   }, [activeItem, activeLinkHref]);
 
   const activeContent = activeItem?.content;
+
+  const hasColumnLinks =
+    activeContent?.kind === "columns" &&
+    (activeContent.columns?.some((c) => c.links.length > 0) ?? false);
 
   const activeDrilldownCategory = useMemo(() => {
     if (activeContent?.kind !== "drilldown") return undefined;
@@ -385,7 +407,7 @@ export default function MegaMenu({
 
                           {item.content.kind === "columns" ? (
                             <>
-                              {item.content.columns.map((column, ci) => (
+                              {(item.content.columns ?? []).map((column, ci) => (
                                 <div key={ci} className={ci > 0 ? "mt-3" : ""}>
                                   {column.heading && (
                                     <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-gray-400">
@@ -500,7 +522,9 @@ export default function MegaMenu({
             className={`hidden min-h-0 flex-1 ${
               activeContent?.kind === "drilldown"
                 ? "sm:grid sm:grid-rows-[auto_1fr] sm:grid-cols-[1fr_1fr_1fr_1fr]"
-                : "sm:grid sm:grid-cols-[1fr_2fr_1fr]"
+                : hasColumnLinks
+                ? "sm:grid sm:grid-cols-[1fr_2fr_1fr]"
+                : "sm:grid sm:grid-cols-[25%_35%_40%]"
             }`}
           >
             <nav
@@ -563,19 +587,21 @@ export default function MegaMenu({
 
             {activeContent?.kind === "columns" && (
               <>
-                <div className="scrollbar-hide overflow-y-auto border-r border-[#03030F]/20 px-6 py-2 sm:px-4 ">
-                  <PanelHeading
-                    heading={activeContent.heading}
-                    description={activeContent.description}
-                    className="-mx-6 mb-6 border-b border-[#03030F]/20 px-6 pb-2  sm:px-8"
-                  />
+                {hasColumnLinks && (
+                  <div className="scrollbar-hide overflow-y-auto border-r border-[#03030F]/20 px-6 py-2 sm:px-4 ">
+                    <PanelHeading
+                      heading={activeContent.heading}
+                      description={activeContent.description}
+                      className="-mx-6 mb-6 border-b border-[#03030F]/20 px-6 pb-2  sm:px-8"
+                    />
 
-                  <ColumnsList
-                    content={activeContent}
-                    activeHref={activeLinkHref}
-                    onSelect={setActiveLinkHref}
-                  />
-                </div>
+                    <ColumnsList
+                      content={activeContent}
+                      activeHref={activeLinkHref}
+                      onSelect={setActiveLinkHref}
+                    />
+                  </div>
+                )}
 
                 <div className={`scrollbar-hide overflow-y-auto px-2 py-6 sm:px-4 ${activePromo ? "bg-background" : ""}`}>
                   {activePromo && <PromoCard promo={activePromo} onNavigate={() => setOpen(false)} />}

@@ -3,6 +3,7 @@
 import { useEffect, useState, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import {
   ArrowLeft,
@@ -10,6 +11,7 @@ import {
 } from "lucide-react";
 import { ArrowUp } from "iconsax-react";
 import Button from "../ui/Button";
+import { fadeUp, staggerContainer } from "@/lib/animations";
 
 interface CaseStudy {
   id: number;
@@ -97,58 +99,72 @@ export default function CaseStudies({
   return (
     <section className={`w-full ${bgClassName}`}>
     <div className={`w-full rounded-xl page-container ${className}`}>
-        {/* Header */}
-        <div className=" flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
-          <div>
-            <p className=" text-primary font-medium text-body-sm">
-              {eyebrow}
-            </p>
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {/* Header */}
+          <div className=" flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+            <motion.div variants={fadeUp}>
+              <p className=" text-primary font-medium text-body-sm">
+                {eyebrow}
+              </p>
 
-            <h2 className="font-bold ">
-              {heading}
-            </h2>
+              <h2 className="font-bold ">
+                {heading}
+              </h2>
+            </motion.div>
+
+            <motion.div variants={fadeUp}>
+              <Button href={viewAllHref} variant="primary" iconSize={16}>
+                        {viewAllButton}
+                      </Button>
+            </motion.div>
           </div>
 
-          <Button href={viewAllHref} variant="primary" iconSize={16}>
-                    {viewAllButton}
-                  </Button>
-        </div>
+          {/* Description + Arrows */}
+          <div className="mb-5  flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+            <motion.p variants={fadeUp} className="text-muted  max-w-xl ">
+              {description}
+            </motion.p>
 
-        {/* Description + Arrows */}
-        <div className="mb-5  flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-          <p className="text-muted  max-w-xl ">
-            {description}
-          </p>
+            <motion.div variants={fadeUp} className="flex justify-start gap-2 sm:justify-end">
+              <button
+                type="button"
+                onClick={goPrev}
+                aria-label="Previous case studies"
+                className="flex h-9 w-9 items-center justify-center rounded-md bg-white text-[#1D1EE3] ring-1 ring-black/5 transition-colors hover:bg-[#EDEBFF] hover:text-[#2A1ACC]"
+              >
+                <ArrowLeft
+                  className="h-4 w-4"
+                  strokeWidth={2}
+                />
+              </button>
 
-          <div className="flex justify-start gap-2 sm:justify-end">
-            <button
-              type="button"
-              onClick={goPrev}
-              aria-label="Previous case studies"
-              className="flex h-9 w-9 items-center justify-center rounded-md bg-white text-[#1D1EE3] ring-1 ring-black/5 transition-colors hover:bg-[#EDEBFF] hover:text-[#2A1ACC]"
-            >
-              <ArrowLeft
-                className="h-4 w-4"
-                strokeWidth={2}
-              />
-            </button>
-
-            <button
-              type="button"
-              onClick={goNext}
-              aria-label="Next case studies"
-              className="flex h-9 w-9 items-center justify-center rounded-md bg-white text-[#1D1EE3] ring-1 ring-black/5 transition-colors hover:bg-[#EDEBFF] hover:text-[#2A1ACC]"
-            >
-              <ArrowRight
-                className="h-4 w-4"
-                strokeWidth={2}
-              />
-            </button>
+              <button
+                type="button"
+                onClick={goNext}
+                aria-label="Next case studies"
+                className="flex h-9 w-9 items-center justify-center rounded-md bg-white text-[#1D1EE3] ring-1 ring-black/5 transition-colors hover:bg-[#EDEBFF] hover:text-[#2A1ACC]"
+              >
+                <ArrowRight
+                  className="h-4 w-4"
+                  strokeWidth={2}
+                />
+              </button>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Cards */}
-        <div
+        <motion.div
+          key={page}
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
           className={`grid gap-4 ${
             columns === 1
               ? "grid-cols-1"
@@ -160,7 +176,7 @@ export default function CaseStudies({
           {visibleCards.map((card) => {
             if (columns === 1) {
               return (
-                <div key={card.id} className="relative isolate">
+                <motion.div key={card.id} variants={fadeUp} className="relative isolate">
                   <div className="relative h-[405px] overflow-hidden rounded-2xl">
                     <Image
                       src={card.image}
@@ -200,15 +216,16 @@ export default function CaseStudies({
                       </Link>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               );
             }
 
             const isExpanded = hoveredId === card.id;
 
             return (
-              <div
+              <motion.div
                 key={card.id}
+                variants={fadeUp}
                 className="group relative isolate"
                 onMouseEnter={() =>
                   setHoveredId(card.id)
@@ -286,11 +303,11 @@ export default function CaseStudies({
                     </span>
                   </Link>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
-} 
+}

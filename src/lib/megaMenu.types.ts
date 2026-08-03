@@ -37,7 +37,8 @@ export type MegaMenuColumnsContent = {
   kind: "columns";
   heading?: string;
   description?: string;
-  columns: MegaMenuColumn[];
+  /** Omit (or leave empty) to skip the link list and show the promo card directly */
+  columns?: MegaMenuColumn[];
   promo?: MegaMenuPromo;
 };
 

@@ -199,8 +199,8 @@ export default async function InsightDetailsPage({
               </Link>
             </li>
             <li className="text-gray-500">/</li>
-            <li className="text-gray-700 truncate max-w-[200px] sm:max-w-none">
-              {insight.title}
+            <li className="text-gray-700 truncate max-w-[200px] sm:max-w-none tracking-wide">
+              {insight.topic}
             </li>
           </ol>
         </nav>

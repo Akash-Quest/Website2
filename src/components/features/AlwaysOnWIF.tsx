@@ -8,39 +8,34 @@ export default function AlwaysOnWIF() {
     {
       icon: <Courthouse size={22} variant="TwoTone" color="#FFFFFF" />,
       head: 'PATIENT',
-      title: 'Citizen / Patient',
-      desc: 'Symptom assessment, facility finder, doctor search, scheme eligibility, and report access all via WhatsApp, in their local language',
+      title: 'Patients',
+      desc: 'Access AI-assisted symptom assessment, healthcare guidance, and referrals through a familiar conversational interface.',
     },
     {
       icon: <Bank size={22} variant="TwoTone" color="#FFFFFF" />,
       head: 'PATIENT',
-      title: 'Doctor / Specialist',
-      desc: 'Receives pre-assessed referrals with full symptom history, severity score, and AI triage notes spends time treating, not triaging',
+      title: 'Healthcare Professionals',
+      desc: 'Receive relevant referrals and patient assessment information to support faster clinical attention.',
     },
     {
       icon: <Bank size={22} variant="TwoTone" color="#FFFFFF" />,
       head: 'PATIENT',
-      title: 'Hospital Administrator',
-      desc: 'Live dashboard of incoming cases, bed load forecasting, referral volume, and escalation status across the facility network',
+      title: 'Healthcare Administrators',
+      desc: 'Monitor patient assessments, escalations, alerts, and referral activity through a centralized dashboard.',
     },
     {
       icon: <Courthouse size={22} variant="TwoTone" color="#FFFFFF" />,
       head: 'PATIENT',
-      title: 'State Health Department',
-      desc: 'Population-level health intelligence district case maps, disease trends, scheme uptake, and system performance metrics',
+      title: 'Healthcare Organizations',
+      desc: 'Use AI-enabled digital healthcare infrastructure to improve access, triage, and co-ordination.',
     },
     {
       icon: <Buildings size={22} variant="TwoTone" color="#FFFFFF" />,
       head: 'PATIENT',
-      title: 'Governance / Project Monitoring',
-      desc: 'Cross-department visibility citizen services, grievance, emergency management, and health performance in one government dashboard',
+      title: 'Public Health Programs',
+      desc: 'Support scalable digital healthcare delivery and improve visibility into healthcare interactions and referral patterns.',
     },
-    {
-      icon: <Buildings size={22} variant="TwoTone" color="#FFFFFF" />,
-      head: 'PATIENT',
-      title: 'NGO / Health Programme Partner',
-      desc: 'Campaign integration, awareness messaging, vaccination drive coordination, and programme uptake tracking through the same WhatsApp channel',
-    },
+    
   ];
 
   return (
@@ -59,16 +54,16 @@ export default function AlwaysOnWIF() {
       <div className="page-container mx-auto relative z-10">
         
         {/* ── HEADER ── */}
-        <div className="text-center mb-16 md:mb-20">
+        <div className="text-center mb-16 md:mb-10">
           <span className=" font-semibold text-[#CBCBFF] mb-3 block">
             <p>Who it's For</p>
           </span>
           <h2 className="font-semibold text-white">
-            Every Actor In The <br /> Public
-            <em className="font-semibold text-white">Health System.</em>
+            Designed for Healthcare {" "} <br />
+            <em className="font-semibold text-white">Stakeholders</em>
           </h2>
-          <p className="text-white/80 mt-4 tracking-wide leading-snug max-w-3xl mx-auto ">
-            AlwaysON serves patients, doctors, administrators, and government bodies each with their own tailored interface and role-appropriate access.
+          <p className="text-white/80 mt-4 tracking-wide leading-snug max-w-[60%] mx-auto ">
+            Empowering patients, healthcare professionals, administrators, and organizations with accessible, AI-enabled healthcare solutions.
           </p>
         </div>
 
@@ -87,18 +82,16 @@ export default function AlwaysOnWIF() {
                 </div>
 
                 {/* Head Tag Added Here */}
-                <p><span className="font-medium text-white/80 tracking-wide uppercase">
-                  {feature.head}
-                </span></p>
+                
               </div>
 
               {/* Text Content */}
               <div className="flex flex-col gap-2 mt-2">
-                <h3 className="font-semibold  text-body-xl text-white mb-2">
+                <h3 className="font-semibold  text-body-lg text-white mb-2">
                   {feature.title}
                 </h3>
                 
-                <p className=" text-white leading-snug tracking-wide">
+                <p className=" text-white">
                   {feature.desc}
                 </p>
               </div>

@@ -7,49 +7,35 @@ export default function DecarbonWIF() {
   const features = [
     {
       icon: <Courthouse size={22} variant="TwoTone" color="#FFFFFF" />,
-      title: 'Ministry of Planning & Dev.',
-      desc: 'Full national dashboard NDC tracking, pipeline overview, finance mobilised, and COP deadline countdown',
+      title: 'Governments & Climate Authorities',
+      desc: 'Develop climate project pipelines, strengthen national climate finance capabilities, and improve visibility into climate programs and financing opportunities.',
     },
     {
       icon: <Bank size={22} variant="TwoTone" color="#FFFFFF" />,
-      title: 'Environmental Protection Authority',
-      desc: 'Article 6 corresponding adjustments, ITMO issuance oversight, environmental compliance scoring per project',
+      title: 'Climate Project Developers',
+      desc: 'Structure projects, assess feasibility, prepare documentation, access MRV workflows, and connect with potential financing partners.',
     },
     {
       icon: <Bank size={22} variant="TwoTone" color="#FFFFFF" />,
-      title: 'Ministry of Finance / CRGE',
-      desc: 'Green bond issuance, GCF grant management, blended finance structuring, and fiscal impact tracking',
+      title: 'Investors & Financial Institutions',
+      desc: 'Discover structured climate projects and access relevant project information for investment and financing assessment.',
     },
     {
       icon: <Courthouse size={22} variant="TwoTone" color="#FFFFFF" />,
-      title: 'Forestry Development Authority',
-      desc: 'REDD+ project pipeline, deforestation MRV, carbon credit issuance, and community benefit tracking',
+      title: 'Development Finance Institutions',
+      desc: 'Monitor project pipelines, assess climate finance opportunities, and support financing across eligible projects and programs.',
     },
     {
       icon: <Buildings size={22} variant="TwoTone" color="#FFFFFF" />,
-      title: 'Project Developer / Lead',
-      desc: 'End-to-end project builder onboarding, feasibility, document generation, forward issuance, and investor matching',
+      title: 'MRV Providers & Auditors',
+      desc: 'Access relevant project data and digital MRV workflows to support monitoring, verification, and audit processes.',
     },
     {
       icon: <Buildings size={22} variant="TwoTone" color="#FFFFFF" />,
-      title: 'GGGI · UNDP · GCF',
-      desc: 'Partner access to project pipeline, co-financing opportunities, and national progress reporting',
+      title: 'Climate Finance Consultants',
+      desc: 'Support project development, feasibility assessments, documentation, climate finance structuring, and stakeholder coordination through a shared digital platform.',
     },
-    {
-      icon: <Courthouse size={22} variant="TwoTone" color="#FFFFFF" />,
-      title: 'Investor',
-      desc: 'Private sector (Mubadala, Alterra), DFIs (GCF, IsDB), and bilateral partners deal room, project due diligence, and forward purchase',
-    },
-    {
-      icon: <Bank size={22} variant="TwoTone" color="#FFFFFF" />,
-      title: 'Auditor / MRV Provider',
-      desc: 'Real-time access to satellite MRV data, verification dashboards, and audit trails per project and sector',
-    },
-    {
-      icon: <Buildings size={22} variant="TwoTone" color="#FFFFFF" />,
-      title: 'Consultant',
-      desc: 'Technical assistance teams access project pipelines, NDC alignment gaps, and co-benefit scoring reducing time on document prep',
-    },
+    
  
   ];
 
@@ -71,14 +57,14 @@ export default function DecarbonWIF() {
         {/* ── HEADER ── */}
         <div className="text-center mb-16 md:mb-20">
           <span className=" font-semibold text-[#CBCBFF] mb-3 block">
-            <p>Who it's For</p>
+            <p className='text-lg tracking-wide'>Who DeCarbonX Is For</p>
           </span>
           <h2 className="font-semibold text-white">
-            Everything A Modern Diagnostic <br />
-            <em className="font-semibold text-white">Network Needs.</em>
+            Built for the Climate Finance  <br />
+            <em className="font-semibold text-white">Ecosystem</em>
           </h2>
-          <p className="text-white/80 mt-4 max-w-2xl mx-auto ">
-            Skyquest Labs is more than a reporting tool—it's a complete operating system for your pathology network.
+          <p className="text-white/80 mt-2 max-w-2xl mx-auto ">
+            Connect governments, climate project developers, investors, and key stakeholders through a unified digital platform for climate finance.
           </p>
         </div>
 

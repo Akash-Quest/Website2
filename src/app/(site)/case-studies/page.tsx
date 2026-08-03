@@ -20,18 +20,18 @@ function CaseStudy() {
             </li>
             <li className="text-gray-500">/</li>
 
-            <li className="text-gray-700">Case Snapshot Listing</li>
+            <li className="text-gray-700">Case Studies</li>
           </ol>
         </nav>
         <div className="px-[2] text-center lg:text-left">
         {/* Eyebrow */}
         <p className=" text-primary  mt-8 sm:mt-8 md:mt-2 text-body-sm font-medium">
-          Case Snapshot 
+          Case Studies 
         </p>
 
         {/* Heading */}
         <h1 className=" font-bold">
-          Our client {" "}
+          Our Client {" "}
           <em className="font-semibold">Impact</em>
         </h1>
 

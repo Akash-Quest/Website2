@@ -34,7 +34,7 @@ export default function AgriMapOverview() {
       <div className="page-container mx-auto flex flex-col gap-1">
         
         {/* ── TOP HEADLINE BLOCK ── */}
-        <span className="font-medium text-primary tracking-wide">
+        <span className=" font-medium text-primary tracking-wide">
               Product Overview
             </span>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-16 items-start mt-5 mb-5">

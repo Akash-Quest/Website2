@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 import type { CSSProperties } from "react";
 import Button from "./Button";
+import { fadeUp } from "@/lib/animations";
 
 export interface HoverRevealCardProps {
   title: string;
@@ -42,14 +44,22 @@ export default function HoverRevealCard2({
       onMouseLeave={() => onHover(false)}
       onClick={() => onHover(!isHovered)}
     >
-      <Image
-        src={image}
-        alt={imageAlt ?? title}
-        fill
-        unoptimized
-        sizes="(max-width: 1024px) 100vw, 50vw"
-        className="object-cover"
-      />
+      <motion.div
+        className="absolute inset-0"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <Image
+          src={image}
+          alt={imageAlt ?? title}
+          fill
+          unoptimized
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          className="object-cover"
+        />
+      </motion.div>
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
 

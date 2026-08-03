@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import {  Playfair_Display, Inter_Tight  } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter_Tight({
@@ -34,7 +35,9 @@ export default function RootLayout({
     >
       
       <body className="min-h-full flex flex-col">
-        <script
+        <Script
+          id="disable-scroll-restoration"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `if ('scrollRestoration' in window.history) { window.history.scrollRestoration = 'manual'; } window.scrollTo(0, 0);`,
           }}

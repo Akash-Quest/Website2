@@ -14,43 +14,43 @@ const steps: StepItem[] = [
   {
     id: 1,
     title: "Onboarding & Financing Type",
-    description: "Project lead registers. AI identifies the best financing pathway carbon credits, green bonds, GCF grant, Article 6 ITMOs based on project type and national strategy.",
+    description: "Climate projects are onboarded into the platform and assessed to identify suitable financing pathways based on project characteristics and applicable climate finance mechanisms.",
     icon: <Gps size={24} color="#1D1EE3" variant="TwoTone" />,
   },
   {
     id: 2,
-    title: "Feasibility & Climate Risk",
-    description: "Automated feasibility scoring using satellite data, economic models, and climate risk overlays. Environmental and social co-benefits quantified.",
+    title: "Feasibility & Climate Risk Assessment",
+    description: "Projects undergo feasibility and climate risk assessment to evaluate their viability, risks, and potential environmental and social benefits.",
     icon: <Routing2 size={24} color="#1D1EE3" variant="TwoTone" />,
   },
   {
     id: 3,
-    title: "Auto-Document Generation",
-    description: "Climate finance documents PDD, VNR, ITMO agreements, prospectuses generated automatically from project data. Hours, not months.",
+    title: "Climate Finance Document Generation",
+    description: "The platform supports the preparation of relevant climate finance documentation, helping reduce manual effort and accelerate project preparation.",
     icon: <ClipboardText size={24} color="#1D1EE3" variant="TwoTone" />,
   },
   {
     id: 4,
     title: "Raising Upfront Financing",
-    description: "Carbon forward contracts issued against verified future reductions. Upfront capital mobilised before projects complete bridging the financing gap.",
+    description: "Eligible projects can be structured to explore financing opportunities and mobilize capital ahead of project completion.",
     icon: <ShieldTick size={24} color="#1D1EE3" variant="TwoTone" />,
   },
   {
     id: 5,
-    title: "Digital MRV Transparency",
-    description: "Continuous satellite and IoT monitoring across all projects. Real-time verification dashboard. Auditors and MRV providers access live data directly.",
+    title: "Full Transparency Through Digital MRV",
+    description: "Digital MRV capabilities help monitor project performance and climate outcomes, improving transparency and enabling relevant stakeholders to access project data.",
     icon: <ShieldTick size={24} color="#1D1EE3" variant="TwoTone" />,
   },
   {
     id: 6,
     title: "Forwards & Green Bonds",
-    description: "Issuance of carbon forwards, ITMOs, and sovereign green bonds on the platform. Structured for compliance with Article 6.2 and 6.4 mechanisms.",
+    description: "The platform supports the structuring and management of climate finance instruments, including carbon forwards and green finance mechanisms.",
     icon: <ClipboardText size={24} color="#1D1EE3" variant="TwoTone" />,
   },
   {
     id: 7,
-    title: "Investor Matching",
-    description: "Automated matching with private investors (Mubadala, Alterra), DFIs (GCF, IsDB), and bilateral partners (GIZ, UNDP). Full deal room inside the platform.",
+    title: "Matching with Relevant Investors",
+    description: "Projects can be matched with relevant private investors, development finance institutions, and other financing partners based on project characteristics and funding requirements.",
     icon: <Routing2 size={24} color="#1D1EE3" variant="TwoTone" />,
   },
 ];
@@ -66,7 +66,7 @@ export default function DecarbonSteps() {
             How It Works
           </p>
           <h2 className="font-semibold  max-w-[800px] ">
-            From Idea To Issued Credit,<br/> In Seven <em className="font-semibold">Automated Steps.</em>
+            From Project Onboarding to <br></br>  <em className="font-semibold">Climate Finance</em>
           </h2>
           <p className=" text-muted max-w-[800px] mt-2 ">
             DeCarbonX is an end-to-end digital factory. Enter a project concept at one end, and a finance-ready, MRV-verified, investor-matched instrument comes out the other.

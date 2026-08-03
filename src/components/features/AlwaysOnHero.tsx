@@ -17,7 +17,7 @@ function AlwaysOnProduct() {
       <div className="hero-container relative z-10 pb-5">
         {/* Breadcrumb Navigation */}
         <nav aria-label="Breadcrumb" className="pb-2 px-4 lg:px-0">
-          <ol className="breadcrumb flex flex-wrap items-center gap-2 text-gray-400 font-light tracking-wide">
+          <ol className="text-body-sm flex flex-wrap items-center gap-2 text-gray-400 font-light tracking-wide">
             <li>
               <Link href="/" className="hover:text-muted transition-colors">
                 Home
@@ -43,11 +43,11 @@ function AlwaysOnProduct() {
             </p>
             
             <h1 className="mb-2 font-bold text-black pb-5">
-              Healthcare delivered <br />Through <em className="font-semibold">A Message. </em>
+             Digital Healthcare <em className="font-semibold">Innovation </em>
             </h1>
 
             <p className="text-muted lg:max-w-full tracking-wide leading-snug px-4 lg:px-0">
-              AlwaysON delivers AI-powered diagnostic services directly through WhatsApp the world's most-used messaging platform. No app. No barrier. No delay.
+              AlwaysON delivers AI-powered healthcare services directly through WhatsApp, enabling AI-assisted symptom assessment, multilingual support, clinical guidance, and rapid access to expert referrals.
             </p>
 
             <div className="mt-8 mb-10 flex flex-wrap items-start justify-left gap-4 w-full">

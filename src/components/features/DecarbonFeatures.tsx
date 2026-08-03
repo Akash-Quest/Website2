@@ -6,50 +6,38 @@ import Image from 'next/image';
 export default function DecarbonFeatures() {
   const useCases = [
     {
-      title: 'AI Project Builder',
-      desc: 'Transforms project concepts into structured, finance-ready instruments with national control. AI drafts PDDs, feasibility studies, and co-benefit analyses automatically.',
+      title: 'AI-Powered Climate Project Builder',
+      desc: 'Transform climate project ideas into structured, finance-ready opportunities using AI-enabled workflows.',
       image: '/Productsoln/IGUse1.png', 
     },
+    
     {
-      title: 'Digital MRV Platform',
-      desc: 'Satellite + IoT continuous monitoring across Agriculture, Forestry, Livestock, and Energy sectors. Real-time emission reductions verified and audit-ready.',
+      title: "Climate Finance Documentation",
+      desc: 'Streamline the preparation of project and climate finance documentation, reducing manual effort and accelerating project development.',
+      image: '/Productsoln/IGUse3.png',
+    },
+    {
+      title: "Feasibility & Climate Risk Assessment",
+      desc: 'Assess project feasibility and climate-related risks to support stronger project planning and financing decisions.',
+      image: '/Productsoln/IGUse3.png',
+    },
+    {
+      title: "Digital MRV",
+      desc: 'Enable digital monitoring, reporting, and verification workflows for greater transparency and reliable climate project data.',
+      image: '/Productsoln/IGUse3.png',
+    },
+    {
+      title: "Sovereign Data & National Ownership",
+      desc: 'Enable governments and national stakeholders to maintain greater ownership and control over climate project data and digital MRV processes.',
+      image: '/Productsoln/IGUse3.png',
+    },
+    {
+      title: 'Investor & Financing Partner Matching',
+      desc: 'Connect eligible climate projects with relevant investors, development finance institutions, and other financing partners.',
       image: '/Productsoln/IGUse2.png',
     },
-    {
-      title: "Auto Climate Finance Docs",
-      desc: 'Full suite of climate finance documentation generated in hours project design documents, VNRs, ITMO agreements, prospectuses, and bond issuance documents.',
-      image: '/Productsoln/IGUse3.png',
-    },
-    {
-      title: "Finance Hub & Bonds",
-      desc: 'Issue carbon forwards, green bonds, and ITMOs directly from the platform. Built-in structuring for GCF grants, IsDB financing, and private carbon market transactions.',
-      image: '/Productsoln/IGUse3.png',
-    },
-    {
-      title: "Global Intelligence Layer",
-      desc: 'Country-level carbon market intelligence, NDC alignment scoring, NCMS tracking, and benchmarking against comparable sovereign climate programmes worldwide.',
-      image: '/Productsoln/IGUse3.png',
-    },
-    {
-      title: "Investor Matching Engine",
-      desc: 'Automated matching of verified projects with the right investors private sector, DFIs, bilateral partners across carbon markets, green bonds, and blended finance.',
-      image: '/Productsoln/IGUse3.png',
-    },
-    {
-      title: "Sovereign Data Architecture",
-      desc: 'All project data, MRV records, and financial instruments stay inside the country\'s jurisdiction. No data sovereignty compromise. Full integration with national registries.',
-      image: '/Productsoln/IGUse3.png',
-    },
-    {
-      title: "Sectors Hub",
-      desc: 'Dedicated pipelines per sector Agriculture, Forestry, Livestock, Energy, and more. Each with its own MRV methodology, project templates, and finance pathways.',
-      image: '/Productsoln/IGUse3.png',
-    },
-    {
-      title: "Digital Capacity Building",
-      desc: 'Built-in training modules for government staff, project developers, and MRV providers. Empowers local ownership without dependency on international consultants.',
-      image: '/Productsoln/IGUse3.png',
-    },
+    
+    
   ];
  
   return (
@@ -64,12 +52,12 @@ export default function DecarbonFeatures() {
           <div className="lg:col-span-7 flex flex-col gap-2">
             
             <h2 className="font-semibold ">
-              Every Tool A Government <br/> Needs to <em className="font-semibold">Mobilise Climate <br/> Finance.</em>
+             The Digital Infrastructure Behind  <em className="font-semibold">Climate Finance</em>
             </h2>
           </div>
           <div className="lg:col-span-5 pb-2">
             <p className="tracking-wide leading-snug text-muted max-w-full">
-              DeCarbonX ships with the full stack from project builder to bond issuance deployable as a sovereign national system in 3–5 months.
+              Explore an integrated digital ecosystem that streamlines climate project development, finance, MRV, investment, and sovereign climate data management.
             </p>
           </div>
         </div>

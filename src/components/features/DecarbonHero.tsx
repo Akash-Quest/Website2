@@ -17,7 +17,7 @@ function DecarbonXProduct() {
         <div className="hero-container relative z-10 pb-5">
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className=" pb-2 px-4 lg:px-0 ">
-            <ol className="breadcrumb flex flex-wrap items-center gap-2 text-gray-400 font-light tracking-wide">
+            <ol className="text-body-sm flex flex-wrap items-center gap-2 text-gray-400 font-light tracking-wide">
               <li>
                 <Link href="/" className="hover:text-muted transition-colors">
                   Home
@@ -39,13 +39,13 @@ function DecarbonXProduct() {
             </p>
      
             {/* Heading */}
-            <h1 className="text-center font-semibold">
-              The Automated Factory <br/>  For <em className="font-semibold">Sovereign Climate Finance</em>
+            <h1 className="text-center font-bold">
+              Sovereign Climate Finance Infrastructure<em className="font-semibold"> Platform </em>
             </h1>
      
             {/* Subheading */}
             <p className=" mx-auto text-center mt-2 mb-5 max-w-[75%] text-muted 2xl:text-base ">
-              DeCarbonX turns climate project ideas into finance-ready instruments carbon credits, green bonds, Article 6 forwards with full national data sovereignty and AI-driven MRV
+              DeCarbonX helps transform climate project ideas into structured, finance-ready opportunities while enabling digital MRV, climate finance documentation, funding access, and national data sovereignty.
             </p>
 
             {/* ── 🛠️ STEP 2: BUTTONS SET EXACTLY AS PER YOUR IMAGE ── */}

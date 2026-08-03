@@ -186,7 +186,7 @@ export default async function CaseStudyDetailsPage({
               </Link>
             </li>
             <li className="text-gray-500">/</li>
-            <li className="text-gray-700 truncate max-w-[200px] sm:max-w-none">
+            <li className="text-gray-700 truncate max-w-[200px] sm:max-w-none tracking-wide">
               {study.topic}
             </li>
           </ol>

@@ -10,10 +10,16 @@ import {
 } from "lucide-react";
 import { ArrowUp } from "iconsax-react";
 import { insightData, type Insight } from "@/Constants/Insight ";
+import { caseStudiesData } from "@/Constants/caseStudies";
 
-const insights = insightData.caseStudies;
+type ListedInsight = Insight & { href: string };
 
-function InsightCard({ insight }: { insight: Insight }) {
+const insights: ListedInsight[] = [
+  ...insightData.caseStudies.map((s) => ({ ...s, href: `/insight/${s.id}` })),
+  ...caseStudiesData.caseStudies.map((s) => ({ ...s, href: `/case-studies/${s.id}` })),
+];
+
+function InsightCard({ insight }: { insight: ListedInsight }) {
   const [isHovered, setIsHovered] = useState(false);
   const router = useRouter();
 
@@ -25,7 +31,7 @@ function InsightCard({ insight }: { insight: Insight }) {
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={() => router.push(`/insight/${insight.id}`)}
+      onClick={() => router.push(insight.href)}
     >
         <div className="w-full sm:flex-1 flex flex-col justify-between min-w-0">
           <div className="min-w-0">
@@ -45,7 +51,7 @@ function InsightCard({ insight }: { insight: Insight }) {
           </div>
 
           <Link
-            href={`/insight/${insight.id}`}
+            href={insight.href}
             onClick={(e) => e.stopPropagation()}
             className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary "
           >
@@ -77,7 +83,7 @@ function InsightCard({ insight }: { insight: Insight }) {
 
 const PAGE_SIZE = 5;
 
-const CATEGORY_OPTIONS = ["Insights","Case-Studies"];
+const CATEGORY_OPTIONS = ["Articles","Case Study"];
 const INDUSTRY_OPTIONS = [
   "Public sector",
   "Agriculture",

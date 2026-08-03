@@ -87,10 +87,14 @@ const tabs: TabContent[] = [
   },
 ];
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { ArrowUp } from "iconsax-react";
 import Button from "../ui/Button";
+import { fadeUp, fadeUpSm, staggerContainer, fadeLeft, fadeRight } from "@/lib/animations";
+
+const SLIDE_INTERVAL = 4000; // 4 seconds
 
 export default function MarketIntelligence() {
   const [activeTab, setActiveTab] = useState(0);
@@ -105,6 +109,17 @@ export default function MarketIntelligence() {
     setActiveTab(index);
     setActiveSlide(0);
   }
+
+  // Re-armed on every activeSlide change (auto-advance or manual dot click)
+  // so each slide always gets a full 4 seconds before the next auto-switch.
+  useEffect(() => {
+    if (!hasSlides) return;
+    const slideCount = current.slides!.length;
+    const timer = setInterval(() => {
+      setActiveSlide((i) => (i + 1) % slideCount);
+    }, SLIDE_INTERVAL);
+    return () => clearInterval(timer);
+  }, [activeTab, activeSlide, hasSlides, current.slides]);
 
   function handleTouchStart(e: React.TouchEvent) {
     touchStartX.current = e.touches[0].clientX;
@@ -124,31 +139,45 @@ export default function MarketIntelligence() {
   return (
     <section className="w-full bg-[#F7F5F1] ">
       <div className="page-container">
-        {/* Eyebrow */}
-        <p className="text-center text-primary font-medium text-body-sm">
-          Market Intelligence
-        </p>
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          {/* Eyebrow */}
+          <motion.p variants={fadeUp} className="text-center text-primary font-medium text-body-sm">
+            Market Intelligence
+          </motion.p>
 
-        {/* Headline */}
-        <h2 className="text-center font-bold mb-3">
-          Intelligence That Drives <em className="font-semibold">Better<br /> Decisions</em>
-        </h2>
+          {/* Headline */}
+          <motion.h2 variants={fadeUp} className="text-center font-bold mb-3">
+            Intelligence That Drives <em className="font-semibold">Better<br /> Decisions</em>
+          </motion.h2>
 
-        {/* Subcopy */}
-        <p className=" text-center text-muted max-w-[80%] mx-auto ">
-          Explore industry reports, market insights, and research publications
-          that help organizations identify opportunities, anticipate change,
-          and make informed decisions.
-        </p>
+          {/* Subcopy */}
+          <motion.p variants={fadeUp} className=" text-center text-muted max-w-[80%] mx-auto ">
+            Explore industry reports, market insights, and research publications
+            that help organizations identify opportunities, anticipate change,
+            and make informed decisions.
+          </motion.p>
+        </motion.div>
 
         {/* Tabs */}
-        <div className="mt-5 flex flex-col md:flex-row scrollbar-hide rounded-lg overflow-hidden bg-white border border-neutral-200/70">
+        <motion.div
+          className="mt-5 flex flex-col md:flex-row scrollbar-hide rounded-lg overflow-hidden bg-white border border-neutral-200/70"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           {tabs.map((tab, index) => {
             const isActive = index === activeTab;
             const isLast = index === tabs.length - 1;
             return (
-              <button
+              <motion.button
                 key={tab.id}
+                variants={fadeUpSm}
                 onClick={() => handleTabChange(index)}
                 className={`flex-shrink-0 flex-1 min-w-fit px-4 py-3 md:py-2.5 text-sm font-medium text-center transition-colors duration-200 cursor-pointer whitespace-nowrap ${
                   !isLast ? "border-b md:border-b-0 md:border-r border-neutral-200/70" : ""
@@ -159,15 +188,21 @@ export default function MarketIntelligence() {
                 }`}
               >
                 {tab.tabLabel}
-              </button>
+              </motion.button>
             );
           })}
-        </div>
+        </motion.div>
 
         {/* Content panel */}
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left: image / slide card */}
-          <div>
+          <motion.div
+            key={`left-${activeTab}`}
+            variants={fadeLeft}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             {hasSlides && slide ? (
               <div
                 className="rounded-2xl bg-white p-3  border border-neutral-200/70"
@@ -246,10 +281,17 @@ export default function MarketIntelligence() {
                 </div>
               </div>
             )}
-          </div>
+          </motion.div>
 
           {/* Right: tab description + CTA */}
-          <div className="hidden lg:block lg:pl-6">
+          <motion.div
+            key={`right-${activeTab}`}
+            variants={fadeRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="hidden lg:block lg:pl-6"
+          >
             <h2 className=" font-semibold ">
               {current.titleRegular} <em className="font-semibold">{current.titleItalic}</em>
             </h2>
@@ -259,7 +301,7 @@ export default function MarketIntelligence() {
              <Button variant="primary" iconSize={16}>
                     {current.ctaLabel}
                   </Button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

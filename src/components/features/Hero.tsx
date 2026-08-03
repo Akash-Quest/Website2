@@ -1,7 +1,8 @@
   "use client";
   import React, { useState, useEffect, useRef, useCallback } from 'react';
-  import { motion, AnimatePresence, cubicBezier } from 'framer-motion';
+  import { motion, AnimatePresence } from 'framer-motion';
   import Button from '../ui/Button';
+  import { fadeUp as contentVariants, fade as imageVariants } from '@/lib/animations';
 
 
   interface HeroSlide {
@@ -75,30 +76,6 @@ Systems for Governments<br />
     
     
   ];
-
-  /* ── animation variants ─────────────────────────────────────────── */
-  const contentVariants = {
-    hidden: { opacity: 0, y: 32 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.55, delay: i * 0.12, ease: cubicBezier(0.22, 1, 0.36, 1) },
-    }),
-    exit: { opacity: 0, y: -20, transition: { duration: 0.3 } },
-  };
-
-  // ✅ FIX: Backgrounds cross-fade simultaneously — no black flash
-  const imageVariants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: { duration: 0.9, ease: cubicBezier(0.25, 0.46, 0.45, 0.94) },
-    },
-    gone: {
-      opacity: 0,
-      transition: { duration: 0.6, ease: cubicBezier(0.25, 0.46, 0.45, 0.94) },
-    },
-  };
 
   /* ── component ──────────────────────────────────────────────────── */
   const Heroslider: React.FC = () => {

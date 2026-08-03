@@ -757,18 +757,11 @@
           "href": "#",
           "content": {
             "kind": "columns",
-            "heading": "Our Initiatives",
-            "description": "SUSTECH is a global mega-cluster initiative by Skyquest Technology Consulting Pvt. Ltd. focused on building sustainable, scalable economic corridors through science, technology, innovation, and entrepreneurship.",
-            "columns": [
-              {
-                "links": [
-                  { "label": "Sustech Bank ", "href": "https://www.sustech.earth/" }
-                ]
-              }
-            ],
+            "heading": "Sustech Bank",
+            "description": "The Sustainable Technology Bank, also known as The SUSTECH Bank, is a key outcome of the SUSTECH mega cluster initiative. It aims to **create a repository of commercially viable, late-stage technologies that have been pre-qualified for financial viability**. This initiative addresses technology needs and problems while fostering technology-based entrepreneurship. The SUSTECH Bank will provide innovative, scalable, and bankable technology solutions in five key focus areas: Critical Infrastructure, Water, One Health, Food Security and Air. By bringing together these vetted solutions, the initiative aims to improve access to low-carbon technologies for member countries and vulnerable communities in the Global South.",
             "promo": {
               "image": "/Hero/SUSTECH Bank.jpg",
-              "title": "SushTech Bank",
+              "title": "Sustech Bank",
               "description": "SUSTECH is a global mega-cluster initiative by Skyquest Technology Consulting Pvt. Ltd. focused on building sustainable, scalable economic corridors through science, technology, innovation, and entrepreneurship.",
               "href": "https://www.sustech.earth/",
               "ctaLabel": "Learn More"
@@ -783,8 +776,52 @@
       "label": "Our Company",
       "items": [
         { "id": "our-team", "label": "Our Team", "href": "/team" },
-        { "id": "insights", "label": "Insights", "href": "/insight" },
-        { "id": "case-studies", "label": "Case Studies", "href": "/case-studies" },
+        {
+          "id": "insights",
+          "label": "Our Insights",
+          "href": "/insight",
+          "content": {
+            "kind": "columns",
+            "heading": "Our Insights",
+            "description": "Explore expert perspectives, industry analysis, research, and real-world impact stories from across our published work.",
+            "columns": [
+              {
+                "links": [
+                  {
+                    "label": "Articles",
+                    "href": "/insight",
+                    "featured": true,
+                    "promo": {
+                      "image": "/Insights/hero.webp",
+                      "title": "Featured Articles",
+                      "description": "Explore expert perspectives, industry analysis, research, and practical frameworks on digital transformation, AI, sustainability, agriculture, public sector innovation, and economic development.",
+                      "href": "/insight",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Case Studies",
+                    "href": "/case-studies",
+                    "promo": {
+                      "image": "/CaseStudy/Hero.jpg",
+                      "title": "Case Studies",
+                      "description": "Meaningful transformation requires more than strategy alone. See how we help organizations accelerate impact, unlock new opportunities, and build capabilities that drive sustained performance.",
+                      "href": "/case-studies",
+                      "ctaLabel": "Visit Page"
+                    }
+                  }
+                ]
+              }
+            ],
+            "promo": {
+              "image": "/Insights/hero.webp",
+              "title": "Articles",
+              "description": "Explore expert perspectives, industry analysis, research, and practical frameworks on digital transformation, AI, sustainability, agriculture, public sector innovation, and economic development.",
+              "href": "/insight",
+              "ctaLabel": "Visit Page"
+            }
+          }
+        },
         { "id": "about-skyquest", "label": "About SkyQuest", "href": "/about" },
         { "id": "contact-us", "label": "Contact Us", "href": "/contact" },        
         { "id": "privacy-policy", "label": "Privacy Policy", "href": "/privacypolicy" }

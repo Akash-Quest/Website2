@@ -1,16 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { fadeUp, staggerContainer } from "@/lib/animations";
 
 export default function Suscribe({ className = "" }: { className?: string }) {
   const [email, setEmail] = useState("");
   const [done, setDone] = useState(false);
-  const [animate, setAnimate] = useState(false);
-
-  useEffect(() => {
-    const t = setTimeout(() => setAnimate(true), 80);
-    return () => clearTimeout(t);
-  }, []);
 
   const handleSubscribe = () => {
     if (!email.trim()) return;
@@ -19,30 +15,35 @@ export default function Suscribe({ className = "" }: { className?: string }) {
     setTimeout(() => setDone(false), 2800);
   };
 
-  const fade = animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4";
-
   return (
     <div className="bg-background">
       <div className={` page-container ${className} px-0 md:px-6 md:px-[10%] ` }>
       <div className="relative w-full rounded-none md:rounded-2xl overflow-hidden bg-[url('/Hero/suscribelit.jpg')] md:bg-[url('/Hero/patang.jpg')] bg-cover bg-center">
 
         {/* Content */}
-        <div className="relative z-[2] px-5 py-6 sm:px-8 sm:py-8 lg:px-10 lg:py-12 xl:px-10 xl:py-12 2xl:px-14 2xl:py-24">
-          <h2 className="text-white mb-3 font-semibold">
+        <motion.div
+          className="relative z-[2] px-5 py-6 sm:px-8 sm:py-8 lg:px-10 lg:py-12 xl:px-10 xl:py-12 2xl:px-14 2xl:py-24"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.h2 variants={fadeUp} className="text-white mb-3 font-semibold">
               Stay Ahead with Our Weekly
             <br />
            <em className="font-semibold">
-              Intelligence Brief  
+              Intelligence Brief
             </em>
-          </h2>
+          </motion.h2>
 
-          <p className={`text-white mb-5 max-w-lg leading-relaxed transition-all duration-700 delay-200 ${fade}`}>
+          <motion.p variants={fadeUp} className="text-white mb-5 max-w-lg leading-relaxed">
             Industry insights, market research, and strategic thinking curated
             for leaders who move first.
-          </p>
+          </motion.p>
 
           {/* Input + Button */}
-          <div
+          <motion.div
+            variants={fadeUp}
             className={`flex flex-row items-center rounded-none md:rounded-lg overflow-hidden bg-white/20`}
           >
             <input
@@ -62,8 +63,8 @@ export default function Suscribe({ className = "" }: { className?: string }) {
             >
               {done ? "✓ Done!" : "Subscribe"}
             </button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
       </div>
     </div>

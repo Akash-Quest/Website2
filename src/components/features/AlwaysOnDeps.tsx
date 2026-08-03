@@ -8,48 +8,39 @@ export default function AlwaysOnDeps() {
   const audienceCards = [
     {
       icon: <Location size={24} variant="Linear" className="text-black stroke-current" />,
-      head: '● LIVE',
-      head2: '  North India · Government of Uttarakhand · Since 2024',
-      title: 'Uttarakhand, India',
-      desc: '3,285 assessments/day · 8 languages · 984 referrals · Emergency management, grievance, citizen services integrated',
+      
+      title: 'Active Symptom Assessments',
+      desc: 'Track ongoing patient symptom assessments and AI-assisted healthcare interactions',
     },
     {
       icon: <Location size={24} variant="Linear" className="text-black stroke-current" />,
-      head: '◐ IN PROGRESS ',
-      head2: ' East India · 2025',
-      title: 'Jharkhand, India',
-      desc: 'Tribal health outreach · Santali and Ho language support · PMJAY scheme integration',
+   
+      title: 'Cases Currently in Progress',
+      desc: 'Monitor cases actively being assessed, reviewed, or managed.',
     },
     {
       icon: <Location size={24} variant="Linear" className="text-black stroke-current" />,
-      head: '◐ IN PROGRESS',
-      head2: ' North-West India · 2025',
-      title: 'Rajasthan, India',
-      desc: 'Desert district healthcare access · Rajasthani and Marwari · Chiranjeevi Yojana integration',
+  
+      title: 'Escalated Cases',
+      desc: 'Identify cases requiring additional clinical attention or expert intervention.',
     },
     {
       icon: <Location size={24} variant="Linear" className="text-black stroke-current" />,
-      head: '○ PIPELINE',
-      head2: ' South Asia · 2026',
-      title: 'Bangladesh',
-      desc: 'Community health worker support · Bengali · DGHS and UNICEF partnership',
+    
+      title: 'Healthcare Alerts',
+      desc: 'Stay informed about critical cases, priority assessments, and important healthcare updates.',
     },
     {
       icon: <Location size={24} variant="Linear" className="text-black stroke-current" />,
-      head: '○ PIPELINE',
-      head2: 'West Africa · 2026',
-      title: 'Nigeria',
-      desc: 'Primary health centre triage · Hausa, Yoruba, Igbo · NHIS integration',
+ 
+      title: 'Recent Referrals & Monitoring',
+      desc: 'Monitor patients recently referred to healthcare professionals for further assessment.',
     },
     {
       icon: <Global size={24} variant="Linear" className="text-black stroke-current" />,
-      head2: (
-    <Link href="/contact" className="hover:underline transition-all">
-        Request deployment →
-    </Link>
-    ),
-      title: 'Your Country',
-      desc: 'Customised to your language mix, health schemes, facility network, and government structure. Operational in weeks.',
+     
+      title: 'Patient Assessment Status',
+      desc: 'View the current status and progress of individual patient assessments.',
     },
    
   ];
@@ -59,15 +50,15 @@ export default function AlwaysOnDeps() {
       <div className="max-w-[1920px] mx-auto flex flex-col items-center">
         
         {/* ── CENTRAL HEADER SECTION (MIRRORED TO IMAGE) ── */}
-        <div className="text-center mb-16 max-w-4xl flex flex-col gap-4 Z-20">
-          <p className="font-semibold text-primary  block">
-            Deployments
+        <div className="text-center mb-16 max-w-4xl flex flex-col  Z-20">
+          <p className="font-medium text-primary text-body-sm ">
+            Dashboard Features
           </p>
           <h2 className="font-semibold ">
-            Live in Uttarakhand. <br />Expanding <em className="font-Semibold "> Across India And Beyond.</em>
+            Real-Time Healthcare Intelligence at{" "}<br></br>  <em className="font-Semibold "> Your Fingertips</em>
             </h2>
           <p className=" tracking-wide leading-snug text-muted max-w-full mx-auto ">
-            AlwaysON deploys as a sovereign state instance customised to each state's languages, health schemes, facility network, and government structure. Operational in weeks.
+            The AlwaysON dashboard provides healthcare teams with visibility into patient assessments, active cases, escalations, alerts, and referrals, helping teams monitor healthcare interactions and respond more efficiently..
           </p>
         </div>
  
@@ -76,37 +67,22 @@ export default function AlwaysOnDeps() {
           {audienceCards.map((card, idx) => (
             <div 
               key={idx} 
-              className="bg-white rounded-[16px] p-8 flex flex-col gap-4 border border-gray-200/30 shadow-sm transition-all duration-300 hover:shadow-md"
+              className="bg-white rounded-[16px] p-4 flex flex-col gap-4 border border-gray-200/30 transition-all duration-300 "
             >
               {/* Clean Flat Square Icon Wrapper Box */}
-              <div className="w-12 h-12 bg-[#F7F5F1] rounded-xl flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 bg-[#F7F5F1] rounded-xl flex items-center justify-center shrink-0">
                 {card.icon}
               </div>
-
-              <div className="w-full flex items-start justify-between text-xs sm:text-sm md:text-base font-semibold text-[#1D1EE3] tracking-wide">
-  
-                {/* Left Side Group: Blue Dot + LIVE Status */}
-                <div className="  flex items-center gap-1.5 sm:gap-2 shrink-0 whitespace-nowrap">
-                                    
-                    {/* Head (e.g. "LIVE") */}
-                    <p className="text-xs">{card.head}</p>
-                </div>
-
-                {/* Right Side Column: Head2 (e.g. "East Africa · Since 2024") */}
-                <div className=" text-xs text-right">
-                    <span>{card.head2}</span>
-                </div>
-                </div>
               
               {/* Typography Block Layer */}
               <div className="flex flex-col gap-2">
                 {/* Core Component Headline */}
-                <h3 className="font-semibold text-body-xl text-[#03030F] ">
+                <h3 className="font-semibold text-body-lg text-[#03030F] ">
                   {card.title}
                  </h3>
                 
                 {/* Description Context string */}
-                <p className="text-muted leading-snug tracking-wide">
+                <p className="text-muted ">
                   {card.desc}
                 </p>
               </div>

@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { fadeUpSm, staggerContainer } from "@/lib/animations";
 import { TwitterIcon, FacebookIcon, LinkedInIcon } from "@/components/icons/SocialIcons";
 
 const services = [
@@ -25,9 +29,15 @@ const Footer = () => {
   return (
     <footer className="bg-[#03030F] ">
       <div className="page-container py-16 pb-5">
-        <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap sm:justify-between gap-8 lg:gap-10">
+        <motion.div
+          className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap sm:justify-between gap-8 lg:gap-10"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {/* Brand column */}
-          <div className="sm:w-full lg:w-auto lg:max-w-xs lg:flex-shrink-0">
+          <motion.div variants={fadeUpSm} className="sm:w-full lg:w-auto lg:max-w-xs lg:flex-shrink-0">
             <Link href="/" className="inline-block">
               <Image src="/Header/logo.svg" alt="SkyQuest Technology Consulting" width={128} height={40} className="w-28 sm:w-32 lg:w-36 2xl:w-40 h-auto mb-4" />
             </Link>
@@ -47,10 +57,10 @@ const Footer = () => {
                 </a>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Services column */}
-          <div className="w-full sm:w-56 lg:w-52">
+          <motion.div variants={fadeUpSm} className="w-full sm:w-56 lg:w-52">
             <h3 className="text-white font-bold mb-4 text-body-lg">Our Services</h3>
             <ul className="space-y-2.5 text-white/80 ">
               {services.map((s) => (
@@ -64,10 +74,10 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* About column */}
-          <div className="w-full sm:w-40 lg:w-40">
+          <motion.div variants={fadeUpSm} className="w-full sm:w-40 lg:w-40">
             <h3 className="text-white font-bold mb-4 text-body-lg">About Us</h3>
             <ul className="space-y-2.5 text-white/80 ">
               {aboutLinks.map((l) => (
@@ -81,10 +91,10 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Contact column */}
-          <div>
+          <motion.div variants={fadeUpSm}>
             <h3 className="text-white font-bold mb-4 text-body-lg">Contact Us</h3>
             <ul className="space-y-2.5 text-white/80 ">
               {[
@@ -103,8 +113,8 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Bottom bar */}
         <div className="border-t border-white/20 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">

@@ -1,5 +1,13 @@
 "use client";
 
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  fadeUp,
+  fadeUpSm,
+  staggerContainer,
+  scaleFade,
+} from "@/lib/animations";
+
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useRef } from "react";
@@ -91,7 +99,13 @@ export default function CoreCapabilities() {
       <div className="page-container">
       {/* Mobile Carousel */}
       <div className="lg:hidden">
-        <div className="mb-6">
+        <motion.div
+          className="mb-6"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <p className="font-medium text-primary mb-2 text-body-sm">Our Core Capabilities</p>
           <h2 className="font-bold ">
             End-to-End Solutions for Strategy,
@@ -100,47 +114,60 @@ export default function CoreCapabilities() {
           </h2>
           <p className="text-muted">
             We combine expertise, technology, and execution to accelerate transformation and deliver lasting impact. </p>
-        </div>
+        </motion.div>
 
         {/* Card */}
-        <div
-          className="relative rounded-3xl overflow-hidden  backdrop-blur-md"
-          style={{ height: 480 }}
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-        >
-          {/* Image */}
-          <div className="relative h-[55%] w-full">
-            <Image
-              src={mobileCardList[currentIndex][1].image}
-              alt={mobileCardList[currentIndex][1].title}
-              fill
-              className="object-cover"
-              unoptimized
-            />
-          </div>
-
-          {/* Content */}
-          <div className="h-[45%] p-5 flex flex-col justify-between   rounded-3xl">
-            <div>
-              <h3 className="font-bold text-gray-900 ">
-                {mobileCardList[currentIndex][1].title}
-              </h3>
-              <p className="mt-2 text-muted leading-snug line-clamp-3 tracking-wide">
-                {mobileCardList[currentIndex][1].description}
-              </p>
-            </div>
-            <Link
-              href={mobileCardList[currentIndex][1].href}
-              className="inline-flex items-center justify-between w-full bg-[#1D1EE3] text-white rounded-md pl-4 pr-2 py-2 text-sm font-medium"
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            variants={scaleFade}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="relative rounded-3xl overflow-hidden  backdrop-blur-md"
+            style={{ height: 480 }}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
+            {/* Image */}
+            <motion.div
+              className="relative h-[55%] w-full"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
             >
-              Visit Page
-              <span className="bg-white text-[#1D1EE3] rounded-sm p-1 flex items-center justify-center">
-                <ArrowUp size={16} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
-              </span>
-            </Link>
-          </div>
-        </div>
+              <Image
+                src={mobileCardList[currentIndex][1].image}
+                alt={mobileCardList[currentIndex][1].title}
+                fill
+                className="object-cover"
+                unoptimized
+              />
+            </motion.div>
+
+            {/* Content */}
+            <div className="h-[45%] p-5 flex flex-col justify-between   rounded-3xl">
+              <div>
+                <h3 className="font-bold text-gray-900 ">
+                  {mobileCardList[currentIndex][1].title}
+                </h3>
+                <p className="mt-2 text-muted leading-snug line-clamp-3 tracking-wide">
+                  {mobileCardList[currentIndex][1].description}
+                </p>
+              </div>
+              <Link
+                href={mobileCardList[currentIndex][1].href}
+                className="inline-flex items-center justify-between w-full bg-[#1D1EE3] text-white rounded-md pl-4 pr-2 py-2 text-sm font-medium"
+              >
+                Visit Page
+                <span className="bg-white text-[#1D1EE3] rounded-sm p-1 flex items-center justify-center">
+                  <ArrowUp size={16} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
+                </span>
+              </Link>
+            </div>
+          </motion.div>
+        </AnimatePresence>
 
         {/* Dots */}
         <div className="flex justify-center items-center gap-5 mt-10">
@@ -162,8 +189,13 @@ export default function CoreCapabilities() {
       {/* Desktop */}
       <div className="mx-auto hidden lg:grid lg:grid-cols-[2fr_1fr] gap-2 xl:gap-4">
         {/* LEFT SIDE */}
-        <div>
-          <div className="mb-4">
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          <motion.div variants={fadeUpSm} className="mb-4">
             <p className=" font-medium text-primary text-body-sm ">
               Our Core Capabilities
             </p>
@@ -179,49 +211,58 @@ export default function CoreCapabilities() {
 
             <p className=" max-w-3xl text-muted ">
               We combine expertise, technology, and execution to accelerate transformation and deliver lasting impact. </p>
-          </div>
+          </motion.div>
 
           {/* Row 1 */}
 <div className="grid grid-cols-2 gap-2 xl:gap-4">
   <div>
-    <div className="w-[calc(100%+30px)] -ml-[30px]">
+    <motion.div variants={scaleFade} className="w-[calc(100%+30px)] -ml-[30px]">
     <HoverRevealCard {...cards.digital} className="h-[clamp(14.6rem,19.53vw,23.19rem)]" isHovered={hoveredCard === 'digital'} onHover={(hovered) => setHoveredCard(hovered ? 'digital' : null)} />
-      </div>
-    <div className="mt-2 xl:mt-4">
+      </motion.div>
+    <motion.div variants={scaleFade} className="mt-2 xl:mt-4">
       <HoverRevealCard {...cards.program} className="h-[clamp(19.59rem,27.49vw,32.65rem)]" isHovered={hoveredCard === 'program'} onHover={(hovered) => setHoveredCard(hovered ? 'program' : null)} />
-    </div>
+    </motion.div>
   </div>
 
   <div className="pt-0">
-    <HoverRevealCard {...cards.public} className="h-[clamp(18.4rem,25.83vw,30.67rem)]" isHovered={hoveredCard === 'public'} onHover={(hovered) => setHoveredCard(hovered ? 'public' : null)} />
+    <motion.div variants={scaleFade}>
+      <HoverRevealCard {...cards.public} className="h-[clamp(18.4rem,25.83vw,30.67rem)]" isHovered={hoveredCard === 'public'} onHover={(hovered) => setHoveredCard(hovered ? 'public' : null)} />
+    </motion.div>
 
-    <div className="mt-2 xl:mt-4">
+    <motion.div variants={scaleFade} className="mt-2 xl:mt-4">
       <HoverRevealCard {...cards.market} className="h-[clamp(15.86rem,21.2vw,25.17rem)]" isHovered={hoveredCard === 'market'} onHover={(hovered) => setHoveredCard(hovered ? 'market' : null)} />
-    </div>
+    </motion.div>
   </div>
 </div>
 
           {/* Agriculture */}
-          <div className="mt-2 xl:mt-4">
+          <motion.div variants={scaleFade} className="mt-2 xl:mt-4">
             <HoverRevealCard
               {...cards.agriculture}
               className="h-[clamp(11.63rem,15.8vw,18.76rem)]"
               isHovered={hoveredCard === 'agriculture'}
               onHover={(hovered) => setHoveredCard(hovered ? 'agriculture' : null)}
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* RIGHT SIDE */}
-        <div>
-          <HoverRevealCard
-            {...cards.ai}
-            className="h-[clamp(33.39rem,39.6vw,47.03rem)]"
-            isHovered={hoveredCard === 'ai'}
-            onHover={(hovered) => setHoveredCard(hovered ? 'ai' : null)}
-          />
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          <motion.div variants={scaleFade}>
+            <HoverRevealCard
+              {...cards.ai}
+              className="h-[clamp(33.39rem,39.6vw,47.03rem)]"
+              isHovered={hoveredCard === 'ai'}
+              onHover={(hovered) => setHoveredCard(hovered ? 'ai' : null)}
+            />
+          </motion.div>
 
-          <div className="mt-2 xl:mt-4">
+          <motion.div variants={scaleFade} className="mt-2 xl:mt-4">
             <div className="w-[calc(100%+30px)] -mr-[30px]">
             <HoverRevealCard
               {...cards.esg}
@@ -230,17 +271,17 @@ export default function CoreCapabilities() {
               onHover={(hovered) => setHoveredCard(hovered ? 'esg' : null)}
             />
             </div>
-          </div>
+          </motion.div>
 
-          <div className="mt-2 xl:mt-4">
+          <motion.div variants={scaleFade} className="mt-2 xl:mt-4">
             <HoverRevealCard
               {...cards.csr}
               className="h-[clamp(13.73rem,16.29vw,19.34rem)]"
               isHovered={hoveredCard === 'csr'}
               onHover={(hovered) => setHoveredCard(hovered ? 'csr' : null)}
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
       </div>
     </section>

@@ -9,13 +9,21 @@ import {
 } from "lucide-react";
 import { ArrowUp } from "iconsax-react";
 import { caseStudiesData, type CaseStudy } from "@/Constants/caseStudies";
+import { insightData } from "@/Constants/Insight ";
 
-function StudyCard({ study }: { study: CaseStudy }) {
+type ListedStudy = CaseStudy & { href: string };
+
+const ALL_STUDIES: ListedStudy[] = [
+  ...caseStudiesData.caseStudies.map((s) => ({ ...s, href: `/case-studies/${s.id}` })),
+  ...insightData.caseStudies.map((s) => ({ ...s, href: `/insight/${s.id}` })),
+];
+
+function StudyCard({ study }: { study: ListedStudy }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <Link
-      href={`/case-studies/${study.id}`}
+      href={study.href}
       className="group flex flex-col sm:flex-row gap-4 bg-[#F7F5F1] rounded-xl p-2 sm:p-3 transition-colors cursor-pointer"
       style={{
         backgroundColor: isHovered ? '#EAEAF8' : '#F7F5F1'
@@ -68,7 +76,7 @@ function StudyCard({ study }: { study: CaseStudy }) {
 
 const PAGE_SIZE = 5;
 
-const CATEGORY_OPTIONS = ["Case Study","Insights"];
+const CATEGORY_OPTIONS = ["Case Study","Articles"];
 const INDUSTRY_OPTIONS = [
   "Public sector",
   "Agriculture",
@@ -231,8 +239,8 @@ export default function CaseStudyResult() {
   const filteredReports = useMemo(() => {
     const list =
       category === "All Insights"
-        ? [...caseStudiesData.caseStudies]
-        : caseStudiesData.caseStudies.filter((r) => r.category === category);
+        ? [...ALL_STUDIES]
+        : ALL_STUDIES.filter((r) => r.category === category);
 
     if (sortBy === "Title A-Z") {
       list.sort((a, b) => a.title.localeCompare(b.title));

@@ -7,48 +7,33 @@ export default function AlwaysOnPlatform() {
   const useCases = [
     {
       title: 'AI Symptom Assessment',
-      desc: 'AI-assisted clinical triage based on symptom input, patient history, and local disease prevalence. Severity scored automatically from mild guidance to urgent escalation.',
+      desc: 'AI-assisted assessment helps users describe their symptoms and receive relevant healthcare guidance.',
       image: '/Productsoln/AlwaysOnP1.png', 
     },
     {
-      title: 'Multilingual Conversations',
-      desc: 'Clinical-grade conversations in 8 local languages. Patients describe symptoms naturally no medical jargon required. AI translates, interprets, and responds fluently.',
+      title: 'Multilingual Support',
+      desc: 'Patients can communicate in supported local languages, helping make digital healthcare services more accessible.',
       image: '/Productsoln/AlwaysOnP2.png',
     },
     {
-      title: "Digital Capacity Building",
-      desc: 'Aggregate health trends per district disease prevalence, seasonal spikes, referral patterns giving government health departments the intelligence to act proactively.',
+      title: "Real-Time AI Triage",
+      desc: 'AI-assisted triage helps identify cases requiring greater attention and supports faster escalation.',
       image: '/Productsoln/AlwaysOnP3.png',
     },
     {
-      title: "Facility & Doctor Finder",
-      desc: 'Location-aware search for nearest health facilities, doctors by specialisation, and government health scheme eligibility all inside the WhatsApp conversation.',
+      title: "Expert Referrals",
+      desc: 'Relevant cases can be escalated to healthcare professionals for further assessment and support',
       image: '/Productsoln/AlwaysOnP4.png',
     },
     {
-      title: "Clinical Dashboard",
-      desc: 'Real-time oversight dashboard for doctors, administrators, and government health officers live case counts, severity distribution, referral status, and escalation alerts.',
+      title: "Healthcare Dashboard",
+      desc: 'Healthcare teams can monitor assessments, escalated cases, alerts, and referrals through a centralized dashboard.',
       image: '/Productsoln/AlwaysOnP5.png',
     },
     {
-      title: "Digital Report Delivery",
-      desc: 'Diagnostic reports, prescriptions, and follow-up reminders sent directly to the patient over WhatsApp no printing, no physical collection, no delay.',
+      title: "WhatsApp-Based Access",
+      desc: 'AlwaysON delivers healthcare services through WhatsApp, reducing the need for users to download or navigate a separate application.',
       image: '/Productsoln/AlwaysOnP6.png',
-    },
-    {
-      title: "Government Scheme Integration",
-      desc: 'Citizens can check eligibility for government health schemes, PMJAY, Ayushman Bharat, and state programmes directly through the conversation, in their language.',
-      image: '/Productsoln/AlwaysOnP7.png',
-    },
-    {
-      title: "Emergency Management",
-      desc: 'Emergency routing for critical cases ambulance dispatch, hospital pre-notification, and family alert all triggered automatically when life-threatening symptoms are detected.',
-      image: '/Productsoln/AlwaysOnP8.png',
-    },
-    {
-      title: "Real-Time Expert Referrals",
-      desc: 'When AI identifies high-severity symptoms, the patient is automatically connected to an available specialist. Doctor receives full conversation context no repeat history needed',
-      image: '/Productsoln/AlwaysOnP9.png',
     },
   ];
  
@@ -60,22 +45,22 @@ export default function AlwaysOnPlatform() {
         <p className="font-medium text-primary ">
               Platform Features
             </p>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-5 mb-15 items-start justify-between w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-5 mb-5 items-start justify-between w-full">
           <div className="lg:col-span-7 flex flex-col gap-2">
             
             <h2 className="font-semibold ">
-              Every Tool To Deliver  Healthcare <em className="font-semibold">At Population Scale.</em>
+              AI-Powered Healthcare <br /> <em className="font-semibold">Support</em>
             </h2>
           </div>
-          <div className="lg:col-span-5 pb-2">
+          <div className="lg:col-span-5 ">
             <p className=" leading-snug tracking-wide text-muted max-w-full">
-              AlwaysON is more than a chatbot it's a complete digital health infrastructure layer deployable by any state government in weeks.
+              Deliver accessible, AI-assisted healthcare through symptom assessment, multilingual support, real-time triage, and expert referrals.
             </p>
           </div>
         </div>
  
         {/* ── 🛠️ FIXED: 3-COLUMN VERTICAL STACK MATRIX GRID (As per your Image) ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full ">
           {useCases.map((item, idx) => (
             <div 
               key={idx} 
