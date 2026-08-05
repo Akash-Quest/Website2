@@ -3,7 +3,7 @@ import HeroSlider from "@/components/features/Hero";
 import Marquee from "@/components/features/Marquee";
 import StatsGrid from "@/components/ui/Stats4";
 import CoreCapabilities from "@/components/features/HomeCoreCapabilities";
-import InsightImpact from "@/components/features/HomeInsightImpact";
+
 import OurProductSolution from "@/components/features/HomeProductSolution";
 import CaseStudies from "@/components/features/HomeCaseStudie";
 import OurGlobalPresence from "@/components/features/HomeGlobalPresence";
@@ -25,7 +25,6 @@ export default function Home() {
     <StatsGrid />
     <CoreCapabilities />
     <TransformAccordion />
-    <InsightImpact />
     <OurProductSolution />
     <CaseStudies {...caseStudiesData} bgClassName="bg-background" />
     <OurGlobalPresence />

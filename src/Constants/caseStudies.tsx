@@ -26,7 +26,7 @@ export const caseStudiesData = {
   eyebrow: "Featured Case Studies",
   heading: (
     <>
-      Impact Stories That Speak for
+      Impact Stories That Speak for{" "}
       <br />
       <em className="font-semibold">Themselves</em>
     </>

@@ -3,12 +3,20 @@
 import React, { useState } from "react";
 import Button from "../ui/Button";
 
-interface CardData {
+export interface AccordionCard {
   title: string;
   body: string;
 }
 
-const CARDS: CardData[] = [
+interface TransformAccordionProps {
+  eyebrow?: string;
+  heading?: React.ReactNode;
+  description?: string;
+  buttonLabel?: string;
+  cards?: AccordionCard[];
+}
+
+const DEFAULT_CARDS: AccordionCard[] = [
   {
     title: "Understand What Matters Most",
     body: "Identify complex challenges, uncover emerging opportunities, and define the priorities that matter most to your organization and stakeholders.",
@@ -27,7 +35,17 @@ const CARDS: CardData[] = [
   },
 ];
 
-const TransformAccordion: React.FC = () => {
+const TransformAccordion: React.FC<TransformAccordionProps> = ({
+  eyebrow = "From Insight to Impact",
+  heading = (
+    <>
+      How We Help Organizations <em className="font-semibold">Transform</em>
+    </>
+  ),
+  description = "We help organizations navigate complexity, embrace innovation, and deliver measurable outcomes through an integrated approach spanning strategy, technology, execution, and impact.",
+  buttonLabel = "Speak To Partner",
+  cards = DEFAULT_CARDS,
+}) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
@@ -36,35 +54,26 @@ const TransformAccordion: React.FC = () => {
         {/* Header */}
         <div className="grid grid-cols-[55fr_45fr] items-start gap-20 pb-10">
           <div>
-            <p className="text-body-sm font-medium text-white">
-              From Insight to Impact
-            </p>
+            <p className="text-body-sm font-medium text-white">{eyebrow}</p>
 
-            <h2 className="pb-5 font-semibold text-white">
-              How We Help Organizations{" "}
-              <em className="font-semibold">Transform</em>
-            </h2>
+            <h2 className="pb-5 font-semibold text-white">{heading}</h2>
 
             <Button variant="primary" iconSize={16}>
-              Speak To Partner
+              {buttonLabel}
             </Button>
           </div>
 
-          <p className="font-medium text-white">
-            We help organizations navigate complexity, embrace innovation, and
-            deliver measurable outcomes through an integrated approach spanning
-            strategy, technology, execution, and impact.
-          </p>
+          <p className="font-medium text-white">{description}</p>
         </div>
         <div
-          className="grid transition-[grid-template-columns] duration-500 ease-in-out"
+          className="grid transition-[grid-template-columns] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
           style={{
-            gridTemplateColumns: CARDS.map((_, index) =>
-              index === activeIndex ? "2fr" : "1fr"
-            ).join(" "),
+            gridTemplateColumns: cards
+              .map((_, index) => (index === activeIndex ? "2fr" : "1fr"))
+              .join(" "),
           }}
         >
-          {CARDS.map((card, index) => {
+          {cards.map((card, index) => {
             const isActive = index === activeIndex;
 
             return (
@@ -72,16 +81,20 @@ const TransformAccordion: React.FC = () => {
                 key={card.title}
                 type="button"
                 onClick={() => setActiveIndex(index)}
-                className={`flex h-[350px] flex-col justify-start rounded-[18px] border border-white/20 px-10 py-7 text-left backdrop-blur-[21.4px] transition-colors duration-300 cursor-pointer ${
-                  isActive ? "bg-[var(--primary)]" : "bg-white/10"
-                } ${index !== CARDS.length - 1 ? "-mr-[1.5rem]" : ""}`}
-                style={{ zIndex: CARDS.length - index }}
+                className={`flex h-[350px] flex-col justify-start overflow-hidden rounded-[18px] border px-10 border-white/20  py-7 text-left backdrop-blur-[10px] transition-colors duration-300 cursor-pointer ${
+                  isActive ? " bg-[var(--primary)]" : "bg-white/10 "
+                } ${index !== cards.length - 1 ? "-mr-[2rem]" : ""}`}
+                style={{ zIndex: cards.length - index }}
               >
-                <h3 className="text-body-xl leading-[1.3] tracking-[-0.02em] text-white">
+                <h3 className=" shrink text-body-xl leading-[1.3] tracking-[-0.02em] text-white">
                   {card.title}
                 </h3>
                 {isActive && (
-                  <p className="mt-4 text-white/90">{card.body}</p>
+                  <div className="mt-4 min-h-0 flex-1 overflow-y-auto scrollbar-hide">
+                    <p className="tab-content-anim text-white/90 text-body-lg">
+                      {card.body}
+                    </p>
+                  </div>
                 )}
 
                 {!isActive && (

@@ -29,7 +29,7 @@ export default function Suscribe({ className = "" }: { className?: string }) {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.h2 variants={fadeUp} className="text-white mb-3 font-semibold">
-              Stay Ahead with Our Weekly
+              Stay Ahead with Our Weekly{" "}
             <br />
            <em className="font-semibold">
               Intelligence Brief

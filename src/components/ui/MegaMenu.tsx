@@ -124,7 +124,7 @@ function PromoCard({ promo, onNavigate }: { promo: MegaMenuPromo; onNavigate: ()
           alt={promo.title}
           fill
           sizes="288px"
-          className="object-fit transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </Link>
       <div className="pt-3">
@@ -132,9 +132,11 @@ function PromoCard({ promo, onNavigate }: { promo: MegaMenuPromo; onNavigate: ()
         <p className="mb-3 pb-3   text-gray-500">
           {promo.description}
         </p>
-        <Button href={promo.href} variant="primary" iconSize={14} minWidth="0px" fullWidth onClick={onNavigate}>
-          {promo.ctaLabel}
-        </Button>
+        <div className="flex justify-end">
+          <Button href={promo.href} variant="primary" iconSize={14} minWidth="0px" onClick={onNavigate}>
+            {promo.ctaLabel}
+          </Button>
+        </div>
       </div>
     </div>
   );

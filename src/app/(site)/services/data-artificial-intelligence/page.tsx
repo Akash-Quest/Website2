@@ -12,7 +12,8 @@ import WeServe from '@/components/features/ArtificialIntel/WeServe';
 import EnterpriseAiSolution from '@/components/features/ArtificialIntel/EnterpriseAiSolution';
 import OtherServicesSection from '@/components/features/OtherServices';
 import EnterpriseChallenges from '@/components/features/ArtificialIntel/EnterpriseChallenges';
-import AiInsightImpact from '@/components/features/AiInsight';
+
+import TransformAccordion from '@/components/features/HomeInsightImpac';
 function HeroPage(){
   return(
     <ServiceHeroPage {...ArtificialHeroData} />
@@ -71,7 +72,18 @@ export default function SocialImpactService(){
        ]}
      />
      <EnterpriseChallenges />
-     <AiInsightImpact />
+     <TransformAccordion
+       eyebrow="What We Do"
+       heading="AI-Powered Digital Transformation "
+       description="A full-spectrum AI transformation partner helping organizations design, deploy, integrate, and scale intelligent solutions."
+       buttonLabel="Speak To Partner"
+       cards={[
+         { title: "Placeholder Card Title 1", body: "Placeholder body copy 1 - replace with real content." },
+         { title: "Placeholder Card Title 2", body: "Placeholder body copy 2 - replace with real content." },
+         { title: "Placeholder Card Title 3", body: "Placeholder body copy 3 - replace with real content." },
+         { title: "Placeholder Card Title 4", body: "Placeholder body copy 4 - replace with real content." },
+       ]}
+     />
     <EnterpriseAiSolution />
       <WeServe /> 
      <CaseStudies {...caseStudiesData} bgClassName='bg-white'/>

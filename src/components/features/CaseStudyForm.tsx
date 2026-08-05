@@ -38,7 +38,7 @@ export default function CaseStudyForm({
             <h2 className="font-bold text-gray-900">
               {heading}
               <br />
-              <span className="text-primary">{headingHighlight}</span>
+              <span className="text-primary">{headingHighlight}{" "}</span>
               <br />
               <em className="font-semibold">{headingItalic}</em>
             </h2>
