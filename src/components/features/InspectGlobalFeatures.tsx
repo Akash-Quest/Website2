@@ -3,6 +3,7 @@
 import Script from 'next/script';
 import React from 'react';
 import { Chart21, CpuCharge, ShieldTick, Alarm, ClipboardText, Element3 } from 'iconsax-react';
+import Reveal from '@/components/ui/Reveal';
 
 export default function InspectGlobalFeatures() {
   const features = [
@@ -53,30 +54,33 @@ export default function InspectGlobalFeatures() {
         
         {/* ── HEADER ── */}
         <div className="text-center mb-16 md:mb-20">
-          <p className="text-white mb-3 block">
+          <Reveal as="p" variant="upSm" custom={0} className="text-white mb-3 block">
             Features
-          </p>
-          <h2 className="font-semibold text-white">
+          </Reveal>
+          <Reveal as="h2" variant="upSm" custom={1} className="font-semibold text-white">
             Built For The Verification, Not Just <br />
             <em className="font-semibold text-white">Visualization</em>
-          </h2>
-          <p className="text-[#CBCBFF] mt-6 max-w-4xl mx-auto tracking-wide leading snug">
+          </Reveal>
+          <Reveal as="p" variant="upSm" custom={2} className="text-[#CBCBFF] mt-6 max-w-4xl mx-auto tracking-wide leading snug">
             Every module is designed to answer one question: does the evidence on the ground match what's being reported and if not, where exactly is the gap?
-          </p>
+          </Reveal>
         </div>
 
         {/* ── FEATURE GRID ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {features.map((feature, idx) => (
-            <div 
-              key={idx} 
+            <Reveal
+              as="div"
+              variant="upSm"
+              custom={idx}
+              key={idx}
               className="flex flex-col items-start gap-4 p-2 transition-transform duration-300"
             >
               {/* Icon Container */}
               <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-lg">
                 {feature.icon}
               </div>
-              
+
               {/* Text Content */}
               <div className="flex flex-col gap-2">
                 <h3 className="font-semibold  text-body-xl text-white">
@@ -86,7 +90,7 @@ export default function InspectGlobalFeatures() {
                   {feature.desc}
                 </p>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
 

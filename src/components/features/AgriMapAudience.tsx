@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Landmark, LandmarkIcon, Building2 } from 'lucide-react';
+import Reveal from '@/components/ui/Reveal';
 
 export default function AgriMapAudience() {
   const audienceCards = [
@@ -49,20 +50,23 @@ export default function AgriMapAudience() {
         
         {/* ── CENTRAL HEADER SECTION ── */}
         <div className="text-center mb-16 max-w-3xl">
-          <h2 className="font-semibold ">
+          <Reveal as="h2" variant="upSm" custom={0} className="font-semibold ">
             Designed For Those Who Govern <br />
             The <em className="font-semibold">Ground</em>
-          </h2>
-          <p className="text-muted mx-auto mt-5 tracking-wide leading-snug">
+          </Reveal>
+          <Reveal as="p" variant="upSm" custom={1} className="text-muted mx-auto mt-5 tracking-wide leading-snug">
             AgriMap serves the stakeholders who shape India's agricultural outcomes from state secretariats to rural bank branches
-          </p>
+          </Reveal>
         </div>
 
         {/* ── 3-COLUMN RESPONSIVE CARD GRID ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full items-stretch">
           {audienceCards.map((card, idx) => (
-            <div 
-              key={idx} 
+            <Reveal
+              as="div"
+              variant="upSm"
+              custom={idx}
+              key={idx}
               className="bg-white rounded-[20px] p-8 flex flex-col justify-between border border-gray-200/40 shadow-sm"
             >
               {/* Upper Content Frame */}
@@ -103,7 +107,7 @@ export default function AgriMapAudience() {
                   ))}
                 </ul>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
 

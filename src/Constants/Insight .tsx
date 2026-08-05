@@ -54,7 +54,7 @@ export const insightData = {
         {
           type: "paragraph",
           dropCap: true,
-          text: "2025 marked a turning point for the global medical device industry, a year when intelligence, personalization, and real-time data moved from experimental to essential. What had long been driven by incremental engineering improvements evolved into a convergence of advanced materials, intelligent systems, and digitally enabled design philosophies. Medical devices were no longer viewed as isolated tools but as adaptive, data-driven extensions of clinical decision-making and patient care.",
+          text: "The global medical device industry has entered a new era where intelligence, personalization, and real-time data have become essential rather than experimental. What had long been driven by incremental engineering improvements evolved into a convergence of advanced materials, intelligent systems, and digitally enabled design philosophies. Medical devices were no longer viewed as isolated tools but as adaptive, data-driven extensions of clinical decision-making and patient care.",
         },
         {
           type: "paragraph",

@@ -73,8 +73,8 @@ export const AgricultureOurCapabilitiesData = {
 };
 
 export const AgricultureHeroData = {
-  breadcrumbLabel: "Agriculture & Livestock",
-  eyebrow: "Agriculture & Livestock",
+  breadcrumbLabel: "Agriculture & Livestock Advisory",
+  eyebrow: "Agriculture & Livestock Advisory",
   heading: (
     <>
       Transforming Agriculture,
@@ -82,7 +82,7 @@ export const AgricultureHeroData = {
     </>
   ),
   description:
-    "Transforming agriculture and livestock through technology, innovation, and market-led development. We help organizations build resilient food systems, improve productivity, strengthen value chains, and create sustainable growth across the agricultural economy.",
+    "Transforming agriculture and livestock through technology and innovation to build resilient food systems, strengthen value chains, improve productivity, and drive sustainable growth.",
   imageSrc: "/service/Agriculture/hero.jpg",
   imageAlt: "Transforming Agriculture, Livestock & Food Systems",
 };

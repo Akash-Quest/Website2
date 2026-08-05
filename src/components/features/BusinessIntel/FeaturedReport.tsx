@@ -4,7 +4,10 @@ import { useState } from "react";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { ArrowUp } from "iconsax-react";
+import { AnimatePresence, motion } from "framer-motion";
 import Button from "@/components/ui/Button";
+import Reveal from "@/components/ui/Reveal";
+import { fadeUpSm } from "@/lib/animations";
 
 const REPORTS = [
   {
@@ -53,7 +56,7 @@ export default function FeaturedReport() {
     <section className="w-full bg-white">
       <div className="page-container">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
-          <div>
+          <Reveal variant="left">
             <p className="mb-2 text-body-sm font-medium text-primary">
               Featured Reports
             </p>
@@ -67,56 +70,73 @@ export default function FeaturedReport() {
               expectations while creating long-term business, social, and
               environmental value.
             </p>
-          </div>
+          </Reveal>
 
-          <div className="flex flex-row items-center gap-2 lg:flex-col lg:items-end">
+          <Reveal
+            variant="right"
+            className="flex flex-row items-center gap-2 lg:flex-col lg:items-end"
+          >
             <Button variant="primary" iconSize={16}>
               Reports Store
             </Button>
 
-            
-          </div>
+
+          </Reveal>
         </div>
 
-        <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 ">
-          {visibleReports.map((report) => (
-            <div key={report.title} className="p-2 bg-background rounded-lg">
-              <div className="relative h-40 2xl:h-48 w-full overflow-hidden rounded-xl bg-neutral-100">
-                <Image
-                  src={report.image}
-                  alt={report.title}
-                  fill
-                  unoptimized
-                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-
-              <p className="mt-3 mb-1 text-xs 2xl:text-sm font-medium text-primary">
-                {report.date} 
-              </p>
-              <h3 className="text-body-lg font-semibold text-neutral-900">
-                {report.title}
-              </h3>
-              <p className="mt-1.5 text-body-sm  text-muted">{report.description}</p>
-
-              <button
-                type="button"
-                className="group/learn mt-3 flex w-full items-center justify-end text-sm font-semibold text-primary transition-colors duration-300 cursor-pointer"
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={page}
+            className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 "
+          >
+            {visibleReports.map((report, idx) => (
+              <motion.div
+                key={report.title}
+                custom={idx}
+                variants={fadeUpSm}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                exit="exit"
+                className="group p-2 bg-background rounded-lg"
               >
-                Explore More
-                <span className="relative ml-1 h-3.5 w-3.5 overflow-hidden">
-                  <span className="absolute inset-0 flex items-center justify-center transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/learn:translate-x-3 group-hover/learn:-translate-y-3 group-hover/learn:opacity-0">
-                    <ArrowUp size={14} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
+                <div className="relative h-40 2xl:h-48 w-full overflow-hidden rounded-xl bg-neutral-100">
+                  <Image
+                    src={report.image}
+                    alt={report.title}
+                    fill
+                    unoptimized
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                <p className="mt-3 mb-1 text-xs 2xl:text-sm font-medium text-primary">
+                  {report.date}
+                </p>
+                <h3 className="text-body-lg font-semibold text-neutral-900">
+                  {report.title}
+                </h3>
+                <p className="mt-1.5 text-body-sm  text-muted">{report.description}</p>
+
+                <button
+                  type="button"
+                  className="group/learn mt-3 flex w-full items-center justify-end text-sm font-semibold text-primary transition-colors duration-300 cursor-pointer"
+                >
+                  Explore More
+                  <span className="relative ml-1 h-3.5 w-3.5 overflow-hidden">
+                    <span className="absolute inset-0 flex items-center justify-center transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/learn:translate-x-3 group-hover/learn:-translate-y-3 group-hover/learn:opacity-0">
+                      <ArrowUp size={14} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
+                    </span>
+                    <span className="absolute inset-0 flex items-center justify-center -translate-x-3 translate-y-3 opacity-0 transition-all duration-300 delay-100 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/learn:translate-x-0 group-hover/learn:translate-y-0 group-hover/learn:opacity-100">
+                      <ArrowUp size={14} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
+                    </span>
                   </span>
-                  <span className="absolute inset-0 flex items-center justify-center -translate-x-3 translate-y-3 opacity-0 transition-all duration-300 delay-100 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/learn:translate-x-0 group-hover/learn:translate-y-0 group-hover/learn:opacity-100">
-                    <ArrowUp size={14} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
-                  </span>
-                </span>
-              </button>
-            </div>
-          ))}
-        </div>
+                </button>
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );

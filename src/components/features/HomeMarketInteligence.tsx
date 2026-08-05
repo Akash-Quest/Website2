@@ -36,22 +36,22 @@ const tabs: TabContent[] = [
           "Global Lignosulfonate Based Concrete Admixtures Market size was valued at USD 4.20 Billion in 2023 poised to grow ...",
       },
       {
-        image: "/Marketinteli/Pr2.jpg",
+        image: "/Marketinteli/Pr1.jpg",
         title: "Sector Outlooks",
         description:
-          "Global Lignosulfonate Based Concrete Admixtures Market size was valued at USD 4.20 Billion in 2023 poised to grow ...",
+          "Sector Outlooks Strategic outlooks that help organizations anticipate industry trends, navigate market shifts...",
       },
       {
-        image: "/Marketinteli/Pr3.jpg",
+        image: "/Marketinteli/Pr1.jpg",
         title: "Custom Research",
         description:
-          "Global Lignosulfonate Based Concrete Admixtures Market size was valued at USD 4.20 Billion in 2023 poised to ...",
+          "Tailored research engagements designed to address specific business questions, market challenges, investment decisions...",
       },
       {
-        image: "/Marketinteli/Pr4.jpg",
+        image: "/Marketinteli/Pr1.jpg",
         title: "Strategic Insights",
         description:
-          "Global Lignosulfonate Based Concrete Admixtures Market size was valued at USD 4.20 Billion in 2023 poised to grow...",
+          "Expert perspectives, thought leadership, and actionable intelligence that help leaders make informed decisions and ... ",
       },
     ],
   },
@@ -61,7 +61,7 @@ const tabs: TabContent[] = [
     titleRegular: "Sector",
     titleItalic: "Outlooks",
     description:
-      "Forward-looking analysis that helps organizations understand industry shifts, future trends, investment opportunities, and evolving market dynamics.",
+      "Strategic outlooks that help organizations anticipate industry trends, navigate market shifts, identify emerging opportunities, and make informed strategic decisions.",
     ctaLabel: "Explore Report Store",
     image: "/Marketinteli/Pr2.jpg",
   },

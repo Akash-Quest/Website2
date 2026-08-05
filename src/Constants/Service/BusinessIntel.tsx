@@ -89,9 +89,6 @@ export const BusinessIntelWhyUsData = {
   ),
   intro: (
     <>
-      Many research firms provide data. Few help organizations
-      understand what the data means and what actions to take next.
-      <br />
       SkyQuest bridges the gap between research and execution by
       combining market intelligence, strategic advisory, sector
       expertise, and implementation experience.

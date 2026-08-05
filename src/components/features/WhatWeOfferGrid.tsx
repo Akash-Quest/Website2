@@ -1,3 +1,5 @@
+import Reveal from "@/components/ui/Reveal";
+
 type OfferingItem = {
   icon: React.ElementType;
   title: string;
@@ -55,19 +57,33 @@ export default function WhatWeOfferGrid({
     <section className="w-full bg-white">
       <div className="page-container">
         <div className="text-center">
-          <p className="text-body-sm font-medium text-primary">
+          <Reveal
+            as="p"
+            variant="upSm"
+            custom={0}
+            className="text-body-sm font-medium text-primary"
+          >
             {eyebrow}
-          </p>
-          <h2 className="font-bold">{heading}</h2>
-          <p className="mx-auto  max-w-2xl text-muted">
+          </Reveal>
+          <Reveal as="h2" variant="upSm" custom={1} className="font-bold">
+            {heading}
+          </Reveal>
+          <Reveal
+            as="p"
+            variant="upSm"
+            custom={2}
+            className="mx-auto  max-w-2xl text-muted"
+          >
             {description}
-          </p>
+          </Reveal>
         </div>
 
         <div className="mt-10 grid grid-cols-2 gap-y-5 sm:grid-cols-3 lg:grid-cols-4 gap-2 gap-2 2xl:gap-8">
           {items.map(({ icon: Icon, title, description }, index) => (
-            <div
+            <Reveal
               key={title}
+              variant="upSm"
+              custom={index}
               className={`
                 border-black/30 pr-4
 
@@ -97,7 +113,7 @@ export default function WhatWeOfferGrid({
               <p className="mt-1.5  text-muted ">
                 {description}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

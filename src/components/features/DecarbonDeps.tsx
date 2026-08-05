@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Location, Global,} from 'iconsax-react';
+import Reveal from '@/components/ui/Reveal';
  
 export default function DecarbonDeps() {
   const audienceCards = [
@@ -60,22 +61,25 @@ export default function DecarbonDeps() {
         
         {/* ── CENTRAL HEADER SECTION (MIRRORED TO IMAGE) ── */}
         <div className="text-center mb-16 max-w-3xl flex flex-col gap-4 Z-20">
-          <span className="text-primary mb-3 block">
+          <Reveal as="span" variant="upSm" custom={0} className="text-primary mb-3 block">
             Global Deployments
-          </span>
-          <h2 className="font-semibold ">
+          </Reveal>
+          <Reveal as="h2" variant="upSm" custom={1} className="font-semibold ">
             Sovereign Instances. <br />Country Data<em className="font-Semibold "> Stays In-Country.</em>
-            </h2>
-          <p className="text-muted max-w-full mx-auto ">
+            </Reveal>
+          <Reveal as="p" variant="upSm" custom={2} className="text-muted max-w-full mx-auto ">
             DeCarbonX deploys as a fully customised national platform integrated with each country's existing registries, NDC frameworks, and reporting requirements. Operational in 3–5 months.
-          </p>
+          </Reveal>
         </div>
- 
+
         {/* ── 🛠️ FIXED: 3x2 RESPONSIVE FLAT CARD GRID LAYOUT ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full items-stretch">
           {audienceCards.map((card, idx) => (
-            <div 
-              key={idx} 
+            <Reveal
+              as="div"
+              variant="upSm"
+              custom={idx}
+              key={idx}
               className="bg-white rounded-[16px] p-8 flex flex-col gap-4 border border-gray-200/30 shadow-sm transition-all duration-300 hover:shadow-md"
             >
               {/* Clean Flat Square Icon Wrapper Box */}
@@ -110,10 +114,10 @@ export default function DecarbonDeps() {
                   {card.desc}
                 </p>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
- 
+
       </div>
     </section>
   );

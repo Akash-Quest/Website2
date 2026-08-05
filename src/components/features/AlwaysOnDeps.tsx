@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Location, Global,} from 'iconsax-react';
+import Reveal from '@/components/ui/Reveal';
  
 export default function AlwaysOnDeps() {
   const audienceCards = [
@@ -51,42 +52,45 @@ export default function AlwaysOnDeps() {
         
         {/* ── CENTRAL HEADER SECTION (MIRRORED TO IMAGE) ── */}
         <div className="text-center mb-16 max-w-4xl flex flex-col  Z-20">
-          <p className="font-medium text-primary text-body-sm ">
+          <Reveal as="p" variant="upSm" custom={0} className="font-medium text-primary text-body-sm ">
             Dashboard Features
-          </p>
-          <h2 className="font-semibold ">
+          </Reveal>
+          <Reveal as="h2" variant="upSm" custom={1} className="font-semibold ">
             Real-Time Healthcare Intelligence at{" "}<br></br>  <em className="font-Semibold "> Your Fingertips</em>
-            </h2>
-          <p className=" tracking-wide leading-snug text-muted max-w-full mx-auto ">
+            </Reveal>
+          <Reveal as="p" variant="upSm" custom={2} className=" tracking-wide leading-snug text-muted max-w-full mx-auto ">
             The AlwaysON dashboard provides healthcare teams with visibility into patient assessments, active cases, escalations, alerts, and referrals, helping teams monitor healthcare interactions and respond more efficiently..
-          </p>
+          </Reveal>
         </div>
- 
+
         {/* ── 🛠️ FIXED: 3x2 RESPONSIVE FLAT CARD GRID LAYOUT ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full items-stretch">
           {audienceCards.map((card, idx) => (
-            <div 
-              key={idx} 
+            <Reveal
+              as="div"
+              variant="upSm"
+              custom={idx}
+              key={idx}
               className="bg-white rounded-[16px] p-4 flex flex-col gap-4 border border-gray-200/30 transition-all duration-300 "
             >
               {/* Clean Flat Square Icon Wrapper Box */}
               <div className="w-10 h-10 bg-[#F7F5F1] rounded-xl flex items-center justify-center shrink-0">
                 {card.icon}
               </div>
-              
+
               {/* Typography Block Layer */}
               <div className="flex flex-col gap-2">
                 {/* Core Component Headline */}
                 <h3 className="font-semibold text-body-lg text-[#03030F] ">
                   {card.title}
                  </h3>
-                
+
                 {/* Description Context string */}
                 <p className="text-muted ">
                   {card.desc}
                 </p>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
  

@@ -3,8 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 // ── 🛠️ STEP 1: IMPORTING THE CUSTOM BUTTON ──
-import Button from "@/components/ui/Button"; 
+import Button from "@/components/ui/Button";
+import { fadeUpSm, fadeLeft, imageReveal } from "@/lib/animations";
 
 function DecarbonXProduct() {
   return (
@@ -34,37 +36,63 @@ function DecarbonXProduct() {
           
           <div className="px-[2] sm:px-2 md:px-[10%]">
             {/* Eyebrow */}
-            <p className="text-center font-semibold text-primary mb-2 mt-8 sm:mt-8 md:mt-2 text-sm 2xl:text-base ">
-              DecarbonX
-            </p>
-     
+            <motion.p
+              custom={0}
+              variants={fadeUpSm}
+              initial="hidden"
+              animate="visible"
+              className="text-center font-semibold text-primary mb-2 mt-8 sm:mt-8 md:mt-2 text-sm 2xl:text-base "
+            >
+              DeCarbonX
+            </motion.p>
+
             {/* Heading */}
-            <h1 className="text-center font-bold">
+            <motion.h1
+              custom={1}
+              variants={fadeLeft}
+              initial="hidden"
+              animate="visible"
+              className="text-center font-bold"
+            >
               Sovereign Climate Finance Infrastructure<em className="font-semibold"> Platform </em>
-            </h1>
-     
+            </motion.h1>
+
             {/* Subheading */}
-            <p className=" mx-auto text-center mt-2 mb-5 max-w-[75%] text-muted 2xl:text-base ">
+            <motion.p
+              custom={2}
+              variants={fadeUpSm}
+              initial="hidden"
+              animate="visible"
+              className=" mx-auto text-center mt-2 mb-5 max-w-[75%] text-muted 2xl:text-base "
+            >
               DeCarbonX helps transform climate project ideas into structured, finance-ready opportunities while enabling digital MRV, climate finance documentation, funding access, and national data sovereignty.
-            </p>
+            </motion.p>
 
             {/* ── 🛠️ STEP 2: BUTTONS SET EXACTLY AS PER YOUR IMAGE ── */}
-            <div className="mt-8 mb-10 flex flex-wrap items-center justify-center gap-4 w-full">
-              <Button href="/request-deployment" variant="primary">
-                Request A Deployment
+            <motion.div
+              custom={3}
+              variants={fadeUpSm}
+              initial="hidden"
+              animate="visible"
+              className="mt-8 mb-10 flex flex-wrap items-center justify-center gap-4 w-full"
+            >
+              <Button href="/contact" variant="primary">
+                Request Demo
               </Button>
-              <Button href="#how-it-works" variant="white">
-                See How It Works
-              </Button>
-            </div>
+            </motion.div>
           </div>
-        
+
           {/* Hero Image */}
         </div>
       </div>
-      
+
       <div className=" pt-0 pb-12 md:pb-16 lg:pb-20 xl:pb-24 2xl:pb-28">
-        <div className="relative w-full aspect-[1920/795]  overflow-hidden bg-background">
+        <motion.div
+          variants={imageReveal}
+          initial="hidden"
+          animate="visible"
+          className="relative w-full aspect-[1920/795]  overflow-hidden bg-background"
+        >
           <Image
             src="/Productsoln/DecarbonHero.png"
             alt="Decarbon X Hero"
@@ -72,7 +100,7 @@ function DecarbonXProduct() {
             priority
             className="object-cover object-center"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

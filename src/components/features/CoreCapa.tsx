@@ -4,6 +4,7 @@ import { useState, type ReactNode } from "react";
 import Image from "next/image";
 
 import HoverRevealCard1 from "@/components/ui/HoverRevealCard";
+import Reveal from "@/components/ui/Reveal";
 
 interface Capability {
   id: string;
@@ -29,15 +30,17 @@ export default function OurCapabilities({
   return (
     <section className="w-full bg-background">
       <div className="page-container">
-        <h2 className="mb-5 font-bold ">
+        <Reveal as="h2" variant="upSm" className="mb-5 font-bold ">
           {eyebrow}
-        </h2>
+        </Reveal>
 
         {/* ---------- Mobile / tablet: stacked list, every card the same height, text always visible ---------- */}
         <div className="flex flex-col gap-3 sm:gap-4 lg:hidden">
-          {capabilities.map((cap) => (
-            <div
+          {capabilities.map((cap, idx) => (
+            <Reveal
               key={cap.id}
+              variant="upSm"
+              custom={idx}
               className="relative h-96 w-full overflow-hidden rounded-2xl"
             >
               <Image
@@ -56,7 +59,7 @@ export default function OurCapabilities({
                   {cap.description}
                 </p>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
 
@@ -73,18 +76,23 @@ export default function OurCapabilities({
             `,
           }}
         >
-          {capabilities.map((cap) => (
-            <HoverRevealCard1
+          {capabilities.map((cap, idx) => (
+            <Reveal
               key={cap.id}
-              title={cap.title}
-              description={cap.description}
-              image={cap.imageUrl}
-              imageAlt={cap.imageAlt}
-              className={`shadow-sm ${cap.area === "food" ? "h-full" : ""}`}
+              variant="upSm"
+              custom={idx}
               style={{ gridArea: cap.area, ...(cap.height ? { height: cap.height } : {}) }}
-              isHovered={hoveredCard === cap.id}
-              onHover={(hovered) => setHoveredCard(hovered ? cap.id : null)}
-            />
+            >
+              <HoverRevealCard1
+                title={cap.title}
+                description={cap.description}
+                image={cap.imageUrl}
+                imageAlt={cap.imageAlt}
+                className={`h-full shadow-sm`}
+                isHovered={hoveredCard === cap.id}
+                onHover={(hovered) => setHoveredCard(hovered ? cap.id : null)}
+              />
+            </Reveal>
           ))}
         </div>
       </div>

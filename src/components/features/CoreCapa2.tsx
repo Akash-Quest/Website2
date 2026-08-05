@@ -3,6 +3,7 @@
 import { useState, type ReactNode } from "react";
 import Image from "next/image";
 import HoverRevealCard from "@/components/ui/HoverRevealCard";
+import Reveal from "@/components/ui/Reveal";
 
 interface Capability {
   id: string;
@@ -30,15 +31,17 @@ export default function IntegratedCapabilities({
   return (
     <section className="w-full bg-background">
       <div className="page-container">
-        <h2 className="mb-4 font-bold ">
+        <Reveal as="h2" variant="upSm" className="mb-4 font-bold ">
           {eyebrow}
-        </h2>
+        </Reveal>
 
         {/* ---------- Mobile / tablet: stacked list, every card the same height, text always visible ---------- */}
         <div className="flex flex-col gap-3 sm:gap-4 lg:hidden">
-          {capabilities.map((cap) => (
-            <div
+          {capabilities.map((cap, idx) => (
+            <Reveal
               key={cap.id}
+              variant="upSm"
+              custom={idx}
               className="relative h-96 w-full overflow-hidden rounded-2xl"
             >
               <Image
@@ -57,81 +60,93 @@ export default function IntegratedCapabilities({
                   {cap.description}
                 </p>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
 
         {/* ---------- Desktop: asymmetric two-per-row grid ---------- */}
         <div className="hidden lg:flex lg:flex-col lg:gap-4">
           <div className="flex gap-4">
-            <HoverRevealCard
-              title={strategy.title}
-              description={strategy.description}
-              image={strategy.imageUrl}
-              imageAlt={strategy.imageAlt}
-              className="flex-1 h-[clamp(10.45rem,16.5vw,12.65rem)]"
-              isHovered={hoveredCard === strategy.id}
-              onHover={(hovered) =>
-                setHoveredCard(hovered ? strategy.id : null)
-              }
-            />
-            <HoverRevealCard
-              title={pmo.title}
-              description={pmo.description}
-              image={pmo.imageUrl}
-              imageAlt={pmo.imageAlt}
-              className="flex-1 h-[clamp(10.45rem,16.5vw,12.65rem)]"
-              isHovered={hoveredCard === pmo.id}
-              onHover={(hovered) => setHoveredCard(hovered ? pmo.id : null)}
-            />
+            <Reveal variant="upSm" custom={0} className="flex-1">
+              <HoverRevealCard
+                title={strategy.title}
+                description={strategy.description}
+                image={strategy.imageUrl}
+                imageAlt={strategy.imageAlt}
+                className="h-[clamp(10.45rem,16.5vw,12.65rem)]"
+                isHovered={hoveredCard === strategy.id}
+                onHover={(hovered) =>
+                  setHoveredCard(hovered ? strategy.id : null)
+                }
+              />
+            </Reveal>
+            <Reveal variant="upSm" custom={1} className="flex-1">
+              <HoverRevealCard
+                title={pmo.title}
+                description={pmo.description}
+                image={pmo.imageUrl}
+                imageAlt={pmo.imageAlt}
+                className="h-[clamp(10.45rem,16.5vw,12.65rem)]"
+                isHovered={hoveredCard === pmo.id}
+                onHover={(hovered) => setHoveredCard(hovered ? pmo.id : null)}
+              />
+            </Reveal>
           </div>
 
           <div className="flex gap-4">
-            <HoverRevealCard
-              title={stakeholder.title}
-              description={stakeholder.description}
-              image={stakeholder.imageUrl}
-              imageAlt={stakeholder.imageAlt}
-              className="flex-[1.7] h-[clamp(14.7rem,18.9vw,18.9rem)] "
-              isHovered={hoveredCard === stakeholder.id}
-              onHover={(hovered) =>
-                setHoveredCard(hovered ? stakeholder.id : null)
-              }
-            />
-            <HoverRevealCard
-              title={monitoring.title}
-              description={monitoring.description}
-              image={monitoring.imageUrl}
-              imageAlt={monitoring.imageAlt}
-              className="flex-1 h-[clamp(14.7rem,18.9vw,18.9rem)] "
-              isHovered={hoveredCard === monitoring.id}
-              onHover={(hovered) =>
-                setHoveredCard(hovered ? monitoring.id : null)
-              }
-            />
+            <Reveal variant="upSm" custom={2} className="flex-[1.7]">
+              <HoverRevealCard
+                title={stakeholder.title}
+                description={stakeholder.description}
+                image={stakeholder.imageUrl}
+                imageAlt={stakeholder.imageAlt}
+                className="h-[clamp(14.7rem,18.9vw,18.9rem)] "
+                isHovered={hoveredCard === stakeholder.id}
+                onHover={(hovered) =>
+                  setHoveredCard(hovered ? stakeholder.id : null)
+                }
+              />
+            </Reveal>
+            <Reveal variant="upSm" custom={3} className="flex-1">
+              <HoverRevealCard
+                title={monitoring.title}
+                description={monitoring.description}
+                image={monitoring.imageUrl}
+                imageAlt={monitoring.imageAlt}
+                className="h-[clamp(14.7rem,18.9vw,18.9rem)] "
+                isHovered={hoveredCard === monitoring.id}
+                onHover={(hovered) =>
+                  setHoveredCard(hovered ? monitoring.id : null)
+                }
+              />
+            </Reveal>
           </div>
 
           <div className="flex gap-4">
-            <HoverRevealCard
-              title={risk.title}
-              description={risk.description}
-              image={risk.imageUrl}
-              imageAlt={risk.imageAlt}
-              className="flex-1 h-[clamp(10.45rem,16.5vw,12.65rem)] "
-              isHovered={hoveredCard === risk.id}
-              onHover={(hovered) => setHoveredCard(hovered ? risk.id : null)}
-            />
-            <HoverRevealCard
-              title={scaleup.title}
-              description={scaleup.description}
-              image={scaleup.imageUrl}
-              imageAlt={scaleup.imageAlt}
-              className="flex-1 h-[clamp(10.45rem,16.5vw,12.65rem)] "
-              isHovered={hoveredCard === scaleup.id}
-              onHover={(hovered) =>
-                setHoveredCard(hovered ? scaleup.id : null)
-              }
-            />
+            <Reveal variant="upSm" custom={4} className="flex-1">
+              <HoverRevealCard
+                title={risk.title}
+                description={risk.description}
+                image={risk.imageUrl}
+                imageAlt={risk.imageAlt}
+                className="h-[clamp(10.45rem,16.5vw,12.65rem)] "
+                isHovered={hoveredCard === risk.id}
+                onHover={(hovered) => setHoveredCard(hovered ? risk.id : null)}
+              />
+            </Reveal>
+            <Reveal variant="upSm" custom={5} className="flex-1">
+              <HoverRevealCard
+                title={scaleup.title}
+                description={scaleup.description}
+                image={scaleup.imageUrl}
+                imageAlt={scaleup.imageAlt}
+                className="h-[clamp(10.45rem,16.5vw,12.65rem)] "
+                isHovered={hoveredCard === scaleup.id}
+                onHover={(hovered) =>
+                  setHoveredCard(hovered ? scaleup.id : null)
+                }
+              />
+            </Reveal>
           </div>
         </div>
       </div>

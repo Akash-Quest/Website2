@@ -76,53 +76,58 @@ export const DigitalEndToEndData = {
     "We leverage leading AI, cloud, data, and analytics technologies to build innovative solutions that create lasting business value.",
   tools: [
     {
-      icons: ["/All logos/tensorflow.svg", "/All logos/pytorch.svg"],
-      title: "TensorFlow & PyTorch",
-      description:
-        "Deep learning model development, training, and deployment across classification, regression, and generative tasks.",
-    },
-    {
-      icons: ["/All logos/snowflake.svg", "/All logos/databricks.svg"],
-      title: "Snowflake & Databricks",
-      description:
-        "Cloud data platform architecture, data lakehouse builds, and large-scale analytics engineering.",
-    },
-    {
-      icons: ["/All logos/PowerBi.svg", "/All logos/Tabluae.svg"],
-      title: "Power BI & Tableau",
-      description:
-        "Enterprise BI dashboards, self-service analytics, and data visualisation platforms for executive and operational reporting.",
-    },
-    {
-      icons: ["/All logos/Aws.svg", "/All logos/Azzure.svg", "/All logos/Gcp.svg"],
-      title: "AWS / Azure / GCP",
-      description:
-        "Multi-cloud data platform implementations, managed ML services, and cloud-native AI infrastructure at scale.",
-    },
-    {
-      icons: ["/All logos/Apache.svg", "/All logos/Kafka.svg"],
-      title: "Apache Spark & Kafka",
-      description:
-        "Big data processing, real-time streaming pipelines, and high-throughput event-driven architectures.",
-    },
-    {
-      icons: ["/All logos/opeAi.svg", "/All logos/LangChain.svg"],
-      title: "OpenAI & LangChain",
-      description:
-        "LLM integration, RAG system builds, agent frameworks, and enterprise GenAI application development.",
-    },
-    {
-      icons: ["/All logos/Mlflow.svg", "/All logos/Kuberflow.svg"],
-      title: "MLflow & Kubeflow",
-      description:
-        "MLOps platform implementation, model registry, experiment tracking, and production ML pipeline orchestration.",
-    },
-    {
-      icons: ["/All logos/dbt.svg", "/All logos/Airflow.svg"],
-      title: "dbt & Airflow",
-      description:
-        "Data transformation, pipeline scheduling, data quality testing, and analytics engineering best practices.",
-    },
+    icons: [
+      "/All logos/Aws.svg",
+      "/All logos/Azzure.svg",
+      "/All logos/Gcp.svg",
+    ],
+    title: "AWS / Azure / GCP /Docker",
+    description:
+      "Multi-cloud data platform implementations, managed ML services, and cloud-native AI infrastructure at scale.",
+  },
+  {
+    icons: ["/All logos/PowerBi.svg"],
+    title: "Power BI ",
+    description:
+      "Enterprise BI dashboards, self-service analytics, and data visualisation platforms for executive and operational reporting.",
+  },
+   {
+    icons: ["/All logos/opeAi.svg", "/All logos/LangChain.svg"],
+    title: "OpenAI,LangChain,Claude",
+    description:
+      "LLM integration, RAG system builds, agent frameworks, and enterprise GenAI application development.",
+  },
+  {
+    icons: ["/All logos/opeAi.svg", "/All logos/LangChain.svg"],
+    title: "SQL/MongoDB",
+    description:
+      "Deep learning model development, training, and deployment across classification, regression, and generative tasks.",
+  },
+  {
+    icons: ["/All logos/tensorflow.svg", "/All logos/pytorch.svg"],
+    title: "TensorFlow & PyTorch",
+    description:
+      "Deep learning model development, training, and deployment across classification, regression, and generative tasks.",
+  },
+  {
+    icons: ["/All logos/Apache.svg"],
+    title: "Apache Spark",
+    description:
+      "Cloud data platform architecture, data lakehouse builds, and large-scale analytics engineering.",
+  },
+ 
+  {
+    icons: ["/All logos/Mlflow.svg", "/All logos/Kuberflow.svg"],
+    title: "MLflow & Kubeflow",
+    description:
+      "MLOps platform implementation, model registry, experiment tracking, and production ML pipeline orchestration.",
+  },
+  {
+    icons: ["/All logos/dbt.svg"],
+    title: "dbt",
+    description:
+      "Data transformation, pipeline scheduling, data quality testing, and analytics engineering best practices.",
+  },
   ],
 };
 

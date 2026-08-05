@@ -2,39 +2,40 @@
  
 import React from 'react';
 import Image from 'next/image';
+import Reveal from '@/components/ui/Reveal';
  
 export default function DecarbonFeatures() {
   const useCases = [
     {
       title: 'AI-Powered Climate Project Builder',
       desc: 'Transform climate project ideas into structured, finance-ready opportunities using AI-enabled workflows.',
-      image: '/Productsoln/IGUse1.png', 
+      image: '/Productsoln/IGUse1.jpg', 
     },
     
     {
       title: "Climate Finance Documentation",
       desc: 'Streamline the preparation of project and climate finance documentation, reducing manual effort and accelerating project development.',
-      image: '/Productsoln/IGUse3.png',
+      image: '/Productsoln/IGUse2.jpg', 
     },
     {
       title: "Feasibility & Climate Risk Assessment",
       desc: 'Assess project feasibility and climate-related risks to support stronger project planning and financing decisions.',
-      image: '/Productsoln/IGUse3.png',
+      image: '/Productsoln/IGUse3.jpg', 
     },
     {
       title: "Digital MRV",
       desc: 'Enable digital monitoring, reporting, and verification workflows for greater transparency and reliable climate project data.',
-      image: '/Productsoln/IGUse3.png',
+      image: '/Productsoln/IGUse4.jpg', 
     },
     {
       title: "Sovereign Data & National Ownership",
       desc: 'Enable governments and national stakeholders to maintain greater ownership and control over climate project data and digital MRV processes.',
-      image: '/Productsoln/IGUse3.png',
+      image: '/Productsoln/IGUse5.jpg', 
     },
     {
       title: 'Investor & Financing Partner Matching',
       desc: 'Connect eligible climate projects with relevant investors, development finance institutions, and other financing partners.',
-      image: '/Productsoln/IGUse2.png',
+      image: '/Productsoln/IGUse6.jpg', 
     },
     
     
@@ -45,28 +46,31 @@ export default function DecarbonFeatures() {
       <div className="page-container mx-auto flex flex-col ">
         
         {/* ── HEADER LAYOUT BLOCK ── */}
-        <span className="font-semibold text-primary ">
+        <Reveal as="span" variant="upSm" custom={0} className="font-semibold text-primary ">
               Platform Features
-            </span>
+            </Reveal>
         <div className="grid grid-cols-1 lg:grid-cols-12 mt-5 mb-5 gap-6 items-start justify-between w-full">
           <div className="lg:col-span-7 flex flex-col gap-2">
-            
-            <h2 className="font-semibold ">
+
+            <Reveal as="h2" variant="upSm" custom={1} className="font-semibold ">
              The Digital Infrastructure Behind  <em className="font-semibold">Climate Finance</em>
-            </h2>
+            </Reveal>
           </div>
           <div className="lg:col-span-5 pb-2">
-            <p className="tracking-wide leading-snug text-muted max-w-full">
+            <Reveal as="p" variant="upSm" custom={2} className="tracking-wide leading-snug text-muted max-w-full">
               Explore an integrated digital ecosystem that streamlines climate project development, finance, MRV, investment, and sovereign climate data management.
-            </p>
+            </Reveal>
           </div>
         </div>
- 
+
         {/* ── 🛠️ FIXED: 3-COLUMN VERTICAL STACK MATRIX GRID (As per your Image) ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full mt-4">
           {useCases.map((item, idx) => (
-            <div 
-              key={idx} 
+            <Reveal
+              as="div"
+              variant="upSm"
+              custom={idx}
+              key={idx}
               className="bg-[#F7F5F1] rounded-[16px] p-6 flex flex-col gap-5 border border-gray-200/40 w-full transition-all duration-300 hover:shadow-md"
             >
               {/* Top Section: Full Width Aspect Rounded Image Box */}
@@ -97,10 +101,10 @@ export default function DecarbonFeatures() {
                 </div>
                 
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
- 
+
       </div>
     </section>
   );

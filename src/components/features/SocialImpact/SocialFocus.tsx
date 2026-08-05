@@ -1,4 +1,5 @@
 import { ArrowUp } from "iconsax-react";
+import Reveal from "@/components/ui/Reveal";
 
 type FocusArea = {
   icon: React.ElementType;
@@ -21,19 +22,26 @@ export default function SocialFocus({
     <section className="w-full bg-white">
       <div className="page-container">
         <div className="text-center">
-          <h2 className="font-semibold">
+          <Reveal as="h2" variant="upSm" custom={0} className="font-semibold">
             {heading}
-          </h2>
+          </Reveal>
 
-          <p className="mx-auto max-w-2xl text-body-sm text-muted">
+          <Reveal
+            as="p"
+            variant="upSm"
+            custom={1}
+            className="mx-auto max-w-2xl text-body-sm text-muted"
+          >
             {description}
-          </p>
+          </Reveal>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-y-5 sm:grid-cols-2 lg:grid-cols-3">
           {focusAreas.map(({ icon: Icon, title, description }, index) => (
-            <div
+            <Reveal
               key={title}
+              variant="upSm"
+              custom={index}
               className={`
                 flex h-full flex-col px-5 py-2
 
@@ -56,20 +64,8 @@ export default function SocialFocus({
                 {description}
               </p>
 
-              <button className="group/learn self-end inline-flex items-center pt-2 text-xs sm:text-sm font-semibold text-primary transition-colors duration-300 cursor-pointer">
-                Learn More
-
-                <span className="relative ml-1 h-3.5 w-3.5 overflow-hidden">
-                  <span className="absolute inset-0 flex items-center justify-center transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/learn:translate-x-3 group-hover/learn:-translate-y-3 group-hover/learn:opacity-0">
-                    <ArrowUp size={14} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
-                  </span>
-
-                  <span className="absolute inset-0 flex items-center justify-center -translate-x-3 translate-y-3 opacity-0 transition-all duration-300 delay-100 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/learn:translate-x-0 group-hover/learn:translate-y-0 group-hover/learn:opacity-100">
-                    <ArrowUp size={14} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
-                  </span>
-                </span>
-              </button>
-            </div>
+              
+            </Reveal>
           ))}
         </div>
       </div>

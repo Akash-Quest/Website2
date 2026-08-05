@@ -33,8 +33,8 @@
       title: (
         <>
           Feeding the Future with<br />
-          Precision, Technology <br />
-           <em >& Playfair Display</em>
+          Precision,{" "}
+           <em > Technology </em>
         </>
       ),
       description:

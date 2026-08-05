@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Database, Monitor, BrainCircuit, SendHorizontal } from 'lucide-react';
+import Reveal from '@/components/ui/Reveal';
 
 export default function AgriMapSteps() {
   const steps = [
@@ -41,15 +42,15 @@ export default function AgriMapSteps() {
         
         {/* ── HEADER STRINGS MODULE ── */}
         <div className="text-center mb-24 max-w-3xl">
-          <p className="font-medium text-primary tracking-wide mb-3 block">
+          <Reveal as="p" variant="upSm" custom={0} className="font-medium text-primary tracking-wide mb-3 block">
             How It Works
-          </p>
-          <h2 className="font-semibold">
+          </Reveal>
+          <Reveal as="h2" variant="upSm" custom={1} className="font-semibold">
             From Raw Data To Field <em className="font-semibold ">Action</em>
-          </h2>
-          <p className="text-gray-600 mt-5 max-w-xl mx-auto leading-snug tracking-wide">
+          </Reveal>
+          <Reveal as="p" variant="upSm" custom={2} className="text-gray-600 mt-5 max-w-xl mx-auto leading-snug tracking-wide">
             AgriMap pulls from 6 authoritative data sources and surfaces insights that are ready to act on not just read.
-          </p>
+          </Reveal>
         </div>
 
         {/* ── PROCESS STEPS TIMELINE CONNECTOR BLOCK ── */}
@@ -95,9 +96,12 @@ export default function AgriMapSteps() {
           {/* ── MAIN HORIZONTAL GRID RUNWAY ── */}
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 relative z-10">
             {steps.map((step, idx) => (
-              <div 
-                key={idx} 
-                className={`flex flex-col items-start transition-all duration-300 group ${step.offsetClass}`}
+              <Reveal
+                as="div"
+                variant="upSm"
+                custom={idx}
+                key={idx}
+                className={`flex flex-col items-start group ${step.offsetClass}`}
               >
                 {/* Vuesax Box Icon Wrapper Frame */}
                 <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center border border-gray-200 shadow-sm mb-6 transition-all duration-300 ">
@@ -115,7 +119,7 @@ export default function AgriMapSteps() {
                     {step.desc}
                   </p>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
 

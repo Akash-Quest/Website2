@@ -91,28 +91,25 @@ const tabContent: Record<
     badge: "Article 6 · NDC 3.0 · COP32 · Ethiopia Live",
     heading: (
       <>
-        The automated factory
-for sovereign {" "}
-       <em></em>
-       <em>Climate Finance.</em>
+       Sovereign Climate Finance Infrastructure {" "}
+       <em>Platform</em>
       </>
     ),
     description:
-      "DeCarbonX turns climate project ideas into finance-ready instruments carbon credits, green bonds, Article 6 forwards with full national data sovereignty and AI-driven MRV.",
+      "DeCarbonX helps transform climate project ideas into structured, finance-ready opportunities while enabling digital MRV, climate finance documentation, funding access, and national data sovereignty.",
     buttonLabel: "DeCarbonX",
     image: "/Productsoln/Pr5.jpg",
-    href: "/products/decarbon",
+    href: "/products/decarbonx",
   },
   AlwaysOn: {
     badge: "WhatsApp-Native · No App Download · Live",
     heading: (
       <>
-        Monitor Always.
-        Healthcare delivered through{" "} <em>A message.</em>
+        Digital Healthcare{" "} <em> Innovation</em>
       </>
     ),
     description:
-      "AlwaysON delivers AI-powered diagnostic services directly through WhatsApp the world's most-used messaging platform. No app. No barrier. No delay.",
+      "AlwaysON delivers AI-powered healthcare services directly through WhatsApp, enabling AI-assisted symptom assessment, multilingual support, clinical guidance, and rapid access to expert referrals.",
     buttonLabel: "AlwaysOn",
     image: "/Productsoln/Pr6.jpg",
     href: "/products/alwayson",
@@ -231,7 +228,7 @@ export default function OurProductSolution() {
           </h2>
 
           {/* Subheading */}
-          <p className="text-center text-muted max-w-3xl mx-auto ">
+          <p className="text-center text-muted max-w-3xl mx-auto pb-2">
             Each SkyQuest platform is built around a specific development challenge. Select a product to explore how it works and who it has helped.
           </p>
         </motion.div>

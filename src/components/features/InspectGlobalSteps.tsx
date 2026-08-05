@@ -3,6 +3,7 @@
 import Script from 'next/script';
 import React from 'react';
 import { Gps, Routing, ClipboardText, ShieldTick } from 'iconsax-react';
+import Reveal from '@/components/ui/Reveal';
 
 export default function InspectGlobalSteps() {
   const steps = [
@@ -42,15 +43,15 @@ export default function InspectGlobalSteps() {
         
         {/* ── HEADER STRINGS MODULE ── */}
         <div className="text-center mb-24 max-w-3xl">
-          <p className=" text-primary tracking-wide  mb-3 block">
+          <Reveal as="p" variant="upSm" custom={0} className=" text-primary tracking-wide  mb-3 block">
             How It Works
-          </p>
-          <h2 className="font-semibold">
+          </Reveal>
+          <Reveal as="h2" variant="upSm" custom={1} className="font-semibold">
             From Raw Signal To Verified <br/><em className="font-semibold ">Record</em>
-          </h2>
-          <p className="text-gray-600 mt-5 tracking-wide max-w-2xl mx-auto leading-snug">
+          </Reveal>
+          <Reveal as="p" variant="upSm" custom={2} className="text-gray-600 mt-5 tracking-wide max-w-2xl mx-auto leading-snug">
             Four stages turn scattered sensor and imagery feeds into a single number that funders, regulators, and operators can act on.
-          </p>
+          </Reveal>
         </div>
 
         {/* ── PROCESS STEPS TIMELINE CONNECTOR BLOCK ── */}
@@ -96,8 +97,11 @@ export default function InspectGlobalSteps() {
           {/* ── MAIN HORIZONTAL GRID RUNWAY ── */}
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 relative z-10">
             {steps.map((step, idx) => (
-              <div 
-                key={idx} 
+              <Reveal
+                as="div"
+                variant="upSm"
+                custom={idx}
+                key={idx}
                 className={`flex flex-col items-start transition-all duration-300 group ${step.offsetClass}`}
               >
                 {/* Vuesax Box Icon Wrapper Frame */}
@@ -116,7 +120,7 @@ export default function InspectGlobalSteps() {
                     {step.desc}
                   </p>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
 

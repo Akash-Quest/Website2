@@ -2,6 +2,7 @@
 
 import React from 'react';
 import {CardTick,Building,HeartAdd,Shop,Buildings2,TruckFast,FlashCircle,Teacher,Bank,People,Wind,HashtagDown } from 'iconsax-react';
+import Reveal from '@/components/ui/Reveal';
 
 export default function SQLabPlatform() {
   const modules = [
@@ -71,26 +72,26 @@ export default function SQLabPlatform() {
       <div className="page-container mx-auto relative z-10">
         
         {/* ── HEADER ── */}
-        <span className=" text-[#CBCBFF] ">
+        <Reveal as="span" variant="upSm" custom={0} className=" text-[#CBCBFF] ">
               LIMS Platform
-            </span>
+            </Reveal>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start justify-between mb-16 mt-5 md:mb-20 text-white">
-          
+
           {/* LEFT COLUMN: Badge + Main Title */}
           <div className="lg:col-span-7 flex flex-col gap-2">
-            
-            
-            <h2 className="font-semibold  text-white ">
+
+
+            <Reveal as="h2" variant="upSm" custom={1} className="font-semibold  text-white ">
               A Complete Lab Information <br />
               <em className="font-semibold text-white">Management System.</em>
-            </h2>
+            </Reveal>
           </div>
 
           {/* RIGHT COLUMN: Description Paragraph */}
           <div className="lg:col-span-5 ">
-            <p className="text-[#CBCBFF]  max-w-full tracking-wide leading-snug">
+            <Reveal as="p" variant="upSm" custom={2} className="text-[#CBCBFF]  max-w-full tracking-wide leading-snug">
               The Skyquest Labs LIMS covers every workflow in your diagnostic operation from patient registration to data analysis and everything in between.
-            </p>
+            </Reveal>
           </div>
 
         </div>
@@ -98,8 +99,11 @@ export default function SQLabPlatform() {
         {/* ── FIGMA EXACT LIMS MODULES GRID (4 Columns x 3 Rows) ── */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
           {modules.map((item, idx) => (
-            <div 
-              key={idx} 
+            <Reveal
+              as="div"
+              variant="upSm"
+              custom={idx}
+              key={idx}
               className="w-full h-[72px] bg-white/30 backdrop-blur-md rounded-lg p-3 flex items-center gap-4 border border-white/10 shadow-sm transition-all hover:bg-white/40"
             >
               {/* Icon Container Box */}
@@ -111,7 +115,7 @@ export default function SQLabPlatform() {
               <p className="text-white text-xl tracking-wide leading-snug ">
                 {item.title}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
 

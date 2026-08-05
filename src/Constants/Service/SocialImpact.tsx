@@ -6,9 +6,9 @@ export const SocialImpactOurCapabilitiesData = {
   capabilities: [
     {
       id: "strategy",
-      title: "CSR Strategy & Program Design",
+      title: "Program Design & Implementation Support",
       description:
-        "Designing CSR strategies, program frameworks, and implementation roadmaps aligned with organizational values and community needs.",
+        "We co-create evidence-based, scalable programs—from concept to execution—ensuring alignment with community needs and funder goals.",
       imageUrl: "/service/SocialImpact/card1.jpg",
       imageAlt: "Team designing a community program strategy",
       area: "ai",
@@ -16,9 +16,9 @@ export const SocialImpactOurCapabilitiesData = {
     },
     {
       id: "health",
-      title: "Community Health & Nutrition",
+      title: "Monitoring, Learning & Evaluation (MLE)",
       description:
-        "Strengthening health systems and nutrition programs that improve wellbeing and resilience in underserved communities.",
+        "We build adaptive MLE frameworks that go beyond reporting—enabling real-time decision-making, learning, and continuous improvement.",
       imageUrl: "/service/SocialImpact/card2.jpg",
       imageAlt: "Community health worker with local residents",
       area: "livestock",
@@ -26,18 +26,18 @@ export const SocialImpactOurCapabilitiesData = {
     },
     {
       id: "education",
-      title: "Education & Skill Development",
+      title: "Innovation & Pilots",
       description:
-        "Building education access, vocational training, and skill development programs that create long-term livelihood opportunities.",
+        "We design and test innovative models and pilots that bring fresh approaches to persistent development challenges.",
       imageUrl:"/service/SocialImpact/card3.jpg",
       imageAlt: "Students in a vocational training session",
       area: "food",
     },
     {
       id: "livelihoods",
-      title: "Livelihoods & Rural Development",
+      title: "Strategy & Policy Advisory",
       description:
-        "Supporting sustainable livelihoods, rural enterprise, and inclusive economic opportunities for vulnerable populations.",
+        "We support governments, donors, and ecosystem players with actionable strategies, policy inputs, and system-level thinking to drive systemic change.",
       imageUrl: "/service/SocialImpact/card4.jpg",
       imageAlt: "Rural entrepreneur at a small enterprise",
       area: "climate",
@@ -45,9 +45,9 @@ export const SocialImpactOurCapabilitiesData = {
     },
     {
       id: "impact",
-      title: "Impact Measurement & Evaluation",
+      title: "Research & Insights",
       description:
-        "Building M&E frameworks that track outcomes, demonstrate impact, and guide adaptive program management.",
+        "From baselines and impact evaluations to landscape studies and behavior change insights, we generate data that drives decisions.",
       imageUrl: "/service/SocialImpact/card5.jpg",
       imageAlt: "Analyst reviewing program impact data",
       area: "agrifinance",
@@ -55,9 +55,9 @@ export const SocialImpactOurCapabilitiesData = {
     },
     {
       id: "partnerships",
-      title: "Partnerships & Stakeholder Engagement",
+      title: "Capacity Building & Institutional Strengthening",
       description:
-        "Facilitating collaboration between corporates, governments, NGOs, and communities to scale collective impact.",
+        "We help organizations build the internal systems, leadership, and capabilities needed to scale their impact.",
       imageUrl: "/service/SocialImpact/card6.jpg",
       imageAlt: "Diverse stakeholders in a partnership meeting",
       area: "infra",
@@ -82,7 +82,7 @@ export const SocialImpactHeroData = {
 };
 
 export const SocialImpactCoreCapabilitiesData = {
-  eyebrow: "Core Capabilities",
+  eyebrow: "Methodology",
 
   heading: (
     <>

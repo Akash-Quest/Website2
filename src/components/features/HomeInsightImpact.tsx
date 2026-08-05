@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Button from "../ui/Button";
+import Reveal from "../ui/Reveal";
 
 const cards = [
   {
     title: "Understand What Matters Most",
-    desc: "Continuous Challenges, Identify Opportunities.",
+    desc: "Continuous Challenges, Identify Opportunities",
     image:
       "/insightimpact/core4.jpg",
     height: "h-[clamp(7.5rem,10.5vw,12.6rem)]",
@@ -38,29 +39,33 @@ export default function InsightImpact   () {
       {/* ── MOBILE ─────────────────────────────────────────────── */}
       <div className="lg:hidden ">
         {/* Header */}
-        <p className="text-primary text-body-sm font-medium">
+        <Reveal as="p" variant="upSm" custom={0} className="text-primary text-body-sm font-medium">
           From Insight to Impact
-        </p>
-        <h2 className="font-bold ">
+        </Reveal>
+        <Reveal as="h2" variant="upSm" custom={1} className="font-bold ">
           How We Help Organizations
           <em className="font-semibold">Transform</em>
-        </h2>
-        <p className=" text-mute font-medium mb-4">
+        </Reveal>
+        <Reveal as="p" variant="upSm" custom={2} className=" text-mute font-medium mb-4">
           We help organizations navigate complexity, embrace innovation,
           and deliver measurable outcomes through an integrated approach
           spanning strategy, technology, execution, and impact.
-        </p>
-         <Button variant="primary" iconSize={16}>
+        </Reveal>
+        <Reveal variant="upSm" custom={3}>
+          <Button variant="primary" iconSize={16}>
             Speak To Partner
-                  </Button>
+          </Button>
+        </Reveal>
 
         {/* Stacked cards — same height, width steps up diagonally */}
         <div className="mt-3 flex flex-col gap-3">
           {cards.map((card, index) => {
             const widths = ["w-[45%]", "w-[65%]", "w-[85%]", "w-full"];
             return (
-              <div
+              <Reveal
                 key={index}
+                variant="upSm"
+                custom={index}
                 className={`relative h-35 overflow-hidden rounded-xl ${widths[index] ?? "w-full"}`}
               >
                 <Image
@@ -76,7 +81,7 @@ export default function InsightImpact   () {
                   <h3 className="text-white/80">{card.title}</h3>
                   <p className="body-sm mt-1 text-white">{card.desc}</p>
                 </div>
-              </div>
+              </Reveal>
             );
           })}
         </div>
@@ -86,7 +91,11 @@ export default function InsightImpact   () {
       <div className="hidden lg:block mx-auto ">
         <div className="relative">
           {/* Content overlay */}
-          <div className="relative lg:absolute lg:inset-0 leading-[0] mb-10 lg:mb-0 z-10 lg:pointer-events-none">
+          <Reveal
+            as="div"
+            variant="left"
+            className="relative lg:absolute lg:inset-0 leading-[0] mb-10 lg:mb-0 z-10 lg:pointer-events-none"
+          >
             <p className="mb-2 text-primary font-medium text-body-sm lg:pointer-events-auto">
               From Insight to Impact
             </p>
@@ -105,13 +114,15 @@ export default function InsightImpact   () {
                 Speak To Partner
               </Button>
             </div>
-          </div>
+          </Reveal>
 
           {/* Cards grid */}
           <div className="grid grid-cols-4 gap-5 items-end">
             {cards.map((card, index) => (
-              <div
+              <Reveal
                 key={index}
+                variant="upSm"
+                custom={index}
                 className={`group relative overflow-hidden rounded-xl ${card.height}`}
               >
                 <Image
@@ -122,15 +133,15 @@ export default function InsightImpact   () {
                   sizes="(min-width: 1024px) 25vw, 50vw"
                   className="object-cover scale-110 transition-transform duration-500 group-hover:scale-100"
                 />
-                
+
                 <div className="absolute left-4 top-4 right-4 text-white z-100">
                   <div className="flex items-center gap-1.5">
                     <h3 className="text-white font-normal  text-body-lg">{card.title}</h3>
-                    
+
                   </div>
                   <p className="  font-regular text-white/80 transition-colors duration-500 group-hover:text-white">{card.desc}</p>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>

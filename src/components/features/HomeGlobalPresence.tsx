@@ -63,7 +63,7 @@ export default function OurGlobalPresence() {
           <h2 className=" font-bold text-gray-900 " >
             Local Expertise, Global <em className="font-semibold">Standards</em>
           </h2>
-          <p className=" lg:mx-auto max-w-2xl text-muted mb-5 mt-2">
+          <p className=" lg:mx-auto max-w-2xl text-muted mb-10 mt-2">
             We operate across six regions, combining on-the-ground knowledge with international best practice to deliver contextually relevant, globally benchmarked solutions.
           </p>
         </motion.div>

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Courthouse, Bank, Buildings } from 'iconsax-react';
+import Reveal from '@/components/ui/Reveal';
 
 export default function AlwaysOnWIF() {
   const features = [
@@ -55,23 +56,26 @@ export default function AlwaysOnWIF() {
         
         {/* ── HEADER ── */}
         <div className="text-center mb-16 md:mb-10">
-          <span className=" font-semibold text-[#CBCBFF] mb-3 block">
+          <Reveal as="span" variant="upSm" custom={0} className=" font-semibold text-[#CBCBFF] mb-3 block">
             <p>Who it's For</p>
-          </span>
-          <h2 className="font-semibold text-white">
+          </Reveal>
+          <Reveal as="h2" variant="upSm" custom={1} className="font-semibold text-white">
             Designed for Healthcare {" "} <br />
             <em className="font-semibold text-white">Stakeholders</em>
-          </h2>
-          <p className="text-white/80 mt-4 tracking-wide leading-snug max-w-[60%] mx-auto ">
+          </Reveal>
+          <Reveal as="p" variant="upSm" custom={2} className="text-white/80 mt-4 tracking-wide leading-snug max-w-[60%] mx-auto ">
             Empowering patients, healthcare professionals, administrators, and organizations with accessible, AI-enabled healthcare solutions.
-          </p>
+          </Reveal>
         </div>
 
         {/* ── FEATURE GRID (GLASS CARDS WITHOUT HEAD) ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {features.map((feature, idx) => (
-            <div 
-              key={idx} 
+            <Reveal
+              as="div"
+              variant="upSm"
+              custom={idx}
+              key={idx}
               className="group flex flex-col items-start gap-4 p-6 sm:p-8 rounded-2xl bg-white/[0.2] border border-white/10 hover:border-white/20 hover:bg-white/[0.12] transition-all duration-300 shadow-xl"
             >
               {/* ── ICON & HEAD BADGE TOP ROW ── */}
@@ -82,7 +86,7 @@ export default function AlwaysOnWIF() {
                 </div>
 
                 {/* Head Tag Added Here */}
-                
+
               </div>
 
               {/* Text Content */}
@@ -90,12 +94,12 @@ export default function AlwaysOnWIF() {
                 <h3 className="font-semibold  text-body-lg text-white mb-2">
                   {feature.title}
                 </h3>
-                
+
                 <p className=" text-white">
                   {feature.desc}
                 </p>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
 

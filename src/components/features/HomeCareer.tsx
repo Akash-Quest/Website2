@@ -33,11 +33,10 @@ export default function CareersHero() {
         </h2>
 
         {/* Body */}
-        <p className="max-w-md text-muted ">
-          From boardrooms to field programmes across 15+ countries SkyQuest offers
-          careers that challenge, inspire, and create lasting change.
+        <p className="max-w-md text-muted pt-2 pb-2 text-body-sm">
+          From boardrooms to field programmes, SkyQuest offers careers that challenge, inspire, and create lasting change.
         </p>
-        <p className="  font-semibold text-muted ">
+        <p className=" text-body-sm font-semibold text-muted ">
           Join a team that turns bold ideas into practical solutions.
         </p>
 

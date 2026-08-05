@@ -18,11 +18,10 @@ const services = [
 ];
 
 const aboutLinks = [
-  { label: "Our Story", href: "#" },
+  { label: "Our Story", href: "/about" },
   { label: "Our Team", href: "/team" },
   { label: "Careers", href: "/careers" },
-  { label: "Partners", href: "#" },
-  { label: "Media & News", href: "#" },
+  { label: "Contact Us", href: "/contact" }
 ];
 
 const Footer = () => {
@@ -95,7 +94,7 @@ const Footer = () => {
 
           {/* Contact column */}
           <motion.div variants={fadeUpSm}>
-            <h3 className="text-white font-bold mb-4 text-body-lg">Contact Us</h3>
+            <h3 className="text-white font-bold mb-4 text-body-lg">Connect With Us</h3>
             <ul className="space-y-2.5 text-white/80 ">
               {[
                 { href: "tel:+13513334748", label: "(+1) 351-333-4748" },
@@ -123,8 +122,8 @@ const Footer = () => {
           </p>
           <div className="flex gap-4 text-white/50 ">
             {[
-              { label: "Privacy Policy", href: "/privacypolicy" },
-              { label: "Terms of Use", href: "#" },
+              { label: "Privacy Policy", href: "/privacy-policy" },
+              
               { label: "Cookie Policy", href: "/cookies" },
             ].map(
             ({ label, href }, i, arr) => (

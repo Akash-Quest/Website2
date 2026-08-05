@@ -11,18 +11,18 @@
           "content": {
             "kind": "columns",
             "heading": "What We Do",
-            "description": "We bring together strategy, technology, innovation, and industry expertise to help organizations navigate complex challenges and create measurable impact.",
+            "description": "We bring together strategy, technology, innovation, and industry expertise to help organizations navigate complex challenges &create measurable impact.",
             "columns": [
               {
                 "links": [
                   {
-                    "label": "Digital Transformation and Emerging Technologies",
+                    "label": "Digital Transformation & Emerging Technologies",
                     "href": "/services/digital-transformation-emerging-technologies",
                     "featured": true,
                     "promo": {
                       "image": "/CoreCapability/1.jpg",
                       "title": "Digital Transformation & Emerging Technologies",
-                      "description": "From data strategy and ML models to responsible AI governance enabling organisations to make better, faster decisions at machine speed. We turn raw data into your most powerful competitive asset.",
+                      "description": "From data strategy & ML models to responsible AI governance enabling organisations to make better, faster decisions at machine speed. We turn raw data into your most powerful competitive asset.",
                       "href": "/services/digital-transformation-emerging-technologies",
                       "ctaLabel": "Visit Page"
                     }
@@ -39,11 +39,11 @@
                     }
                   },
                   {
-                    "label": "Data and Artificial Intelligence",
+                    "label": "Data & Artificial Intelligence",
                     "href": "/services/data-artificial-intelligence",
                     "promo": {
                       "image": "/CoreCapability/3.jpg",
-                      "title": "Data and Artificial Intelligence",
+                      "title": "Data & Artificial Intelligence",
                       "description": "We help governments, enterprises, and institutions leverage AI, automation, data intelligence, geospatial technologies, and digital platforms to modernize operations, improve decision-making, and accelerate innovation.",
                       "href": "/services/data-artificial-intelligence",
                       "ctaLabel": "Visit Page"
@@ -94,11 +94,11 @@
                     }
                   },
                   {
-                    "label": "Agriculture & Livestock",
-                    "href": "/services/agriculture-livestock",
+                    "label": "Agriculture & Livestock Advisory",
+                    "href": "/services/agriculture-livestock ",
                     "promo": {
                       "image": "/CoreCapability/7.jpg",
-                      "title": "Agriculture & Livestock",
+                      "title": "Agriculture & Livestock Advisory",
                       "description": "Transforming agriculture and livestock through technology, innovation, and market-led development.",
                       "href": "/services/agriculture-livestock",
                       "ctaLabel": "Visit Page"
@@ -177,12 +177,12 @@
                   },
                   {
                     "label": "DeCarbonX",
-                    "href": "/products/decarbon",
+                    "href": "/products/decarbonx",
                     "promo": {
                       "image": "/Productsoln/Pr5.jpg",
                       "title": "DeCarbonX",
                       "description": "DeCarbonX turns climate project ideas into finance-ready instruments, carbon credits, green bonds, and Article 6 forwards with full national data sovereignty and AI-driven MRV.",
-                      "href": "/products/decarbon",
+                      "href": "/products/decarbonx",
                       "ctaLabel": "Visit Page"
                     }
                   },
@@ -824,7 +824,7 @@
         },
         { "id": "about-skyquest", "label": "About SkyQuest", "href": "/about" },
         { "id": "contact-us", "label": "Contact Us", "href": "/contact" },        
-        { "id": "privacy-policy", "label": "Privacy Policy", "href": "/privacypolicy" }
+        { "id": "privacy-policy", "label": "Privacy Policy", "href": "/privacy-policy" }
       ]
     },
     {

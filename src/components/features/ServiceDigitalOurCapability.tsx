@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
+import { scaleFade } from "@/lib/animations";
 
 interface CapabilityCard {
   id: string;
@@ -63,13 +65,20 @@ function Card({
   card,
   className = "",
   style,
+  index = 0,
 }: {
   card: CapabilityCard;
   className?: string;
   style?: React.CSSProperties;
+  index?: number;
 }) {
   return (
-    <div
+    <motion.div
+      custom={index}
+      variants={scaleFade}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
       className={`flex flex-col overflow-hidden rounded-2xl ${className}`}
       style={{ backgroundColor: card.bgColor, ...style }}
     >
@@ -93,7 +102,7 @@ function Card({
           />
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }
 
@@ -113,8 +122,8 @@ export default function DigitalMosaic() {
 
         {/* ---------- Mobile / tablet: simple stacked list, every card fixed at 400px tall ---------- */}
         <div className="flex flex-col gap-4 lg:hidden">
-          {cards.map((card) => (
-            <Card key={card.id} card={card} className="h-[400px]" />
+          {cards.map((card, index) => (
+            <Card key={card.id} card={card} index={index} className="h-[400px]" />
           ))}
         </div>
 
@@ -124,21 +133,21 @@ export default function DigitalMosaic() {
           <div className="flex items-stretch" style={{ gap: ROW_GAP }}>
             <div style={{ flex: "876 1 0%" }}>
               {/* no height of its own — stretches to match the data+trans column, image flex-fills it */}
-              <Card card={aiStrategy} className="h-full" />
+              <Card card={aiStrategy} index={0} className="h-full" />
             </div>
             <div className="flex flex-col" style={{ flex: "514 1 0%", gap: ROW_GAP }}>
-              <Card card={dataIntelligence} style={{ height: SMALL_CARD_HEIGHT }} />
-              <Card card={digitalTransformation} style={{ height: SMALL_CARD_HEIGHT }} />
+              <Card card={dataIntelligence} index={1} style={{ height: SMALL_CARD_HEIGHT }} />
+              <Card card={digitalTransformation} index={2} style={{ height: SMALL_CARD_HEIGHT }} />
             </div>
           </div>
 
           {/* Row 2: intelligent-automation (514) beside digital-public-infra (876) */}
           <div className="flex items-stretch" style={{ gap: ROW_GAP }}>
             <div style={{ flex: "514 1 0%" }}>
-              <Card card={intelligentAutomation} style={{ height: SMALL_CARD_HEIGHT }} />
+              <Card card={intelligentAutomation} index={3} style={{ height: SMALL_CARD_HEIGHT }} />
             </div>
             <div style={{ flex: "876 1 0%" }}>
-              <Card card={digitalPublicInfra} style={{ height: SMALL_CARD_HEIGHT }} />
+              <Card card={digitalPublicInfra} index={4} style={{ height: SMALL_CARD_HEIGHT }} />
             </div>
           </div>
         </div>

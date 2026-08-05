@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Gps, Routing2, ClipboardText, ShieldTick } from 'iconsax-react';
+import Reveal from '@/components/ui/Reveal';
 
 interface StepItem {
   id: number;
@@ -62,15 +63,15 @@ export default function DecarbonSteps() {
         
         {/* ── HEADER SECTION ── */}
         <div className="flex flex-col items-center text-center gap-2 mb-16 md:mb-20">
-          <p className="text-base font-semibold text-primary">
+          <Reveal as="p" variant="upSm" custom={0} className="text-base font-semibold text-primary">
             How It Works
-          </p>
-          <h2 className="font-semibold  max-w-[800px] ">
+          </Reveal>
+          <Reveal as="h2" variant="upSm" custom={1} className="font-semibold  max-w-[800px] ">
             From Project Onboarding to <br></br>  <em className="font-semibold">Climate Finance</em>
-          </h2>
-          <p className=" text-muted max-w-[800px] mt-2 ">
+          </Reveal>
+          <Reveal as="p" variant="upSm" custom={2} className=" text-muted max-w-[800px] mt-2 ">
             DeCarbonX is an end-to-end digital factory. Enter a project concept at one end, and a finance-ready, MRV-verified, investor-matched instrument comes out the other.
-          </p>
+          </Reveal>
         </div>
 
         {/* ── DESKTOP FLOW WRAPPER WITH CONNECTOR SVG ── */}
@@ -100,8 +101,8 @@ export default function DecarbonSteps() {
             
             {/* TOP ROW: Steps 1, 2, 3, 4 */}
             <div className="grid grid-cols-4 gap-8">
-              {steps.slice(0, 4).map((step) => (
-                <div key={step.id} className="flex flex-col items-start gap-4">
+              {steps.slice(0, 4).map((step, idx) => (
+                <Reveal as="div" variant="upSm" custom={idx} key={step.id} className="flex flex-col items-start gap-4">
                   <div className="w-12 h-12 rounded-[10px] bg-[#F7F5F1] flex items-center justify-center shrink-0 shadow-sm">
                     {step.icon}
                   </div>
@@ -113,14 +114,14 @@ export default function DecarbonSteps() {
                       {step.description}
                     </p>
                   </div>
-                </div>
+                </Reveal>
               ))}
             </div>
 
             {/* BOTTOM ROW: Steps 7, 6, 5 (Aligned Right-to-Left) */}
             <div className="grid grid-cols-4 gap-8">
               {/* Step 7 */}
-              <div className="col-start-2 flex flex-col items-start gap-4">
+              <Reveal as="div" variant="upSm" custom={4} className="col-start-2 flex flex-col items-start gap-4">
                 <div className="w-12 h-12 rounded-[10px] bg-[#F7F5F1] flex items-center justify-center shrink-0 shadow-sm">
                   {steps[6].icon}
                 </div>
@@ -132,10 +133,10 @@ export default function DecarbonSteps() {
                     {steps[6].description}
                   </p>
                 </div>
-              </div>
+              </Reveal>
 
               {/* Step 6 */}
-              <div className="col-start-3 flex flex-col items-start gap-4">
+              <Reveal as="div" variant="upSm" custom={5} className="col-start-3 flex flex-col items-start gap-4">
                 <div className="w-12 h-12 rounded-[10px] bg-[#F7F5F1] flex items-center justify-center shrink-0 shadow-sm">
                   {steps[5].icon}
                 </div>
@@ -147,10 +148,10 @@ export default function DecarbonSteps() {
                     {steps[5].description}
                   </p>
                 </div>
-              </div>
+              </Reveal>
 
               {/* Step 5 */}
-              <div className="col-start-4 flex flex-col items-start gap-4">
+              <Reveal as="div" variant="upSm" custom={6} className="col-start-4 flex flex-col items-start gap-4">
                 <div className="w-12 h-12 rounded-[10px] bg-[#F7F5F1] flex items-center justify-center shrink-0 shadow-sm">
                   {steps[4].icon}
                 </div>
@@ -162,9 +163,9 @@ export default function DecarbonSteps() {
                     {steps[4].description}
                   </p>
                 </div>
-              </div>
+              </Reveal>
 
-            </div>  
+            </div>
 
 
           </div>
@@ -173,8 +174,8 @@ export default function DecarbonSteps() {
 
         {/* ── MOBILE / TABLET FALLBACK VIEW ── */}
         <div className="flex lg:hidden flex-col gap-8 relative pl-4 border-l-2 border-dashed border-[#1D1EE3]/30 ml-4">
-          {steps.map((step) => (
-            <div key={step.id} className="flex flex-col items-start gap-3 relative pl-6">
+          {steps.map((step, idx) => (
+            <Reveal as="div" variant="upSm" custom={idx} key={step.id} className="flex flex-col items-start gap-3 relative pl-6">
               <div className="absolute -left-[35px] top-0 w-10 h-10 rounded-lg bg-[#F7F5F1] flex items-center justify-center border border-[#1D1EE3]/20">
                 {step.icon}
               </div>
@@ -184,7 +185,7 @@ export default function DecarbonSteps() {
               <p className="text-muted  leading-snug">
                 {step.description}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
 

@@ -4,10 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Phone, MessageCircle, Mail, ArrowDown, PhoneCall, Upload ,ChevronDown} from "lucide-react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import LocationsSection from "@/components/features/ContactWeAreLocated";
 import Marquee from "@/components/features/Marquee";
 import ContactBanner from "@/components/features/ContactBanner";
 import { Whatsapp } from "@/components/icons/SocialIcons";
+import { fadeUpSm, fadeLeft, scaleFade } from "@/lib/animations";
 
 
 type ContactTab = "consultation" | "brief";
@@ -81,19 +83,43 @@ function ContactHero() {
         <div className="flex flex-col items-center gap-8 px-4 lg:px-0">
           {/* Top: text */}
           <div className="flex flex-col items-center text-center">
-            <p  className="text-primary pb-0 font-medium text-body-sm  ">
+            <motion.p
+              custom={0}
+              variants={fadeUpSm}
+              initial="hidden"
+              animate="visible"
+              className="text-primary pb-0 font-medium text-body-sm  "
+            >
             Contact us
-          </p>
+          </motion.p>
 
-          <h1 className="font-bold ">
+          <motion.h1
+            custom={1}
+            variants={fadeLeft}
+            initial="hidden"
+            animate="visible"
+            className="font-bold "
+          >
             How can <em className="font-semibold">we help?</em>
-          </h1>
+          </motion.h1>
 
-          <p className="text-muted max-w-[75%] mt-2 ">
+          <motion.p
+            custom={2}
+            variants={fadeUpSm}
+            initial="hidden"
+            animate="visible"
+            className="text-muted max-w-[75%] mt-2 "
+          >
             Have a question or opportunity in mind? SkyQuest makes it faster and easier to connect with our team and explore how we can help your business grow.
-          </p>
+          </motion.p>
 
-          <div className="border-t border-b border-gray-200 mt-4 p-2  flex flex-wrap items-center justify-center gap-x-6 ">
+          <motion.div
+            custom={3}
+            variants={fadeUpSm}
+            initial="hidden"
+            animate="visible"
+            className="border-t border-b border-gray-200 mt-4 p-2  flex flex-wrap items-center justify-center gap-x-6 "
+          >
             {CONTACT_LINKS.map(({ href, label, Icon }) => (
               <a
                 key={href}
@@ -106,9 +132,15 @@ function ContactHero() {
                 {label}
               </a>
             ))}
+          </motion.div>
           </div>
-          </div>
-          <div className="w-full max-w-xl 2xl:max-w-2xl -m-4 bg-white p-1 rounded-full">
+          <motion.div
+            custom={4}
+            variants={fadeUpSm}
+            initial="hidden"
+            animate="visible"
+            className="w-full max-w-xl 2xl:max-w-2xl -m-4 bg-white p-1 rounded-full"
+          >
             <div className="flex text-sm font-normal">
             {(Object.keys(CONTACT_TAB_CONTENT) as ContactTab[]).map((tab) => (
               <button
@@ -125,10 +157,16 @@ function ContactHero() {
               </button>
             ))}
           </div>
-          </div>
+          </motion.div>
 
           {/* Form */}
-          <div className="w-full max-w-xl 2xl:max-w-2xl bg-white rounded-md border border-gray-100 p-2 sm:p-4 lg:pb-4">
+          <motion.div
+            variants={scaleFade}
+            custom={5}
+            initial="hidden"
+            animate="visible"
+            className="w-full max-w-xl 2xl:max-w-2xl bg-white rounded-md border border-gray-100 p-2 sm:p-4 lg:pb-4"
+          >
           <h2 className="text-sm 2xl:text-lg font-bold text-gray-700 pb-1 2xl-pb-2">
             {tabContent.heading}
           </h2>
@@ -291,8 +329,8 @@ function ContactHero() {
               </p>
             </label>
           </form>
-        </div>
-          
+        </motion.div>
+
         </div>
       </div>
     </section>

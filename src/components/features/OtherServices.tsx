@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { ArrowUp } from "iconsax-react";
+import Reveal from "@/components/ui/Reveal";
 
 export type OtherService = { label: string; href: string };
 
@@ -59,40 +60,51 @@ const OtherServicesSection = ({
     <section className={bgClassName}>
       <div className="page-container text-center ">
         {/* Badge */}
-        <p className="text-sm 2xl:text-base  text-primary text-body-sm font-medium">
+        <Reveal
+          as="p"
+          variant="upSm"
+          custom={0}
+          className="text-sm 2xl:text-base  text-primary text-body-sm font-medium"
+        >
           Other Service
-        </p>
+        </Reveal>
 
         {/* Heading */}
-        <h2 className="font-semibold">
+        <Reveal as="h2" variant="upSm" custom={1} className="font-semibold">
           We Do More Than <em className="font-medium">You Think</em>
-        </h2>
+        </Reveal>
 
         {/* Subtitle */}
-        <p className="text-muted max-w-xl mx-auto ">
+        <Reveal
+          as="p"
+          variant="upSm"
+          custom={2}
+          className="text-muted max-w-xl mx-auto "
+        >
           SkyQuest&apos;s consulting practice spans strategy, transformation,
           sustainability, and innovation find the right expertise for your
           next challenge.
-        </p>
+        </Reveal>
 
         {/* Services grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 text-left">
-          {displayed.map((service) => (
-            <a
-              key={service.href}
-              href={service.href}
-              className="group flex items-center justify-between px-6 py-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all bg-white"
-            >
-              <h3 className="text-body-lg font-regular">{service.label}</h3>
-              <span className="relative ml-4 h-8 w-8 flex-shrink-0 overflow-hidden">
-                <span className="absolute inset-0 flex items-center justify-center text-primary transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-3 group-hover:-translate-y-3 group-hover:opacity-0">
-                  <ArrowUp size={20} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
+          {displayed.map((service, idx) => (
+            <Reveal key={service.href} variant="upSm" custom={idx} as="div">
+              <a
+                href={service.href}
+                className="group flex items-center justify-between px-6 py-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all bg-white"
+              >
+                <h3 className="text-body-lg font-regular">{service.label}</h3>
+                <span className="relative ml-4 h-8 w-8 flex-shrink-0 overflow-hidden">
+                  <span className="absolute inset-0 flex items-center justify-center text-primary transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-3 group-hover:-translate-y-3 group-hover:opacity-0">
+                    <ArrowUp size={20} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
+                  </span>
+                  <span className="absolute inset-0 flex items-center justify-center text-primary -translate-x-3 translate-y-3 opacity-0 transition-all duration-300 delay-100 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">
+                    <ArrowUp size={20} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
+                  </span>
                 </span>
-                <span className="absolute inset-0 flex items-center justify-center text-primary -translate-x-3 translate-y-3 opacity-0 transition-all duration-300 delay-100 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">
-                  <ArrowUp size={20} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
-                </span>
-              </span>
-            </a>
+              </a>
+            </Reveal>
           ))}
         </div>
       </div>

@@ -1,7 +1,10 @@
- 
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import Button from "@/components/ui/Button"; 
+import { motion } from "framer-motion";
+import Button from "@/components/ui/Button";
+import { fadeUpSm, fadeLeft, imageReveal } from "@/lib/animations";
 function AgriMapProduct() {
   return (
     <section id="#how-it-works"className="reltive">
@@ -29,37 +32,64 @@ function AgriMapProduct() {
         </nav>
         <div className="px-[2] sm:px-2 md:px-[10%]">
         {/* Eyebrow */}
-        <p className="text-center text-primary mb-2 mt-8 sm:mt-8 md:mt-2 ">
+        <motion.p
+          custom={0}
+          variants={fadeUpSm}
+          initial="hidden"
+          animate="visible"
+          className="text-center text-primary mb-2 mt-8 sm:mt-8 md:mt-2 "
+        >
           AgriMap
-        </p>
- 
+        </motion.p>
+
         {/* Heading */}
-        <h1 className="text-center font-semibold">
+        <motion.h1
+          custom={1}
+          variants={fadeLeft}
+          initial="hidden"
+          animate="visible"
+          className="text-center font-semibold"
+        >
           Know every seed. Reach<br></br>{" "}
           <em className="font-semibold">every farm</em>
-        </h1>
- 
+        </motion.h1>
+
         {/* Subheading */}
-        <p className=" mx-auto text-center mt-5 mb-5 max-w-full text-muted leading-snug tracking-wide">
-           AgriMap gives agriculture departments, banks, and governments a real-time view of seed replacement rates, crop health, and variety adoption across every district down to the block level.  </p>
+        <motion.p
+          custom={2}
+          variants={fadeUpSm}
+          initial="hidden"
+          animate="visible"
+          className=" mx-auto text-center mt-5 mb-5 max-w-full text-muted leading-snug tracking-wide"
+        >
+           AgriMap gives agriculture departments, banks, and governments a real-time view of seed replacement rates, crop health, and variety adoption across every district down to the block level.  </motion.p>
         </div>
-        <div className="mt-8 mb-10 flex flex-wrap items-center justify-center gap-4 w-full">
-              <Button href="/request-deployment" variant="primary">
-                Request A Deployment
+        <motion.div
+          custom={3}
+          variants={fadeUpSm}
+          initial="hidden"
+          animate="visible"
+          className="mt-8 mb-10 flex flex-wrap items-center justify-center gap-4 w-full"
+        >
+              <Button href="/contact" variant="primary">
+                Request Demo
               </Button>
-              <Button href="#how-it-works" variant="white">
-                See How It Works
-              </Button>
-            </div>
-     
- 
+              
+            </motion.div>
+
+
       {/* Hero Image */}
-     
+
       </div>
-     
+
     </div>
     <div className=" pt-0 pb-12 md:pb-16 lg:pb-20 xl:pb-24 2xl:pb-28">
-        <div className="relative w-full aspect-[1920/812]  overflow-hidden bg-background">
+        <motion.div
+          variants={imageReveal}
+          initial="hidden"
+          animate="visible"
+          className="relative w-full aspect-[1920/812]  overflow-hidden bg-background"
+        >
           <Image
             src="/Productsoln/AgriHero.png"
             alt="Careers at SkyQuest"
@@ -67,7 +97,7 @@ function AgriMapProduct() {
             priority
             className="object-cover object-center"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
    

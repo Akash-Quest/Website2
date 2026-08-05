@@ -13,7 +13,7 @@ import FAQSection from "@/components/features/Faq";
 import {inspectFaqs} from "@/Constants/FaqInspect";
 import Suscribe from "@/components/features/Suscribe";
 import StatsGridThree from '@/components/ui/Stats3'; 
-import Stats3 from '@/components/ui/Stats3';
+
 import {insightData} from "@/Constants/Insight ";
 import Image from "next/image";
 import Link from "next/link";

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Gps, Routing, ClipboardText, ShieldTick } from 'iconsax-react';
+import Reveal from '@/components/ui/Reveal';
 
 export default function SQLabSteps() {
   const steps = [
@@ -48,16 +49,16 @@ export default function SQLabSteps() {
         
         {/* ── HEADER STRINGS MODULE ── */}
         <div className="text-center mb-24 max-w-3xl">
-          <span className="text-[#1D1EE3] tracking-wide mb-3 block">
+          <Reveal as="span" variant="upSm" custom={0} className="text-[#1D1EE3] tracking-wide mb-3 block">
             How It Works
-          </span>
-          <h2 className="font-semibold text-[#03030F] ">
+          </Reveal>
+          <Reveal as="h2" variant="upSm" custom={1} className="font-semibold text-[#03030F] ">
             Five Steps From Sample<br /> To <em className="font-semibold">Signed Report</em>
-            
-          </h2>
-          <p className="text-gray-600 mt-5 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+
+          </Reveal>
+          <Reveal as="p" variant="upSm" custom={2} className="text-gray-600 mt-5 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
             The entire diagnostic workflow happens digitally. The sample stays put. The data moves at the speed of the internet.
-          </p>
+          </Reveal>
         </div>
 
         {/* ── PROCESS STEPS TIMELINE CONNECTOR BLOCK ── */}
@@ -111,8 +112,11 @@ export default function SQLabSteps() {
           {/* ── MAIN HORIZONTAL GRID RUNWAY ── */}
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 relative z-10">
             {steps.map((step, idx) => (
-              <div 
-                key={idx} 
+              <Reveal
+                as="div"
+                variant="upSm"
+                custom={idx}
+                key={idx}
                 className={`flex flex-col items-start transition-all duration-300 group ${step.offsetClass}`}
               >
                 {/* Vuesax Box Icon Wrapper Frame */}
@@ -129,7 +133,7 @@ export default function SQLabSteps() {
                     {step.desc}
                   </p>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
 

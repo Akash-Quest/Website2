@@ -173,10 +173,10 @@ export default function CaseStudies({
               : "grid-cols-3"
           }`}
         >
-          {visibleCards.map((card) => {
+          {visibleCards.map((card, idx) => {
             if (columns === 1) {
               return (
-                <motion.div key={card.id} variants={fadeUp} className="relative isolate">
+                <motion.div key={card.id} custom={idx} variants={fadeUp} className="relative isolate">
                   <div className="relative h-[405px] overflow-hidden rounded-2xl">
                     <Image
                       src={card.image}
@@ -225,6 +225,7 @@ export default function CaseStudies({
             return (
               <motion.div
                 key={card.id}
+                custom={idx}
                 variants={fadeUp}
                 className="group relative isolate"
                 onMouseEnter={() =>

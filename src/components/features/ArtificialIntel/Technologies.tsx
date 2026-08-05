@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "@/components/ui/Reveal";
 
 const stack = [
   {
@@ -61,24 +62,36 @@ export default function Technologies() {
     <section className="w-full bg-background">
       <div className="page-container">
         <div className="text-center">
-          <p className="mb-2 text-body-sm font-medium text-primary">
+          <Reveal
+            as="p"
+            variant="upSm"
+            custom={0}
+            className="mb-2 text-body-sm font-medium text-primary"
+          >
             Partners &amp; Ecosystem
-          </p>
-          <h2 className="font-semibold">
+          </Reveal>
+          <Reveal as="h2" variant="upSm" custom={1} className="font-semibold">
             Built on the World&apos;s Leading
             <br />
             <em className="font-semibold">Technologies</em>
-          </h2>
-          <p className="mx-auto mt-2 max-w-xl text-body-sm text-muted">
+          </Reveal>
+          <Reveal
+            as="p"
+            variant="upSm"
+            custom={2}
+            className="mx-auto mt-2 max-w-xl text-body-sm text-muted"
+          >
             From AI and cloud to data and analytics, we leverage trusted
             platforms that accelerate transformation and enterprise growth.
-          </p>
+          </Reveal>
         </div>
 
         <div className="mt-10 grid grid-cols-2 gap-y-5 sm:grid-cols-2 lg:grid-cols-4 gap-2">
           {stack.map(({ icons, title, description }, idx) => (
-            <div
+            <Reveal
               key={title}
+              variant="upSm"
+              custom={idx}
               className={`text-left pl-4 ${idx % 2 !== 0 ? "sm:border-l sm:border-black/30" : ""} ${idx % 4 !== 0 ? "lg:border-l lg:border-black/30" : "lg:border-l-0"}`}
             >
               <div className="flex items-center gap-3">
@@ -104,7 +117,7 @@ export default function Technologies() {
               <p className="mt-1.5  text-neutral-500">
                 {description}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

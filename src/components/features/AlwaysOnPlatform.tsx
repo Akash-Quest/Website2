@@ -8,12 +8,12 @@ export default function AlwaysOnPlatform() {
     {
       title: 'AI Symptom Assessment',
       desc: 'AI-assisted assessment helps users describe their symptoms and receive relevant healthcare guidance.',
-      image: '/Productsoln/AlwaysOnP1.png', 
+      image: '/Productsoln/AO1.Jpg', 
     },
     {
       title: 'Multilingual Support',
       desc: 'Patients can communicate in supported local languages, helping make digital healthcare services more accessible.',
-      image: '/Productsoln/AlwaysOnP2.png',
+      image: '/Productsoln/AO2.Jpg',
     },
     {
       title: "Real-Time AI Triage",
@@ -23,17 +23,17 @@ export default function AlwaysOnPlatform() {
     {
       title: "Expert Referrals",
       desc: 'Relevant cases can be escalated to healthcare professionals for further assessment and support',
-      image: '/Productsoln/AlwaysOnP4.png',
+      image: '/Productsoln/AO4.Jpg',
     },
     {
       title: "Healthcare Dashboard",
       desc: 'Healthcare teams can monitor assessments, escalated cases, alerts, and referrals through a centralized dashboard.',
-      image: '/Productsoln/AlwaysOnP5.png',
+      image: '/Productsoln/AO5.Jpg',
     },
     {
       title: "WhatsApp-Based Access",
       desc: 'AlwaysON delivers healthcare services through WhatsApp, reducing the need for users to download or navigate a separate application.',
-      image: '/Productsoln/AlwaysOnP6.png',
+      image: '/Productsoln/AO6.Jpg',
     },
   ];
  

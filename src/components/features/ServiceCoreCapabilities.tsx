@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "@/components/ui/Reveal";
 
 type Capability = {
   icon: React.ElementType;
@@ -28,17 +29,34 @@ export default function ServiceCoreCapabilities({
       <div className="page-container pt-0">
         {/* Header */}
         <div className="relative text-center">
-          <p className="text-body-sm text-primary font-medium ">{eyebrow}</p>
-          <h2 className="font-bold">{heading}</h2>
-          <p className="mx-auto  lg:max-w-[60%]  text-muted">
+          <Reveal
+            as="p"
+            variant="upSm"
+            custom={0}
+            className="text-body-sm text-primary font-medium "
+          >
+            {eyebrow}
+          </Reveal>
+          <Reveal as="h2" variant="upSm" custom={1} className="font-bold">
+            {heading}
+          </Reveal>
+          <Reveal
+            as="p"
+            variant="upSm"
+            custom={2}
+            className="mx-auto  lg:max-w-[60%]  text-muted"
+          >
             {description}
-          </p>
+          </Reveal>
         </div>
 
         {/* Content: image + capability list */}
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 md:items-stretch">
           {/* Left: image */}
-          <div className="relative min-h-[342px] w-full overflow-hidden rounded-2xl">
+          <Reveal
+            variant="left"
+            className="relative min-h-[342px] w-full overflow-hidden rounded-2xl"
+          >
             <Image
               src={imageSrc}
               alt={imageAlt}
@@ -47,10 +65,10 @@ export default function ServiceCoreCapabilities({
               sizes="(min-width: 768px) 50vw, 100vw"
               priority
             />
-          </div>
+          </Reveal>
 
           {/* Right: capability list */}
-          <div className="">
+          <Reveal variant="right">
             <ul className="flex h-full flex-col justify-between gap-3">
               {capabilities.map(({ icon: Icon, title, description }) => (
                 <li key={title} className="flex items-stretch gap-4 ">
@@ -66,7 +84,7 @@ export default function ServiceCoreCapabilities({
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

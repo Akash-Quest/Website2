@@ -237,6 +237,12 @@ body {
 .report-p{
 @apply text-base 2xl:text-lg;
 }
+.report-h2{
+@apply text-xl 2xl:text-2xl;
+}
+.report-h3{
+@apply text-lg 2xl:text-xl ;
+}
 
 /* report page 
 

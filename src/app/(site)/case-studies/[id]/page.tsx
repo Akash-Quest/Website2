@@ -14,10 +14,23 @@ export function generateStaticParams() {
 }
 
 function EmphasizedText({ text, emphasis }: { text: string; emphasis?: string }) {
+  if (emphasis) {
+    return (
+      <>
+        {text}
+        <em className="font-bold">{emphasis}</em>
+      </>
+    );
+  }
+
+  const words = text.split(" ");
+  const lastWord = words.pop();
+  const rest = words.join(" ");
+
   return (
     <>
-      {text}
-      {emphasis && <em className="font-bold">{emphasis}</em>}
+      {rest && `${rest} `}
+      <em className="font-bold">{lastWord}</em>
     </>
   );
 }
@@ -65,13 +78,13 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
       );
     case "heading":
       return (
-        <h3 className="mt-1 mb-3 font-bold text-gray-900">
+        <h2 className=" report-h2 mt-5 mb-5 font-semibold text-gray-800">
           <EmphasizedText text={block.text} emphasis={block.emphasis} />
-        </h3>
+        </h2>
       );
     case "subheading":
       return (
-        <h4 className="mt-6 mb-2 text-lg font-bold text-gray-900">{block.text}</h4>
+        <h3 className="report-h3 mt-2 mb-5 text-lg font-semibold text-gray-900">{block.text}</h3>
       );
     case "list":
       return (

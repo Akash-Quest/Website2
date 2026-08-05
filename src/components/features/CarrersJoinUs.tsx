@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown, Upload } from "lucide-react";
+import Reveal from "@/components/ui/Reveal";
 
 const countryCodes = [
   { code: "+91", label: "India (+91)" },
@@ -36,19 +37,32 @@ export default function CareerApplicationForm() {
       
       <div className="page-container">
         {/* Eyebrow */}
-        <p className="text-center text-primary font-medium text-body-sm ">
-          Join us 
-        </p>
+        <Reveal
+          as="p"
+          variant="upSm"
+          custom={0}
+          className="text-center text-primary font-medium text-body-sm "
+        >
+          Join us
+        </Reveal>
 
         {/* Heading */}
-        <h2 className="text-center font-semibold mb-5">
+        <Reveal
+          as="h2"
+          variant="upSm"
+          custom={1}
+          className="text-center font-semibold mb-5"
+        >
           Start Your New{" "}
           <em className="font-medium">Journey With </em>
           Skyquest
-        </h2>
+        </Reveal>
 
 
-        <div className="mx-auto border border-gray-200 rounded-2xl p-4 sm:p-6 lg:p-8 bg-white">
+        <Reveal
+          variant="scale"
+          className="mx-auto border border-gray-200 rounded-2xl p-4 sm:p-6 lg:p-8 bg-white"
+        >
 
         <h3 className=" font-semibold text-muted text-body-lg ">
           Take the Next Step in Your Career Join a Culture of Growth and
@@ -218,7 +232,7 @@ export default function CareerApplicationForm() {
               </button>
             </div>
         </form>
-        </div>
+        </Reveal>
       </div>
     </div>
   );

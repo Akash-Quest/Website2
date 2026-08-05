@@ -3,7 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 import Button from "@/components/ui/Button";
+import { fadeUpSm, fadeLeft, fadeRight, imageReveal } from "@/lib/animations";
 
 function AlwaysOnProduct() {
   return (
@@ -38,38 +40,72 @@ function AlwaysOnProduct() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-5 pt-10">
           {/* Left: text */}
           <div className="flex flex-col justify-center lg:items-start text-center lg:text-left">
-            <p className="text-center font-medium text-primary mb-2 mt-8 sm:mt-8 md:mt-2 ">
+            <motion.p
+              custom={0}
+              variants={fadeUpSm}
+              initial="hidden"
+              animate="visible"
+              className="text-center font-medium text-primary mb-2 mt-8 sm:mt-8 md:mt-2 "
+            >
               AlwaysOn
-            </p>
-            
-            <h1 className="mb-2 font-bold text-black pb-5">
+            </motion.p>
+
+            <motion.h1
+              custom={1}
+              variants={fadeLeft}
+              initial="hidden"
+              animate="visible"
+              className="mb-2 font-bold text-black pb-5"
+            >
              Digital Healthcare <em className="font-semibold">Innovation </em>
-            </h1>
+            </motion.h1>
 
-            <p className="text-muted lg:max-w-full tracking-wide leading-snug px-4 lg:px-0">
+            <motion.p
+              custom={2}
+              variants={fadeUpSm}
+              initial="hidden"
+              animate="visible"
+              className="text-muted lg:max-w-full tracking-wide leading-snug px-4 lg:px-0"
+            >
               AlwaysON delivers AI-powered healthcare services directly through WhatsApp, enabling AI-assisted symptom assessment, multilingual support, clinical guidance, and rapid access to expert referrals.
-            </p>
+            </motion.p>
 
-            <div className="mt-8 mb-10 flex flex-wrap items-start justify-left gap-4 w-full">
-              <Button href="/request-deployment" variant="primary">
-                Request A Deployment
+            <motion.div
+              custom={3}
+              variants={fadeUpSm}
+              initial="hidden"
+              animate="visible"
+              className="mt-8 mb-10 flex flex-wrap items-start justify-left gap-4 w-full"
+            >
+              <Button href="/contact" variant="primary">
+                Request Demo
               </Button>
-              <Button href="#how-it-works" variant="white">
-                See How It Works
-              </Button>
-            </div>
+            </motion.div>
           </div>
 
           {/* Right: image */}
-          <div className="relative w-full aspect-[619/510] sm:aspect-[619/510] md:rounded-2xl overflow-hidden ">
-            <Image
-              src="/Productsoln/AlwaysOnHero.png"
-              alt="Architectural detail representing strategy and impact"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
+          <motion.div
+            variants={fadeRight}
+            custom={1}
+            initial="hidden"
+            animate="visible"
+            className="relative w-full aspect-[619/510] sm:aspect-[619/510] md:rounded-2xl overflow-hidden "
+          >
+            <motion.div
+              variants={imageReveal}
+              initial="hidden"
+              animate="visible"
+              className="relative w-full h-full"
+            >
+              <Image
+                src="/Productsoln/AlwaysOnHero.png"
+                alt="Architectural detail representing strategy and impact"
+                fill
+                className="object-cover"
+                priority
+              />
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

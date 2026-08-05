@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Reveal from '@/components/ui/Reveal';
 
 export default function AgriMapUseCases() {
   const useCases = [
@@ -56,29 +57,32 @@ export default function AgriMapUseCases() {
       <div className="page-container mx-auto flex flex-col ">
         
         {/* ── HEADER LAYOUT BLOCK ── */}
-        <span className=" text-primary">
+        <Reveal as="span" variant="upSm" custom={0} className=" text-primary">
               Use Cases
-            </span>
+            </Reveal>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start w-full mt-5 mb-5">
           <div className="lg:col-span-7 flex flex-col gap-2">
-            
-            <h2 className="font-semibold">
+
+            <Reveal as="h2" variant="upSm" custom={1} className="font-semibold">
               Real Decisions, Real <br />
               <em className="font-semibold">Outcomes</em>
-            </h2>
+            </Reveal>
           </div>
           <div className="lg:col-span-5 pb-2 ">
-            <p className=" tracking-wide leading-snug text-[#03030F]/70 max-w-full">
+            <Reveal as="p" variant="upSm" custom={2} className=" tracking-wide leading-snug text-[#03030F]/70 max-w-full">
               From seasonal planning to emergency response, AgriMap fits into the workflows that matter most.
-            </p>
+            </Reveal>
           </div>
         </div>
 
         {/* ── 2x2 CARD MATRIX GRID ── */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full mt-4">
           {useCases.map((item, idx) => (
-            <div 
-              key={idx} 
+            <Reveal
+              as="div"
+              variant="upSm"
+              custom={idx}
+              key={idx}
               // Frame 1707483359: padding 24px, gap 20px, bg #F7F5F1, rounded 10px
               className="bg-[#F7F5F1] rounded-[10px] p-6 flex flex-col sm:flex-row items-center sm:items-stretch gap-5 border border-gray-200/20 max-w-[695px] min-h-[377px] w-full mx-auto"
             >
@@ -129,7 +133,7 @@ export default function AgriMapUseCases() {
                 </div>
 
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
 

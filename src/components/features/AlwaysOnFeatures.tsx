@@ -2,6 +2,7 @@
  
 import React from 'react';
 import { Courthouse, Bank, Buildings } from 'iconsax-react';
+import Reveal from '@/components/ui/Reveal';
  
 export default function AlwaysOnFeatures() {
   const audienceCards = [
@@ -44,42 +45,45 @@ export default function AlwaysOnFeatures() {
         
         {/* ── CENTRAL HEADER SECTION (MIRRORED TO IMAGE) ── */}
         <div className="text-center mb-16 max-w-3xl flex flex-col gap-4 Z-20">
-            <p className="font-semibold text-primary mb-3 block"> The WhatsApp Advantage</p>
-            
-          <h2 className="font-semibold ">
-            2 billion users. <br />Zero New 
+            <Reveal as="p" variant="upSm" custom={0} className="font-semibold text-primary mb-3 block"> The WhatsApp Advantage</Reveal>
+
+          <Reveal as="h2" variant="upSm" custom={1} className="font-semibold ">
+            2 billion users. <br />Zero New{" "}
             <em className="font-Semibold ">Habits Required.</em>
-          </h2>
-          <p className="text-muted max-w-full mx-auto tracking-wide leading-snug">
+          </Reveal>
+          <Reveal as="p" variant="upSm" custom={2} className="text-muted max-w-full mx-auto tracking-wide leading-snug">
             WhatsApp is already on every phone, trusted by every family, and used in every language. AlwaysON meets patients exactly where they are no registration, no download, no friction.
-          </p>
+          </Reveal>
         </div>
- 
+
         {/* ── 🛠️ FIXED: 3x2 RESPONSIVE FLAT CARD GRID LAYOUT ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full items-stretch">
           {audienceCards.map((card, idx) => (
-            <div 
-              key={idx} 
+            <Reveal
+              as="div"
+              variant="upSm"
+              custom={idx}
+              key={idx}
               className="bg-[#F7F5F1] rounded-[16px] p-8 flex flex-col gap-4 border border-gray-200/30 shadow-sm transition-all duration-300 hover:shadow-md"
             >
               {/* Clean Flat Square Icon Wrapper Box */}
               <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shrink-0">
                 {card.icon}
               </div>
-              
+
               {/* Typography Block Layer */}
               <div className="flex flex-col gap-2">
                 {/* Core Component Headline */}
                 <h3 className="font-semibold text-body-xl text-[#03030F] ">
                   {card.title}
                 </h3>
-                
+
                 {/* Description Context string */}
                 <p className="tracking-wide leading-snug text-muted mt-2">
                   {card.desc}
                 </p>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
  

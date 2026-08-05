@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "@/components/ui/Reveal";
 
 const sectors = [
   {
@@ -52,25 +53,37 @@ export default function IndustriesWeServe2() {
     <section className="w-full bg-background">
       <div className="page-container">
         <div className="text-center">
-          <p className="mb-1 text-body-sm font-medium text-primary">
+          <Reveal
+            as="p"
+            variant="upSm"
+            custom={0}
+            className="mb-1 text-body-sm font-medium text-primary"
+          >
             Industries We Serve
-          </p>
-          <h2 className="font-semibold">
+          </Reveal>
+          <Reveal as="h2" variant="upSm" custom={1} className="font-semibold">
             Deep Sector Expertise Across
             <br />
             High-<em className="font-semibold">Growth Markets</em>
-          </h2>
-          <p className="mx-auto mt-1 max-w-2xl text-muted">
+          </Reveal>
+          <Reveal
+            as="p"
+            variant="upSm"
+            custom={2}
+            className="mx-auto mt-1 max-w-2xl text-muted"
+          >
             We help organizations navigate evolving sustainability
             expectations while creating long-term business, social, and
             environmental value.
-          </p>
+          </Reveal>
         </div>
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
-          {sectors.map((sector) => (
-            <div
+          {sectors.map((sector, idx) => (
+            <Reveal
               key={sector.label}
+              variant="upSm"
+              custom={idx}
               className="group relative aspect-[333/180] w-[calc(50%-0.5rem)] overflow-hidden rounded-lg sm:w-[calc(33.333%-0.667rem)] lg:w-[calc(25%-0.75rem)]"
             >
               <Image
@@ -79,7 +92,7 @@ export default function IndustriesWeServe2() {
                 fill
                 unoptimized
                 sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
 
               {/* Always-on gradient so the label stays legible in both states */}
@@ -92,7 +105,7 @@ export default function IndustriesWeServe2() {
                 {sector.label}
               </span>
 
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

@@ -3,6 +3,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import { ArrowRight, ChevronDown } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import Reveal from "@/components/ui/Reveal";
+import { fadeUpSm } from "@/lib/animations";
 
 const categories = [
   {
@@ -77,16 +80,26 @@ export default function EnterpriseAiSolution() {
     <section className="w-full bg-white">
       <div className="page-container">
         <div className="text-center">
-          <p className="mb-2 text-body-sm font-medium text-primary">
+          <Reveal
+            as="p"
+            variant="upSm"
+            custom={0}
+            className="mb-2 text-body-sm font-medium text-primary"
+          >
             Services
-          </p>
-          <h2 className="font-semibold">
+          </Reveal>
+          <Reveal as="h2" variant="upSm" custom={1} className="font-semibold">
             Enterprise AI <em className="font-semibold">Solutions</em>
-          </h2>
-          <p className="mx-auto mt-2 max-w-2xl text-muted">
+          </Reveal>
+          <Reveal
+            as="p"
+            variant="upSm"
+            custom={2}
+            className="mx-auto mt-2 max-w-2xl text-muted"
+          >
             Structured around your enterprise journey from readiness to
             transformation
-          </p>
+          </Reveal>
         </div>
 
         {/* Mobile: accordion */}
@@ -94,8 +107,10 @@ export default function EnterpriseAiSolution() {
           {categories.map((cat, i) => {
             const isOpen = mobileOpenIndex === i;
             return (
-              <div
+              <Reveal
                 key={cat.id}
+                variant="upSm"
+                custom={i}
                 className="border-t border-t-[#03030F33] last:border-b last:border-b-[#03030F33]"
               >
                 <button
@@ -109,32 +124,43 @@ export default function EnterpriseAiSolution() {
                     strokeWidth={2}
                   />
                 </button>
-                {isOpen && (
-                  <div className="px-4 pb-5">
-                    <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg bg-black">
-                      <Image
-                        src={cat.image}
-                        alt={cat.label}
-                        fill
-                        unoptimized
-                        sizes="100vw"
-                        className="object-cover"
-                      />
-                    </div>
-                    <ul className="mt-4 space-y-2.5">
-                      {cat.points.map((point) => (
-                        <li
-                          key={point}
-                          className="flex items-start gap-2 text-sm text-neutral-700"
-                        >
-                          <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-neutral-900" />
-                          <span>{point}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      key="content"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-4 pb-5">
+                        <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg bg-black">
+                          <Image
+                            src={cat.image}
+                            alt={cat.label}
+                            fill
+                            unoptimized
+                            sizes="100vw"
+                            className="object-cover"
+                          />
+                        </div>
+                        <ul className="mt-4 space-y-2.5">
+                          {cat.points.map((point) => (
+                            <li
+                              key={point}
+                              className="flex items-start gap-2 text-sm text-neutral-700"
+                            >
+                              <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-neutral-900" />
+                              <span>{point}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </Reveal>
             );
           })}
         </div>
@@ -142,7 +168,7 @@ export default function EnterpriseAiSolution() {
         {/* Desktop: category nav / image stack / points */}
         <div className="mt-24 hidden gap-2 lg:grid lg:grid-cols-[1fr_1fr_1fr] lg:items-stretch">
           {/* Left: category nav */}
-          <div className="flex flex-col ">
+          <Reveal variant="left" custom={0} className="flex flex-col ">
             {categories.map((cat, i) => {
               const isActive = i === activeIndex;
               const isLast = i === categories.length - 1;
@@ -151,7 +177,7 @@ export default function EnterpriseAiSolution() {
                   <button
                     type="button"
                     onClick={() => setActiveIndex(i)}
-                    className={` text-body-lg flex items-center justify-between px-4 py-1 text-left text-lg font-medium transition-colors ${
+                    className={`cursor-pointer text-body-lg flex items-center justify-between px-4 py-1 text-left text-lg font-medium transition-colors ${
                       isActive
                         ? "rounded-lg bg-[#EAEAF8] text-[#03030F]"
                         : "text-[#03030F] hover:bg-neutral-50"
@@ -165,8 +191,12 @@ export default function EnterpriseAiSolution() {
                 </div>
               );
             })}
-          </div>
-          <div className="relative mx-auto h-[clamp(16rem,26vw,28rem)] w-[clamp(13rem,21vw,23rem)] min-w-0 pt-10">
+          </Reveal>
+          <Reveal
+            variant="up"
+            custom={1}
+            className="relative mx-auto h-[clamp(16rem,26vw,28rem)] w-[clamp(13rem,21vw,23rem)] min-w-0 pt-10"
+          >
             {categories.map((cat, i) => {
               const position = (i - activeIndex + total) % total; // 0 = front
               const isActive = position === 0;
@@ -182,9 +212,7 @@ export default function EnterpriseAiSolution() {
                   
                   aria-label={`Show ${cat.label}`}
                   tabIndex={isActive ? -1 : 0}
-                  className={`absolute inset-0 overflow-hidden rounded-lg bg-black transition-all duration-500 ease-in-out ${
-                    isActive ? "cursor-default" : "cursor-pointer"
-                  }`}
+                  className={`absolute inset-0 overflow-hidden rounded-lg bg-black transition-all duration-500 ease-in-out `}
                   style={{
                     transform: `translateY(${translateY}px) scale(${scale})`,
                     opacity,
@@ -202,20 +230,28 @@ export default function EnterpriseAiSolution() {
                 </button>
               );
             })}
-          </div>
+          </Reveal>
 
           {/* Right: capability points */}
-          <ul className="space-y-2.5">
-            {active.points.map((point) => (
-              <li
-                key={point}
-                className=" p flex items-start gap-2 text-base text-neutral-700"
-              >
-                <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-neutral-900" />
-                <span>{point}</span>
-              </li>
-            ))}
-          </ul>
+          <Reveal variant="right" custom={2}>
+            <AnimatePresence mode="wait">
+              <motion.ul key={active.id} className="space-y-2.5">
+                {active.points.map((point, i) => (
+                  <motion.li
+                    key={point}
+                    custom={i}
+                    variants={fadeUpSm}
+                    initial="hidden"
+                    animate="visible"
+                    className=" p flex items-start gap-2 text-base text-neutral-700"
+                  >
+                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-neutral-900" />
+                    <span>{point}</span>
+                  </motion.li>
+                ))}
+              </motion.ul>
+            </AnimatePresence>
+          </Reveal>
         </div>
       </div>
     </section>

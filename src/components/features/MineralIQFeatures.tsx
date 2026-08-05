@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Chart21, } from 'iconsax-react';
+import Reveal from '@/components/ui/Reveal';
 
 export default function MineralIQFeatures() {
   const features = [
@@ -94,22 +95,25 @@ export default function MineralIQFeatures() {
         
         {/* ── HEADER ── */}
         <div className="text-center mb-16 md:mb-20">
-          <span className="text-sm font-semibold text-[#CBCBFF] mb-3 block">
+          <Reveal as="span" variant="upSm" custom={0} className="text-sm font-semibold text-[#CBCBFF] mb-3 block">
             Features
-          </span>
-          <h2 className="font-semibold text-white">
+          </Reveal>
+          <Reveal as="h2" variant="upSm" custom={1} className="font-semibold text-white">
             Built For Every Stakeholder <br/>In The <em className="font-semibold text-white">Global Mining Chain.</em>
-          </h2>
-          <p className="text-[#CBCBFF] mt-6 max-w-xl mx-auto text-base md:text-lg">
+          </Reveal>
+          <Reveal as="p" variant="upSm" custom={2} className="text-[#CBCBFF] mt-6 max-w-xl mx-auto text-base md:text-lg">
             MineralIQ gives each role exactly the view they need whether you're a national regulator, international investor, or artisanal cooperative.
-          </p>
+          </Reveal>
         </div>
 
         {/* ── FEATURE GRID ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {features.map((feature, idx) => (
-            <div 
-              key={idx} 
+            <Reveal
+              as="div"
+              variant="upSm"
+              custom={idx}
+              key={idx}
               className="flex flex-col items-start gap-4 p-2 transition-transform duration-300"
             >
               {/* Icon Container */}
@@ -133,7 +137,7 @@ export default function MineralIQFeatures() {
                   {feature.desc}
                 </p>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
 

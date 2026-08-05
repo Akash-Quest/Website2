@@ -15,6 +15,7 @@ import Footer from "@/components/ui/Footer";
 import { caseStudiesData } from "@/Constants/caseStudies";
 import {insightData} from "@/Constants/Insight "
 import { defaultFaqs } from "@/Constants/FaqDetails";
+import TransformAccordion from "@/components/features/HomeInsightImpac";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
     <Marquee />
     <StatsGrid />
     <CoreCapabilities />
+    <TransformAccordion />
     <InsightImpact />
     <OurProductSolution />
     <CaseStudies {...caseStudiesData} bgClassName="bg-background" />

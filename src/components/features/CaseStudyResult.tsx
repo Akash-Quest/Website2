@@ -1,353 +1,357 @@
-"use client";
+  "use client";
 
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import {
-  ArrowDown,
-  ArrowRight,
-} from "lucide-react";
-import { ArrowUp } from "iconsax-react";
-import { caseStudiesData, type CaseStudy } from "@/Constants/caseStudies";
-import { insightData } from "@/Constants/Insight ";
+  import React, { useEffect, useMemo, useRef, useState } from "react";
+  import Image from "next/image";
+  import Link from "next/link";
+  import {
+    ArrowDown,
+    ArrowRight,
+  } from "lucide-react";
+  import { ArrowUp } from "iconsax-react";
+  import { caseStudiesData, type CaseStudy } from "@/Constants/caseStudies";
+  import { insightData } from "@/Constants/Insight ";
+  import Reveal from "@/components/ui/Reveal";
 
-type ListedStudy = CaseStudy & { href: string };
+  type ListedStudy = CaseStudy & { href: string };
 
-const ALL_STUDIES: ListedStudy[] = [
-  ...caseStudiesData.caseStudies.map((s) => ({ ...s, href: `/case-studies/${s.id}` })),
-  ...insightData.caseStudies.map((s) => ({ ...s, href: `/insight/${s.id}` })),
-];
+  const ALL_STUDIES: ListedStudy[] = [
+    ...caseStudiesData.caseStudies.map((s) => ({ ...s, href: `/case-studies/${s.id}` })),
+    ...insightData.caseStudies.map((s) => ({ ...s, href: `/insight/${s.id}` })),
+  ];
 
-function StudyCard({ study }: { study: ListedStudy }) {
-  const [isHovered, setIsHovered] = useState(false);
+  function StudyCard({ study }: { study: ListedStudy }) {
+    const [isHovered, setIsHovered] = useState(false);
 
-  return (
-    <Link
-      href={study.href}
-      className="group flex flex-col sm:flex-row gap-4 bg-[#F7F5F1] rounded-xl p-2 sm:p-3 transition-colors cursor-pointer"
-      style={{
-        backgroundColor: isHovered ? '#EAEAF8' : '#F7F5F1'
-      }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      {/* Left: Image */}
-      <div className="w-full sm:w-56 flex-shrink-0">
-      <Image
-        src={study.image}
-        alt={study.title}
-        width={400}
-        height={300}
-        className="w-full h-40 sm:h-full rounded-lg object-cover flex-shrink-0"
-      />
-      </div>
-        <div className="w-full sm:flex-1 flex flex-col justify-between min-w-0">
-          <div className="min-w-0">
-            <div className="flex items-center gap-1.5 text-xs text-muted">
-              <span>{study.category}</span>
-              <span className="inline-block h-1 w-1 rounded-full bg-muted" />
-              <span>{study.date}</span>
+    return (
+      <Link
+        href={study.href}
+        className="group flex flex-col sm:flex-row gap-4 bg-[#F7F5F1] rounded-xl p-2 sm:p-3 transition-colors cursor-pointer"
+        style={{
+          backgroundColor: isHovered ? '#EAEAF8' : '#F7F5F1'
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        {/* Left: Image */}
+        <div className="w-full sm:w-56 flex-shrink-0">
+        <Image
+          src={study.image}
+          alt={study.title}
+          width={400}
+          height={300}
+          className="w-full h-40 sm:h-full rounded-lg object-cover flex-shrink-0"
+        />
+        </div>
+          <div className="w-full sm:flex-1 flex flex-col justify-between min-w-0">
+            <div className="min-w-0">
+              <div className="flex items-center gap-1.5 text-xs text-muted">
+                <span>{study.category}</span>
+                <span className="inline-block h-1 w-1 rounded-full bg-muted" />
+                <span>{study.date}</span>
+              </div>
+
+              <h3 className="mt-2 mb-3 sm:truncate font-semibold text-gray-900">
+                {study.title}
+              </h3>
+
+              <p className="mt-0  leading-tight text-muted">
+                {study.description}
+              </p>
             </div>
 
-            <h3 className="mt-2 mb-3 sm:truncate font-semibold text-gray-900">
-              {study.title}
-            </h3>
-
-            <p className="mt-0  leading- text-mtightuted">
-              {study.description}
-            </p>
-          </div>
-
-          <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary">
-            Visit Page
-            <span className="relative ml-1 h-3.5 w-3.5 overflow-hidden">
-              <span className="absolute inset-0 flex items-center justify-center transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-3 group-hover:-translate-y-3 group-hover:opacity-0">
-                <ArrowUp size={14} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
-              </span>
-              <span className="absolute inset-0 flex items-center justify-center -translate-x-3 translate-y-3 opacity-0 transition-all duration-300 delay-100 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">
-                <ArrowUp size={14} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
+            <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary">
+              Visit Page
+              <span className="relative ml-1 h-3.5 w-3.5 overflow-hidden">
+                <span className="absolute inset-0 flex items-center justify-center transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-3 group-hover:-translate-y-3 group-hover:opacity-0">
+                  <ArrowUp size={14} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
+                </span>
+                <span className="absolute inset-0 flex items-center justify-center -translate-x-3 translate-y-3 opacity-0 transition-all duration-300 delay-100 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">
+                  <ArrowUp size={14} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
+                </span>
               </span>
             </span>
-          </span>
-        </div>
-    </Link>
-  );
-}
+          </div>
+      </Link>
+    );
+  }
 
-const PAGE_SIZE = 5;
+  const PAGE_SIZE = 5;
 
-const CATEGORY_OPTIONS = ["Case Study","Articles"];
+  const CATEGORY_OPTIONS = ["Case Study","Articles"];
+  const CAPABILITY_OPTIONS = [
+    "Digital Transformation",
+    "Public Sector",
+    "Artificial Intelligence",
+    "Program Management",
+    "Social Impact",
+    "Business Intelligence",
+    "Climate, Sustainability",
+    "Agriculture",
+  ];
+
+
 const INDUSTRY_OPTIONS = [
-  "Public sector",
-  "Agriculture",
+  "Materials",
+  "Utilities",
+  "Real Estate",
+  "Financials",
+  "Consumer Discretionary",
+  "Consumer Staples",
   "Healthcare",
-  "Finance",
-  "Manufacturing",
-  "Government"
+  "Industrials",
+  "Information Technology",
+  "Communications Services",
+  "Energy",
 ];
-const SORT_OPTIONS = ["Latest First", "Oldest First"];    
+    
 
 
+  function FilterDropdown({
+    label,
+    value,
+    options,
+    onChange,
+    isOpen,
+    onToggle,
+  }: {
+    label: string;
+    value: string;
+    options: string[];
+    onChange: (value: string) => void;
+    isOpen: boolean;
+    onToggle: () => void;
+  }) {
+    const ref = useRef<HTMLDivElement>(null);
 
-function FilterDropdown({
-  label,
-  value,
-  options,
-  onChange,
-  isOpen,
-  onToggle,
-}: {
-  label: string;
-  value: string;
-  options: string[];
-  onChange: (value: string) => void;
-  isOpen: boolean;
-  onToggle: () => void;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+      if (!isOpen) return;
+      const handleClickOutside = (e: MouseEvent) => {
+        if (ref.current && !ref.current.contains(e.target as Node)) {
+          onToggle();
+        }
+      };
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, [isOpen, onToggle]);
 
-  useEffect(() => {
-    if (!isOpen) return;
-    const handleClickOutside = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
-        onToggle();
+    return (
+      <div ref={ref} className="relative flex flex-1 flex-col gap-1.5 ">
+        <span className="text-sm font-medium text-black/70 ">{label}</span>
+        <button
+          type="button"
+          onClick={onToggle}
+          className="flex w-full items-center justify-between rounded-lg border border-black/70 bg-white px-3 py-2.5 text-sm text-gray-700 transition-colors hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+        >
+          <span >{value}</span>
+          <ArrowDown
+            className={`h-4 w-4 transition-transform ${isOpen ? "rotate-180" : ""}`}
+            strokeWidth={1.75}
+          />
+        </button>
+        {isOpen && (
+          <div className="absolute left-0 right-0 top-full z-20 mt-1 max-h-60 overflow-auto rounded-lg border border-gray-200 bg-white  ">
+            {options.map((option) => (
+              <button
+                key={option}
+                type="button"
+                onClick={() => {
+                  onChange(option);
+                  onToggle();
+                }}
+                className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-50 ${
+                  option === value ? "bg-gray-50 font-medium text-gray-900" : "text-gray-600"
+                }`}
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  function Pagination({
+    currentPage,
+    totalPages,
+    onPageChange,
+  }: {
+    currentPage: number;
+    totalPages: number;
+    onPageChange: (page: number) => void;
+  }) {
+    const pages = useMemo(() => {
+      const maxVisible = 5;
+      if (totalPages <= maxVisible + 2) {
+        return Array.from({ length: totalPages }, (_, i) => i + 1);
       }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [isOpen, onToggle]);
 
-  return (
-    <div ref={ref} className="relative flex flex-1 flex-col gap-1.5 ">
-      <span className="text-xs font-medium text-black/70 ">{label}</span>
-      <button
-        type="button"
-        onClick={onToggle}
-        className="flex w-full items-center justify-between rounded-lg border border-black/70 bg-white px-3 py-2.5 text-sm text-gray-700 transition-colors hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+      const result: (number | "ellipsis")[] = [1];
+      const start = Math.max(2, currentPage - 1);
+      const end = Math.min(totalPages - 1, currentPage + 1);
+
+      if (start > 2) result.push("ellipsis");
+      for (let p = start; p <= end; p++) result.push(p);
+      if (end < totalPages - 1) result.push("ellipsis");
+      result.push(totalPages);
+
+      return result;
+    }, [currentPage, totalPages]);
+
+    if (totalPages <= 1) return null;
+
+    return (
+      <nav
+        aria-label="Pagination"
+        className="mt-10 mb-0 flex items-center justify-center gap-1.5 sm:gap-2"
       >
-        <span >{value}</span>
-        <ArrowDown
-          className={`h-4 w-4 transition-transform ${isOpen ? "rotate-180" : ""}`}
-          strokeWidth={1.75}
-        />
-      </button>
-      {isOpen && (
-        <div className="absolute left-0 right-0 top-full z-20 mt-1 max-h-60 overflow-auto rounded-lg border border-gray-200 bg-white ">
-          {options.map((option) => (
+
+        {pages.map((page, idx) =>
+          page === "ellipsis" ? (
+            <span
+              key={`ellipsis-${idx}`}
+              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center text-sm sm:text-base text-gray-400"
+            >
+              …
+            </span>
+          ) : (
             <button
-              key={option}
+              key={page}
               type="button"
-              onClick={() => {
-                onChange(option);
-                onToggle();
-              }}
-              className={`block w-full text-left px-3 py-2 text-sm hover:bg-gray-50 ${
-                option === value ? "bg-gray-50 font-medium text-gray-900" : "text-gray-600"
+              onClick={() => onPageChange(page)}
+              aria-current={page === currentPage ? "page" : undefined}
+              className={`flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-md text-sm sm:text-base font-medium transition-colors border border-gray-300 ${
+                page === currentPage
+                  ? "bg-[#EEFCD1] text-gray-900"
+                  : "text-gray-900 hover:bg-gray-100"
               }`}
             >
-              {option}
+              {page}
             </button>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
+          )
+        )}
 
-function Pagination({
-  currentPage,
-  totalPages,
-  onPageChange,
-}: {
-  currentPage: number;
-  totalPages: number;
-  onPageChange: (page: number) => void;
-}) {
-  const pages = useMemo(() => {
-    const maxVisible = 5;
-    if (totalPages <= maxVisible + 2) {
-      return Array.from({ length: totalPages }, (_, i) => i + 1);
-    }
-
-    const result: (number | "ellipsis")[] = [1];
-    const start = Math.max(2, currentPage - 1);
-    const end = Math.min(totalPages - 1, currentPage + 1);
-
-    if (start > 2) result.push("ellipsis");
-    for (let p = start; p <= end; p++) result.push(p);
-    if (end < totalPages - 1) result.push("ellipsis");
-    result.push(totalPages);
-
-    return result;
-  }, [currentPage, totalPages]);
-
-  if (totalPages <= 1) return null;
-
-  return (
-    <nav
-      aria-label="Pagination"
-      className="mt-10 mb-0 flex items-center justify-center gap-1.5 sm:gap-2"
-    >
-
-      {pages.map((page, idx) =>
-        page === "ellipsis" ? (
-          <span
-            key={`ellipsis-${idx}`}
-            className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center text-sm sm:text-base text-gray-400"
-          >
-            …
-          </span>
-        ) : (
-          <button
-            key={page}
-            type="button"
-            onClick={() => onPageChange(page)}
-            aria-current={page === currentPage ? "page" : undefined}
-            className={`flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-md text-sm sm:text-base font-medium transition-colors border border-gray-300 ${
-              page === currentPage
-                ? "bg-[#EEFCD1] text-gray-900"
-                : "text-gray-900 hover:bg-gray-100"
-            }`}
-          >
-            {page}
-          </button>
-        )
-      )}
-
-      <button
-        type="button"
-        onClick={() => onPageChange(Math.min(totalPages, currentPage + 1))}
-        disabled={currentPage === totalPages}
-        aria-label="Next page"
-        className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-lg border border-gray-300 text-gray-500 transition-colors hover:border-gray-400 hover:text-gray-700 disabled:cursor-not-allowed disabled:opacity-40"
-      >
-        <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" strokeWidth={1.75} />
-      </button>
-    </nav>
-  );
-}
+        <button
+          type="button"
+          onClick={() => onPageChange(Math.min(totalPages, currentPage + 1))}
+          disabled={currentPage === totalPages}
+          aria-label="Next page"
+          className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-lg border border-gray-300 text-gray-500 transition-colors hover:border-gray-400 hover:text-gray-700 disabled:cursor-not-allowed disabled:opacity-40"
+        >
+          <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" strokeWidth={1.75} />
+        </button>
+      </nav>
+    );
+  }
 
 
-export default function CaseStudyResult() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [category, setCategory] = useState(CATEGORY_OPTIONS[0]);
-  const [industry, setIndustry] = useState(INDUSTRY_OPTIONS[0]);
-  const [sortBy, setSortBy] = useState(SORT_OPTIONS[0]);
-  const [openFilter, setOpenFilter] = useState<string | null>(null);
-  const resultsRef = React.useRef<HTMLDivElement>(null);
+  export default function CaseStudyResult() {
+    const [currentPage, setCurrentPage] = useState(1);
+    const [category, setCategory] = useState(CATEGORY_OPTIONS[0]);
+    const [capability, setCapability] = useState(CAPABILITY_OPTIONS[0]);
+    const [industry, setIndustry] = useState(INDUSTRY_OPTIONS[0]);
+    const [openFilter, setOpenFilter] = useState<string | null>(null);
+    const resultsRef = React.useRef<HTMLDivElement>(null);
 
-  const filteredReports = useMemo(() => {
-    const list =
-      category === "All Insights"
-        ? [...ALL_STUDIES]
-        : ALL_STUDIES.filter((r) => r.category === category);
+   const filteredReports = useMemo(() => {
+  return ALL_STUDIES.filter((r) => r.category === category);
+}, [category]);
 
-    if (sortBy === "Title A-Z") {
-      list.sort((a, b) => a.title.localeCompare(b.title));
-    } else if (sortBy === "Title Z-A") {
-      list.sort((a, b) => b.title.localeCompare(a.title));
-    } else {
-      list.sort((a, b) => {
-        const da = new Date(a.date).getTime();
-        const db = new Date(b.date).getTime();
-        return sortBy === "Oldest First" ? da - db : db - da;
-      });
-    }
+    const totalPages = Math.ceil(filteredReports.length / PAGE_SIZE);
 
-    return list;
-  }, [category, sortBy]);
+    const visibleCards = useMemo(() => {
+      const start = (currentPage - 1) * PAGE_SIZE;
+      return filteredReports.slice(start, start + PAGE_SIZE);
+    }, [filteredReports, currentPage]);
 
-  const totalPages = Math.ceil(filteredReports.length / PAGE_SIZE);
+    const handlePageChange = (page: number) => {
+      setCurrentPage(page);
+      setTimeout(() => {
+        if (resultsRef.current) {
+          const elementTop = resultsRef.current.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({
+            top: elementTop - 120,
+            behavior: "smooth"
+          });
+        }
+      }, 0);
+    };
 
-  const visibleCards = useMemo(() => {
-    const start = (currentPage - 1) * PAGE_SIZE;
-    return filteredReports.slice(start, start + PAGE_SIZE);
-  }, [filteredReports, currentPage]);
+    const handleFilterChange = (setter: (value: string) => void) => (value: string) => {
+      setter(value);
+      setCurrentPage(1);
+    };
 
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-    setTimeout(() => {
-      if (resultsRef.current) {
-        const elementTop = resultsRef.current.getBoundingClientRect().top + window.scrollY;
-        window.scrollTo({
-          top: elementTop - 120,
-          behavior: "smooth"
-        });
-      }
-    }, 0);
-  };
+    const handleClearAll = () => {
+      setCategory(CATEGORY_OPTIONS[0]);
+      setCapability(CAPABILITY_OPTIONS[0]);
+      setIndustry(INDUSTRY_OPTIONS[0]);
+      setCurrentPage(1);
+    };
 
-  const handleFilterChange = (setter: (value: string) => void) => (value: string) => {
-    setter(value);
-    setCurrentPage(1);
-  };
+    return (
+      <div className="min-h-screen bg-white">
+        <div className="page-container py-8 sm:py-8 md:py-10 lg:py-8 xl:py-10 2xl:py-12" ref={resultsRef}>
+          <Reveal as="div" variant="upSm" custom={0}>
+            <div className="flex items-center justify-between">
+              <h2 className=" text-body-xl font-semibold text-gray-900">
+                {filteredReports.length} Results
+              </h2>
+              <button
+                type="button"
+                onClick={handleClearAll}
+                className="text-xs font-medium text-primary hover:text-blue-700"
+              >
+                Clear All
+              </button>
+            </div>
+          </Reveal>
+          <div className="mt-1 border-t border-gray-200" />
 
-  const handleClearAll = () => {
-    setCategory(CATEGORY_OPTIONS[0]);
-    setIndustry(INDUSTRY_OPTIONS[0]);
-    setSortBy(SORT_OPTIONS[0]);
-    setCurrentPage(1);
-  };
+          <Reveal as="div" variant="upSm" custom={1} className="mt-3 flex flex-col gap-4 sm:flex-row sm:gap-6">
+            <FilterDropdown
+              label="Category"
+              value={category}
+              options={CATEGORY_OPTIONS}
+              onChange={handleFilterChange(setCategory)}
+              isOpen={openFilter === "Category"}
+              onToggle={() => setOpenFilter((cur) => (cur === "Category" ? null : "Category"))}
+            />
+            <FilterDropdown
+              label="Capabilities"
+              value={capability}
+              options={CAPABILITY_OPTIONS}
+              onChange={handleFilterChange(setCapability)}
+              isOpen={openFilter === "Capabilities"}
+              onToggle={() => setOpenFilter((cur) => (cur === "Capabilities" ? null : "Capabilities"))}
+            />
+            <FilterDropdown
+              label="Industries"
+              value={industry}
+              options={INDUSTRY_OPTIONS}
+              onChange={handleFilterChange(setIndustry)}
+              isOpen={openFilter === "Industries"}
+              onToggle={() => setOpenFilter((cur) => (cur === "Industries" ? null : "Industries"))}
+            />
+          </Reveal>
 
-  return (
-    <div className="min-h-screen bg-white">
-      <div className="page-container py-8 sm:py-8 md:py-10 lg:py-8 xl:py-10 2xl:py-12" ref={resultsRef}>
-        <div className="">
-          <div className="flex items-center justify-between">
-            <h2 className=" text-body-xl font-semibold text-gray-900">
-              {filteredReports.length} Results
-            </h2>
-            <button
-              type="button"
-              onClick={handleClearAll}
-              className="text-xs font-medium text-primary hover:text-blue-700"
-            >
-              Clear All
-            </button>
+          <div className="mt-3 border-t border-gray-200" />
+          <div className="mt-8 grid grid-cols-1 gap-4">
+            {visibleCards.map((study, idx) => (
+              <Reveal as="div" variant="upSm" custom={idx} key={idx}>
+                <StudyCard study={study} />
+              </Reveal>
+            ))}
           </div>
-        </div>
-        <div className="mt-1 border-t border-gray-200" />
 
-        <div className="mt-3 flex flex-col gap-4 sm:flex-row sm:gap-6">
-          <FilterDropdown
-            label="Category"
-            value={category}
-            options={CATEGORY_OPTIONS}
-            onChange={handleFilterChange(setCategory)}
-            isOpen={openFilter === "Category"}
-            onToggle={() => setOpenFilter((cur) => (cur === "Category" ? null : "Category"))}
-          />
-          <FilterDropdown
-            label="Industry Filter"
-            value={industry}
-            options={INDUSTRY_OPTIONS}
-            onChange={handleFilterChange(setIndustry)}
-            isOpen={openFilter === "Industry Filter"}
-            onToggle={() => setOpenFilter((cur) => (cur === "Industry Filter" ? null : "Industry Filter"))}
-          />
-          <FilterDropdown
-            label="Sort By"
-            value={sortBy}
-            options={SORT_OPTIONS}
-            onChange={handleFilterChange(setSortBy)}
-            isOpen={openFilter === "Sort By"}
-            onToggle={() => setOpenFilter((cur) => (cur === "Sort By" ? null : "Sort By"))}
-          />
+          <Reveal as="div" variant="upSm" custom={0}>
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={handlePageChange}
+            />
+          </Reveal>
         </div>
-
-        <div className="mt-3 border-t border-gray-200" />
-        <div className="mt-8 grid grid-cols-1 gap-4">
-          {visibleCards.map((study, idx) => (
-            <StudyCard study={study} key={idx} />
-          ))}
-        </div>
-
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={handlePageChange}
-        />
       </div>
-    </div>
-  );
-}
+    );
+  }

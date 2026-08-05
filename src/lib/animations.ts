@@ -1,9 +1,6 @@
 import { cubicBezier, type Variants } from "framer-motion";
 
-/**
- * Premium Motion Presets
- * Smooth, modern animations inspired by Apple, Linear, Stripe & Framer.
- */
+
 
 const easeOut = cubicBezier(0.22, 1, 0.36, 1);
 const smoothEase = cubicBezier(0.16, 1, 0.3, 1);
@@ -24,8 +21,8 @@ export const fadeUp: Variants = {
     y: 0,
 
     transition: {
-      duration: 1.6,
-      delay: i * 0.18,
+      duration: 1.9,
+      delay: i * 0.22,
       ease: smoothEase,
     },
   }),
@@ -56,8 +53,8 @@ export const fadeUpSm: Variants = {
     y: 0,
 
     transition: {
-      duration: 0.7,
-      delay: i * 0.1,
+      duration: 1.05,
+      delay: i * 0.15,
       ease: easeOut,
     },
   }),
@@ -88,8 +85,8 @@ export const fadeLeft: Variants = {
     x: 0,
 
     transition: {
-      duration: 0.85,
-      delay: i * 0.12,
+      duration: 1.15,
+      delay: i * 0.15,
       ease: easeOut,
     },
   }),
@@ -120,8 +117,8 @@ export const fadeRight: Variants = {
     x: 0,
 
     transition: {
-      duration: 0.85,
-      delay: i * 0.12,
+      duration: 1.15,
+      delay: i * 0.15,
       ease: easeOut,
     },
   }),
@@ -152,8 +149,8 @@ export const scaleFade: Variants = {
     scale: 1,
 
     transition: {
-      duration: 0.85,
-      delay: i * 0.12,
+      duration: 1.15,
+      delay: i * 0.15,
       ease: easeOut,
     },
   }),
@@ -182,7 +179,7 @@ export const fade: Variants = {
     opacity: 1,
 
     transition: {
-      duration: 0.9,
+      duration: 1.2,
       ease: easeInOut,
     },
   },
@@ -206,8 +203,8 @@ export const staggerContainer: Variants = {
 
   visible: {
     transition: {
-      delayChildren: 0.2,
-      staggerChildren: 0.3,
+      delayChildren: 0.25,
+      staggerChildren: 0.35,
     },
   },
 };
@@ -225,8 +222,8 @@ export const revealUp: Variants = {
     y: "0%",
 
     transition: {
-      duration: 0.9,
-      delay: i * 0.1,
+      duration: 1.2,
+      delay: i * 0.15,
       ease: easeOut,
     },
   }),
@@ -247,7 +244,7 @@ export const imageReveal: Variants = {
     scale: 1,
 
     transition: {
-      duration: 1.1,
+      duration: 1.4,
       ease: easeOut,
     },
   },

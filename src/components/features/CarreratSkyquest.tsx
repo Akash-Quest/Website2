@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Reveal from "@/components/ui/Reveal";
 export interface BentoGridImages {
   holi?: string;
   girls?: string;
@@ -94,12 +95,17 @@ export default function CareerAtSkyquest({
       <div className="page-container">
         {/* Eyebrow + heading */}
         <div className="text-left lg:text-center">
-          <h2 className=" font-bold text-gray-900">
+          <Reveal as="h2" variant="upSm" custom={0} className=" font-bold text-gray-900">
             Life <em className="font-semibold">@SkyQuest</em>
-          </h2>
-          <p className="text-body-sm lg:mx-auto max-w-2xl text-muted ">
+          </Reveal>
+          <Reveal
+            as="p"
+            variant="upSm"
+            custom={1}
+            className="text-body-sm lg:mx-auto max-w-2xl text-muted "
+          >
             At SkyQuest, celebrations and camaraderie happen throughout the week, creating a culture where work and fun go hand in hand.
-          </p>
+          </Reveal>
         </div>
 
         {/* Bentogram: same pixel-accurate proportional collage at every breakpoint */}
@@ -107,9 +113,11 @@ export default function CareerAtSkyquest({
           className="relative mx-auto w-full max-w-[1920px]"
           style={{ aspectRatio: "1142 / 537" }}
         >
-          {CARDS.map((card) => (
-            <div
+          {CARDS.map((card, idx) => (
+            <Reveal
               key={card.key}
+              variant="scale"
+              custom={idx}
               className={`group absolute overflow-hidden bg-gray-100  ${RADIUS} ${card.positionClass}`}
             >
               <Image
@@ -120,7 +128,7 @@ export default function CareerAtSkyquest({
                 className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.06]"
                 priority={card.priority}
               />
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

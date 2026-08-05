@@ -10,15 +10,17 @@ import { ArtificalIntelFaqData, ArtificialHeroData } from '@/Constants/Service/A
 import Technologies from '@/components/features/ArtificialIntel/Technologies';
 import WeServe from '@/components/features/ArtificialIntel/WeServe';
 import EnterpriseAiSolution from '@/components/features/ArtificialIntel/EnterpriseAiSolution';
-import InsightImpact from '@/components/features/HomeInsightImpact';
 import OtherServicesSection from '@/components/features/OtherServices';
 import EnterpriseChallenges from '@/components/features/ArtificialIntel/EnterpriseChallenges';
+import AiInsightImpact from '@/components/features/AiInsight';
 function HeroPage(){
   return(
     <ServiceHeroPage {...ArtificialHeroData} />
   )
 }
 import type { Metadata } from "next";
+
+
 
 export const metadata: Metadata = {
   title:
@@ -69,7 +71,7 @@ export default function SocialImpactService(){
        ]}
      />
      <EnterpriseChallenges />
-     <InsightImpact />
+     <AiInsightImpact />
     <EnterpriseAiSolution />
       <WeServe /> 
      <CaseStudies {...caseStudiesData} bgClassName='bg-white'/>

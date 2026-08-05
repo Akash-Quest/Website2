@@ -1,6 +1,9 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { fadeUpSm, fadeLeft, imageReveal } from "@/lib/animations";
 
 interface ServiceHeroPageProps {
   breadcrumbLabel: string;
@@ -42,22 +45,47 @@ export default function ServiceHeroPage({
         </nav>
         <div className="px-[2] sm:px-2 pt-5 ">
           {/* Eyebrow */}
-          <p className="text-center text-primary mt-8 sm:mt-8 md:mt-2 text-body-sm font-medium ">
+          <motion.p
+            custom={0}
+            variants={fadeUpSm}
+            initial="hidden"
+            animate="visible"
+            className="text-center text-primary mt-8 sm:mt-8 md:mt-2 text-body-sm font-medium "
+          >
             {eyebrow}
-          </p>
+          </motion.p>
 
           {/* Heading */}
-          <h1 className="text-center font-bold md:max-w-[85%] mx-auto">{heading}</h1>
+          <motion.h1
+            custom={1}
+            variants={fadeLeft}
+            initial="hidden"
+            animate="visible"
+            className="text-center font-bold md:max-w-[85%] mx-auto"
+          >
+            {heading}
+          </motion.h1>
 
           {/* Subheading */}
-          <p className=" mx-auto mt-1 text-center mb-5 max-w-[85%] text-muted text-body-lg leading-tight">
+          <motion.p
+            custom={2}
+            variants={fadeUpSm}
+            initial="hidden"
+            animate="visible"
+            className=" mx-auto mt-1 text-center mb-5 max-w-[85%] text-muted text-body-lg leading-tight"
+          >
             {description}
-          </p>
+          </motion.p>
         </div>
 
         {/* Hero Image */}
         <div className="sm:px-[4]">
-          <div className="relative w-full aspect-[3/3.5]  md:aspect-[3/0.9] 2xl:aspect-[3/1]   sm:rounded-2xl overflow-hidden">
+          <motion.div
+            variants={imageReveal}
+            initial="hidden"
+            animate="visible"
+            className="relative w-full aspect-[3/3.5]  md:aspect-[3/0.9] 2xl:aspect-[3/1]   sm:rounded-2xl overflow-hidden"
+          >
             <Image
               src={imageSrc}
               alt={imageAlt}
@@ -65,7 +93,7 @@ export default function ServiceHeroPage({
               priority
               className="object-cover object-center"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

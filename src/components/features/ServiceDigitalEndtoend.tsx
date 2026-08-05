@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Reveal from "@/components/ui/Reveal";
 
 type Tool = {
   icons: string[];
@@ -25,21 +26,33 @@ export default function EndtoEnd({
       <div className="page-container">
         {/* Header */}
         <div className="relative text-center">
-          <p className="text-body-sm text-primary font-medium">
-          {eyebrow}
-        </p>
-          <h2 className="font-bold">
+          <Reveal
+            as="p"
+            variant="upSm"
+            custom={0}
+            className="text-body-sm text-primary font-medium"
+          >
+            {eyebrow}
+          </Reveal>
+          <Reveal as="h2" variant="upSm" custom={1} className="font-bold">
             {heading}
-          </h2>
-          <p className="mx-auto lg:max-w-[50%]  text-muted">
+          </Reveal>
+          <Reveal
+            as="p"
+            variant="upSm"
+            custom={2}
+            className="mx-auto lg:max-w-[50%]  text-muted"
+          >
             {description}
-          </p>
+          </Reveal>
           </div>
           {/* gride service */}
           <div className="mt-10 grid grid-cols-2  gap-5  sm:gap-y-5 md:gap-y-8 2xl:gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
           {tools.map(({ icons, title, description }, idx) => (
-            <div
+            <Reveal
               key={title}
+              variant="upSm"
+              custom={idx}
               className={`text-left sm:pl-3 ${idx % 2 !== 0 ? "sm:border-l sm:border-black/30" : ""} ${idx % 4 !== 0 ? "lg:border-l lg:border-black/30" : "lg:border-l-0"}`}
             >
               <div className="flex items-center gap-2">
@@ -64,7 +77,7 @@ export default function EndtoEnd({
               <p className=" text-muted ">
                 {description}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

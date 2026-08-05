@@ -53,9 +53,9 @@ function PanelHeading({
   if (!heading && !description) return null;
   return (
     <div className={className}>
-      {heading && <p className=" font-semibold text-gray-900">{heading}</p>}
+      {heading && <p className="  text-body-lg">{heading}</p>}
       {description && (
-        <p className="mt-1 text-body-sm text-gray-500">{renderBoldSegments(description)}</p>
+        <p className="mt-1 text-sm text-gray-500">{renderBoldSegments(description)}</p>
       )}
     </div>
   );
@@ -75,7 +75,7 @@ function ColumnsList({
       {(content.columns ?? []).map((column, i) => (
         <div key={i}>
           {column.heading && (
-            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-400">
+            <p className="mb-2 text-body-lg font-semibold uppercase tracking-wide text-gray-400">
               {column.heading}
             </p>
           )}
@@ -87,9 +87,9 @@ function ColumnsList({
                   <button
                     type="button"
                     onClick={() => onSelect(link.href)}
-                    className={`group flex w-full items-center justify-between gap-2 rounded-lg py-3 px-5  text-left text-base leading-tight transition-colors 2xl:text-lg ${
+                    className={`group flex w-full items-center justify-between rounded-lg py-[clamp(0.375rem,1.2vh,0.75rem)] pl-3 pr-4 text-left text-body-lg transition-colors 2xl:pl-5 2xl:pr-8 2xl:text-xl ${
                       isActive
-                        ? "bg-background font-normal text-[#03030F]"
+                        ? "bg-background font-semibold text-[#03030F]"
                         : "text-gray-600 hover:bg-[#EAEAF8]"
                     }`}
                   >
@@ -158,13 +158,13 @@ function DrilldownNavList({
           <button
             type="button"
             onClick={() => onHover(item.label)}
-            className={`group flex w-full items-center justify-between rounded-lg py-3 px-4 text-left transition-colors ${
+            className={`group flex w-full items-center justify-between rounded-lg py-[clamp(0.375rem,1.2vh,0.75rem)] pl-3 pr-4 text-left text-body-lg transition-colors 2xl:pl-5 2xl:pr-8 2xl:text-xl ${
               active === item.label
-                ? "bg-background font-normal text-[#03030F]"
-                : "text-gray-700 hover:bg-[#EAEAF8]"
+                 ? "bg-background font-semibold text-[#03030F]"
+                  : "text-gray-700 hover:bg-[#EAEAF8]"
             }`}
           >
-            <p>{item.label}</p>
+            {item.label}
             <ActiveArrow
               size={24}
               className={`text-[#03030F] transition-opacity ${
@@ -192,14 +192,16 @@ function DrilldownLinkList({
           <Link
             href={link.href}
             onClick={onNavigate}
-            className={`group flex w-full items-center justify-between gap-1.5 rounded-lg py-2 pl-4 pr-3 text-sm leading-tight transition-colors hover:bg-[#EAEAF8] ${
-              link.featured ? "font-semibold text-gray-900" : "text-gray-600"
+            className={`group flex w-full items-center justify-between rounded-lg py-[clamp(0.375rem,1.2vh,0.75rem)] pl-3 pr-4 text-left text-body-lg transition-colors 2xl:pl-5 2xl:pr-8 2xl:text-xl ${
+              link.featured
+                ? "bg-background font-semibold text-[#03030F]"
+                : "text-gray-700 hover:bg-[#EAEAF8]"
             }`}
           >
             {link.label}
             <ActiveArrow
-              size={14}
-              className={`text-gray-400 transition-opacity ${
+              size={24}
+              className={`text-[#03030F] transition-opacity ${
                 link.featured ? "opacity-100" : "opacity-0 group-hover:opacity-100"
               }`}
             />
@@ -334,7 +336,9 @@ export default function MegaMenu({
                 <X size={20} />
               </button>
 
-              <img src="/Header/sky.svg" alt="SkyQuest" className="h-5 w-auto sm:h-6" />
+              <Link href="/" onClick={() => setOpen(false)}>
+                <img src="/Header/sky.svg" alt="SkyQuest" className="h-5 w-auto sm:h-6" />
+              </Link>
             </div>
 
             <div className="hidden h-10 flex-1 items-center gap-2 rounded-lg border border-gray-200 px-3 text-lg text-[#03030F]/40 sm:flex 2xl:h-10">
@@ -553,7 +557,7 @@ export default function MegaMenu({
                             onClick={() => setActiveItemId(item.id)}
                             className={`group flex w-full items-center justify-between rounded-lg py-[clamp(0.375rem,1.2vh,0.75rem)] pl-3 pr-4 text-left text-body-lg transition-colors 2xl:pl-5 2xl:pr-8 2xl:text-xl ${
                               activeItemId === item.id
-                                ? "bg-background font-normal text-[#03030F]"
+                                ? "bg-background font-semibold text-[#03030F]"
                                 : "text-gray-700 hover:bg-[#EAEAF8]"
                             }`}
                           >
@@ -588,18 +592,20 @@ export default function MegaMenu({
             {activeContent?.kind === "columns" && (
               <>
                 {hasColumnLinks && (
-                  <div className="scrollbar-hide overflow-y-auto border-r border-[#03030F]/20 px-6 py-2 sm:px-4 ">
+                  <div className="flex min-h-0 flex-col border-r border-[#03030F]/20">
                     <PanelHeading
                       heading={activeContent.heading}
                       description={activeContent.description}
-                      className="-mx-6 mb-6 border-b border-[#03030F]/20 px-6 pb-2  sm:px-8"
+                      className="shrink-0 border-b border-[#03030F]/20 px-8 py-2 sm:px-8"
                     />
 
-                    <ColumnsList
-                      content={activeContent}
-                      activeHref={activeLinkHref}
-                      onSelect={setActiveLinkHref}
-                    />
+                    <div className="scrollbar-hide min-h-0 flex-1 overflow-y-auto px-6 py-2 sm:px-4">
+                      <ColumnsList
+                        content={activeContent}
+                        activeHref={activeLinkHref}
+                        onSelect={setActiveLinkHref}
+                      />
+                    </div>
                   </div>
                 )}
 
@@ -614,7 +620,7 @@ export default function MegaMenu({
                 <PanelHeading
                   heading={activeContent.heading}
                   description={activeContent.description}
-                  className="sm:col-span-3 border-b border-[#03030F]/20 px-4 pb-6 pt-6 sm:px-4"
+                  className="sm:col-span-3 border-b border-[#03030F]/20 py-2 sm:px-6"
                 />
 
                 <div className="overflow-y-auto border-r border-[#03030F]/20 px-2 py-6 sm:px-4">

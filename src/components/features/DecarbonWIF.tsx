@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Courthouse, Bank, Buildings } from 'iconsax-react';
+import Reveal from '@/components/ui/Reveal';
 
 export default function DecarbonWIF() {
   const features = [
@@ -56,23 +57,26 @@ export default function DecarbonWIF() {
         
         {/* ── HEADER ── */}
         <div className="text-center mb-16 md:mb-20">
-          <span className=" font-semibold text-[#CBCBFF] mb-3 block">
+          <Reveal as="span" variant="upSm" custom={0} className=" font-semibold text-[#CBCBFF] mb-3 block">
             <p className='text-lg tracking-wide'>Who DeCarbonX Is For</p>
-          </span>
-          <h2 className="font-semibold text-white">
+          </Reveal>
+          <Reveal as="h2" variant="upSm" custom={1} className="font-semibold text-white">
             Built for the Climate Finance  <br />
             <em className="font-semibold text-white">Ecosystem</em>
-          </h2>
-          <p className="text-white/80 mt-2 max-w-2xl mx-auto ">
+          </Reveal>
+          <Reveal as="p" variant="upSm" custom={2} className="text-white/80 mt-2 max-w-2xl mx-auto ">
             Connect governments, climate project developers, investors, and key stakeholders through a unified digital platform for climate finance.
-          </p>
+          </Reveal>
         </div>
 
         {/* ── FEATURE GRID (GLASS CARDS WITHOUT HEAD) ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {features.map((feature, idx) => (
-            <div 
-              key={idx} 
+            <Reveal
+              as="div"
+              variant="upSm"
+              custom={idx}
+              key={idx}
               className="group flex flex-col items-start gap-4 p-6 sm:p-8 rounded-2xl bg-white/[0.2]  border border-white/10 hover:border-white/20 hover:bg-white/[0.12] transition-all duration-300 shadow-xl"
             >
               {/* Rounded Icon Container */}
@@ -85,12 +89,12 @@ export default function DecarbonWIF() {
                 <h3 className="font-semibold text-body-xl text-white mb-2  ">
                   {feature.title}
                 </h3>
-                
+
                 <p className=" text-white leading-snug tracking-wide">
                   {feature.desc}
                 </p>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
 

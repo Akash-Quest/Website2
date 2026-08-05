@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Reveal from "../ui/Reveal";
 
 type Member = {
   name: string;
@@ -12,56 +13,88 @@ type Member = {
 };
 
 const members: Member[] = [
+  
   {
     name: "Shriya Damani",
-    title: "Co-Founder & CEO, Skyquest",
+    title: "Co-Founder & CEO",
     location: "Ahmedabad, India",
     image: "/Careers/Shriya.jpg",
     linkedin: "https://in.linkedin.com/in/shriya-damani-b460936",
   },
   {
     name: "Akash Bhavsar",
-    title: "Co-founder,Skyquest",
+    title: "Co-founder",
     location: "Ahmedabad, India",
     image: "/Careers/Akash.jpg",
     linkedin: "https://www.linkedin.com/in/akashbhavsar",
   },
   {
-    name: "Radhika Dhand",
+    name: "Rajeev Sharan",
+    title: "Project Director - Seed",
+    location: "Delhi, India",
+    image: "/Careers/Rajeev.jpg",
+  },
+  {
+    name: "Harshita Gupta",
     title: "Sr. Associate Consultant",
-    location: "Ahmedabad, India",
-    image: "/Careers/Radhika.jpg",
+    location: "Delhi, India",
+    image: "/Careers/Harshita.jpg",
   },
   {
-    name: "Mohana Subramanian ",
-    title: "Senior Consultant – R&D",
-    location: "Ahmedabad, India",
-    image: "/Careers/Mohan.jpg",
+    name: "Teresa Khanna",
+    title: "Sr. Associate Consultant",
+    location: "Noida, India",
+    image: "/Careers/Teresa.jpg",
   },
   {
-    name: "Vidushi Tiwari",
+    name: "Disha Yadav",
     title: "Associate Consultant",
-    location: "Ahmedabad, India",
-    image: "/Careers/Vidush.jpg",
+    location: "Delhi, India",
+    image: "/Careers/Disha.jpg",
   },
   {
-    name: "Raghav Goel",
-    title: "Associate Consultant",
-    location: "Ahmedabad, India",
-    image: "/Careers/Raghav.jpg",
+    name: "Yogender Narayan",
+    title: "Associate Strategy Consultant",
+    location: "Delhi, India",
+    image: "/Careers/Yogender.jpg",
   },
+   {
+    name: "Sambhav Jain",
+    title: "Associate Consultant",
+    location: "Delhi, India",
+    image: "/Careers/Sambhav.jpg",
+  },
+ 
   {
     name: "Antra Thada",
     title: "Consultant",
-    location: "Ahmedabad, India",
-    image: "/Careers/Antra.jpg",
+    location: "Delhi, India",
+    image: "/Careers/Antara.jpg",
   },
-  
+    
+  {
+    name: "Nidhi Verma",
+    title: "Consultant",
+    location: "Delhi, India",
+    image: "/Careers/Nidhi.jpg",
+  },
+  {
+    name: "Swapna Singh",
+    title: "Lead Senior Research Analyst",
+    location: "Ahmedabad, India",
+    image: "/Careers/Swapna.jpg",
+  },
+  {
+    name: "Addisu Asfaw",
+    title: "Senior Consultant",
+    location: "Addis Ababa, Ethiopia",
+    image: "/Careers/Addisu.jpg",
+  },
 ];
 
-function MemberCard({ member }: { member: Member }) {
+function MemberCard({ member, showIcons = true, index = 0 }: { member: Member; showIcons?: boolean; index?: number }) {
   return (
-    <div className="flex gap-4 bg-background rounded-xl p-2 ">
+    <Reveal as="div" variant="upSm" custom={index} className="flex gap-4 bg-background rounded-xl p-2 ">
       {/* Left: Image */}
       <img
         src={member.image}
@@ -75,36 +108,38 @@ function MemberCard({ member }: { member: Member }) {
           <p className=" text-[#03030FB2] ">{member.title}</p>
           <p className=" text-[#03030FB2] ">{member.location}</p>
         </div>
-        <div className="flex justify-end gap-2 mt-0">
-          <Link
-            href="/contact"
-            aria-label={`Email ${member.name}`}
-            className="w-7 h-7 flex items-center justify-center rounded-sm border-none text-gray-500 bg-white"
-          >
-            <Image src="/Careers/mail.svg" alt="" width={16} height={16} className="w-6 h-6" />
-          </Link>
-          {member.linkedin ? (
-            <a
-              href={member.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`${member.name} on LinkedIn`}
+        {showIcons && (
+          <div className="flex justify-end gap-2 mt-0">
+            <Link
+              href="/contact"
+              aria-label={`Email ${member.name}`}
               className="w-7 h-7 flex items-center justify-center rounded-sm border-none text-gray-500 bg-white"
             >
-              <Image src="/Careers/linkedin.svg" alt="" width={20} height={20} className="w-6 h-6" />
-            </a>
-          ) : (
-            <button
-              type="button"
-              aria-label={`${member.name} on LinkedIn`}
-              className="w-7 h-7 flex items-center justify-center rounded-sm border-none text-gray-500 bg-white"
-            >
-              <Image src="/Careers/linkedin.svg" alt="" width={20} height={20} className="w-6 h-6" />
-            </button>
-          )}
-        </div>
+              <Image src="/Careers/mail.svg" alt="" width={16} height={16} className="w-6 h-6" />
+            </Link>
+            {member.linkedin ? (
+              <a
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${member.name} on LinkedIn`}
+                className="w-7 h-7 flex items-center justify-center rounded-sm border-none text-gray-500 bg-white"
+              >
+                <Image src="/Careers/linkedin.svg" alt="" width={20} height={20} className="w-6 h-6" />
+              </a>
+            ) : (
+              <button
+                type="button"
+                aria-label={`${member.name} on LinkedIn`}
+                className="w-7 h-7 flex items-center justify-center rounded-sm border-none text-gray-500 bg-white"
+              >
+                <Image src="/Careers/linkedin.svg" alt="" width={20} height={20} className="w-6 h-6" />
+              </button>
+            )}
+          </div>
+        )}
       </div>
-    </div>
+    </Reveal>
   );
 }
 
@@ -125,7 +160,7 @@ export default function TeamGrid() {
           <h3 className="mb-4 font-bold text-gray-900 text-body-2xl">Leadership</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {leaders.map((member, idx) => (
-              <MemberCard member={member} key={idx} />
+              <MemberCard member={member} index={idx} key={idx} />
             ))}
           </div>
         </div>
@@ -134,7 +169,7 @@ export default function TeamGrid() {
           <h3 className="mb-4 font-bold text-gray-900 text-body-2xl">Our Team</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {team.map((member, idx) => (
-              <MemberCard member={member} key={idx} />
+              <MemberCard member={member} showIcons={false} index={idx} key={idx} />
             ))}
           </div>
         </div>

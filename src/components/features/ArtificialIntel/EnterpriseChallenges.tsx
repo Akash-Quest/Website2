@@ -1,6 +1,7 @@
 "use client";
 
 import { FavoriteChart, Layer, RowHorizontal } from "iconsax-react";
+import Reveal from "@/components/ui/Reveal";
 
 const challenges = [
   {
@@ -27,17 +28,27 @@ export default function EnterpriseChallenges() {
     <section className="w-full bg-white">
       <div className="page-container">
         <div className="relative text-center">
-          <p className="mb-2 text-body-sm font-medium text-primary">
+          <Reveal
+            as="p"
+            variant="upSm"
+            custom={0}
+            className="mb-2 text-body-sm font-medium text-primary"
+          >
             The Challenge
-          </p>
-          <h2 className="font-bold">
+          </Reveal>
+          <Reveal as="h2" variant="upSm" custom={1} className="font-bold">
             Why Enterprises are Struggling
             <br />
             to <em className="font-semibold">Scale AI</em>
-          </h2>
-          <p className="mx-auto mt-2 max-w-xl  text-muted">
+          </Reveal>
+          <Reveal
+            as="p"
+            variant="upSm"
+            custom={2}
+            className="mx-auto mt-2 max-w-xl  text-muted"
+          >
             SkyQuest bridges the gap between AI potential and real enterprise impact.
-          </p>
+          </Reveal>
         </div>
 
         <div className="relative mt-20">
@@ -71,7 +82,12 @@ export default function EnterpriseChallenges() {
 
           <div className="relative grid grid-cols-1 gap-6 sm:grid-cols-3">
             {challenges.map(({ icon: Icon, title, description }, idx) => (
-              <div key={title} className="rounded-2xl bg-background p-5">
+              <Reveal
+                key={title}
+                variant="upSm"
+                custom={idx}
+                className="rounded-2xl bg-background p-5"
+              >
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-primary mb-4">
                 <Icon className="h-5 w-5 " strokeWidth={1.75} variant="TwoTone" color="currentColor"  />
                 </div>
@@ -79,7 +95,7 @@ export default function EnterpriseChallenges() {
                   {idx + 1}. {title}
                 </h3>
                 <p className="mt-1.5 text-muted">{description}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>

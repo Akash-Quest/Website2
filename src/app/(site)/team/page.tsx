@@ -1,10 +1,13 @@
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import TeamGrid from "@/components/features/CareerTeamMeber";
 import CaseStudies from "@/components/features/HomeCaseStudie";
 import { insightData } from "@/Constants/Insight ";
 import Suscribe from "@/components/features/Suscribe";
+import { fadeUpSm, fadeLeft, imageReveal } from "@/lib/animations";
 
 
 function TeamHero() {
@@ -32,7 +35,13 @@ function TeamHero() {
         <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-5  pt-10">
           {/* Left: text */}
           <div className="flex flex-col justify-center lg:items-start text-center lg:text-left">
-            <h1 className=" mb-2 font-bold text-black ">
+            <motion.h1
+              custom={0}
+              variants={fadeLeft}
+              initial="hidden"
+              animate="visible"
+              className=" mb-2 font-bold text-black "
+            >
               The People
               <br />
               Driving{" "}
@@ -41,18 +50,29 @@ function TeamHero() {
               </em>
               <br />
               <em className="font-semibold">Impact</em>
-            </h1>
+            </motion.h1>
 
-            <p className=" text-muted lg:max-w-lg px-4 lg:px-0 text-body-lg">
+            <motion.p
+              custom={1}
+              variants={fadeUpSm}
+              initial="hidden"
+              animate="visible"
+              className=" text-muted lg:max-w-lg px-4 lg:px-0 text-body-lg"
+            >
               SkyQuest brings together strategists, technologists, researchers,
               and industry experts to help governments, businesses, and
               development institutions solve complex challenges and deliver
               measurable impact across sectors and geographies.
-            </p>
+            </motion.p>
           </div>
 
           {/* Right: image */}
-          <div className="relative w-full aspect-[4/3] sm:aspect-[14/9] md:rounded-2xl overflow-hidden">
+          <motion.div
+            variants={imageReveal}
+            initial="hidden"
+            animate="visible"
+            className="relative w-full aspect-[4/3] sm:aspect-[14/9] md:rounded-2xl overflow-hidden"
+          >
             <Image
               src="/Team/hero.jpg"
               alt="Architectural detail representing strategy and impact"
@@ -60,7 +80,7 @@ function TeamHero() {
               className="object-cover"
               priority
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

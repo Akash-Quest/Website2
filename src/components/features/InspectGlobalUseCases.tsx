@@ -3,6 +3,7 @@
 import Script from 'next/script';
 import React from 'react';
 import Image from 'next/image';
+import Reveal from '@/components/ui/Reveal';
  
 export default function InspectGlobalUseCases() {
   const useCases = [
@@ -10,7 +11,7 @@ export default function InspectGlobalUseCases() {
       tag: 'Development Finance',
       title: 'Release Loan Tranches On Verified Milestones',
       desc: 'A DFI loan officer needs to confirm 78% physical progress before releasing Tranche 4 on an industrial park loan without flying someone out.',
-      image: '/Productsoln/IGUse1.png', 
+      image: '/Productsoln/IGUse1.jpg', 
       bullets: [
         'Satellite imagery cross-checked against GPS and drone data',
         'Independent progress % generated for each milestone',
@@ -78,30 +79,33 @@ export default function InspectGlobalUseCases() {
     <section className="w-full bg-[#FFFFFF] font-['Inter_Tight'] ">
       
       <div className="page-container mx-auto flex flex-col ">
-        <p className="font-semibold text-primary ">
+        <Reveal as="p" variant="upSm" custom={0} className="font-semibold text-primary ">
               Use Cases
-        </p>
-      
+        </Reveal>
+
         {/* ── HEADER LAYOUT BLOCK ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start mt-5 mb-5 w-full">
           <div className="lg:col-span-7 flex flex-col gap-2">
-            
-            <h2 className="font-semibold ">
+
+            <Reveal as="h2" variant="upSm" custom={1} className="font-semibold ">
               One Platform, Six Very  <br/><em className="font-semibold">Different Jobs</em>
-            </h2>
+            </Reveal>
           </div>
           <div className="lg:col-span-5 pb-2">
-            <p className="tracking-wide leading-snug text-muted max-w-full">
+            <Reveal as="p" variant="upSm" custom={2} className="tracking-wide leading-snug text-muted max-w-full">
               From dynamic field monitoring to automated enterprise verification, InspectGlobal fits into the workflows that matter most.
-            </p>
+            </Reveal>
           </div>
         </div>
- 
+
         {/* ── 🛠️ FIXED: 3-COLUMN VERTICAL STACK MATRIX GRID (As per your Image) ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full mt-4">
           {useCases.map((item, idx) => (
-            <div 
-              key={idx} 
+            <Reveal
+              as="div"
+              variant="upSm"
+              custom={idx}
+              key={idx}
               className="bg-[#F7F5F1] rounded-[16px] p-6 flex flex-col gap-5 border border-gray-200/40 w-full transition-all duration-300 hover:shadow-md"
             >
               {/* Top Section: Full Width Aspect Rounded Image Box */}
@@ -145,12 +149,12 @@ export default function InspectGlobalUseCases() {
                     </div>
                   ))}
                 </div>
- 
+
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
- 
+
       </div>
     </section>
   );

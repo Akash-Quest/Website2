@@ -3,6 +3,7 @@
 import { ArrowDown } from "lucide-react";
 import { useState } from "react";
 import Button from "../ui/Button";
+import Reveal from "../ui/Reveal";
 
 interface Job {
   id: number;
@@ -80,9 +81,13 @@ function TagPill({ label }: { label: string }) {
   );
 }
 
-function JobCard({ job }: { job: Job }) {
+function JobCard({ job, index }: { job: Job; index: number }) {
   return (
-    <div className="bg-[#F7F5F1] rounded-xl p-4 flex flex-col gap-2">
+    <Reveal
+      variant="upSm"
+      custom={index}
+      className="bg-[#F7F5F1] rounded-xl p-4 flex flex-col gap-2"
+    >
       <h3 className=" font-semibold text-[#03030F] text-body-xl">
         {job.title}
       </h3>
@@ -101,7 +106,7 @@ function JobCard({ job }: { job: Job }) {
        <Button >
         Apply Now</ Button >
       </div>
-    </div>
+    </Reveal>
   );
 }
 
@@ -117,14 +122,14 @@ export default function OpenPositions() {
     <div className="bg-white">
       <section className="mx-auto page-container ">
         {/* Heading */}
-        <h2 className="text-start font-semibold mb-5 md:mb-10">
+        <Reveal as="h2" variant="upSm" className="text-start font-semibold mb-5 md:mb-10">
           We have {jobs.length} open <em className="font-medium">Positions now!</em>
-        </h2>
+        </Reveal>
 
         {/* Two-column layout */}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 items-start">
           {/* ── Sidebar ── */}
-          <aside className="w-full lg:w-52 flex-shrink-0">
+          <Reveal variant="left" className="w-full lg:w-52 flex-shrink-0">
             <div className="flex flex-row gap-1.5 overflow-x-auto scrollbar-hide pb-1 lg:flex-col lg:gap-2 lg:overflow-visible lg:pb-0">
               {categories.map((cat) => {
                 const isActive = activeCategory === cat.label;
@@ -162,12 +167,14 @@ export default function OpenPositions() {
             </span>
           </button>
             </div>
-          </aside>
+          </Reveal>
 
           {/* ── Job listings ── */}
           <div className="flex-1 flex flex-col gap-4">
             {filteredJobs.length > 0 ? (
-              filteredJobs.map((job) => <JobCard key={job.id} job={job} />)
+              filteredJobs.map((job, index) => (
+                <JobCard key={job.id} job={job} index={index} />
+              ))
             ) : (
               <p className=" text-muted">
                 No open positions in this category right now.
