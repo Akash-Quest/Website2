@@ -70,45 +70,44 @@ export const LivestockFisheriesAnimalHealthWhatWeOfferData = {
 export const LivestockFisheriesAnimalHealthFaqData = [
   {
     question:
-      "What types of agriculture and livestock projects does SkyQuest support?",
+      "How does SkyQuest support the livestock, fisheries, and animal health sector?",
     answer:
-      "We support agricultural transformation programs, livestock development initiatives, value chain projects, agri-tech deployments, climate resilience programs, food security initiatives, and rural development strategies.",
+      "We help governments, development organizations, producer groups, and private enterprises strengthen animal health systems, improve productivity, modernize value chains, and promote sustainable sector growth.",
+  },
+  {
+    question: "Which organizations does SkyQuest work with?",
+    answer:
+      "We partner with ministries, veterinary departments, fisheries authorities, research institutions, cooperatives, producer organizations, agribusinesses, and development partners across the livestock and fisheries ecosystem.",
+  },
+  {
+    question: "Can SkyQuest support animal health and veterinary programs?",
+    answer:
+      "Yes. We support animal disease surveillance, veterinary service strengthening, vaccination programs, livestock health planning, and institutional capacity building.",
+  },
+  {
+    question: "How does SkyQuest help improve livestock and fisheries value chains?",
+    answer:
+      "We strengthen production systems, market linkages, cold chain infrastructure, processing, traceability, and value addition to improve competitiveness and market access.",
+  },
+  {
+    question: "Does SkyQuest support sustainable livestock and aquaculture development?",
+    answer:
+      "Yes. We develop sustainable production strategies, climate-resilient practices, resource-efficient systems, and environmental management plans that enhance long-term sector resilience.",
+  },
+  {
+    question: "How does SkyQuest use technology in livestock and fisheries programs?",
+    answer:
+      "We leverage AI, geospatial intelligence, remote sensing, IoT, digital platforms, and data analytics to improve animal health monitoring, production planning, traceability, and decision-making.",
+  },
+  {
+    question: "Can SkyQuest support investment planning and sector modernization?",
+    answer:
+      "Yes. We prepare feasibility studies, Detailed Project Reports (DPRs), investment strategies, implementation roadmaps, and program management frameworks that support sustainable sector transformation.",
   },
   {
     question:
-      "Do you work with governments and development institutions?",
+      "What makes SkyQuest different in livestock, fisheries, and animal health consulting?",
     answer:
-      "Yes. We partner with ministries, public agencies, multilateral organizations, foundations, and development institutions on agriculture and rural development programs.",
-  },
-  {
-    question: "How does SkyQuest support digital agriculture initiatives?",
-    answer:
-      "We design and implement digital agriculture platforms, AI-enabled advisory systems, geospatial intelligence solutions, precision agriculture programs, and digital farmer ecosystems.",
-  },
-  {
-    question: "Can SkyQuest support livestock transformation programs?",
-    answer:
-      "Yes. Our livestock expertise includes animal health systems, disease surveillance, traceability, productivity enhancement, digital livestock management, and value chain development.",
-  },
-  {
-    question: "How do you approach climate-smart agriculture?",
-    answer:
-      "We integrate climate adaptation, resilience-building, regenerative practices, water efficiency, risk management, and sustainability principles into agricultural development strategies.",
-  },
-  {
-    question: "Can SkyQuest help strengthen agricultural value chains?",
-    answer:
-      "Yes. We support value chain diagnostics, market development, aggregation models, processing infrastructure, logistics systems, and market access strategies.",
-  },
-  {
-    question:
-      "Do you support agri-finance and rural investment initiatives?",
-    answer:
-      "Yes. We help design agricultural finance models, insurance programs, blended finance structures, rural investment strategies, and financial inclusion initiatives.",
-  },
-  {
-    question: "What regions does SkyQuest serve?",
-    answer:
-      "We work across India, Africa, the Middle East, Asia-Pacific, and other emerging markets where agriculture, food systems, and rural development are strategic priorities.",
+      "SkyQuest combines sector expertise, digital innovation, policy advisory, research, program management, and implementation support to strengthen animal health systems, modernize value chains, and improve livelihoods across the livestock and fisheries sector.",
   },
 ];

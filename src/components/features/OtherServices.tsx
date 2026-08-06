@@ -11,7 +11,10 @@ export const ALL_CAPABILITIES: OtherService[] = [
     label: "Digital Transformation & Emerging Technologies",
     href: "/capabilities/digital-transformation-emerging-technologies",
   },
-  { label: "Public Sector Advisory", href: "/capabilities/public-sector-advisory" },
+  {
+    label: "Strategy & Policy Advisory",
+    href: "/capabilities/strategy-policy-advisory",
+  },
   {
     label: "Data & Artificial Intelligence",
     href: "/capabilities/data-artificial-intelligence",
@@ -20,16 +23,22 @@ export const ALL_CAPABILITIES: OtherService[] = [
     label: "Integrated Program Management",
     href: "/capabilities/integrated-program-management",
   },
-  { label: "Social Impact & CSR", href: "/capabilities/social-impact-csr" },
+  {
+    label: "Livelihoods & Entrepreneurship",
+    href: "/capabilities/livelihoods-entrepreneurship",
+  },
   {
     label: "Business Intelligence & Market Research",
     href: "/capabilities/business-intelligence-market-research",
   },
   {
-    label: "Climate, Sustainability & ESG Advisory",
-    href: "/capabilities/climate-sustainability-esg-advisory",
+    label: "Technology Transfer & Innovation",
+    href: "/capabilities/technology-transfer-innovation",
   },
-  { label: "Agriculture & Livestock", href: "/capabilities/agriculture-livestock" },
+  {
+    label: "Inclusive Finance & Institutional Strategy",
+    href: "/capabilities/inclusive-finance-institutional-strategy",
+  },
 ];
 
 function shuffle<T>(items: T[]): T[] {

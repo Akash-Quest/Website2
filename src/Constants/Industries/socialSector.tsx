@@ -122,46 +122,45 @@ export const SocialImpactFocusAreasData = {
 
 export const SocialSectorFaqData = [
   {
-    question:
-      "What types of agriculture and livestock projects does SkyQuest support?",
+    question: "What social sector consulting services does SkyQuest provide?",
     answer:
-      "We support agricultural transformation programs, livestock development initiatives, value chain projects, agri-tech deployments, climate resilience programs, food security initiatives, and rural development strategies.",
+      "SkyQuest supports governments, development organizations, foundations, and NGOs with strategy, program design, implementation, monitoring and evaluation, institutional strengthening, and digital transformation.",
+  },
+  {
+    question: "Which organizations does SkyQuest work with in the social sector?",
+    answer:
+      "We partner with governments, multilateral organizations, bilateral agencies, foundations, NGOs, CSR organizations, social enterprises, and development finance institutions across diverse social development initiatives.",
+  },
+  {
+    question: "What types of social development programs does SkyQuest support?",
+    answer:
+      "We support programs across livelihoods, education, healthcare, gender equality, youth empowerment, financial inclusion, rural development, social protection, and community development.",
   },
   {
     question:
-      "Do you work with governments and development institutions?",
+      "Can SkyQuest establish Program Management Units (PMUs) for social programs?",
     answer:
-      "Yes. We partner with ministries, public agencies, multilateral organizations, foundations, and development institutions on agriculture and rural development programs.",
+      "Yes. We establish and manage PMUs and Technical Support Units (TSUs) to provide implementation support, stakeholder coordination, program monitoring, and governance for large-scale development initiatives.",
   },
   {
-    question: "How does SkyQuest support digital agriculture initiatives?",
+    question: "Does SkyQuest provide monitoring and evaluation services?",
     answer:
-      "We design and implement digital agriculture platforms, AI-enabled advisory systems, geospatial intelligence solutions, precision agriculture programs, and digital farmer ecosystems.",
+      "Yes. We design monitoring and evaluation frameworks, develop KPIs, conduct impact assessments, implement PMIS solutions, and provide data-driven insights to measure program performance.",
   },
   {
-    question: "Can SkyQuest support livestock transformation programs?",
+    question: "How does SkyQuest leverage technology in social sector programs?",
     answer:
-      "Yes. Our livestock expertise includes animal health systems, disease surveillance, traceability, productivity enhancement, digital livestock management, and value chain development.",
-  },
-  {
-    question: "How do you approach climate-smart agriculture?",
-    answer:
-      "We integrate climate adaptation, resilience-building, regenerative practices, water efficiency, risk management, and sustainability principles into agricultural development strategies.",
-  },
-  {
-    question: "Can SkyQuest help strengthen agricultural value chains?",
-    answer:
-      "Yes. We support value chain diagnostics, market development, aggregation models, processing infrastructure, logistics systems, and market access strategies.",
+      "We help organizations adopt digital platforms, AI, data analytics, geospatial intelligence, and automation to improve service delivery, beneficiary management, and evidence-based decision-making.",
   },
   {
     question:
-      "Do you support agri-finance and rural investment initiatives?",
+      "Can SkyQuest support policy and institutional strengthening initiatives?",
     answer:
-      "Yes. We help design agricultural finance models, insurance programs, blended finance structures, rural investment strategies, and financial inclusion initiatives.",
+      "Yes. We provide policy advisory, governance reforms, capacity building, organizational transformation, and institutional strengthening to improve the effectiveness and sustainability of social programs.",
   },
   {
-    question: "What regions does SkyQuest serve?",
+    question: "Why do organizations choose SkyQuest for social sector consulting?",
     answer:
-      "We work across India, Africa, the Middle East, Asia-Pacific, and other emerging markets where agriculture, food systems, and rural development are strategic priorities.",
+      "SkyQuest combines strategy, research, program management, digital innovation, data intelligence, and implementation expertise to design, deliver, and scale high-impact social development programs that create measurable and sustainable outcomes.",
   },
 ];

@@ -28,13 +28,13 @@
                     }
                   },
                   {
-                    "label": "Public Sector Advisory",
-                    "href": "/capabilities/public-sector-advisory",
+                    "label": "Strategy & Policy Advisory",
+                    "href": "/capabilities/strategy-policy-advisory",
                     "promo": {
-                      "image": "/CoreCapability/2.jpg",
-                      "title": "Public Sector Advisory",
-                      "description": "Supporting governments and institutions through policy advisory, governance modernization, and transformational program implementation.",
-                      "href": "/capabilities/public-sector-advisory",
+                      "image": "/service/Stertegy/hero.jpg",
+                      "title": "Strategy & Policy Advisory",
+                      "description": "SkyQuest partners with governments, enterprises, investors, and institutions to build evidence-based strategies, policies, and transformation plans that create lasting economic, social, and business value.",
+                      "href": "/capabilities/strategy-policy-advisory",
                       "ctaLabel": "Visit Page"
                     }
                   },
@@ -61,13 +61,13 @@
                     }
                   },
                   {
-                    "label": "Social Impact & CSR",
-                    "href": "/capabilities/social-impact-csr",
+                    "label": "Livelihoods & Entrepreneurship",
+                    "href": "/capabilities/livelihoods-entrepreneurship",
                     "promo": {
-                      "image": "/CoreCapability/8.jpg",
-                      "title": "Social Impact & CSR",
-                      "description": "Designing and scaling high-impact social programs that strengthen communities, improve livelihoods, and deliver measurable development outcomes.",
-                      "href": "/capabilities/social-impact-csr",
+                      "image": "/service/Livelihoods/hero.jpg",
+                      "title": "Livelihoods & Entrepreneurship",
+                      "description": "SkyQuest helps organizations create sustainable livelihoods, strengthen entrepreneurship ecosystems, generate employment, and drive inclusive economic growth through strategic advisory and implementation support.",
+                      "href": "/capabilities/livelihoods-entrepreneurship",
                       "ctaLabel": "Visit Page"
                     }
                   },
@@ -83,24 +83,24 @@
                     }
                   },
                   {
-                    "label": "Climate, Sustainability & ESG Advisory",
-                    "href": "/capabilities/climate-sustainability-esg-advisory",
+                    "label": "Technology Transfer & Innovation",
+                    "href": "/capabilities/technology-transfer-innovation",
                     "promo": {
-                      "image": "/CoreCapability/6.jpg",
-                      "title": "Climate, Sustainability & ESG Advisory",
-                      "description": "We provide market intelligence, industry insights, competitive benchmarking, customer research, and strategic analysis that enable organizations to identify opportunities, mitigate risks, and make informed business decisions.",
-                      "href": "/capabilities/climate-sustainability-esg-advisory",
+                      "image": "/service/TechnologyTransfer/hero.jpg",
+                      "title": "Technology Transfer & Innovation",
+                      "description": "SkyQuest helps organizations commercialize innovation, strengthen technology transfer, build innovation ecosystems, and accelerate the adoption of emerging technologies that drive sustainable growth.",
+                      "href": "/capabilities/technology-transfer-innovation",
                       "ctaLabel": "Visit Page"
                     }
                   },
                   {
-                    "label": "Agriculture & Livestock Advisory",
-                    "href": "/capabilities/agriculture-livestock ",
+                    "label": "Inclusive Finance & Institutional Strategy",
+                    "href": "/capabilities/inclusive-finance-institutional-strategy",
                     "promo": {
-                      "image": "/CoreCapability/7.jpg",
-                      "title": "Agriculture & Livestock Advisory",
-                      "description": "Transforming agriculture and livestock through technology, innovation, and market-led development.",
-                      "href": "/capabilities/agriculture-livestock",
+                      "image": "/service/Inclusivefinance/hero.jpg",
+                      "title": "Inclusive Finance & Institutional Strategy",
+                      "description": "SkyQuest strengthens financial systems, empowers institutions, and advances inclusive, sustainable economic growth through strategic advisory.",
+                      "href": "/capabilities/inclusive-finance-institutional-strategy",
                       "ctaLabel": "Visit Page"
                     }
                   }

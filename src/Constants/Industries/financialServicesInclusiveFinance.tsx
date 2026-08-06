@@ -67,45 +67,46 @@ export const FinancialServicesInclusiveFinanceWhatWeOfferData = {
 export const FinancialServicesInclusiveFinanceFaqData = [
   {
     question:
-      "What types of agriculture and livestock projects does SkyQuest support?",
+      "What financial services and inclusive finance consulting does SkyQuest provide?",
     answer:
-      "We support agricultural transformation programs, livestock development initiatives, value chain projects, agri-tech deployments, climate resilience programs, food security initiatives, and rural development strategies.",
+      "SkyQuest provides strategy and policy advisory, financial inclusion, institutional strengthening, blended finance, investment advisory, digital finance, and program management services.",
+  },
+  {
+    question: "Which organizations does SkyQuest work with?",
+    answer:
+      "We partner with governments, financial institutions, regulators, development finance institutions, multilateral organizations, impact investors, foundations, and private sector organizations.",
+  },
+  {
+    question: "How does SkyQuest support financial inclusion initiatives?",
+    answer:
+      "We help organizations design inclusive finance strategies, expand access to financial services, strengthen financing ecosystems, and develop programs that promote equitable economic growth.",
+  },
+  {
+    question: "Can SkyQuest help strengthen financial institutions?",
+    answer:
+      "Yes. We support institutional transformation through governance reforms, operating model design, capacity building, organizational restructuring, and performance improvement initiatives.",
   },
   {
     question:
-      "Do you work with governments and development institutions?",
+      "Does SkyQuest provide advisory for financial sector policy and regulatory reforms?",
     answer:
-      "Yes. We partner with ministries, public agencies, multilateral organizations, foundations, and development institutions on agriculture and rural development programs.",
-  },
-  {
-    question: "How does SkyQuest support digital agriculture initiatives?",
-    answer:
-      "We design and implement digital agriculture platforms, AI-enabled advisory systems, geospatial intelligence solutions, precision agriculture programs, and digital farmer ecosystems.",
-  },
-  {
-    question: "Can SkyQuest support livestock transformation programs?",
-    answer:
-      "Yes. Our livestock expertise includes animal health systems, disease surveillance, traceability, productivity enhancement, digital livestock management, and value chain development.",
-  },
-  {
-    question: "How do you approach climate-smart agriculture?",
-    answer:
-      "We integrate climate adaptation, resilience-building, regenerative practices, water efficiency, risk management, and sustainability principles into agricultural development strategies.",
-  },
-  {
-    question: "Can SkyQuest help strengthen agricultural value chains?",
-    answer:
-      "Yes. We support value chain diagnostics, market development, aggregation models, processing infrastructure, logistics systems, and market access strategies.",
+      "Yes. We help governments and regulators develop financial sector policies, modernize regulatory frameworks, strengthen institutions, and improve financial system resilience.",
   },
   {
     question:
-      "Do you support agri-finance and rural investment initiatives?",
+      "How does SkyQuest support blended finance and investment mobilization?",
     answer:
-      "Yes. We help design agricultural finance models, insurance programs, blended finance structures, rural investment strategies, and financial inclusion initiatives.",
+      "We advise on blended finance structures, investment strategies, public-private partnerships, capital mobilization, and innovative financing mechanisms that accelerate sustainable development.",
   },
   {
-    question: "What regions does SkyQuest serve?",
+    question: "Can SkyQuest support digital transformation in financial services?",
     answer:
-      "We work across India, Africa, the Middle East, Asia-Pacific, and other emerging markets where agriculture, food systems, and rural development are strategic priorities.",
+      "Yes. We help financial institutions adopt digital platforms, AI, data analytics, workflow automation, and digital finance solutions that improve operational efficiency and customer experience.",
+  },
+  {
+    question:
+      "Why do organizations choose SkyQuest for financial services and inclusive finance consulting?",
+    answer:
+      "SkyQuest combines strategy, policy expertise, institutional strengthening, digital transformation, investment advisory, and implementation support to build resilient financial systems and deliver measurable economic and social impact.",
   },
 ];

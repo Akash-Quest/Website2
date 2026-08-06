@@ -67,46 +67,46 @@ export const ClimateEnvironmentWhatWeOfferData = {
 
 export const ClimateEnvironmentFaqData = [
   {
-    question:
-      "What types of agriculture and livestock projects does SkyQuest support?",
+    question: "How does SkyQuest help organizations address climate change?",
     answer:
-      "We support agricultural transformation programs, livestock development initiatives, value chain projects, agri-tech deployments, climate resilience programs, food security initiatives, and rural development strategies.",
+      "We help governments, businesses, and development organizations develop climate strategies, strengthen resilience, reduce emissions, and integrate sustainability into long-term planning.",
+  },
+  {
+    question: "Does SkyQuest support climate adaptation and resilience programs?",
+    answer:
+      "Yes. We design and implement climate adaptation initiatives focused on disaster resilience, ecosystem restoration, water security, climate-smart infrastructure, and community resilience.",
   },
   {
     question:
-      "Do you work with governments and development institutions?",
+      "Can SkyQuest help organizations achieve their ESG and sustainability goals?",
     answer:
-      "Yes. We partner with ministries, public agencies, multilateral organizations, foundations, and development institutions on agriculture and rural development programs.",
+      "Yes. We develop ESG strategies, sustainability roadmaps, environmental action plans, and reporting frameworks that align with national regulations and global standards.",
   },
   {
-    question: "How does SkyQuest support digital agriculture initiatives?",
+    question: "How does SkyQuest support carbon reduction and net-zero initiatives?",
     answer:
-      "We design and implement digital agriculture platforms, AI-enabled advisory systems, geospatial intelligence solutions, precision agriculture programs, and digital farmer ecosystems.",
+      "We help organizations assess emissions, develop decarbonization strategies, identify carbon reduction opportunities, and build practical pathways toward net-zero goals.",
   },
   {
-    question: "Can SkyQuest support livestock transformation programs?",
+    question: "Does SkyQuest provide environmental and climate policy advisory?",
     answer:
-      "Yes. Our livestock expertise includes animal health systems, disease surveillance, traceability, productivity enhancement, digital livestock management, and value chain development.",
-  },
-  {
-    question: "How do you approach climate-smart agriculture?",
-    answer:
-      "We integrate climate adaptation, resilience-building, regenerative practices, water efficiency, risk management, and sustainability principles into agricultural development strategies.",
-  },
-  {
-    question: "Can SkyQuest help strengthen agricultural value chains?",
-    answer:
-      "Yes. We support value chain diagnostics, market development, aggregation models, processing infrastructure, logistics systems, and market access strategies.",
+      "Yes. We support governments and institutions with environmental policy development, climate governance frameworks, regulatory advisory, and sustainable development strategies.",
   },
   {
     question:
-      "Do you support agri-finance and rural investment initiatives?",
+      "How does SkyQuest use technology to improve climate and environmental outcomes?",
     answer:
-      "Yes. We help design agricultural finance models, insurance programs, blended finance structures, rural investment strategies, and financial inclusion initiatives.",
+      "We leverage AI, geospatial intelligence, remote sensing, GIS, digital platforms, and data analytics to monitor environmental change, support climate planning, and improve decision-making.",
   },
   {
-    question: "What regions does SkyQuest serve?",
+    question:
+      "Can SkyQuest support climate finance and sustainable investment programs?",
     answer:
-      "We work across India, Africa, the Middle East, Asia-Pacific, and other emerging markets where agriculture, food systems, and rural development are strategic priorities.",
+      "Yes. We help organizations develop climate investment strategies, prepare bankable projects, mobilize finance, and design programs that attract public and private investment.",
+  },
+  {
+    question: "What makes SkyQuest different in climate and environment consulting?",
+    answer:
+      "SkyQuest combines climate science, policy expertise, digital technologies, geospatial intelligence, program management, and implementation support to deliver practical, scalable, and measurable climate solutions.",
   },
 ];

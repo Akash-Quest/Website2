@@ -69,46 +69,44 @@ export const AgricultureFoodSystemsWhatWeOfferData = {
 
 export const AgricultureFoodSystemsFaqData = [
   {
-    question:
-      "What types of agriculture and livestock projects does SkyQuest support?",
+    question: "What agriculture consulting services does SkyQuest provide?",
     answer:
-      "We support agricultural transformation programs, livestock development initiatives, value chain projects, agri-tech deployments, climate resilience programs, food security initiatives, and rural development strategies.",
+      "SkyQuest provides strategy and policy advisory, agricultural value chain development, digital agriculture, climate-smart agriculture, program management, research, and institutional strengthening.",
   },
   {
-    question:
-      "Do you work with governments and development institutions?",
+    question: "Which organizations does SkyQuest work with?",
     answer:
-      "Yes. We partner with ministries, public agencies, multilateral organizations, foundations, and development institutions on agriculture and rural development programs.",
+      "We partner with governments, development agencies, multilateral organizations, research institutions, agribusinesses, cooperatives, FPOs, investors, and private sector organizations across the agriculture ecosystem.",
   },
   {
     question: "How does SkyQuest support digital agriculture initiatives?",
     answer:
-      "We design and implement digital agriculture platforms, AI-enabled advisory systems, geospatial intelligence solutions, precision agriculture programs, and digital farmer ecosystems.",
+      "We help organizations adopt AI, geospatial intelligence, digital platforms, data analytics, and precision agriculture technologies to improve productivity, resilience, and decision-making.",
   },
   {
-    question: "Can SkyQuest support livestock transformation programs?",
+    question: "Can SkyQuest support agricultural value chain development?",
     answer:
-      "Yes. Our livestock expertise includes animal health systems, disease surveillance, traceability, productivity enhancement, digital livestock management, and value chain development.",
+      "Yes. We help strengthen agricultural value chains through market assessments, post-harvest management, supply chain optimization, market linkages, and investment strategies.",
   },
   {
-    question: "How do you approach climate-smart agriculture?",
+    question: "Does SkyQuest work on climate-smart and sustainable agriculture?",
     answer:
-      "We integrate climate adaptation, resilience-building, regenerative practices, water efficiency, risk management, and sustainability principles into agricultural development strategies.",
-  },
-  {
-    question: "Can SkyQuest help strengthen agricultural value chains?",
-    answer:
-      "Yes. We support value chain diagnostics, market development, aggregation models, processing infrastructure, logistics systems, and market access strategies.",
+      "Yes. We support climate-resilient agriculture, sustainable farming practices, water resource management, carbon initiatives, and ESG-aligned agricultural programs.",
   },
   {
     question:
-      "Do you support agri-finance and rural investment initiatives?",
+      "Can SkyQuest establish Program Management Units (PMUs) for agriculture projects?",
     answer:
-      "Yes. We help design agricultural finance models, insurance programs, blended finance structures, rural investment strategies, and financial inclusion initiatives.",
+      "Yes. We establish and manage PMUs and Technical Support Units (TSUs) to support program planning, implementation, stakeholder coordination, monitoring, and capacity building.",
   },
   {
-    question: "What regions does SkyQuest serve?",
+    question: "Does SkyQuest provide agricultural research and policy advisory?",
     answer:
-      "We work across India, Africa, the Middle East, Asia-Pacific, and other emerging markets where agriculture, food systems, and rural development are strategic priorities.",
+      "Yes. We conduct sector research, policy analysis, market intelligence, feasibility studies, and evidence-based advisory to support agricultural development and investment decisions.",
+  },
+  {
+    question: "Why do organizations choose SkyQuest for agriculture consulting?",
+    answer:
+      "SkyQuest combines strategy, digital transformation, program management, research, AI, geospatial intelligence, and implementation expertise to deliver scalable, sustainable, and measurable outcomes across agriculture and food systems.",
   },
 ];

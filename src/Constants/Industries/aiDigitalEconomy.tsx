@@ -81,46 +81,46 @@ export const AiDigitalEconomyWhatWeOfferData = {
 
 export const AiDigitalEconomyFaqData = [
   {
-    question:
-      "What types of agriculture and livestock projects does SkyQuest support?",
+    question: "What AI and digital transformation services does SkyQuest provide?",
     answer:
-      "We support agricultural transformation programs, livestock development initiatives, value chain projects, agri-tech deployments, climate resilience programs, food security initiatives, and rural development strategies.",
+      "SkyQuest helps organizations develop AI strategies, modernize digital operations, implement enterprise AI solutions, build digital platforms, and accelerate technology-driven business transformation.",
   },
   {
     question:
-      "Do you work with governments and development institutions?",
+      "Which organizations does SkyQuest work with in the AI & Digital Economy sector?",
     answer:
-      "Yes. We partner with ministries, public agencies, multilateral organizations, foundations, and development institutions on agriculture and rural development programs.",
+      "We partner with governments, enterprises, technology companies, startups, development organizations, investors, and research institutions to deliver AI, digital transformation, and innovation initiatives.",
   },
   {
-    question: "How does SkyQuest support digital agriculture initiatives?",
+    question: "How does SkyQuest help organizations adopt Artificial Intelligence?",
     answer:
-      "We design and implement digital agriculture platforms, AI-enabled advisory systems, geospatial intelligence solutions, precision agriculture programs, and digital farmer ecosystems.",
-  },
-  {
-    question: "Can SkyQuest support livestock transformation programs?",
-    answer:
-      "Yes. Our livestock expertise includes animal health systems, disease surveillance, traceability, productivity enhancement, digital livestock management, and value chain development.",
-  },
-  {
-    question: "How do you approach climate-smart agriculture?",
-    answer:
-      "We integrate climate adaptation, resilience-building, regenerative practices, water efficiency, risk management, and sustainability principles into agricultural development strategies.",
-  },
-  {
-    question: "Can SkyQuest help strengthen agricultural value chains?",
-    answer:
-      "Yes. We support value chain diagnostics, market development, aggregation models, processing infrastructure, logistics systems, and market access strategies.",
+      "We support AI adoption through strategy development, use-case identification, data readiness assessments, solution design, implementation roadmaps, and enterprise-wide AI integration.",
   },
   {
     question:
-      "Do you support agri-finance and rural investment initiatives?",
+      "Does SkyQuest develop AI-powered digital platforms and enterprise applications?",
     answer:
-      "Yes. We help design agricultural finance models, insurance programs, blended finance structures, rural investment strategies, and financial inclusion initiatives.",
+      "Yes. We design and build intelligent digital platforms, enterprise applications, automation solutions, AI agents, and data-driven systems tailored to organizational needs.",
   },
   {
-    question: "What regions does SkyQuest serve?",
+    question: "Can SkyQuest support data and digital transformation programs?",
     answer:
-      "We work across India, Africa, the Middle East, Asia-Pacific, and other emerging markets where agriculture, food systems, and rural development are strategic priorities.",
+      "Yes. We help organizations modernize data infrastructure, implement analytics platforms, strengthen governance, and enable data-driven decision-making across business functions.",
+  },
+  {
+    question: "How does SkyQuest support innovation and emerging technologies?",
+    answer:
+      "We help organizations identify emerging technologies, evaluate innovation opportunities, accelerate technology transfer, and commercialize digital solutions through structured innovation frameworks.",
+  },
+  {
+    question: "Does SkyQuest provide AI governance and responsible AI advisory?",
+    answer:
+      "Yes. We support AI governance, responsible AI adoption, data privacy, regulatory compliance, risk management, and ethical AI frameworks to ensure secure and trustworthy implementation.",
+  },
+  {
+    question:
+      "Why do organizations choose SkyQuest for AI & Digital Economy consulting?",
+    answer:
+      "SkyQuest combines strategy, AI, digital engineering, data intelligence, platform development, and implementation expertise to help organizations unlock measurable business value through technology and innovation.",
   },
 ];

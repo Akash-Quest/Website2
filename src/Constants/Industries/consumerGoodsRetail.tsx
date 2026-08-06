@@ -75,46 +75,46 @@ export const ConsumerGoodsRetailWhatWeOfferData = {
 
 export const ConsumerGoodsRetailFaqData = [
   {
-    question:
-      "What types of agriculture and livestock projects does SkyQuest support?",
+    question: "What kind of consumer goods and retail clients does SkyQuest work with?",
     answer:
-      "We support agricultural transformation programs, livestock development initiatives, value chain projects, agri-tech deployments, climate resilience programs, food security initiatives, and rural development strategies.",
+      "FMCG companies, pharmaceutical and consumer health brands, and clean energy consumer product distributors, among others.",
+  },
+  {
+    question: "Does SkyQuest help companies source innovation externally?",
+    answer:
+      "Yes — technology scouting, IP screening, and licensing facilitation are core to our approach, including organizing patent technology roadshows and auctions.",
   },
   {
     question:
-      "Do you work with governments and development institutions?",
+      "Can SkyQuest help design go-to-market strategy for a new product or market?",
     answer:
-      "Yes. We partner with ministries, public agencies, multilateral organizations, foundations, and development institutions on agriculture and rural development programs.",
+      "Yes — entry strategy design, partner identification, and commercialisation roadmaps are part of our Go-to-Market Strategy capability.",
   },
   {
-    question: "How does SkyQuest support digital agriculture initiatives?",
+    question: "Does SkyQuest support supply chain sustainability and traceability?",
     answer:
-      "We design and implement digital agriculture platforms, AI-enabled advisory systems, geospatial intelligence solutions, precision agriculture programs, and digital farmer ecosystems.",
+      "Yes — we design decarbonised, traceable supply chains that meet ESG standards and can generate carbon market revenue.",
   },
   {
-    question: "Can SkyQuest support livestock transformation programs?",
+    question: "Has SkyQuest worked with major pharmaceutical or FMCG companies?",
     answer:
-      "Yes. Our livestock expertise includes animal health systems, disease surveillance, traceability, productivity enhancement, digital livestock management, and value chain development.",
+      "Yes — our technology roadshows and licensing platforms have engaged companies including GSK, Merck, Zydus Cadila, Sun Pharma, Cipla, AstraZeneca, and Unilever, among others (historic client relationships).",
   },
   {
-    question: "How do you approach climate-smart agriculture?",
+    question: "Does SkyQuest help with product labeling and regulatory compliance?",
     answer:
-      "We integrate climate adaptation, resilience-building, regenerative practices, water efficiency, risk management, and sustainability principles into agricultural development strategies.",
-  },
-  {
-    question: "Can SkyQuest help strengthen agricultural value chains?",
-    answer:
-      "Yes. We support value chain diagnostics, market development, aggregation models, processing infrastructure, logistics systems, and market access strategies.",
+      "Yes. We develop digital solutions that streamline product labeling, regulatory compliance, ingredient management, packaging governance, and multi-market labeling requirements.",
   },
   {
     question:
-      "Do you support agri-finance and rural investment initiatives?",
+      "Can SkyQuest support product claims management for FMCG and consumer brands?",
     answer:
-      "Yes. We help design agricultural finance models, insurance programs, blended finance structures, rural investment strategies, and financial inclusion initiatives.",
+      "Yes. We help organizations manage product claims by developing digital workflows that validate, track, review, and maintain compliance with regulatory and brand standards across markets.",
   },
   {
-    question: "What regions does SkyQuest serve?",
+    question:
+      "How does SkyQuest help consumer goods companies accelerate technology innovation?",
     answer:
-      "We work across India, Africa, the Middle East, Asia-Pacific, and other emerging markets where agriculture, food systems, and rural development are strategic priorities.",
+      "We support innovation through technology scouting, AI-driven product development, digital platform engineering, custom enterprise applications, and technology transfer that help manufacturers bring new products to market faster.",
   },
 ];

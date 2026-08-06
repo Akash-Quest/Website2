@@ -69,46 +69,44 @@ export const WaterSanitationWhatWeOfferData = {
 
 export const WaterSanitationFaqData = [
   {
-    question:
-      "What types of agriculture and livestock projects does SkyQuest support?",
+    question: "How does SkyQuest help improve water security?",
     answer:
-      "We support agricultural transformation programs, livestock development initiatives, value chain projects, agri-tech deployments, climate resilience programs, food security initiatives, and rural development strategies.",
+      "We help governments and utilities develop integrated water resource strategies, strengthen infrastructure planning, improve governance, and build long-term water resilience.",
+  },
+  {
+    question: "Can SkyQuest support urban and rural water infrastructure projects?",
+    answer:
+      "Yes. We support the planning, design, implementation, and management of drinking water, sanitation, wastewater, irrigation, and rural water supply programs.",
   },
   {
     question:
-      "Do you work with governments and development institutions?",
+      "How does SkyQuest address non-revenue water (NRW) and operational efficiency?",
     answer:
-      "Yes. We partner with ministries, public agencies, multilateral organizations, foundations, and development institutions on agriculture and rural development programs.",
+      "We help utilities improve operational performance through network assessments, digital monitoring, asset management, leakage reduction strategies, and performance optimization.",
   },
   {
-    question: "How does SkyQuest support digital agriculture initiatives?",
+    question: "Does SkyQuest support climate-resilient water management?",
     answer:
-      "We design and implement digital agriculture platforms, AI-enabled advisory systems, geospatial intelligence solutions, precision agriculture programs, and digital farmer ecosystems.",
+      "Yes. We develop climate adaptation strategies, watershed management plans, drought resilience programs, flood risk assessments, and sustainable water resource management initiatives.",
   },
   {
-    question: "Can SkyQuest support livestock transformation programs?",
+    question: "How does SkyQuest use digital technologies in the water sector?",
     answer:
-      "Yes. Our livestock expertise includes animal health systems, disease surveillance, traceability, productivity enhancement, digital livestock management, and value chain development.",
+      "We leverage AI, GIS, IoT, remote sensing, digital twins, and analytics to improve infrastructure planning, water monitoring, predictive maintenance, and decision-making.",
   },
   {
-    question: "How do you approach climate-smart agriculture?",
+    question: "Can SkyQuest help prepare bankable water infrastructure projects?",
     answer:
-      "We integrate climate adaptation, resilience-building, regenerative practices, water efficiency, risk management, and sustainability principles into agricultural development strategies.",
+      "Yes. We develop feasibility studies, Detailed Project Reports (DPRs), investment cases, and implementation roadmaps that support funding, procurement, and project execution.",
   },
   {
-    question: "Can SkyQuest help strengthen agricultural value chains?",
+    question: "Does SkyQuest support utilities and water institutions?",
     answer:
-      "Yes. We support value chain diagnostics, market development, aggregation models, processing infrastructure, logistics systems, and market access strategies.",
+      "Yes. We strengthen utilities through governance reforms, institutional restructuring, capacity building, operating model improvements, and performance management.",
   },
   {
-    question:
-      "Do you support agri-finance and rural investment initiatives?",
+    question: "What makes SkyQuest different in water and sanitation consulting?",
     answer:
-      "Yes. We help design agricultural finance models, insurance programs, blended finance structures, rural investment strategies, and financial inclusion initiatives.",
-  },
-  {
-    question: "What regions does SkyQuest serve?",
-    answer:
-      "We work across India, Africa, the Middle East, Asia-Pacific, and other emerging markets where agriculture, food systems, and rural development are strategic priorities.",
+      "Our approach combines engineering advisory, digital innovation, AI and geospatial intelligence, institutional strengthening, and end-to-end program management to deliver sustainable and measurable water sector outcomes.",
   },
 ];

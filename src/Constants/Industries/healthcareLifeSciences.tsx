@@ -69,46 +69,45 @@ export const HealthcareLifeSciencesWhatWeOfferData = {
 
 export const HealthcareLifeSciencesFaqData = [
   {
-    question:
-      "What types of agriculture and livestock projects does SkyQuest support?",
+    question: "How does SkyQuest support healthcare system transformation?",
     answer:
-      "We support agricultural transformation programs, livestock development initiatives, value chain projects, agri-tech deployments, climate resilience programs, food security initiatives, and rural development strategies.",
+      "We help healthcare organizations improve service delivery, strengthen health systems, modernize operations, and enhance patient outcomes through strategy, digital transformation, and implementation support.",
+  },
+  {
+    question: "Which healthcare organizations does SkyQuest work with?",
+    answer:
+      "We partner with governments, public health agencies, hospitals, life sciences companies, research institutions, development organizations, and healthcare technology providers.",
+  },
+  {
+    question: "Can SkyQuest support digital health and healthcare modernization?",
+    answer:
+      "Yes. We help organizations implement digital health strategies, AI-enabled solutions, data platforms, interoperability frameworks, and intelligent healthcare systems.",
+  },
+  {
+    question: "Does SkyQuest help improve public health programs?",
+    answer:
+      "Yes. We support the design, implementation, monitoring, and evaluation of public health initiatives, disease control programs, health financing, and community health interventions.",
+  },
+  {
+    question: "How does SkyQuest support the life sciences sector?",
+    answer:
+      "We help life sciences organizations with market intelligence, innovation strategy, technology commercialization, research support, regulatory advisory, and digital transformation.",
+  },
+  {
+    question: "Can SkyQuest improve healthcare data and decision-making?",
+    answer:
+      "Yes. We leverage AI, analytics, geospatial intelligence, dashboards, and real-time data systems to strengthen health planning, resource allocation, and operational performance.",
   },
   {
     question:
-      "Do you work with governments and development institutions?",
+      "Does SkyQuest support healthcare infrastructure and investment planning?",
     answer:
-      "Yes. We partner with ministries, public agencies, multilateral organizations, foundations, and development institutions on agriculture and rural development programs.",
-  },
-  {
-    question: "How does SkyQuest support digital agriculture initiatives?",
-    answer:
-      "We design and implement digital agriculture platforms, AI-enabled advisory systems, geospatial intelligence solutions, precision agriculture programs, and digital farmer ecosystems.",
-  },
-  {
-    question: "Can SkyQuest support livestock transformation programs?",
-    answer:
-      "Yes. Our livestock expertise includes animal health systems, disease surveillance, traceability, productivity enhancement, digital livestock management, and value chain development.",
-  },
-  {
-    question: "How do you approach climate-smart agriculture?",
-    answer:
-      "We integrate climate adaptation, resilience-building, regenerative practices, water efficiency, risk management, and sustainability principles into agricultural development strategies.",
-  },
-  {
-    question: "Can SkyQuest help strengthen agricultural value chains?",
-    answer:
-      "Yes. We support value chain diagnostics, market development, aggregation models, processing infrastructure, logistics systems, and market access strategies.",
+      "Yes. We develop feasibility studies, Detailed Project Reports (DPRs), investment strategies, implementation roadmaps, and program management frameworks for healthcare infrastructure and system strengthening.",
   },
   {
     question:
-      "Do you support agri-finance and rural investment initiatives?",
+      "What makes SkyQuest different in healthcare and life sciences consulting?",
     answer:
-      "Yes. We help design agricultural finance models, insurance programs, blended finance structures, rural investment strategies, and financial inclusion initiatives.",
-  },
-  {
-    question: "What regions does SkyQuest serve?",
-    answer:
-      "We work across India, Africa, the Middle East, Asia-Pacific, and other emerging markets where agriculture, food systems, and rural development are strategic priorities.",
+      "SkyQuest combines healthcare strategy, digital innovation, AI, research, program management, and implementation expertise to help organizations build resilient health systems and accelerate innovation across the healthcare ecosystem.",
   },
 ];

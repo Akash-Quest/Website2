@@ -87,46 +87,43 @@ export const PublicSectorDigitalGovernanceWhatWeOfferData = {
 
 export const PublicSectorDigitalGovernanceFaqData = [
   {
-    question:
-      "What types of agriculture and livestock projects does SkyQuest support?",
+    question: "What services does SkyQuest provide for the public sector?",
     answer:
-      "We support agricultural transformation programs, livestock development initiatives, value chain projects, agri-tech deployments, climate resilience programs, food security initiatives, and rural development strategies.",
+      "SkyQuest helps governments with strategy and policy advisory, program management, digital transformation, institutional strengthening, project planning, monitoring and evaluation, and capacity building.",
   },
   {
-    question:
-      "Do you work with governments and development institutions?",
+    question: "Which government organizations does SkyQuest work with?",
     answer:
-      "Yes. We partner with ministries, public agencies, multilateral organizations, foundations, and development institutions on agriculture and rural development programs.",
+      "We work with central and state governments, public sector agencies, development institutions, multilateral organizations, and implementation partners on policy, governance, and digital transformation initiatives.",
   },
   {
-    question: "How does SkyQuest support digital agriculture initiatives?",
+    question: "How does SkyQuest support digital government transformation?",
     answer:
-      "We design and implement digital agriculture platforms, AI-enabled advisory systems, geospatial intelligence solutions, precision agriculture programs, and digital farmer ecosystems.",
+      "We help governments modernize public services through digital strategies, interoperable platforms, data and AI solutions, workflow automation, and citizen-centric service delivery.",
   },
   {
-    question: "Can SkyQuest support livestock transformation programs?",
+    question: "Can SkyQuest support large government programs and missions?",
     answer:
-      "Yes. Our livestock expertise includes animal health systems, disease surveillance, traceability, productivity enhancement, digital livestock management, and value chain development.",
+      "Yes. We establish and manage Program Management Units (PMUs), Technical Support Units (TSUs), and implementation support teams that help governments plan, coordinate, monitor, and successfully deliver complex programs.",
   },
   {
-    question: "How do you approach climate-smart agriculture?",
+    question: "Does SkyQuest prepare Detailed Project Reports (DPRs)?",
     answer:
-      "We integrate climate adaptation, resilience-building, regenerative practices, water efficiency, risk management, and sustainability principles into agricultural development strategies.",
+      "Yes. We develop DPRs, feasibility studies, implementation roadmaps, investment cases, and project planning documents that support government infrastructure and development initiatives.",
   },
   {
-    question: "Can SkyQuest help strengthen agricultural value chains?",
+    question: "How does SkyQuest strengthen government institutions?",
     answer:
-      "Yes. We support value chain diagnostics, market development, aggregation models, processing infrastructure, logistics systems, and market access strategies.",
+      "We help improve governance through institutional assessments, organizational restructuring, operating models, capacity building, SOP development, and change management initiatives.",
   },
   {
-    question:
-      "Do you support agri-finance and rural investment initiatives?",
+    question: "What role does data and AI play in your public sector engagements?",
     answer:
-      "Yes. We help design agricultural finance models, insurance programs, blended finance structures, rural investment strategies, and financial inclusion initiatives.",
+      "We leverage data analytics, AI, geospatial intelligence, dashboards, and monitoring frameworks to support evidence-based planning, improve decision-making, and enhance program performance.",
   },
   {
-    question: "What regions does SkyQuest serve?",
+    question: "Why do governments choose SkyQuest as an advisory partner?",
     answer:
-      "We work across India, Africa, the Middle East, Asia-Pacific, and other emerging markets where agriculture, food systems, and rural development are strategic priorities.",
+      "SkyQuest combines policy expertise, digital transformation, program management, institutional strengthening, and implementation support to help governments deliver measurable outcomes and long-term public value.",
   },
 ];

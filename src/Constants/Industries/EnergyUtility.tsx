@@ -69,47 +69,44 @@ export const EnergyUtilitiesWhatWeOfferData = {
 
 export const EnergyUtilitiesFaqData = [
   {
-    question: "What is the Women & Youth Green Hub?",
+    question: "How does SkyQuest support the energy transition?",
     answer:
-      "A franchise-based clean energy retail model using 40ft container hubs to distribute solar products, e-bikes, EV chargers, and clean cooking devices across Africa, paired with finance advisory.",
+      "We help governments, utilities, and private sector organizations develop strategies that accelerate renewable energy adoption, grid modernization, decarbonization, and long-term energy security.",
+  },
+  {
+    question: "Can SkyQuest support renewable energy and clean energy projects?",
+    answer:
+      "Yes. We support solar, wind, hydro, bioenergy, green hydrogen, and other clean energy initiatives through feasibility studies, investment advisory, and implementation support.",
+  },
+  {
+    question: "How does SkyQuest help modernize utilities?",
+    answer:
+      "We help utilities improve operational efficiency through digital transformation, smart grid strategies, asset management, AI, GIS, and data-driven decision-making.",
+  },
+  {
+    question: "Does SkyQuest support energy infrastructure planning?",
+    answer:
+      "Yes. We develop master plans, Detailed Project Reports (DPRs), techno-economic assessments, and implementation roadmaps for power generation, transmission, and distribution projects.",
   },
   {
     question:
-      "Does SkyQuest work on grid infrastructure, or primarily off-grid/distributed energy?",
+      "How does SkyQuest support decarbonization and sustainability initiatives?",
     answer:
-      "Our primary focus is distributed and off-grid clean energy access, e-mobility, and franchise retail models, alongside energy transition financing support.",
+      "We help organizations develop decarbonization strategies, carbon reduction roadmaps, ESG frameworks, and energy efficiency programs that align with national and global sustainability goals.",
   },
   {
-    question:
-      "How does SkyQuest make clean energy products affordable for underserved communities?",
+    question: "Can SkyQuest help mobilize investment for energy projects?",
     answer:
-      "By pairing products with dedicated finance-extension advisory desks and digital financial inclusion tools within the retail hub model.",
+      "Yes. We support project preparation, investment strategies, public-private partnerships, blended finance, and stakeholder engagement to accelerate infrastructure investment.",
   },
   {
-    question: "Who partners with SkyQuest on energy access programmes?",
+    question: "How does SkyQuest leverage digital technologies in the energy sector?",
     answer:
-      "UN agencies, national governments, and franchise partners across Africa and the Global South.",
+      "We apply AI, geospatial intelligence, IoT, digital platforms, predictive analytics, and automation to improve asset performance, operational resilience, and system reliability.",
   },
   {
-    question: "Can this model be replicated in other regions beyond Africa?",
+    question: "What makes SkyQuest different in energy and utilities consulting?",
     answer:
-      "Yes — the franchise model is explicitly designed to scale to other Global South markets with local branding and business management support.",
-  },
-  {
-    question: "Does SkyQuest connect energy projects to climate finance?",
-    answer:
-      "Yes — through platforms like DecarbonX, energy transition projects can access carbon markets, green bonds, and DFI financing.",
-  },
-  {
-    question:
-      "What products are typically distributed through the Green Hub model?",
-    answer:
-      "Solar panels, solar lights, solar pumps, clean cooking devices, e-bikes, EV battery-swapping stations, and EV chargers.",
-  },
-  {
-    question:
-      "Is women's and youth entrepreneurship central to SkyQuest's energy work?",
-    answer:
-      "Yes — the Green Hub model is explicitly designed around women- and youth-led retail ownership, combining energy access with local economic opportunity.",
+      "SkyQuest combines strategy, engineering advisory, digital transformation, investment advisory, program management, and implementation expertise to help clients build resilient, efficient, and future-ready energy systems.",
   },
 ];
