@@ -8,7 +8,7 @@ import { fadeLeft, fadeRight } from "@/lib/animations";
 
 export default function CareersHero() {
   return (
-    <section className="w-full bg-[#F7F5F1] ">
+    <section className="w-full bg-[#F7F5F1] overflow-hidden">
     <div className="page-container ">
       
       {/* ── LEFT PANEL ── */}

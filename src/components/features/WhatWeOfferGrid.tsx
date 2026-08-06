@@ -11,6 +11,7 @@ interface WhatWeOfferGridProps {
   heading: React.ReactNode;
   description: string;
   items: OfferingItem[];
+  bgClassName?: string;
 }
 
 const SM_COLUMNS = 3;
@@ -52,9 +53,12 @@ export default function WhatWeOfferGrid({
   heading,
   description,
   items,
+  bgClassName = "bg-white",
 }: WhatWeOfferGridProps) {
+  const iconBgClassName = bgClassName === "bg-white" ? "bg-background" : "bg-white";
+
   return (
-    <section className="w-full bg-white">
+    <section className={`w-full ${bgClassName}`}>
       <div className="page-container">
         <div className="text-center">
           <Reveal
@@ -103,7 +107,7 @@ export default function WhatWeOfferGrid({
                 ${centeringClass(index, items.length, LG_COLUMNS, LG_COL_START, "lg:col-start-auto")}
               `}
             >
-              <span className="flex h-10 w-10 2xl:h-12 2xl:w-12  items-center justify-center rounded-lg bg-primary/10 text-primary">
+              <span className={`flex h-10 w-10 2xl:h-12 2xl:w-12  items-center justify-center rounded-lg ${iconBgClassName} text-primary`}>
                 <Icon className="h-4 w-4 2xl:h-6 2xl:w-6" strokeWidth={1.75} color="currentColor" variant="Linear" />
               </span>
 

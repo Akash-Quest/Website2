@@ -48,7 +48,7 @@ export default function FAQSection({
   }, [openIndex]);
 
   return (
-    <section className={`w-full ${bgClassName}`}>
+    <section className={`w-full overflow-hidden ${bgClassName}`}>
       <motion.div
         className="page-container "
         variants={fadeUp}

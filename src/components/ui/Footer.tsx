@@ -6,15 +6,15 @@ import { motion } from "framer-motion";
 import { fadeUpSm, staggerContainer } from "@/lib/animations";
 import { TwitterIcon, FacebookIcon, LinkedInIcon } from "@/components/icons/SocialIcons";
 
-const services = [
-  { label: "Digital Transformation & Emerging Technologies", href: "/services/digital-transformation-emerging-technologies" },
-  { label: "Public Sector Advisory", href: "/services/public-sector-advisory" },
-  { label: "Data and Artificial Intelligence", href: "/services/data-artificial-intelligence" },
-  { label: "Integrated Program Management", href: "/services/integrated-program-management" },
-  { label: "Social Impact & CSR", href: "/services/social-impact-csr" },
-  { label: "Business Intelligence & Market Research", href: "/services/business-intelligence-market-research" },
-  { label: "Climate, Sustainability & ESG Advisory", href: "/services/climate-sustainability-esg-advisory" },
-  { label: "Agriculture & Livestock", href: "/services/agriculture-livestock" },
+const capabilities = [
+  { label: "Digital Transformation & Emerging Technologies", href: "/capabilities/digital-transformation-emerging-technologies" },
+  { label: "Public Sector Advisory", href: "/capabilities/public-sector-advisory" },
+  { label: "Data and Artificial Intelligence", href: "/capabilities/data-artificial-intelligence" },
+  { label: "Integrated Program Management", href: "/capabilities/integrated-program-management" },
+  { label: "Social Impact & CSR", href: "/capabilities/social-impact-csr" },
+  { label: "Business Intelligence & Market Research", href: "/capabilities/business-intelligence-market-research" },
+  { label: "Climate, Sustainability & ESG Advisory", href: "/capabilities/climate-sustainability-esg-advisory" },
+  { label: "Agriculture & Livestock", href: "/capabilities/agriculture-livestock" },
 ];
 
 const aboutLinks = [
@@ -58,11 +58,11 @@ const Footer = () => {
             </div>
           </motion.div>
 
-          {/* Services column */}
+          {/* Capabilities column */}
           <motion.div variants={fadeUpSm} className="w-full sm:w-56 lg:w-52">
-            <h3 className="text-white font-bold mb-4 text-body-lg">Our Services</h3>
+            <h3 className="text-white font-bold mb-4 text-body-lg">Our Capabilities</h3>
             <ul className="space-y-2.5 text-white/80 ">
-              {services.map((s) => (
+              {capabilities.map((s) => (
                 <li key={s.label}>
                   <Link
                     href={s.href}

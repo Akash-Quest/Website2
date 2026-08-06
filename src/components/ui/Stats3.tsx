@@ -10,6 +10,7 @@ interface Stat {
 
 interface StatsGridThreeProps {
   stats?: Stat[];
+  className?: string;
 }
 
 const defaultStats: Stat[] = [
@@ -18,7 +19,7 @@ const defaultStats: Stat[] = [
   { target: 40, suffix: "%", label: "Avg. Cost Reduction" },
 ];
 
-const StatsGridThree = ({ stats = defaultStats }: StatsGridThreeProps) => {
+const StatsGridThree = ({ stats = defaultStats, className = "" }: StatsGridThreeProps) => {
   const countupObserver = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
@@ -72,7 +73,7 @@ const StatsGridThree = ({ stats = defaultStats }: StatsGridThreeProps) => {
   }, []);
 
   return (
-    <section className="w-full  bg-background">
+    <section className={`w-full bg-background ${className}`}>
       {/* ---------- Mobile: 2-up top row + full-width row below ---------- */}
       <div className="grid grid-cols-2 sm:hidden">
         {stats.map((stat, i) => (

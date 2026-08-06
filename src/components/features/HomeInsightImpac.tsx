@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { fadeUp } from "@/lib/animations";
 import Button from "../ui/Button";
 
 export interface AccordionCard {
@@ -50,9 +52,25 @@ const TransformAccordion: React.FC<TransformAccordionProps> = ({
 
   return (
     <section className="w-full bg-[#03030F]">
-      <div className="page-container">
-        {/* Header */}
-        <div className="grid grid-cols-[55fr_45fr] items-start gap-20 pb-10">
+      <motion.div
+        className="page-container"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        {/* Header (mobile) */}
+        <div className="pb-8 lg:hidden">
+          <p className="text-body-sm font-medium text-white">{eyebrow}</p>
+          <h2 className="pb-4 font-semibold text-white">{heading}</h2>
+          <p className="pb-5 font-medium text-white">{description}</p>
+          <Button variant="primary" iconSize={16}>
+            {buttonLabel}
+          </Button>
+        </div>
+
+        {/* Header (desktop) */}
+        <div className="hidden items-start gap-20 pb-10 lg:grid lg:grid-cols-[55fr_45fr]">
           <div>
             <p className="text-body-sm font-medium text-white">{eyebrow}</p>
 
@@ -65,8 +83,52 @@ const TransformAccordion: React.FC<TransformAccordionProps> = ({
 
           <p className="font-medium text-white">{description}</p>
         </div>
+
+        {/* Cards (mobile) - stacked, expands vertically */}
+        <div className="flex flex-col gap-3 lg:hidden">
+          {cards.map((card, index) => {
+            const isActive = index === activeIndex;
+
+            return (
+              <button
+                key={card.title}
+                type="button"
+                onClick={() => setActiveIndex(index)}
+                className={`flex flex-col justify-start overflow-hidden rounded-[18px] border border-white/20 px-6 py-6 text-left backdrop-blur-[10px] transition-colors duration-300 cursor-pointer ${
+                  isActive ? "bg-[var(--primary)]" : "bg-white/10"
+                }`}
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <h3 className="text-body-xl leading-[1.3] tracking-[-0.02em] text-white">
+                    {card.title}
+                  </h3>
+                  <span
+                    className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white text-primary transition-transform duration-300 ${
+                      isActive ? "rotate-45" : ""
+                    }`}
+                  >
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M8 2v12M2 8h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                    </svg>
+                  </span>
+                </div>
+
+                <div
+                  className="grid transition-[grid-template-rows] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                  style={{ gridTemplateRows: isActive ? "1fr" : "0fr" }}
+                >
+                  <div className="overflow-hidden">
+                    <p className="mt-4 text-white/90 text-body-lg">{card.body}</p>
+                  </div>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Cards (desktop) - expands horizontally */}
         <div
-          className="grid transition-[grid-template-columns] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+          className="hidden transition-[grid-template-columns] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] lg:grid"
           style={{
             gridTemplateColumns: cards
               .map((_, index) => (index === activeIndex ? "2fr" : "1fr"))
@@ -109,7 +171,7 @@ const TransformAccordion: React.FC<TransformAccordionProps> = ({
           })}
         </div>
 
-      </div>
+      </motion.div>
     </section>
   );
 };

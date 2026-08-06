@@ -2,7 +2,7 @@
   "groups": [
     {
       "id": "services",
-      "label": "Our Services",
+      "label": "Our Capabilities",
       "items": [
         {
           "id": "capabilities",
@@ -17,90 +17,90 @@
                 "links": [
                   {
                     "label": "Digital Transformation & Emerging Technologies",
-                    "href": "/services/digital-transformation-emerging-technologies",
+                    "href": "/capabilities/digital-transformation-emerging-technologies",
                     "featured": true,
                     "promo": {
                       "image": "/CoreCapability/1.jpg",
                       "title": "Digital Transformation & Emerging Technologies",
                       "description": "From data strategy & ML models to responsible AI governance enabling organisations to make better, faster decisions at machine speed. We turn raw data into your most powerful competitive asset.",
-                      "href": "/services/digital-transformation-emerging-technologies",
+                      "href": "/capabilities/digital-transformation-emerging-technologies",
                       "ctaLabel": "Visit Page"
                     }
                   },
                   {
                     "label": "Public Sector Advisory",
-                    "href": "/services/public-sector-advisory",
+                    "href": "/capabilities/public-sector-advisory",
                     "promo": {
                       "image": "/CoreCapability/2.jpg",
                       "title": "Public Sector Advisory",
                       "description": "Supporting governments and institutions through policy advisory, governance modernization, and transformational program implementation.",
-                      "href": "/services/public-sector-advisory",
+                      "href": "/capabilities/public-sector-advisory",
                       "ctaLabel": "Visit Page"
                     }
                   },
                   {
                     "label": "Data & Artificial Intelligence",
-                    "href": "/services/data-artificial-intelligence",
+                    "href": "/capabilities/data-artificial-intelligence",
                     "promo": {
                       "image": "/CoreCapability/3.jpg",
                       "title": "Data & Artificial Intelligence",
                       "description": "We help governments, enterprises, and institutions leverage AI, automation, data intelligence, geospatial technologies, and digital platforms to modernize operations, improve decision-making, and accelerate innovation.",
-                      "href": "/services/data-artificial-intelligence",
+                      "href": "/capabilities/data-artificial-intelligence",
                       "ctaLabel": "Visit Page"
                     }
                   },
                   {
                     "label": "Integrated Program Management",
-                    "href": "/services/integrated-program-management",
+                    "href": "/capabilities/integrated-program-management",
                     "promo": {
                       "image": "/CoreCapability/4.jpg",
                       "title": "Integrated Program Management",
                       "description": "End-to-end program delivery from design to implementation, ensuring on-time, on-budget results with measurable outcomes.",
-                      "href": "/services/integrated-program-management",
+                      "href": "/capabilities/integrated-program-management",
                       "ctaLabel": "Visit Page"
                     }
                   },
                   {
                     "label": "Social Impact & CSR",
-                    "href": "/services/social-impact-csr",
+                    "href": "/capabilities/social-impact-csr",
                     "promo": {
                       "image": "/CoreCapability/8.jpg",
                       "title": "Social Impact & CSR",
                       "description": "Designing and scaling high-impact social programs that strengthen communities, improve livelihoods, and deliver measurable development outcomes.",
-                      "href": "/services/social-impact-csr",
+                      "href": "/capabilities/social-impact-csr",
                       "ctaLabel": "Visit Page"
                     }
                   },
                   {
                     "label": "Business Intelligence & Market Research",
-                    "href": "/services/business-intelligence-market-research",
+                    "href": "/capabilities/business-intelligence-market-research",
                     "promo": {
                       "image": "/CoreCapability/5.jpg",
                       "title": "Business Intelligence & Market Research",
                       "description": "We provide market intelligence, industry insights, competitive benchmarking, customer research, and strategic analysis that enable organizations to identify opportunities, mitigate risks, and make informed business decisions.",
-                      "href": "/services/business-intelligence-market-research",
+                      "href": "/capabilities/business-intelligence-market-research",
                       "ctaLabel": "Visit Page"
                     }
                   },
                   {
                     "label": "Climate, Sustainability & ESG Advisory",
-                    "href": "/services/climate-sustainability-esg-advisory",
+                    "href": "/capabilities/climate-sustainability-esg-advisory",
                     "promo": {
                       "image": "/CoreCapability/6.jpg",
                       "title": "Climate, Sustainability & ESG Advisory",
                       "description": "We provide market intelligence, industry insights, competitive benchmarking, customer research, and strategic analysis that enable organizations to identify opportunities, mitigate risks, and make informed business decisions.",
-                      "href": "/services/climate-sustainability-esg-advisory",
+                      "href": "/capabilities/climate-sustainability-esg-advisory",
                       "ctaLabel": "Visit Page"
                     }
                   },
                   {
                     "label": "Agriculture & Livestock Advisory",
-                    "href": "/services/agriculture-livestock ",
+                    "href": "/capabilities/agriculture-livestock ",
                     "promo": {
                       "image": "/CoreCapability/7.jpg",
                       "title": "Agriculture & Livestock Advisory",
                       "description": "Transforming agriculture and livestock through technology, innovation, and market-led development.",
-                      "href": "/services/agriculture-livestock",
+                      "href": "/capabilities/agriculture-livestock",
                       "ctaLabel": "Visit Page"
                     }
                   }
@@ -111,14 +111,158 @@
               "image": "/CoreCapability/1.jpg",
               "title": "Digital Transformation & Emerging Technologies",
               "description": "From data strategy and ML models to responsible AI governance enabling organisations to make better, faster decisions at machine speed. We turn raw data into your most powerful competitive asset.",
-              "href": "/services/digital-transformation-emerging-technologies",
+              "href": "/capabilities/digital-transformation-emerging-technologies",
               "ctaLabel": "Visit Page"
             }
           }
         },
 
+        {
+          "id": "industries",
+          "label": "Industries",
+          "href": "/industries",
+          "content": {
+            "kind": "columns",
+            "heading": "Industries We Serve",
+            "description": "We bring deep sector expertise across high-growth industries, helping governments, institutions, and enterprises navigate complex challenges and unlock sustainable growth.",
+            "columns": [
+              {
+                "links": [
+                  {
+                    "label": "Energy & Utilities",
+                    "href": "/industries/energy-utilities",
+                    "featured": true,
+                    "promo": {
+                      "image": "/IndustriesHero/energyUtilities.jpg",
+                      "title": "Energy & Utilities",
+                      "description": "SkyQuest partners with governments, utilities, and clean energy innovators to accelerate renewable energy adoption, expand energy access in underserved communities, and build the financing and distribution models that make clean energy commercially viable.",
+                      "href": "/industries/energy-utilities",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Agriculture & Food Systems",
+                    "href": "/industries/agriculture-food-systems",
+                    "promo": {
+                      "image": "/IndustriesHero/Agriculture.jpg",
+                      "title": "Agriculture & Food Systems",
+                      "description": "SkyQuest partners across the agriculture value chain to help governments, agribusinesses, development organizations, investors, and technology providers improve productivity, strengthen value chains, accelerate innovation, and create sustainable food systems.",
+                      "href": "/industries/agriculture-food-systems",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Livestock, Fisheries & Animal Health",
+                    "href": "/industries/livestock-fisheries-animal-health",
+                    "promo": {
+                      "image": "/IndustriesHero/LivestockFishery.jpg",
+                      "title": "Livestock, Fisheries & Animal Health",
+                      "description": "SkyQuest partners with governments, development agencies, and animal health institutions to strengthen veterinary infrastructure, zoonotic disease surveillance, fisheries value chains, and livestock-based livelihoods across the Global South.",
+                      "href": "/industries/livestock-fisheries-animal-health",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Healthcare & Life Sciences",
+                    "href": "/industries/healthcare-life-sciences",
+                    "promo": {
+                      "image": "/IndustriesHero/Healthcare.jpg",
+                      "title": "Healthcare & Life Sciences",
+                      "description": "SkyQuest partners with governments, foundations, healthcare providers, and life sciences companies to strengthen health systems, commercialize healthcare innovation, and expand access to diagnostics and care across underserved communities.",
+                      "href": "/industries/healthcare-life-sciences",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Climate & Environment",
+                    "href": "/industries/climate-environment",
+                    "promo": {
+                      "image": "/IndustriesHero/climate.jpg",
+                      "title": "Climate & Environment",
+                      "description": "SkyQuest partners with governments, DFIs, and climate investors to design bankable climate finance platforms, generate carbon credits, and build the policy and monitoring infrastructure needed for credible, investable climate action.",
+                      "href": "/industries/climate-environment",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Water & Sanitation",
+                    "href": "/industries/water-sanitation",
+                    "promo": {
+                      "image": "/IndustriesHero/WaterSanitary.jpg",
+                      "title": "Water & Sanitation",
+                      "description": "SkyQuest partners with governments, utilities, and development organizations to deploy real-time water quality and flow monitoring systems, strengthen water security, and design sanitation and CWIS programmes for underserved communities.",
+                      "href": "/industries/water-sanitation",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Financial Services & Inclusive Finance",
+                    "href": "/industries/financial-services-inclusive-finance",
+                    "promo": {
+                      "image": "/IndustriesHero/Finance.jpg",
+                      "title": "Financial Services & Inclusive Finance",
+                      "description": "SkyQuest partners with governments, DFIs, and financial institutions to design blended finance structures, digital financial inclusion platforms, and institutional strategies that connect underserved populations to formal capital.",
+                      "href": "/industries/financial-services-inclusive-finance",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Public Sector & Digital Governance",
+                    "href": "/industries/public-sector-digital-governance",
+                    "promo": {
+                      "image": "/IndustriesHero/PublicSector.jpg",
+                      "title": "Public Sector & Digital Governance",
+                      "description": "SkyQuest partners with national and state governments, presidential secretariats, and public institutions to design and deploy digital public infrastructure, integrate fragmented government systems, and build institutional capacity for data-driven governance.",
+                      "href": "/industries/public-sector-digital-governance",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Social Sector",
+                    "href": "/industries/social-sector",
+                    "promo": {
+                      "image": "/IndustriesHero/social.jpg",
+                      "title": "Social Sector",
+                      "description": "SkyQuest partners with foundations, development organizations, and governments to build entrepreneurship ecosystems, deliver skill and capacity-building programmes, and strengthen livelihoods across underserved communities in the Global South.",
+                      "href": "/industries/social-sector",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Consumer Goods & Retail",
+                    "href": "/industries/consumer-goods-retail",
+                    "promo": {
+                      "image": "/IndustriesHero/Consumer.jpg",
+                      "title": "Consumer Goods & Retail",
+                      "description": "SkyQuest partners with FMCG, consumer goods, and retail companies to identify and license innovation, structure go-to-market strategies, and build last-mile distribution models that reach underserved and emerging markets.",
+                      "href": "/industries/consumer-goods-retail",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "AI & Digital Economy",
+                    "href": "/industries/ai-digital-economy",
+                    "promo": {
+                      "image": "/IndustriesHero/AI.jpg",
+                      "title": "AI & Digital Economy",
+                      "description": "SkyQuest partners with governments, enterprises, and institutions to deploy AI enablement, enterprise automation, and bespoke digital platforms that convert data into decisions and manual processes into scalable, intelligent systems.",
+                      "href": "/industries/ai-digital-economy",
+                      "ctaLabel": "Visit Page"
+                    }
+                  }
+                ]
+              }
+            ],
+            "promo": {
+              "image": "/IndustriesHero/energyUtilities.jpg",
+              "title": "Energy & Utilities",
+              "description": "SkyQuest partners with governments, utilities, and clean energy innovators to accelerate renewable energy adoption, expand energy access in underserved communities, and build the financing and distribution models that make clean energy commercially viable.",
+              "href": "/industries/energy-utilities",
+              "ctaLabel": "Visit Page"
+            }
+          }
+        },
 
-        
         {
           "id": "product-solutions",
           "label": "Product & Solutions",

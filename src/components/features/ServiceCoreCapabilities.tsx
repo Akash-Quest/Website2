@@ -14,6 +14,7 @@ interface ServiceCoreCapabilitiesProps {
   imageSrc: string;
   imageAlt: string;
   capabilities: Capability[];
+  className?: string;
 }
 
 export default function ServiceCoreCapabilities({
@@ -23,10 +24,11 @@ export default function ServiceCoreCapabilities({
   imageSrc,
   imageAlt,
   capabilities,
+  className = "pt-0",
 }: ServiceCoreCapabilitiesProps) {
   return (
     <section className="w-full bg-background">
-      <div className="page-container pt-0">
+      <div className={`page-container ${className}`}>
         {/* Header */}
         <div className="relative text-center">
           <Reveal

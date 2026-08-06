@@ -6,30 +6,30 @@ import Reveal from "@/components/ui/Reveal";
 
 export type OtherService = { label: string; href: string };
 
-export const ALL_SERVICES: OtherService[] = [
+export const ALL_CAPABILITIES: OtherService[] = [
   {
     label: "Digital Transformation & Emerging Technologies",
-    href: "/services/digital-transformation-emerging-technologies",
+    href: "/capabilities/digital-transformation-emerging-technologies",
   },
-  { label: "Public Sector Advisory", href: "/services/public-sector-advisory" },
+  { label: "Public Sector Advisory", href: "/capabilities/public-sector-advisory" },
   {
     label: "Data & Artificial Intelligence",
-    href: "/services/data-artificial-intelligence",
+    href: "/capabilities/data-artificial-intelligence",
   },
   {
     label: "Integrated Program Management",
-    href: "/services/integrated-program-management",
+    href: "/capabilities/integrated-program-management",
   },
-  { label: "Social Impact & CSR", href: "/services/social-impact-csr" },
+  { label: "Social Impact & CSR", href: "/capabilities/social-impact-csr" },
   {
     label: "Business Intelligence & Market Research",
-    href: "/services/business-intelligence-market-research",
+    href: "/capabilities/business-intelligence-market-research",
   },
   {
     label: "Climate, Sustainability & ESG Advisory",
-    href: "/services/climate-sustainability-esg-advisory",
+    href: "/capabilities/climate-sustainability-esg-advisory",
   },
-  { label: "Agriculture & Livestock", href: "/services/agriculture-livestock" },
+  { label: "Agriculture & Livestock", href: "/capabilities/agriculture-livestock" },
 ];
 
 function shuffle<T>(items: T[]): T[] {
@@ -48,7 +48,7 @@ const OtherServicesSection = ({
   bgClassName?: string;
   currentHref?: string;
 }) => {
-  const pool = ALL_SERVICES.filter((service) => service.href !== currentHref);
+  const pool = ALL_CAPABILITIES.filter((service) => service.href !== currentHref);
   const [displayed, setDisplayed] = useState(() => pool.slice(0, 6));
 
   useEffect(() => {
@@ -66,7 +66,7 @@ const OtherServicesSection = ({
           custom={0}
           className="text-sm 2xl:text-base  text-primary text-body-sm font-medium"
         >
-          Other Service
+          Other Capabilities
         </Reveal>
 
         {/* Heading */}
