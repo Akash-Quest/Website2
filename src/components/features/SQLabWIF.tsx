@@ -10,7 +10,7 @@ export default function SQLabWIF() {
       tag: 'Hospitals',
       title: 'Any Size From Clinics To Multi-Specialty',
       desc: 'Set up a full-fledged in-house pathology lab within no time.',
-      image: '/Productsoln/IGUse1.jpg', 
+      image: '/Productsoln/SqLab01.jpg', 
       bullets: [
         'No more outsourcing full control of your reports',
         'Low setup cost, ROI within 2 years',
@@ -23,7 +23,7 @@ export default function SQLabWIF() {
       tag: 'Doctors',
       title: 'General practitioners, specialists, referrals',
       desc: 'Faster pathology reports. More walk-ins. Better patient outcomes.',
-      image: '/Productsoln/IGUse2.png',
+      image: '/Productsoln/SqLab02.jpg',
       bullets: [
         'Reports in under 15 minutes act sooner',
         'Results delivered direct to your phone',
@@ -36,7 +36,7 @@ export default function SQLabWIF() {
       tag: 'Technicians',
       title: "Lab operators and diagnostic staff",
       desc: 'Rapid growth with improved reporting speed and reduced cost.',
-      image: '/Productsoln/IGUse3.png',
+      image: '/Productsoln/SqLab03.jpg',
       bullets: [
         'All machines integrated no manual data entry',
         'Periodic online training included',
