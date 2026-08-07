@@ -63,7 +63,7 @@ export const ConsumerGoodsRetailWhatWeOfferData = {
       icon: Link,
       title: "Intelligent Supply Chains",
       description:"Apply AI, IoT, traceability, and predictive analytics to improve supply chain visibility, resilience, efficiency, and sustainability."},
-      ,{
+      {
             icon: Buildings2,
             title: "Custom Enterprise Platforms",
             description:
