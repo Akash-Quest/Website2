@@ -21,7 +21,7 @@
       title: (
         <>
           Shaping Strategy,<br />Technology & Impact for<br />{' '}
-          <em >Tomorrow's Leaders.</em>
+          <em >Tomorrow's Leaders</em>
         </>
       ),
       description:
@@ -50,7 +50,7 @@
         <>
           Building Intelligent< br />
 Systems for Governments<br />
- <em className="italic font-playfair">& Institutions at Scale.</em>
+ <em className="italic font-playfair">& Institutions at Scale</em>
         </>
       ),
       description:
@@ -66,7 +66,7 @@ Systems for Governments<br />
         <>
           Building Scalable Solutions<br /> for Communities,<br />
 {' '}
-          <em >Citizens & Impact.</em>
+          <em >Citizens & Impact</em>
         </>
       ),
       description:
