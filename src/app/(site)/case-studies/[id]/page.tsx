@@ -253,13 +253,15 @@ export default async function CaseStudyDetailsPage({
                 </span>
                 <div className="mt-3 flex items-center gap-2">
                   {[
-                    { label: "LinkedIn", icon: <LinkedInIcon /> },
-                    { label: "X", icon: <XIcon /> },
-                    { label: "Facebook", icon: <FacebookIcon /> },
+                    { label: "LinkedIn", icon: <LinkedInIcon />, href: "https://www.linkedin.com/company/skyquest-technology-consulting-private-limited/" },
+                    { label: "X", icon: <XIcon />, href: "https://x.com/skyquestt" },
+                    { label: "Facebook", icon: <FacebookIcon />, href: "https://www.facebook.com/STI4SDG/" },
                   ].map((social) => (
                     <a
                       key={social.label}
-                      href="#"
+                      href={social.href}
+                      target={social.href !== "#" ? "_blank" : undefined}
+                      rel={social.href !== "#" ? "noopener noreferrer" : undefined}
                       aria-label={`Follow us on ${social.label}`}
                       className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-background text-gray-900 transition-colors hover:bg-gray-50"
                     >

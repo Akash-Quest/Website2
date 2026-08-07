@@ -8,13 +8,13 @@ import { TwitterIcon, FacebookIcon, LinkedInIcon } from "@/components/icons/Soci
 
 const capabilities = [
   { label: "Digital Transformation & Emerging Technologies", href: "/capabilities/digital-transformation-emerging-technologies" },
-  { label: "Public Sector Advisory", href: "/capabilities/public-sector-advisory" },
+  { label: "Strategy & Policy Advisory", href: "/capabilities/strategy-policy-advisory" },
   { label: "Data and Artificial Intelligence", href: "/capabilities/data-artificial-intelligence" },
   { label: "Integrated Program Management", href: "/capabilities/integrated-program-management" },
-  { label: "Social Impact & CSR", href: "/capabilities/social-impact-csr" },
+  { label: "Livelihoods & Entrepreneurship", href: "/capabilities/livelihoods-entrepreneurship" },
   { label: "Business Intelligence & Market Research", href: "/capabilities/business-intelligence-market-research" },
-  { label: "Climate, Sustainability & ESG Advisory", href: "/capabilities/climate-sustainability-esg-advisory" },
-  { label: "Agriculture & Livestock", href: "/capabilities/agriculture-livestock" },
+  { label: "Technology Transfer & Innovation", href: "/capabilities/technology-transfer-innovation" },
+  { label: "Inclusive Finance & Institutional Strategy", href: "/capabilities/inclusive-finance-institutional-strategy" },
 ];
 
 const aboutLinks = [
@@ -46,13 +46,19 @@ const Footer = () => {
             </p>
             <div className="border-b border-white/20 mt-10 pb-6 flex gap-2 items-center">
                 <h3 className=" text-body-lg text-white font-semibold">Follow Us</h3>
-              {[<TwitterIcon />, <FacebookIcon />, <LinkedInIcon />, ].map((icon, i) => (
+              {[
+                { icon: <TwitterIcon />, href: "https://x.com/skyquestt" },
+                { icon: <FacebookIcon />, href: "https://www.facebook.com/STI4SDG/" },
+                { icon: <LinkedInIcon />, href: "https://www.linkedin.com/company/skyquest-technology-consulting-private-limited/" },
+              ].map((social, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={social.href}
+                  target={social.href !== "#" ? "_blank" : undefined}
+                  rel={social.href !== "#" ? "noopener noreferrer" : undefined}
                   className="w-7 h-7  rounded bg-white flex items-center justify-center text-[#03030F] hover:bg-gray-200 transition-colors [&>svg]:w-6 [&>svg]:h-6"
                 >
-                  {icon}
+                  {social.icon}
                 </a>
               ))}
             </div>
