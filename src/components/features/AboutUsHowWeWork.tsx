@@ -26,11 +26,10 @@ export default function AboutUsHowWeWork() {
   return (
     <section className="w-full bg-[#FFFFFF]  font-['Inter_Tight'] ">
       {/* Updated to max-w-[1920px] as per your design requirement */}
-      <div className="page-container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-        
-        {/* ── LEFT PANEL: Custom Sized Image Container ── */}
-        {/* Added explicit custom constraints [695px] x [729px] safely with Tailwind bracket schema */}
-        <div className=" w-full relative rounded-lg aspect-[695/729] overflow-hidden lg:sticky lg:top-8">
+      <div className="page-container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:items-stretch">
+
+        {/* ── LEFT PANEL: Image Container — height matches right column ── */}
+        <div className=" w-full relative rounded-lg overflow-hidden min-h-[320px] lg:h-full lg:sticky lg:top-8">
           <Image
             src="/AboutUs/AboutUsHww.png" 
             alt="Embedded Teams Working together"
@@ -44,12 +43,12 @@ export default function AboutUsHowWeWork() {
         <div className=" flex flex-col items-start w-full">
           
           {/* Eyebrow Tag */}
-          <span className="font-semibold text-primary mb-3">
+          <span className="font-medium text-primary mb-3">
             How we work
           </span>
 
           {/* Main Typography Header Block */}
-          <h2 className=" font-semibold ">
+          <h2 className=" font-semibold pb-2">
             Embedded Teams. Senior Partners.{' '}
             <em className="font-semibold">
               Outcomes On The Line.
@@ -61,9 +60,9 @@ export default function AboutUsHowWeWork() {
             {steps.map((step, idx) => (
               <div 
                 key={idx} 
-                className="py-6 flex flex-col gap-1.5 transition-all duration-200 hover:pl-2 group"
+                className="py-2 flex flex-col"
               >
-                <h3 className="font-semibold text-body-xl text-[#03030F]  transition-colors duration-200">
+                <h3 className="font-semibold text-body-lg text-[#03030F]   ">
                   {step.title}
                 </h3>
                 <p className="tracking-wide leading-snug text-muted">

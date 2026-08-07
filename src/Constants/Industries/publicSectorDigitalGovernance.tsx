@@ -1,5 +1,5 @@
 
-import { Chart, Convert3DCube, DollarSquare, Link, Note, Pet, Wind } from "iconsax-react";
+import { Chart, Convert3DCube, DocumentText, DollarSquare, Link, Note, Pet, Wind } from "iconsax-react";
 
 export const PublicSectorDigitalGovernanceOverviewData = {
   eyebrow: "Overview",
@@ -41,45 +41,51 @@ export const PublicSectorDigitalGovernanceWhatWeOfferData = {
   items: [
     {
       icon: Wind,
-      title: "Strategy & Policy Advisory",
+      title: "Governance & Institutional Assessment",
       description:
-        "Develop sector strategies, governance reforms, and regulatory frameworks that strengthen institutions and improve public service delivery.",
+        "Assess institutional capacity, governance structures, regulatory environments, public services, and implementation readiness to identify priorities for reform.",
     },
     {
       icon: Pet,
-      title: "Program Management Units (PMU / TSU)",
+      title: "Strategy & Policy Development",
       description:
-        "Provide embedded PMU and TSU support for program governance, implementation, stakeholder coordination, and performance monitoring.",
+        "Develop sector strategies, evidence-based policies, regulatory frameworks, and reform roadmaps that strengthen public sector performance.",
     },
     {
       icon: Convert3DCube,
-      title: "Digital Public Infrastructure",
+      title: "Program & Project Management",
       description:
-        "Design and implement DPI through citizen platforms, government portals, interoperable APIs, digital identity integration solutions.",
+        "Establish PMUs and TSUs to manage program governance, implementation, stakeholder coordination, execution, and performance.",
     },
     {
       icon: Note,
-      title: "Detailed Project Reports (DPR)",
+      title: "Project Planning & Investment Advisory",
       description:
-        "Prepare DPRs, feasibility studies, investment cases, and implementation roadmaps that support informed project planning and execution.",
+        "Develop DPRs, feasibility studies, investment cases, project plans, and implementation roadmaps for priority public sector initiatives.",
     },
     {
       icon: Link,
-      title: "Institutional Strengthening",
+      title: "Digital Government & DPI",
       description:
-        "Strengthen institutions through governance reforms, organizational transformation, SOP development, and capacity building.",
-    },
-    {
-      icon: DollarSquare,
-      title: "Government Digital Transformation",
-      description:
-        "Modernize government operations with ERP, IFMS, GIS, AI, dashboards, and workflow automation for connected governance.",
+        "Design and implement digital government initiatives, DPI, citizen platforms, interoperable systems, APIs, and digital service delivery frameworks.",
     },
     {
       icon: Chart,
-      title: "Monitoring & Evaluation",
+      title: "Data, AI & Geospatial Intelligence",
       description:
-        "Develop monitoring frameworks with KPIs, PMIS, dashboards, and performance analytics to improve transparency and decision-making.",
+        "Apply AI, GIS, data analytics, and intelligent dashboards to strengthen planning, resource allocation, monitoring, and evidence-based governance.",
+    },
+    {
+      icon: DollarSquare,
+      title: "Institutional Transformation & Capacity Building",
+      description:
+        "Strengthen organizations through operating models, SOPs, organizational transformation, governance improvements, and institutional capacity development.",
+    },
+    {
+      icon: DocumentText,
+      title: "Monitoring, Evaluation & Public Outcomes",
+      description:
+        "Establish KPIs, PMIS, monitoring frameworks, and outcome measurement systems to improve accountability, evaluate impact, and support continuous improvement.",
     },
   ],
 };

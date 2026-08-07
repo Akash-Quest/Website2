@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import type { CSSProperties } from "react";
 import Button from "./Button";
 import { fadeUp } from "@/lib/animations";
@@ -36,13 +37,15 @@ export default function HoverRevealCard2({
   isHovered,
   onHover,
 }: HoverRevealCardProps) {
+  const router = useRouter();
+
   return (
     <div
       className={`group relative w-full overflow-hidden rounded-2xl cursor-pointer ${className}`}
       style={style}
       onMouseEnter={() => onHover(true)}
       onMouseLeave={() => onHover(false)}
-      onClick={() => onHover(!isHovered)}
+      onClick={() => (isHovered ? router.push(href) : onHover(true))}
     >
       <motion.div
         className="absolute inset-0"

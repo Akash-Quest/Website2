@@ -16,8 +16,8 @@ export default function AboutUsPillars() {
           <path d="M35.1562 34.5013H35.1712" stroke="#03030F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
-      title: 'Strategy + Execution',
-      desc: "We don't stop at the deck. Our teams stay through implementation, accountable to outcomes.",
+      title: 'Strategy That Drives Execution',
+      desc: "We move beyond recommendations to help organizations translate strategy into action, manage implementation, and remain accountable for measurable outcomes.",
     },
     {
       // ➔ 3rd Icon: Data + Research + Tech (Top Right)
@@ -30,8 +30,8 @@ export default function AboutUsPillars() {
           <path d="M33.332 48.332H46.6654" stroke="#03030F" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
-      title: 'Data + Research + Tech',
-      desc: 'Every recommendation is grounded in primary research, proprietary data and applied technology.',
+      title: 'Evidence, Research, and Technology',
+      desc: 'Our recommendations are grounded in rigorous research, proprietary data, advanced analytics, and technology that enables better decisions and stronger outcomes.',
     },
     {
       // ➔ 2nd Icon: Profit + Purpose (Bottom Left)
@@ -45,8 +45,8 @@ export default function AboutUsPillars() {
           <path d="M48.334 31.6667L56.6673 23.3333" stroke="#03030F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
-      title: 'Profit + Purpose',
-      desc: 'Commercial impact and social impact, designed together not traded off.',
+      title: 'Commercial Value and Social Impact',
+      desc: 'We design solutions that create lasting economic value while addressing social priorities, strengthening communities, and delivering measurable development outcomes.',
     },
     {
       // ➔ 4th Icon: Global Standards, Local Depth (Bottom Right)
@@ -59,8 +59,8 @@ export default function AboutUsPillars() {
           <path d="M48.332 45.0013V56.668H54.9987V45.0013C54.9987 43.168 54.332 41.668 52.332 41.668H50.9987C48.9987 41.668 48.332 43.168 48.332 45.0013Z" stroke="#03030F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
-      title: 'Global Standards, Local Depth',
-      desc: 'Global research rigor with deep operating knowledge of India, Africa and emerging markets.',
+      title: 'Global Perspective, Local Expertise',
+      desc: 'We combine global research standards with deep knowledge of local markets, institutions, industries, and operating environments across emerging economies.',
     },
   ];
 
@@ -98,14 +98,14 @@ export default function AboutUsPillars() {
           {pillars.map((pillar, idx) => (
             <div 
               key={idx}
-              className="bg-[#F7F5F1] rounded-[20px] p-8 lg:p-10 flex flex-col items-start gap-4 transition-all duration-300 hover:bg-[#F2EFEA]"
+              className="bg-[#F7F5F1] rounded-[20px] p-4 2xl-p-6 flex flex-col items-start gap-4 transition-all duration-300 hover:bg-[#F2EFEA]"
             >
-              <div className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 shrink-0 overflow-hidden rounded-xl md:rounded-[20px] shadow-sm border border-[#03030F]/5">
+              <div className="w-10 h-10  shrink-0 overflow-hidden rounded-lg  border border-[#03030F]/5">
                 {pillar.icon}
               </div>
               
               <div className="flex flex-col gap-2 mt-2">
-                <h3 className="font-semibold text-body-xl text-[#03030F] tracking-tight">
+                <h3 className="font-semibold text-body-lg text-[#03030F] tracking-tight">
                   {pillar.title}
                 </h3>
                 <p className="leading-snug tracking-wide text-[#03030F]/70">

@@ -24,6 +24,22 @@ const aboutLinks = [
   { label: "Contact Us", href: "/contact" }
 ];
 
+const industries = [
+
+  { label: "Agriculture & Food Systems", href: "/industries/agriculture-food-systems" },
+  { label: "Livestock, Fisheries & Animal Health", href: "/industries/livestock-fisheries-animal-health" },
+  { label: "Healthcare & Life Sciences", href: "/industries/healthcare-life-sciences" },
+  { label: "AI & Digital Economy", href: "/industries/ai-digital-economy" },
+  { label: "Climate & Environment", href: "/industries/climate-environment" },
+  { label: "Energy & Utilities", href: "/industries/energy-utilities" },
+  { label: "Water & Sanitation", href: "/industries/water-sanitation" },
+  { label: "Financial Services & Inclusive Finance", href: "/industries/financial-services-inclusive-finance" },
+  { label: "Public Sector & Digital Governance", href: "/industries/public-sector-digital-governance" },
+  { label: "Social Sector", href: "/industries/social-sector" },
+  { label: "Consumer Goods & Retail", href: "/industries/consumer-goods-retail" },
+
+];
+
 const Footer = () => {
   return (
     <footer className="bg-[#03030F] ">
@@ -81,6 +97,23 @@ const Footer = () => {
             </ul>
           </motion.div>
 
+          {/* Industries column */}
+          <motion.div variants={fadeUpSm} className="w-full sm:w-60 lg:w-60">
+            <h3 className="text-white font-bold mb-4 text-body-lg">Industries</h3>
+            <ul className="space-y-2.5 text-white/80 ">
+              {industries.map((s) => (
+                <li key={s.label}>
+                  <Link
+                    href={s.href}
+                    className="hover:text-white hover:underline underline-offset-2 decoration-white/40 transition-colors"
+                  >
+                    <p>{s.label}</p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
           {/* About column */}
           <motion.div variants={fadeUpSm} className="w-full sm:w-40 lg:w-40">
             <h3 className="text-white font-bold mb-4 text-body-lg">About Us</h3>
@@ -93,28 +126,6 @@ const Footer = () => {
                   >
                     <p>{l.label}</p>
                   </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Contact column */}
-          <motion.div variants={fadeUpSm}>
-            <h3 className="text-white font-bold mb-4 text-body-lg">Connect With Us</h3>
-            <ul className="space-y-2.5 text-white/80 ">
-              {[
-                { href: "tel:+13513334748", label: "(+1) 351-333-4748" },
-                { href: "tel:+919265657635", label: "+91 9265 657 635" },
-                { href: "mailto:info@skyquestt.com", label: "info@skyquestt.com" },
-                { href: "mailto:sales@skyquestt.com", label: "sales@skyquestt.com" },
-              ].map((c) => (
-                <li key={c.label}>
-                  <a
-                    href={c.href}
-                    className="hover:text-white hover:underline underline-offset-2 decoration-white/40 transition-colors"
-                  >
-                    <p>{c.label}</p>
-                  </a>
                 </li>
               ))}
             </ul>

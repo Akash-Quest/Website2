@@ -1,7 +1,7 @@
 "use client";
 
-import { ArrowDown } from "lucide-react";
-import { useState } from "react";
+import { ArrowDown, X } from "lucide-react";
+import { useEffect, useState } from "react";
 import Button from "../ui/Button";
 import Reveal from "../ui/Reveal";
 
@@ -27,7 +27,7 @@ const jobs: Job[] = [
     id: 1,
     title: "Full-Stack Developers",
     category: "Engineering",
-    tags: ["Tartu", "Full-time"],
+    tags: [ "Full-time"],
     description:
       "Due to growing workload, we are looking for experienced and talented Full-Stack Developers to join our fast-paced Engineering team. You will work closely with Product, Design and Marketing to analyze, develop, debug, test, roll-out and support new and existing product features.",
   },
@@ -35,7 +35,7 @@ const jobs: Job[] = [
     id: 2,
     title: "Application Developer (react native)",
     category: "Engineering",
-    tags: ["Tartu", "Full-time"],
+    tags: ["Full-time"],
     description:
       "Due to growing workload, we are looking for experienced and talented Full-Stack Developers to join our fast-paced Engineering team. You will work closely with Product, Design and Marketing to analyze, develop, debug, test, roll-out and support new and existing product features.",
   },
@@ -43,7 +43,7 @@ const jobs: Job[] = [
     id: 3,
     title: "Senior Product Designer",
     category: "Design",
-    tags: ["Hybrid", "Tartu", "Full-time"],
+    tags: ["Hybrid",  "Full-time"],
     description:
       "Since 2019 we've worked on 30+ major projects from 8 different industries that are being used by 500,000+ users and 1000+ businesses from 70+ different countries. Need full-cycle product development or an improvement cycle? Let's talk!",
   },
@@ -51,7 +51,7 @@ const jobs: Job[] = [
     id: 4,
     title: "Product Manager",
     category: "Product",
-    tags: ["Remote", "Netherlands", "Full-time"],
+    tags: ["Remote", "Full-time"],
     description:
       "If you are PM and you eager to join our fast-paced Engineering team. You will work closely with Product, Design and Marketing to analyze, develop, debug, test, roll-out and support new and existing product features. 30+ major projects from 8 different industries that are being used by 500,000+ users and 1000+ businesses from 70+ different countries.",
   },
@@ -59,7 +59,7 @@ const jobs: Job[] = [
     id: 5,
     title: "Product Owner",
     category: "Product",
-    tags: ["Tartu", "Full-time"],
+    tags: [ "Full-time"],
     description:
       "We've worked on 30+ major projects from 8 different industries that are being used. Need full-cycle product development or an improvement cycle? Let's talk!",
   },
@@ -81,7 +81,15 @@ function TagPill({ label }: { label: string }) {
   );
 }
 
-function JobCard({ job, index }: { job: Job; index: number }) {
+function JobCard({
+  job,
+  index,
+  onApply,
+}: {
+  job: Job;
+  index: number;
+  onApply: (job: Job) => void;
+}) {
   return (
     <Reveal
       variant="upSm"
@@ -103,15 +111,70 @@ function JobCard({ job, index }: { job: Job; index: number }) {
       </p>
 
       <div className="flex justify-end ">
-       <Button >
+       <Button onClick={() => onApply(job)}>
         Apply Now</ Button >
       </div>
     </Reveal>
   );
 }
 
+function JobDetailsModal({ job, onClose }: { job: Job; onClose: () => void }) {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [onClose]);
+
+  return (
+    <div
+      className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/50 px-4"
+      onClick={onClose}
+    >
+      <div
+        className="relative w-full max-w-lg max-h-[85vh] overflow-y-auto rounded-2xl bg-white p-6 sm:p-8"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close"
+          className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-lg text-gray-500 transition-colors hover:bg-background"
+        >
+          <X size={18} />
+        </button>
+
+        <h3 className="font-semibold text-[#03030F] text-body-xl pr-8">
+          {job.title}
+        </h3>
+
+        <div className="mt-2 flex flex-wrap gap-2">
+          {job.tags.map((tag) => (
+            <TagPill key={tag} label={tag} />
+          ))}
+        </div>
+
+        <h4 className="mt-4 font-semibold text-[#03030F] text-body-sm">Job Description</h4>
+        <p className="mt-1 text-muted leading-relaxed">{job.description}</p>
+
+        <div className="mt-6 flex justify-end">
+          <Button href={`/careers?job=${encodeURIComponent(job.title)}#apply`} onClick={onClose}>
+            Apply Now
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function OpenPositions() {
   const [activeCategory, setActiveCategory] = useState("All positions");
+  const [selectedJob, setSelectedJob] = useState<Job | null>(null);
 
   const filteredJobs =
     activeCategory === "All positions"
@@ -173,7 +236,7 @@ export default function OpenPositions() {
           <div className="flex-1 flex flex-col gap-4">
             {filteredJobs.length > 0 ? (
               filteredJobs.map((job, index) => (
-                <JobCard key={job.id} job={job} index={index} />
+                <JobCard key={job.id} job={job} index={index} onApply={setSelectedJob} />
               ))
             ) : (
               <p className=" text-muted">
@@ -183,6 +246,10 @@ export default function OpenPositions() {
           </div>
         </div>
       </section>
+
+      {selectedJob && (
+        <JobDetailsModal job={selectedJob} onClose={() => setSelectedJob(null)} />
+      )}
     </div>
   );
 }

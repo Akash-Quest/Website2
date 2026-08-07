@@ -1,5 +1,5 @@
 
-import { Convert3DCube, Link, Note, Pet, Wind } from "iconsax-react";
+import { Buildings2, Convert3DCube, DollarCircle, KeyboardOpen, Link, Note, Pet, Wind } from "iconsax-react";
 
 export const ConsumerGoodsRetailOverviewData = {
   eyebrow: "Overview",
@@ -43,32 +43,42 @@ export const ConsumerGoodsRetailWhatWeOfferData = {
       icon: Wind,
       title: "AI-Driven Product Innovation",
       description:
-        "Leverage AI, market intelligence, and technology scouting to accelerate product development and identify emerging consumer opportunities.",
-    },
+        "Leverage AI, market intelligence, and emerging technologies to accelerate product development and identify new consumer opportunities."},
     {
       icon: Pet,
-      title: "Connected Commerce Platforms",
+      title: "Technology Scouting & Licensing",
       description:
-        "Build omnichannel commerce ecosystems that seamlessly connect customers, distributors, retailers, and digital marketplaces.",
-    },
+        "Identify emerging technologies, intellectual property, and external innovation opportunities that complement internal R&D and accelerate innovation."},
     {
       icon: Convert3DCube,
-      title: "Connected Supply Chain Intelligence",
+      title: "Digital Compliance & Claims",
       description:
-        "Deploy AI, IoT, traceability, and predictive analytics to improve supply chain visibility, resilience, and operational efficiency.",
-    },
+        "Develop intelligent solutions for product labeling, regulatory compliance, claims management, ingredient validation, and packaging governance."},
     {
       icon: Note,
-      title: "Digital Compliance & Labeling",
+      title: "Connected Commerce & Distribution",
       description:
-        "Develop intelligent solutions for product labeling, regulatory compliance, claims management, ingredient validation, and packaging governance.",
-    },
+        "Build omnichannel commerce and distribution ecosystems that connect manufacturers, retailers, distributors, and consumers across markets."},
     {
       icon: Link,
-      title: "Custom Enterprise Platforms",
-      description:
-        "Design and develop custom digital products, enterprise applications, AI solutions, and operational platforms tailored for FMCG and consumer goods manufacturers.",
-    },
+      title: "Intelligent Supply Chains",
+      description:"Apply AI, IoT, traceability, and predictive analytics to improve supply chain visibility, resilience, efficiency, and sustainability."},
+      ,{
+            icon: Buildings2,
+            title: "Custom Enterprise Platforms",
+            description:
+              "Design and develop digital products, enterprise applications, AI solutions, and operational platforms tailored to consumer goods manufacturers.",
+          },
+          {
+            icon: KeyboardOpen,
+            title: "Market Entry & Commercialization",
+            description:
+              "Develop market entry strategies, commercialization roadmaps, regulatory pathways, and partner models that accelerate product and market expansion.",
+          },
+          {
+            icon: DollarCircle,
+            title: "Strategic Ecosystem Partnerships",
+            description:"Build relationships across technology providers, distributors, retailers, investors, and industry partners to create scalable growth ecosystems."},
   ],
 };
 

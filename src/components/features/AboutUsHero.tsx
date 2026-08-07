@@ -52,14 +52,7 @@ export default function AboutUsHero({ onTalkToExperts, onOpenCapabilities }: Abo
           <div className="flex flex-wrap items-center gap-4">
             
             {/* Button 1: Talk To Our Experts */}
-            <div className="mt-8 mb-10 flex flex-wrap items-center justify-center gap-4 w-full">
-              <Button href="/request-deployment" variant="primary">
-                Request A Deployment
-              </Button>
-              <Button href="/how-it-works" variant="white">
-                See How It Works
-              </Button>
-            </div>
+            
 
           </div>
         </div>

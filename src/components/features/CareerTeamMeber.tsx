@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import Reveal from "../ui/Reveal";
 
 type Member = {
@@ -9,90 +8,97 @@ type Member = {
   title: string;
   location: string;
   image: string;
+  email?: string;
   linkedin?: string;
+  group: "leadership" | "team" | "advisory";
 };
 
 const members: Member[] = [
-  
   {
     name: "Shriya Damani",
     title: "Co-Founder & CEO",
-    location: "Ahmedabad, India",
+    location: "",
     image: "/Careers/Shriya.jpg",
     linkedin: "https://in.linkedin.com/in/shriya-damani-b460936",
+    group: "leadership",
   },
   {
     name: "Akash Bhavsar",
     title: "Co-founder",
-    location: "Ahmedabad, India",
+    location: "",
     image: "/Careers/Akash.jpg",
     linkedin: "https://www.linkedin.com/in/akashbhavsar",
+    group: "leadership",
   },
   {
     name: "Rajeev Sharan",
-    title: "Project Director - Seed",
+    title: "Project Director - Seed Systems" ,
     location: "Delhi, India",
     image: "/Careers/Rajeev.jpg",
+    group: "team",
   },
   {
     name: "Harshita Gupta",
     title: "Sr. Associate Consultant",
     location: "Delhi, India",
     image: "/Careers/Harshita.jpg",
+    group: "team",
   },
   {
     name: "Teresa Khanna",
-    title: "Sr. Associate Consultant",
+    title: "Sr. Consultant",
     location: "Noida, India",
     image: "/Careers/Teresa.jpg",
+    group: "team",
   },
   {
     name: "Disha Yadav",
     title: "Associate Consultant",
     location: "Delhi, India",
     image: "/Careers/Disha.jpg",
+    group: "team",
   },
   {
     name: "Yogender Narayan",
     title: "Associate Strategy Consultant",
     location: "Delhi, India",
     image: "/Careers/Yogender.jpg",
+    group: "team",
   },
    {
     name: "Sambhav Jain",
     title: "Associate Consultant",
     location: "Delhi, India",
     image: "/Careers/Sambhav.jpg",
+    group: "team",
   },
- 
-  {
-    name: "Antra Thada",
-    title: "Consultant",
-    location: "Delhi, India",
-    image: "/Careers/Antara.jpg",
-  },
-    
-  {
-    name: "Nidhi Verma",
-    title: "Consultant",
-    location: "Delhi, India",
-    image: "/Careers/Nidhi.jpg",
-  },
+
   {
     name: "Swapna Singh",
     title: "Lead Senior Research Analyst",
     location: "Ahmedabad, India",
     image: "/Careers/Swapna.jpg",
+    group: "team",
   },
   {
     name: "Addisu Asfaw",
     title: "Senior Consultant",
     location: "Addis Ababa, Ethiopia",
     image: "/Careers/Addisu.jpg",
+    group: "advisory",
   },
+  // Advisory board — to be added later.
 ];
 
-function MemberCard({ member, showIcons = true, index = 0 }: { member: Member; showIcons?: boolean; index?: number }) {
+function MemberCard({
+  member,
+  showIcons = true,
+  index = 0,
+}: {
+  member: Member;
+  showIcons?: boolean;
+  index?: number;
+}) {
   return (
     <Reveal as="div" variant="upSm" custom={index} className="flex gap-4 bg-background rounded-xl p-2 ">
       {/* Left: Image */}
@@ -108,16 +114,18 @@ function MemberCard({ member, showIcons = true, index = 0 }: { member: Member; s
           <p className=" text-[#03030FB2] ">{member.title}</p>
           <p className=" text-[#03030FB2] ">{member.location}</p>
         </div>
-        {showIcons && (
+        {showIcons && (member.email || member.linkedin) && (
           <div className="flex justify-end gap-2 mt-0">
-            <Link
-              href="/contact"
-              aria-label={`Email ${member.name}`}
-              className="w-7 h-7 flex items-center justify-center rounded-sm border-none text-gray-500 bg-white"
-            >
-              <Image src="/Careers/mail.svg" alt="" width={16} height={16} className="w-6 h-6" />
-            </Link>
-            {member.linkedin ? (
+            {member.email && (
+              <a
+                href={`mailto:${member.email}`}
+                aria-label={`Email ${member.name}`}
+                className="w-7 h-7 flex items-center justify-center rounded-sm border-none text-gray-500 bg-white"
+              >
+                <Image src="/Careers/mail.svg" alt="" width={16} height={16} className="w-6 h-6" />
+              </a>
+            )}
+            {member.linkedin && (
               <a
                 href={member.linkedin}
                 target="_blank"
@@ -127,14 +135,6 @@ function MemberCard({ member, showIcons = true, index = 0 }: { member: Member; s
               >
                 <Image src="/Careers/linkedin.svg" alt="" width={20} height={20} className="w-6 h-6" />
               </a>
-            ) : (
-              <button
-                type="button"
-                aria-label={`${member.name} on LinkedIn`}
-                className="w-7 h-7 flex items-center justify-center rounded-sm border-none text-gray-500 bg-white"
-              >
-                <Image src="/Careers/linkedin.svg" alt="" width={20} height={20} className="w-6 h-6" />
-              </button>
             )}
           </div>
         )}
@@ -144,7 +144,9 @@ function MemberCard({ member, showIcons = true, index = 0 }: { member: Member; s
 }
 
 export default function TeamGrid() {
-  const [leaders, team] = [members.slice(0, 2), members.slice(2)];
+  const leaders = members.filter((m) => m.group === "leadership");
+  const team = members.filter((m) => m.group === "team");
+  const advisory = members.filter((m) => m.group === "advisory");
 
   return (
     <section className="bg-white">
@@ -165,6 +167,17 @@ export default function TeamGrid() {
           </div>
         </div>
 
+        {advisory.length > 0 && (
+          <div className="mt-8">
+            <h3 className="mb-4 font-bold text-gray-900 text-body-2xl">Advisors</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {advisory.map((member, idx) => (
+                <MemberCard member={member} index={idx} key={idx} />
+              ))}
+            </div>
+          </div>
+        )}
+        
         <div className="mt-8">
           <h3 className="mb-4 font-bold text-gray-900 text-body-2xl">Our Team</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -173,6 +186,8 @@ export default function TeamGrid() {
             ))}
           </div>
         </div>
+
+        
       </div>
     </section>
   );

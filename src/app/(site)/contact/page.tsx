@@ -83,15 +83,7 @@ function ContactHero() {
         <div className="flex flex-col items-center gap-8 px-4 lg:px-0">
           {/* Top: text */}
           <div className="flex flex-col items-center text-center">
-            <motion.p
-              custom={0}
-              variants={fadeUpSm}
-              initial="hidden"
-              animate="visible"
-              className="text-primary pb-0 font-medium text-body-sm  "
-            >
-            Contact us
-          </motion.p>
+           
 
           <motion.h1
             custom={1}
@@ -108,7 +100,7 @@ function ContactHero() {
             variants={fadeUpSm}
             initial="hidden"
             animate="visible"
-            className="text-muted max-w-[75%] mt-2 "
+            className="text-muted max-w-[75%] mt-2 tracking-wide leading-snug "
           >
             Have a question or opportunity in mind? SkyQuest makes it faster and easier to connect with our team and explore how we can help your business grow.
           </motion.p>
@@ -322,7 +314,7 @@ function ContactHero() {
               />
               <p className="text-xs text-gray-400">
                 I agree to SkyQuest's{" "}
-                <a href="#" className="text-[#1D1EE3] underline">
+                <a href="#" className="text-[#1D1EE3] underline tracking-wide">
                   Privacy Policy
                 </a>{" "}
                 and consent to being contacted regarding my inquiry.

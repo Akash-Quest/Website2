@@ -16,7 +16,7 @@ import HoverRevealCard from "@/components/ui/HoverRevealCard2";
 
 const cards = {
   digital: {
-    title: "Digital Transformation & Emerging Technologies",
+    title: "Digital Transformation ",
     chipLabel: "Digital Transformation",
     description: "From data strategy and ML models to responsible AI governance enabling organisations to make better, faster decisions at machine speed. We turn raw data into your most powerful competitive asset.",
     image: "/CoreCapability/1.jpg",
@@ -44,7 +44,7 @@ const cards = {
     href: "/capabilities/integrated-program-management",
   },
   market: {
-    title: "Business Intelligence & Market Research",
+    title: "Market Intelligence ",
     chipLabel: "Business Intelligence",
     description: "We provide market intelligence, industry insights, competitive benchmarking, customer research, and strategic analysis that enable organizations to identify opportunities, mitigate risks, and make informed business decisions.",
     image: "/CoreCapability/5.jpg",
@@ -67,7 +67,7 @@ const cards = {
   csr: {
     title: "Inclusive Finance & Institutional Strategy",
     chipLabel: "Inclusive Finance & Institutional Strategy",
-    description: "SkyQuest strengthens financial systems, empowers institutions, and advances inclusive, sustainable economic growth through strategic advisory.",
+    description: "SkyQuest strengthens financial systems and institutions to drive inclusive, sustainable growth.",
     image: "/service/Inclusivefinance/hero.jpg",
     href: "/capabilities/inclusive-finance-institutional-strategy",
   },

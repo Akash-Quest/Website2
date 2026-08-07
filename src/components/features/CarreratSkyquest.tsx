@@ -102,9 +102,11 @@ export default function CareerAtSkyquest({
             as="p"
             variant="upSm"
             custom={1}
-            className="text-body-sm lg:mx-auto max-w-2xl text-muted "
+            className="p lg:mx-auto  text-muted pt-2 pb-5 max-w-[80%]"
           >
-            At SkyQuest, celebrations and camaraderie happen throughout the week, creating a culture where work and fun go hand in hand.
+            At SkyQuest, we believe great work is strengthened by great relationships. From team celebrations and shared experiences to everyday moments of camaraderie, we create a workplace where people connect, collaborate, grow, and enjoy the journey together.
+ 
+ 
           </Reveal>
         </div>
 

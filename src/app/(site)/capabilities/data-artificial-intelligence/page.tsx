@@ -73,15 +73,15 @@ export default function SocialImpactService(){
      />
      <EnterpriseChallenges />
      <TransformAccordion
-       eyebrow="What We Do"
-       heading="AI-Powered Digital Transformation "
-       description="A full-spectrum AI transformation partner helping organizations design, deploy, integrate, and scale intelligent solutions."
+       eyebrow="How We Help"
+       heading={<>How We Help Organizations Transform <em className="font-semibold">with Enterprise AI</em></>}
+       description="From AI strategy and solution development to enterprise integration and scalable deployment, we help organizations turn AI opportunities into measurable business outcomes."
        buttonLabel="Speak To Partner"
        cards={[
-         { title: "Placeholder Card Title 1", body: "Placeholder body copy 1 - replace with real content." },
-         { title: "Placeholder Card Title 2", body: "Placeholder body copy 2 - replace with real content." },
-         { title: "Placeholder Card Title 3", body: "Placeholder body copy 3 - replace with real content." },
-         { title: "Placeholder Card Title 4", body: "Placeholder body copy 4 - replace with real content." },
+         { title: "Strategic AI Readiness & Roadmapping", body: "Assess AI readiness, identify high-value opportunities, and develop practical transformation roadmaps aligned with business priorities." },
+         { title: "Build Intelligent AI Solutions", body: "Develop custom AI solutions, enterprise applications, data infrastructure, and intelligent workflows designed for real-world business needs." },
+         { title: "Integrate AI Across Enterprise Systems", body: "Connect AI with ERP, CRM, APIs, legacy systems, and existing technology ecosystems for seamless enterprise integration." },
+         { title: "Scale & Optimize AI Operations", body: "Operationalize AI through MLOps, managed AI services, continuous monitoring, and optimization to deliver sustained business value." },
        ]}
      />
     <EnterpriseAiSolution />

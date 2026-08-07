@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { ChevronDown, Upload } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 
@@ -22,6 +23,8 @@ const industries = [
 ];
 
 export default function CareerApplicationForm() {
+  const searchParams = useSearchParams();
+  const jobTitleFromQuery = searchParams.get("job") ?? "";
   const [countryCode, setCountryCode] = useState(countryCodes[0]);
   const [countryOpen, setCountryOpen] = useState(false);
   const [industry, setIndustry] = useState("");
@@ -53,9 +56,9 @@ export default function CareerApplicationForm() {
           custom={1}
           className="text-center font-semibold mb-5"
         >
-          Start Your New{" "}
-          <em className="font-medium">Journey With </em>
-          Skyquest
+          Begin Your Journey {" "}
+          <em className="font-semibold"> With  SkyQuest </em>
+         
         </Reveal>
 
 
@@ -65,11 +68,10 @@ export default function CareerApplicationForm() {
         >
 
         <h3 className=" font-semibold text-muted text-body-lg ">
-          Take the Next Step in Your Career Join a Culture of Growth and
-          Innovation
+         Take the Next Step in Your Career and Grow With a Culture of Innovation.
         </h3>
         <p className=" mt-2 text-muted text-body-lg">
-          Fill out the form, our team will reach out to you soon.
+          Submit your application, our team will reach out to you soon.
         </p>
 
         {/* Form */}
@@ -79,12 +81,14 @@ export default function CareerApplicationForm() {
             <input
               type="text"
               placeholder="Full Name*"
-              className="w-full rounded-lg border border-gray-200 px-3 py-1.5 sm:px-4 sm:py-2 text-sm placeholder-gray-400 focus:outline-none   focus:border-primary"
+              className="w-full rounded-lg bg-background px-3 py-1.5 sm:px-4 sm:py-2 text-sm text-gray-700 placeholder-gray-500 focus:outline-none"
             />
             <input
               type="text"
               placeholder="Job Title*"
-              className="w-full rounded-lg border border-gray-200 px-3 py-1.5 sm:px-4 sm:py-2 text-sm placeholder-gray-400 focus:outline-none   focus:border-primary"
+              defaultValue={jobTitleFromQuery}
+              key={jobTitleFromQuery}
+              className="w-full rounded-lg bg-background px-3 py-1.5 sm:px-4 sm:py-2 text-sm text-gray-700 placeholder-gray-500 focus:outline-none"
             />
           </div>
 
@@ -92,17 +96,17 @@ export default function CareerApplicationForm() {
           <input
             type="email"
             placeholder="Enter Email"
-            className="w-full rounded-lg border border-gray-200 px-3 py-1.5 sm:px-4 sm:py-2 text-sm placeholder-gray-400 focus:outline-none   focus:border-primary"
+            className="w-full rounded-lg bg-background px-3 py-1.5 sm:px-4 sm:py-2 text-sm text-gray-700 placeholder-gray-500 focus:outline-none"
           />
 
           {/* Phone / LinkedIn */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
             <div className="relative">
-              <div className="flex rounded-lg border border-gray-200 overflow-hidden focus:outline-none   focus:border-primary">
+              <div className="flex rounded-lg bg-background overflow-hidden focus:outline-none">
                 <button
                   type="button"
                   onClick={() => setCountryOpen((o) => !o)}
-                  className="flex items-center gap-1 h-full px-2.5 py-1.5 sm:px-3 sm:py-2 text-sm text-gray-600 bg-gray-50 border-r border-gray-200 whitespace-nowrap"
+                  className="flex items-center gap-1 h-full px-2.5 py-1.5 sm:px-3 sm:py-2 text-sm text-gray-600 bg-background whitespace-nowrap"
                 >
                   {countryCode.label}
                   <ChevronDown className="w-3.5 h-3.5 text-gray-400" />
@@ -110,11 +114,11 @@ export default function CareerApplicationForm() {
                 <input
                   type="tel"
                   placeholder="Phone Number*(without country code)"
-                  className="flex-1 px-2.5 py-1.5 sm:px-3 sm:py-2 text-sm placeholder-gray-400 focus:outline-none min-w-0"
+                  className="flex-1 px-2.5 py-1.5 sm:px-3 sm:py-2 text-sm text-gray-700 placeholder-gray-500 focus:outline-none min-w-0"
                 />
               </div>
               {countryOpen && (
-                <div className="absolute z-10 mt-1 w-44 bg-white border border-gray-200 rounded-lg ">
+                <div className="absolute z-10 mt-1 w-44 bg-white border border-gray-400 rounded-lg ">
                   {countryCodes.map((c) => (
                     <button
                       key={c.code}
@@ -132,14 +136,14 @@ export default function CareerApplicationForm() {
               )}
             </div>
 
-            <div className="flex rounded-lg border border-gray-200 overflow-hidden focus:outline-none   focus:border-primary">
-              <span className="flex items-center px-2.5 py-1.5 sm:px-3 sm:py-2 text-sm text-gray-400 bg-gray-50 border-r border-gray-200 whitespace-nowrap">
+            <div className="flex rounded-lg bg-background overflow-hidden focus:outline-none">
+              <span className="flex items-center px-2.5 py-1.5 sm:px-3 sm:py-2 text-sm text-gray-500 bg-background whitespace-nowrap">
                 linkedin.com/
               </span>
               <input
                 type="text"
                 placeholder="username"
-                className="flex-1 px-2.5 py-1.5 sm:px-3 sm:py-2 text-sm placeholder-gray-400  min-w-0 focus:outline-none   focus:border-primary"
+                className="flex-1 px-2.5 py-1.5 sm:px-3 sm:py-2 text-sm text-gray-700 placeholder-gray-500  min-w-0 focus:outline-none"
               />
             </div>
           </div>
@@ -149,13 +153,13 @@ export default function CareerApplicationForm() {
             <input
               type="text"
               placeholder="Company Name*"
-              className="w-full rounded-lg border border-gray-200 px-3 py-1.5 sm:px-4 sm:py-2 text-sm placeholder-gray-400 focus:outline-none   focus:border-primary"
+              className="w-full rounded-lg bg-background px-3 py-1.5 sm:px-4 sm:py-2 text-sm text-gray-700 placeholder-gray-500 focus:outline-none"
             />
             <div className="relative">
               <select
                 value={industry}
                 onChange={(e) => setIndustry(e.target.value)}
-                className="w-full appearance-none rounded-lg border border-gray-200 px-3 py-1.5 sm:px-4 sm:py-2 text-sm text-gray-700 focus:outline-none   focus:border-primary"
+                className="w-full appearance-none rounded-lg bg-background px-3 py-1.5 sm:px-4 sm:py-2 text-sm text-gray-00 focus:outline-none"
               >
                 <option value="" disabled className="text-gray-400">
                   Choose Industry*
@@ -178,16 +182,16 @@ export default function CareerApplicationForm() {
               e.preventDefault();
               handleFile(e.dataTransfer.files?.[0] ?? null);
             }}
-            className="flex flex-col items-center justify-center text-center rounded-lg border border-gray-200 px-3 py-3 sm:px-4 sm:py-4 cursor-pointer hover:bg-gray-50 transition-colors"
+            className="flex flex-col items-center justify-center text-center rounded-lg bg-background px-3 py-3 sm:px-4 sm:py-4 cursor-pointer transition-colors"
           >
-            <Upload className="w-5 h-5 text-gray-400 " />
+            <Upload className="w-5 h-5 text-gray-500 " />
             <p className="text-xs text-gray-500">
               Upload Resume Cover Letter{" "}
-              <span className="text-gray-400">
+              <span className="text-gray-500">
                 Drag and drop your file, or click here.
               </span>
             </p>
-            <p className="text-xs text-gray-400 ">
+            <p className="text-xs text-gray-500 ">
               {fileName ? fileName : "pdf, doc, .docx Max 5MB"}
             </p>
             <input
@@ -203,12 +207,12 @@ export default function CareerApplicationForm() {
           <textarea
             placeholder="Your Research Requirements (Optional)"
             rows={2}
-            className="w-full rounded-lg border border-gray-200 px-3 py-2 sm:px-4 sm:py-2.5 text-sm placeholder-gray-400 focus:outline-none   focus:border-primary"
+            className="w-full rounded-lg bg-background px-3 py-2 sm:px-4 sm:py-2.5 text-sm text-gray-700 placeholder-gray-500 focus:outline-none"
           />
 
           {/* Submit */}
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pt-2">
-              <div className="flex items-center gap-3 border border-gray-200 rounded-lg px-4 py-1.5 bg-[#F9F9F9] w-full md:w-auto">
+              <div className="flex items-center gap-3 border border-gray-400 rounded-lg px-4 py-1.5 bg-[#F9F9F9] w-full md:w-auto">
                 <input
                   type="checkbox"
                   checked={isRobotChecked}
@@ -217,7 +221,7 @@ export default function CareerApplicationForm() {
                 />
                 <span className="text-sm text-gray-600">I&apos;m not a robot</span>
                 <div className="ml-2 flex flex-col items-center leading-none">
-                  <div className="w-6 h-6 rounded border border-gray-300 flex items-center justify-center text-[10px] text-gray-400">
+                  <div className="w-6 h-6 rounded border border-gray-400 flex items-center justify-center text-[10px] text-gray-400">
                     ✓
                   </div>
                   <span className="text-[8px] text-gray-400 mt-0.5">reCAPTCHA</span>

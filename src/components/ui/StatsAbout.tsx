@@ -8,7 +8,7 @@ const StatsAbout = () => {
   const stats = [
     { target: 750, suffix: "+", label: "Clients worldwide" },
     { target: 17, suffix: "+", label: "Years in business" },
-    { target: 400, suffix: "+", label: "Country & partner" },
+    { target: 100, suffix: "+", label: "Country & Partner" },
   ];
 
   useEffect(() => {

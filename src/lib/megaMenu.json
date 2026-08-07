@@ -129,20 +129,9 @@
               {
                 "links": [
                   {
-                    "label": "Energy & Utilities",
-                    "href": "/industries/energy-utilities",
-                    "featured": true,
-                    "promo": {
-                      "image": "/IndustriesHero/energyUtilities.jpg",
-                      "title": "Energy & Utilities",
-                      "description": "SkyQuest partners with governments, utilities, and clean energy innovators to accelerate renewable energy adoption, expand energy access in underserved communities, and build the financing and distribution models that make clean energy commercially viable.",
-                      "href": "/industries/energy-utilities",
-                      "ctaLabel": "Visit Page"
-                    }
-                  },
-                  {
                     "label": "Agriculture & Food Systems",
                     "href": "/industries/agriculture-food-systems",
+                    "featured": true,
                     "promo": {
                       "image": "/IndustriesHero/Agriculture.jpg",
                       "title": "Agriculture & Food Systems",
@@ -174,6 +163,17 @@
                     }
                   },
                   {
+                    "label": "AI & Digital Economy",
+                    "href": "/industries/ai-digital-economy",
+                    "promo": {
+                      "image": "/IndustriesHero/AI.jpg",
+                      "title": "AI & Digital Economy",
+                      "description": "SkyQuest partners with governments, enterprises, and institutions to deploy AI enablement, enterprise automation, and bespoke digital platforms that convert data into decisions and manual processes into scalable, intelligent systems.",
+                      "href": "/industries/ai-digital-economy",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
                     "label": "Climate & Environment",
                     "href": "/industries/climate-environment",
                     "promo": {
@@ -181,6 +181,17 @@
                       "title": "Climate & Environment",
                       "description": "SkyQuest partners with governments, DFIs, and climate investors to design bankable climate finance platforms, generate carbon credits, and build the policy and monitoring infrastructure needed for credible, investable climate action.",
                       "href": "/industries/climate-environment",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
+                    "label": "Energy & Utilities",
+                    "href": "/industries/energy-utilities",
+                    "promo": {
+                      "image": "/IndustriesHero/energyUtilities.jpg",
+                      "title": "Energy & Utilities",
+                      "description": "SkyQuest partners with governments, utilities, and clean energy innovators to accelerate renewable energy adoption, expand energy access in underserved communities, and build the financing and distribution models that make clean energy commercially viable.",
+                      "href": "/industries/energy-utilities",
                       "ctaLabel": "Visit Page"
                     }
                   },
@@ -238,26 +249,15 @@
                       "href": "/industries/consumer-goods-retail",
                       "ctaLabel": "Visit Page"
                     }
-                  },
-                  {
-                    "label": "AI & Digital Economy",
-                    "href": "/industries/ai-digital-economy",
-                    "promo": {
-                      "image": "/IndustriesHero/AI.jpg",
-                      "title": "AI & Digital Economy",
-                      "description": "SkyQuest partners with governments, enterprises, and institutions to deploy AI enablement, enterprise automation, and bespoke digital platforms that convert data into decisions and manual processes into scalable, intelligent systems.",
-                      "href": "/industries/ai-digital-economy",
-                      "ctaLabel": "Visit Page"
-                    }
                   }
                 ]
               }
             ],
             "promo": {
-              "image": "/IndustriesHero/energyUtilities.jpg",
-              "title": "Energy & Utilities",
-              "description": "SkyQuest partners with governments, utilities, and clean energy innovators to accelerate renewable energy adoption, expand energy access in underserved communities, and build the financing and distribution models that make clean energy commercially viable.",
-              "href": "/industries/energy-utilities",
+              "image": "/IndustriesHero/Agriculture.jpg",
+              "title": "Agriculture & Food Systems",
+              "description": "SkyQuest partners across the agriculture value chain to help governments, agribusinesses, development organizations, investors, and technology providers improve productivity, strengthen value chains, accelerate innovation, and create sustainable food systems.",
+              "href": "/industries/agriculture-food-systems",
               "ctaLabel": "Visit Page"
             }
           }

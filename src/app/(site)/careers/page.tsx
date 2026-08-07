@@ -9,6 +9,7 @@ import { insightData } from "@/Constants/Insight ";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Suspense } from "react";
 import { fadeUpSm, fadeLeft, imageReveal } from "@/lib/animations";
 
 
@@ -54,8 +55,8 @@ function CareersHero() {
           animate="visible"
           className="text-center font-bold"
         >
-          Be part of our{" "}
-          <em className="font-semibold">mission</em>
+          Be Part of Our{" "}
+          <em className="font-semibold">Mission</em>
         </motion.h1>
 
         {/* Subheading */}
@@ -97,7 +98,9 @@ export default function CareersPage() {
   return (<>
   <CareersHero />
   <OpenPositions />
-    <CareerApplicationForm />
+    <Suspense fallback={null}>
+      <CareerApplicationForm />
+    </Suspense>
   <CareerAtSkyquest />
   <CaseStudies {...insightData} bgClassName="bg-background" />
   <Suscribe className="pt-0" />

@@ -10,7 +10,7 @@ const locations = [
   },
   {
     city: "Ahmedabad, India",
-    branch: "(Branch Office)",
+    branch: "",
     company: "SkyQuest Technology Consulting",
     address:
       "D-1001-1005, Swati Clover, Shilaj Circle, Sardar Patel Ring Rd, Thaltej, Ahmedabad, 380054",
@@ -33,7 +33,7 @@ function LocationsSection() {
       <div className="page-container ">
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="font-bold mb-4">
+          <h2 className="font-bold mb-2">
             We Are{" "}
             <em>Located At</em>
           </h2>
@@ -62,10 +62,10 @@ function LocationsSection() {
                   </p>
                 </div>
 
-                <div className="md:text-right">
+                {/* <div className="md:text-right">
                   <p className="text-sm text-gray-800 ">{loc.phone}</p>
                   <p className="text-xs text-gray-500 mt:2 md:mt:2 2xl:mt-3 mt-2">{loc.email}</p>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
