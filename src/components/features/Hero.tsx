@@ -10,6 +10,7 @@
     title: React.ReactNode;
     description: string;
     buttonText: string;
+    buttonHref?: string;
     backgroundImage?: string;
     videoUrl?: string;
   }
@@ -39,8 +40,8 @@
       ),
       description:
         'From AI-powered crop monitoring and seed systems transformation to climate-smart agriculture and farmer advisory we help governments and agribusinesses drive food security at scale.',
-      buttonText: 'Explore Services',
-    
+      buttonText: 'Explore Sector',
+      buttonHref: '/industries/agriculture-food-systems',
       backgroundImage: '/Hero/slide-2-bg.jpg',
     },
     {
@@ -55,6 +56,7 @@ Systems for Governments<br />
       description:
         'From digital public infrastructure and AI enablement to geospatial intelligence and enterprise automation we build technology that delivers measurable programme impact across sectors.',
       buttonText: 'Explore Digital Practise',
+      buttonHref: '/capabilities/digital-transformation-emerging-technologies',
       backgroundImage: '/Hero/slide-3-bg.jpg',
     },
 
@@ -69,8 +71,8 @@ Systems for Governments<br />
       ),
       description:
         'We partner with NGOs, foundations, governments, and development institutions to design impactful programmes, build digital ecosystems, drive policy innovation, and measure real-world outcomes helping missions scale sustainably across India, Africa, and the Global South.',
-      buttonText: 'Explore Services',
-   
+      buttonText: 'Explore Sector',
+      buttonHref: '/industries/social-sector',
       backgroundImage: '/Hero/slide-4-bg.jpg',
     },
     
@@ -211,7 +213,7 @@ Systems for Governments<br />
                 className="flex flex-wrap gap-3"
               >
                 {/* Primary */}
-                <Button variant="primary" iconSize={16}>
+                <Button href={slide.buttonHref ?? '/contact'} variant="primary" iconSize={16}>
                   {slide.buttonText}
                 </Button>
               </motion.div>
