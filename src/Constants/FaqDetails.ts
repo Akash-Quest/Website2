@@ -1,33 +1,42 @@
 export const defaultFaqs = [
   {
-    question: "What industries does SkyQuest serve?",
+    question: "What does SkyQuest do?",
     answer:
-      "We partner with organisations across 12+ high-growth sectors including BFSI, Healthcare & Pharma, Manufacturing, IT & SaaS, Consumer Goods, Infrastructure, Energy, Chemicals, Automotive, Agriculture, Government & PSU, and Education. Our strategies are designed to be sector-specific not one-size-fits-all so leaders in any industry can achieve measurable, lasting results.",
+      "SkyQuest provides strategic advisory, technology, research, program management, and implementation support to help organizations address complex development, business, and transformation challenges.",
   },
   {
-    question: "How do I know which service is right for my business?",
+    question: "Who does SkyQuest work with?",
     answer:
-      "We start with a complimentary discovery call to understand your challenges, goals, and current state. From there, our team recommends the most relevant service or combination of services tailored to your specific needs.",
+      "We work with governments, financial institutions, development organizations, foundations, investors, businesses, and other institutions across sectors and geographies.",
   },
   {
-    question: "Do you offer customised solutions or standard frameworks?",
+    question: "Which industries does SkyQuest serve?",
     answer:
-      "Both. We have proven frameworks built from thousands of engagements, but every engagement is customised to your organisation's context, maturity, and objectives. We never apply cookie-cutter approaches.",
+      "SkyQuest works across Agriculture & Food Systems, Public Sector & Digital Governance, AI & Digital Economy, Financial Services, Healthcare, Climate & Environment, Energy & Utilities, Water & Sanitation, Social Sector, Consumer Goods & Retail, and Livestock, Fisheries & Animal Health.",
   },
   {
-    question: "How do you measure success with clients?",
+    question: "What capabilities does SkyQuest bring to client engagements?",
     answer:
-      "We define success metrics upfront with each client—whether that's revenue growth, market share, operational efficiency, or strategic milestones. We track these throughout the engagement and provide transparent reporting.",
+      "Our capabilities span Strategy & Policy Advisory, Integrated Program Management, Digital Transformation, Data & AI, Business Intelligence & Market Research, Technology Transfer & Innovation, Inclusive Finance & Institutional Strategy, and Livelihoods & Entrepreneurship.",
   },
   {
-    question: "What is SkyQuest's geographic reach?",
+    question: "How does SkyQuest approach complex transformation challenges?",
     answer:
-      "SkyQuest operates globally with deep expertise across North America, Europe, Asia-Pacific, and the Middle East. Our research and advisory capabilities cover 25+ countries.",
+      "We combine strategic advisory, research, technology, institutional expertise, and implementation support to connect strategy with execution and deliver practical, measurable outcomes.",
   },
   {
-    question: "How long does a typical engagement take?",
+    question: "Can SkyQuest support projects from strategy through implementation?",
     answer:
-      "Engagements vary from a few weeks for targeted research projects to 12+ months for comprehensive transformation programs. We'll scope the timeline based on your goals during our initial discovery.",
+      "Yes. We support the full engagement lifecycle—from diagnostics, research, and strategy development to program design, implementation, monitoring, institutional strengthening, and scale-up.",
   },
-  
+  {
+    question: "Where does SkyQuest operate?",
+    answer:
+      "SkyQuest supports clients across India, Africa, South Asia, and other emerging markets, working with local institutions and international development partners on complex transformation and development initiatives.",
+  },
+  {
+    question: "How can an organization engage SkyQuest?",
+    answer:
+      "Organizations can engage SkyQuest for strategic advisory, program management, technology and AI initiatives, institutional strengthening, research, investment and development programs, and sector-specific transformation needs.",
+  },
 ];
