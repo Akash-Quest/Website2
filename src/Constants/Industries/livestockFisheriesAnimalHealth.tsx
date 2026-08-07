@@ -75,9 +75,9 @@ export const LivestockFisheriesAnimalHealthFaqData = [
       "We help governments, development organizations, producer groups, and private enterprises strengthen animal health systems, improve productivity, modernize value chains, and promote sustainable sector growth.",
   },
   {
-    question: "Which organizations does SkyQuest work with?",
+    question: "How is climate change affecting fisheries and aquaculture?",
     answer:
-      "We partner with ministries, veterinary departments, fisheries authorities, research institutions, cooperatives, producer organizations, agribusinesses, and development partners across the livestock and fisheries ecosystem.",
+      "Climate change affects water conditions, productivity, and livelihoods. SkyQuest supports climate-resilient strategies, risk assessment, and sustainable fisheries and aquaculture planning.",
   },
   {
     question: "Can SkyQuest support animal health and veterinary programs?",
@@ -106,8 +106,8 @@ export const LivestockFisheriesAnimalHealthFaqData = [
   },
   {
     question:
-      "What makes SkyQuest different in livestock, fisheries, and animal health consulting?",
+      " Why treat animal health as public health infrastructure?",
     answer:
-      "SkyQuest combines sector expertise, digital innovation, policy advisory, research, program management, and implementation support to strengthen animal health systems, modernize value chains, and improve livelihoods across the livestock and fisheries sector.",
+      "Zoonotic disease risks make strong veterinary systems and One Health frameworks essential to public health and national resilience.",
   },
 ];

@@ -98,7 +98,7 @@ function AlwaysOnProduct() {
               className="relative w-full h-full"
             >
               <Image
-                src="/AlwaysOn/hero.png"
+                src="/Productsoln/AlwaysOnHero.png"
                 alt="Architectural detail representing strategy and impact"
                 fill
                 className="object-contain"

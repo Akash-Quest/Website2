@@ -88,9 +88,9 @@ export const ClimateEnvironmentFaqData = [
       "We help organizations assess emissions, develop decarbonization strategies, identify carbon reduction opportunities, and build practical pathways toward net-zero goals.",
   },
   {
-    question: "Does SkyQuest provide environmental and climate policy advisory?",
+    question: "How does AI accelerate climate project financing?",
     answer:
-      "Yes. We support governments and institutions with environmental policy development, climate governance frameworks, regulatory advisory, and sustainable development strategies.",
+      "AI streamlines project assessment, documentation, and analysis, helping turn early-stage concepts into finance-ready projects faster.",
   },
   {
     question:
@@ -105,8 +105,8 @@ export const ClimateEnvironmentFaqData = [
       "Yes. We help organizations develop climate investment strategies, prepare bankable projects, mobilize finance, and design programs that attract public and private investment.",
   },
   {
-    question: "What makes SkyQuest different in climate and environment consulting?",
+    question: "How do DFIs use digital MRV for climate finance?",
     answer:
-      "SkyQuest combines climate science, policy expertise, digital technologies, geospatial intelligence, program management, and implementation support to deliver practical, scalable, and measurable climate solutions.",
+      "Digital MRV improves transparency and verification, helping DFIs link funding decisions to verified climate outcomes.",
   },
 ];
