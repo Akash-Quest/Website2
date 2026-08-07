@@ -170,8 +170,8 @@ export const InclusiveFinanceFaqData = [
       "Yes. We design, implement, monitor, and evaluate inclusive finance, MSME, livelihood, and economic development programs.",
   },
   {
-    question: "Why choose SkyQuest?",
+    question: "What makes SkyQuest’s approach to inclusive finance different?",
     answer:
-      "SkyQuest combines strategic advisory, institutional expertise, market intelligence, and implementation experience to deliver sustainable financial and economic impact.",
+      "SkyQuest combines financial sector expertise, institutional strengthening, policy advisory, investment strategy, and implementation support to help organizations build more resilient and inclusive financial ecosystems.",
   },
 ];

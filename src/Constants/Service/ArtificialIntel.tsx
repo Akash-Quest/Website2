@@ -28,9 +28,9 @@ export const ArtificalIntelFaqData = [
   },
   {
     question:
-      "Can AI integrate with our existing ERP, CRM, and legacy systems?",
+      "How does SkyQuest help organizations identify high-value AI opportunities?",
     answer:
-      "Yes. Our team specializes in integrating AI solutions with enterprise systems such as SAP, Oracle, Salesforce, Microsoft Dynamics, and custom legacy applications.",
+      "We assess business priorities, data readiness, operational challenges, and technology opportunities to identify practical AI use cases with measurable value.",
   },
   {
     question: "How long does an enterprise AI implementation take?",
@@ -38,9 +38,9 @@ export const ArtificalIntelFaqData = [
       "Timelines vary based on scope and complexity. A pilot can typically be delivered within a few months, while enterprise-wide transformation programs may be phased over a longer period.",
   },
   {
-    question: "Can SkyQuest help us implement Generative AI solutions?",
+    question: "How does SkyQuest help organizations scale AI adoption responsibly?",
     answer:
-      "Yes. We design and deploy enterprise-grade Generative AI solutions including AI assistants, copilots, intelligent search, document automation, and customer support bots.",
+      "We support AI strategy, governance, capability building, implementation planning, and organizational change to enable responsible and sustainable AI adoption.",
   },
   {
     question: "How do you ensure data security and compliance?",

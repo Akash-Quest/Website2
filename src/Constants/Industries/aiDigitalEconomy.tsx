@@ -87,9 +87,9 @@ export const AiDigitalEconomyFaqData = [
   },
   {
     question:
-      "Which organizations does SkyQuest work with in the AI & Digital Economy sector?",
+      "What's the difference between RPA-style automation and AI agent deployment?",
     answer:
-      "We partner with governments, enterprises, technology companies, startups, development organizations, investors, and research institutions to deliver AI, digital transformation, and innovation initiatives.",
+      "RPA follows predefined rules and workflows, while AI agents can interpret context, make decisions, and execute complex tasks dynamically.",
   },
   {
     question: "How does SkyQuest help organizations adopt Artificial Intelligence?",
@@ -119,8 +119,8 @@ export const AiDigitalEconomyFaqData = [
   },
   {
     question:
-      "Why do organizations choose SkyQuest for AI & Digital Economy consulting?",
+      "How do you help enterprises adopt AI without a full legacy system rebuild?",
     answer:
-      "SkyQuest combines strategy, AI, digital engineering, data intelligence, platform development, and implementation expertise to help organizations unlock measurable business value through technology and innovation.",
+      "We integrate AI into existing systems through targeted automation, APIs, data layers, and modular solutions—minimizing disruption and avoiding costly system replacements.",
   },
 ];

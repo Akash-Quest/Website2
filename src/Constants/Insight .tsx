@@ -395,230 +395,527 @@ export const insightData = {
       ] as ContentBlock[],
     },
     {
-      id: 1,
-      image: "/CaseStudy/re1.jpg",
+      id: 10,
+      image: "/CaseStudy/insightThought.jpg",
       category: "Articles",
       type: "Article",
-      topic: "Agriculture & Livestock",
-      date: "April 27, 2026",
-      readTime: "5 Min read",
-      title: " Livestock Innovation to Transform Smallholder Farming in India",
-      titleEmphasis: "Smallholder Farming in India",
+      topic: "Agriculture & Trade Policy",
+      date: "TBD",
+      readTime: "12 Min read",
+      title: "How Tariffs are Reshaping South Asia's Agricultural Value Chain & What Advisory Firms Need to Understand Now",
+      titleEmphasis: "What Advisory Firms Need to Understand Now",
       description:
-        "Partnered with regional cooperatives to deploy data-driven herd management tools, helping over 12,000 smallholder farmers increase dairy yield by 28% within the first season while cutting veterinary response time in half.",
-      subtitle: "Enabling Resilient Dairy Yields Through Data-Driven Herd Management",
-      subtitleEmphasis: "Data-Driven Herd Management",
+        "Tariffs are no longer simple customs costs, they are reshaping sourcing, processing, and investment decisions across South Asia's agricultural value chain, creating a new advisory opportunity beyond compliance.",
+      subtitle: "The Next Agricultural Challenge is No Longer Production. It Is Trade Friction.",
+      subtitleEmphasis: "It Is Trade Friction.",
       body: [
         {
           type: "paragraph",
           dropCap: true,
-          text: "Across India's dairy belt, smallholder farmers have long managed herd health and yield through memory and word of mouth rather than data. In 2026, a coalition of regional cooperatives partnered to change that, deploying a mobile-first herd management platform that put real-time health alerts, breeding schedules, and yield tracking directly into farmers' hands. The result was a measurable shift in how smallholder operations were run, from reactive care to proactive, data-informed decision-making.",
-          segments: [
-            "cross India's dairy belt, smallholder farmers have long managed herd health and yield through memory and word of mouth rather than data. In 2026, a coalition of regional cooperatives partnered to change that, deploying a ",
-            { text: "mobile-first herd management platform", href: "#" },
-            " that put real-time health alerts, breeding schedules, and yield tracking directly into farmers' hands. The result was a measurable shift in how smallholder operations were run, from reactive care to ",
-            { text: "proactive, data-informed decision-making", bold: true },
-            ".",
-          ],
+          text: "For years, the concept of agricultural competitiveness in South Asia has normally reflected itself in farm productivity, export figures, and the ability of countries to tap on the international market. A relatively more recent phenomenon has emerged in this respect, tariffs. Governments have revised their trade policies to ensure food security, support domestic industries, and adapt to geopolitical changes, only to see the role of tariffs on the trade of agricultural products grow as a result.",
         },
-        { type: "heading", text: "The ", emphasis: "Challenge" },
         {
           type: "paragraph",
-          text: "Herd records were fragmented across notebooks and memory, veterinary visits were reactive rather than preventive, and cooperatives had no shared view of yield performance across their member farms. Early signs of illness routinely went unnoticed until they became costly, and inconsistent record-keeping made it difficult to identify which interventions were actually improving output.",
+          text: "This shift is transforming the tariffs agricultural value chain South Asia in ways that extend far beyond customs duties. The changes made to tariff rates will determine the sourcing choices, processing options, areas of investment, logistical chains, and mode of market entry. Advisory companies working in agriculture and serving clients such as exporters, government officials, and investors need to understand the complexity and connectedness of these effects. The main problem with tariffs is not merely determining their amount anymore, companies must reevaluate their entire value chain systems accordingly to uphold their competitive power in the regional market.",
         },
-        { type: "heading", text: "Our ", emphasis: "Approach" },
+        { type: "heading", text: "Why Tariffs are Reshaping South Asia's Agricultural Value Chain" },
+        {
+          type: "paragraph",
+          text: "Initially, tariffs were seen as construction methods of gathering revenue and as measures to protect trades. However, at the moment, they have turned into instruments of political character that affect economic sustainability, availability of food in the domestic market, and the relations in the sphere of geopolitics.",
+        },
+        {
+          type: "paragraph",
+          text: "Governments of countries in South Asia such as India, Pakistan, Bangladesh, Sri Lanka, and Nepal periodically change taxation on imports and export orders in order to ensure stable prices for goods in the domestic market, provide protection to farmers, and react to the changes in global commodity markets. These measures influence different actors in agriculture by providing input and raw materials suppliers, farmers or producers, processing companies, distributors, retailers, as well as logistics companies.",
+        },
+        {
+          type: "paragraph",
+          text: "Unlike isolated trade measures, modern tariff policies create ripple effects throughout the agricultural value chain. A shift in tax on imports of fertilizers can lead to an increase in costs of production. Increased export tariffs on food products can decrease international competitiveness but increase the activity of domestic processors. Restrictions on the importation of farm machines will slow down the modernization process and affect long-term productivity.",
+        },
+        {
+          type: "paragraph",
+          text: "The outcome is that value chain decisions now rely on policy developments as much as market demand. Companies that don't track these changes could end up facing increased operational costs, disrupted sourcing strategies, and loss of market opportunities.",
+        },
+        { type: "heading", text: "The Ripple Effect Across the Agricultural Value Chain" },
+        {
+          type: "paragraph",
+          text: "Agricultural value chains operate as interconnected systems and not as separate functions of business. A tariff imposed at one step has repercussions for an entire process from production, processing, transport, and trade.",
+        },
+        {
+          type: "paragraph",
+          text: "Take an example of an agricultural processor acquiring oilseeds from different countries. The increased duties on imports may persuade it to use local suppliers instead, but this may involve building new relations with suppliers, changes in processing schedule, logistics planning, and pricing strategies. Besides, exporters with higher tariffs in the destination countries might divert shipments to regional markets, which will affect the use of warehouses, transport capacity, and contract negotiations.",
+        },
+        {
+          type: "paragraph",
+          text: "These adjustments rarely occur in isolation. Financial institutions are re-evaluating the risks they take with their lending strategies at the same time as logistics service providers to change the routes they use for transporting goods. Moreover, on the same day, the government might announce subsidy schemes or incentives that will aim to deal with the unfavorable consequences of tariffs.",
+        },
+        {
+          type: "paragraph",
+          text: "The tariffs agricultural value chain South Asia therefore becomes a network of interconnected responses rather than a simple sequence of policy changes. It is becoming increasingly necessary for organizations to create assessments that allow them to develop unified strategic recommendations for trade legislation, operational planning, supply chain study, and market intelligence.",
+        },
+        { type: "heading", text: "India's Evolving Trade Policy and Regional Dynamics" },
+        {
+          type: "paragraph",
+          text: "India occupies a central position in the agricultural trade scene of South Asia thanks to its productive capacity, export capabilities, and regulation. Moreover, constant changes in custom duty rates, export restrictions, and import policies mean that the governments are constantly striving to find the proper balance between interest of farmers, inflation in the domestic economy, and international obligations.",
+        },
+        {
+          type: "paragraph",
+          text: "For consulting firms specializing in agri trade policy India consulting, these developments present both opportunities and complexities. Customers today desire more than simply getting insight into the regulations; they also want to know how future choices will impact their future procurement, production, export activities, and strategies for long-term investments.",
+        },
+        {
+          type: "paragraph",
+          text: "Additionally, regional trade agreements, bilateral trade negotiations, and the evolving business ties with neighboring states play a significant role in agricultural trade. Any business that would want to venture into the South Asian region needs to assess the differences in customs processes, tariffs, and norms of compliance among others present in different jurisdictions.",
+        },
+        {
+          type: "paragraph",
+          text: "At the same time, global developments such as supply chain diversification, climate-related production risks, and changing demand for commodities, continue to affect regional trade priorities. Firms that offer connections between domestic policy developments and other global events can provide significantly more value in terms of strategic thinking than those that focus only on compliance.",
+        },
+        { type: "heading", text: "Why Advisory Firms Must Expand Beyond Compliance" },
+        {
+          type: "paragraph",
+          text: "Customs paperwork, tariff classification, and compliance have been the focus of traditional trade consultancy. Although these aspects are still critical, they cannot comprise the entire service offer to businesses operating in today's ever-changing agricultural environment.",
+        },
+        {
+          type: "paragraph",
+          text: "Modern agricultural tariff advisory requires a broader strategic perspective. Companies deserve advice on variations regarding sourcing, market priorities, sourcing types, investments, and level of operation resilience as well as competitiveness.",
+        },
+        {
+          type: "paragraph",
+          text: "For example, an agricultural exporter may require advice on whether establishing regional processing facilities could reduce tariff exposure. A food producer may want to get suggestions on different trading nations in order to enhance supply safety without failing to be economical. Those who are interested in investing in agribusiness now tend to ask for scenario evaluations not only involving forecasts of future tariffs but also traditional estimates concerning financial issues.",
+        },
+        {
+          type: "paragraph",
+          text: "This development has resulted in advisory companies being seen as strategic partners rather than regulatory experts. The success is to a large extent based on the combination of economics, supply chain management, policy analysis, market research, and risk evaluation in the advisory framework.",
+        },
+        { type: "heading", text: "A Five-Pillar Tariff Advisory Framework" },
+        {
+          type: "paragraph",
+          text: "As tariff environments become more dynamic, advisory firms should adopt structured methodologies that help organizations anticipate change rather than merely react to it.",
+        },
+        { type: "subheading", text: "1. Policy Intelligence" },
+        {
+          type: "paragraph",
+          text: "The consistent observation of tariff announcements, international negotiations, circulars issued by governments and updates in regional policies helps firms to foresee any impending changes in regulations that will impact their activities.",
+        },
+        { type: "subheading", text: "2. Value Chain Assessment" },
+        {
+          type: "paragraph",
+          text: "It is important for organizations to analyze the implications of changes in tariffs on their sourcing, production, processing, transportation, warehousing activities, and customer pricing. Through this mapping of these interconnected processes, the organizations can uncover issues that are not apparent at first glance.",
+        },
+        { type: "subheading", text: "3. Scenario Planning" },
+        {
+          type: "paragraph",
+          text: "Instead of dependently relying on assumptions based on single market dynamics, businesses must work on having different scenarios for tariffs models. The review of necessary sourcing strategies, the diversification of suppliers, and the expansion of markets increase resilience towards potential changes in government policies.",
+        },
+        { type: "subheading", text: "4. Compliance and Risk Management" },
+        {
+          type: "paragraph",
+          text: "Correct tariff classification, customs clearance, determination of origins, and compliance with regulations remain crucial tasks, but they must be part of the overall enterprise risk management system, instead of being viewed as stand-alone compliance functions.",
+        },
+        { type: "subheading", text: "5. Strategic Transformation" },
+        {
+          type: "paragraph",
+          text: "The most effective advisory roles assist businesses in transforming their operations to enhance their future competitive advantage. These changes may entail the development of multinational sourcing networks, the enhancement of local processing capacities, the perfecting of logistics networks, and the access to new markets less susceptible to the fluctuations of tariffs.",
+        },
+        {
+          type: "paragraph",
+          text: "In combination, these five pillars change tariff management from former practice of responding to compliance matters into a progressive business strategy that is able to help achieve sustainable development.",
+        },
+        { type: "heading", text: "WTO Rules Still Matter, but Regional Strategy Matters More" },
+        {
+          type: "paragraph",
+          text: "International trade continues to operate within the broader framework established by the WTO agriculture South Asia agreements, which promote transparency, predictability, and rules-based commerce. Nevertheless, countries increasingly rely on domestic policy measures, bilateral agreements, and regional trade strategies to address evolving economic priorities.",
+        },
+        {
+          type: "paragraph",
+          text: "For agribusinesses, understanding WTO principles remains important, but practical success depends equally on recognizing how national policies interact with regional market conditions. Differences in tariff schedules, trade facilitation measures, agricultural subsidies, and sanitary regulations can significantly influence commercial outcomes.",
+        },
+        {
+          type: "paragraph",
+          text: "Advisory firms that combine international trade expertise with regional policy intelligence will be better positioned to guide organizations through an increasingly complex agricultural trade environment.",
+        },
+        { type: "heading", text: "Conclusion" },
+        {
+          type: "paragraph",
+          text: "Tariffs no longer constitute mere fiscal tools; they have turned into strategic forces influencing decisions connected to investments, supply chain arrangements, market access, and regional competitiveness across South Asia. Organizations that still perceive tariffs exclusively as customs costs may miss wider opportunities for operational transformation.",
+        },
+        {
+          type: "paragraph",
+          text: "The future of the tariffs agricultural value chain in South Asia will depend on how effectively businesses adapt to evolving trade policies while strengthening resilience across sourcing, production, logistics, and exports. For advisory companies, it is an important chance to go beyond compliance and start generating real value through strategy.",
+        },
+        {
+          type: "paragraph",
+          text: "Those who possess the skills to combine their abilities in policy intelligence, business strategy, value chain analysis, and regional trade will become key allies for governments, agribusinesses, exporters, and investors operating in an agricultural economy that is increasingly interconnected. Consulting companies can play a crucial role in turning tariff complexity into a viable business strategy, thereby contributing to building a more resilient and competitive agricultural value chain in South Asia.",
+        },
+        { type: "heading", text: "The Advisory Opportunity This Creates" },
+        {
+          type: "paragraph",
+          text: "This is where genuine value gets added, and where a program design and policy advisory partner does something a customs broker or a compliance vendor cannot, the exact space agri trade policy South Asia consulting is built to occupy: build the connective tissue between the tariff announcement, the sourcing decision, the logistics network, and the investment case, so that a policy shift becomes a strategic input instead of a reactive cost to absorb. That means:",
+        },
         {
           type: "list",
           items: [
-            "Deployed a low-bandwidth mobile app for farmers to log herd health, feeding, and breeding events in real time.",
-            "Built predictive health alerts that flag early signs of illness based on behavioral and feeding-pattern anomalies.",
-            "Gave cooperative managers a shared dashboard to track yield trends and dispatch veterinary support where it was needed most.",
-          ],
-        },
-        {
-          type: "callout",
-          title: "Key Results",
-          items: [
-            "28% increase in dairy yield within the first season across participating farms.",
-            "12,000+ smallholder farmers onboarded across partner cooperatives.",
-            "Veterinary response time cut in half through predictive alerts and better dispatch routing.",
+            "Running continuous policy intelligence, not periodic compliance checks, tracking tariff announcements, bilateral negotiations, and regional circulars as they happen, so clients see a policy shift coming before it lands in a shipment or a contract.",
+            "Mapping the full value chain exposure, not just the customs line item, tracing how a single tariff change moves through sourcing, processing, transport, warehousing, and pricing, so second-order effects get planned for instead of discovered after the fact.",
+            "Building scenario models across multiple tariff futures, testing sourcing diversification, supplier resilience, and market-expansion options against several plausible policy paths, rather than planning a single assumed outcome.",
+            "Sequencing strategic transformation, not just risk mitigation, helping clients decide when a tariff shift justifies a genuinely new investment (regional processing capacity, new sourcing corridors, new market entry) versus when it only requires a compliance adjustment.",
           ],
         },
         {
           type: "paragraph",
-          text: "The programme demonstrated that meaningful gains in smallholder agriculture don't require large capital investment, they require putting the right information in front of the people making daily decisions. Cooperatives are now expanding the platform to cover feed optimization and breeding recommendations for the next phase of the rollout.",
+          text: "This is not a hypothetical exercise. It is the specific, recurring gap between how fast tariff policy is moving across South Asia and how slowly most agribusinesses' sourcing and investment strategies are adapting to it, and it is the gap SkyQuest Technology Consulting works inside of every day, translating regional trade dynamics into concrete value chain strategy for governments, agribusinesses, and investors across India, Bangladesh, Pakistan, Sri Lanka, and Nepal.",
+        },
+        { type: "heading", text: "See Where Tariff Exposure Sits in Your Value Chain" },
+        {
+          type: "paragraph",
+          text: "If your organization is sourcing, processing, or exporting agricultural products across South Asia, SkyQuest's advisory team can help identify exactly where tariff shifts are likely to hit hardest, whether that's an input cost buried in your sourcing contracts, a logistics route about to lose its cost advantage, or an investment decision that a coming policy change could make or break. From continuous policy intelligence to full value chain scenario planning, we help governments, agribusinesses, and investors turn tariff complexity into a resilient, competitive strategy rather than a recurring compliance cost.",
         },
       ] as ContentBlock[],
     },
     {
-      id: 2,
-      image: "/CaseStudy/re2.jpg",
+      id: 11,
+      image: "/CaseStudy/insightThought.jpg",
       category: "Articles",
       type: "Article",
-      topic: "Urban Mobility",
-      date: "March 12, 2026",
-      readTime: "5 Min read",
-      title: "Reimagining Urban Mobility Through Real-Time Crowd Intelligence",
-      titleEmphasis: "Real-Time Crowd Intelligence",
+      topic: "Agriculture & AI",
+      date: "TBD",
+      readTime: "18 Min read",
+      title: "Agentic AI in Agri Value Chains: The Implementation Architecture Emerging Markets Cannot Skip",
+      titleEmphasis: "The Implementation Architecture Emerging Markets Cannot Skip",
       description:
-        "Built a city-wide pedestrian flow platform that helped municipal planners reduce congestion at transit hubs by 34%, using anonymized movement data to redesign walkways across six metro stations.",
-      subtitle: "Redesigning City Transit Through Real-Time Pedestrian Analytics",
-      subtitleEmphasis: "Real-Time Pedestrian Analytics",
+        "Agentic AI is moving agriculture from prediction toward execution, but the real strategic challenge for emerging markets is not building smarter agents, it is building the data, governance, and orchestration architecture that lets those agents act reliably across fragmented value chains.",
+      subtitle: "The Next Agricultural AI Problem is Not Intelligence. It is Execution.",
+      subtitleEmphasis: "It is Execution.",
       body: [
         {
           type: "paragraph",
           dropCap: true,
-          text: "Rush-hour congestion at transit hubs had become a defining frustration for commuters in one of the country's fastest-growing metro networks. In 2026, municipal planners partnered with a mobility analytics team to deploy a city-wide, anonymized pedestrian flow platform, one that turned foot traffic into a live signal for redesigning walkways, entrances, and signage before congestion ever became gridlock.",
-          segments: [
-            "ush-hour congestion at transit hubs had become a defining frustration for commuters in one of the country's fastest-growing metro networks. In 2026, municipal planners partnered with a mobility analytics team to deploy a ",
-            { text: "city-wide, anonymized pedestrian flow platform", href: "#" },
-            ", one that turned foot traffic into a live signal for redesigning walkways, entrances, and signage before congestion ever became ",
-            { text: "gridlock", bold: true },
-            ".",
-          ],
-        },
-        { type: "heading", text: "The ", emphasis: "Challenge" },
-        {
-          type: "paragraph",
-          text: "Six metro stations were bottlenecking during peak hours, but planners had no reliable way to see where pedestrians were actually backing up. Manual counts were sparse and quickly outdated, and walkway redesigns were being made on intuition rather than evidence, often missing the exact chokepoints commuters experienced every day.",
-        },
-        { type: "heading", text: "Our ", emphasis: "Approach" },
-        {
-          type: "list",
-          items: [
-            "Deployed anonymized movement sensors across six metro stations to build a live picture of pedestrian density and flow.",
-            "Modeled congestion patterns by time of day to identify recurring chokepoints at entrances, turnstiles, and platform transitions.",
-            "Worked with station architects to redesign walkway geometry and signage using the flow data as ground truth.",
-          ],
-        },
-        {
-          type: "callout",
-          title: "Key Results",
-          items: [
-            "34% reduction in congestion at transit hubs after walkway redesigns.",
-            "Six metro stations redesigned using anonymized movement data.",
-            "Faster, evidence-based approval cycles for future station upgrades.",
-          ],
+          text: "Agentic AI is moving from prediction toward execution. The next generation of systems will not only forecast yields, identify crop risks, or generate recommendations; they will increasingly interpret conditions, make decisions, coordinate workflows, and initiate actions across value chains.",
         },
         {
           type: "paragraph",
-          text: "With chokepoints now visible in near real time, the transit authority has moved from reactive crowd-control measures to planned infrastructure changes, and is extending the platform to additional stations ahead of next year's ridership growth.",
+          text: "The investment trajectory reflects this broader shift. Global spending on agentic AI is projected to reach $201.9 billion in 2026, a 141% increase over 2025, with spending on agentic AI expected to overtake chatbots and assistants by 2027. Agriculture will increasingly be exposed to this transition as AI moves from decision support toward operational execution.",
+        },
+        {
+          type: "paragraph",
+          text: "Capital is also beginning to flow directly into agricultural AI capabilities. One recent market estimate puts global investment in agricultural AI model development at more than $1.8 billion in 2024, with investment expected to nearly triple by 2028. While this is a commercial market estimate rather than an official industry-wide measure, the direction is significant: agricultural AI is attracting dedicated capital beyond the broader enterprise AI investment cycle.",
+        },
+        {
+          type: "paragraph",
+          text: "However, agricultural value chains present a structural challenge: fragmentation. A single production or procurement decision can involve farmers, cooperatives, input suppliers, financial institutions, aggregators, warehouses, logistics providers, processors, buyers, and government agencies, often operating across disconnected systems, data environments, and decision processes.",
+        },
+        {
+          type: "paragraph",
+          text: "This limits what agentic AI can accomplish through standalone applications.",
+        },
+        {
+          type: "paragraph",
+          text: "The strategic challenge is therefore not simply developing more capable agricultural agents. It is establishing the implementation architecture that enables those agents to access reliable data, coordinate across organizations, execute transactions within defined authority, and escalate decisions when human judgment is required.",
+        },
+        {
+          type: "paragraph",
+          text: "This implementation challenge defines the future of agentic AI agriculture emerging markets and highlights why execution architecture, rather than model sophistication alone, will determine long-term success.",
+        },
+        { type: "heading", text: "From Prediction to Agency" },
+        {
+          type: "paragraph",
+          text: "The distinction between conventional AI and agentic AI is fundamentally about action.",
+        },
+        {
+          type: "paragraph",
+          text: "Traditional agricultural AI typically follows a relatively linear sequence:",
+        },
+        {
+          type: "paragraph",
+          text: "Data → Model → Prediction → Human Decision → Action",
+        },
+        {
+          type: "paragraph",
+          text: "Agentic AI introduces another loop:",
+        },
+        {
+          type: "paragraph",
+          text: "Goal → Perception → Reasoning → Decision → Tool Use → Action → Feedback → Adaptation",
+        },
+        {
+          type: "paragraph",
+          text: "That additional loop changes the economics of automation. A farmer does not necessarily need another dashboard telling them that fertilizer prices have increased. A cooperative does not need another report warning that demand may fall. A procurement manager does not need another forecast showing that a shipment is likely to be delayed.",
+        },
+        {
+          type: "paragraph",
+          text: "The value emerges when the system can act on that intelligence.",
+        },
+        {
+          type: "paragraph",
+          text: "An agricultural procurement agent, for example, could monitor crop forecasts, farmer commitments, warehouse inventory, market prices, transport availability, and buyer requirements. If projected supply falls below contractual demand, it could identify alternative suppliers, recommend a procurement adjustment, initiate a request for quotations, and escalate the decision to a human when the transaction exceeds predefined limits.",
+        },
+        {
+          type: "paragraph",
+          text: "This is where agentic AI becomes strategically different from another AI-powered dashboard. The output is no longer information. It is coordinated execution. This shift is becoming a defining characteristic of agentic AI food systems, where coordinated execution across production, procurement, finance, and logistics creates greater value than isolated predictive models.",
+        },
+        {
+          type: "paragraph",
+          text: "But execution introduces a new problem. An AI system that can act requires authority, permissions, reliable data, institutional accountability, and mechanisms for reversing mistakes. That makes the implementation architecture as important as the underlying model.",
+        },
+        { type: "heading", text: "The Value Chain is the Real Operating System" },
+        {
+          type: "paragraph",
+          text: "Agriculture is not one workflow. It is a network of interdependent decisions.",
+        },
+        {
+          type: "paragraph",
+          text: "A farmer's planting decision affects input demand. Input availability affects production costs. Production affects aggregation, which affects transportation and storage. Storage affects procurement commitments, while procurement affects processing capacity, inventory, and pricing. Those prices then influence farmer decisions in the next production cycle.",
+        },
+        {
+          type: "paragraph",
+          text: "Agentic AI becomes strategically valuable when it can operate across these dependencies rather than optimize one task in isolation.",
+        },
+        {
+          type: "paragraph",
+          text: "Consider a tomato value chain. A crop-monitoring agent detects increasing disease pressure in a production cluster. A weather agent confirms that humidity conditions are likely to persist. A farm advisory agent identifies an appropriate intervention, while an input agent checks local inventory. A procurement agent estimates the impact on expected supply, a logistics agent adjusts collection schedules, and a market agent reassesses expected volumes and prices.",
+        },
+        {
+          type: "paragraph",
+          text: "Each agent performs a specialized function. The value comes from their ability to work across the same operational chain.",
+        },
+        {
+          type: "paragraph",
+          text: "This is the architecture emerging markets cannot skip: connecting AI agents to the systems, people, transactions, and institutions through which agricultural decisions actually happen. Without that connection, organizations risk creating dozens of intelligent applications that remain operationally disconnected.",
+        },
+        { type: "heading", text: "Emerging Markets Have a Different Starting Point" },
+        {
+          type: "paragraph",
+          text: "The implementation challenge is particularly acute in emerging markets because agricultural value chains often lack the integrated infrastructure assumed by enterprise AI.",
+        },
+        {
+          type: "paragraph",
+          text: "A single transaction may involve a farmer using a basic mobile phone, an extension worker maintaining local records, a cooperative aggregating production, an input dealer operating a separate inventory system, a bank assessing credit independently, a trader negotiating through informal channels, a warehouse maintaining paper-based stock records, and a government agency operating a separate agricultural database.",
+        },
+        {
+          type: "paragraph",
+          text: "Agentic AI cannot simply be placed on top of this environment and expected to produce autonomous coordination. It needs an integration architecture that connects these fragmented systems and establishes how information and decisions move between them.",
+        },
+        {
+          type: "paragraph",
+          text: "The World Bank has identified weak connectivity, limited digital literacy, affordability, trust, and insufficient complementary investment as constraints on digital agriculture adoption in lower-income settings. It also emphasizes that digital technologies cannot substitute for physical infrastructure such as roads, electricity, storage, and logistics.",
+        },
+        {
+          type: "paragraph",
+          text: "This creates an important strategic distinction: emerging markets do not necessarily need the most sophisticated AI architecture first. They need the most resilient one. Organizations investing in agri-AI implementation advisory increasingly recognize that resilient integration architectures, governance models, and interoperability standards are more important than deploying isolated AI applications.",
+        },
+        {
+          type: "paragraph",
+          text: "An agent that can function across intermittent connectivity, fragmented databases, local languages, mobile interfaces, and human approval workflows may create more value than a technically superior system designed for a fully digitized supply chain.",
+        },
+        { type: "heading", text: "The Architecture Must Be Designed Around Exceptions" },
+        {
+          type: "paragraph",
+          text: "The most important design principle for agricultural agents may be surprisingly simple: do not automate the normal case before designing the exception.",
+        },
+        {
+          type: "paragraph",
+          text: "Agricultural value chains are unusually exposed to exceptions. Rainfall is changing. Roads become inaccessible. A farmer delivers less than expected. A warehouse runs out of storage. A pest outbreak changes regional supply. A buyer changes quality requirements. A mobile payment fails. An input shipment arrives late.",
+        },
+        {
+          type: "paragraph",
+          text: "An agent operating in this environment cannot simply execute a predefined workflow. It needs to be recognized when a situation falls outside its operating envelope and escalates accordingly.",
+        },
+        {
+          type: "paragraph",
+          text: "This makes human-in-the-loop architecture essential. An agent should be able to act autonomously when the decision is low-risk and reversible, but seek approval when the financial, agronomic, contractual, or reputational consequences become significant.",
+        },
+        {
+          type: "paragraph",
+          text: "The objective is therefore not maximum autonomy. It is an appropriate autonomy.",
+        },
+        {
+          type: "paragraph",
+          text: "That distinction could determine whether agentic AI becomes trusted agricultural infrastructure or another technology that remains trapped in pilots.",
+        },
+        { type: "heading", text: "Data Quality Becomes an Operational Risk" },
+        {
+          type: "paragraph",
+          text: "Predictive AI can sometimes tolerate imperfect information because its output is advisory. Agentic AI has less room for error.",
+        },
+        {
+          type: "paragraph",
+          text: "If an AI model incorrectly forecasts demand, the mistake may influence a report. If an agent uses outdated inventory information to place an order, it can create a real financial commitment. If a logistics agent receives inaccurate road conditions, it can reroute vehicles unnecessarily. If a credit agent acts on stale repayment information, it can affect access to finance. The risk therefore shifts from model accuracy to system reliability.",
+        },
+        {
+          type: "paragraph",
+          text: "Data provenance, timestamping, validation, and confidence scoring become critical components of agentic architecture. Agents need to know not only what the data says, but how reliable that data is. A robust system should distinguish between verified, estimated, stale, conflicting, and missing information. An agent that recognizes uncertainty is safer than one that confidently acts despite it.",
+        },
+        {
+          type: "paragraph",
+          text: "This is particularly important in emerging markets, where agricultural data may be distributed across public databases, private platforms, cooperatives, financial institutions, and informal networks. The objective is not to eliminate imperfect data. It is to ensure that agents understand its limitations before acting on it.",
+        },
+        { type: "heading", text: "The Farmer Should Not Become the Integration Layer" },
+        {
+          type: "paragraph",
+          text: "There is another implementation trap emerging markets should avoid: pushing the complexity of AI coordination onto farmers.",
+        },
+        {
+          type: "paragraph",
+          text: "If farmers are required to interact separately with an advisory agent, finance agent, insurance agent, input agent, market agent, and logistics platform, the industry has simply digitized fragmentation.",
+        },
+        {
+          type: "paragraph",
+          text: "The interface should instead become simpler as the underlying architecture becomes more sophisticated. The farmer should ideally experience one coherent interaction, whether through a mobile application, messaging service, voice, SMS, cooperative, extension worker, or another trusted channel. Behind that interface, multiple specialized agents can work together.",
+        },
+        {
+          type: "paragraph",
+          text: "This matters particularly for smallholders, who may face constraints around connectivity, digital literacy, device access, and language. The principle is straightforward: Complexity should sit inside the system, not with the farmer. This principle is central to agentic AI agriculture emerging markets, where mobile-first, multilingual, and low-bandwidth environments require sophisticated orchestration behind a simple user experience. The strongest agentic systems will therefore hide the complexity of the underlying architecture while making the farmer's interaction more direct, localized, and actionable.",
+        },
+        { type: "heading", text: "The Economics of Agentic AI Will Be Won Beyond the Farm" },
+        {
+          type: "paragraph",
+          text: "The largest opportunity may not be an autonomous farming assistant. It may be the automation of the decisions surrounding the farm.",
+        },
+        {
+          type: "paragraph",
+          text: "Agricultural value chains contain enormous amounts of repetitive coordination: matching supply with demand, scheduling transport, verifying quality, reconciling invoices, monitoring inventory, assessing credit, processing insurance claims, communicating procurement requirements, tracking compliance, and coordinating payments. These workflows are often fragmented across organizations. Agentic AI can potentially connect them.",
+        },
+        {
+          type: "paragraph",
+          text: "Consider post-harvest management. FAO estimates that approximately 14% of food produced globally is lost between harvest and retail, before food reaches shops. That represents a significant coordination challenge as much as a production challenge.",
+        },
+        {
+          type: "paragraph",
+          text: "An agent could combine harvest forecasts with warehouse capacity, transport availability, buyer demand, weather conditions, and shelf-life information to identify where supply is likely to bottleneck and trigger actions before losses occur. This is where agentic AI could create value that traditional farm-level AI cannot: optimizing the flow of agricultural products rather than only optimizing production.",
+        },
+        {
+          type: "paragraph",
+          text: "The economic opportunity therefore extends beyond the farm gate. Procurement, logistics, storage, finance, processing, and market coordination may become some of the earliest areas where agentic systems demonstrate measurable commercial returns.",
+        },
+        { type: "heading", text: "India and Africa Could Become Test Beds for a Different Model" },
+        {
+          type: "paragraph",
+          text: "Emerging markets should not simply replicate the AI architecture developed for highly digitized economies. India and Africa offer an opportunity to develop a different model: AI systems designed from the beginning for fragmented, multilingual, mobile-first agricultural ecosystems.",
+        },
+        {
+          type: "paragraph",
+          text: "India is already building a substantial foundation for this transition. The convergence of digital public infrastructure and agricultural modernization positions AI agriculture India Africa as one of the most closely watched implementation environments for next-generation agricultural intelligence. The country's broader smart agriculture market was estimated at $714.1 million in 2024, according to a commercial market estimate. More significantly for implementation, the Indian government announced plans in September 2024 to allocate approximately ₹6,000 crore ($731.7 million) toward smart precision farming from FY2024-25 through FY2028-29. The proposed program is expected to cover 15,000 acres and approximately 60,000 farmers, using technologies including AI, drones, IoT, and data analytics.",
+        },
+        {
+          type: "paragraph",
+          text: "The significance is not simply the size of the investment. It is the direction of travel: India is beginning to move from isolated precision-agriculture applications toward a broader technology-enabled operating environment. That creates the conditions in which agentic systems could eventually coordinate farm-level intelligence with procurement, logistics, finance, and market decisions.",
+        },
+        {
+          type: "paragraph",
+          text: "Market estimates for the emerging agentic AI decision-engine segment point in the same direction. One recent estimate puts Asia Pacific at 15.4% of the global agentic AI decision-engine market for agrifood supply chains in 2025, while projecting the region to be the fastest-growing market, at a 39.1% CAGR through the forecast period. The estimate identifies greenfield deployments in India's dairy cooperative sector as an important driver. These figures should be viewed as directional market estimates rather than official industry statistics, but they highlight the strategic relevance of India's large, digitally connected agricultural ecosystems.",
+        },
+        {
+          type: "paragraph",
+          text: "Africa presents a different but equally important opportunity. The continent already has a digital base on which agentic systems can be built. Approximately 33 million smallholder farmers were reached by digital agricultural applications, with the number projected to reach 200 million by 2030. These applications span advisory services, market linkages, financial access, and supply-chain management.",
+        },
+        {
+          type: "paragraph",
+          text: "This matters because agentic AI does not need to begin with a fully integrated digital agricultural ecosystem. Continued investment in interoperable digital agriculture platforms is expected to strengthen AI agriculture India Africa, creating scalable models that other emerging economies can adapt over time. It can be layered progressively onto existing digital services, provided the underlying systems become interoperable.",
+        },
+        {
+          type: "paragraph",
+          text: "The investment environment is also changing. A recent market estimate places Africa and the Middle East at 8.7% of the agentic AI decision-engine market for agrifood supply chains, with development-finance institutions and sovereign wealth funds supporting food-security AI platforms. While still a relatively small share, this creates a potential pathway for above-average growth as digital agricultural infrastructure and AI investment expand.",
+        },
+        {
+          type: "paragraph",
+          text: "The strategic opportunity across both regions is therefore to move from digital connectivity to intelligent coordination. That transition will require architecture, not simply applications. SkyQuest on behalf of a global renowned philanthropic organization, has experience in co-creating investable solutions that enhance smallholder farmer resilience, strengthen supply chains, and stimulate industry-wide climate adaptation.",
+        },
+        { type: "heading", text: "From AI Pilots to Agentic Operating Models" },
+        {
+          type: "paragraph",
+          text: "The transition to agentic AI requires organizations to move beyond task-level pilots toward end-to-end workflow transformation. The focus should shift from evaluating whether AI can improve an individual activity to determining where autonomous decision-making can be embedded across the value chain, and where human oversight remains necessary.",
+        },
+        {
+          type: "paragraph",
+          text: "This requires investment in interoperable data infrastructure, APIs, workflow integration, digital identity, payments, governance, and organizational capabilities. It also requires a shift in performance measurement from AI engagement to measurable business outcomes.",
+        },
+        {
+          type: "paragraph",
+          text: "Relevant indicators include lower input and logistics costs, reduced post-harvest losses, faster procurement cycles, improved inventory efficiency, stronger credit performance, higher farmer realization, and greater resilience to supply chain disruptions.",
+        },
+        {
+          type: "paragraph",
+          text: "Ultimately, the performance of agentic AI should be assessed by the value it creates across the agricultural value chain, rather than the volume of activity generated by the technology.",
+        },
+        { type: "heading", text: "The Race Is Not to Build the Most Autonomous Agent" },
+        {
+          type: "paragraph",
+          text: "Agriculture does not need an AI system that acts independently simply because it can. It needs systems that can act reliably, economically, and accountably within the conditions in which agricultural decisions occur.",
+        },
+        {
+          type: "paragraph",
+          text: "For emerging markets, that means building the connective tissue between AI and the real economy: interoperable data, transaction infrastructure, trusted intermediaries, governance, human oversight, and mechanisms for escalation.",
+        },
+        {
+          type: "paragraph",
+          text: "The countries and agribusinesses that recognize this early may have an unexpected advantage. They do not necessarily have to replicate decades of fragmented legacy technology. They can design agricultural intelligence architectures around mobile-first interfaces, digital public infrastructure, lightweight models, shared data standards, and human-in-the-loop workflows from the outset. The opportunity is therefore larger than automating agricultural tasks. It is to redesign how agricultural value chains sense, decide, coordinate, and act.",
+        },
+        {
+          type: "paragraph",
+          text: "As organizations mature beyond experimentation, agentic AI agriculture emerging markets will increasingly depend on governance, interoperability, and execution capabilities, reinforcing the growing importance of Agri-AI implementation advisory and scalable agentic AI food systems across agricultural value chains. The critical question for leaders is no longer whether their organization is ready to deploy an AI agent. It is whether the organization is prepared to give that agent something meaningful to operate connected data, defined authority, trusted institutions, and a value chain designed to respond to intelligence in real time. For agricultural leaders assessing this transition, SkyQuest can help translate the potential of agentic AI into the operating architectures, capabilities, and value-creation priorities required to scale it effectively.",
+        },
+        { type: "heading", text: "The Advisory Opportunity This Creates - The Implementation Architecture Emerging Markets Cannot Skip" },
+        {
+          type: "paragraph",
+          text: "Organizations preparing for agentic AI in agriculture should think about the implementation stack in six layers. This layered approach also provides a practical roadmap for agri-AI implementation advisory, enabling governments, agribusinesses, development institutions, and technology providers to align investments around scalable operational capabilities rather than disconnected pilots.",
+        },
+        { type: "subheading", text: "1. Data Layer" },
+        {
+          type: "paragraph",
+          text: "Reliable, interoperable data from farms, weather systems, markets, inventories, finance, logistics, and government systems.",
+        },
+        { type: "subheading", text: "2. Intelligence Layer" },
+        {
+          type: "paragraph",
+          text: "Specialized models and agents capable of interpreting agronomic, commercial, financial, and operational information.",
+        },
+        { type: "subheading", text: "3. Orchestration Layer" },
+        {
+          type: "paragraph",
+          text: "A system that coordinates agents, manages workflows, resolves conflicts, and determines when human intervention is required.",
+        },
+        { type: "subheading", text: "4. Transaction Layer" },
+        {
+          type: "paragraph",
+          text: "APIs and digital infrastructure through which agents can execute actions—placing orders, scheduling logistics, initiating payments, updating records, or triggering alerts.",
+        },
+        { type: "subheading", text: "5. Governance Layer" },
+        {
+          type: "paragraph",
+          text: "Permissions, audit trails, data ownership, privacy, model monitoring, accountability, and rules defining which decisions can be automated.",
+        },
+        { type: "subheading", text: "6. Human Layer" },
+        {
+          type: "paragraph",
+          text: "Farmers, extension workers, cooperative managers, agronomists, procurement teams, bankers, insurers, and policymakers who supervise high-impact decisions and handle exceptions.",
+        },
+        {
+          type: "paragraph",
+          text: "Most AI strategies concentrate heavily on the intelligence layer. The implementation challenge lies in building all six layers as a coherent operating system. None of this is a hypothetical exercise. It is the specific, recurring gap between how quickly agentic AI capability is advancing and how slowly the data, governance, and orchestration infrastructure around it is being built, and it is the gap SkyQuest's advisory team works inside every day, drawing on program design, research and evaluation, and technology-transfer experience across Agriculture & Food Systems and the AI & Digital Economy.",
+        },
+        { type: "heading", text: "The New Strategic Question: What Should an Agent Be Allowed to Do?" },
+        {
+          type: "paragraph",
+          text: "This question deserves more attention than it currently receives.",
+        },
+        {
+          type: "paragraph",
+          text: "Agricultural organizations should resist measuring agentic AI maturity by the number of tasks an agent can perform autonomously. A more useful framework is to classify decisions by risk and reversibility. Establishing clear decision rights is becoming a foundational governance requirement for agentic AI food systems, where operational authority must always remain proportional to risk and accountability.",
+        },
+        {
+          type: "paragraph",
+          text: "An agent could independently generate a procurement forecast, identify potential supply shortages, send farmer reminders, flag inventory anomalies, or schedule low-risk operational tasks. It might require approval to place significant purchase orders, change procurement contracts, recommend high-cost farm interventions, approve credit, initiate insurance settlements, or alter farmer payments.",
+        },
+        {
+          type: "paragraph",
+          text: "Some decisions may remain human-led entirely. The objective is to establish decision rights for machines. Without clearly defined decision rights, agentic AI becomes an operational liability rather than an efficiency engine. The question is not whether a system can execute an action. It is whether the organization has determined when the system should be permitted to do so.",
+        },
+        { type: "heading", text: "See What it Takes to Move from Pilot to Infrastructure" },
+        {
+          type: "paragraph",
+          text: "If you're a government agency, DFI, or agribusiness evaluating where agentic AI can move from isolated pilot to trusted operating infrastructure, not just add another intelligent application to an already fragmented value chain, SkyQuest's advisory team can walk you through the decision-rights mapping, governance design, and layer-by-layer sequencing that determine whether agentic systems create measurable value or remain stuck in experimentation, for your specific value chain and market.",
         },
       ] as ContentBlock[],
     },
-    {
-      id: 3,
-      image: "/CaseStudy/re3.jpg",
-      category: "Articles",
-      type: "Article",
-      topic: "Financial Inclusion",
-      date: "February 3, 2026",
-      readTime: "6 Min read",
-      title: "Powering Inclusive Finance with Embedded Digital Wallets",
-      titleEmphasis: "Embedded Digital Wallets",
-      description:
-        "Launched an embedded-finance layer for regional banks that brought 2.4 million unbanked customers into the formal financial system, processing over $180M in microloans in the first year.",
-      subtitle: "Bringing Millions Into the Formal Economy Through Embedded Finance",
-      subtitleEmphasis: "Embedded Finance",
-      body: [
-        {
-          type: "paragraph",
-          dropCap: true,
-          text: "Millions of working adults across the region remained outside the formal financial system, unable to access credit, savings, or insurance products through traditional bank branches. In 2026, a group of regional banks partnered to launch an embedded-finance layer, distributed through everyday merchant and telecom apps, that let first-time users open a wallet, build a credit history, and access microloans without ever visiting a branch.",
-          segments: [
-            "illions of working adults across the region remained outside the formal financial system, unable to access credit, savings, or insurance products through traditional bank branches. In 2026, a group of regional banks partnered to launch an ",
-            { text: "embedded-finance layer", href: "#" },
-            ", distributed through everyday merchant and telecom apps, that let first-time users open a wallet, build a credit history, and access microloans without ever visiting a ",
-            { text: "branch", bold: true },
-            ".",
-          ],
-        },
-        { type: "heading", text: "The ", emphasis: "Challenge" },
-        {
-          type: "paragraph",
-          text: "Traditional onboarding required physical documentation, branch visits, and credit history that most unbanked customers simply didn't have. Banks wanted to serve this segment but lacked a low-cost distribution channel and a credit model that worked without a conventional financial track record.",
-        },
-        { type: "heading", text: "Our ", emphasis: "Approach" },
-        {
-          type: "list",
-          items: [
-            "Embedded digital wallet and KYC flows directly into merchant and telecom apps customers already used daily.",
-            "Built an alternative credit-scoring model using transaction and usage signals in place of conventional credit history.",
-            "Rolled out microloan products with repayment terms suited to irregular, cash-based income patterns.",
-          ],
-        },
-        {
-          type: "callout",
-          title: "Key Results",
-          items: [
-            "2.4 million previously unbanked customers brought into the formal financial system.",
-            "Over $180M in microloans processed in the first year.",
-            "Onboarding time cut from a multi-day branch process to minutes, in-app.",
-          ],
-        },
-        {
-          type: "paragraph",
-          text: "The programme's success has prompted partner banks to extend the wallet into savings and micro-insurance products, treating financial inclusion not as a one-time onboarding event but as an ongoing relationship built on data the customer generates themselves.",
-        },
-      ] as ContentBlock[],
-    },
-    {
-      id: 4,
-      image: "/CaseStudy/re1.jpg",
-      category: "Articles",
-      type: "Article",
-      topic: "Agriculture & Livestock",
-      date: "January 21, 2026",
-      readTime: "5 Min read",
-      title: "Scaling Precision Agriculture Across Three States",
-      titleEmphasis: "Across Three States",
-      description:
-        "Rolled out satellite-based soil monitoring to 8,500 farms, cutting fertilizer waste by 22% and giving cooperatives a shared dashboard to track yield forecasts in real time.",
-      subtitle: "Cutting Fertilizer Waste Through Satellite-Based Soil Monitoring",
-      subtitleEmphasis: "Satellite-Based Soil Monitoring",
-      body: [
-        {
-          type: "paragraph",
-          dropCap: true,
-          text: "Fertilizer application across smallholder farms had long been guided by habit rather than soil condition, leading to persistent overuse, rising input costs, and diminishing returns on yield. In 2026, a precision-agriculture rollout brought satellite-based soil monitoring to 8,500 farms across three states, replacing guesswork with a shared, real-time view of soil health and forecasted yield.",
-          segments: [
-            "ertilizer application across smallholder farms had long been guided by habit rather than soil condition, leading to persistent overuse, rising input costs, and diminishing returns on yield. In 2026, a precision-agriculture rollout brought ",
-            { text: "satellite-based soil monitoring", href: "#" },
-            " to 8,500 farms across three states, replacing guesswork with a shared, real-time view of ",
-            { text: "soil health and forecasted yield", bold: true },
-            ".",
-          ],
-        },
-        { type: "heading", text: "The ", emphasis: "Challenge" },
-        {
-          type: "paragraph",
-          text: "Farmers were applying fertilizer at flat, uniform rates regardless of actual soil nutrient levels, and cooperatives had no aggregated way to forecast regional yield or plan input distribution. The result was consistent overspending on fertilizer paired with yield variability that was hard to explain or address.",
-        },
-        { type: "heading", text: "Our ", emphasis: "Approach" },
-        {
-          type: "list",
-          items: [
-            "Used satellite imagery and soil sensors to build farm-level nutrient and moisture profiles across the region.",
-            "Generated tailored fertilizer recommendations per plot instead of applying a single blanket rate.",
-            "Built a cooperative-facing dashboard aggregating soil health data into real-time yield forecasts.",
-          ],
-        },
-        {
-          type: "callout",
-          title: "Key Results",
-          items: [
-            "22% reduction in fertilizer waste across participating farms.",
-            "8,500 farms onboarded to satellite-based soil monitoring.",
-            "Real-time yield forecasting now available to cooperative managers across all three states.",
-          ],
-        },
-        {
-          type: "paragraph",
-          text: "Beyond the immediate cost savings, the shared dashboard gave cooperatives a planning tool they had never had before, a live, aggregated view of regional soil health that informs everything from input procurement to storage planning ahead of harvest.",
-        },
-      ] as ContentBlock[],
-    },
-    
   ] as Insight[],
 };
 

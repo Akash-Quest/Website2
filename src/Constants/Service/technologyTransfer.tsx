@@ -174,4 +174,9 @@ export const TechnologyTransferFaqData = [
     answer:
       "Our innovation advisory spans healthcare, life sciences, agriculture, climate, manufacturing, education, energy, digital technologies, public sector, and industrial innovation.",
   },
+  {
+    question: "How is this different from Data & Artificial Intelligence capability? ",
+    answer:
+      "Technology Transfer is about moving research/IP into commercial or public use patents, licensing, spin-outs; Data & AI is about building and deploying specific AI/data systems for an operating organization.",
+  },
 ];

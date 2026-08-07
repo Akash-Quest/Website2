@@ -4,21 +4,19 @@
 
 import React from 'react'; 
 
-import AlwaysOnHero from '@/components/features/Alwayson/AlwaysOnHero'; 
+import AlwaysOnHero from '@/components/features/AlwaysOnHero'; 
 
-import AlwaysOnProblem from '@/components/features/Alwayson/AlwaysOnProblem';  
+import AlwaysOnProblem from '@/components/features/AlwaysOnProblem';  
 
-import AlwaysOnFeatures from '@/components/features/Alwayson/AlwaysOnFeatures'; 
+import AlwaysOnFeatures from '@/components/features/AlwaysOnFeatures'; 
 
-import AlwaysOnSteps from '@/components/features/Alwayson/AlwaysOnSteps';  
+import AlwaysOnSteps from '@/components/features/AlwaysOnSteps';  
 
-import AlwaysOnPlatform from '@/components/features/Alwayson/AlwaysOnPlatform';
+import AlwaysOnPlatform from '@/components/features/AlwaysOnPlatform';  
 
-import AlwaysOnGovernance from '@/components/features/Alwayson/AlwaysOnGovernance';
+import AlwaysOnWIF from '@/components/features/AlwaysOnWIF'; 
 
-import AlwaysOnWIF from '@/components/features/Alwayson/AlwaysOnWIF';
-
-import AlwaysOnDeps from '@/components/features/Alwayson/AlwaysOnDeps'; 
+import AlwaysOnDeps from '@/components/features/AlwaysOnDeps'; 
 
 import CaseStudies from "@/components/features/HomeCaseStudie"; 
 
@@ -59,11 +57,11 @@ export default function AlwaysOnPage() {
 
               stats={[ 
 
-                { target: 12, suffix: "M+", label: "Unique users engaged" }, 
+                { target: 3285, suffix: "", label: "Assessments today" }, 
 
-                { target: 180, suffix: "K+", label: "Daily active conversations" }, 
+                { target: 8, suffix: "", label: "Local languages" }, 
 
-                { target:"99.9" ,suffix: "%", label: "Platform uptime" }, 
+                { target:"24" ,suffix: "x7", label: "Always Available" }, 
 
               ] as any} 
 
@@ -75,11 +73,9 @@ export default function AlwaysOnPage() {
 
       <AlwaysOnSteps/>  
 
-      <AlwaysOnPlatform />
+      <AlwaysOnPlatform />  
 
-      <AlwaysOnGovernance />
-
-      <AlwaysOnWIF />
+      <AlwaysOnWIF /> 
 
       <AlwaysOnDeps /> 
 

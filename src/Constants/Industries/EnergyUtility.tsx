@@ -105,8 +105,8 @@ export const EnergyUtilitiesFaqData = [
       "We apply AI, geospatial intelligence, IoT, digital platforms, predictive analytics, and automation to improve asset performance, operational resilience, and system reliability.",
   },
   {
-    question: "What makes SkyQuest different in energy and utilities consulting?",
+    question: "What financing models does SkyQuest help structure for energy access?",
     answer:
-      "SkyQuest combines strategy, engineering advisory, digital transformation, investment advisory, program management, and implementation expertise to help clients build resilient, efficient, and future-ready energy systems.",
+      "Franchise-based clean energy retail, digital finance-linked equipment sales, blended finance, and DFI capital mobilization.",
   },
 ];

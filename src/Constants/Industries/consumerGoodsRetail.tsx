@@ -108,7 +108,7 @@ export const ConsumerGoodsRetailFaqData = [
   {
     question: "Has SkyQuest worked with major pharmaceutical or FMCG companies?",
     answer:
-      "Yes — our technology roadshows and licensing platforms have engaged companies including GSK, Merck, Zydus Cadila, Sun Pharma, Cipla, AstraZeneca, and Unilever, among others (historic client relationships).",
+      "Yes — our technology roadshows and licensing platforms have engaged companies including GSK, Merck, Zydus Cadila, Cipla, AstraZeneca, and Unilever, among others (historic client relationships).",
   },
   {
     question: "Does SkyQuest help with product labeling and regulatory compliance?",

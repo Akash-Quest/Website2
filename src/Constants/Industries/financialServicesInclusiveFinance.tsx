@@ -20,7 +20,7 @@ export const FinancialServicesInclusiveFinanceHeroData = {
     </>
   ),
   description:
-    "SkyQuest partners with governments, DFIs, and financial institutions to design blended finance structures, digital financial inclusion platforms, and institutional strategies that connect underserved populations — farmers, women entrepreneurs, and MSMEs — to formal capital.",
+    "SkyQuest partners with governments, DFIs, and financial institutions to design blended finance structures, digital financial inclusion platforms, and institutional strategies that connect underserved populations, farmers, women entrepreneurs, and MSMEs, to formal capital.",
   imageSrc: "/IndustriesHero/Finance.jpg",
   imageAlt: "Transforming Agriculture, Livestock & Food Systems",
 };
@@ -34,7 +34,7 @@ export const FinancialServicesInclusiveFinanceWhatWeOfferData = {
     </>
   ),
   description:
-    "We help governments, agribusinesses, investors, development institutions, and farmer organizations design, implement, and scale agricultural transformation initiatives.",
+    "We help governments, financial institutions, investors, and development organizations strengthen financial ecosystems, expand inclusive access to capital, and build sustainable pathways for economic growth.",
   items: [
     {
       icon: Wind,
@@ -94,19 +94,19 @@ export const FinancialServicesInclusiveFinanceFaqData = [
   },
   {
     question:
-      "How does SkyQuest support blended finance and investment mobilization?",
+      "Why is financial inclusion moving beyond account opening?",
     answer:
-      "We advise on blended finance structures, investment strategies, public-private partnerships, capital mobilization, and innovative financing mechanisms that accelerate sustainable development.",
+      "Financial inclusion now focuses on meaningful access to credit, investment, and productive capital—not just bank accounts.",
   },
   {
-    question: "Can SkyQuest support digital transformation in financial services?",
+    question: "How does AI credit scoring help informal borrowers?",
     answer:
-      "Yes. We help financial institutions adopt digital platforms, AI, data analytics, workflow automation, and digital finance solutions that improve operational efficiency and customer experience.",
+      "AI can use alternative data to assess creditworthiness where traditional credit histories are unavailable.",
   },
   {
     question:
-      "Why do organizations choose SkyQuest for financial services and inclusive finance consulting?",
+      "Why is blended finance important for development?",
     answer:
-      "SkyQuest combines strategy, policy expertise, institutional strengthening, digital transformation, investment advisory, and implementation support to build resilient financial systems and deliver measurable economic and social impact.",
+      "Blended finance combines public, private, and development capital to reduce risk and unlock investment in high-impact projects.",
   },
 ];

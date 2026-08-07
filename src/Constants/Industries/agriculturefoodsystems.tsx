@@ -74,9 +74,9 @@ export const AgricultureFoodSystemsFaqData = [
       "SkyQuest provides strategy and policy advisory, agricultural value chain development, digital agriculture, climate-smart agriculture, program management, research, and institutional strengthening.",
   },
   {
-    question: "Which organizations does SkyQuest work with?",
+    question: "How is climate volatility changing agricultural decision-making, and how do you help clients adapt?",
     answer:
-      "We partner with governments, development agencies, multilateral organizations, research institutions, agribusinesses, cooperatives, FPOs, investors, and private sector organizations across the agriculture ecosystem.",
+      "Climate volatility affects crop choices, water management, productivity, and investment. SkyQuest helps clients assess risks, strengthen resilience, and apply data-driven adaptation strategies.",
   },
   {
     question: "How does SkyQuest support digital agriculture initiatives?",
@@ -105,8 +105,8 @@ export const AgricultureFoodSystemsFaqData = [
       "Yes. We conduct sector research, policy analysis, market intelligence, feasibility studies, and evidence-based advisory to support agricultural development and investment decisions.",
   },
   {
-    question: "Why do organizations choose SkyQuest for agriculture consulting?",
+    question: "What role do seed system digitization and formalization play in your agriculture work?",
     answer:
-      "SkyQuest combines strategy, digital transformation, program management, research, AI, geospatial intelligence, and implementation expertise to deliver scalable, sustainable, and measurable outcomes across agriculture and food systems.",
+      "Seed system digitization strengthens traceability, certification, quality assurance, and farmer access to reliable planting material.",
   },
 ];

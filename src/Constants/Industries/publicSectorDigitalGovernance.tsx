@@ -98,9 +98,9 @@ export const PublicSectorDigitalGovernanceFaqData = [
       "SkyQuest helps governments with strategy and policy advisory, program management, digital transformation, institutional strengthening, project planning, monitoring and evaluation, and capacity building.",
   },
   {
-    question: "Which government organizations does SkyQuest work with?",
+    question: "What's the difference between a PMU and a TSU engagement, and how do you decide which a government needs?",
     answer:
-      "We work with central and state governments, public sector agencies, development institutions, multilateral organizations, and implementation partners on policy, governance, and digital transformation initiatives.",
+      "A PMU provides programme-wide governance and coordination, while a TSU offers specialised technical and implementation support. The choice depends on the programme’s scope, capacity, and technical needs.",
   },
   {
     question: "How does SkyQuest support digital government transformation?",

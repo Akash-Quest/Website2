@@ -164,9 +164,9 @@ export const LivelihoodsFaqData = [
       "Yes. We support skills development, employability initiatives, vocational training strategies, and workforce readiness programs aligned with industry needs.",
   },
   {
-    question: "Which sectors do you support?",
+    question: "How is this different from your Inclusive Finance & Institutional Strategy capability? ",
     answer:
-      "Our experience spans agriculture, manufacturing, healthcare, education, technology, infrastructure, social development, and public sector programs.",
+      "Livelihoods & Entrepreneurship focuses on income generation and enterprise-building; Inclusive Finance focuses on the financial systems and institutions that fund and sustain those enterprises.",
   },
   {
     question: "Do you provide implementation support?",

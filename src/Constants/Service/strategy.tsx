@@ -183,8 +183,8 @@ export const StrategyFaqData = [
       "Yes. SkyQuest supports clients across Asia-Pacific, Africa, the Middle East, Europe, and North America.",
   },
   {
-    question: "How do you measure strategy success? ",
+    question: "What's the difference between your Strategy & Policy work and Integrated Program Management capability? ",
     answer:
-      "We define measurable KPIs, governance mechanisms, implementation roadmaps, and performance frameworks to ensure strategies deliver tangible outcomes.",
+      "Strategy & Policy sets the direction and the policy case; Integrated Program Management governs the delivery once a strategy is approved.",
   },
 ];

@@ -162,9 +162,9 @@ export const DigitalFaqData = [
   },
   {
     question:
-      "What industries can benefit from your AI and digital transformation services?",
+      "What's the difference between your AI Strategy work and your Data & AI capability?",
     answer:
-      "Our experience spans government, agriculture, healthcare, financial services, infrastructure, manufacturing, education, climate, and development sectors, enabling us to tailor solutions to industry-specific challenges.",
+      "ODigital Transformation sets direction and governance; Data & AI (our other capability) builds and ships the models and platforms. Clients often start here and move into build with our Data & AI team.",
   },
   {
     question: "Can SkyQuest help modernize legacy systems and processes?",

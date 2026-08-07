@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "src/app/Though-Leadership"  ],
+, "src/app/Though-Leadership", "src/app/(site)/products/alwayson"  ],
   "exclude": ["node_modules"]
 }
