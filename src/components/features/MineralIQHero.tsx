@@ -14,7 +14,7 @@ function MineralIQProduct() {
       <div className="relative bg-background overflow-hidden">
         <div
           className=" pointer-events-none absolute inset-0 bg- bg-cover opacity-30 aspect-[1920/812]"
-          style={{ backgroundImage: "url('/team/bg.jpg')" }}
+          style={{ backgroundImage: "url('/Team/bg.jpg')" }}
         />
         <div className="hero-container relative z-10 pb-5">
           {/* Breadcrumb */}

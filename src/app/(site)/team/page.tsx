@@ -15,7 +15,7 @@ function TeamHero() {
     <section className="relative bg-background overflow-hidden">
          <div
         className=" pointer-events-none absolute inset-0  bg-cover opacity-30 "
-        style={{ backgroundImage: "url('/team/bg.jpg')",backgroundColor: "rgba(0,0,0,0.1)",
+        style={{ backgroundImage: "url('/Team/bg.jpg')",backgroundColor: "rgba(0,0,0,0.1)",
     backgroundBlendMode: "darken", }}
       />
     <div className="hero-container relative z-10">
