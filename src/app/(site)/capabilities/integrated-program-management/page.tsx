@@ -5,6 +5,7 @@ import OtherServicesSection from '@/components/features/OtherServices';
 import FAQSection from '@/components/features/Faq';
 import Suscribe from '@/components/features/Suscribe';
 import { insightData } from '@/Constants/Insight ';
+import { getRelatedByTag } from '@/lib/relatedContent';
 import { caseStudiesData } from '@/Constants/caseStudies';
 import IntegratedCapabilities from '@/components/features/CoreCapa2';
 import WhatWeOfferGrid from '@/components/features/WhatWeOfferGrid';
@@ -63,9 +64,9 @@ export default function SocialImpactService(){
      <StatsGridThree />
      <IntegratedCapabilities {...IntegratedProgramCapabilitiesData} />
      <WhatWeOfferGrid {...IntegratedProgramWeOfferData} />
-     <CaseStudies {...caseStudiesData} />
+     <CaseStudies {...caseStudiesData} caseStudies={getRelatedByTag(caseStudiesData.caseStudies, "capability", "Integrated Program Management")} />
      <OtherServicesSection bgClassName='bg-white' currentHref="/capabilities/integrated-program-management" />
-     <CaseStudies {...insightData}/>
+     <CaseStudies {...insightData} caseStudies={getRelatedByTag(insightData.caseStudies, "capability", "Integrated Program Management")}/>
      <FAQSection  faqs={IntegratedProgramFaqData} />
      <Suscribe />
      </>)

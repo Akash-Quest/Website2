@@ -10,6 +10,7 @@ import IndustriesTex from '@/components/features/IndustriesTex';
 import CaseStudies from '@/components/features/HomeCaseStudie';
 import { caseStudiesData } from '@/Constants/caseStudies';
 import { insightData } from '@/Constants/Insight ';
+import { getRelatedByTag } from '@/lib/relatedContent';
 import FAQSection from '@/components/features/Faq';
 import Suscribe from '@/components/features/Suscribe';
 function HeroPage(){
@@ -28,9 +29,9 @@ export default function Agriculturepage(){
      <IndustriesTex {...ClimateEnvironmentOverviewData} />
 
      <WhatWeOfferGrid {...ClimateEnvironmentWhatWeOfferData} bgClassName="bg-background" />
-     <CaseStudies {...caseStudiesData} bgClassName="bg-white" />
+     <CaseStudies {...caseStudiesData} caseStudies={getRelatedByTag(caseStudiesData.caseStudies, "industry", "Climate & Environment")} bgClassName="bg-white" />
      <OtherIndustriesSection bgClassName='bg-background' currentHref="/industries/climate-environment" />
-     <CaseStudies {...insightData}bgClassName="bg-white"/>
+     <CaseStudies {...insightData} caseStudies={getRelatedByTag(insightData.caseStudies, "industry", "Climate & Environment")} bgClassName="bg-white"/>
      <FAQSection  faqs={ClimateEnvironmentFaqData} bgClassName="bg-background" />
      <Suscribe bgClassName="bg-white" />
      </>)

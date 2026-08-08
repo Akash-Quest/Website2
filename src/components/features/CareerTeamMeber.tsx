@@ -10,84 +10,153 @@ type Member = {
   image: string;
   email?: string;
   linkedin?: string;
-  group: "leadership" | "team" | "advisory";
+  group: "team" | "advisory";
 };
 
 const members: Member[] = [
   {
     name: "Shriya Damani",
     title: "Co-Founder & CEO",
-    location: "",
-    image: "/Careers/Shriya.jpg",
+    location: "Global",
+    image: "/Careers/Shriya.png",
     linkedin: "https://in.linkedin.com/in/shriya-damani-b460936",
-    group: "leadership",
+    group: "team",
   },
   {
     name: "Akash Bhavsar",
     title: "Co-founder",
-    location: "",
-    image: "/Careers/Akash.jpg",
+    location: "Global",
+    image: "/Careers/Akash.png",
     linkedin: "https://www.linkedin.com/in/akashbhavsar",
-    group: "leadership",
-  },
-  {
-    name: "Rajeev Sharan",
-    title: "Project Director - Seed Systems" ,
-    location: "Delhi, India",
-    image: "/Careers/Rajeev.jpg",
     group: "team",
   },
   {
-    name: "Harshita Gupta",
-    title: "Sr. Associate Consultant",
-    location: "Delhi, India",
-    image: "/Careers/Harshita.jpg",
+    name: "Rajeev Sharan",
+    title: "Project Director – Seed",
+    location: "",
+    image: "/Careers/Rajeeb.jpg",
+    group: "team",
+  },
+  {
+    name: "Abhinav Singh Sisodia",
+    title: "Director – Government Advisory",
+    location: "",
+    image: "/Careers/Abhinav.jpg",
+    group: "team",
+  },
+  {
+    name: "Yogender Narayan",
+    title: "Associate Strategy Consultant",
+    location: "",
+    image: "/Careers/yogendra.png",
     group: "team",
   },
   {
     name: "Teresa Khanna",
-    title: "Sr. Consultant",
-    location: "Noida, India",
+    title: "Sr. Associate Consultant",
+    location: "",
     image: "/Careers/Teresa.jpg",
     group: "team",
   },
   {
     name: "Disha Yadav",
     title: "Associate Consultant",
-    location: "Delhi, India",
+    location: "",
     image: "/Careers/Disha.jpg",
     group: "team",
   },
   {
-    name: "Yogender Narayan",
-    title: "Associate Strategy Consultant",
-    location: "Delhi, India",
-    image: "/Careers/Yogender.jpg",
-    group: "team",
-  },
-   {
-    name: "Sambhav Jain",
-    title: "Associate Consultant",
-    location: "Delhi, India",
-    image: "/Careers/Sambhav.jpg",
+    name: "Harshita Gupta",
+    title: "Sr. Associate Consultant",
+    location: "",
+    image: "/Careers/Harshita.jpg",
     group: "team",
   },
 
   {
     name: "Swapna Singh",
     title: "Lead Senior Research Analyst",
-    location: "Ahmedabad, India",
+    location: "",
     image: "/Careers/Swapna.jpg",
     group: "team",
   },
   {
-    name: "Addisu Asfaw",
-    title: "Senior Consultant",
-    location: "Addis Ababa, Ethiopia",
+    name: "Hardik Prajapati",
+    title: "Accountant",
+    location: "",
+    image: "/Careers/Hardhik.png",
+    group: "team",
+  },
+  {
+    name: "Richa Thankur",
+    title: "Lead - HR",
+    location: "",
+    image: "/Careers/Richa.jpg",
+    group: "team",
+  },
+  {
+    name: "Aditya Agrwal",
+    title: "Software Engineer",
+    location: "",
+    image: "/Careers/Aditya.png",
+    group: "team",
+  },
+  {
+    name: "Simolee Dawada",
+    title: "Jr. HR Executive",
+    location: "",
+    image: "/Careers/Simolee.png",
+    group: "team",
+  },
+  {
+    name: "Raginee Sarkar",
+    title: "Team Lead Content Editor",
+    location: "",
+    image: "/Careers/Raginee.png",
+    group: "team",
+  },
+  {
+    name: "Goutam Prajapat",
+    title: "Design Executive (Graphics & UI/UX)",
+    location: "",
+    image: "/Careers/Goutam.png",
+    group: "team",
+  },
+  {
+    name: "Prachi Mishra",
+    title: "Research Associate",
+    location: "",
+    image: "/Careers/Prachi.png",
+    group: "team",
+  },
+  {
+    name: "Priyanshi Harwani",
+    title: "Business Development Executive",
+    location: "",
+    image: "/Careers/Priyanshi.jpg",
+    group: "team",
+  },
+  {
+    name: "Dr. Shumete Gizaw",
+    title: "Global Principal Advisor Government, Technology & Sovereign Partnerships",
+    location: "",
+    image: "/Careers/Shumete.jpg",
+    group: "advisory",
+  },
+  {
+    name: "Selamawit Zemene Mewosha",
+    title: "Country Director Ethiopia",
+    location: "",
+    image: "/Careers/Selamawit.jpg",
+    group: "advisory",
+  },
+  {
+    name: "Addisu Asfaw Debea",
+    title: "Senior Consultant (Program Management)",
+    location: "",
     image: "/Careers/Addisu.jpg",
     group: "advisory",
   },
-  // Advisory board — to be added later.
 ];
 
 function MemberCard({
@@ -144,8 +213,9 @@ function MemberCard({
 }
 
 export default function TeamGrid() {
-  const leaders = members.filter((m) => m.group === "leadership");
   const team = members.filter((m) => m.group === "team");
+  const founders = team.slice(0, 2);
+  const restOfTeam = team.slice(2);
   const advisory = members.filter((m) => m.group === "advisory");
 
   return (
@@ -158,14 +228,6 @@ export default function TeamGrid() {
           Transformation
         </em>
         </h2>
-        <div className="mt-8">
-          <h3 className="mb-4 font-bold text-gray-900 text-body-2xl">Leadership</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {leaders.map((member, idx) => (
-              <MemberCard member={member} index={idx} key={idx} />
-            ))}
-          </div>
-        </div>
 
         {advisory.length > 0 && (
           <div className="mt-8">
@@ -181,7 +243,12 @@ export default function TeamGrid() {
         <div className="mt-8">
           <h3 className="mb-4 font-bold text-gray-900 text-body-2xl">Our Team</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {team.map((member, idx) => (
+            {founders.map((member, idx) => (
+              <MemberCard member={member} index={idx} key={idx} />
+            ))}
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+            {restOfTeam.map((member, idx) => (
               <MemberCard member={member} showIcons={false} index={idx} key={idx} />
             ))}
           </div>

@@ -8,6 +8,7 @@ import CaseStudies from '@/components/features/HomeCaseStudie';
 import { caseStudiesData } from '@/Constants/caseStudies';
 import OtherServicesSection from '@/components/features/OtherServices';
 import { insightData } from '@/Constants/Insight ';
+import { getRelatedByTag } from '@/lib/relatedContent';
 import FAQSection from '@/components/features/Faq';
 import Suscribe from '@/components/features/Suscribe';
 import type { Metadata } from "next";
@@ -53,9 +54,9 @@ export default function DigitalPage(){
      <DigitalMosaic />
      <ServiceCoreCapabilities {...ServicedigitalCoreCapabilitiesData} />
      <EndtoEnd {...DigitalEndToEndData} />
-     <CaseStudies {...caseStudiesData} bgClassName='bg-background'/>
+     <CaseStudies {...caseStudiesData} caseStudies={getRelatedByTag(caseStudiesData.caseStudies, "capability", "Digital Transformation & Emerging Technologies")} bgClassName='bg-background'/>
      <OtherServicesSection bgClassName="bg-white" currentHref="/capabilities/digital-transformation-emerging-technologies" />
-     <CaseStudies {...insightData} bgClassName='bg-background'/>
+     <CaseStudies {...insightData} caseStudies={getRelatedByTag(insightData.caseStudies, "capability", "Digital Transformation & Emerging Technologies")} bgClassName='bg-background'/>
      <FAQSection  faqs={DigitalFaqData} />
      <Suscribe />
      </>)

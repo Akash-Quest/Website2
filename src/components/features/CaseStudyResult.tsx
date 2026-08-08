@@ -11,6 +11,7 @@
   import { caseStudiesData, type CaseStudy } from "@/Constants/caseStudies";
   import { insightData } from "@/Constants/Insight ";
   import Reveal from "@/components/ui/Reveal";
+  import megaMenu from "@/lib/megaMenu.json";
 
   type ListedStudy = CaseStudy & { href: string };
 
@@ -78,32 +79,27 @@
   const PAGE_SIZE = 5;
 
   const CATEGORY_OPTIONS = ["Case Study","Articles"];
-  const CAPABILITY_OPTIONS = [
-    "Digital Transformation",
-    "Public Sector",
-    "Artificial Intelligence",
-    "Program Management",
-    "Social Impact",
-    "Business Intelligence",
-    "Climate, Sustainability",
-    "Agriculture",
+
+  const capabilitiesMenuItem = (megaMenu as any).groups
+    .flatMap((group: any) => group.items)
+    .find((item: any) => item.id === "capabilities");
+
+  const ALL_CAPABILITIES = "All Capabilities";
+  const CAPABILITY_OPTIONS: string[] = [
+    ALL_CAPABILITIES,
+    ...(capabilitiesMenuItem?.content?.columns?.[0]?.links?.map((link: { label: string }) => link.label) ?? []),
   ];
 
+  const industriesMenuItem = (megaMenu as any).groups
+    .flatMap((group: any) => group.items)
+    .find((item: any) => item.id === "industries");
 
-const INDUSTRY_OPTIONS = [
-  "Materials",
-  "Utilities",
-  "Real Estate",
-  "Financials",
-  "Consumer Discretionary",
-  "Consumer Staples",
-  "Healthcare",
-  "Industrials",
-  "Information Technology",
-  "Communications Services",
-  "Energy",
-];
-    
+  const ALL_INDUSTRIES = "All Industries";
+  const INDUSTRY_OPTIONS: string[] = [
+    ALL_INDUSTRIES,
+    ...(industriesMenuItem?.content?.columns?.[0]?.links?.map((link: { label: string }) => link.label) ?? []),
+  ];
+
 
 
   function FilterDropdown({
@@ -254,8 +250,18 @@ const INDUSTRY_OPTIONS = [
     const resultsRef = React.useRef<HTMLDivElement>(null);
 
    const filteredReports = useMemo(() => {
-  return ALL_STUDIES.filter((r) => r.category === category);
-}, [category]);
+  let list = ALL_STUDIES.filter((r) => r.category === category);
+
+  if (capability !== ALL_CAPABILITIES) {
+    list = list.filter((r) => r.capability === capability);
+  }
+
+  if (industry !== ALL_INDUSTRIES) {
+    list = list.filter((r) => r.industry === industry);
+  }
+
+  return list;
+}, [category, capability, industry]);
 
     const totalPages = Math.ceil(filteredReports.length / PAGE_SIZE);
 

@@ -4,6 +4,7 @@ import CaseStudies from '@/components/features/HomeCaseStudie';
 import FAQSection from '@/components/features/Faq';
 import Suscribe from '@/components/features/Suscribe';
 import { insightData } from '@/Constants/Insight ';
+import { getRelatedByTag } from '@/lib/relatedContent';
 import { caseStudiesData } from '@/Constants/caseStudies';
 import StatsGrid from '@/components/ui/Stats4';
 import { ArtificalIntelFaqData, ArtificialHeroData } from '@/Constants/Service/ArtificialIntel';
@@ -86,10 +87,10 @@ export default function SocialImpactService(){
      />
     <EnterpriseAiSolution />
       <WeServe /> 
-     <CaseStudies {...caseStudiesData} bgClassName='bg-white'/>
+     <CaseStudies {...caseStudiesData} caseStudies={getRelatedByTag(caseStudiesData.caseStudies, "capability", "Data & Artificial Intelligence")} bgClassName='bg-white'/>
            
     <Technologies />
-    <CaseStudies {...insightData} bgClassName='bg-white'/>
+    <CaseStudies {...insightData} caseStudies={getRelatedByTag(insightData.caseStudies, "capability", "Data & Artificial Intelligence")} bgClassName='bg-white'/>
      <OtherServicesSection bgClassName='bg-background' currentHref="/capabilities/data-artificial-intelligence" />
      <FAQSection  faqs={ArtificalIntelFaqData} />
      <Suscribe />

@@ -9,6 +9,10 @@ export type Insight = {
   type: string;
   /** Topic tag shown as the badge above the title and as the last breadcrumb crumb (lowercased). */
   topic: string;
+  /** Must match a label from the mega menu's Industries list, used by the insights listing page's industry filter. */
+  industry?: string;
+  /** Must match a label from the mega menu's Capabilities list, used by the insights listing page's capability filter. */
+  capability?: string;
   date: string;
   readTime: string;
   title: string;
@@ -42,6 +46,8 @@ export const insightData = {
       category: "Articles",
       type: "Article",
       topic: "Healthcare",
+      industry: "Healthcare & Life Sciences",
+      capability: "Technology Transfer & Innovation",
       date: "August 03, 2026",
       readTime: "8 Min read",
       title: "Medical Device Innovation in 2025: Redefining the Frontiers of Clinical Technology",
@@ -183,6 +189,8 @@ export const insightData = {
       category: "Articles",
       type: "Article",
       topic: "Agriculture",
+      industry: "Agriculture & Food Systems",
+      capability: "Business Intelligence & Market Research",
       date: "TBD",
       readTime: "5 Min read",
       title: "Emerging Trends and Markets in the Fertilizers & Agri-Chemicals Sector",
@@ -316,6 +324,7 @@ export const insightData = {
       category: "Articles",
       type: "Article",
       topic: "Chemicals",
+      capability: "Business Intelligence & Market Research",
       date: "TBD",
       readTime: "5 Min read",
       title: "Top Emerging Opportunities in the Diversified Chemicals Sector - Q3 2025",
@@ -396,10 +405,12 @@ export const insightData = {
     },
     {
       id: 10,
-      image: "/CaseStudy/insightThought.jpg",
+      image: "/Insights/Agri1.webp",
       category: "Articles",
       type: "Article",
       topic: "Agriculture & Trade Policy",
+      industry: "Agriculture & Food Systems",
+      capability: "Strategy & Policy Advisory",
       date: "TBD",
       readTime: "12 Min read",
       title: "How Tariffs are Reshaping South Asia's Agricultural Value Chain & What Advisory Firms Need to Understand Now",
@@ -573,10 +584,12 @@ export const insightData = {
     },
     {
       id: 11,
-      image: "/CaseStudy/insightThought.jpg",
+      image: "/Insights/Agri2.webp",
       category: "Articles",
       type: "Article",
       topic: "Agriculture & AI",
+      industry: "Agriculture & Food Systems",
+      capability: "Data & Artificial Intelligence",
       date: "TBD",
       readTime: "18 Min read",
       title: "Agentic AI in Agri Value Chains: The Implementation Architecture Emerging Markets Cannot Skip",

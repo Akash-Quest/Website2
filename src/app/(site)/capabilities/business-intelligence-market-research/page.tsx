@@ -5,6 +5,7 @@ import OtherServicesSection from '@/components/features/OtherServices';
 import FAQSection from '@/components/features/Faq';
 import Suscribe from '@/components/features/Suscribe';
 import { insightData } from '@/Constants/Insight ';
+import { getRelatedByTag } from '@/lib/relatedContent';
 import { caseStudiesData } from '@/Constants/caseStudies';
 import StatsGrid from '@/components/ui/Stats4';
 
@@ -78,9 +79,9 @@ export default function SocialImpactService(){
      <IndustriesWeServe2 />
      <FeaturedReport />
      
-     <CaseStudies {...caseStudiesData} />
+     <CaseStudies {...caseStudiesData} caseStudies={getRelatedByTag(caseStudiesData.caseStudies, "capability", "Business Intelligence & Market Research")} />
      <OtherServicesSection bgClassName='bg-white' currentHref="/capabilities/business-intelligence-market-research" />
-     <CaseStudies {...insightData}/>
+     <CaseStudies {...insightData} caseStudies={getRelatedByTag(insightData.caseStudies, "capability", "Business Intelligence & Market Research")}/>
      <FAQSection  faqs={BusinessIntelFaqData} />
      <Suscribe />
      </>)

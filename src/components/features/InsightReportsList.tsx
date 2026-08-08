@@ -11,6 +11,7 @@ import {
 import { ArrowUp } from "iconsax-react";
 import { insightData, type Insight } from "@/Constants/Insight ";
 import { caseStudiesData } from "@/Constants/caseStudies";
+import megaMenu from "@/lib/megaMenu.json";
 
 type ListedInsight = Insight & { href: string };
 
@@ -84,15 +85,26 @@ function InsightCard({ insight }: { insight: ListedInsight }) {
 const PAGE_SIZE = 5;
 
 const CATEGORY_OPTIONS = ["Articles","Case Study"];
-const INDUSTRY_OPTIONS = [
-  "Public sector",
-  "Agriculture",
-  "Healthcare",
-  "Finance",
-  "Manufacturing",
-  "Government"
+
+const industriesMenuItem = (megaMenu as any).groups
+  .flatMap((group: any) => group.items)
+  .find((item: any) => item.id === "industries");
+
+const ALL_INDUSTRIES = "All Industries";
+const INDUSTRY_OPTIONS: string[] = [
+  ALL_INDUSTRIES,
+  ...(industriesMenuItem?.content?.columns?.[0]?.links?.map((link: { label: string }) => link.label) ?? []),
 ];
-const SORT_OPTIONS = ["Latest First", "Oldest First"];
+
+const capabilitiesMenuItem = (megaMenu as any).groups
+  .flatMap((group: any) => group.items)
+  .find((item: any) => item.id === "capabilities");
+
+const ALL_CAPABILITIES = "All Capabilities";
+const CAPABILITY_OPTIONS: string[] = [
+  ALL_CAPABILITIES,
+  ...(capabilitiesMenuItem?.content?.columns?.[0]?.links?.map((link: { label: string }) => link.label) ?? []),
+];
 
 
 
@@ -239,30 +251,32 @@ export default function InsightsResult() {
   const [currentPage, setCurrentPage] = useState(1);
   const [category, setCategory] = useState(CATEGORY_OPTIONS[0]);
   const [industry, setIndustry] = useState(INDUSTRY_OPTIONS[0]);
-  const [sortBy, setSortBy] = useState(SORT_OPTIONS[0]);
+  const [capability, setCapability] = useState(CAPABILITY_OPTIONS[0]);
   const [openFilter, setOpenFilter] = useState<string | null>(null);
   const resultsRef = React.useRef<HTMLDivElement>(null);
 
   const filteredInsights = useMemo(() => {
-    const list =
+    let list =
       category === "All Insights"
         ? [...insights]
         : insights.filter((r) => r.category === category);
 
-    if (sortBy === "Title A-Z") {
-      list.sort((a, b) => a.title.localeCompare(b.title));
-    } else if (sortBy === "Title Z-A") {
-      list.sort((a, b) => b.title.localeCompare(a.title));
-    } else {
-      list.sort((a, b) => {
-        const da = new Date(a.date.replace(/^Insights?\s+/, "")).getTime();
-        const db = new Date(b.date.replace(/^Insights?\s+/, "")).getTime();
-        return sortBy === "Oldest First" ? da - db : db - da;
-      });
+    if (industry !== ALL_INDUSTRIES) {
+      list = list.filter((r) => r.industry === industry);
     }
 
+    if (capability !== ALL_CAPABILITIES) {
+      list = list.filter((r) => r.capability === capability);
+    }
+
+    list.sort((a, b) => {
+      const da = new Date(a.date.replace(/^Insights?\s+/, "")).getTime();
+      const db = new Date(b.date.replace(/^Insights?\s+/, "")).getTime();
+      return db - da;
+    });
+
     return list;
-  }, [category, sortBy]);
+  }, [category, industry, capability]);
 
   const totalPages = Math.ceil(filteredInsights.length / PAGE_SIZE);
 
@@ -292,7 +306,7 @@ export default function InsightsResult() {
   const handleClearAll = () => {
     setCategory(CATEGORY_OPTIONS[0]);
     setIndustry(INDUSTRY_OPTIONS[0]);
-    setSortBy(SORT_OPTIONS[0]);
+    setCapability(CAPABILITY_OPTIONS[0]);
     setCurrentPage(1);
   };
 
@@ -333,12 +347,12 @@ export default function InsightsResult() {
             onToggle={() => setOpenFilter((cur) => (cur === "Industry Filter" ? null : "Industry Filter"))}
           />
           <FilterDropdown
-            label="Sort By"
-            value={sortBy}
-            options={SORT_OPTIONS}
-            onChange={handleFilterChange(setSortBy)}
-            isOpen={openFilter === "Sort By"}
-            onToggle={() => setOpenFilter((cur) => (cur === "Sort By" ? null : "Sort By"))}
+            label="Capabilities Filter"
+            value={capability}
+            options={CAPABILITY_OPTIONS}
+            onChange={handleFilterChange(setCapability)}
+            isOpen={openFilter === "Capabilities Filter"}
+            onToggle={() => setOpenFilter((cur) => (cur === "Capabilities Filter" ? null : "Capabilities Filter"))}
           />
         </div>
 

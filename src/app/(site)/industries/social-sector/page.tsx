@@ -10,6 +10,7 @@ import IndustriesTex from '@/components/features/IndustriesTex';
 import CaseStudies from '@/components/features/HomeCaseStudie';
 import { caseStudiesData } from '@/Constants/caseStudies';
 import { insightData } from '@/Constants/Insight ';
+import { getRelatedByTag } from '@/lib/relatedContent';
 import FAQSection from '@/components/features/Faq';
 import Suscribe from '@/components/features/Suscribe';
 function HeroPage(){
@@ -32,9 +33,9 @@ export default function Agriculturepage(){
      <ServiceCoreCapabilities {...SocialImpactCoreCapabilitiesData} className="pt-16 lg:pt-16 xl:pt-20 2xl:pt-24" />
      <SocialFocus {...SocialImpactFocusAreasData} />
 
-     <CaseStudies {...caseStudiesData} bgClassName="bg-background" />
+     <CaseStudies {...caseStudiesData} caseStudies={getRelatedByTag(caseStudiesData.caseStudies, "industry", "Social Sector")} bgClassName="bg-background" />
      <OtherIndustriesSection bgClassName='bg-white' currentHref="/industries/social-sector" />
-     <CaseStudies {...insightData}bgClassName="bg-background"/>
+     <CaseStudies {...insightData} caseStudies={getRelatedByTag(insightData.caseStudies, "industry", "Social Sector")} bgClassName="bg-background"/>
      <FAQSection  faqs={SocialSectorFaqData} bgClassName="bg-white" />
      <Suscribe bgClassName="bg-background" />
      </>)

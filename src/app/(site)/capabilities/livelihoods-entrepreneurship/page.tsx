@@ -6,6 +6,7 @@ import CaseStudies from '@/components/features/HomeCaseStudie';
 import { caseStudiesData } from '@/Constants/caseStudies';
 import OtherServicesSection from '@/components/features/OtherServices';
 import { insightData } from '@/Constants/Insight ';
+import { getRelatedByTag } from '@/lib/relatedContent';
 import FAQSection from '@/components/features/Faq';
 import Suscribe from '@/components/features/Suscribe';
 import {
@@ -61,9 +62,9 @@ export default function LivelihoodsEntrepreneurshipService(){
      <StatsGridThree />
      <OurCapabilities {...LivelihoodsOurCapabilitiesData} />
      <WhatWeOfferGrid {...LivelihoodsWeOfferData} />
-     <CaseStudies {...caseStudiesData} />
+     <CaseStudies {...caseStudiesData} caseStudies={getRelatedByTag(caseStudiesData.caseStudies, "capability", "Livelihoods & Entrepreneurship")} />
      <OtherServicesSection bgClassName='bg-white' currentHref="/capabilities/livelihoods-entrepreneurship" />
-     <CaseStudies {...insightData}/>
+     <CaseStudies {...insightData} caseStudies={getRelatedByTag(insightData.caseStudies, "capability", "Livelihoods & Entrepreneurship")}/>
      <FAQSection  faqs={LivelihoodsFaqData} />
      <Suscribe />
 

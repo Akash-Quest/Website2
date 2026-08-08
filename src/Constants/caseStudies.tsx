@@ -9,6 +9,10 @@ export type CaseStudy = {
   type: string;
   /** Topic tag shown as the badge above the title and as the last breadcrumb crumb (lowercased). */
   topic: string;
+  /** Must match a label from the mega menu's Industries list, used by the case-studies listing page's industry filter. */
+  industry?: string;
+  /** Must match a label from the mega menu's Capabilities list, used by the case-studies listing page's capability filter. */
+  capability?: string;
   date: string;
   readTime: string;
   title: string;
@@ -44,6 +48,8 @@ export const caseStudiesData = {
       category: "Case Study",
       type: "Case Studies",
       topic: "Agriculture",
+      industry: "Agriculture & Food Systems",
+      capability: "Strategy & Policy Advisory",
       date: "TBD",
       readTime: "5 Min read",
       title: "Advancing Regional Food Systems in South Asia through SAPLING",
@@ -112,6 +118,8 @@ export const caseStudiesData = {
       category: "Case Study",
       type: "Case Studies",
       topic: "Agriculture",
+      industry: "Agriculture & Food Systems",
+      capability: "Inclusive Finance & Institutional Strategy",
       date: "TBD",
       readTime: "5 Min read",
       title: "Using the Private Sector to Develop Climate-Resilient Agri-Supply Chains in India",
@@ -169,6 +177,8 @@ export const caseStudiesData = {
       category: "Case Study",
       type: "Case Studies",
       topic: "Agriculture",
+      industry: "Livestock, Fisheries & Animal Health",
+      capability: "Technology Transfer & Innovation",
       date: "TBD",
       readTime: "5 Min read",
       title: "Landscaping of Livestock Technologies from Public and Private Sector Institutions in India",
@@ -226,6 +236,8 @@ export const caseStudiesData = {
       category: "Case Study",
       type: "Case Studies",
       topic: "Agriculture & Livestock",
+      industry: "Livestock, Fisheries & Animal Health",
+      capability: "Digital Transformation & Emerging Technologies",
       date: "April 27, 2026",
       readTime: "5 Min read",
       title: "Unlocking Livestock Innovation to Transform Smallholder Farming in India",
@@ -282,6 +294,8 @@ export const caseStudiesData = {
       category: "Case Study",
       type: "Case Studies",
       topic: "Urban Mobility",
+      industry: "Public Sector & Digital Governance",
+      capability: "Data & Artificial Intelligence",
       date: "March 12, 2026",
       readTime: "5 Min read",
       title: "Reimagining Urban Mobility Through Real-Time Crowd Intelligence",
@@ -338,6 +352,8 @@ export const caseStudiesData = {
       category: "Case Study",
       type: "Case Studies",
       topic: "Financial Inclusion",
+      industry: "Financial Services & Inclusive Finance",
+      capability: "Inclusive Finance & Institutional Strategy",
       date: "February 3, 2026",
       readTime: "6 Min read",
       title: "Powering Inclusive Finance with Embedded Digital Wallets",
@@ -394,6 +410,8 @@ export const caseStudiesData = {
       category: "Case Study",
       type: "Case Studies",
       topic: "Agriculture & Livestock",
+      industry: "Agriculture & Food Systems",
+      capability: "Data & Artificial Intelligence",
       date: "January 21, 2026",
       readTime: "5 Min read",
       title: "Scaling Precision Agriculture Across Three States",
@@ -450,6 +468,8 @@ export const caseStudiesData = {
       category: "Case Study",
       type: "Case Studies",
       topic: "Public Safety",
+      industry: "Public Sector & Digital Governance",
+      capability: "Data & Artificial Intelligence",
       date: "December 9, 2025",
       readTime: "5 Min read",
       title: "Designing Safer Streets with Predictive Foot-Traffic Modeling",
@@ -506,6 +526,8 @@ export const caseStudiesData = {
       category: "Case Study",
       type: "Case Studies",
       topic: "Treasury & Finance",
+      industry: "Consumer Goods & Retail",
+      capability: "Digital Transformation & Emerging Technologies",
       date: "November 17, 2025",
       readTime: "6 Min read",
       title: "Modernizing Treasury Operations for a Multinational Retailer",
