@@ -26,6 +26,8 @@ export type Insight = {
   subtitleEmphasis?: string;
   /** Author name shown on the detail page; falls back to the default SkyQuest author when omitted. */
   author?: string;
+  /** Author photo shown next to the name; falls back to initials when omitted. */
+  authorImage?: string;
   body: ContentBlock[];
 };
 
@@ -415,6 +417,7 @@ export const insightData = {
       industry: "Agriculture & Food Systems",
       capability: "Strategy & Policy Advisory",
       author: "Chinmaya",
+      authorImage: "/Insights/Chinamay.png",
       date: "TBD",
       readTime: "12 Min read",
       title: "How Tariffs are Reshaping South Asia's Agricultural Value Chain & What Advisory Firms Need to Understand Now",

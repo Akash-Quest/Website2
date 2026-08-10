@@ -320,19 +320,29 @@ export default async function InsightDetailsPage({
 
               <div className="flex flex-col gap-3 rounded-lg bg-white p-2 sm:p-2 2xl:p-4">
                 {(insight.author
-                  ? [{ name: insight.author, org: insight.author }]
+                  ? [{ name: insight.author, org: insight.author, image: insight.authorImage }]
                   : DEFAULT_AUTHORS
                 ).map((author) => (
                   <div key={author.name} className="flex items-center gap-3">
-                    <span className="w-9 shrink-0 select-none bg-gradient-to-r from-primary to-[#7C3AED] bg-clip-text text-xl font-extrabold italic leading-none text-transparent">
-                      {author.org
-                        .split(" ")
-                        .filter(Boolean)
-                        .slice(0, 2)
-                        .map((word) => word[0])
-                        .join("")
-                        .toUpperCase()}
-                    </span>
+                    {"image" in author && author.image ? (
+                      <Image
+                        src={author.image}
+                        alt={author.name}
+                        width={36}
+                        height={36}
+                        className="h-9 w-9 shrink-0 rounded-full object-cover"
+                      />
+                    ) : (
+                      <span className="w-9 shrink-0 select-none bg-gradient-to-r from-primary to-[#7C3AED] bg-clip-text text-xl font-extrabold italic leading-none text-transparent">
+                        {author.org
+                          .split(" ")
+                          .filter(Boolean)
+                          .slice(0, 2)
+                          .map((word) => word[0])
+                          .join("")
+                          .toUpperCase()}
+                      </span>
+                    )}
                     <span className="text-xs 2xl:text-sm  font-semibold text-gray-900">{author.org}</span>
                   </div>
                 ))}
