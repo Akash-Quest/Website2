@@ -330,7 +330,7 @@ export default async function InsightDetailsPage({
                         alt={author.name}
                         width={36}
                         height={36}
-                        className="h-9 w-9 shrink-0 rounded-full object-cover"
+                        className="h-10 w-10 shrink-0 rounded-full object-cover"
                       />
                     ) : (
                       <span className="w-9 shrink-0 select-none bg-gradient-to-r from-primary to-[#7C3AED] bg-clip-text text-xl font-extrabold italic leading-none text-transparent">
@@ -343,7 +343,7 @@ export default async function InsightDetailsPage({
                           .toUpperCase()}
                       </span>
                     )}
-                    <span className="text-xs 2xl:text-sm  font-semibold text-gray-900">{author.org}</span>
+                    <span className="text-body-lg 2xl:text-sm  font-semibold text-gray-900">{author.org}</span>
                   </div>
                 ))}
               </div>
