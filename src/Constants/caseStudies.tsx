@@ -1,4 +1,5 @@
 import type { ContentBlock } from "@/lib/reports";
+import { slugify } from "@/lib/slug";
 
 export type CaseStudy = {
   id: number;
@@ -581,6 +582,6 @@ export const caseStudiesData = {
   ] as CaseStudy[],
 };
 
-export function getCaseStudyById(id: number): CaseStudy | undefined {
-  return caseStudiesData.caseStudies.find((study) => study.id === id);
+export function getCaseStudyBySlug(slug: string): CaseStudy | undefined {
+  return caseStudiesData.caseStudies.find((study) => slugify(study.title) === slug);
 }

@@ -1,4 +1,5 @@
 import type { ContentBlock } from "@/lib/reports";
+import { slugify } from "@/lib/slug";
 
 export type Insight = {
   id: number;
@@ -932,6 +933,6 @@ export const insightData = {
   ] as Insight[],
 };
 
-export function getInsightById(id: number): Insight | undefined {
-  return insightData.caseStudies.find((insight) => insight.id === id);
+export function getInsightBySlug(slug: string): Insight | undefined {
+  return insightData.caseStudies.find((insight) => slugify(insight.title) === slug);
 }

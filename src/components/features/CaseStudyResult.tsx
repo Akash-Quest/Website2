@@ -12,12 +12,13 @@
   import { insightData } from "@/Constants/Insight ";
   import Reveal from "@/components/ui/Reveal";
   import megaMenu from "@/lib/megaMenu.json";
+  import { slugify } from "@/lib/slug";
 
   type ListedStudy = CaseStudy & { href: string };
 
   const ALL_STUDIES: ListedStudy[] = [
-    ...caseStudiesData.caseStudies.map((s) => ({ ...s, href: `/case-studies/${s.id}` })),
-    ...insightData.caseStudies.map((s) => ({ ...s, href: `/insight/${s.id}` })),
+    ...caseStudiesData.caseStudies.map((s) => ({ ...s, href: `/case-studies/${slugify(s.title)}` })),
+    ...insightData.caseStudies.map((s) => ({ ...s, href: `/insight/${slugify(s.title)}` })),
   ];
 
   function StudyCard({ study }: { study: ListedStudy }) {

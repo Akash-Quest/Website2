@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ContentBlock } from "@/lib/reports";
-import { getInsightById, insightData } from "@/Constants/Insight ";
+import { getInsightBySlug, insightData } from "@/Constants/Insight ";
+import { slugify } from "@/lib/slug";
 import { FacebookIcon, LinkedInIcon, XIcon } from "@/components/icons/SocialIcons";
 import { ArchiveTick, ExportSquare, Import, Link2, Sms, Printer } from "iconsax-react";
 import CaseStudies from "@/components/features/HomeCaseStudie";
@@ -13,7 +14,7 @@ const DEFAULT_AUTHORS = [
 ];
 
 export function generateStaticParams() {
-  return insightData.caseStudies.map((insight) => ({ id: String(insight.id) }));
+  return insightData.caseStudies.map((insight) => ({ slug: slugify(insight.title) }));
 }
 
 function EmphasizedText({ text, emphasis }: { text: string; emphasis?: string }) {
@@ -181,10 +182,10 @@ const SOCIAL_LINKS = [
 export default async function InsightDetailsPage({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const { id } = await params;
-  const insight = getInsightById(Number(id));
+  const { slug } = await params;
+  const insight = getInsightBySlug(slug);
 
   if (!insight) {
     notFound();

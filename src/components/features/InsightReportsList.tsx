@@ -12,12 +12,13 @@ import { ArrowUp } from "iconsax-react";
 import { insightData, type Insight } from "@/Constants/Insight ";
 import { caseStudiesData } from "@/Constants/caseStudies";
 import megaMenu from "@/lib/megaMenu.json";
+import { slugify } from "@/lib/slug";
 
 type ListedInsight = Insight & { href: string };
 
 const insights: ListedInsight[] = [
-  ...insightData.caseStudies.map((s) => ({ ...s, href: `/insight/${s.id}` })),
-  ...caseStudiesData.caseStudies.map((s) => ({ ...s, href: `/case-studies/${s.id}` })),
+  ...insightData.caseStudies.map((s) => ({ ...s, href: `/insight/${slugify(s.title)}` })),
+  ...caseStudiesData.caseStudies.map((s) => ({ ...s, href: `/case-studies/${slugify(s.title)}` })),
 ];
 
 function InsightCard({ insight }: { insight: ListedInsight }) {

@@ -3,14 +3,15 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import type { ContentBlock } from "@/lib/reports";
-import { caseStudiesData, getCaseStudyById } from "@/Constants/caseStudies";
+import { caseStudiesData, getCaseStudyBySlug } from "@/Constants/caseStudies";
+import { slugify } from "@/lib/slug";
 import { FacebookIcon, LinkedInIcon, XIcon } from "@/components/icons/SocialIcons";
 import CaseStudyForm from "@/components/features/CaseStudyForm";
 import Suscribe from "@/components/features/Suscribe";
 import CaseStudies from "@/components/features/HomeCaseStudie";
 
 export function generateStaticParams() {
-  return caseStudiesData.caseStudies.map((study) => ({ id: String(study.id) }));
+  return caseStudiesData.caseStudies.map((study) => ({ slug: slugify(study.title) }));
 }
 
 function EmphasizedText({ text, emphasis }: { text: string; emphasis?: string }) {
@@ -163,10 +164,10 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
 export default async function CaseStudyDetailsPage({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const { id } = await params;
-  const study = getCaseStudyById(Number(id));
+  const { slug } = await params;
+  const study = getCaseStudyBySlug(slug);
 
   if (!study) {
     notFound();

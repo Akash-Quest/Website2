@@ -12,6 +12,7 @@ import {
 import { ArrowUp } from "iconsax-react";
 import Button from "../ui/Button";
 import { fadeUp, staggerContainer } from "@/lib/animations";
+import { slugify } from "@/lib/slug";
 
 interface CaseStudy {
   id: number;
@@ -200,7 +201,7 @@ export default function CaseStudies({
                       <h3 className="mt-2 font-semibold text-body-xl">{card.title}</h3>
 
                       <Link
-                        href={`${viewAllHref}/${card.id}`}
+                        href={`${viewAllHref}/${slugify(card.title)}`}
                         aria-label={`${readMoreButton}: ${card.title}`}
                         className="group/learn mt-3 inline-flex items-center text-sm 2xl:text-lg font-semibold text-primary cursor-pointer"
                       >
@@ -248,7 +249,7 @@ export default function CaseStudies({
                   <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
 
                   <Link
-                    href={`${viewAllHref}/${card.id}`}
+                    href={`${viewAllHref}/${slugify(card.title)}`}
                     aria-label={`${readMoreButton}: ${card.title}`}
                     tabIndex={isExpanded ? 0 : -1}
                     className={`absolute inset-x-0 bottom-0 z-10 flex flex-col overflow-hidden rounded-2xl bg-white/55 backdrop-blur-lg backdrop-brightness-125 border-none text-[#15121F] transition-all duration-[250ms] ease-out [clip-path:inset(-1px_round_1rem)] ${
