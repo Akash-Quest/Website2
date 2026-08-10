@@ -52,7 +52,7 @@
                 <span>{study.date}</span>
               </div>
 
-              <h3 className="mt-2 mb-3 sm:truncate font-semibold text-gray-900">
+              <h3 className="mt-2 mb-3 sm:truncate font-semibold text-gray-900 text-body-xl">
                 {study.title}
               </h3>
 

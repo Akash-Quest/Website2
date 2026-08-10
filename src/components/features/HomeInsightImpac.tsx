@@ -85,7 +85,7 @@ const TransformAccordion: React.FC<TransformAccordionProps> = ({
         </div>
 
         {/* Cards (mobile) - stacked, expands vertically */}
-        <div className="flex flex-col gap-3 lg:hidden">
+        <div className="flex flex-col lg:hidden">
           {cards.map((card, index) => {
             const isActive = index === activeIndex;
 
@@ -94,23 +94,25 @@ const TransformAccordion: React.FC<TransformAccordionProps> = ({
                 key={card.title}
                 type="button"
                 onClick={() => setActiveIndex(index)}
-                className={`flex flex-col justify-start overflow-hidden rounded-[18px] border border-white/20 px-6 py-6 text-left backdrop-blur-[10px] transition-colors duration-300 cursor-pointer ${
-                  isActive ? "bg-[var(--primary)]" : "bg-white/10"
-                }`}
+                style={{ zIndex: isActive ? cards.length + 1 : cards.length - index }}
+                className={`relative flex flex-col justify-start overflow-hidden rounded-[18px] border border-white/20 px-6 py-6 text-left backdrop-blur-[10px] transition-colors duration-300 cursor-pointer ${
+                  index !== 0 ? "-mt-5" : ""
+                } ${isActive ? "bg-[var(--primary)]" : "bg-[#0B1220]"}`}
               >
                 <div className="flex items-center justify-between gap-4">
-                  <h3 className="text-body-xl leading-[1.3] tracking-[-0.02em] text-white">
-                    {card.title}
-                  </h3>
-                  <span
-                    className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white text-primary transition-transform duration-300 ${
-                      isActive ? "rotate-45" : ""
+                  <h3
+                    className={`text-body-xl leading-[1.3] tracking-[-0.02em] text-white 
                     }`}
                   >
-                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                      <path d="M8 2v12M2 8h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                    </svg>
-                  </span>
+                    {card.title}
+                  </h3>
+                  {!isActive && (
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white text-primary">
+                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M8 2v12M2 8h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                      </svg>
+                    </span>
+                  )}
                 </div>
 
                 <div
@@ -119,6 +121,12 @@ const TransformAccordion: React.FC<TransformAccordionProps> = ({
                 >
                   <div className="overflow-hidden">
                     <p className="mt-4 text-white/90 text-body-lg">{card.body}</p>
+                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-white">
+                      Find out more
+                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M4 8h8M8 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
                   </div>
                 </div>
               </button>

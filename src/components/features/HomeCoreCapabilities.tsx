@@ -124,14 +124,14 @@ export default function CoreCapabilities() {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="relative rounded-3xl overflow-hidden  backdrop-blur-md"
+            className="relative rounded-3xl overflow-hidden"
             style={{ height: 480 }}
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
           >
             {/* Image */}
             <motion.div
-              className="relative h-[55%] w-full"
+              className="absolute inset-0 h-full w-full"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -147,7 +147,7 @@ export default function CoreCapabilities() {
             </motion.div>
 
             {/* Content */}
-            <div className="h-[45%] p-5 flex flex-col justify-between   rounded-3xl">
+            <div className="absolute inset-x-0 bottom-0 p-5 flex flex-col justify-between rounded-3xl bg-white/70">
               <div>
                 <h3 className="font-bold text-gray-900 ">
                   {mobileCardList[currentIndex][1].title}

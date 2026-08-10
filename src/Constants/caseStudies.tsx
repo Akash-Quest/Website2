@@ -32,7 +32,7 @@ export const caseStudiesData = {
   heading: (
     <>
       Impact Stories That Speak for{" "}
-      <br />
+      
       <em className="font-semibold">Themselves</em>
     </>
   ),

@@ -91,7 +91,7 @@ const tabContent: Record<
     badge: "Article 6 · NDC 3.0 · COP32 · Ethiopia Live",
     heading: (
       <>
-       Sovereign Climate Finance Infrastructure {" "}
+       Sovereign Climate Finance  {" "}
        <em>Platform</em>
       </>
     ),
@@ -105,7 +105,7 @@ const tabContent: Record<
     badge: "WhatsApp-Native · No App Download · Live",
     heading: (
       <>
-        Digital Healthcare{" "} <em> Innovation</em>
+        Government, Delivered  Through {" "} <em> A Message</em>
       </>
     ),
     description:

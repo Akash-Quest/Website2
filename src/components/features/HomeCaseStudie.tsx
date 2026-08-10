@@ -107,8 +107,8 @@ export default function CaseStudies({
           viewport={{ once: true, amount: 0.2 }}
         >
           {/* Header */}
-          <div className=" flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
-            <motion.div variants={fadeUp}>
+          <div className="mb-5 grid grid-cols-1 gap-4 lg:grid-cols-2 lg:items-start lg:gap-x-4 lg:gap-y-2">
+            <motion.div variants={fadeUp} className="order-1">
               <p className=" text-primary font-medium text-body-sm">
                 {eyebrow}
               </p>
@@ -118,20 +118,17 @@ export default function CaseStudies({
               </h2>
             </motion.div>
 
-            <motion.div variants={fadeUp}>
+            <motion.div variants={fadeUp} className="order-3 lg:order-2 lg:justify-self-end">
               <Button href={viewAllHref} variant="primary" iconSize={16}>
                         {viewAllButton}
                       </Button>
             </motion.div>
-          </div>
 
-          {/* Description + Arrows */}
-          <div className="mb-5  flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-            <motion.p variants={fadeUp} className="text-muted  max-w-xl ">
+            <motion.p variants={fadeUp} className="order-2 lg:order-3 text-muted max-w-xl">
               {description}
             </motion.p>
 
-            <motion.div variants={fadeUp} className="flex justify-start gap-2 sm:justify-end">
+            <motion.div variants={fadeUp} className="order-4 flex justify-start gap-2 lg:justify-self-end">
               <button
                 type="button"
                 onClick={goPrev}
