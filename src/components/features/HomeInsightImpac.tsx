@@ -98,13 +98,13 @@ const TransformAccordion: React.FC<TransformAccordionProps> = ({
                 type="button"
                 onClick={() => setActiveIndex(index)}
                 style={{
-                  zIndex: isActive ? cards.length + 1 : cards.length - index,
+                  zIndex: cards.length - index,
                   borderColor:
                     index !== 0
                       ? "rgba(255,255,255,0) rgba(255,255,255,0.1) rgba(255,255,255,0.1) rgba(255,255,255,0.1)"
                       : "rgba(255,255,255,0.1)",
                 }}
-                className={`relative flex flex-col justify-start overflow-hidden rounded-[18px] border px-6 py-6 text-left transition-all duration-300 cursor-pointer ${
+                className={` relative flex flex-col justify-start overflow-hidden rounded-[18px] border px-6 py-6 text-left transition-all duration-300 cursor-pointer ${
                   index !== 0 ? "-mt-5" : ""
                 }`}
               >
@@ -120,7 +120,7 @@ const TransformAccordion: React.FC<TransformAccordionProps> = ({
                   }`}
                 />
 
-                <div className="relative flex items-center justify-between gap-4">
+                <div className="relative flex items-center justify-between gap-4 ">
                   <h3 className="text-body-xl leading-[1.3] tracking-[-0.02em] text-white">
                     {card.title}
                   </h3>
