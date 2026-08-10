@@ -50,7 +50,7 @@ export default function Suscribe({
           {/* Input + Button */}
           <motion.div
             variants={fadeUp}
-            className={`flex flex-row items-center rounded-none md:rounded-lg overflow-hidden bg-white/20`}
+            className={`flex flex-row items-center  rounded-lg overflow-hidden bg-white/20`}
           >
             <input
               type="email"

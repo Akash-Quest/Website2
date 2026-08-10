@@ -138,7 +138,7 @@ export default function FAQSection({
         <div className={`lg:hidden ${cardBgClassName} border border-gray-200 rounded-2xl p-6`}>
           <h3 className="font-normal text-gray-900 mb-2 text-body-2xl">{ctaHeading}</h3>
           <p className="text-sm text-muted mb-5">{ctaDescription}</p>
-          <Link href="/contact" className="inline-flex w-fit items-center justify-center gap-2 rounded-lg bg-[#1D1EE3] pl-3 py-2 pr-1 text-sm text-white transition-colors hover:bg-[#231598] leading-none">
+          <Link href="/contact" className="inline-flex w-fit items-center justify-center gap-2 rounded-lg bg-[#1D1EE3] pl-3 py-2 pr-2 text-sm text-white transition-colors hover:bg-[#231598] leading-none">
             {ctaButtonText}
             <span className="flex h-6 w-6 items-center justify-center rounded-md border border-white/40 bg-white text-black">
               <ArrowUp color="currentColor" variant="Linear" className="h-3.5 w-3.5 rotate-45 [&>path]:stroke-2" />

@@ -236,7 +236,7 @@ export default function CoreCapabilities() {
 </div>
 
           {/* Agriculture */}
-          <motion.div variants={scaleFade} className="mt-2 xl:mt-4">
+          <motion.div variants={scaleFade} className="mt-2 xl:mt-4 w-[calc(100%+30px)] -ml-[20px]" >
             <HoverRevealCard
               {...cards.agriculture}
               className="h-[clamp(11.63rem,15.8vw,18.76rem)]"

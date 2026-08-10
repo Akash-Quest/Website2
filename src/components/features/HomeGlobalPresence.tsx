@@ -103,7 +103,7 @@ export default function OurGlobalPresence() {
                     className="h-5 w-5 flex-shrink-0"
                     aria-hidden="true"
                   />
-                  <h3 className=" font-bold text-gray-900">{region.name}</h3>
+                  <h3 className=" font-bold text-gray-900 text-body-lg">{region.name}</h3>
                 </div>
                 <p className="pl-6  text-muted">
                   {region.description}
