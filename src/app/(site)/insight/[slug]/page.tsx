@@ -319,10 +319,19 @@ export default async function InsightDetailsPage({
               </div>
 
               <div className="flex flex-col gap-3 rounded-lg bg-white p-2 sm:p-2 2xl:p-4">
-                {DEFAULT_AUTHORS.map((author) => (
+                {(insight.author
+                  ? [{ name: insight.author, org: insight.author }]
+                  : DEFAULT_AUTHORS
+                ).map((author) => (
                   <div key={author.name} className="flex items-center gap-3">
                     <span className="w-9 shrink-0 select-none bg-gradient-to-r from-primary to-[#7C3AED] bg-clip-text text-xl font-extrabold italic leading-none text-transparent">
-                      SQ
+                      {author.org
+                        .split(" ")
+                        .filter(Boolean)
+                        .slice(0, 2)
+                        .map((word) => word[0])
+                        .join("")
+                        .toUpperCase()}
                     </span>
                     <span className="text-xs 2xl:text-sm  font-semibold text-gray-900">{author.org}</span>
                   </div>
