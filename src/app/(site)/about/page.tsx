@@ -14,13 +14,14 @@ import { caseStudiesData } from "@/Constants/caseStudies";
 import {insightData} from "@/Constants/Insight ";
 import Image from "next/image";
 import Link from "next/link";
+import AboutUs from "@/components/features/AboutUs";
 
 export default function AboutUsPage() {
   return (
     <>
-      <section className="bg-background">
+      {/* <section className="bg-background">
         <div className="hero-container">
-          {/* Breadcrumb */}
+          {/* Breadcrumb *
           <nav aria-label="Breadcrumb" className="pb-2 px-4 lg:px-0">
             <ol className="breadcrumb flex flex-wrap items-center gap-2 text-gray-400 font-light tracking-wide">
               <li>
@@ -40,10 +41,10 @@ export default function AboutUsPage() {
           <div className="px-2 sm:px-2 md:px-[10%]">
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Hero Component Render Area */}
-      <AboutUsHero /> 
+      <AboutUs /> 
       <StatsGrid
         sectionPadding="py-12 lg:py-20"
         stats={[
