@@ -28,7 +28,7 @@ export default function AboutUs() {
         variants={imageReveal}
         initial="hidden"
         animate="visible"
-        className="relative w-full aspect-[3/3.5] md:aspect-[3/1.1] 2xl:aspect-[3/1.1] overflow-hidden"
+        className="relative w-full aspect-[3/3.5] md:aspect-[3/1] 2xl:aspect-[3/0.9] overflow-hidden"
       >
         <Image
           src="/AboutUs/AboutUsHero.jpg"
