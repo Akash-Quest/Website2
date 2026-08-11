@@ -8,6 +8,7 @@ import { FacebookIcon, LinkedInIcon, XIcon } from "@/components/icons/SocialIcon
 import { ArchiveTick, ExportSquare, Import, Link2, Sms, Printer } from "iconsax-react";
 import CaseStudies from "@/components/features/HomeCaseStudie";
 import Suscribe from "@/components/features/Suscribe";
+import InsightShareMenu from "@/components/features/InsightShareMenu";
 
 const DEFAULT_AUTHORS = [
   { name: "SkyQuest Technology Consulting", org: "SkyQuest Technology Consulting" },
@@ -173,12 +174,6 @@ const PAGE_ACTIONS = [
   { label: "Share", icon: ExportSquare },
 ];
 
-const SOCIAL_LINKS = [
-  { label: "LinkedIn", icon: <LinkedInIcon />, bg: "bg-[#0A66C2]" },
-  { label: "X", icon: <XIcon />, bg: "bg-black" },
-  { label: "Facebook", icon: <FacebookIcon />, bg: "bg-[#1877F2]" },
-];
-
 export default async function InsightDetailsPage({
   params,
 }: {
@@ -237,35 +232,7 @@ export default async function InsightDetailsPage({
             <div className="flex items-center ">
               {PAGE_ACTIONS.map(({ label, icon: Icon }) =>
                 label === "Share" ? (
-                  <div key={label} className="group relative">
-                    <button
-                      type="button"
-                      className="flex flex-col items-center gap-1 px-3 text-gray-800 transition-colors hover:text-primary"
-                    >
-                      <Icon className="h-5 w-5" color="currentcolor" variant="Linear" />
-                      <span className="text-[11px]">{label}</span>
-                    </button>
-                    <div className="absolute bottom-full right-0 z-20 hidden pb-3 group-hover:block">
-                      <div className="relative flex flex-col gap-2 rounded-sm border border-gray-800 bg-white p-2 shadow-lg">
-                        {SOCIAL_LINKS.map((social) => (
-                          <a
-                            key={social.label}
-                            href="#"
-                            aria-label={`Share on ${social.label}`}
-                            className="flex items-center gap-3 text-sm text-gray-800 transition-colors hover:text-primary"
-                          >
-                            <span
-                              className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-white ${social.bg}`}
-                            >
-                              {social.icon}
-                            </span>
-                            {social.label}
-                          </a>
-                        ))}
-                        <span className="absolute -bottom-2 right-4 h-4 w-4 rotate-45 border-b border-r border-gray-200 bg-white" />
-                      </div>
-                    </div>
-                  </div>
+                  <InsightShareMenu key={label} />
                 ) : (
                   <button
                     key={label}

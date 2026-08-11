@@ -39,8 +39,8 @@ export default function AboutUs() {
         />
 
         <div className="absolute inset-0 z-10 flex items-center">
-          <div className="hero-container ">
-            <div className="max-w-[52%]">
+          <div className="page-container ">
+            <div className="max-w-[52%] ">
               {/* Eyebrow */}
               <motion.p
                 custom={0}
