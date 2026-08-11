@@ -104,7 +104,7 @@ const TransformAccordion: React.FC<TransformAccordionProps> = ({
                       ? "rgba(255,255,255,0) rgba(255,255,255,0.1) rgba(255,255,255,0.1) rgba(255,255,255,0.1)"
                       : "rgba(255,255,255,0.1)",
                 }}
-                className={` relative flex flex-col justify-start overflow-hidden rounded-[18px] border px-6 py-6 text-left transition-all duration-300 cursor-pointer ${
+                className={` relative flex min-h-[130px] flex-col justify-start overflow-hidden rounded-[18px] border px-6 py-6 text-left transition-all duration-300 cursor-pointer ${
                   index !== 0 ? "-mt-5" : ""
                 }`}
               >

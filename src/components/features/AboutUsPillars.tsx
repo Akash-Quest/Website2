@@ -77,8 +77,8 @@ export default function AboutUsPillars() {
               Who we are
             </span>
             <h2 className=" font-semibold ">
-              An Integrated Firm Built For The{' '}
-              <em className="font-semibold">Next Era Of Consulting</em>
+              An Integrated Firm Built For The Next Era of AI-Led{' '}
+              <em className="font-semibold"> Solutioneering & Transformation</em>
             </h2>
           </div>
 
