@@ -1,6 +1,6 @@
 'use client';
 
-import AboutUsHero from "@/components/features/AboutUsHero";
+
 import AboutUsPillars from "@/components/features/AboutUsPillars"; 
 import AboutUsPractices from "@/components/features/AboutUsPractices";
 import AboutUsHowWeWork from "@/components/features/AboutUsHowWeWork"; 
