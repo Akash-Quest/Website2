@@ -228,10 +228,13 @@ export default function MarketIntelligence() {
                   <p className="mt-2 text-neutral-500 leading-tight ">
                     {slide.description}
                   </p>
-                  <button className="mt-3 flex items-center gap-1  font-medium text-indigo-700 lg:hidden">
+                  <a
+                    href="https://www.skyquestt.com/report"
+                    className="mt-3 flex items-center gap-1  font-medium text-indigo-700 lg:hidden"
+                  >
                     {current.ctaLabel}
                     <ArrowUp color="currentColor" variant="Linear" className="h-3.5 w-3.5 rotate-45 [&>path]:stroke-2" />
-                  </button>
+                  </a>
                 </div>
 
                 {/* Pagination dots */}
@@ -274,10 +277,13 @@ export default function MarketIntelligence() {
                   <p className="mt-2  text-neutral-500 tracking-wide leading-snug">
                     {current.description}
                   </p>
-                  <button className="mt-3 flex items-center gap-1 font-medium text-indigo-700">
+                  <a
+                    href="https://www.skyquestt.com/report"
+                    className="mt-3 flex items-center gap-1 font-medium text-indigo-700"
+                  >
                     {current.ctaLabel}
                     <ArrowUp color="currentColor" variant="Linear" className="h-3.5 w-3.5 rotate-45 [&>path]:stroke-2" />
-                  </button>
+                  </a>
                 </div>
               </div>
             )}
@@ -298,7 +304,7 @@ export default function MarketIntelligence() {
             <p className=" mb-4 text-muted  max-w-md">
               {current.description}
             </p>
-             <Button variant="primary" iconSize={16}>
+             <Button href="https://www.skyquestt.com/report" variant="primary" iconSize={16}>
                     {current.ctaLabel}
                   </Button>
           </motion.div>
