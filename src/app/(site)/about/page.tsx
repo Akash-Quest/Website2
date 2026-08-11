@@ -19,31 +19,7 @@ import AboutUs from "@/components/features/AboutUs";
 export default function AboutUsPage() {
   return (
     <>
-      {/* <section className="bg-background">
-        <div className="hero-container">
-          {/* Breadcrumb *
-          <nav aria-label="Breadcrumb" className="pb-2 px-4 lg:px-0">
-            <ol className="breadcrumb flex flex-wrap items-center gap-2 text-gray-400 font-light tracking-wide">
-              <li>
-                <Link href="/" className="hover:text-muted transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li className="text-gray-300">/</li>
-              <li>
-                <Link href="/what-we-do" className="hover:text-muted transition-colors">
-                  About SkyQuest
-                </Link>
-              </li>
-            </ol>
-          </nav>
-          
-          <div className="px-2 sm:px-2 md:px-[10%]">
-          </div>
-        </div>
-      </section> */}
-
-      {/* Hero Component Render Area */}
+      
       <AboutUs /> 
       <StatsGrid
         sectionPadding="py-12 lg:py-20"
