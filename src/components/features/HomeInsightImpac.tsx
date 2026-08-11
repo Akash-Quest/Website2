@@ -64,7 +64,7 @@ const TransformAccordion: React.FC<TransformAccordionProps> = ({
             <p className="text-body-sm font-medium text-white">{eyebrow}</p>
             <h2 className="pb-4 font-semibold text-white">{heading}</h2>
             <p className="pb-5 font-medium text-white">{description}</p>
-            <Button variant="primary" iconSize={16}>
+            <Button href="/contact" variant="primary" iconSize={16}>
               {buttonLabel}
             </Button>
           </div>
@@ -76,7 +76,7 @@ const TransformAccordion: React.FC<TransformAccordionProps> = ({
 
               <h2 className="pb-5 font-semibold text-white">{heading}</h2>
 
-              <Button variant="primary" iconSize={16}>
+              <Button href="/contact" variant="primary" iconSize={16}>
                 {buttonLabel}
               </Button>
             </div>

@@ -1,22 +1,21 @@
-import { Bank, Building, CardTick, FlashCircle, HashtagSquare, HeartAdd, People, Shop, Teacher, TruckFast,Buildings2, Wind } from "iconsax-react";
+import { Bank, Buildings2, CloudSunny, Cpu, Drop, FlashCircle, Health, HeartAdd, People, Shop, Wind } from "iconsax-react";
 import Reveal from "@/components/ui/Reveal";
 
 
 
 
 const industries = [
-  { icon: CardTick, label: "BFSI" },
-  { icon: Building, label: "Manufacturing & Industry" },
+  { icon: Wind, label: "Agriculture & Food Systems" },
+  { icon: Health, label: "Livestock, Fisheries & Animal Health" },
   { icon: HeartAdd, label: "Healthcare & Life Sciences" },
-  { icon: Shop, label: "Retail & E-Commerce" },
-  { icon: Buildings2, label: "Real Estate & Infrastructure" },
-  { icon: TruckFast, label: "Logistics & Supply Chain" },
+  { icon: Cpu, label: "AI & Digital Economy" },
+  { icon: CloudSunny, label: "Climate & Environment" },
   { icon: FlashCircle, label: "Energy & Utilities" },
-  { icon: Teacher, label: "Education & EdTech" },
-  { icon: Bank, label: "Government" },
-  { icon: People, label: "Public Sector" },
-  { icon: Wind, label: "Agriculture" },
-  { icon: HashtagSquare, label: "AgroTech" },
+  { icon: Drop, label: "Water & Sanitation" },
+  { icon: Bank, label: "Financial Services & Inclusive Finance" },
+  { icon: Buildings2, label: "Public Sector & Digital Governance" },
+  { icon: People, label: "Social Sector" },
+  { icon: Shop, label: "Consumer Goods & Retail" },
 ];
 
 export default function WeServe() {

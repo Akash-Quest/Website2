@@ -1,5 +1,5 @@
 
-import { Convert3DCube, Note, Pet, Wind } from "iconsax-react";
+import { Chart, CloudSunny, Reserve, TrendUp } from "iconsax-react";
 
 export const ClimateEnvironmentOverviewData = {
   eyebrow: "Overview",
@@ -38,25 +38,25 @@ export const ClimateEnvironmentWhatWeOfferData = {
     "Helping organizations plan, implement, finance, and scale climate resilience and environmental sustainability initiatives.",
   items: [
     {
-      icon: Wind,
+      icon: Chart,
       title: "Measure Climate Readiness",
       description:
         "Assess climate risks, emissions, environmental challenges, regulatory requirements, and organizational readiness to establish priorities for action.",
     },
     {
-      icon: Pet,
+      icon: TrendUp,
       title: "Build Resilient Strategies",
       description:
         "Develop climate action plans, decarbonization roadmaps, ESG strategies, adaptation frameworks, and sustainability policies aligned with long-term goals.",
     },
     {
-      icon: Convert3DCube,
+      icon: CloudSunny,
       title: "Activate Climate Solutions",
       description:
         "Implement digital platforms, carbon management systems, nature-based solutions, climate programs, and integrated sustainability initiatives.",
     },
     {
-      icon: Note,
+      icon: Reserve,
       title: "Accelerate Sustainable Impact",
       description:
         "Mobilize climate finance, strengthen partnerships, measure outcomes, and scale initiatives that deliver lasting environmental and social value.",

@@ -1,5 +1,5 @@
 
-import { Convert3DCube, Note, Pet, Wind } from "iconsax-react";
+import { Chart, Cpu, Health, HeartAdd } from "iconsax-react";
 
 export const HealthcareLifeSciencesOverviewData = {
   eyebrow: "Overview",
@@ -40,25 +40,25 @@ export const HealthcareLifeSciencesWhatWeOfferData = {
     "Improving healthcare systems with evidence-based strategy, digital transformation, and data-driven decision-making.",
   items: [
     {
-      icon: Wind,
+      icon: Chart,
       title: "Assess Health Systems",
       description:
         "Evaluate healthcare infrastructure, service delivery, workforce capacity, policy frameworks, patient needs, and emerging challenges to identify opportunities for improvement.",
     },
     {
-      icon: Pet,
+      icon: HeartAdd,
       title: "Design Better Care Models",
       description:
         "Develop patient-centered care strategies, health policies, service delivery models, and operational frameworks that improve accessibility, quality, and efficiency.",
     },
     {
-      icon: Convert3DCube,
+      icon: Cpu,
       title: "Implement Digital Health Solutions",
       description:
         "Leverage AI, digital platforms, data analytics, and health technologies to modernize healthcare delivery, strengthen decision-making, and enhance patient experiences.",
     },
     {
-      icon: Note,
+      icon: Health,
       title: "Improve Health Outcomes",
       description:
         "Measure performance, strengthen health systems, scale successful interventions, and promote sustainable improvements in healthcare quality and population health.",

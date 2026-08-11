@@ -1,5 +1,5 @@
 
-import { Convert3DCube, Note, Pet, Wind } from "iconsax-react";
+import { Bank, Buildings2, Chart, DollarSquare } from "iconsax-react";
 
 export const FinancialServicesInclusiveFinanceOverviewData = {
   eyebrow: "Overview",
@@ -37,25 +37,25 @@ export const FinancialServicesInclusiveFinanceWhatWeOfferData = {
     "We help governments, financial institutions, investors, and development organizations strengthen financial ecosystems, expand inclusive access to capital, and build sustainable pathways for economic growth.",
   items: [
     {
-      icon: Wind,
+      icon: Chart,
       title: "Strengthen Financial Ecosystems",
       description:
         "Assess financial markets, regulatory environments, institutional capacity, and inclusion gaps to identify opportunities for sustainable financial system development.",
     },
     {
-      icon: Pet,
+      icon: Bank,
       title: "Expand Access to Finance",
       description:
         "Design inclusive finance strategies, innovative financing mechanisms, digital financial services, and investment frameworks that improve financial accessibility.",
     },
     {
-      icon: Convert3DCube,
+      icon: Buildings2,
       title: "Enhance Institutional Capacity",
       description:
         "Strengthen governance, regulatory systems, financial institutions, and operational capabilities to improve resilience, efficiency, and long-term performance.",
     },
     {
-      icon: Note,
+      icon: DollarSquare,
       title: "Mobilize Capital for Growth",
       description:
         "Facilitate blended finance, public-private partnerships, investment mobilization, and financing solutions that support inclusive and sustainable economic development.",

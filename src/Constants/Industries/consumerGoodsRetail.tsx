@@ -1,5 +1,5 @@
 
-import { Buildings2, Convert3DCube, DollarCircle, KeyboardOpen, Link, Note, Pet, Wind } from "iconsax-react";
+import { Buildings2, Cpu, DocumentText, Global, Link, SearchNormal1, TrendUp, TruckFast } from "iconsax-react";
 
 export const ConsumerGoodsRetailOverviewData = {
   eyebrow: "Overview",
@@ -40,27 +40,27 @@ export const ConsumerGoodsRetailWhatWeOfferData = {
     "Helping brands respond to changing consumer behaviour through market intelligence, digital transformation, and innovation.",
   items: [
     {
-      icon: Wind,
+      icon: Cpu,
       title: "AI-Driven Product Innovation",
       description:
         "Leverage AI, market intelligence, and emerging technologies to accelerate product development and identify new consumer opportunities."},
     {
-      icon: Pet,
+      icon: SearchNormal1,
       title: "Technology Scouting & Licensing",
       description:
         "Identify emerging technologies, intellectual property, and external innovation opportunities that complement internal R&D and accelerate innovation."},
     {
-      icon: Convert3DCube,
+      icon: DocumentText,
       title: "Digital Compliance & Claims",
       description:
         "Develop intelligent solutions for product labeling, regulatory compliance, claims management, ingredient validation, and packaging governance."},
     {
-      icon: Note,
+      icon: Global,
       title: "Connected Commerce & Distribution",
       description:
         "Build omnichannel commerce and distribution ecosystems that connect manufacturers, retailers, distributors, and consumers across markets."},
     {
-      icon: Link,
+      icon: TruckFast,
       title: "Intelligent Supply Chains",
       description:"Apply AI, IoT, traceability, and predictive analytics to improve supply chain visibility, resilience, efficiency, and sustainability."},
       {
@@ -70,13 +70,13 @@ export const ConsumerGoodsRetailWhatWeOfferData = {
               "Design and develop digital products, enterprise applications, AI solutions, and operational platforms tailored to consumer goods manufacturers.",
           },
           {
-            icon: KeyboardOpen,
+            icon: TrendUp,
             title: "Market Entry & Commercialization",
             description:
               "Develop market entry strategies, commercialization roadmaps, regulatory pathways, and partner models that accelerate product and market expansion.",
           },
           {
-            icon: DollarCircle,
+            icon: Link,
             title: "Strategic Ecosystem Partnerships",
             description:"Build relationships across technology providers, distributors, retailers, investors, and industry partners to create scalable growth ecosystems."},
   ],

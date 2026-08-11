@@ -1,5 +1,5 @@
 
-import { Chart, CloudDrizzle, Convert3DCube, DollarSquare, Link, Note, Pet, Reserve, Wind2,Wind,Sun } from "iconsax-react";
+import { Chart, Cpu, Reserve, TrendUp } from "iconsax-react";
 
 export const AgricultureFoodSystemsOverviewData = {
   eyebrow: "Overview",
@@ -40,25 +40,25 @@ export const AgricultureFoodSystemsWhatWeOfferData = {
     "We help governments, agribusinesses, investors, development institutions, and farmer organizations design, implement, and scale agricultural transformation initiatives.",
   items: [
     {
-      icon: Wind,
+      icon: Chart,
       title: "Assess Agricultural Systems",
       description:
         "Evaluate production systems, value chains, market opportunities, policies, climate risks, and stakeholder ecosystems.",
     },
     {
-      icon: Pet,
+      icon: TrendUp,
       title: "Design Growth Strategies",
       description:
         "Develop sector strategies, food security plans, digital agriculture roadmaps, and investment frameworks.",
     },
     {
-      icon: Convert3DCube,
+      icon: Cpu,
       title: "Enable Digital Agriculture",
       description:
         "Deploy AI, geospatial intelligence, digital platforms, and integrated programs that improve productivity and resilience.",
     },
     {
-      icon: Note,
+      icon: Reserve,
       title: "Scale Sustainable Impact",
       description:
         "Strengthen institutions, improve farmer livelihoods, mobilize investment, and expand long-term agricultural transformation.",

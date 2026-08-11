@@ -1,5 +1,5 @@
 
-import { Convert3DCube, DollarSquare, Link, Note, Pet, Wind } from "iconsax-react";
+import { Chart, Cpu, Data, Link, Location, ProgrammingArrows } from "iconsax-react";
 
 export const AiDigitalEconomyOverviewData = {
   eyebrow: "Overview",
@@ -40,25 +40,25 @@ export const AiDigitalEconomyWhatWeOfferData = {
     "Unifying fragmented data, automating workflows, and deploying intelligent systems that scale across the enterprise.",
   items: [
     {
-      icon: Wind,
+      icon: Data,
       title: "Unify Data Before Deploying AI",
       description:
         "Data warehousing and integration across SAP and non-SAP systems come first, so AI has something reliable to work with.",
     },
     {
-      icon: Pet,
+      icon: ProgrammingArrows,
       title: "Automate Workflows End-to-End",
       description:
         "RPA and SAP process automation are designed to transform entire processes, not single tasks.",
     },
     {
-      icon: Convert3DCube,
+      icon: Cpu,
       title: "Intelligent AI Agent Deployment",
       description:
         "Cognitive bots are built to anticipate actions and resolve tasks through continuous learning.",
     },
     {
-      icon: Note,
+      icon: Location,
       title: "AI-Powered Spatial Intelligence",
       description:
         "Remote sensing and AI together drive decisions in agriculture, climate, health, and urban planning.",
@@ -70,7 +70,7 @@ export const AiDigitalEconomyWhatWeOfferData = {
         "Cross-platform automation is achieved without ripping out existing infrastructure.",
     },
     {
-      icon: DollarSquare,
+      icon: Chart,
       title: "Real-Time Governance Dashboards",
       description:
         "Power BI and custom analytics stacks turn raw data into CXO level decision support.",

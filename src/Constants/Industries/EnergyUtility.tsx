@@ -1,5 +1,5 @@
 
-import { Chart, CloudDrizzle, Convert3DCube, DollarSquare, Link, Note, Pet, Reserve, Wind2,Wind,Sun } from "iconsax-react";
+import { Chart, Cpu, FlashCircle, TrendUp } from "iconsax-react";
 
 export const EnergyUtilitiesOverviewData = {
   eyebrow: "Overview",
@@ -40,25 +40,25 @@ export const EnergyUtilitiesWhatWeOfferData = {
     "A structured, evidence-based approach from sector assessment to implementation and long-term energy transformation. ",
   items: [
     {
-      icon: Wind,
+      icon: Chart,
       title: "Evaluate Energy Systems",
       description:
         "Assess energy infrastructure, regulatory frameworks, market dynamics, resource availability, and investment opportunities to identify priorities for sustainable growth.",
     },
     {
-      icon: Pet,
+      icon: TrendUp,
       title: "Shape Future Energy Pathways",
       description:
         "Develop clean energy strategies, transition roadmaps, grid modernization plans, decarbonization initiatives, and long-term energy policies. ",
     },
     {
-      icon: Convert3DCube,
+      icon: Cpu,
       title: "Modernize Infrastructure & Operations",
       description:
         "Implement digital technologies, smart energy platforms, AI-driven analytics, and integrated programs to improve operational efficiency and system resilience. ",
     },
     {
-      icon: Note,
+      icon: FlashCircle,
       title: "Accelerate the Energy Transition",
       description:
         "Mobilize investments, strengthen partnerships, expand renewable energy adoption, and scale resilient, low-carbon energy solutions for lasting impact. ",

@@ -5,7 +5,7 @@ import AboutUsPillars from "@/components/features/AboutUsPillars";
 import AboutUsPractices from "@/components/features/AboutUsPractices";
 import AboutUsHowWeWork from "@/components/features/AboutUsHowWeWork"; 
 import CaseStudies from "@/components/features/HomeCaseStudie";
-import StatsAbout from '@/components/ui/StatsAbout';
+import StatsGrid from '@/components/ui/Stats4';
 import OurGlobalPresence from "@/components/features/HomeGlobalPresence";
 import CareersHero from "@/components/features/HomeCareer";
 import FAQSection from "@/components/features/Faq";
@@ -44,8 +44,20 @@ export default function AboutUsPage() {
 
       {/* Hero Component Render Area */}
       <AboutUsHero /> 
-      <StatsAbout/>
+      <StatsGrid
+        sectionPadding="py-12 lg:py-20"
+        stats={[
+          { target: 750, suffix: "+", label: "Clients worldwide" },
+          { target: 20, suffix: "+", label: "Years in business" },
+          { target: 65, suffix: "+", label: "Countries" },
+          { target: 100, suffix: "+", label: "Partners" },
+
+          
+        ]}
+      />
+
       <AboutUsPillars /> 
+      
       <AboutUsPractices /> 
       <AboutUsHowWeWork /> 
       <CaseStudies {...caseStudiesData} />

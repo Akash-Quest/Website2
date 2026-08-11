@@ -1,5 +1,5 @@
 
-import { Chart, Convert3DCube, DocumentText, DollarSquare, Link, Note, Pet, Wind } from "iconsax-react";
+import { Buildings2, Chart, DocumentText, DollarSquare, Link, SearchNormal1, TaskSquare, TrendUp } from "iconsax-react";
 
 export const PublicSectorDigitalGovernanceOverviewData = {
   eyebrow: "Overview",
@@ -40,25 +40,25 @@ export const PublicSectorDigitalGovernanceWhatWeOfferData = {
     "Embedded program support and digital governance solutions that connect government strategy with execution.",
   items: [
     {
-      icon: Wind,
+      icon: SearchNormal1,
       title: "Governance & Institutional Assessment",
       description:
         "Assess institutional capacity, governance structures, regulatory environments, public services, and implementation readiness to identify priorities for reform.",
     },
     {
-      icon: Pet,
+      icon: TrendUp,
       title: "Strategy & Policy Development",
       description:
         "Develop sector strategies, evidence-based policies, regulatory frameworks, and reform roadmaps that strengthen public sector performance.",
     },
     {
-      icon: Convert3DCube,
+      icon: TaskSquare,
       title: "Program & Project Management",
       description:
         "Establish PMUs and TSUs to manage program governance, implementation, stakeholder coordination, execution, and performance.",
     },
     {
-      icon: Note,
+      icon: DollarSquare,
       title: "Project Planning & Investment Advisory",
       description:
         "Develop DPRs, feasibility studies, investment cases, project plans, and implementation roadmaps for priority public sector initiatives.",
@@ -76,7 +76,7 @@ export const PublicSectorDigitalGovernanceWhatWeOfferData = {
         "Apply AI, GIS, data analytics, and intelligent dashboards to strengthen planning, resource allocation, monitoring, and evidence-based governance.",
     },
     {
-      icon: DollarSquare,
+      icon: Buildings2,
       title: "Institutional Transformation & Capacity Building",
       description:
         "Strengthen organizations through operating models, SOPs, organizational transformation, governance improvements, and institutional capacity development.",

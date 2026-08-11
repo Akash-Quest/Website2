@@ -1,5 +1,5 @@
 
-import { Convert3DCube, Note, Pet, Wind } from "iconsax-react";
+import { Chart, Cpu, Drop, Reserve } from "iconsax-react";
 
 export const WaterSanitationOverviewData = {
   eyebrow: "Overview",
@@ -40,25 +40,25 @@ export const WaterSanitationWhatWeOfferData = {
     "Supporting sustainable water management, infrastructure modernization, and equitable access to essential services.",
   items: [
     {
-      icon: Wind,
+      icon: Chart,
       title: "Assess Water Systems",
       description:
         "Evaluate water resources, infrastructure, governance, service coverage, climate risks, and operational challenges to identify priorities for sustainable water management.",
     },
     {
-      icon: Pet,
+      icon: Reserve,
       title: "Plan Sustainable Infrastructure",
       description:
         "Develop integrated water strategies, infrastructure investment plans, utility modernization roadmaps, and resilient sanitation frameworks.",
     },
     {
-      icon: Convert3DCube,
+      icon: Cpu,
       title: "Modernize Service Delivery",
       description:
         "Deploy digital platforms, smart water technologies, AI-driven monitoring, and operational improvements to enhance efficiency, reliability, and customer service.",
     },
     {
-      icon: Note,
+      icon: Drop,
       title: "Improve Water Security",
       description:
         "Strengthen institutions, mobilize investments, improve resource management, and scale sustainable solutions that ensure long-term water security and sanitation access.",

@@ -1,5 +1,5 @@
 
-import { ClipboardText, CloudConnection, Courthouse, CpuSetting, FavoriteChart, HeartCircle, HeartTick, Message, PresentionChart } from "iconsax-react";
+import { Chart, CloudSunny, HeartTick, Lamp, Link, People, Pet, Refresh, ShieldTick, Wind } from "iconsax-react";
 
 export const SocialSectorOverviewData = {
   eyebrow: "Overview",
@@ -45,31 +45,31 @@ export const SocialImpactCoreCapabilitiesData = {
 
   capabilities: [
     {
-      icon: ClipboardText,
+      icon: People,
       title: "Co-Creation with Stakeholders",
       description:
         "We collaborate with communities, government bodies, and partners to ensure every solution is inclusive, contextually relevant, and co-owned.",
     },
     {
-      icon: Courthouse,
+      icon: Chart,
       title: "Data-Driven Decision Making",
       description:
         "We integrate robust data and M&E frameworks from day one to guide decisions, adapt strategies, and measure what matters.",
     },
     {
-      icon: HeartCircle,
+      icon: Refresh,
       title: "Adaptive & Agile Execution",
       description:
         "Our approach embraces flexibility—designing interventions that evolve with learning, feedback, and changing ground realities.",
     },
     {
-      icon: FavoriteChart,
+      icon: Lamp,
       title: "Innovation-Led Thinking",
       description:
         "We apply digital tools, behavioral insights, and bold ideas to reimagine traditional approaches to complex development challenges.",
     },
     {
-      icon: PresentionChart,
+      icon: Link,
       title: "End-to-End Partnership",
       description:
         "From research and program design to pilot, scale, and institutionalization—we stay with our partners across the journey.",
@@ -93,25 +93,25 @@ export const SocialImpactFocusAreasData = {
         "We work with governments, donors, and foundations to strengthen health systems, scale primary care, and drive behavioral change. From maternal health to digital health innovation, our solutions improve lives and resilience.",
     },
     {
-      icon: Message,
+      icon: Wind,
       title: "Agriculture & Rural Livelihoods",
       description:
         "SkyQuest supports smallholder farmers, FPOs, and rural ecosystems through sustainable agriculture practices, financial inclusion, and access to markets and agri-tech.",
     },
     {
-      icon: CloudConnection,
+      icon: CloudSunny,
       title: "Sustainability, Environment & ESG",
       description:
         "We help organizations integrate sustainability and ESG practices into their strategy and operations through clean energy, resource management, and responsible growth initiatives aligned with global climate goals.",
     },
     {
-      icon: HeartTick,
+      icon: ShieldTick,
       title: "Climate Resilience",
       description:
         "Our work in climate adaptation includes climate-risk assessments, disaster preparedness, and resilient infrastructure especially for vulnerable geographies and low-income populations.",
     },
     {
-      icon: CpuSetting,
+      icon: Pet,
       title: "Animal Husbandry & Dairying",
       description:
         "Transformation in animal husbandry and dairying by combining scalable innovations with sustainable practices. Our approach focuses on improving productivity, animal health, and empowering farmers with modern solutions.",

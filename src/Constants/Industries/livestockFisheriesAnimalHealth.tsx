@@ -1,5 +1,5 @@
 
-import { Convert3DCube, Note, Pet, Wind } from "iconsax-react";
+import { Chart, Cpu, Pet, TrendUp } from "iconsax-react";
 
 export const LivestockFisheriesAnimalHealthOverviewData = {
   eyebrow: "Overview",
@@ -40,7 +40,7 @@ export const LivestockFisheriesAnimalHealthWhatWeOfferData = {
     "Supporting resilient animal health systems, sustainable production, and market-driven value chains.",
   items: [
     {
-      icon: Wind,
+      icon: Chart,
       title: "Assess Sector Performance",
       description:
         "Evaluate livestock, fisheries, and animal health systems, production practices, value chains, regulatory frameworks, market dynamics, and emerging growth opportunities.",
@@ -52,13 +52,13 @@ export const LivestockFisheriesAnimalHealthWhatWeOfferData = {
         "Develop strategies that improve animal health services, veterinary infrastructure, disease surveillance, biosecurity, and livestock resilience.",
     },
     {
-      icon: Convert3DCube,
+      icon: Cpu,
       title: "Modernize Production & Value Chains",
       description:
         "Leverage digital technologies, data-driven insights, and sustainable practices to enhance productivity, strengthen value chains, and improve market access.",
     },
     {
-      icon: Note,
+      icon: TrendUp,
       title: "Scale Sustainable Livestock Growth",
       description:
         "Mobilize investments, strengthen institutions, support producers, and expand resilient livestock and fisheries ecosystems for long-term economic growth.",
