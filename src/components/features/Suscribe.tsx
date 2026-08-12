@@ -14,8 +14,13 @@ export default function Suscribe({
   const [email, setEmail] = useState("");
   const [done, setDone] = useState(false);
 
+
   const handleSubscribe = () => {
-    if (!email.trim()) return;
+    const value = email.trim().toLowerCase();
+    if (!value) return;
+
+    // TODO: replace with a real API call once the backend is connected, e.g.
+    // await fetch("/api/subscribe", { method: "POST", body: JSON.stringify({ email: value }) });
     setDone(true);
     setEmail("");
     setTimeout(() => setDone(false), 2800);
