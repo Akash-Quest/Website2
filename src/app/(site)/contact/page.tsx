@@ -131,7 +131,7 @@ function ContactHero() {
             variants={fadeUpSm}
             initial="hidden"
             animate="visible"
-            className="w-full max-w-xl 2xl:max-w-2xl -m-4 bg-white p-1 rounded-full"
+            className="w-full max-w-[70%] -m-4 bg-white p-1 rounded-full"
           >
             <div className="flex text-sm font-normal">
             {(Object.keys(CONTACT_TAB_CONTENT) as ContactTab[]).map((tab) => (
@@ -139,7 +139,7 @@ function ContactHero() {
                 key={tab}
                 type="button"
                 onClick={() => setActiveTab(tab)}
-                className={`flex-1 px-4 py-1 rounded-full text-xs transition-colors ${
+                className={`flex-1 px-4 py-1 rounded-full  transition-colors  -p ${
                   activeTab === tab
                     ? "bg-primary text-white"
                     : "bg-transparent text-gray-600 hover:text-gray-800"
@@ -157,12 +157,12 @@ function ContactHero() {
             custom={5}
             initial="hidden"
             animate="visible"
-            className="w-full max-w-xl 2xl:max-w-2xl bg-white rounded-md border border-gray-100 p-2 sm:p-4 lg:pb-4"
+            className="w-full max-w-[70%] bg-white rounded-md border border-gray-100 p-2 sm:p-4 lg:pb-4"
           >
-          <h2 className="text-sm 2xl:text-lg font-bold text-gray-700 pb-1 2xl-pb-2">
+          <h2 className="text-body-lg font-bold text-gray-700 pb-1 2xl-pb-2">
             {tabContent.heading}
           </h2>
-          <p className="pb-3 text-xs text-gray-600">
+          <p className="pb-3 text-body-sm text-gray-600">
             {tabContent.subtext}
           </p>
           <form className=" space-y-1 lg:space-y-2">
