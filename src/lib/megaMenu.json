@@ -16,6 +16,17 @@
               {
                 "links": [
                   {
+                    "label": "Data & Artificial Intelligence",
+                    "href": "/capabilities/data-artificial-intelligence",
+                    "promo": {
+                      "image": "/CoreCapability/3.jpg",
+                      "title": "Data & Artificial Intelligence",
+                      "description": "We help governments, enterprises, and institutions leverage AI, automation, data intelligence, geospatial technologies, and digital platforms to modernize operations, improve decision-making, and accelerate innovation.",
+                      "href": "/capabilities/data-artificial-intelligence",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
+                  {
                     "label": "Digital Transformation & Emerging Technologies",
                     "href": "/capabilities/digital-transformation-emerging-technologies",
                     "featured": true,
@@ -38,17 +49,7 @@
                       "ctaLabel": "Visit Page"
                     }
                   },
-                  {
-                    "label": "Data & Artificial Intelligence",
-                    "href": "/capabilities/data-artificial-intelligence",
-                    "promo": {
-                      "image": "/CoreCapability/3.jpg",
-                      "title": "Data & Artificial Intelligence",
-                      "description": "We help governments, enterprises, and institutions leverage AI, automation, data intelligence, geospatial technologies, and digital platforms to modernize operations, improve decision-making, and accelerate innovation.",
-                      "href": "/capabilities/data-artificial-intelligence",
-                      "ctaLabel": "Visit Page"
-                    }
-                  },
+                  
                   {
                     "label": "Integrated Program Management",
                     "href": "/capabilities/integrated-program-management",
@@ -128,6 +129,17 @@
             "columns": [
               {
                 "links": [
+                   {
+                    "label": "AI & Digital Economy",
+                    "href": "/industries/ai-digital-economy",
+                    "promo": {
+                      "image": "/IndustriesHero/AI.jpg",
+                      "title": "AI & Digital Economy",
+                      "description": "SkyQuest partners with governments, enterprises, and institutions to deploy AI enablement, enterprise automation, and bespoke digital platforms that convert data into decisions and manual processes into scalable, intelligent systems.",
+                      "href": "/industries/ai-digital-economy",
+                      "ctaLabel": "Visit Page"
+                    }
+                  },
                   {
                     "label": "Agriculture & Food Systems",
                     "href": "/industries/agriculture-food-systems",
@@ -162,17 +174,7 @@
                       "ctaLabel": "Visit Page"
                     }
                   },
-                  {
-                    "label": "AI & Digital Economy",
-                    "href": "/industries/ai-digital-economy",
-                    "promo": {
-                      "image": "/IndustriesHero/AI.jpg",
-                      "title": "AI & Digital Economy",
-                      "description": "SkyQuest partners with governments, enterprises, and institutions to deploy AI enablement, enterprise automation, and bespoke digital platforms that convert data into decisions and manual processes into scalable, intelligent systems.",
-                      "href": "/industries/ai-digital-economy",
-                      "ctaLabel": "Visit Page"
-                    }
-                  },
+                 
                   {
                     "label": "Climate & Environment",
                     "href": "/industries/climate-environment",

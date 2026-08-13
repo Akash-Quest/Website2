@@ -15,9 +15,9 @@ import { fadeUpSm, fadeLeft, scaleFade } from "@/lib/animations";
 type ContactTab = "consultation" | "brief";
 
 const CONTACT_LINKS = [
-  { href: "tel:+13513334748", label: "+1 351 333 4748", Icon: PhoneCall },
-  { href: "tel:+919265657635", label: "+91 9265 657 635", Icon: PhoneCall },
-  { href: "https://wa.me/919265657635", label: "+91 9265 657 635", Icon: MessageCircle },
+  // { href: "tel:+13513334748", label: "+1 351 333 4748", Icon: PhoneCall },
+  // { href: "tel:+919265657635", label: "+91 9265 657 635", Icon: PhoneCall },
+  // { href: "https://wa.me/919265657635", label: "+91 9265 657 635", Icon: MessageCircle },
   { href: "mailto:info@skyquestt.com", label: "info@skyquestt.com", Icon: Mail },
 ] as const;
 

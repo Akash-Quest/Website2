@@ -222,13 +222,7 @@ export default function OpenPositions() {
                 here, please send us your LinkedIn profile and give us your contact information. We
                 will be in touch.
               </p>
-              <button className="mt-3 lg:mt-5 flex items-center border border-gray-700 gap-3 rounded-md bg-[#EAEAF8] pl-3 pr-1 py-1 text-[12px] text-gray-700">
-            Share Your LinkedIn Profile
-
-            <span className="flex h-6 w-6  items-center justify-center rounded-md bg-primary text-white">
-              <ArrowDown size={16} />
-            </span>
-          </button>
+              
             </div>
           </Reveal>
 

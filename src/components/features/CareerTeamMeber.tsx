@@ -31,19 +31,34 @@ const members: Member[] = [
     group: "team",
   },
   {
+    name: "Dr. Shumete Gizaw",
+    title: "Global Principal Advisor Government, Technology & Sovereign Partnerships",
+    location: "",
+    image: "/Careers/Shumete.jpg",
+    group: "team",
+  },
+  {
+    name: "Selamawit Zemene Mewosha",
+    title: "Country Director Ethiopia",
+    location: "",
+    image: "/Careers/Selamawit.jpg",
+    group: "team",
+  },
+  {
+    name: "Addisu Asfaw Debea",
+    title: "Senior Consultant (Program Management)",
+    location: "",
+    image: "/Careers/Addisu.jpg",
+    group: "team",
+  },
+  {
     name: "Rajeev Sharan",
     title: "Project Director – Seed",
     location: "",
     image: "/Careers/Rajeeb.jpg",
     group: "team",
   },
-  {
-    name: "Abhinav Singh Sisodia",
-    title: "Director – Government Advisory",
-    location: "",
-    image: "/Careers/Abhinav.jpg",
-    group: "team",
-  },
+  
   {
     name: "Yogender Narayan",
     title: "Associate Strategy Consultant",
@@ -131,32 +146,19 @@ const members: Member[] = [
   },
   {
     name: "Priyanshi Harwani",
-    title: "Business Development Executive",
+    title: "Senior Business Development Executive",
     location: "",
     image: "/Careers/Priyanshi.jpg",
     group: "team",
   },
   {
-    name: "Dr. Shumete Gizaw",
-    title: "Global Principal Advisor Government, Technology & Sovereign Partnerships",
+    name: "Chinmay Parab",
+    title: "Senior Content Writer",
     location: "",
-    image: "/Careers/Shumete.jpg",
-    group: "advisory",
+    image: "/Careers/Chinamay.png",
+    group: "team",
   },
-  {
-    name: "Selamawit Zemene Mewosha",
-    title: "Country Director Ethiopia",
-    location: "",
-    image: "/Careers/Selamawit.jpg",
-    group: "advisory",
-  },
-  {
-    name: "Addisu Asfaw Debea",
-    title: "Senior Consultant (Program Management)",
-    location: "",
-    image: "/Careers/Addisu.jpg",
-    group: "advisory",
-  },
+  
 ];
 
 function MemberCard({

@@ -7,9 +7,10 @@ import { fadeUpSm, staggerContainer } from "@/lib/animations";
 import { TwitterIcon, FacebookIcon, LinkedInIcon } from "@/components/icons/SocialIcons";
 
 const capabilities = [
+  { label: "Data and Artificial Intelligence", href: "/capabilities/data-artificial-intelligence" },
   { label: "Digital Transformation & Emerging Technologies", href: "/capabilities/digital-transformation-emerging-technologies" },
   { label: "Strategy & Policy Advisory", href: "/capabilities/strategy-policy-advisory" },
-  { label: "Data and Artificial Intelligence", href: "/capabilities/data-artificial-intelligence" },
+  
   { label: "Integrated Program Management", href: "/capabilities/integrated-program-management" },
   { label: "Livelihoods & Entrepreneurship", href: "/capabilities/livelihoods-entrepreneurship" },
   { label: "Business Intelligence & Market Research", href: "/capabilities/business-intelligence-market-research" },
@@ -25,11 +26,12 @@ const aboutLinks = [
 ];
 
 const industries = [
+    { label: "AI & Digital Economy", href: "/industries/ai-digital-economy" },
 
   { label: "Agriculture & Food Systems", href: "/industries/agriculture-food-systems" },
   { label: "Livestock, Fisheries & Animal Health", href: "/industries/livestock-fisheries-animal-health" },
   { label: "Healthcare & Life Sciences", href: "/industries/healthcare-life-sciences" },
-  { label: "AI & Digital Economy", href: "/industries/ai-digital-economy" },
+
   { label: "Climate & Environment", href: "/industries/climate-environment" },
   { label: "Energy & Utilities", href: "/industries/energy-utilities" },
   { label: "Water & Sanitation", href: "/industries/water-sanitation" },

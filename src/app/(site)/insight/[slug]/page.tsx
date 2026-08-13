@@ -168,14 +168,14 @@ function ContentBlockView({ block }: { block: ContentBlock }) {
 }
 
 const PAGE_ACTIONS = [
-  { label: "Save", icon: ArchiveTick },
+
   { label: "Download", icon: Import },
   { label: "Print", icon: Printer },
   { label: "Share", icon: ExportSquare },
 ];
 
 export default async function InsightDetailsPage({
-  params,
+  params, 
 }: {
   params: Promise<{ slug: string }>;
 }) {
