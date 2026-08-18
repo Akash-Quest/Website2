@@ -137,13 +137,7 @@ const members: Member[] = [
     image: "/Careers/Goutam.png",
     group: "team",
   },
-  {
-    name: "Prachi Mishra",
-    title: "Research Associate",
-    location: "",
-    image: "/Careers/Prachi.png",
-    group: "team",
-  },
+  
   {
     name: "Priyanshi Harwani",
     title: "Senior Business Development Executive",
@@ -156,6 +150,49 @@ const members: Member[] = [
     title: "Senior Content Writer",
     location: "",
     image: "/Careers/Chinamay.png",
+    group: "team",
+  },
+  {
+    name: "Prachi Mishra",
+    title: "Research Associate",
+    location: "",
+    image: "/Careers/Prachi.png",
+    group: "team",
+  },
+  {
+    name: "Shivani Chaudhary",
+    title: "Research Associate",
+    location: "",
+    image: "/Careers/Shibani.png",
+    group: "team",
+  },
+   {
+    name: "Maharishi Pancholi",
+    title: "Research Associate",
+    location: "",
+    image: "/Careers/Maharishi.jpg",
+    group: "team",
+  },
+   {
+    name: "Deb Sundar Khan",
+    title: "Jr. Data Science Engineer",
+    location: "",
+    image: "/Careers/Dev.Jpg",
+    group: "team",
+  },
+   {
+    name: "Jash Vaghela",
+    title: "Jr. AI/ML Developer",
+    location: "",
+    image: "/Careers/Jash.jpg",
+    group: "team",
+  },
+  
+   {
+    name: "Akash Rout",
+    title: "Frontend Developer",
+    location: "",
+    image: "/Careers/Akash2.jpg",
     group: "team",
   },
   
