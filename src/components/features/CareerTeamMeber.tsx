@@ -177,7 +177,7 @@ const members: Member[] = [
     name: "Deb Sundar Khan",
     title: "Jr. Data Science Engineer",
     location: "",
-    image: "/Careers/Dev.Jpg",
+    image: "/Careers/Deb.jpg",
     group: "team",
   },
    {
