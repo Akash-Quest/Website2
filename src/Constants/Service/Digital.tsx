@@ -80,6 +80,7 @@ export const DigitalEndToEndData = {
       "/All logos/Aws.svg",
       "/All logos/Azzure.svg",
       "/All logos/Gcp.svg",
+      "/All logos/Docker.svg",
     ],
     title: "AWS / Azure / GCP /Docker",
     description:
@@ -92,13 +93,13 @@ export const DigitalEndToEndData = {
       "Enterprise BI dashboards, self-service analytics, and data visualisation platforms for executive and operational reporting.",
   },
    {
-    icons: ["/All logos/opeAi.svg", "/All logos/LangChain.svg"],
+    icons: ["/All logos/opeAi.svg", "/All logos/LangChain.svg","/All logos/Claude.svg"],
     title: "OpenAI,LangChain,Claude",
     description:
       "LLM integration, RAG system builds, agent frameworks, and enterprise GenAI application development.",
   },
   {
-    icons: ["/All logos/opeAi.svg", "/All logos/LangChain.svg"],
+    icons: ["/All logos/SQL.svg", "/All logos/MongoDB.svg"],
     title: "SQL/MongoDB",
     description:
       "Deep learning model development, training, and deployment across classification, regression, and generative tasks.",
