@@ -60,7 +60,11 @@
                       "href": "/capabilities/integrated-program-management",
                       "ctaLabel": "Visit Page"
                     }
-                  },
+                  }
+                ]
+              },
+              {
+                "links": [
                   {
                     "label": "Livelihoods & Entrepreneurship",
                     "href": "/capabilities/livelihoods-entrepreneurship",
@@ -218,7 +222,11 @@
                       "href": "/industries/financial-services-inclusive-finance",
                       "ctaLabel": "Visit Page"
                     }
-                  },
+                  }
+                ]
+              },
+              {
+                "links": [
                   {
                     "label": "Public Sector & Digital Governance",
                     "href": "/industries/public-sector-digital-governance",
@@ -309,7 +317,11 @@
                       "href": "/products/mineraliq",
                       "ctaLabel": "Visit Page"
                     }
-                  },
+                  }
+                ]
+              },
+              {
+                "links": [
                   {
                     "label": "Skyquest Labs",
                     "href": "/products/sqlabs",
@@ -910,7 +922,7 @@
               "title": "Sustech Bank",
               "description": "SUSTECH is a global mega-cluster initiative by Skyquest Technology Consulting Pvt. Ltd. focused on building sustainable, scalable economic corridors through science, technology, innovation, and entrepreneurship.",
               "href": "https://www.sustech.earth/",
-              "ctaLabel": "Learn More"
+              "ctaLabel": "Visit Site"
             }
           }
         }
@@ -921,7 +933,23 @@
       "id": "company",
       "label": "Our Company",
       "items": [
-        { "id": "our-team", "label": "Our Team", "href": "/team" },
+        {
+          "id": "our-team",
+          "label": "Our Team",
+          "href": "/team",
+          "content": {
+            "kind": "columns",
+            "heading": "Our Team",
+            "description": "SkyQuest brings together strategists, technologists, researchers, and industry experts to help governments, businesses, and development institutions solve complex challenges and deliver measurable impact across sectors and geographies.",
+            "promo": {
+              "image": "/Team/hero.jpg",
+              "title": "Meet Our People",
+              "description": "The people driving strategy and impact — strategists, technologists, researchers, and industry experts working across sectors and geographies.",
+              "href": "/team",
+              "ctaLabel": "Visit Page"
+            }
+          }
+        },
         {
           "id": "insights",
           "label": "Our Insights",
@@ -968,9 +996,41 @@
             }
           }
         },
-        { "id": "about-skyquest", "label": "About SkyQuest", "href": "/about" },
-        { "id": "contact-us", "label": "Contact Us", "href": "/contact" },        
-        { "id": "privacy-policy", "label": "Privacy Policy", "href": "/privacy-policy" }
+        {
+          "id": "about-skyquest",
+          "label": "About SkyQuest",
+          "href": "/about",
+          "content": {
+            "kind": "columns",
+            "heading": "About SkyQuest",
+            "description": "SkyQuest is a global consulting firm helping leaders grow, transform digitally, and build sustainable impact across strategy, technology, research and social development.",
+            "promo": {
+              "image": "/AboutUs/AboutUsHero.jpg",
+              "title": "Transforming Business Through Strategy & Technology",
+              "description": "SkyQuest is a global consulting firm helping leaders grow, transform digitally, and build sustainable impact across strategy, technology, research and social development.",
+              "href": "/about",
+              "ctaLabel": "Visit Page"
+            }
+          }
+        },
+        {
+          "id": "contact-us",
+          "label": "Contact Us",
+          "href": "/contact",
+          "content": {
+            "kind": "columns",
+            "heading": "Contact Us",
+            "description": "Have a question or opportunity in mind? SkyQuest makes it faster and easier to connect with our team and explore how we can help your business grow.",
+            "promo": {
+              "image": "/Contact/ContactUs.jpg",
+              "title": "How can we help?",
+              "description": "Have a question or opportunity in mind? SkyQuest makes it faster and easier to connect with our team and explore how we can help your business grow.",
+              "href": "/contact",
+              "ctaLabel": "Visit Page"
+            }
+          }
+        }
+        
       ]
     },
     {

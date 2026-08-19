@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -73,8 +73,17 @@ const categories = [
 export default function EnterpriseAiSolution() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [mobileOpenIndex, setMobileOpenIndex] = useState<number | null>(null);
+  const [isWide3xl, setIsWide3xl] = useState(false);
   const active = categories[activeIndex];
   const total = categories.length;
+
+  useEffect(() => {
+    const mql = window.matchMedia("(min-width: 1920px)");
+    setIsWide3xl(mql.matches);
+    const onChange = (e: MediaQueryListEvent) => setIsWide3xl(e.matches);
+    mql.addEventListener("change", onChange);
+    return () => mql.removeEventListener("change", onChange);
+  }, []);
 
   return (
     <section className="w-full bg-white">
@@ -166,7 +175,7 @@ export default function EnterpriseAiSolution() {
         </div>
 
         {/* Desktop: category nav / image stack / points */}
-        <div className="mt-24 hidden gap-2 lg:grid lg:grid-cols-[1fr_1fr_1fr] lg:items-stretch">
+        <div className="mt-24 2xl:mt-30 hidden gap-10  2xl:gap-12 lg:grid lg:grid-cols-[1fr_1fr_1fr] lg:items-stretch">
           {/* Left: category nav */}
           <Reveal variant="left" custom={0} className="flex flex-col ">
             {categories.map((cat, i) => {
@@ -177,7 +186,7 @@ export default function EnterpriseAiSolution() {
                   <button
                     type="button"
                     onClick={() => setActiveIndex(i)}
-                    className={`cursor-pointer text-body-lg flex items-center justify-between px-4 py-1 text-left text-lg font-medium transition-colors ${
+                    className={`cursor-pointer text-body-lg flex items-center justify-between px-4 py-1 xl:py-2  2xl:py-5  text-left text-lg font-medium transition-colors ${
                       isActive
                         ? "rounded-lg bg-[#EAEAF8] text-[#03030F]"
                         : "text-[#03030F] hover:bg-neutral-50"
@@ -195,12 +204,12 @@ export default function EnterpriseAiSolution() {
           <Reveal
             variant="up"
             custom={1}
-            className="relative mx-auto h-[clamp(16rem,26vw,28rem)] w-[clamp(13rem,21vw,23rem)] min-w-0 pt-10"
+            className="relative mx-auto h-[clamp(18rem,29vw,32rem)] w-[clamp(15rem,24vw,26rem)] min-w-0 pt-10"
           >
             {categories.map((cat, i) => {
               const position = (i - activeIndex + total) % total; // 0 = front
               const isActive = position === 0;
-              const translateY = -position * 28;
+              const translateY = -position * (isWide3xl ? 40 : 30);
               const scale = 1 - position * 0.06;
               const opacity = isActive ? 1 : Math.max(1 - position * 0.2, 0.25);
               const zIndex = total - position;
@@ -235,7 +244,7 @@ export default function EnterpriseAiSolution() {
           {/* Right: capability points */}
           <Reveal variant="right" custom={2}>
             <AnimatePresence mode="wait">
-              <motion.ul key={active.id} className="space-y-2.5">
+              <motion.ul key={active.id} className="space-y-3">
                 {active.points.map((point, i) => (
                   <motion.li
                     key={point}

@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, ChevronDown, Search, X } from "lucide-react";
+import { ChevronDown, Search, X } from "lucide-react";
 import { ArrowRight, ArrowUp } from "iconsax-react";
 import Button from "./Button";
 import megaMenuJson from "@/lib/megaMenu.json";
@@ -45,34 +45,18 @@ function PanelHeading({
   heading,
   description,
   className,
-  onBack,
 }: {
   heading?: string;
   description?: string;
   className: string;
-  onBack?: () => void;
 }) {
   if (!heading && !description) return null;
   return (
     <div className={className}>
-      <div className="flex items-start gap-2">
-        {onBack && (
-          <button
-            type="button"
-            onClick={onBack}
-            aria-label="Back"
-            className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-gray-500 transition-colors bg-background hover:bg-primary  hover:text-[white]"
-          >
-            <ArrowLeft size={24} />
-          </button>
-        )}
-        <div>
-          {heading && <p className="  text-body-lg">{heading}</p>}
-          {description && (
-            <p className="mt-1 text-sm text-gray-500">{renderBoldSegments(description)}</p>
-          )}
-        </div>
-      </div>
+      {heading && <p className="  text-body-lg">{heading}</p>}
+      {description && (
+        <p className="mt-1 text-sm text-gray-500">{renderBoldSegments(description)}</p>
+      )}
     </div>
   );
 }
@@ -81,46 +65,13 @@ function ColumnsList({
   content,
   activeHref,
   onSelect,
-  layout = "columns",
 }: {
   content: MegaMenuColumnsContent;
   activeHref: string | null;
   onSelect: (href: string) => void;
-  layout?: "columns" | "row";
 }) {
-  if (layout === "row") {
-    const links = (content.columns ?? []).flatMap((c) => c.links);
-    return (
-      <div className="flex flex-col gap-y-1">
-        {links.map((link) => {
-          const isActive = link.href === activeHref;
-          return (
-            <button
-              key={link.href}
-              type="button"
-              onClick={() => onSelect(link.href)}
-              className={`group flex w-full items-center justify-between rounded-lg py-[clamp(0.375rem,1.2vh,0.75rem)] pl-3 pr-4 text-left text-body-lg transition-colors 2xl:pl-5 2xl:pr-8 2xl:text-xl ${
-                isActive
-                  ? "bg-background font-semibold text-[#03030F]"
-                  : "text-gray-600 hover:bg-[#EAEAF8]"
-              }`}
-            >
-              {link.label}
-              <ActiveArrow
-                size={24}
-                className={`text-[#03030F] transition-opacity ${
-                  isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
-                }`}
-              />
-            </button>
-          );
-        })}
-      </div>
-    );
-  }
-
   return (
-    <div className="grid min-w-0 grid-cols-1 gap-y-1 sm:grid-cols-2 sm:gap-x-[10%]">
+    <div className="grid min-w-0 grid-cols-1 gap-y-1 sm:grid-cols-2">
       {(content.columns ?? []).map((column, i) => (
         <div key={i}>
           {column.heading && (
@@ -166,7 +117,7 @@ function PromoCard({ promo, onNavigate }: { promo: MegaMenuPromo; onNavigate: ()
       <Link
         href={promo.href}
         onClick={onNavigate}
-        className="group relative block aspect-[16/9] w-full overflow-hidden rounded-2xl"
+        className="group relative block aspect-[3/2] w-full overflow-hidden rounded-2xl"
       >
         <Image
           src={promo.image}
@@ -177,11 +128,11 @@ function PromoCard({ promo, onNavigate }: { promo: MegaMenuPromo; onNavigate: ()
         />
       </Link>
       <div className="pt-3">
-        <p className="mb-1 text-body-xl font-semibold text-gray-900">{promo.title}</p>
+        <p className="mb-1 text-body-lg font-semibold text-gray-900">{promo.title}</p>
         <p className="mb-3 pb-3   text-gray-500">
           {promo.description}
         </p>
-        <div className="flex justify-start">
+        <div className="flex justify-end">
           <Button href={promo.href} variant="primary" iconSize={14} minWidth="0px" onClick={onNavigate}>
             {promo.ctaLabel}
           </Button>
@@ -203,7 +154,7 @@ function DrilldownNavList({
   const active = activeLabel;
 
   return (
-    <ul className="space-y-2">
+    <ul className="space-y-1">
       {items.map((item) => (
         <li key={item.label}>
           <button
@@ -576,24 +527,15 @@ export default function MegaMenu({
           <div
             className={`hidden min-h-0 flex-1 ${
               activeContent?.kind === "drilldown"
-                ? "sm:grid sm:grid-rows-[auto_1fr] sm:grid-cols-[1fr_1fr_1fr] 3xl:grid-cols-[1fr_1fr_1fr_1fr]!"
+                ? "sm:grid sm:grid-rows-[auto_1fr] sm:grid-cols-[1fr_1fr_1fr_1fr]"
                 : hasColumnLinks
-                ? activeItemId === "industries"
-                  ? `sm:grid 3xl:grid-cols-[1fr_2fr_1fr]! ${
-                      activeLinkHref ? "sm:grid-cols-[2fr_1fr]" : "sm:grid-cols-[1fr_2fr]"
-                    }`
-                  : "sm:grid sm:grid-cols-[1fr_1fr_1fr] 3xl:grid-cols-[1fr_1fr_1fr_1fr]!"
-                : "sm:grid sm:grid-cols-[1fr_1fr_1fr] 3xl:grid-cols-[1fr_1fr_2fr]!"
+                ? "sm:grid sm:grid-cols-[1fr_2fr_1fr]"
+                : "sm:grid sm:grid-cols-[25%_30%_45%]"
             }`}
           >
             <nav
               className={`scrollbar-hide overflow-y-auto border-r border-[#03030F]/20 py-[clamp(0.5rem,2vh,1.25rem)] pl-3 2xl:pl-8 ${
                 activeContent?.kind === "drilldown" ? "sm:row-span-2" : ""
-              } ${
-                (activeItemId === "industries" && activeLinkHref) ||
-                (activeContent?.kind === "drilldown" && activeGroupLabel)
-                  ? "sm:hidden 3xl:block!"
-                  : ""
               }`}
             >
               {megaMenu.groups.map((group, i) => (
@@ -656,24 +598,14 @@ export default function MegaMenu({
                     <PanelHeading
                       heading={activeContent.heading}
                       description={activeContent.description}
-                      className="shrink-0 border-b border-[#03030F]/20 px-6 py-2 sm:px-6"
-                      onBack={
-                        activeItemId === "industries" && activeLinkHref
-                          ? () => setActiveLinkHref(null)
-                          : undefined
-                      }
+                      className="shrink-0 border-b border-[#03030F]/20 px-8 py-2 sm:px-8"
                     />
 
-                    <div className="scrollbar-hide min-h-0 flex-1 overflow-y-auto px-6 py-2 sm:px-6">
+                    <div className="scrollbar-hide min-h-0 flex-1 overflow-y-auto px-6 py-2 sm:px-4">
                       <ColumnsList
                         content={activeContent}
                         activeHref={activeLinkHref}
                         onSelect={setActiveLinkHref}
-                        layout={
-                          ["capabilities", "product-solutions"].includes(activeItemId)
-                            ? "row"
-                            : "columns"
-                        }
                       />
                     </div>
                   </div>
@@ -690,13 +622,10 @@ export default function MegaMenu({
                 <PanelHeading
                   heading={activeContent.heading}
                   description={activeContent.description}
-                  className={`border-b border-[#03030F]/20 py-2 sm:px-6 3xl:col-start-2! 3xl:col-span-3! ${
-                    activeGroupLabel ? "sm:col-span-3" : "sm:col-start-2 sm:col-span-2"
-                  }`}
-                  onBack={activeGroupLabel ? () => setActiveGroupLabel(null) : undefined}
+                  className="sm:col-span-3 border-b border-[#03030F]/20 py-2 sm:px-6"
                 />
 
-                <div className="overflow-y-auto border-r border-[#03030F]/20 px-2 py-6 sm:px-6">
+                <div className="overflow-y-auto border-r border-[#03030F]/20 px-2 py-6 sm:px-4">
                   <DrilldownNavList
                     items={activeContent.categories}
                     activeLabel={activeCategoryLabel}
@@ -705,9 +634,9 @@ export default function MegaMenu({
                 </div>
 
                 <div
-                  className={`overflow-y-auto px-6 py-6 sm:px-6 ${
-                    activeDrilldownGroup ? "border-r border-[#03030F]/20" : ""
-                  } ${!activeCategoryLabel ? "hidden 3xl:block!" : ""}`}
+                  className={`overflow-y-auto px-6 py-6 sm:px-8 ${
+                    activeDrilldownCategory ? "border-r border-[#03030F]/20" : ""
+                  }`}
                 >
                   {activeDrilldownCategory && (
                     activeDrilldownCategory.groups.length > 0 ? (
@@ -725,11 +654,7 @@ export default function MegaMenu({
                   )}
                 </div>
 
-                <div
-                  className={`overflow-y-auto px-6 py-6 sm:px-6 ${
-                    !activeGroupLabel ? "hidden 3xl:block!" : ""
-                  }`}
-                >
+                <div className="overflow-y-auto px-6 py-6 sm:px-8">
                   {activeDrilldownGroup && (
                     <>
                       <SectionLabel>{activeDrilldownGroup.label}</SectionLabel>
