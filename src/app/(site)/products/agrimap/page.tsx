@@ -43,12 +43,11 @@ export default function AgriMapPage() {
   return ( 
 
     <main className="w-full bg-[#F7F5F1] "> 
+ {/* Layer 1: Global Platform Banner Area */} 
 
-      {/* Layer 1: Global Platform Banner Area */} 
+<AgriMapHero /> 
 
-      <AgriMapHero /> 
-
-      <StatsGridThree 
+<StatsGridThree 
 
               stats={[ 
 
@@ -61,32 +60,31 @@ export default function AgriMapPage() {
               ] as any} 
 
       /> 
+ <AgriMapOverview />  
 
-      <AgriMapOverview />  
+ <AgriMapFeatures />  
 
-      <AgriMapFeatures />  
+<AgriMapSteps />  
 
-      <AgriMapSteps />  
+<AgriMapUseCases />  
 
-      <AgriMapUseCases />  
+<AgriMapAudience />  
 
-      <AgriMapAudience />  
+<CaseStudies {...caseStudiesData}  bgClassName='bg-white'/> 
 
-      <CaseStudies {...caseStudiesData}  bgClassName='bg-white'/> 
+ <FAQSection faqs={agriFaqs} bgClassName='bg-[#F7F5F1]'/> 
 
-      <FAQSection faqs={agriFaqs} bgClassName='bg-[#F7F5F1]'/> 
+ <CaseStudies {...insightData} bgClassName='bg-white'/> 
 
-      <CaseStudies {...insightData} bgClassName='bg-white'/> 
-
-      <Suscribe /> 
+<Suscribe /> 
 
  
  
 
-      {/* Next sections layout lines will stack directly here */} 
+{/* Next sections layout lines will stack directly here */} 
 
-    </main> 
+</main> 
 
-  ); 
+ ); 
 
 } 

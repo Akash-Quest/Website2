@@ -42,48 +42,46 @@ export default function SkyquestLabsPage() {
 
       {/* Layer 1: Global Platform Banner Area */} 
 
-      <SQLabHero /> 
+<SQLabHero /> 
 
-      <StatsGridThree 
+ <StatsGridThree 
 
-        stats={[ 
+stats={[ 
 
-          { target: 25, suffix: "", label: "Minutes per report" }, 
+ { target: 25, suffix: "", label: "Minutes per report" }, 
 
-          { suffix: "24x7", label: "365 days availability" }, 
+ { suffix: "24x7", label: "365 days availability" }, 
 
-          { target: 5, suffix: "yr", label: "Digital records" }, 
+{ target: 5, suffix: "yr", label: "Digital records" }, 
 
-        ] as any} 
+ ] as any} 
 
-      /> 
-
- 
-
-      <SQProblem />  
-
-      <SQLabSteps />  
-
-      <SQLabWIF />  
-
-      <SQLabsFeatures />  
-
-      <SQLabPlatform /> 
-
-      <CaseStudies {...caseStudiesData} /> 
-
-      <FAQSection faqs={SQLabFaqs} /> 
-
-      <CaseStudies {...insightData} /> 
-
-      <Suscribe /> 
+/> 
 
  
 
-      {/* Next sections layout lines will stack directly here */} 
+<SQProblem />  
+ <SQLabSteps />  
 
-    </main> 
+ <SQLabWIF />  
 
-  ); 
+<SQLabsFeatures />  
+
+ <SQLabPlatform /> 
+<CaseStudies {...caseStudiesData} /> 
+
+<FAQSection faqs={SQLabFaqs} /> 
+
+<CaseStudies {...insightData} /> 
+
+<Suscribe /> 
+
+ 
+
+{/* Next sections layout lines will stack directly here */} 
+
+ </main> 
+
+ ); 
 
 } 

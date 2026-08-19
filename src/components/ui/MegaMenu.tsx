@@ -124,7 +124,7 @@ function PromoCard({ promo, onNavigate }: { promo: MegaMenuPromo; onNavigate: ()
           alt={promo.title}
           fill
           sizes="288px"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-fill transition-transform duration-500 group-hover:scale-105"
         />
       </Link>
       <div className="pt-3">
@@ -530,7 +530,7 @@ export default function MegaMenu({
                 ? "sm:grid sm:grid-rows-[auto_1fr] sm:grid-cols-[1fr_1fr_1fr_1fr]"
                 : hasColumnLinks
                 ? "sm:grid sm:grid-cols-[1fr_2fr_1fr]"
-                : "sm:grid sm:grid-cols-[25%_35%_40%]"
+                : "sm:grid sm:grid-cols-[25%_30%_45%]"
             }`}
           >
             <nav
