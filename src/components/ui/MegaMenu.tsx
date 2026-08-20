@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ChevronDown, Search, X } from "lucide-react";
 import { ArrowRight, ArrowUp } from "iconsax-react";
 import Button from "./Button";
@@ -162,7 +163,7 @@ function ColumnsList({
 
 function PromoCard({ promo, onNavigate }: { promo: MegaMenuPromo; onNavigate: () => void }) {
   return (
-    <div className="w-full overflow-hidden ">
+    <div key={promo.href} className="w-full overflow-hidden animate-promo-in">
       <Link
         href={promo.href}
         onClick={onNavigate}
@@ -269,10 +270,12 @@ export default function MegaMenu({
   triggerBgClassName?: string;
 }) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [activeItemId, setActiveItemId] = useState(firstItemWithContent);
   const [activeCategoryLabel, setActiveCategoryLabel] = useState<string | null>(null);
   const [activeGroupLabel, setActiveGroupLabel] = useState<string | null>(null);
   const [activeLinkHref, setActiveLinkHref] = useState<string | null>(null);
+  const [drilldownDirection, setDrilldownDirection] = useState<"forward" | "backward">("forward");
 
   const [mobileOpenItemId, setMobileOpenItemId] = useState<string | null>(null);
   const [mobileOpenCategoryLabel, setMobileOpenCategoryLabel] = useState<string | null>(null);
@@ -334,9 +337,19 @@ export default function MegaMenu({
   }, [activeDrilldownCategory, activeGroupLabel]);
 
   const handleHoverSector = (label: string) => {
+    setDrilldownDirection("forward");
     setActiveCategoryLabel(label);
     setActiveGroupLabel(null);
   };
+
+  const handleHoverGroup = (label: string) => {
+    setDrilldownDirection("forward");
+    setActiveGroupLabel(label);
+  };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (!open) {
@@ -362,20 +375,40 @@ export default function MegaMenu({
     <>
       <button
         type="button"
-        onClick={() => setOpen(true)}
-        aria-label="Open menu"
+        onClick={() => setOpen((prev) => !prev)}
+        aria-label={open ? "Close menu" : "Open menu"}
         aria-expanded={open}
         className={`group inline-flex h-8 w-8 2xl:h-10 2xl:w-10 cursor-pointer items-center justify-center rounded-full transition-colors hover:bg-primary ${triggerBgClassName}`}
       >
-        <div className="flex h-3 flex-col justify-between">
-          <span className="block h-0.5 w-4 2xl:w-6 rounded bg-black transition-colors group-hover:bg-white" />
-          <span className="block h-0.5 w-4 2xl:w-6 rounded bg-black transition-colors group-hover:bg-white" />
-          <span className="block h-0.5 w-4 2xl:w-6 rounded bg-black transition-colors group-hover:bg-white" />
+        <div className="flex h-3 w-4 2xl:w-6 flex-col justify-between">
+          <span
+            className={`block h-0.5 w-4 2xl:w-6 origin-center rounded bg-black transition-all duration-300 ease-out group-hover:bg-white ${
+              open ? "translate-y-[5px] rotate-45" : ""
+            }`}
+          />
+          <span
+            className={`block h-0.5 w-4 2xl:w-6 rounded bg-black transition-all duration-200 ease-out group-hover:bg-white ${
+              open ? "scale-x-0 opacity-0" : "scale-x-100 opacity-100"
+            }`}
+          />
+          <span
+            className={`block h-0.5 w-4 2xl:w-6 origin-center rounded bg-black transition-all duration-300 ease-out group-hover:bg-white ${
+              open ? "-translate-y-[5px] -rotate-45" : ""
+            }`}
+          />
         </div>
       </button>
 
-      {open && createPortal(
-        <div className="fixed inset-0 z-[1000] flex flex-col bg-white">
+      {mounted && createPortal(
+        <AnimatePresence>
+          {open && (
+        <motion.div
+          className="fixed inset-0 z-[1000] flex flex-col bg-white"
+          initial={{ opacity: 0, y: -16 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -16 }}
+          transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+        >
           <div className="flex shrink-0 items-center gap-4 border-b border-[#03030F]/20 px-4 py-3 sm:px-6">
             <div className="flex items-center gap-3 sm:gap-4">
               <button
@@ -670,7 +703,7 @@ export default function MegaMenu({
                         activeHref={activeLinkHref}
                         onSelect={setActiveLinkHref}
                         layout={
-                          ["capabilities", "product-solutions"].includes(activeItemId)
+                          ["capabilities", "product-solutions", "insights"].includes(activeItemId)
                             ? "row"
                             : "columns"
                         }
@@ -693,7 +726,14 @@ export default function MegaMenu({
                   className={`border-b border-[#03030F]/20 py-2 sm:px-6 3xl:col-start-2! 3xl:col-span-3! ${
                     activeGroupLabel ? "sm:col-span-3" : "sm:col-start-2 sm:col-span-2"
                   }`}
-                  onBack={activeGroupLabel ? () => setActiveGroupLabel(null) : undefined}
+                  onBack={
+                    activeGroupLabel
+                      ? () => {
+                          setDrilldownDirection("backward");
+                          setActiveGroupLabel(null);
+                        }
+                      : undefined
+                  }
                 />
 
                 <div className="overflow-y-auto border-r border-[#03030F]/20 px-2 py-6 sm:px-6">
@@ -709,20 +749,30 @@ export default function MegaMenu({
                     activeDrilldownGroup ? "border-r border-[#03030F]/20" : ""
                   } ${!activeCategoryLabel ? "hidden 3xl:block!" : ""}`}
                 >
-                  {activeDrilldownCategory && (
-                    activeDrilldownCategory.groups.length > 0 ? (
-                      <>
-                        <SectionLabel>{activeDrilldownCategory.label}</SectionLabel>
-                        <DrilldownNavList
-                          items={activeDrilldownCategory.groups}
-                          activeLabel={activeGroupLabel}
-                          onHover={setActiveGroupLabel}
-                        />
-                      </>
-                    ) : (
-                      <p className="text-sm text-gray-500">More industries coming soon.</p>
-                    )
-                  )}
+                  <AnimatePresence mode="wait" initial={false}>
+                    {activeDrilldownCategory && (
+                      <motion.div
+                        key={activeCategoryLabel}
+                        initial={{ opacity: 0, x: drilldownDirection === "forward" ? 32 : -32 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: drilldownDirection === "forward" ? -32 : 32 }}
+                        transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                      >
+                        {activeDrilldownCategory.groups.length > 0 ? (
+                          <>
+                            <SectionLabel>{activeDrilldownCategory.label}</SectionLabel>
+                            <DrilldownNavList
+                              items={activeDrilldownCategory.groups}
+                              activeLabel={activeGroupLabel}
+                              onHover={handleHoverGroup}
+                            />
+                          </>
+                        ) : (
+                          <p className="text-sm text-gray-500">More industries coming soon.</p>
+                        )}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
 
                 <div
@@ -730,20 +780,30 @@ export default function MegaMenu({
                     !activeGroupLabel ? "hidden 3xl:block!" : ""
                   }`}
                 >
-                  {activeDrilldownGroup && (
-                    <>
-                      <SectionLabel>{activeDrilldownGroup.label}</SectionLabel>
-                      <DrilldownLinkList
-                        links={activeDrilldownGroup.links}
-                        onNavigate={() => setOpen(false)}
-                      />
-                    </>
-                  )}
+                  <AnimatePresence mode="wait" initial={false}>
+                    {activeDrilldownGroup && (
+                      <motion.div
+                        key={activeGroupLabel}
+                        initial={{ opacity: 0, x: drilldownDirection === "forward" ? 32 : -32 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: drilldownDirection === "forward" ? -32 : 32 }}
+                        transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                      >
+                        <SectionLabel>{activeDrilldownGroup.label}</SectionLabel>
+                        <DrilldownLinkList
+                          links={activeDrilldownGroup.links}
+                          onNavigate={() => setOpen(false)}
+                        />
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
               </>
             )}
           </div>
-        </div>,
+        </motion.div>
+          )}
+        </AnimatePresence>,
         document.body
       )}
     </>
