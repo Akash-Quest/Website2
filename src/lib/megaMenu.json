@@ -289,7 +289,7 @@
                     "href": "/products/agrimap",
                     "featured": true,
                     "promo": {
-                      "image": "/Productsoln/Pr1.jpg",
+                      "image": "/Productsoln/AgriMapMM.jpg",
                       "title": "AgriMap",
                       "description": "AgriMap gives agriculture departments, banks, and governments a real-time view of seed replacement rates, crop health, and variety adoption across every district down to the block level.",
                       "href": "/products/agrimap",
@@ -300,7 +300,7 @@
                     "label": "Inspect Global",
                     "href": "/products/inspectglobal",
                     "promo": {
-                      "image": "/Productsoln/Pr2.jpg",
+                      "image": "/Productsoln/InspectGlobalMM.jpg",
                       "title": "Inspect Global",
                       "description": "InspectGlobal fuses satellite, GPS, drones, IoT, and AI into one verified record of progress, risk, and compliance so decisions don't rely on someone's word.",
                       "href": "/products/inspectglobal",
@@ -311,7 +311,7 @@
                     "label": "MineralIQ",
                     "href": "/products/mineraliq",
                     "promo": {
-                      "image": "/Productsoln/Pr3.jpg",
+                      "image": "/Productsoln/MineralIqMM.jpg",
                       "title": "MineralIQ",
                       "description": "MineralIQ delivers predictive geology and exploration intelligence to mining companies, identifying high-potential zones faster than traditional surveys.",
                       "href": "/products/mineraliq",
@@ -326,7 +326,7 @@
                     "label": "Skyquest Labs",
                     "href": "/products/sqlabs",
                     "promo": {
-                      "image": "/Productsoln/Pr4.jpg",
+                      "image": "/Productsoln/SkyquestLabsMM.jpg",
                       "title": "Skyquest Labs",
                       "description": "Skyquest Labs connects physical diagnostic labs to qualified pathologists remotely, delivering verified reports in under 15 minutes. Only data travels. Never the sample.",
                       "href": "/products/sqlabs",
@@ -337,7 +337,7 @@
                     "label": "DeCarbonX",
                     "href": "/products/decarbonx",
                     "promo": {
-                      "image": "/Productsoln/Pr5.jpg",
+                      "image": "/Productsoln/DecarbonxMM.jpg",
                       "title": "DeCarbonX",
                       "description": "DeCarbonX turns climate project ideas into finance-ready instruments, carbon credits, green bonds, and Article 6 forwards with full national data sovereignty and AI-driven MRV.",
                       "href": "/products/decarbonx",
@@ -348,7 +348,7 @@
                     "label": "AlwaysOn",
                     "href": "/products/alwayson",
                     "promo": {
-                      "image": "/Productsoln/Pr6.jpg",
+                      "image": "/Productsoln/AlwaysOnMM.jpg",
                       "title": "AlwaysOn",
                       "description": "AlwaysOn delivers AI-powered diagnostic services directly through WhatsApp, the world's most-used messaging platform. No app. No barrier. No delay.",
                       "href": "/products/alwayson",
@@ -1005,7 +1005,7 @@
             "heading": "About SkyQuest",
             "description": "SkyQuest is a global consulting firm helping leaders grow, transform digitally, and build sustainable impact across strategy, technology, research and social development.",
             "promo": {
-              "image": "/AboutUs/AboutUsHero.jpg",
+              "image": "/AboutUs/aboutusmanuimage.jpg",
               "title": "Transforming Business Through Strategy & Technology",
               "description": "SkyQuest is a global consulting firm helping leaders grow, transform digitally, and build sustainable impact across strategy, technology, research and social development.",
               "href": "/about",
@@ -1022,7 +1022,7 @@
             "heading": "Contact Us",
             "description": "Have a question or opportunity in mind? SkyQuest makes it faster and easier to connect with our team and explore how we can help your business grow.",
             "promo": {
-              "image": "/Contact/ContactUs.jpg",
+              "image": "/Contact/Contactus2.jpg",
               "title": "How can we help?",
               "description": "Have a question or opportunity in mind? SkyQuest makes it faster and easier to connect with our team and explore how we can help your business grow.",
               "href": "/contact",

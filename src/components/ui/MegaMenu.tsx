@@ -174,7 +174,7 @@ function PromoCard({ promo, onNavigate }: { promo: MegaMenuPromo; onNavigate: ()
           alt={promo.title}
           fill
           sizes="288px"
-          className="object-fill transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </Link>
       <div className="pt-3">
@@ -736,7 +736,7 @@ export default function MegaMenu({
                   }
                 />
 
-                <div className="overflow-y-auto border-r border-[#03030F]/20 px-2 py-6 sm:px-6">
+                <div className="scrollbar-hide overflow-y-auto border-r border-[#03030F]/20 px-2 py-6 sm:px-6">
                   <DrilldownNavList
                     items={activeContent.categories}
                     activeLabel={activeCategoryLabel}
@@ -745,7 +745,7 @@ export default function MegaMenu({
                 </div>
 
                 <div
-                  className={`overflow-y-auto px-6 py-6 sm:px-6 ${
+                  className={`scrollbar-hide overflow-y-auto px-6 py-6 sm:px-6 ${
                     activeDrilldownGroup ? "border-r border-[#03030F]/20" : ""
                   } ${!activeCategoryLabel ? "hidden 3xl:block!" : ""}`}
                 >
@@ -776,7 +776,7 @@ export default function MegaMenu({
                 </div>
 
                 <div
-                  className={`overflow-y-auto px-6 py-6 sm:px-6 ${
+                  className={`scrollbar-hide overflow-y-auto px-6 py-6 sm:px-6 ${
                     !activeGroupLabel ? "hidden 3xl:block!" : ""
                   }`}
                 >

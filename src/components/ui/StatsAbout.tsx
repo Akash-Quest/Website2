@@ -134,7 +134,7 @@ const StatsAbout = () => {
         {/* right spacer */}
         <div className="relative self-stretch">
           <svg className="absolute left-0 bottom-0 w-full" height="1.5" preserveAspectRatio="none">
-            <line x1="0" y1="0.75" x2="100%" y2="0.75" stroke="#4E4E57" strokeOpacity={0.5} strokeDasharray="8 6" />
+            <line x1="0" y1="0.75" x2="100%" y2="0.75" stroke="#4E4E57" strokeOpacity={0.5} strokeWidth="1.5" strokeDasharray="8 6" />
           </svg>
         </div>
       </div>
