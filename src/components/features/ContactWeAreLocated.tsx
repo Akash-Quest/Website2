@@ -26,6 +26,15 @@ const locations = [
     phone: "+1 351-333-4748",
     email: "info@skyquestt.com",
   },
+  {
+    city: "Mauritius",
+    branch: "",
+    company: "SkyQuest Luminary Limited",
+    address:
+      "C/O Animo Associates (Mauritius) Limited 8th Floor, The Core, 62 ICT Avenue Cybercity Ebene , PLaines Wilhems, 72201",
+    phone: "+1 351-333-4748",
+    email: "info@skyquestt.com",
+  },
 ];
 function LocationsSection() {
   return (
