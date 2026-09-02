@@ -35,6 +35,15 @@ const locations = [
     phone: "+1 351-333-4748",
     email: "info@skyquestt.com",
   },
+  {
+    city: "Ethiopia",
+    branch: "",
+    company: "SkyQuest Technology Consulting Pvt. Ltd.",
+    address:
+      "1st Floor, Gara Muleta Building, Bole Wollo Sefer Addis Ababa,Ethiopia",
+    phone: "+1 351-333-4748",
+    email: "info@skyquestt.com",
+  },
 ];
 function LocationsSection() {
   return (
