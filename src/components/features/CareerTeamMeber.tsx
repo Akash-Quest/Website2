@@ -103,7 +103,7 @@ const members: Member[] = [
     group: "team",
   },
   {
-    name: "Richa Thankur",
+    name: "Richa Thakur",
     title: "Lead - HR",
     location: "",
     image: "/Careers/Richa.jpg",

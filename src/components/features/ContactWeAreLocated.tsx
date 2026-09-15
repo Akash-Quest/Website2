@@ -9,20 +9,11 @@ const locations = [
     email: "info@skyquestt.com",
   },
   {
-    city: "Ahmedabad, India",
+    city: " India",
     branch: "",
     company: "SkyQuest Technology Consulting",
     address:
       "D-1001-1005, Swati Clover, Shilaj Circle, Sardar Patel Ring Rd, Thaltej, Ahmedabad, 380054",
-    phone: "+1 351-333-4748",
-    email: "info@skyquestt.com",
-  },
-  {
-    city: "New Delhi, India",
-    branch: "(Branch Office)",
-    company: "SkyQuest Technology Consulting",
-    address:
-      "325, Westend Mall, Near Janakpuri District Centre, Janakpuri, New Delhi-110058",
     phone: "+1 351-333-4748",
     email: "info@skyquestt.com",
   },
