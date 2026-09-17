@@ -36,19 +36,23 @@
      min() the padding keeps growing past 1920px while the width does not --
      at 25% zoom (~7680px viewport) it reached ~998px per side and collapsed
      the content box to min-content. */
+  /* Width cap and gutter are in rem, not px, so they scale with the root
+     font-size bump at the bottom of this file. 120rem = 1920px and
+     12rem = 192px at the default 16px root, so nothing changes below the
+     scale-up breakpoint. */
   .page-container {
-    @apply mx-auto  max-w-[1920px] px-4  py-12 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-30 ;
+    @apply mx-auto  max-w-[120rem] px-4  py-12 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-30 ;
 
     /* must come after the @apply above: same specificity, so order decides */
     @media (width >= 768px) {
-      padding-inline: min(10%, 192px);
+      padding-inline: min(10%, 12rem);
     }
   }
   .hero-container {
-     @apply mx-auto max-w-[1920px]  pt-16 lg:pt-16 xl:pt-20 2xl:pt-24 py-12 sm:py-12 md:pb-16 lg:pb-20 xl:pb-24 2xl:pb-30  ;
+     @apply mx-auto max-w-[120rem]  pt-16 lg:pt-16 xl:pt-20 2xl:pt-24 py-12 sm:py-12 md:pb-16 lg:pb-20 xl:pb-24 2xl:pb-30  ;
 
     @media (width >= 768px) {
-      padding-inline: min(10%, 192px);
+      padding-inline: min(10%, 12rem);
     }
   }
   .hero-title {
@@ -290,6 +294,43 @@ body {
 
 .report-body-2xl {
   font-size: clamp(1.5rem, 1.3rem + 0.4vw, 1.75rem);
-  line-height: clamp(2rem, 1.9rem + 0.3vw, 2.25rem); 
+  line-height: clamp(2rem, 1.9rem + 0.3vw, 2.25rem);
 }
  */
+
+/* ------------------------------
+   Large-screen scale-up
+
+   Past 1920px the layout is frozen: the width cap, the gutters and every
+   vw-based clamp have all hit their maximum (the clamps are calibrated to
+   cap at 1900px). The surplus width just becomes empty margin.
+
+   Bumping the root font-size scales everything rem-based in one step --
+   the h1-h5 clamps above, the card-height clamps in HomeCoreCapabilities,
+   Tailwind's spacing scale, and (because they are written in rem) the
+   .page-container width cap and gutter. So the BOX scales with its
+   contents rather than staying 1920px while the type grows.
+
+   The breakpoint must be the design width times the scale, not the design
+   width itself: at 1920px the layout is already at its intended size and
+   has no spare room, so scaling there only crowds it. 1920 x 1.25 = 2400,
+   which is the width at which a 1.25x copy actually fits.
+
+     < 2400px   1x    content 1536px, centred, empty margins
+     >= 2400px  1.25x  content 1920px, gutters 240px, cap 2400px
+
+   px values stay unscaled on purpose: borders, and the ~40 fixed
+   h-[NNNpx] heights, which are the things to check at this size.
+
+   Percent, not px, so a user who has set a larger browser font keeps
+   their preference.
+
+   Must stay OUTSIDE @layer -- unlayered rules outrank both @layer base
+   and @layer components above.
+-------------------------------- */
+
+@media (min-width: 2400px) {
+  :root {
+    font-size: 125%;
+  }
+}
