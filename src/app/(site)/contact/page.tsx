@@ -159,10 +159,10 @@ function ContactHero() {
             animate="visible"
             className="w-full max-w-[70%] bg-white rounded-md border border-gray-100 p-2 sm:p-4 lg:pb-4"
           >
-          <h2 className="text-body-lg font-bold text-gray-700 pb-1 2xl-pb-2">
+          <h2 className="text-body-xl font-bold text-gray-700 pb-1 2xl-pb-2">
             {tabContent.heading}
           </h2>
-          <p className="pb-3 text-body-sm text-gray-600">
+          <p className="pb-3 text-body-md text-gray-600">
             {tabContent.subtext}
           </p>
           <form className=" space-y-1 lg:space-y-2">

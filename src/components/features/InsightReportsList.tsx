@@ -312,7 +312,7 @@ export default function InsightsResult() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="bg-white">
       <div className="page-container py-8 sm:py-8 md:py-10 lg:py-8 xl:py-10 2xl:py-12 "  ref={resultsRef}>
         <div className="">
           <div className="flex items-center justify-between">

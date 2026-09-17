@@ -26,7 +26,7 @@ const stack = [
       "LLM integration, RAG system builds, agent frameworks, and enterprise GenAI application development.",
   },
   {
-     icons: ["/All logos/SQL.svg", "/All logos/MangoDB.svg"],
+     icons: ["/All logos/SQL.svg", "/All logos/Mongodb.svg"],
     title: "SQL/MongoDB",
     description:
       "Deep learning model development, training, and deployment across classification, regression, and generative tasks.",
