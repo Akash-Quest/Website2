@@ -104,7 +104,7 @@ const TransformAccordion: React.FC<TransformAccordionProps> = ({
                       ? "rgba(255,255,255,0) rgba(255,255,255,0.1) rgba(255,255,255,0.1) rgba(255,255,255,0.1)"
                       : "rgba(255,255,255,0.1)",
                 }}
-                className={` relative flex min-h-[130px] flex-col justify-start overflow-hidden rounded-[18px] border px-6 py-6 text-left transition-all duration-300 cursor-pointer ${
+                className={` relative flex min-h-[8.125rem] flex-col justify-start overflow-hidden rounded-[18px] border px-6 py-6 text-left transition-all duration-300 cursor-pointer ${
                   index !== 0 ? "-mt-5" : ""
                 }`}
               >
@@ -176,7 +176,7 @@ const TransformAccordion: React.FC<TransformAccordionProps> = ({
                       ? "rgba(255,255,255,0.1) rgba(255,255,255,0) rgba(255,255,255,0.1) rgba(255,255,255,0.1)"
                       : "rgba(255,255,255,0.1)",
                 }}
-                className={`relative flex h-[350px] flex-col justify-start overflow-hidden rounded-[18px] border px-10 py-7 text-left transition-all duration-300 cursor-pointer ${
+                className={`relative flex h-[21.875rem] flex-col justify-start overflow-hidden rounded-[18px] border px-10 py-7 text-left transition-all duration-300 cursor-pointer ${
                   index !== cards.length - 1 ? "-mr-[2rem]" : ""
                 }`}
               >

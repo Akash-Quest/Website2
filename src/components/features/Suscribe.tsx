@@ -29,9 +29,11 @@ export default function Suscribe({
   return (
     <div className={bgClassName}>
       {/* px-0 keeps the image full-bleed on mobile (see rounded-none below).
-          The md gutter is capped at 192px (10% of 1920) to match .page-container --
-          it has to be repeated here because utilities outrank @layer components. */}
-      <div className={` page-container ${className} px-0 md:px-[min(10%,192px)] ` }>
+          The md gutter must stay in rem and match .page-container's
+          min(10%, 12rem) exactly, or this section diverges from every other
+          one once the root font-size scales up past 2400px. It has to be
+          repeated here because utilities outrank @layer components. */}
+      <div className={` page-container ${className} px-0 md:px-[min(10%,12rem)] ` }>
       <div className="relative w-full rounded-none md:rounded-2xl overflow-hidden bg-[url('/Hero/suscribelit.jpg')] md:bg-[url('/Hero/patang.jpg')] bg-cover bg-center">
 
         {/* Content */}
