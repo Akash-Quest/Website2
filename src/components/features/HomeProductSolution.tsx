@@ -13,6 +13,7 @@ const tabs = [
   "Skyquest Labs",
   "DeCarbonX",
   "AlwaysOn",
+  "AgriPath",
 ];
 
 const tabContent: Record<
@@ -113,6 +114,20 @@ const tabContent: Record<
     buttonLabel: "AlwaysOn",
     image: "/Productsoln/Pr6.jpg",
     href: "/products/alwayson",
+  },
+  AgriPath: {
+    badge: "AgriPath",
+    heading: (
+      <>
+        Know Where It Fits. Reach{" "}
+        <em>Every Market.</em>
+      </>
+    ),
+    description:
+      "AgriPath AI takes any agri-technology — a seed variety, a fertilizer blend, a crop-protection product, a piece of equipment — from a technology profile to a scored, regulation-ready market entry plan, across 90+ countries in Africa and Asia.",
+    buttonLabel: "AgriPath",
+    image: "/Productsoln/Agripath/Agripath.jpg",
+    href: "/products/agripath",
   },
 };
 

@@ -94,4 +94,15 @@ export const products: Product[] = [
     image: "/Productsoln/Pr6.jpg",
     href: "/products/alwayson",
   },
+  {
+    name: "AgriPath",
+    badge: "AgriPath",
+    tagline: "Know Where It Fits. Reach Every Market.",
+    taglineEmphasis: "Every Market.",
+    description:
+      "AgriPath AI takes any agri-technology — a seed variety, a fertilizer blend, a crop-protection product, a piece of equipment — from a technology profile to a scored, regulation-ready market entry plan, across 90+ countries in Africa and Asia.",
+    builtFor: "Agri-technology innovators, research institutes, trade bodies",
+    image: "/Productsoln/Agripath/Agripath.jpg",
+    href: "/products/agripath",
+  },
 ];

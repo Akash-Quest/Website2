@@ -354,7 +354,20 @@
                       "href": "/products/alwayson",
                       "ctaLabel": "Visit Page"
                     }
+                  },
+                  {
+                    "label": "Agripath",
+                    "href": "/products/agripath",
+                    "featured": true,
+                    "promo": {
+                      "image": "/Productsoln/AgripathMM.jpg",
+                      "title": "AgriPath",
+                      "description": "AgriPath AI takes any agri-technology — a seed variety, a fertilizer blend, a crop-protection product, a piece of equipment — from a technology profile to a scored, regulation-ready market entry plan, across 90+ countries in Africa and Asia.",
+                      "href": "/products/agripath",
+                      "ctaLabel": "Visit Page"
+                    }
                   }
+                  
                 ]
               }
             ],
