@@ -61,10 +61,10 @@ function ProductsHero() {
           {/* Left: text */}
           <div className="flex flex-col justify-center text-center lg:items-start lg:text-left">
             <Reveal as="h1" variant="left" custom={0} className="mb-2 font-bold text-black">
-              Find the Right Platform
-            
-              for {" "}
-              <em className="font-semibold">Your Challenge</em>
+              Intelligence Platforms
+
+              That Drive {" "}
+              <em className="font-semibold">Real Impact</em>
             </Reveal>
 
             <Reveal
