@@ -27,7 +27,9 @@ function DecarbonXProduct() {
               </li>
               <li className="text-gray-300">/</li>
               <li>
-                Product
+                <Link href="/products" className="hover:text-muted transition-colors">
+                  Products
+                </Link>
               </li>
               <li className="text-gray-300">/</li>
               <li className="text-gray-500"> DeCarbonX</li>

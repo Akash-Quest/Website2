@@ -26,11 +26,11 @@ function MineralIQProduct() {
                 </Link>
               </li>
               <li className="text-gray-300">/</li>
-              <li>
-                <Link href="/what-we-do" className="hover:text-muted transition-colors">
-                  Product
-                </Link>
-              </li>
+             <li>
+              <Link href="/products" className="hover:text-muted transition-colors">
+                Products
+              </Link>
+             </li>
               <li className="text-gray-300">/</li>
               <li className="text-gray-500"> MineralIQ</li>
             </ol>
