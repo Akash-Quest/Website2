@@ -298,9 +298,12 @@ export default function OurProductSolution() {
                 {content.description}
               </p>
             </div>
-            <div>
+            <div className="flex gap-4 mt-4">
               <Button href={content.href} variant="primary" iconSize={16}>
                   {content.buttonLabel}
+                </Button>
+                <Button  href="/products" variant="white" iconSize={16}>
+                  View All Products
                 </Button>
             </div>
           </motion.div>

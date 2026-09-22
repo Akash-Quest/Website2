@@ -40,9 +40,9 @@ export default function AgriPathPage() {
 
       <StatsGridThree
         stats={[
-          { target: 90, suffix: "+", label: "Countries covered" },
+          { target: 70, suffix: "+", label: "Countries covered" },
           { target: 5, suffix: "", label: "Workflow steps" },
-          { target: 12, suffix: "+", label: "Technology categories" },
+          { target: 10, suffix: "+", label: "Technology categories" },
         ]}
       />
 
