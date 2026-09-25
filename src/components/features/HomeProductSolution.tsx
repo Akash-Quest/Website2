@@ -160,10 +160,7 @@ function TabButton({
     : `linear-gradient(${borderLayer}, ${borderLayer})`;
 
   return (
-    // Single-element gradient border (background-clip padding-box/border-box)
-    // instead of a nested div+button pair — two independently rounded shapes
-    // never align perfectly on the curve, which made the ring look thicker
-    // on the sides than on the top/bottom.
+    
     <button
       onClick={onClick}
       className={`cursor-pointer rounded-full border-[1px] xl:border-[2px] border-transparent px-5 py-1.5 text-sm xl:text-base font-medium transition-colors duration-200 ${

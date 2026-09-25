@@ -1,0 +1,66 @@
+# SkyQuest Technology Consulting
+
+> An integrated strategy, technology and impact consulting firm helping
+> businesses and governments achieve sustainable growth. SkyQuest builds
+> satellite, AI and data platforms across agriculture, mining, infrastructure,
+> diagnostics, climate finance and public health, and delivers advisory and
+> programme-management services alongside them.
+
+SkyQuest operates across 12+ countries with 200+ engagements delivered. The
+sections below point to the canonical pages for each platform, capability and
+industry practice.
+
+## Products
+
+- [Products overview](https://www.skyquestt.com/products): All seven SkyQuest platforms, each built around a specific development challenge.
+- [AgriMap](https://www.skyquestt.com/products/agrimap): Seed intelligence platform giving agriculture departments, banks and governments a real-time view of seed replacement rates, crop health and variety adoption down to the block level.
+- [Inspect Global](https://www.skyquestt.com/products/inspectglobal): Fuses satellite, GPS, drones, IoT and AI into one verified record of project progress, risk and compliance for infrastructure owners, lenders and programme auditors.
+- [MineralIQ](https://www.skyquestt.com/products/mineraliq): Satellite-powered mining intelligence for governments, regulators, mining companies, investors and artisanal cooperatives — covering cadastre, compliance, production and environmental risk.
+- [SkyQuest Labs](https://www.skyquestt.com/products/sqlabs): Tele-pathology platform connecting diagnostic labs to remote pathologists, delivering verified reports in under 15 minutes. Only data travels, never the sample.
+- [DeCarbonX](https://www.skyquestt.com/products/decarbonx): Sovereign climate finance platform turning climate project ideas into finance-ready instruments, with digital MRV and national data sovereignty (Article 6, NDC 3.0).
+- [AlwaysOn](https://www.skyquestt.com/products/alwayson): WhatsApp-native health service delivery with AI-assisted symptom assessment, multilingual support and rapid expert referral.
+- [AgriPath](https://www.skyquestt.com/products/agripath): Takes any agri-technology from a technology profile to a scored, regulation-ready market entry plan across 90+ countries in Africa and Asia.
+
+## Capabilities
+
+- [Strategy & Policy Advisory](https://www.skyquestt.com/capabilities/strategy-policy-advisory)
+- [Business Intelligence & Market Research](https://www.skyquestt.com/capabilities/business-intelligence-market-research)
+- [Data & Artificial Intelligence](https://www.skyquestt.com/capabilities/data-artificial-intelligence)
+- [Digital Transformation & Emerging Technologies](https://www.skyquestt.com/capabilities/digital-transformation-emerging-technologies)
+- [Technology Transfer & Innovation](https://www.skyquestt.com/capabilities/technology-transfer-innovation)
+- [Integrated Program Management](https://www.skyquestt.com/capabilities/integrated-program-management)
+- [Livelihoods & Entrepreneurship](https://www.skyquestt.com/capabilities/livelihoods-entrepreneurship)
+- [Inclusive Finance & Institutional Strategy](https://www.skyquestt.com/capabilities/inclusive-finance-institutional-strategy)
+
+## Industries
+
+- [Agriculture & Food Systems](https://www.skyquestt.com/industries/agriculture-food-systems)
+- [Livestock, Fisheries & Animal Health](https://www.skyquestt.com/industries/livestock-fisheries-animal-health)
+- [Healthcare & Life Sciences](https://www.skyquestt.com/industries/healthcare-life-sciences)
+- [AI & Digital Economy](https://www.skyquestt.com/industries/ai-digital-economy)
+- [Climate & Environment](https://www.skyquestt.com/industries/climate-environment)
+- [Energy & Utilities](https://www.skyquestt.com/industries/energy-utilities)
+- [Water & Sanitation](https://www.skyquestt.com/industries/water-sanitation)
+- [Financial Services & Inclusive Finance](https://www.skyquestt.com/industries/financial-services-inclusive-finance)
+- [Public Sector & Digital Governance](https://www.skyquestt.com/industries/public-sector-digital-governance)
+- [Social Sector](https://www.skyquestt.com/industries/social-sector)
+- [Consumer Goods & Retail](https://www.skyquestt.com/industries/consumer-goods-retail)
+
+## Insights
+
+- [Case studies](https://www.skyquestt.com/case-studies): Engagement stories with measured outcomes.
+- [Insights](https://www.skyquestt.com/insight): Research notes, market analysis and sector reports.
+- [Thought leadership](https://www.skyquestt.com/Though-Leadership): Long-form perspectives from the SkyQuest team.
+
+## Company
+
+- [About SkyQuest](https://www.skyquestt.com/about)
+- [Leadership team](https://www.skyquestt.com/team)
+- [Careers](https://www.skyquestt.com/careers)
+- [Contact](https://www.skyquestt.com/contact)
+
+## Optional
+
+- [Privacy policy](https://www.skyquestt.com/privacy-policy)
+- [Cookie policy](https://www.skyquestt.com/cookies)
+- [XML sitemap](https://www.skyquestt.com/sitemap.xml): Full machine-readable index of every page, including all case studies and insight articles.

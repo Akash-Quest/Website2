@@ -199,10 +199,13 @@ export default function CaseStudies({
 
                       <Link
                         href={`${viewAllHref}/${slugify(card.title)}`}
-                        aria-label={`${readMoreButton}: ${card.title}`}
                         className="group/learn mt-3 inline-flex items-center text-sm 2xl:text-lg font-semibold text-primary cursor-pointer"
                       >
                         {readMoreButton}
+                        {/* Visually hidden, but read by crawlers and screen readers,
+                            so the anchor text names its destination instead of
+                            being a generic "Read More". */}
+                        <span className="sr-only">&nbsp;about {card.title}</span>
                         <span className="relative ml-1 h-3.5 w-3.5 overflow-hidden">
                           <span className="absolute inset-0 flex items-center justify-center transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/learn:translate-x-3 group-hover/learn:-translate-y-3 group-hover/learn:opacity-0">
                             <ArrowUp size={14} color="currentColor" variant="Linear" className="rotate-45 [&>path]:stroke-2" />
@@ -247,7 +250,7 @@ export default function CaseStudies({
 
                   <Link
                     href={`${viewAllHref}/${slugify(card.title)}`}
-                    aria-label={`${readMoreButton}: ${card.title}`}
+                    aria-label={`${card.title} — ${readMoreButton}`}
                     tabIndex={isExpanded ? 0 : -1}
                     className={`absolute inset-x-0 bottom-0 z-10 flex flex-col overflow-hidden rounded-2xl bg-white/55 backdrop-blur-lg backdrop-brightness-125 border-none text-[#15121F] transition-all duration-[250ms] ease-out [clip-path:inset(-1px_round_1rem)] ${
                       isExpanded

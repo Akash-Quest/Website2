@@ -65,13 +65,14 @@ const Footer = () => {
             <div className="border-b border-white/20 mt-10 pb-6 flex gap-2 items-center">
                 <h3 className=" text-body-lg text-white font-semibold">Follow Us</h3>
               {[
-                { icon: <TwitterIcon />, href: "https://x.com/skyquestt" },
-                { icon: <FacebookIcon />, href: "https://www.facebook.com/STI4SDG/" },
-                { icon: <LinkedInIcon />, href: "https://www.linkedin.com/company/skyquest-technology-consulting-private-limited/" },
-              ].map((social, i) => (
+                { icon: <TwitterIcon />, label: "SkyQuest on X", href: "https://x.com/skyquestt" },
+                { icon: <FacebookIcon />, label: "SkyQuest on Facebook", href: "https://www.facebook.com/STI4SDG/" },
+                { icon: <LinkedInIcon />, label: "SkyQuest on LinkedIn", href: "https://www.linkedin.com/company/skyquest-technology-consulting-private-limited/" },
+              ].map((social) => (
                 <a
-                  key={i}
+                  key={social.label}
                   href={social.href}
+                  aria-label={social.label}
                   target={social.href !== "#" ? "_blank" : undefined}
                   rel={social.href !== "#" ? "noopener noreferrer" : undefined}
                   className="w-7 h-7  rounded bg-white flex items-center justify-center text-[#03030F] hover:bg-gray-200 transition-colors [&>svg]:w-6 [&>svg]:h-6"
