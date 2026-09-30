@@ -17,7 +17,7 @@ const Header3 = () => {
         <div className="flex items-center gap-2 pointer-events-auto">
             <MegaMenu triggerBgClassName="bg-white" />
             <Link href="/" className="inline-flex items-center bg-transparent">
-                <img src="/Header/sky.svg" alt="Logo" className="h-5 sm:h-6 2xl:h-7 w-auto"/>
+                <img src="/Header/sky.svg" alt="SkyQuest" width={216} height={31} className="h-5 sm:h-6 2xl:h-7 w-auto"/>
             </Link>
         </div>
         {/* <div className="flex items-center gap-3 pointer-events-auto">

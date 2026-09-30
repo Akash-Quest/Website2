@@ -421,7 +421,7 @@ export default function MegaMenu({
               </button>
 
               <Link href="/" onClick={() => setOpen(false)}>
-                <img src="/Header/sky.svg" alt="SkyQuest" className="h-5 w-auto sm:h-6" />
+                <img src="/Header/sky.svg" alt="SkyQuest" width={216} height={31} className="h-5 w-auto sm:h-6" />
               </Link>
             </div>
 
