@@ -4,12 +4,14 @@ import Link from "next/link";
 import React from "react";
 interface ButtonProps {
   href?: string;
-  variant?: "primary" | "secondary" | "white";
+  variant?: "primary" | "secondary" | "white" | "gray";
   iconSize?: number;
   children: React.ReactNode;
   minWidth?: string;
   fullWidth?: boolean;
   onClick?: () => void;
+  /** Extra classes for a single call site. Applied last so they win. */
+  className?: string;
 }
 const VARIANT_STYLES: Record<
   NonNullable<ButtonProps["variant"]>,
@@ -33,6 +35,12 @@ const VARIANT_STYLES: Record<
     text: "group-hover/btn:text-white",
     textTransition: "transition-colors duration-[200ms]",
   },
+    gray: {
+    button: "bg-background text-black ",
+    icon: "bg-black text-white transition-colors duration-[200ms] group-hover/btn:bg-white group-hover/btn:text-primary",
+    text: "group-hover/btn:text-white",
+    textTransition: "transition-colors duration-[200ms]",
+  },
 };
 const Button: React.FC<ButtonProps> = ({
   href = "#",
@@ -42,6 +50,7 @@ const Button: React.FC<ButtonProps> = ({
   fullWidth = false,
   children,
   onClick,
+  className = "",
 }) => {
   const {
     button: buttonStyles,
@@ -61,6 +70,7 @@ const Button: React.FC<ButtonProps> = ({
         rounded-lg py-1 pl-3 pr-1 sm:py-1.5 sm:pl-4 sm:pr-1.5
         body-sm font-medium
         ${buttonStyles}
+        ${className}
       `}
     >
       {/* Round black bubble that sweeps in from the top-left corner on hover */}

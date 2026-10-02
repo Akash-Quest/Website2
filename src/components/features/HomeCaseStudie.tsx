@@ -98,8 +98,8 @@ export default function CaseStudies({
     setPage((safePage + 1) % totalPages);
 
   return (
-    <section className={`w-full ${bgClassName}`}>
-    <div className={`w-full rounded-xl page-container ${className}`}>
+    <section className={`w-full ${bgClassName} ${className}`}>
+    <div className={`w-full rounded-xl page-container `}>
         <motion.div
           variants={staggerContainer}
           initial="hidden"

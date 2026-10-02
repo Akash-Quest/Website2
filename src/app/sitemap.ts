@@ -3,6 +3,7 @@ import type { MetadataRoute } from "next";
 import { caseStudiesData } from "@/Constants/caseStudies";
 import { insightData } from "@/Constants/Insight ";
 import { products } from "@/Constants/products";
+import { CATEGORIES, reports } from "@/Constants/reports";
 import { SITE_URL } from "@/lib/site";
 import { slugify } from "@/lib/slug";
 
@@ -33,6 +34,7 @@ const STATIC_ROUTES: Array<{
   { path: "/products", changeFrequency: "monthly", priority: 0.9 },
   { path: "/case-studies", changeFrequency: "weekly", priority: 0.8 },
   { path: "/insight", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/reports", changeFrequency: "weekly", priority: 0.8 },
   { path: "/Though-Leadership", changeFrequency: "weekly", priority: 0.7 },
 
   { path: "/capabilities/strategy-policy-advisory", changeFrequency: "monthly", priority: 0.8 },
@@ -79,6 +81,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
+  // Report-category listings at /industries/<slug>.
+  const reportCategoryPages: MetadataRoute.Sitemap = CATEGORIES.map((category) => ({
+    url: `${SITE_URL}/industries/${slugify(category)}`,
+    lastModified,
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
+
+  // Individual report pages at /report/<slug>.
+  const reportPages: MetadataRoute.Sitemap = reports.map((report) => ({
+    url: `${SITE_URL}/report/${report.slug}`,
+    lastModified: parseDate(report.publishedDate) ?? lastModified,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
   // Slugs must match `generateStaticParams` in the [slug] routes, which derives
   // them the same way.
   const caseStudyPages: MetadataRoute.Sitemap = caseStudiesData.caseStudies.map((study) => ({
@@ -95,5 +113,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...productPages, ...caseStudyPages, ...insightPages];
+  return [
+    ...staticPages,
+    ...productPages,
+    ...reportCategoryPages,
+    ...reportPages,
+    ...caseStudyPages,
+    ...insightPages,
+  ];
 }
