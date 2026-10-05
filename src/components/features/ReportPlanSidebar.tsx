@@ -130,6 +130,7 @@ export default function ReportPlanSidebar({ report }: { report: Report }) {
               native submit would — required-field validation included. */}
           <Button
             variant="gray"
+            href="#sample"
             minWidth="100%"
             className="text-xs"
             onClick={() => formRef.current?.requestSubmit()}

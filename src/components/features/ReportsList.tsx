@@ -116,8 +116,15 @@ function ReportCard({
 }) {
   return (
     <article className="group flex flex-col gap-4 rounded-xl  bg-white p-3 transition-colors hover:border-gray-300 sm:flex-row sm:p-4">
-      {/* Cover */}
-      <div className="w-full shrink-0 overflow-hidden rounded-lg sm:w-44 md:w-52 lg:w-56">
+      {/* Cover — links to the same page as the title. Kept out of the tab order
+          and the accessibility tree so keyboard and screen-reader users don't
+          hit the same link twice. */}
+      <Link
+        href={`/report/${report.slug}`}
+        tabIndex={-1}
+        aria-hidden="true"
+        className="block w-full shrink-0 overflow-hidden rounded-lg sm:w-44 md:w-52 lg:w-56"
+      >
         <Image
           src={report.image}
           alt={`Cover of ${report.title}`}
@@ -125,7 +132,7 @@ function ReportCard({
           height={600}
           className="h-48 w-full rounded-lg object-cover sm:h-full"
         />
-      </div>
+      </Link>
 
       {/* Body */}
       <div className="flex min-w-0 flex-1 flex-col">

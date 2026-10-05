@@ -1,7 +1,6 @@
-import {  ArrowUp } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
-import ExpandableSearch from "./ExpandableSearch"
+import HeaderActions from "./HeaderActions"
 import MegaMenu from "./MegaMenu"
 
 const Header2 = () => {
@@ -20,14 +19,8 @@ const Header2 = () => {
                 <img src="/Header/sky.svg" alt="SkyQuest" width={216} height={31} className="h-5 sm:h-6 2xl:h-7 w-auto"/>
             </Link>
         </div>
-        {/* <div className="flex items-center gap-3 pointer-events-auto">
-            <ExpandableSearch bgClassName="bg-[#F7F5F1]" />
-            <div className="inline-flex items-center justify-center px-3 p-3 py-2 bg-[#F7F5F1] text-blue-700 hover:bg-blue-700 hover:text-black transition rounded-full">
-            <Link href="/signin" className=" flex items-center gap-.5 text-sm 2xl:text-base font-medium">
-                Sign in<ArrowUp size={18} className="rotate-45 " />
-            </Link>
-            </div>
-        </div> */}
+        {/* Page tone, so the controls stand out inside the white pill. */}
+        <HeaderActions bgClassName="bg-[#F7F5F1]" />
     </motion.header>
   )
 }

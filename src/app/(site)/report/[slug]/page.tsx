@@ -7,7 +7,6 @@ import FAQSection from "@/components/features/Faq";
 import CaseStudies from "@/components/features/HomeCaseStudie";
 import RelatedReports from "@/components/features/RelatedReports";
 import ReportDetailBody from "@/components/features/ReportDetailBody";
-import ReportPlanSidebar from "@/components/features/ReportPlanSidebar";
 import RequestCustomization from "@/components/features/RequestCustomization";
 import Suscribe from "@/components/features/Suscribe";
 import { reportFaqs } from "@/Constants/FaqReports";
@@ -16,11 +15,7 @@ import { buildReportDetail } from "@/Constants/reportDetail";
 import { getReportBySlug, reports } from "@/Constants/reports";
 import { SITE_URL } from "@/lib/site";
 
-/**
- * Individual report pages, mirroring skyquestt.com's /report/<slug> format
- * (e.g. /report/natural-surfactants-market). Note the singular segment — the
- * listing hub stays at /reports.
- */
+
 
 export function generateStaticParams() {
   return reports.map((report) => ({ slug: report.slug }));
@@ -107,7 +102,12 @@ export default async function ReportPage({
           </ol>
         </nav>
 
-        <h1 className="font-bold text-gray-900 text-body-xl">{detail.headline}</h1>
+        {/* Same `px-4 lg:px-0` as the breadcrumb so the two share a left edge —
+            hero-container adds no inline padding below md, so without this
+            the heading runs flush to the screen edge on phones. */}
+        <h1 className="mt-1 px-4 font-semibold leading-snug text-gray-900 text-body-xl lg:px-0">
+          {detail.headline}
+        </h1>
       </div>
 
       <div className="page-container pt-6 pb-8 sm:pt-6 sm:pb-8 md:pt-8 md:pb-10 lg:pt-8 lg:pb-8 xl:pt-8 xl:pb-10 2xl:pt-10 2xl:pb-12">
@@ -141,7 +141,7 @@ export default async function ReportPage({
               </span>
             </div>
 
-            <h2 className="mt-2 font-semibold leading-snug text-gray-900 text-body-xl">
+            <h2 className="mt-2 border-b border-gray-300 pb-3 font-semibold leading-snug text-gray-900 text-body-xl">
               {report.title}
             </h2>
 
@@ -171,12 +171,10 @@ export default async function ReportPage({
           </div>
         </section>
 
-        {/* Body + sidebar */}
-        <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_320px]">
+        {/* Body + sidebar. The layout lives in ReportDetailBody, which owns
+            the tab state and drops the sidebar for the customization tab. */}
+        <div className="mt-6">
           <ReportDetailBody report={report} detail={detail} />
-          <aside>
-            <ReportPlanSidebar report={report} />
-          </aside>
         </div>
       </div>
 

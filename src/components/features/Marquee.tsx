@@ -5,7 +5,7 @@ const logos = [
   { src: "/logos/Aisin3x.webp", alt: "Aisin" },
   { src: "/logos/ASKA%20P%20Co.%20LTD3x.webp", alt: "ASKA P Co. LTD" },
   { src: "/logos/BD3x.webp", alt: "BD" },
-  { src: "/logos/BILL%20%26%20MELIDA3x.webp", alt: "Bill & Melinda Gates Foundation" },
+  { src: "/logos/Gates_Foundation_Logo.webp", alt: "Gates Foundation" },
   { src: "/logos/BOSCH3x.webp", alt: "Bosch" },
   { src: "/logos/CHUNGHWA%20TELECOM3x.webp", alt: "Chunghwa Telecom" },
   //{ src: "/logos/DAIKIN3x.webp", alt: "Daikin" },
@@ -27,9 +27,18 @@ const logos = [
   { src: "/logos/NEC3x.webp", alt: "NEC" },
 ];
 
-export default function Marquee() {
+export default function Marquee({
+  /** Drop the page-level side padding when nested inside an already padded column. */
+  inset = true,
+}: {
+  inset?: boolean;
+}) {
   return (
-    <section className="w-full overflow-hidden bg-[#F7F5F1] py-8 md:py-10 px-8 sm:px-8 md:px-12 lg:px-24 xl:px-40">
+    <section
+      className={`w-full overflow-hidden bg-[#F7F5F1] py-8 md:py-10 ${
+        inset ? "px-8 sm:px-8 md:px-12 lg:px-24 xl:px-40" : ""
+      }`}
+    >
       <div className="relative overflow-hidden group">
         <div className="animate-marquee group-hover:[animation-play-state:paused] flex min-w-max items-center gap-6 md:gap-10">
           {[...logos, ...logos].map((logo, index) => (

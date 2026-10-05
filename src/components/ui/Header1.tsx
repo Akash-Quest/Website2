@@ -1,7 +1,6 @@
-import {  ArrowUp } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
-import ExpandableSearch from "./ExpandableSearch"
+import HeaderActions from "./HeaderActions"
 import MegaMenu from "./MegaMenu"
 
 const Header = () => {
@@ -20,14 +19,7 @@ const Header = () => {
                 <img src="/Header/logo.svg" alt="SkyQuest" width={216} height={31} className="h-5 sm:h-6 2xl:h-7 w-auto"/>
             </Link>
         </div>
-        {/* <div className="flex items-center gap-3 pointer-events-auto">
-            <ExpandableSearch bgClassName="bg-white" />
-            <div className="inline-flex items-center justify-center px-3 p-3 py-2 bg-[white] text-primary hover:black hover:text-black transition rounded-full">
-            <Link href="/signin" className=" flex items-center gap-.5 text-sm 2xl:text-base font-medium">
-                Sign in<ArrowUp size={18} className="rotate-45 " />
-            </Link>
-            </div>
-        </div> */}
+        <HeaderActions bgClassName="bg-white" />
     </motion.header>
   )
 }
