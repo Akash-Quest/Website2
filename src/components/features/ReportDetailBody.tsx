@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 import {
@@ -12,7 +12,7 @@ import ReportPlanSidebar from "@/components/features/ReportPlanSidebar";
 import RequestCustomizationForm from "@/components/features/RequestCustomizationForm";
 import type { ReportDetail } from "@/Constants/reportDetail";
 import type { TocNode, TocSection } from "@/Constants/reportToc";
-import type { Report } from "@/Constants/reports";
+import { CUSTOMIZATION_HASH, type Report } from "@/Constants/reports";
 
 const TABS = [
   "Description",
@@ -36,6 +36,17 @@ export default function ReportDetailBody({
 }) {
   const [tab, setTab] = useState<Tab>("Description");
 
+  // `#request-customization` (used by "Get free sample" on the listing) opens
+  // that tab directly. Read after mount so the static HTML stays the same.
+  useEffect(() => {
+    const syncFromHash = () => {
+      if (window.location.hash === `#${CUSTOMIZATION_HASH}`) setTab("Request Customization");
+    };
+    syncFromHash();
+    window.addEventListener("hashchange", syncFromHash);
+    return () => window.removeEventListener("hashchange", syncFromHash);
+  }, []);
+
   // The customization tab is a full-width form of its own, so the purchase
   // sidebar steps aside for it. The sidebar lives here rather than in the
   // page because this component owns the tab state that decides it.
@@ -43,9 +54,10 @@ export default function ReportDetailBody({
 
   return (
     <div
-      className={
-        showSidebar ? "grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_300px]" : undefined
-      }
+      id={CUSTOMIZATION_HASH}
+      className={`scroll-mt-24 ${
+        showSidebar ? "grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_300px]" : ""
+      }`}
     >
     <div className="min-w-0">
       <div className="sticky top-20 z-20 bg-background pb-2">
@@ -334,7 +346,7 @@ function DescriptionPanel({ report, detail }: { report: Report; detail: ReportDe
           <caption className="sr-only">{report.name} report metrics</caption>
           <thead>
             <tr className="bg-[#BEBEBE] text-gray-900">
-              <th scope="col" className="border border-[#DEE2E6] px-3 py-2 font-medium">
+              <th scope="col" className="w-[40%] min-w-[160px] sm:w-[220px] border border-[#DEE2E6] px-3 py-2 font-medium">
                 Report Metric
               </th>
               <th scope="col" className="border border-[#DEE2E6] px-3 py-2 font-medium">

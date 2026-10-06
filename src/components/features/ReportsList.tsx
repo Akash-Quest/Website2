@@ -8,6 +8,7 @@ import { ArrowDown, ArrowRight, Bookmark } from "lucide-react";
 import Button from "@/components/ui/Button";
 import {
   ALL_CATEGORIES,
+  CUSTOMIZATION_HASH,
   CATEGORY_OPTIONS,
   REPORT_TYPE_OPTIONS,
   SORT_OPTIONS,
@@ -15,6 +16,8 @@ import {
   type Report,
   type SortOption,
 } from "@/Constants/reports";
+import { ensureInCart } from "@/lib/cart";
+import { toggleSavedReport, useSavedReports } from "@/lib/savedReports";
 
 const PAGE_SIZE = 10;
 
@@ -173,11 +176,22 @@ function ReportCard({
           </p>
 
           <div className="flex flex-wrap items-center gap-2">
-            <Button variant="primary" minWidth="120px" className="text-xs">
+            <Button
+              variant="primary"
+              href="/cart-checkout"
+              onClick={() => ensureInCart(report.slug)}
+              minWidth="120px"
+              className="text-xs"
+            >
               BUY NOW
             </Button>
 
-            <Button variant="gray" minWidth="120px" className="text-xs">
+            <Button
+              variant="gray"
+              href={`/report/${report.slug}#${CUSTOMIZATION_HASH}`}
+              minWidth="120px"
+              className="text-xs"
+            >
               GET FREE SAMPLE
             </Button>
 
@@ -290,7 +304,7 @@ export default function ReportsList({
   const [category, setCategory] = useState<string>(initialCategory);
   const [sort, setSort] = useState<SortOption>(SORT_OPTIONS[0]);
   const [openFilter, setOpenFilter] = useState<string | null>(null);
-  const [selected, setSelected] = useState<string[]>([]);
+  const saved = useSavedReports();
   const resultsRef = useRef<HTMLDivElement>(null);
 
   const filteredReports = useMemo(() => {
@@ -347,7 +361,6 @@ export default function ReportsList({
     
     setCategory(initialCategory);
     setSort(SORT_OPTIONS[0]);
-    setSelected([]);
     setCurrentPage(1);
   };
 
@@ -418,12 +431,8 @@ export default function ReportsList({
               <ReportCard
                 key={report.id}
                 report={report}
-                isSelected={selected.includes(report.id)}
-                onSelectChange={(checked) =>
-                  setSelected((cur) =>
-                    checked ? [...cur, report.id] : cur.filter((id) => id !== report.id)
-                  )
-                }
+                isSelected={saved.includes(report.slug)}
+                onSelectChange={() => toggleSavedReport(report.slug)}
               />
             ))}
           </div>

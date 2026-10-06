@@ -4,9 +4,15 @@ import { useRef, useState } from "react";
 
 import Button from "@/components/ui/Button";
 import type { Report } from "@/Constants/reports";
-
-const LICENSE_TYPES = ["Single", "Multi User", "Enterprise"] as const;
-const FILE_TYPES = ["PPT", "PDF", "Excel"] as const;
+import {
+  addToCart,
+  FILE_TYPES,
+  LICENSE_TYPES,
+  priceFor,
+  useCart,
+  type FileType,
+  type LicenseType,
+} from "@/lib/cart";
 
 const priceFormatter = new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -14,19 +20,14 @@ const priceFormatter = new Intl.NumberFormat("en-US", {
   maximumFractionDigits: 0,
 });
 
-/** Licence tier multipliers applied to the report's base price. */
-const LICENSE_MULTIPLIER: Record<(typeof LICENSE_TYPES)[number], number> = {
-  Single: 1,
-  "Multi User": 1.4,
-  Enterprise: 1.8,
-};
-
 export default function ReportPlanSidebar({ report }: { report: Report }) {
-  const [license, setLicense] = useState<(typeof LICENSE_TYPES)[number]>("Single");
-  const [fileType, setFileType] = useState<(typeof FILE_TYPES)[number]>("PPT");
+  const [license, setLicense] = useState<LicenseType>("Single");
+  const [fileType, setFileType] = useState<FileType>("PPT");
   const formRef = useRef<HTMLFormElement>(null);
+  const inCart = useCart().some((item) => item.slug === report.slug);
 
-  const price = Math.round(report.price * LICENSE_MULTIPLIER[license]);
+  const price = priceFor(report.price, license);
+  const add = () => addToCart({ slug: report.slug, license, fileType });
 
   return (
     <div className="space-y-4">
@@ -41,7 +42,7 @@ export default function ReportPlanSidebar({ report }: { report: Report }) {
             <span className="text-xs text-muted">License Type</span>
             <select
               value={license}
-              onChange={(e) => setLicense(e.target.value as (typeof LICENSE_TYPES)[number])}
+              onChange={(e) => setLicense(e.target.value as LicenseType)}
               className="rounded-md border border-gray-300 bg-white px-2 py-1.5 text-sm text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
             >
               {LICENSE_TYPES.map((item) => (
@@ -54,7 +55,7 @@ export default function ReportPlanSidebar({ report }: { report: Report }) {
             <span className="text-xs text-muted">File Type</span>
             <select
               value={fileType}
-              onChange={(e) => setFileType(e.target.value as (typeof FILE_TYPES)[number])}
+              onChange={(e) => setFileType(e.target.value as FileType)}
               className="rounded-md border border-gray-300 bg-white px-2 py-1.5 text-sm text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
             >
               {FILE_TYPES.map((item) => (
@@ -69,12 +70,28 @@ export default function ReportPlanSidebar({ report }: { report: Report }) {
         </p>
 
         <div className="mt-4 flex flex-wrap items-center justify-between gap-2">
-          <Button variant="primary" minWidth="110px" className="text-xs">
+          <Button variant="primary" href="/cart-checkout" onClick={add} minWidth="110px" className="text-xs">
             BUY NOW
           </Button>
-          <Button variant="gray" minWidth="130px" className="text-xs">
-            ADD TO CART
-          </Button>
+          {inCart ? (
+            <Button variant="gray" href="/cart-checkout" minWidth="130px" className="text-xs">
+              VIEW CART
+            </Button>
+          ) : (
+            <Button
+              variant="gray"
+              href="/cart-checkout"
+              onClick={(e) => {
+                // Stay on the page; the button flips to "View cart" once added.
+                e.preventDefault();
+                add();
+              }}
+              minWidth="130px"
+              className="text-xs"
+            >
+              ADD TO CART
+            </Button>
+          )}
         </div>
       </section>
 
@@ -125,9 +142,6 @@ export default function ReportPlanSidebar({ report }: { report: Report }) {
             />
           </div>
 
-          {/* `Button` renders a Link, not a submit control, so it cannot submit
-              the form on its own. `requestSubmit()` fires the form exactly as a
-              native submit would — required-field validation included. */}
           <Button
             variant="gray"
             href="#sample"

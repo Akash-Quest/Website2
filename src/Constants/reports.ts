@@ -272,12 +272,10 @@ export const CATEGORIES: string[] = Array.from(
 
 export const CATEGORY_OPTIONS: string[] = [ALL_CATEGORIES, ...CATEGORIES];
 
-/**
- * Resolve an /industries/<slug> segment back to its category name, e.g.
- * "chemicals" → "Chemicals". Returns undefined for anything that is not a
- * report category, so the route can fall through to a 404 rather than
- * rendering an empty listing for an arbitrary slug.
- */
+
+/** URL hash that opens the "Request Customization" tab on a report detail page. */
+export const CUSTOMIZATION_HASH = "request-customization";
+
 export function getReportBySlug(slug: string): Report | undefined {
   return reports.find((report) => report.slug === slug);
 }

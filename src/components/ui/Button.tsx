@@ -9,7 +9,7 @@ interface ButtonProps {
   children: React.ReactNode;
   minWidth?: string;
   fullWidth?: boolean;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
   /** Extra classes for a single call site. Applied last so they win. */
   className?: string;
 }
