@@ -73,8 +73,15 @@ const Button: React.FC<ButtonProps> = ({
         ${className}
       `}
     >
-      {/* Round black bubble that sweeps in from the top-left corner on hover */}
-      <span className="pointer-events-none absolute -top-[300px] -left-[300px] w-[600px] h-[600px] -z-10 rounded-full bg-black scale-0 transition-transform duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:scale-100" />
+      {/* Round black bubble that sweeps in from the top-left corner on hover.
+          Its radius must reach the far corner, so full-width buttons get a larger one. */}
+      <span
+        className={`pointer-events-none absolute -z-10 rounded-full bg-black scale-0 transition-transform duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:scale-100 ${
+          fullWidth
+            ? "-top-[1200px] -left-[1200px] w-[2400px] h-[2400px]"
+            : "-top-[300px] -left-[300px] w-[600px] h-[600px]"
+        }`}
+      />
       <span className={`relative z-10 ${textTransitionStyles} ${textHoverStyles}`}>
         {children}
       </span>

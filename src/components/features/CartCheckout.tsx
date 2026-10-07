@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeft, Headset, ShoppingCart } from "lucide-react";
+import { ArrowLeft, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -22,9 +22,28 @@ const GRID_COLS = "md:grid-cols-[minmax(0,1fr)_140px_140px_120px] lg:grid-cols-[
 const selectClass =
   "w-full rounded-md border border-gray-300 bg-white px-2 py-1 text-xs text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500";
 
+/** Person inside a rounded square, drawn in currentColor. Shoulders run into the frame's bottom edge. */
+function AssistanceIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 40 40"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      aria-hidden
+      className={className}
+    >
+      <rect x="1.5" y="1.5" width="37" height="37" rx="10" />
+      <circle cx="20" cy="15.5" r="5.5" />
+      <path d="M9 38.5C9 30.5 13.9 25.5 20 25.5S31 30.5 31 38.5" />
+    </svg>
+  );
+}
+
 export function AssistanceBanner() {
   return (
-    <section className="relative isolate mt-6 overflow-hidden rounded-xl px-5 py-3 sm:px-8 sm:py-4 text-white">
+    <section className="relative isolate mt-10 mb-6 lg:mt-14 lg:mb-10 overflow-hidden rounded-xl px-5 py-3 sm:px-8 sm:py-4 text-white">
       <Image
         src="/Contact/ContactUs.jpg"
         alt=""
@@ -34,9 +53,7 @@ export function AssistanceBanner() {
       />
       <div className="relative grid grid-cols-1 gap-3 sm:grid-cols-3 sm:items-center">
         <div className="flex items-center gap-3">
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-white/70">
-            <Headset size={22} strokeWidth={1.75} />
-          </span>
+          <AssistanceIcon className="h-10 w-10 shrink-0" />
           <p className="leading-tight text-body-lg sm:text-body-xl">
             Need Assistance?
             <br />
@@ -89,7 +106,7 @@ export default function CartCheckout() {
   const { lines, total } = useCartLines();
 
   return (
-    <div className="page-container pt-4 pb-10 sm:pt-4 md:pt-6 lg:pt-6 xl:pt-6 2xl:pt-8">
+    <div className="page-container py-8 sm:py-8 md:py-10 lg:py-12 xl:py-12 2xl:py-14">
       <CheckoutStepper current={0} />
 
       <section className="mt-6 rounded-xl bg-white p-3 sm:p-4">

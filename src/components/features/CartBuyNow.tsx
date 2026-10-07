@@ -1,6 +1,7 @@
 "use client";
 
 import { Check } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 
@@ -22,20 +23,25 @@ type PaymentMethod = (typeof PAYMENT_METHODS)[number];
 const inputClass =
   "w-full rounded-md border border-gray-300 bg-white px-3 py-2.5 text-body-sm text-gray-700 placeholder:text-gray-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500";
 
-/** Text wordmarks — swap for the official logo files when they're added to /public. */
+/** Dimensions are each file's own; heights are tuned per logo so they look the same size side by side. */
+const PAYMENT_LOGOS: Record<
+  PaymentMethod,
+  { src: string; alt: string; width: number; height: number; className: string }
+> = {
+  razorpay: { src: "/logos/razropay.png", alt: "Razorpay", width: 1896, height: 401, className: "h-6" },
+  paypal: { src: "/logos/paypal.png", alt: "PayPal", width: 2000, height: 529, className: "h-8" },
+};
+
 function PaymentLogo({ method }: { method: PaymentMethod }) {
-  if (method === "razorpay") {
-    return (
-      <span className="flex items-center gap-0.5 text-xl font-bold italic tracking-tight text-[#072654]">
-        <span className="text-[#3395FF]">⁄</span>Razorpay
-      </span>
-    );
-  }
+  const logo = PAYMENT_LOGOS[method];
   return (
-    <span className="text-xl font-bold italic tracking-tight">
-      <span className="text-[#003087]">Pay</span>
-      <span className="text-[#009CDE]">Pal</span>
-    </span>
+    <Image
+      src={logo.src}
+      alt={logo.alt}
+      width={logo.width}
+      height={logo.height}
+      className={`${logo.className} w-auto`}
+    />
   );
 }
 
@@ -45,7 +51,7 @@ export default function CartBuyNow() {
   const [method, setMethod] = useState<PaymentMethod>("razorpay");
 
   return (
-    <div className="page-container pt-4 pb-10 sm:pt-4 md:pt-6 lg:pt-6 xl:pt-6 2xl:pt-8">
+    <div className="page-container py-8 sm:py-8 md:py-10 lg:py-12 xl:py-12 2xl:py-14">
       <CheckoutStepper current={1} />
 
       <div className="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-[minmax(0,1fr)_340px] xl:grid-cols-[minmax(0,1fr)_380px]">

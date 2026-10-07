@@ -201,7 +201,7 @@ export const reports: Report[] = [
     pages: 189,
   },
   {
-    id: "SQMIG15I2168",
+    id: "SQMIG15I2168", 
     slug: "green-ammonia-market",
     name: "Green Ammonia Market",
     title:

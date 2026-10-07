@@ -43,7 +43,7 @@ export default function SavedReportsMenu({ className }: { className: string }) {
         className={className}
       >
         <Bookmark
-          className="h-[18px] w-[18px] 2xl:h-6 2xl:w-6"
+          className={`h-[18px] w-[18px] 2xl:h-6 2xl:w-6 ${saved.length ? "text-primary" : ""}`}
           strokeWidth={1.75}
           fill={saved.length ? "currentColor" : "none"}
         />
