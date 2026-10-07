@@ -66,7 +66,7 @@ export default async function ReportPage({
   const detail = buildReportDetail(report);
 
   // Prefer siblings in the same category; top up from the rest of the
-  // catalogue so the strip is never short of three.
+  // catalogue so the strip is never short of four.
   const sameCategory = reports.filter(
     (other) => other.slug !== report.slug && other.category === report.category
   );
@@ -75,7 +75,7 @@ export default async function ReportPage({
     ...reports.filter(
       (other) => other.slug !== report.slug && other.category !== report.category
     ),
-  ].slice(0, 3);
+  ].slice(0, 4);
 
   return (
     // `overflow-x-clip` matches the pattern used on the privacy, cookies and

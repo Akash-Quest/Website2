@@ -44,9 +44,7 @@ export default function SavedReportsMenu({ className }: { className: string }) {
       >
         <Bookmark
           className={`h-[18px] w-[18px] 2xl:h-6 2xl:w-6 ${saved.length ? "text-primary" : ""}`}
-          strokeWidth={1.75}
-          fill={saved.length ? "currentColor" : "none"}
-        />
+          strokeWidth={1.75}        />
         {saved.length > 0 && (
           <span className="absolute -right-1 -top-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-primary px-1 text-[10px] font-semibold text-white">
             {saved.length}

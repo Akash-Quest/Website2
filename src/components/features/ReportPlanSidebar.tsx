@@ -69,12 +69,12 @@ export default function ReportPlanSidebar({ report }: { report: Report }) {
           {priceFormatter.format(price)}
         </p>
 
-        <div className="mt-4 flex flex-wrap items-center justify-between gap-2">
-          <Button variant="primary" href="/cart-checkout" onClick={add} minWidth="110px" className="text-xs">
+        <div className="mt-4 grid grid-cols-2 gap-2">
+          <Button variant="primary" href="/cart-checkout" onClick={add} fullWidth minWidth="0" className="text-xs">
             BUY NOW
           </Button>
           {inCart ? (
-            <Button variant="gray" href="/cart-checkout" minWidth="130px" className="text-xs">
+            <Button variant="gray" href="/cart-checkout" fullWidth minWidth="0" className="text-xs">
               VIEW CART
             </Button>
           ) : (
@@ -86,7 +86,8 @@ export default function ReportPlanSidebar({ report }: { report: Report }) {
                 e.preventDefault();
                 add();
               }}
-              minWidth="130px"
+              fullWidth
+              minWidth="0"
               className="text-xs"
             >
               ADD TO CART

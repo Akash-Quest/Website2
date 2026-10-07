@@ -22,7 +22,7 @@ export default function CheckoutStepper({ current }: { current: number }) {
             )}
             <span
               aria-current={active ? "step" : undefined}
-              className={`flex items-center gap-2 text-xs sm:text-body-sm whitespace-nowrap ${
+              className={`flex items-center gap-2 text-xs sm:text-base lg:text-lg 2xl:text-xl whitespace-nowrap ${
                 active ? "font-medium text-[#03030F]" : i < current ? "text-[#03030F]" : "text-muted"
               }`}
             >

@@ -466,10 +466,14 @@ export function GeographyMap({
     <figure className="m-0">
       <figcaption className="mb-2 text-center text-body-sm text-gray-700">{title}</figcaption>
 
+      {/* GeoChart keeps the map's own ~16:10 shape and fits it to the box, so a
+          fixed height leaves the sides empty on wide screens. Sizing the box by
+          the same ratio lets the map fill the full width at every size. */}
+      <div className="aspect-[16/10] w-full">
       <Chart
         chartType="GeoChart"
         width="100%"
-        height="400px"
+        height="100%"
         data={data}
         options={{
           legend: "none",
@@ -483,8 +487,9 @@ export function GeographyMap({
           tooltip: { trigger: "focus" },
         }}
 
-        loader={<div className="h-[400px] w-full animate-pulse rounded-lg bg-gray-100" />}
+        loader={<div className="h-full w-full animate-pulse rounded-lg bg-gray-100" />}
       />
+      </div>
 
       <ul className="mt-2 flex items-center justify-center gap-10 text-xs text-gray-600">
         <li className="flex items-center gap-1.5">

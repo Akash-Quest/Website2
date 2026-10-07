@@ -168,8 +168,9 @@ function DescriptionPanel({ report, detail }: { report: Report; detail: ReportDe
         ))}
       </ul>
 
-      {/* Charts */}
-      <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2">
+      {/* Charts. Plot height is fixed, so each chart is capped in width and
+          centred — otherwise wide screens stretch the bar chart into a flat strip. */}
+      <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 [&>*]:w-full [&>*]:max-w-[560px] [&>*]:justify-self-center">
         <RegionStackedBar
           years={detail.years}
           regions={detail.regions}

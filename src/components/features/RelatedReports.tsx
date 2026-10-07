@@ -25,7 +25,7 @@ export default function RelatedReports({
       <div className="page-container ">
         <h2 className="sr-only">{heading}</h2>
 
-        <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {reports.map((report) => (
             <li
               key={report.id}
@@ -53,16 +53,17 @@ export default function RelatedReports({
                 </Link>
               </h3>
 
-              {/* Two equal columns. `minWidth="0"` overrides the component's
+              {/* Two equal columns, stacked once the grid goes to four cards (lg+), where
+                  half a card is too narrow for the labels. `minWidth="0"` overrides the component's
                   130px default, which would otherwise stop the pair from
                   splitting evenly in a narrow card. */}
-              <div className="mt-auto grid grid-cols-2 gap-2">
+              <div className="mt-auto grid grid-cols-2 gap-2 lg:grid-cols-1">
                 <Button
                   variant="primary"
                   href={`/report/${report.slug}`}
                   fullWidth
                   minWidth="0"
-                  className="text-[10px]"
+                  className="whitespace-nowrap text-[10px]"
                 >
                   BUY NOW
                 </Button>
@@ -71,7 +72,7 @@ export default function RelatedReports({
                   href={`/report/${report.slug}#sample`}
                   fullWidth
                   minWidth="0"
-                  className="text-[10px]"
+                  className="whitespace-nowrap text-[10px]"
                 >
                   GET FREE SAMPLE
                 </Button>
