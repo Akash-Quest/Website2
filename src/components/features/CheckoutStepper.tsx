@@ -17,7 +17,7 @@ export default function CheckoutStepper({ current }: { current: number }) {
             {i > 0 && (
               <span
                 aria-hidden
-                className={`h-px w-6 sm:w-16 lg:w-24 ${i <= current ? "bg-primary" : "bg-gray-300"}`}
+                className={`h-px w-6 sm:w-16 lg:w-24 ${i <= current ? "bg-primary" : "bg-[#00000080]"}`}
               />
             )}
             <span
