@@ -16,15 +16,15 @@ export const FILE_TYPES = ["PPT", "PDF", "Excel", "PowerBI"] as const;
 export type LicenseType = (typeof LICENSE_TYPES)[number];
 export type FileType = (typeof FILE_TYPES)[number];
 
-/** Licence tier multipliers applied to the report's base price. */
-export const LICENSE_MULTIPLIER: Record<LicenseType, number> = {
-  Single: 1,
-  "Multi User": 1.4,
-  Enterprise: 1.8,
+/** USD added to the report's base (Single) price for each licence tier. */
+export const LICENSE_SURCHARGE: Record<LicenseType, number> = {
+  Single: 0,
+  "Multi User": 900,
+  Enterprise: 1800,
 };
 
 export function priceFor(basePrice: number, license: LicenseType) {
-  return Math.round(basePrice * LICENSE_MULTIPLIER[license]);
+  return basePrice + LICENSE_SURCHARGE[license];
 }
 
 export type CartItem = {

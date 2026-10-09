@@ -141,7 +141,7 @@ function ReportCard({
       <div className="flex min-w-0 flex-1 flex-col">
         {/* Meta row + document count */}
         <div className="flex flex-wrap items-start justify-between gap-2">
-          <p className="text-xs text-muted">
+          <p className="text-body-sm text-muted">
             <span className="font-medium text-gray-700">Report ID:</span> {report.id}
             <span className="mx-1.5 text-gray-300">|</span>
             <span className="font-medium text-gray-700">Region:</span> {report.region}
@@ -151,7 +151,7 @@ function ReportCard({
             <span className="mx-1.5 text-gray-300">|</span>
             <span className="font-medium text-gray-700">Pages:</span> {report.pages}
           </p>
-          <span className="shrink-0 text-xs ">
+          <span className="shrink-0 text-body-sm ">
             {report.documents === 0 ? "+13 Downloads" : `+${report.documents} Downloads`}
           </span>
         </div>

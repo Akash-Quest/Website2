@@ -98,10 +98,9 @@ export default function ReportPlanSidebar({ report }: { report: Report }) {
 
       {/* Free sample request */}
       <section id="sample" className="rounded-xl border border-gray-200 bg-white p-4">
-        <h2 className=" text-xs font-semibold uppercase tracking-wide text-gray-700">
-          Select Your Report Plan
+       <h2 className="border-b border-gray-200 pb-3 text-xs font-semibold uppercase tracking-wide text-gray-700">
+          Request For Sample
         </h2>
-        <p className="mt-1 text-xs text-muted">License Type</p>
 
         <form
           ref={formRef}

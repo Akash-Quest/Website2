@@ -109,9 +109,7 @@ export default function ReportDetailBody({
       </div>
     </div>
 
-      {/* Sticky from lg up, at the same offset as the tab bar so the two pin
-          side by side. `self-start` is required: a grid item stretches to the
-          row's full height by default, leaving sticky no room to move. */}
+
       {showSidebar && (
         <aside className="lg:sticky lg:top-20 lg:self-start">
           <ReportPlanSidebar report={report} />
@@ -127,7 +125,7 @@ function DescriptionPanel({ report, detail }: { report: Report; detail: ReportDe
       <h2 className="font-semibold text-gray-900 text-body-xl">{report.name} Insights</h2>
 
       {/* Lead: the market-size summary, set larger and darker than the body. */}
-      <p className="mt-4 leading-snug text-gray-900 text-body-lg">{detail.lead}</p>
+      <p className="mt-4 text-lg font-medium leading-snug text-[#03030F] 2xl:text-xl">{detail.lead}</p>
 
       <div className="mt-5 space-y-4">
         {detail.insights.map((paragraph, i) => (
